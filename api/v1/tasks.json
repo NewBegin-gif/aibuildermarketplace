@@ -13611,6 +13611,217 @@
   },
   {
    "source": "session",
+   "product_name": "LumenCart",
+   "product_id": "lumencart",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed LumenCart on a Shopify development store and made one private preview of a product photo on the Free plan. We paid, approved and published nothing. The full run is in the exit test section below.",
+   "findings": [
+    "Text we checked: \"See your first product image in a few minutes\". What we saw: After the install the app opened on Overview with this line. The first Generated result stood on screen at about 21:54, about 2 minutes after the install and 3 clicks later; the generation itself took about 70 seconds and cost 1 credit.",
+    "Text we checked: \"Credits used 0\". What we saw: After the preview the Studio screen said 24 credits available, while the Billing screen still showed Available balance 25, Credits granted 25, Credits used 0 and Current balance 25.",
+    "Text we checked: \"Every new store receives 25 free image generations\". What we saw: The plan window says this, the Free plan card says 25 lifetime image generations, and the Billing ledger shows one line, Free plan, 25 lifetime image generations, plus 25. The allowance is a one time total, not a monthly one. We used 1 of the 25.",
+    "Text we checked: \"Starter $9/month (75 credits, 30 day verified backups)\". What we saw: In our test (17 Nov 2026) the plan window shows Starter at $9 a month with 75 credits refreshed monthly and 30-day verified backups. After Choose monthly the Shopify Select a plan page listed only the Free plan, so Starter could not be selected and no approval screen was seen.",
+    "Text we checked: \"Growth $29/month (300 credits, 90 day)\". What we saw: In our test (17 Nov 2026) the plan window shows Growth at $29 a month with 300 credits refreshed monthly and 90-day verified backups, marked Popular. It was not selected."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Replace in Shopify and publishing a result to the store.",
+    "Explore a new scene, Highest quality and bulk generation.",
+    "Brand, Backups, Catalogue and credit packs.",
+    "The paid plans, the annual plans and any payment.",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "See your first product image in a few minutes.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "After the install the app opened on Overview with this line. The first Generated result stood on screen at about 21:54, about 2 minutes after the install and 3 clicks later; the generation itself took about 70 seconds and cost 1 credit.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/lumencart-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The line in the app against one generation of one product; other products and the other quality level were not tried.",
+     "status": "confirmed",
+     "buying_consequence": "A first generated image can be on screen within about 2 minutes of the install, on the Free plan and without a card.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "99% match",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Generated result carried the label 99% match, and the result looked almost the same as the original: the same board and the same background, with no new studio scene. The mode was Keep product details and Explore a new scene was not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/lumencart-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The app's own match label against what the eye sees in the side by side panels; no outside score was used and only one product was tried.",
+     "status": "not_comparable",
+     "buying_consequence": "The 99% match label is the app's own figure; what we saw was a result that is hard to tell from the original, so the free preview may not show a visible gain.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Credits used 0",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "After the preview the Studio screen said 24 credits available, while the Billing screen still showed Available balance 25, Credits granted 25, Credits used 0 and Current balance 25.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/lumencart-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The Billing counters against the Studio counter right after one preview; we did not reload Billing afterwards.",
+     "status": "contradicted",
+     "buying_consequence": "Two screens of the same app disagreed about the credits left after one preview; the Billing screen may update later, which we did not check.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Every new store receives 25 free image generations",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan window says this, the Free plan card says 25 lifetime image generations, and the Billing ledger shows one line, Free plan, 25 lifetime image generations, plus 25. The allowance is a one time total, not a monthly one. We used 1 of the 25.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/lumencart-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The Free plan wording against the plan window, the Billing ledger and the Shopify plan page; the other 24 generations were not used.",
+     "status": "confirmed",
+     "buying_consequence": "The Free plan gives 25 generations in total and then stops being free; it does not refresh each month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Starter $9/month (75 credits, 30 day verified backups)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "In our test (17 Nov 2026) the plan window shows Starter at $9 a month with 75 credits refreshed monthly and 30-day verified backups. After Choose monthly the Shopify Select a plan page listed only the Free plan, so Starter could not be selected and no approval screen was seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/lumencart-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The Starter price of the dossier against the plan window of the app; no approval screen was reached.",
+     "status": "confirmed",
+     "buying_consequence": "Starter costs $9 a month for 75 credits according to the app, but we could not start it on our development store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Growth $29/month (300 credits, 90 day)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "In our test (17 Nov 2026) the plan window shows Growth at $29 a month with 300 credits refreshed monthly and 90-day verified backups, marked Popular. It was not selected.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/lumencart-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The Growth price of the dossier against the plan window; Growth was not selected and no approval screen was seen.",
+     "status": "confirmed",
+     "buying_consequence": "Growth costs $29 a month for 300 credits according to the app.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pro $79/month (1000 credits, 180 day)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "In our test (17 Nov 2026) the plan window shows Pro at $79 a month with 1000 credits refreshed monthly and 180-day verified backups. It was not selected.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/lumencart-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The Pro price of the dossier against the plan window; Pro was not selected and no approval screen was seen.",
+     "status": "confirmed",
+     "buying_consequence": "Pro costs $79 a month for 1000 credits according to the app.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Scale $199/month (2500 credits, 365 day)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "In our test (17 Nov 2026) the plan window shows Scale at $199 a month with 2500 credits refreshed monthly and 365-day verified backups. It was not selected.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/lumencart-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The Scale price of the dossier against the plan window; Scale was not selected and no approval screen was seen.",
+     "status": "confirmed",
+     "buying_consequence": "Scale costs $199 a month for 2500 credits according to the app.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Regular pricing applies when the store goes live",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify Select a plan page, reached from Choose monthly on Starter, said Free to test and listed only the Free plan; no paid plan, no approval screen and no total was seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/lumencart-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The prices in the plan window against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The amounts of the paid plans could not be compared with a Shopify approval screen, so the price you would pay is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested LumenCart (an AI product photo generator) on a Shopify development store: the install without a plan choice or a card, one private preview of The Out of Stock Snowboard in the Studio (about 70 seconds, 1 credit, 99% match, a result that looked almost the same as the original), the Billing screen (25 lifetime image generations on the Free plan, 25 credits shown while the Studio showed 24), the plan window with five plans from Free to Scale at $199 a month and the Shopify Select a plan page, which offered only Free after a click on Starter. Nothing was paid, approved or published to the store. Install: the app was installed from its App Store listing (called Fleeta LumenCart: AI Photos, vendor Fleeta Limited; the app is called LumenCart in the admin) through the install form, in our own tab. The dialog Install app asked for access to View staff and contributor data (Store owner) and View and edit store data (Products, Shopify admin), and Install was clicked at about 21:52 (the app logs 17 Nov 2026, 21:52). No terms of service box, plan choice, card or phone number was asked. The app opened on Overview with the line See your first product image in a few minutes. and a counter 0/3 successful outputs. LumenCart is an AI product photo generator, not a cart drawer or an upsell app, so the core action is generating one image. Core action: Overview, Start with one product, Studio, the product The Out of Stock Snowboard (1 source image, 80% baseline), the mode Keep product details (the default), Standard at 1 credit per image, then Generate preview, 1 credit. That is 3 clicks after the install. The app showed Generating image 1 of 1 for about 70 seconds and, at about 21:54, a Generated result with the label 99% match, the buttons Image viewer, Download, Replace in Shopify and Regenerate, and the counter 24 credits available. The first result came about 2 minutes after the install. The result looked almost the same as the original: the same board and the same background, so no new studio scene was seen. The preview is labelled Private preview. Replace in Shopify was NOT clicked (it would change the product image), and Explore a new scene was not tried. The app has no storefront block, so no theme preview or app embed applies. Credits: the Billing screen still showed 25 credits and Credits used 0 after the preview, while the Studio screen showed 24 credits available. Billing shows the plan Free with an included allowance of 25 lifetime image generations, a ledger line Free plan, 25 lifetime image generations, plus 25, and the buttons Buy credits and Choose a plan. Plans: the plan window Choose the right plan lists Free (25 lifetime image generations), Starter $9 a month (75 credits, 30 day verified backups), Growth $29 a month (300 credits, 90 day), Pro $79 a month (1000 credits, 180 day) and Scale $199 a month (2500 credits, 365 day), with an Annual option that saves 15%, and the text Every new store receives 25 free image generations. The prices match the dossier. Checkout: a click on Choose monthly for Starter opened the Shopify page Select a plan with only the Free plan (Free to test: these plans are free to test on this store; Regular pricing applies when the store goes live). The paid plans were not selectable, no approval screen came up, no test charge was approved and no card was asked. The Select button of the Free plan was not clicked. Listing: the App Store listing (English) shows Pricing Free and a rating of 5.0 with 1 review, dated 6 September 2026. The dossier said the app had no reviews; that differs. Cancelling: no paid plan was started. In Settings, Apps, the menu of LumenCart offers Uninstall; the dialog Uninstall LumenCart? says that you can no longer use the app and that data managed by the app, such as discounts, will be deleted, and has a field Reason for uninstalling and a Share feedback box. Cancel was chosen first; our notes say that the uninstall was carried out after the session had been processed. Not tested: Replace in Shopify and publishing, Explore a new scene, Highest quality (2 credits), bulk generation, Brand, Backups, Catalogue, credit packs, the annual plans, the paid plans, and the group of stores that make thousands of images each month. Clean up: no product was created, nothing was published and no theme was changed. The price fields are not changed here. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The one preview we made looked almost identical to the original photo, so we saw no new studio scene. The Billing screen still showed 25 credits and 0 used while the Studio showed 24 credits. The paid plans of the app were not selectable on the Shopify plan page of our development store, which listed only Free.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Replace in Shopify and publishing a result to the store.",
+     "Explore a new scene, Highest quality and bulk generation.",
+     "Brand, Backups, Catalogue and credit packs.",
+     "The paid plans, the annual plans and any payment.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 21:52 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Loyalino",
    "product_id": "loyalino",
    "run_date": "2026-11-17",
@@ -14645,6 +14856,432 @@
      "Any paid plan and the 7-day trial, because both Select buttons were greyed out.",
      "Support, the onboarding call, export and reimport.",
      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 11:52 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Nexis CRO",
+   "product_id": "nexis-cro",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed Nexis CRO on a Shopify development store and ran the free audit, which scored 20 products at 32 out of 100 on average. We paid, approved and applied nothing. The full run is in the exit test section below.",
+   "findings": [
+    "Text we checked: \"Get a baseline AEO score and a prioritized list of fixes in about 30 seconds\". What we saw: The audit was started at about 22:10 and was done after about 10 seconds with a first finding; the first result stood on screen about 2 minutes after the install.",
+    "Text we checked: \"AVG AEO SCORE 32/100 Grade D\". What we saw: The Product AEO Center showed an average AEO score of 32/100 (Grade D) across 20 products and 20 products with critical issues (D or F); The Minimal Snowboard scored 21/100, Grade F.",
+    "Text we checked: \"PRO required\". What we saw: The AI Description Optimizer block of The Minimal Snowboard was marked PRO required and its button Optimize Description with AI was greyed out; the Pro plan card lists an AEO Description Optimizer. Nothing was applied.",
+    "Text we checked: \"Pro $99 / year ($9/30 days), 2 trial days\". What we saw: The plan page shows Pro at $99 a year ($9 per 30 days) with 2 trial days, in a block that says these plans cannot be selected on a development store; the button says Not available.",
+    "Text we checked: \"Growth $121 / year ($21/30 days)\". What we saw: The plan page shows Growth at $121 a year ($21 per 30 days), greyed out and marked Not available."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The AI Rank Tracker (ChatGPT, Gemini, Perplexity) and the AI Visibility Scanner.",
+    "llms.txt, deploying JSON-LD schema and image alt text.",
+    "Fix this issue and the AI Description Optimizer, which needs Pro.",
+    "The paid plans and any payment.",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "34-check SEO and AEO audit",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The audit ran and gave a first finding (Fix: Refund policy should be present) and a score per product, but the 34 checks were not counted or listed, and no separate JSON-LD or llms.txt check was seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The 34-check wording of the listing against the screens we opened (Overview, one finding and the Product AEO Center); the checks were not counted.",
+     "status": "not_testable",
+     "buying_consequence": "The free audit produced scores and a fix list, but whether it really runs 34 checks is not shown on screen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Get a baseline AEO score and a prioritized list of fixes in about 30 seconds.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The audit was started at about 22:10 and was done after about 10 seconds with a first finding; the first result stood on screen about 2 minutes after the install.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The wording on the Overview button text against one audit of a store with 20 products; larger stores were not tried.",
+     "status": "confirmed",
+     "buying_consequence": "The first audit was quicker than the 30 seconds the app names, and the result was on screen about 2 minutes after the install.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "AVG AEO SCORE 32/100 Grade D",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Product AEO Center showed an average AEO score of 32/100 (Grade D) across 20 products and 20 products with critical issues (D or F); The Minimal Snowboard scored 21/100, Grade F.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The score on the screen against the list of recommendations of one product; the scoring method was not checked and the store holds demo products only.",
+     "status": "confirmed",
+     "buying_consequence": "On our demo store the free audit scored every product low and named what was missing, so a merchant sees a clear to do list at once.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Schema Completeness 15/30",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Schema Completeness is one partial score of a product (15 of 30 for The Minimal Snowboard); the audit showed no separate JSON-LD check and no llms.txt check, which the dossier suggests it covers.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The dossier wording on schema and llms.txt against the partial scores on the product row; the JSON-LD deploy and llms.txt features were not opened.",
+     "status": "not_testable",
+     "buying_consequence": "The free audit gives a schema score but no visible JSON-LD or llms.txt check; both were not tried.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "PRO required",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The AI Description Optimizer block of The Minimal Snowboard was marked PRO required and its button Optimize Description with AI was greyed out; the Pro plan card lists an AEO Description Optimizer. Nothing was applied.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The label in the Product AEO Center against the Pro plan card; the rewrite itself was not run.",
+     "status": "confirmed",
+     "buying_consequence": "The AI rewrite of a product description needs the Pro plan, from $9 a month; the free audit only shows what is missing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pro $99 / year ($9/30 days), 2 trial days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan page shows Pro at $99 a year ($9 per 30 days) with 2 trial days, in a block that says these plans cannot be selected on a development store; the button says Not available.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The Pro price of the listing against the greyed out plan card; no approval screen was reached.",
+     "status": "confirmed",
+     "buying_consequence": "Pro costs $9 per 30 days or $99 a year with a 2 day trial, matching the listing, but it could not be started in our test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Growth $121 / year ($21/30 days)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan page shows Growth at $121 a year ($21 per 30 days), greyed out and marked Not available.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The Growth price of the listing against the greyed out plan card; no approval screen was reached.",
+     "status": "confirmed",
+     "buying_consequence": "Growth costs $21 per 30 days or $121 a year, matching the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Agency $344 / year ($44/30 days)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan page shows Agency at $344 a year ($44 per 30 days), greyed out and marked Not available.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The Agency price of the listing against the greyed out plan card; no approval screen was reached.",
+     "status": "confirmed",
+     "buying_consequence": "Agency costs $44 per 30 days or $344 a year, matching the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Unavailable on dev stores",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan page says that Pro, Growth and Agency cannot be selected while the store is in development; all three buttons say Not available, so no approval screen, total, tax or card field was seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not selectable on the development store",
+     "comparability": "The prices on the plan cards against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price you would pay for a paid plan is not confirmed by a Shopify approval screen; use the free audit first and test paid features on a live store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Nexis CRO (AI SEO and AEO audit) on a Shopify development store: the install without a payment screen, the free audit (done after about 10 seconds, about 2 minutes after the install), the Product AEO Center with an average score of 32/100 (Grade D) across 20 products, all graded D or F, the recommendations for The Minimal Snowboard (21/100), the AI Description Optimizer marked PRO required, the plan page with Pro, Growth and Agency marked Not available, and the uninstall dialog, after which the app was uninstalled. Nothing was paid, approved or applied. Install: the app (App Store name Nexis CRO: AI SEO & AEO Audit, developer Nexis Cro, Ho Chi Minh City) was installed from its App Store listing through the install form in our own tab. The form was sent at 22:08, the dialog Install app showed the app and the developer, and Install was clicked at about 22:09. The right app opened. No payment screen, plan choice, card or phone number was asked. A welcome screen offered the choice Improve my store with clear, guided fixes and the button Continue to Overview. Listing: the description says 34-check SEO and AEO audit, with the plans Free, Pro $9 a month ($99 a year), Growth $21 ($121 a year) and Agency $44 ($344 a year), and a rating of 0.0 with 0 reviews. This matches the dossier. Core action: on Overview the button Run first audit (then Run audit) was clicked, with the text Get a baseline AEO score and a prioritized list of fixes in about 30 seconds. It was started at about 22:10 and was done after about 10 seconds; the first finding shown was Fix: Refund policy should be present, called the highest-severity finding. The first result came about 2 minutes after the install and after 3 steps (Continue, Run audit, the result). Product AEO Center (Improve, Product readiness): AVG AEO SCORE 32/100, Grade D, across 20 products, and CRITICAL ISSUES (D/F) 20 products need immediate attention, so all 20 products were graded D or F. The Minimal Snowboard scored 21/100, Grade F, with Schema Completeness 15/30, Content Structure 0/20, FAQ Content 0/15, Description Quality 0/15, Image Alt Text 5/10 and Attribute Completeness 1/10, and the recommendations Missing product type, Missing GTIN/barcode, Missing SKU, Description too short, No list formatting and No numerical specifications. The AI Description Optimizer was marked PRO required and its button was greyed out. Nothing was applied to any product and no store data was changed. A difference from the dossier: the audit showed no separate JSON-LD check and no llms.txt check; Schema Completeness is one partial score of a product. The free audit therefore shows less on those two points than the dossier suggests. Plans: the Shopify plan page (free to test on this store) lists the Free plan with 5 AI credits a month, 1 audit a month, AI Quick Fix & Rewrite, AI Image Alt Text, AI Visibility Scanner (Basic) and AI Rank Tracker (1 prompt, 5 checks). Under Unavailable on dev stores, Pro $99 a year ($9 per 30 days, 2 trial days), Growth $121 a year ($21 per 30 days) and Agency $344 a year ($44 per 30 days) were all marked Not available; the amounts equal the listing. Checkout: no approval screen, test charge screen or card field was seen, because the paid plans cannot be selected on a development store. Nothing was approved. Cancelling: no paid plan was started. In Settings, Apps, Uninstall opened the dialog Uninstall Nexis CRO: AI SEO & AEO Audit?, which says that a request will be sent to the app developer within 48 hours to delete all personal customer information, and a reason is required (Testing multiple apps was chosen). The app was uninstalled at about 22:20 and is gone from the installed apps. Not tested: the AI Rank Tracker (ChatGPT, Gemini, Perplexity), llms.txt, deploying JSON-LD schema, image alt text, Fix this issue, and the paid plans. Clean up: no theme change was made and nothing was applied to the store; the app was uninstalled in Settings, Apps and our own tab was closed. The price fields are not changed here. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The audit showed no separate JSON-LD check and no llms.txt check, only a partial score Schema Completeness, which is less than the dossier suggests for the free audit. The AI rewrite is marked PRO required and the paid plans could not be selected on our development store.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The AI Rank Tracker (ChatGPT, Gemini, Perplexity) and the AI Visibility Scanner.",
+     "llms.txt, deploying JSON-LD schema and image alt text.",
+     "Fix this issue and the AI Description Optimizer, which needs Pro.",
+     "The paid plans and any payment.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:08 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Dynasort",
+   "product_id": "dynasort",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed Dynasort on a Shopify development store, waited for the first synchronisation and applied its sort rule to a collection of 8 products. We paid and approved nothing. The full run is in the exit test section below.",
+   "findings": [
+    "Text we checked: \"Processing is not turned on yet. Go to Settings to enable it\". What we saw: After the Dynasort Status was set to Active and saved, the app said that processing was not turned on; Processing had to be switched On in Settings (interval 60 minutes) before the collection was sorted.",
+    "Text we checked: \"Sales (Last 30 Days) (100), Sales (All Time) (50), Inventory Quantity (50), Sold Out (-100), On Sale (-20), Variants In Stock (100)\". What we saw: After Sync now the page showed Sorting 1 minute ago, and the sort choice in Shopify changed from Most relevant to Manually with the products in the order and scores of the app (150, 150, 127, 127).",
+    "Text we checked: \"Revert To (When Off)\". What we saw: After the Dynasort Status was set to Off and saved, the Shopify sort choice stayed on Manually instead of returning to Most relevant; it was set back by hand and the original order returned.",
+    "Text we checked: \"Special pricing for your store\". What we saw: A banner in the app showed Basic $49, Pro $124 and Enterprise $249 a month, half of the crossed out $99, $249 and $499, which are the App Store prices; the banner said the offer ends in 6 days. Only reported, not compared with a price field.",
+    "Text we checked: \"Demo 2 collecties, Basic 25, Pro 100, Enterprise 1000\". What we saw: The plan page lists 2, 25, 100 and 1000 sorted collections for Demo, Basic, Pro and Enterprise, with processing schedules of 60, 30, 20 and 10 minutes. The App Store listing now shows the collection counts in the right column, while the dossier still describes the mislabelled plan cards of October."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The paid plans and the 30 day free trial.",
+    "The A/B test.",
+    "A sold out product moving to the bottom of the collection.",
+    "Variant sorting, recommendations and Sort rotation.",
+    "The effect in the online store (only the Shopify admin was checked).",
+    "A large catalogue and the Insights numbers (data appears after 24 hours).",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Setting up your store: about 5 minutes remaining",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app said about 5 minutes remaining while syncing 3 collections, 23 products and 2 recent orders; it took more than 7 minutes before the store was ready, and the first sorted result stood on screen about 8 minutes after the install.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/dynasort-review/#claim-vs-measured"
+     },
+     "plan": "Free Demo plan only; the paid plans were not clicked",
+     "comparability": "The wording of the setup screen against one run on a store of 23 products; larger stores and other days were not tried, so the duration is not set against a fixed claim.",
+     "status": "not_comparable",
+     "buying_consequence": "Expect to wait longer than the app says before the first sort; the wait was a synchronisation of a very small store.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Processing is not turned on yet. Go to Settings to enable it.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "After the Dynasort Status was set to Active and saved, the app said that processing was not turned on; Processing had to be switched On in Settings (interval 60 minutes) before the collection was sorted.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/dynasort-review/#claim-vs-measured"
+     },
+     "plan": "Free Demo plan only; the paid plans were not clicked",
+     "comparability": "The message of the app against the result after the switch; no other setting or plan was compared.",
+     "status": "confirmed",
+     "buying_consequence": "Setting a collection to Active is not enough: the collection stays unsorted until Processing is switched On in Settings, one extra step the app only shows afterwards.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Sales (Last 30 Days) (100), Sales (All Time) (50), Inventory Quantity (50), Sold Out (-100), On Sale (-20), Variants In Stock (100)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "After Sync now the page showed Sorting 1 minute ago, and the sort choice in Shopify changed from Most relevant to Manually with the products in the order and scores of the app (150, 150, 127, 127).",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/dynasort-review/#claim-vs-measured"
+     },
+     "plan": "Free Demo plan only; the paid plans were not clicked",
+     "comparability": "The recipe and scores of the app against the product order in the Shopify admin on one smart collection; the online store itself was not checked.",
+     "status": "confirmed",
+     "buying_consequence": "One switch sorted a collection of 8 products by itself, with no dragging; the Shopify sort choice changes to Manually while the app is active.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Move to bottom",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The collection of 8 products held no sold out product, so the setting Sold out items: Move to bottom was not seen at work.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/dynasort-review/#claim-vs-measured"
+     },
+     "plan": "Free Demo plan only; the paid plans were not clicked",
+     "comparability": "The Sold out setting of the recipe against a collection without any sold out product; nothing could be compared.",
+     "status": "not_testable",
+     "buying_consequence": "Whether sold out products really drop to the bottom is not shown by this test; check it on a collection that contains a sold out product.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Revert To (When Off)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "After the Dynasort Status was set to Off and saved, the Shopify sort choice stayed on Manually instead of returning to Most relevant; it was set back by hand and the original order returned.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/dynasort-review/#claim-vs-measured"
+     },
+     "plan": "Free Demo plan only; the paid plans were not clicked",
+     "comparability": "The recipe setting Revert To (When Off) against the Shopify sort choice some minutes after Status Off; a longer wait or a later processing run was not tried.",
+     "status": "contradicted",
+     "buying_consequence": "Switching Dynasort off does not by itself put the collection back; a merchant has to reset the sort choice in Shopify.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Try any plan free for 30 days. You pay $0 today.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The paid plans were not clicked, so the free trial and the Shopify approval screen were not seen; the free Demo plan was chosen instead and opened with no card or billing screen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/dynasort-review/#claim-vs-measured"
+     },
+     "plan": "Free Demo plan only; the paid plans were not clicked",
+     "comparability": "The trial text of the plan page against a Shopify approval screen that never appeared; no paid plan was started.",
+     "status": "not_testable",
+     "buying_consequence": "The trial wording is on the plan page, but whether a paid plan really costs $0 today was not tested; the free Demo plan was.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Special pricing for your store.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "A banner in the app showed Basic $49, Pro $124 and Enterprise $249 a month, half of the crossed out $99, $249 and $499, which are the App Store prices; the banner said the offer ends in 6 days. Only reported, not compared with a price field.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/dynasort-review/#claim-vs-measured"
+     },
+     "plan": "Free Demo plan only; the paid plans were not clicked",
+     "comparability": "The discounted prices in the app against the crossed out list prices on the same plan page; the discount is temporary and tied to the store, so no stored price was compared.",
+     "status": "contradicted",
+     "buying_consequence": "The app showed half of the App Store prices for this store for a limited time; the price you see can differ from the listing and can end after a few days.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Demo 2 collecties, Basic 25, Pro 100, Enterprise 1000",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan page lists 2, 25, 100 and 1000 sorted collections for Demo, Basic, Pro and Enterprise, with processing schedules of 60, 30, 20 and 10 minutes. The App Store listing now shows the collection counts in the right column, while the dossier still describes the mislabelled plan cards of October.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/dynasort-review/#claim-vs-measured"
+     },
+     "plan": "Free Demo plan only; the paid plans were not clicked",
+     "comparability": "The plan page of the app against the current App Store listing; the October state of the listing was not seen in this test.",
+     "status": "out_of_date",
+     "buying_consequence": "The plan page and the listing agree on the collection counts; the dossier text about mislabelled cards no longer matches the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Basic $99/mo doorgestreept, $49/mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan page shows Basic at $99 a month crossed out and $49 a month, Pro $249 crossed out and $124, Enterprise $499 crossed out and $249. The paid plans were not clicked, so no approval screen, total, tax or renewal term was seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/dynasort-review/#claim-vs-measured"
+     },
+     "plan": "Free Demo plan only; the paid plans were not clicked",
+     "comparability": "The prices on the plan cards against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price you would pay for a paid plan is not confirmed by a Shopify approval screen; start with the free Demo plan and check the screen before you approve a paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Dynasort (collection sorting) on a Shopify development store: the install, the free Demo plan without a card or billing screen, the first synchronisation (more than 7 minutes, where the app said about 5), the sort rule on Automated Collection (8 products) with the recipe Dynasort Default, the message that Processing had to be switched On in Settings first, the result in Shopify (the sort choice changed from Most relevant to Manually in the order of the app scores, about 8 minutes and 14 steps after the install), the switch back (Shopify stayed on Manually until the sort choice was reset by hand), the plan page with a temporary 50% discount (Basic $49, Pro $124, Enterprise $249 a month) and the uninstall, which asks for a reason. Nothing was paid or approved. Install: the app (App Store name Dynasort Collection Sorting, developer Dyna, Denver; Built for Shopify; rating 4.6 from 14 reviews) was installed from its App Store listing through the install form in our own tab. The install started at 22:12 (clock of the test computer). The permission screen said that the app needs access to view customer data, view staff and contributor data and view and edit store data; it was approved with Install. The app opened as Dynasort from Dyna, the same product as the listing, on its Plans page. Plan choice: the free Demo plan was chosen with the button Go Demo. No card and no billing screen came up. A welcome screen asked for a goal; Better merchandised collections was chosen and Build my setup plan was clicked. Wait: the screen Setting up your store said about 5 minutes remaining and Syncing 3 collections, 23 products, and 2 recent orders. It took more than 7 minutes before it said Your store is ready. Core action: the app listed the collections Hydrogen (3 products), Automated Collection (8 products) and Home page (0), with the recipe Dynasort Default, status Off and the text 0/2 Sorted. Automated Collection, a smart collection, was chosen. In Shopify it was sorted Most relevant before the test. The recipe Dynasort Default weighs Sales (Last 30 Days) (100), Sales (All Time) (50), Inventory Quantity (50), Sold Out (-100), On Sale (-20) and Variants In Stock (100), with the tie breaker Best selling and Sold out items set to Move to bottom, and Revert To (When Off) set to Most relevant. The Dynasort Status was set to Active and saved (Collection saved). The status box is a native select inside an iframe, so a mouse click could not open it; pressing Escape and then typing the first letter (A for Active, O for Off) worked. A message then said that processing is not turned on yet and that Dynasort will not auto-sort the collections otherwise. In Settings, Processing was switched from Off to On (interval 60 minutes) and saved. After Sync now and about 1 to 2 minutes, the page showed Sorting 1 minute ago (about 22:20). The first result therefore came about 8 minutes after the install, most of it waiting for the first synchronisation, in about 14 steps. Result in Shopify: the sort choice of the collection changed from Most relevant to Manually, and the order became The Multi-location Snowboard, The Multi-managed Snowboard, The Complete Snowboard, The Collection Snowboard: Liquid, then the products Hidden, Hydrogen and Compare at Price, equal to the order and scores in the app (150, 150, 127, 127 and so on). The collection holds no sold out product, so the rule Sold Out (-100) with Move to bottom was not seen at work. Switching back: the Dynasort Status was set to Off and saved, but Shopify stayed on Manually; the revert to Most relevant did not happen at once. The sort choice was set back to Most relevant by hand in Shopify and saved, and the original order returned. A merchant who switches the app off should check the sort choice of the collection. Plans: a banner says Special pricing for your store and that Basic, Pro and Enterprise are discounted for the store, starting at $49/mo, and that the offer ends in 6 days. Plan page: Demo Free; Basic $99/mo crossed out, $49/mo; Pro $249/mo crossed out, $124/mo; Enterprise $499/mo crossed out, $249/mo, so 50% off the list price in the app. The text says: Try any plan free for 30 days. You pay $0 today. Your first charge would be on December 17, 2026, and you can cancel anytime before then from your Shopify admin. The discount is temporary and tied to the store; the App Store listing shows $99, $249 and $499 without a discount. Sorted collections per plan: Demo 2, Basic 25, Pro 100, Enterprise 1000; processing schedule Demo 60 min, Basic 30, Pro 20, Enterprise 10. Demo has no Customers Also Bought recipes and no device analytics. The App Store listing now shows the collection counts in the right column; the dossier still describes the mislabelled plan cards seen in October. Checkout: the free Demo plan was chosen, the paid plans were not clicked, so no Shopify approval screen, no total, no test charge and no card field was seen. Nothing was approved. Cancelling: no paid plan was started. In Settings, Apps, Uninstall opened the dialog Uninstall Dynasort?, which says that the app can no longer be used, that data managed by the app will be deleted and that a request will be sent to the app developer within 48 hours to delete all personal customer information. A reason for uninstalling is required (Testing multiple apps was chosen). The app was uninstalled at about 22:22 after the evidence was complete and is gone from the installed apps. Not tested: the paid plans and the free trial, the A/B test, a sold out product moving to the bottom, variant sorting, recommendations, the effect in the online store (only the Shopify admin was checked), a large catalogue, Insights (data appears after 24 hours) and Sort rotation. Clean up: the collection order was set back to Most relevant, the Dynasort Status was set to Off, Processing had been switched On in the app and disappeared with the uninstall, the app was uninstalled and our own tab was closed. No other app was touched. The price fields are not changed here. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app did not sort until Processing was switched On in Settings, which the app only said after the status was set to Active. The first synchronisation took more than 7 minutes (the app said about 5). The sort choice of the collection in Shopify changes to Manually, and after the app was switched off Shopify stayed on Manually until the sort choice was reset by hand. The paid plans showed a temporary discount in the app that the App Store listing does not show, and the dossier still describes the mislabelled plan cards of October.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The paid plans and the 30 day free trial.",
+     "The A/B test.",
+     "A sold out product moving to the bottom of the collection.",
+     "Variant sorting, recommendations and Sort rotation.",
+     "The effect in the online store (only the Shopify admin was checked).",
+     "A large catalogue and the Insights numbers (data appears after 24 hours).",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:12 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -19181,6 +19818,285 @@
      "A paid plan and the cancellation.",
      "Export and reimport.",
      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "ChatGPT AI Product Description",
+   "product_id": "chatgpt-ai-product-description",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed the app on a Shopify development store, read its three sample descriptions and ran one generation on the Free plan. We paid and saved nothing. The full run is in the exit test section below.",
+   "findings": [
+    "Text we checked: \"AI Product Description-ChatGPT\". What we saw: The listing is now titled AI Product Description-ChatGPT (developer Profitonium) and the app opens as this product; the dossier calls it ChatGPT AI Product Description.",
+    "Text we checked: \"Your AI descriptions are ready!\". What we saw: Right after the install the app opened on Review your AI-generated content with 3 of 3 completed: three descriptions were written without any action, about 1 minute after the install, for no credits (100 before and after). It calls them a sneak peek.",
+    "Text we checked: \"Generation cost: 2 credits\". What we saw: For the Demo Mug the screen showed Generation cost: 2 credits before Generate 1 items; the result stood in the history after about 8 seconds and the credits went from 100 to 98.",
+    "Text we checked: \"a plain, straightforward mug\". What we saw: The text for the Demo Mug, whose original text was A plain demo mug, is three short sentences that match the input and invent no material, size or contents, with a little filler (desk or table, coffee or tea). It is general and thin, but not wrong. It was not saved.",
+    "Text we checked: \"Bundle Product #1 is a bundle product\". What we saw: For Bundle Product #1, which had no description, the sample text is the single sentence Bundle Product #1 is a bundle product., and Appointment got a filler text with no facts; Build Your Snowboard Gift Box kept the 15% from the original text correctly."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Paid plans, Add Credits and saving descriptions to Shopify.",
+    "A batch of thousands of products and automatic descriptions on import.",
+    "Translations, image and web search, the blog writer, the SEO audit and Brand Voice.",
+    "The extra costs that customer reviews mention.",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "AI Product Description-ChatGPT",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing is now titled AI Product Description-ChatGPT (developer Profitonium) and the app opens as this product; the dossier calls it ChatGPT AI Product Description.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The dossier title against the current listing title and the app header; the listing is a fact about the name, not a test result.",
+     "status": "out_of_date",
+     "buying_consequence": "The product is sold under a shorter title than in the dossier; it is the same app.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your AI descriptions are ready!",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Right after the install the app opened on Review your AI-generated content with 3 of 3 completed: three descriptions were written without any action, about 1 minute after the install, for no credits (100 before and after). It calls them a sneak peek.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The wording on the first screen against the time and the credit counter; the three products were chosen by the app, not by us.",
+     "status": "confirmed",
+     "buying_consequence": "You see written descriptions at once, free and without a step, but only for three products.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Generation cost: 2 credits",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "For the Demo Mug the screen showed Generation cost: 2 credits before Generate 1 items; the result stood in the history after about 8 seconds and the credits went from 100 to 98.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The cost line before the click against the counter after it, for one product; larger batches were not run.",
+     "status": "confirmed",
+     "buying_consequence": "The price of one description is shown before you click and matches what was taken.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "a plain, straightforward mug",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The text for the Demo Mug, whose original text was A plain demo mug, is three short sentences that match the input and invent no material, size or contents, with a little filler (desk or table, coffee or tea). It is general and thin, but not wrong. It was not saved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The generated text against the original text of the product, read by hand; no accuracy score exists and only one product was generated by us.",
+     "status": "confirmed",
+     "buying_consequence": "With little input you get a tidy but generic text; you have to add the facts yourself.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Bundle Product #1 is a bundle product.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "For Bundle Product #1, which had no description, the sample text is the single sentence Bundle Product #1 is a bundle product., and Appointment got a filler text with no facts; Build Your Snowboard Gift Box kept the 15% from the original text correctly.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The app wording that descriptions are ready against the three before and after texts read by hand; no quality score was used.",
+     "status": "contradicted",
+     "buying_consequence": "A product with no description gets no useful text; the three samples were ready but two of them add little.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Generation estimate: 40 credits",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The dashboard shows 20 products with missing or short descriptions and a Generation estimate of 40 credits, 17 missing SEO titles at 34 credits and 18 missing SEO descriptions at 36 credits; Credits left 98, Enough for 49 more descriptions.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The dashboard estimate against the 2 credits we saw for one product; the batch itself was not run.",
+     "status": "confirmed",
+     "buying_consequence": "You can see what the whole store would cost in credits before you generate; 2 credits per description matches the one we ran.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Billed USD 19 every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The paywall shows, monthly, Basic $19 (2,000 credits), Standard $49 (11,000 credits) and PRO $249 (110,000 credits), each billed every 30 days, equal to the monthly prices on the listing.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The monthly prices on the paywall against the listing; no Shopify approval screen was reached.",
+     "status": "confirmed",
+     "buying_consequence": "The monthly prices are as listed; a plan renews every 30 days, not every calendar month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Annual (Save up to 33%)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The paywall has Annual selected by default and shows $15, $33 and $165 a month with 3,000, 16,500 and 165,000 credits; the listing names $190, $399 and $1,990 a year, which does not divide to those monthly figures, and the yearly total was not seen on a Shopify screen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The monthly figures of the annual view against the yearly prices on the listing; no yearly approval screen was seen.",
+     "status": "contradicted",
+     "buying_consequence": "The yearly price you would pay is not shown on the paywall and differs from the listing; check the total before approving annual billing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Catalog: $129/mo or $1,188/yr; 40k credits/mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing names a Catalog plan with 40k credits a month; it was not on the paywall, which shows Basic, Standard, PRO and Free.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The listing plan list against the paywall plan cards; the Catalog plan may exist elsewhere in the app.",
+     "status": "contradicted",
+     "buying_consequence": "A plan the listing sells was not offered in the app on this store.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "About 1,000 GPT-6 descriptions",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The paywall says GPT-6 descriptions for the credit counts, where the listing names GPT-5; which model wrote the text was not shown.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The model name on the paywall against the model name on the listing; the model behind the text was not checked.",
+     "status": "contradicted",
+     "buying_consequence": "The model named in the app differs from the listing; the quality of the text does not follow from the name.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Add-on credits: 100 credits per $1, $5 minimum",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing names add-on credits at 100 credits per $1 with a $5 minimum; the app only shows an Add Credits button, which was not opened.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The listing add-on price against a button that was not opened; no top-up screen was seen.",
+     "status": "not_testable",
+     "buying_consequence": "The price of extra credits could not be confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You need to upgrade your plan to \"STANDARD\" or \"PRO\" to use this feature.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Extra Generations (Ads, Collection Descriptions, Instagram Captions, Product Benefits) shows that message on the Free plan, so those tools need Standard at $49 or PRO at $249 a month.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The message in the app against the plan cards; the extra tools were not used.",
+     "status": "confirmed",
+     "buying_consequence": "Ads, captions and benefits texts are not on the Free or Basic plans.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Continue with Free",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Continue with Free started the Free plan ($0, 100 credits, renew Dec 17, 2026) with no card, no payment screen and no Shopify approval screen, so no paid price could be compared with a checkout.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/chatgpt-ai-product-description-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan was clicked",
+     "comparability": "The prices on the paywall against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price you would pay for a paid plan is not confirmed by a Shopify approval screen; start on Free and check the screen before you approve a plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested the app AI Product Description-ChatGPT (ChatGPT AI Product Description in the dossier) on a Shopify development store: the install, the three sample descriptions the app wrote by itself about 1 minute after the install without any step, one own generation for the Demo Mug with its cost of 2 credits shown first and a result after about 8 seconds (general and short, not wrong, not saved), the credit estimates for the whole store, the paywall with monthly prices equal to the listing and annual prices that differ in form, the Free plan with 100 credits and no card, and the uninstall, which asks for a reason. The app made a collection that was deleted afterwards. Nothing was paid or saved. Install: the listing apps.shopify.com/automated-description-writing (developer Profitonium) is now titled AI Product Description-ChatGPT; the dossier calls it ChatGPT AI Product Description. The app is the same product. The install form was sent at 23:00:11 in our own tab and Install was clicked on the permission screen (View staff and contributor data, View and edit store data: Products, Online Store, Shopify admin). No account, card or phone number was asked. First result: right after the install the app opened on Review your AI-generated content with Your AI descriptions are ready! and 3 of 3 completed. Three descriptions were already written, without any action: Appointment, Build Your Snowboard Gift Box and Bundle Product #1. It says This is just a sneak peek! You can generate for all your products later. This took about 1 minute (about 23:01) and 0 own steps after the install, and cost no credits (100 before and after). Quality of the three samples, read by hand: Appointment went from Appointment to Make time for what matters with an appointment. Keep your scheduled visit in mind and plan your day around it., which is filler and states no facts. Build Your Snowboard Gift Box kept the 15% from the original text (Save 15%: Pay less than you would buying your selected products separately.) and added no features we could see. Bundle Product #1 had no description and got Bundle Product #1 is a bundle product., which says nothing. Own generation: Bulk Generation, Demo Mug ticked, Description on, showed Generation cost: 2 credits before the click, then Generate 1 items. After about 8 seconds the result stood in Product generation history (order a001e, 1/1 Generated, 0/1 Saved): The Demo Mug gives you a plain, straightforward mug for enjoying a drink at your desk or table. Its simple look fits easily into an everyday routine without adding extra decoration. Use it for coffee, tea, or another drink when you want a no-frills mug. The original text was A plain demo mug. The text matches the input (plain) and invents no material, content or size, with a little filler (desk or table, coffee or tea). It is general and thin, but not wrong. Credits went from 100 to 98, 2 per description as shown. Nothing was saved to the product; Demo Mug still reads A plain demo mug (checked in Shopify). Dashboard: Product descriptions 20 missing or under 40 words, Generation estimate 40 credits; SEO titles 17 missing, 34 credits; SEO descriptions 18 missing, 36 credits; Credits left 98, Enough for 49 more descriptions. Side effect: the app made a collection All Products (AI Product Description-ChatGPT) with 23 products (condition price above or below $0,01); it was deleted after the test. Plans: after Continue the page Choose a plan (a paywall) shows, monthly, Basic $19 a month (Billed USD 19 every 30 days, 2,000 credits, about 1,000 GPT-6 descriptions, 3,000 with annual billing), Standard $49 a month (11,000 credits, 16,500 with annual billing) and PRO $249 a month (110,000 credits, 165,000 with annual billing); these monthly prices equal the listing. Annual (Save up to 33%) is selected by default and shows $15, $33 and $165 a month with 3,000, 16,500 and 165,000 credits (PRO plus 50% credits); the listing names $190, $399 and $1,990 a year, which does not divide to those monthly figures, and the yearly total was not seen on a Shopify screen. The listing also names a Catalog plan ($129/mo or $1,188/yr, 40k credits/mo), which was not on the paywall, and Add-on credits (100 credits per $1, $5 minimum), which was not seen in the app (only an Add Credits button, not opened). The paywall says GPT-6 descriptions where the listing names GPT-5. Below the paid plans: Free Plan $0 a month, 100 credits every month, Continue with Free. Checkout: Continue with Free was chosen (URL plan FREE, Credits renew Dec 17, 2026); no card, no payment screen and no Shopify approval screen came up, so no paid checkout was seen and no paid plan was clicked. Extra Generations (Ads, Collection Descriptions, Instagram Captions, Product Benefits) says You need to upgrade your plan to \"STANDARD\" or \"PRO\" to use this feature. Cancelling: no paid plan was started, so there was nothing to cancel. Settings, Apps, the app menu and Uninstall opened the dialog Uninstall AI Product Description-ChatGPT? (you will no longer be able to use the app; a request goes to the app developer within 48 hours to delete all personal customer information) with a required Reason for uninstalling (Testing multiple apps was chosen); the app then left the Installed list. Not tested: paid plans, Add Credits, saving to Shopify, a batch of thousands of products, automatic descriptions on import, translations, image and web search, the blog writer, the SEO audit, Brand Voice, the chat assistant, and the extra costs that customer reviews mention. Clean up: the app was uninstalled, the collection the app made was deleted, no product, description or theme was changed, the plan stayed Free with 98 credits and nothing was paid. Our own tab was closed. The price fields are not changed here. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The text for a product with little input stays general and thin (a plain mug got a plain mug text; a product without a description got a sentence that says nothing). The annual prices on the paywall do not match the yearly prices on the listing and annual is selected by default. The listing names a Catalog plan and add-on credits that were not seen, and the paywall says GPT-6 where the listing says GPT-5. The app also makes a collection of all products in the store, which has to be removed by hand.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Paid plans, Add Credits and saving descriptions to Shopify.",
+     "A batch of thousands of products and automatic descriptions on import.",
+     "Translations, image and web search, the blog writer, the SEO audit and Brand Voice.",
+     "The extra costs that customer reviews mention.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 23:00:11 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -26993,6 +27909,251 @@
      "Paid plans, the Shopify approval screen and checkout.",
      "Export and reimport.",
      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 19:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Securify",
+   "product_id": "securify",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 we installed Securify on a Shopify development store and blocked one country with a single click, about 3 minutes after the install. The rule was not enforced because the theme app embed stayed off. We paid, approved and saved nothing. The full run is in the exit test section below.",
+   "findings": [
+    "Text we checked: \"Unlimited Blocked Visitors\". What we saw: The listing shows unlimited blocked visitors on the Free plan; in the app the Free plan blocks 500 visitors a month (the header showed 0 / 500 blocked visitors, resets Dec 17) and unlimited blocked visitors is a Pro feature.",
+    "Text we checked: \"Unlimited High-risk order alerts\". What we saw: The listing shows unlimited high-risk order alerts; the Free card says An alert for every risky order but only Review 5 risky orders a month, and Order Protection showed 0 of 5 for the Free plan.",
+    "Text we checked: \"Unlimited visitor logs\". What we saw: The listing shows unlimited visitor logs; the Free card says the last 1,000 visitor logs and 7 days of analytics, Pro the last 2,000 logs, and Unlimited visitor logs is listed under Growth.",
+    "Text we checked: \"AI-powered advanced bot blocking\". What we saw: The listing shows AI-powered advanced bot blocking; the Free card lists no bot blocking, Pro lists VPN, proxy & datacenter blocking and Good-bot management, and Smart bot blocking is listed under Growth. Bot blocking was not tried.",
+    "Text we checked: \"Brazil / BR / Remove\". What we saw: One click on Brazil on the world map turned it red (User Blocked) and added the row Brazil, BR, Remove to Current Restrictions (1) at once, in 1 click and about 3 minutes after the install; the rule was removed afterwards (Current Restrictions (0))."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Turning on the app embed and seeing the block page on the storefront.",
+    "An IP rule, an email block and fraud alerts on real orders.",
+    "VPN and bot blocking and the live visitor log.",
+    "The paid plans and their 7-day trial.",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Unlimited Blocked Visitors",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows unlimited blocked visitors on the Free plan; in the app the Free plan blocks 500 visitors a month (the header showed 0 / 500 blocked visitors, resets Dec 17) and unlimited blocked visitors is a Pro feature.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The listing wording against the Free plan card and the counter in the header of the app; the cap itself was not reached in this test.",
+     "status": "contradicted",
+     "buying_consequence": "A free store that gets a lot of bot traffic reaches the 500 visitor cap and needs Pro at $19.00 a month.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Unlimited High-risk order alerts",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows unlimited high-risk order alerts; the Free card says An alert for every risky order but only Review 5 risky orders a month, and Order Protection showed 0 of 5 for the Free plan.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The listing wording against the Free card and the counter in Order Protection; no real order was received, so no alert was seen.",
+     "status": "contradicted",
+     "buying_consequence": "On Free only the first 5 risky orders a month can be reviewed; unlimited needs Growth at $49.00 a month.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Unlimited visitor logs",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows unlimited visitor logs; the Free card says the last 1,000 visitor logs and 7 days of analytics, Pro the last 2,000 logs, and Unlimited visitor logs is listed under Growth.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The listing wording against the three plan cards; the visitor log itself was not opened.",
+     "status": "contradicted",
+     "buying_consequence": "Free keeps only the last 1,000 visitor logs and 7 days of analytics; unlimited logs need Growth.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "AI-powered advanced bot blocking",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows AI-powered advanced bot blocking; the Free card lists no bot blocking, Pro lists VPN, proxy & datacenter blocking and Good-bot management, and Smart bot blocking is listed under Growth. Bot blocking was not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The listing wording against the plan cards; the bot blocking itself was not run, so only the plan placement was compared.",
+     "status": "contradicted",
+     "buying_consequence": "Bot blocking is not on the Free plan; smart bot blocking needs Growth at $49.00 a month.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Block fake and risky email and customers",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows a block on fake and risky emails and customers for the free app; the plan dialog lists Email check on every new order under Pro and Block buyers by email under Growth, not under Free. The Block Emails page was not used.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The listing wording against the plan cards; the page Block Emails and a test order were not used, so no email check was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The email check sits in a paid plan according to the plan cards; whether it works was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Brazil / BR / Remove",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "One click on Brazil on the world map turned it red (User Blocked) and added the row Brazil, BR, Remove to Current Restrictions (1) at once, in 1 click and about 3 minutes after the install; the rule was removed afterwards (Current Restrictions (0)).",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The click on the map against the row in the table; the rule was not checked on the storefront.",
+     "status": "confirmed",
+     "buying_consequence": "Adding a country rule on the Free plan is one click on the map; the rule shows up in the table at once.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Securify runs on your storefront through a theme app embed.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The header said App embed disabled and the pop-up says that until the embed is turned on visitors are not checked and country and VPN rules are not enforced. The embed was not turned on (it would save a theme change), so the block page was not seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The pop-up text against the header and the rule in the app; the storefront was not opened with the embed on, so the effect of the rule was not compared.",
+     "status": "not_testable",
+     "buying_consequence": "The rule is created at once but does nothing on your store until the theme app embed is on; this test did not show the block page.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pro $19.00/mo of $159.00/yr",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan dialog shows Pro at $19.00 a month or $159.00 a year, with a 7-day free trial, equal to the dossier.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The Pro prices in the dialog against the dossier; no approval screen was reached, so no total or tax was compared.",
+     "status": "confirmed",
+     "buying_consequence": "Pro costs $19.00 a month or $159.00 a year, as in the dossier.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Growth $49.00/mo of $490.00/yr",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan dialog shows Growth at $49.00 a month or $490.00 a year, with a 7-day free trial, equal to the dossier.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The Growth prices in the dialog against the dossier; no approval screen was reached, so no total or tax was compared.",
+     "status": "confirmed",
+     "buying_consequence": "Growth costs $49.00 a month or $490.00 a year, as in the dossier.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "7-day free trial",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Pro and Growth both show a 7-day free trial and a button Start free trial; the button was not clicked, so no trial and no approval screen was seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The trial text of the cards against a trial that was never started; no paid plan was clicked.",
+     "status": "not_testable",
+     "buying_consequence": "Whether a paid plan starts with 7 free days is not confirmed by a Shopify approval screen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Niet op \"Start free trial\" geklikt.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free plan stayed active and Start free trial was not clicked, so no Shopify approval screen, total, tax or renewal term was seen; the prices in the dialog could not be compared with a checkout.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/securify-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; Start free trial was not clicked",
+     "comparability": "The prices on the plan cards against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price you would pay for a paid plan is not confirmed by a Shopify approval screen; start with the Free plan and check the screen before you approve a paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Securify (IP and country blocker) on a Shopify development store: the install, the Free plan without a card or test charge, one click on Brazil that added a country rule at once (about 3 minutes after the install), the header App embed disabled and the pop-up saying that rules are not enforced until the theme app embed is on (the embed was not turned on, so the block page was not seen), the plan dialog with Free capped at 500 blocked visitors a month, 5 risky orders a month and 1,000 visitor logs against the listing that shows unlimited, Pro at $19.00 a month or $159.00 a year and Growth at $49.00 a month or $490.00 a year, and the uninstall, which asks for a reason. Nothing was paid, approved or saved. Install: the app (listing apps.shopify.com/easy-block-customer-ip-country, developer siimple.ai, rating 4.6 from 111 reviews; App Store name Securify: IP & Country Blocker) was installed from its App Store listing through the install form in our own tab, and Install was clicked in the Shopify dialog at 22:47:38. No payment, account or tick box was asked. The app opened as Securify with the menu Block Countries, Block IPs, Block Emails and Order Protection, which matches the listing and the dossier (country, IP, bot and VPN blocking and a fraud filter). The first screen was a pop-up, Turn on the Securify app embed. Plan: the plan at install was Free; no card and no test charge came up. Order Protection showed Risky orders reviewed this month 0 of 5, Free plan, resets Dec 17. Core action: on Block Countries one click on Brazil on the world map made it red (User Blocked) and added the row Brazil, BR, Remove to the table Current Restrictions (1) at once, at about 22:51, about 3 minutes after the install and in 1 click. The header said App embed disabled and 0 / 500 blocked visitors, resets Dec 17. The app embed was not turned on because that would save a theme change, so the rule was made but the block page was not seen on the storefront; the effect of the rule was not tested. The pop-up says that until the embed is turned on visitors are not checked and country and VPN rules are not enforced. The rule was then removed (Current Restrictions (0)). Yellow Risk Flagged countries (United States, China, Japan, Sweden, Germany, France, Pakistan) are on the map by default. Plans: the dialog Choose Your Plan (Cancel anytime) shows Free $0 a month (Review 5 risky orders a month, Block unlimited countries & IPs, 500 blocked visitors a month, Last 1,000 visitor logs and 7 days of analytics), Pro $19.00 a month or $159.00 a year (Review 25 risky orders a month, Unlimited blocked visitors, VPN, proxy & datacenter blocking, Email check on every new order, Custom block page, 7-day free trial) and Growth $49.00 a month or $490.00 a year (Unlimited risky orders, Smart bot blocking, Customer risk scan for your whole list, 7-day free trial). Pro and Growth equal the dossier. Difference with the listing: the listing shows only Free, with Unlimited Blocked Visitors, Unlimited High-risk order alerts, AI-powered advanced bot blocking, Block fake and risky email and customers and Unlimited visitor logs. In the app the Free plan is capped at 500 blocked visitors a month, 5 risky orders reviewed a month and the last 1,000 visitor logs; VPN and proxy blocking, the email check and bot blocking are in Pro and Growth. Checkout: the free plan stayed active and Start free trial was not clicked, so no Shopify approval screen, total, test charge or card field was seen. Nothing was approved. Cancelling: no paid plan was started. In Settings, Apps, Uninstall opened the dialog Uninstall Securify? with a required reason (Testing multiple apps was chosen); the app was uninstalled after the evidence was complete (message You've successfully uninstalled Securify). Not tested: turning on the app embed and seeing the block page, an IP rule, an email block, fraud alerts on real orders, VPN and bot blocking, the live visitor log and the paid plans. Clean up: the Brazil rule was removed, no theme change was saved, the app was uninstalled and our own tab was closed. The price fields are not changed here. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The rule only counts once the theme app embed is turned on, which the app shows in the header and in a pop-up; the embed was not turned on in this test, so the effect is not seen. The Free plan in the app is capped (500 blocked visitors a month, 5 risky orders a month, 1,000 visitor logs) where the listing shows unlimited, and VPN, email check and bot blocking sit in Pro and Growth.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Turning on the app embed and seeing the block page on the storefront.",
+     "An IP rule, an email block and fraud alerts on real orders.",
+     "VPN and bot blocking and the live visitor log.",
+     "The paid plans and their 7-day trial.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:47:38 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],

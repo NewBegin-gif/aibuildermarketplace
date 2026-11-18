@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 681 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-18.
+All 682 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-18.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1174,10 +1174,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/dripshipper-review.html
 
 ## DropGenius (dropgenius.com)
-- **Verified pricing:** Re-verified 19 September 2026 on their own pricing page, unchanged since August.
+- **Verified pricing:** On 18 November 2026 the 'Build my FREE store' button on dropgenius.com sent us to a card form titled 'Pay Securely' on a different domain and brand, app.storebuilder.ai/checkout.
 - **Honest take:** An AI-generated store in 30 seconds is also just a starting template: the product selection, marketing and margins remain entirely your problem.
 - **Best for:** absolute beginners who want a pre-built Shopify dropshipping store scaffold in minutes and understand it's a starting point, not a business
-- **Flags:** Annual commit
+- **Flags:** Renewal jump, Add-ons extra, Annual commit
 - **Full review:** https://marketingandsalessoftware.com/dropgenius-review.html
 
 ## Dryground AI (dryground.ai)
@@ -2680,7 +2680,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-10-17 in a browser on outsends.com/pricing, monthly view; the cards show a $ sign without naming the currency, and the page says prices exclude VAT) Four fixed plans, each with u…
 - **Honest take:** Non-refundable; one seat below the $199 Team plan; trial only on monthly plans.
 - **Best for:** founders, freelancers and small agencies who run cold email from Gmail and want flat monthly plans by email volume, with warm-up and follow-up sequences included
-- **Flags:** Usage-metered, Annual commit
+- **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/outsends-review.html
 
 ## Ownr (ownr.co)
@@ -3538,6 +3538,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** independent auto repair, tire and fleet service shops with roughly 3 to 6 staff who want estimates, inspections, customer texting, parts ordering and payments in one system
 - **Flags:** Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/shopmonkey-review.html
+
+## ShopRaise Workplace Giving (shopraise.com)
+- **Verified pricing:** (read 2026-11-18 on the G2 pricing tab for ShopRaise Workplace Giving; the listing says the pricing is provided by ShopRaise; prices in US dollars) ShopRaise sells a single package called A…
+- **Honest take:** Price only via G2 listing; no buyer reviews yet.
+- **Best for:** HR and people teams at employers of any size that want a giving or social-impact perk without payroll deductions, employee donations or a company-funded donation budget
+- **Flags:** Per-seat pricing, Add-ons extra
+- **Full review:** https://aibuildermarketplace.com/b2b/shopraise-workplace-giving-review/
 
 ## ShopTrueProfit (shoptrueprofit.com)
 - **Verified pricing:** (read 2026-11-13 on shoptrueprofit.com, dollar amounts as shown) ShopTrueProfit has three options.
@@ -4505,8 +4512,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wiz-checkout-upsell-review/
 
 ## Wondershare PDFelement (pdf.wondershare.com)
-- **Verified pricing:** (read 2026-10-09 in a browser render of pdf.wondershare.com/store/windows-individuals.html, USD, Windows, individuals, single-platform tab) All three prices are shown as a PDFelement 13 lau…
-- **Honest take:** Launch-discount prices; 50 AI uses and 3 eSign requests per paid plan.
+- **Verified pricing:** (read 2026-11-18 in a browser on pdf.wondershare.com/store/windows-individuals.html, USD, Windows, individuals, single-platform tab, under a Black Friday banner 'UP TO 84% OFF') All three p…
+- **Honest take:** Black Friday sale prices; 50 AI uses and 3 eSign requests per paid plan.
 - **Best for:** individuals and small offices on Windows or Mac who want a full PDF editor with OCR, forms and conversion, and prefer a one-time licence over an Acrobat subscription
 - **Full review:** https://officesoftwaremarketplace.com/wondershare-pdfelement-review.html
 

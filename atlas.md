@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 678 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-17.
+All 680 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-18.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2171,6 +2171,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/langshop-review.html
 
+## Langwill (langwill.com)
+- **Verified pricing:** (read 2026-11-18 on the Shopify App Store listing, US dollars, billed every 30 days) Free: 5,000 words, 1 translated language, 153 currencies, multilingual SEO.
+- **Honest take:** Translates a Shopify store and converts currencies; free for 5,000 words.
+- **Best for:** Shopify merchants who want their store in several languages and currencies without hiring translators, and who can start on a free or $9.99 plan
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/langwill-review/
+
 ## Later (later.com)
 - **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07) Starter $18.75/month, Growth $37.50 and Scale $82.50, all billed yearly, which Later advertises as three months free and 25% off against monthly.
 - **Honest take:** The Starter caps are where the price really lives: 30 posts per profile and 3 months of analytics run out fast for an active brand, pushing real users toward Growth.
@@ -2303,7 +2310,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/lusha-review.html
 
 ## MailVeri (mailveri.com)
-- **Verified pricing:** (read 2026-11-13 on mailveri.com/pricing, US dollars) MailVeri sells pay-as-you-go credit packs with no subscription, and the page says credits never expire.
+- **Verified pricing:** (read 2026-11-18 on mailveri.com and its pricing page and in our own test that day; earlier: read 2026-11-13 on mailveri.com/pricing, US dollars) MailVeri sells pay-as-you-go credit packs w…
 - **Honest take:** Bulk email verification with credits that never expire; from $9 for 10,000.
 - **Best for:** marketers and developers who verify email lists in bursts and want to buy credits once instead of paying a monthly subscription
 - **Flags:** Usage-metered
@@ -2637,8 +2644,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Optizen (optizenapp.com)
 - **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell; re-read 2026-09-17 and 2026-10-05, every amount unchanged) Three tiers, billed in USD.
-- **Honest take:** AI video is the reason to install this, and it is the one thing the subscription does not cover.
-- **Best for:** nobody for now: we do not recommend Optizen while its app does not open (checked 17 November 2026)
+- **Honest take:** We do not recommend Optizen right now.
+- **Best for:** nobody for now: we do not recommend Optizen while its app does not open (checked 17 November 2026 and 18 November 2026)
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/optizen-review.html
 
@@ -2667,7 +2674,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Two honest limits. It's Canada-only (provincial incorporation covers Ontario, Alberta, BC and Quebec) so it's no use outside Canada.
 - **Best for:** Canadian founders who want a straightforward sole proprietorship or single-shareholder incorporation done fast, without paying lawyer rates
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/ownr-review/
+- **Full review:** https://officesoftwaremarketplace.com/ownr-review.html
 
 ## Oyster (oysterhr.com)
 - **Verified pricing:** (re-verified 2026-10-09 on their own pricing page; the figures are unchanged since 2026-08-14) Employer of Record USD 699 per employee per month, with annual discounts available; Global Con…
@@ -2754,7 +2761,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The mobile side is very new: the iOS app arrived on 10 August 2026, and on 6 September 2026 there was still no Android app. By 17 November 2026 an Android app was on Google Play, with 10+ downloads.
 - **Best for:** teams under twenty people who want zero-knowledge encryption and shared vaults at about $1.67 a seat a month, and can live with a first-generation mobile app and a plainer interface
 - **Flags:** Per-seat pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/passpack-review/
+- **Full review:** https://officesoftwaremarketplace.com/passpack-review.html
 
 ## Payoneer (payoneer.com)
 - **Verified pricing:** (re-verified 2026-10-02 on payoneer.com/pricing/, where the older payoneer.com/about/pricing/ address now redirects; the page itself carries "Last updated on 1 January 2026") Free to open; …
@@ -3301,9 +3308,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/salesmessage-review.html
 
 ## SalesTarget.ai (salestarget.ai)
-- **Verified pricing:** (re-read 2026-10-28 on salestarget.ai/pricing, tab by tab, monthly billing; the vendor told us on 28 October that its plans had changed.
+- **Verified pricing:** (read 2026-11-18 on salestarget.ai/pricing and in our own test that day; earlier: re-read 2026-10-28 on salestarget.ai/pricing, tab by tab, monthly billing; the vendor told us on 28 October…
 - **Honest take:** The credit numbers on the plan cards shrink once you read the price list.
-- **Best for:** small sales teams and agencies that want a B2B lead database, cold email with unlimited inboxes and warm-up, LinkedIn automation and a basic CRM under one login, priced per organisation with a few seats included (1 on Growth
+- **Best for:** small sales teams and agencies that want a B2B lead database, cold email with no stated cap on connected inboxes and warmup for 5 of them on Growth (extra slots $2 each a month)
 - **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/salestarget-ai-review.html
 
@@ -3674,6 +3681,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify merchants who want branded social icons and a WhatsApp chat button on product pages without touching theme code, and who will use the built-in click counter to check whether anyone taps them
 - **Full review:** https://marketingandsalessoftware.com/social-bar-review.html
 
+## Social Snowball (socialsnowball.io)
+- **Verified pricing:** (read 2026-11-18 on the Shopify App Store listing, US dollars, billed every 30 days) Snow Day: $249 a month plus 3% of affiliate revenue; unlimited affiliates, influencer management, post-p…
+- **Honest take:** Affiliate, referral and influencer programmes for Shopify; from $249 a month.
+- **Best for:** Shopify brands with enough sales to justify $249 or more a month on affiliate, referral and influencer programmes, and that want payouts, attribution and fraud checks in one place
+- **Full review:** https://aibuildermarketplace.com/b2b/social-snowball-review/
+
 ## SocialBee (socialbee.io)
 - **Verified pricing:** (re-verified 2026-09-22 on socialbee.com/pricing/; every named-plan amount unchanged to the cent.
 - **Honest take:** You are billed per social profile, not per person, and a profile is one brand account on one network.
@@ -3781,7 +3794,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The ladder rewards size rather than commitment: each band's rate applies only to the seats inside it.
 - **Best for:** leadership teams that already run on goals and want one place to set objectives, track KPIs and scorecards, and keep strategy execution on cadence
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/success-co-review/
+- **Full review:** https://marketingandsalessoftware.com/success-co-review.html
 
 ## Sucuri (sucuri.net)
 - **Verified pricing:** (read 2026-10-27 on sucuri.net/website-security-platform/signup/, both tabs; the help-centre and terms pages were read on 2026-10-15; dollar amounts, the page does not name the currency) Su…
@@ -3799,7 +3812,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/supaeasy and in our own test that day; earlier: verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing; re-verified 2026-10-22 on bot…
 - **Honest take:** The 'free' plan is development-stores only, so any live use is paid, and the AI generator that headlines the app is not in Premium ($49) but in Advanced ($99), plus AI credits bought separately ($25 per 50).
 - **Best for:** Shopify merchants, especially non-Plus stores, who want custom discount, checkout, payment and shipping logic without hiring a developer
-- **Full review:** https://aibuildermarketplace.com/b2b/supaeasy-review/
+- **Full review:** https://marketingandsalessoftware.com/supaeasy-review.html
 
 ## Super (effectify.io)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/super-gift-wraps and in our own test on a development store the same day; Basic, Advanced and Pro unchanged since 2026-11-02) Three paid tiers on the li…
@@ -4098,7 +4111,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/track123-review.html
 
 ## Trackr (parceltrackr.com)
-- **Verified pricing:** (price re-read 2026-10-13) Four tiers and no free plan, billed in USD every 30 days through Shopify: Basic $10 a month or $96 a year for 400 shipments a month, Standard $45 or $432 for 2,00…
+- **Verified pricing:** (read 2026-11-18 on apps.shopify.com/trackr and parceltrackr.com/pricing and in our own test that day; earlier: price re-read 2026-10-13) Four tiers and no free plan, billed in USD every 30…
 - **Honest take:** The reviews are split rather than soft, 45 five-star and seven one-star of 56 on 12 September 2026, and the complaints name downtime on the page customers open when they are already worried about a parcel.
 - **Best for:** Shopify stores shipping a few hundred to a few thousand parcels a month that want where-is-my-order traffic off the support desk: one branded tracking page across every carrier, estimated delivery dates, and proactive email
 - **Flags:** Usage-metered, Annual commit

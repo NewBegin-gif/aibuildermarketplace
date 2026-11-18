@@ -99,10 +99,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "quoted",
@@ -110,7 +109,475 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/way-review/",
+  "method": [
+   "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser",
+   "Added one location and previewed the floating pin in an unsaved theme preview",
+   "Read the plan page and uninstalled the app; nothing was paid or saved"
+  ],
+  "claims": [
+   {
+    "claim": "no API key required",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "On the Free plan a location was added from the Google address suggestions and the floating pin opened Google Maps without any API key, Google account or card; the Free card in the app does not name No API key required, only the paid cards do.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+    },
+    "plan": "Free plan only; the paid plans were not clicked",
+    "comparability": "The listing wording against one location and one floating pin in an unsaved theme preview; the paid map block was not tried, so the wording was not checked there.",
+    "status": "confirmed",
+    "buying_consequence": "You do not need a Google Maps key to get a pin on the free plan, although the free plan card does not say so.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Floating store locator",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "After the App embed was switched on in the theme preview, a grey floating pin with the link Way Store Locator appeared in the lower right corner and a click opened Google Maps for the location. The theme change was not saved.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+    },
+    "plan": "Free plan only; the paid plans were not clicked",
+    "comparability": "The Free card text against the pin in the editor preview; the pin was not seen on the live store because nothing was saved.",
+    "status": "confirmed",
+    "buying_consequence": "The free plan gives one floating pin that opens Google Maps; it is not a map on a page.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Embedding the map into your store pages is available on paid plans.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "On the Free plan the app said this in a blue block and the tab Map in the preview was greyed out; the app block was not tried because it needs a paid plan.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+    },
+    "plan": "Free plan only; the paid plans were not clicked",
+    "comparability": "The notice in the app against the greyed out Map tab on the Free plan; the paid app block was not opened.",
+    "status": "confirmed",
+    "buying_consequence": "A map on your own pages needs a paid plan, from $6.99 a month; the free plan only has the floating pin.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Up to 50/500/2000 locations",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The plan cards say 1 location (Free) and Up to 50, 500 and 2000 locations for Basic, Advanced and Pro, as the listing does. One location was added on the Free plan; more locations and the 50 location limit were not tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+    },
+    "plan": "Free plan only; the paid plans were not clicked",
+    "comparability": "The plan cards against the listing wording and one saved location; no second location, bulk import or limit was tried.",
+    "status": "confirmed",
+    "buying_consequence": "The location limits on the cards match the listing; the limit itself was not tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Basic Plan $6.99/month; Advanced Plan $14.99/month; Pro Plan $29.99/month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The monthly view of the plan page shows Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99 a month, billed monthly, as the listing does.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+    },
+    "plan": "Free plan only; the paid plans were not clicked",
+    "comparability": "The monthly prices on the cards against the listing; no approval screen was reached, so no total or tax was compared.",
+    "status": "confirmed",
+    "buying_consequence": "The monthly prices in the app equal the listing: $6.99, $14.99 and $29.99 a month.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Basic $5.59/month, Advanced $11.99/month, Pro $23.99/month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The yearly view shows $5.59, $11.99 and $23.99 a month, billed annually, which equals $67.10, $143.90 and $287.90 a year as on the listing.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+    },
+    "plan": "Free plan only; the paid plans were not clicked",
+    "comparability": "The yearly prices on the cards against the yearly totals of the listing; the yearly plan was not started.",
+    "status": "confirmed",
+    "buying_consequence": "Paying yearly saves about 20% against the monthly price, matching the listing.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Pick your plan to start a 7-days* free trial",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The heading offers a 7 day free trial on the plan page, with a footnote that each store is entitled to a maximum of undefined trial days altogether; only the Free plan was chosen, so no trial was started or seen on an approval screen.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+    },
+    "plan": "Free plan only; the paid plans were not clicked",
+    "comparability": "The heading and footnote of the plan page against a trial that was never started; no paid plan was clicked.",
+    "status": "not_testable",
+    "buying_consequence": "Whether a paid plan starts with 7 free days is not confirmed by a Shopify approval screen; the footnote on the page is unclear about the trial days.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "BLACK FRIDAY SALE: Up To 50% OFF Claim Offer",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "A banner in the app offered up to 50% off with a Claim Offer link; it was not clicked, so the discounted prices were not seen. The plan cards showed the list prices.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+    },
+    "plan": "Free plan only; the paid plans were not clicked",
+    "comparability": "The banner text against the plan cards; the offer page was not opened, so no discounted price was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The offer is time limited and its prices were not seen; the prices on the cards are the list prices.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Betaalde plannen niet aangeklikt",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The paid plans were not clicked, so no Shopify approval screen, total, tax or renewal term was seen; the prices on the plan page could not be compared with a checkout.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+    },
+    "plan": "Free plan only; the paid plans were not clicked",
+    "comparability": "The prices on the plan cards against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The price you would pay for a paid plan is not confirmed by a Shopify approval screen; start with the Free plan and check the screen before you approve a paid plan.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Way (Google Maps store locator) on a Shopify development store: the install, the Free plan without a card or billing screen, one location with a public address added about 1 minute after the install form, the floating pin in an unsaved theme preview (App embed on) that opens Google Maps with no API key or Google account, the notice that embedding the map into store pages needs a paid plan, the plan page with the monthly and yearly prices (Free $0, Basic $6.99, Advanced $14.99, Pro $29.99 a month, equal to the listing), a Black Friday banner and the uninstall, which asks for a reason. Nothing was paid, approved or saved. Install: the app (App Store name Way: Google Maps Store Locator, listing apps.shopify.com/sticky-navigate-to-store; in the admin Way Store Locator) was installed from its App Store listing through the install form in our own tab. The install form was sent at 22:42:54; the dialog Install app showed Way Store Locator, with the permissions View staff and contributor data (Store owner) and View and edit store data (Online Store, Shopify admin). The app opened as a store locator. The listing matches the dossier: Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99, 1, 50, 500 and 2000 locations, and the text no API key required. Plan choice: the page said Pick your plan to start a 7-days* free trial, with the footnote that each store is entitled to a maximum of undefined trial days altogether. The Free plan ($0, 1 location, Floating store locator, Online support, In-Store App Branding) was chosen. No card and no billing screen came up. The dashboard then said Welcome to Way Store Locator and Free Plan. Core action: Add store location was clicked; the title Test Stockist One and a public address (Museumstraat 1, Amsterdam, picked from the Google address suggestions) were entered and saved (Settings saved successfully). The first location stood on screen at 22:43:52, about 1 minute after the install form and in 4 steps after the plan choice. No Google Maps API key, Google account or card was needed. On the free plan the app said: Embedding the map into your store pages is available on paid plans. Upgrade to activate the app block; the tab Map in the preview was greyed out. A bar said ACTION REQUIRED: Turn on Way Store Locator's App Embed. In the theme editor preview (not saved) App embeds, Way Store Locator was switched on and a floating pin with the link Way Store Locator appeared in the lower right corner; a click on the pin opened Google Maps for the location in a new tab, which was closed. The theme change was not saved and was undone. Plans: monthly view Free $0/month, Basic Plan $6.99/month, Advanced Plan $14.99/month and Pro Plan $29.99/month (billed monthly); yearly view Basic $5.59/month, Advanced $11.99/month and Pro $23.99/month (billed annually), which equals the listing ($67.10, $143.90 and $287.90 a year). The cards say Up to 50, 500 and 2000 locations and Widget & App Block. Difference with the listing: the Free card in the app does not say No API key required (the paid cards do); in practice no API key was needed on the Free plan either. A banner said BLACK FRIDAY SALE: Up To 50% OFF with Claim Offer; it was not clicked. Checkout: only the Free plan was chosen and the paid plans were not clicked, so no Shopify approval screen, total, test charge or card field was seen. Nothing was approved. Cancelling: no paid plan was started. In Settings, Apps, Uninstall opened the dialog Uninstall Way Store Locator?, which says that the app can no longer be used and that data managed by the app will be deleted; a reason is required (Testing multiple apps was chosen). The app was uninstalled after the evidence was complete and is gone from the installed apps. Not tested: the paid plans, bulk import by CSV, the app block or widget on a page (paid plans only), more than one location, the effect of the 50 location limit, stock per store and the Claim Offer banner. Clean up: the theme was not saved, the Google Maps tab and our own tab were closed, and the app was uninstalled. The price fields are not changed here. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "On the Free plan the map can only be shown as a floating pin that opens Google Maps; embedding the map into store pages needs a paid plan. The app embed has to be switched on in the theme first (the app shows an action required bar). The Free card does not say No API key required, which the listing does, although no key was needed in practice. The heading offers a 7 day trial while a footnote speaks of undefined trial days.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The paid plans.",
+    "Bulk import by CSV and more than one location.",
+    "The app block or widget on a store page, which needs a paid plan.",
+    "The effect of the 50 location limit and stock per store.",
+    "The Black Friday offer.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:42:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/way-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/way-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/way-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Way (Google Maps store locator) on a Shopify development store: the install, the Free plan without a card or billing screen, one location with a public address added about 1 minute after the install form, the floating pin in an unsaved theme preview (App embed on) that opens Google Maps with no API key or Google account, the notice that embedding the map into store pages needs a paid plan, the plan page with the monthly and yearly prices (Free $0, Basic $6.99, Advanced $14.99, Pro $29.99 a month, equal to the listing), a Black Friday banner and the uninstall, which asks for a reason. Nothing was paid, approved or saved. Install: the app (App Store name Way: Google Maps Store Locator, listing apps.shopify.com/sticky-navigate-to-store; in the admin Way Store Locator) was installed from its App Store listing through the install form in our own tab. The install form was sent at 22:42:54; the dialog Install app showed Way Store Locator, with the permissions View staff and contributor data (Store owner) and View and edit store data (Online Store, Shopify admin). The app opened as a store locator. The listing matches the dossier: Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99, 1, 50, 500 and 2000 locations, and the text no API key required. Plan choice: the page said Pick your plan to start a 7-days* free trial, with the footnote that each store is entitled to a maximum of undefined trial days altogether. The Free plan ($0, 1 location, Floating store locator, Online support, In-Store App Branding) was chosen. No card and no billing screen came up. The dashboard then said Welcome to Way Store Locator and Free Plan. Core action: Add store location was clicked; the title Test Stockist One and a public address (Museumstraat 1, Amsterdam, picked from the Google address suggestions) were entered and saved (Settings saved successfully). The first location stood on screen at 22:43:52, about 1 minute after the install form and in 4 steps after the plan choice. No Google Maps API key, Google account or card was needed. On the free plan the app said: Embedding the map into your store pages is available on paid plans. Upgrade to activate the app block; the tab Map in the preview was greyed out. A bar said ACTION REQUIRED: Turn on Way Store Locator's App Embed. In the theme editor preview (not saved) App embeds, Way Store Locator was switched on and a floating pin with the link Way Store Locator appeared in the lower right corner; a click on the pin opened Google Maps for the location in a new tab, which was closed. The theme change was not saved and was undone. Plans: monthly view Free $0/month, Basic Plan $6.99/month, Advanced Plan $14.99/month and Pro Plan $29.99/month (billed monthly); yearly view Basic $5.59/month, Advanced $11.99/month and Pro $23.99/month (billed annually), which equals the listing ($67.10, $143.90 and $287.90 a year). The cards say Up to 50, 500 and 2000 locations and Widget & App Block. Difference with the listing: the Free card in the app does not say No API key required (the paid cards do); in practice no API key was needed on the Free plan either. A banner said BLACK FRIDAY SALE: Up To 50% OFF with Claim Offer; it was not clicked. Checkout: only the Free plan was chosen and the paid plans were not clicked, so no Shopify approval screen, total, test charge or card field was seen. Nothing was approved. Cancelling: no paid plan was started. In Settings, Apps, Uninstall opened the dialog Uninstall Way Store Locator?, which says that the app can no longer be used and that data managed by the app will be deleted; a reason is required (Testing multiple apps was chosen). The app was uninstalled after the evidence was complete and is gone from the installed apps. Not tested: the paid plans, bulk import by CSV, the app block or widget on a page (paid plans only), more than one location, the effect of the 50 location limit, stock per store and the Claim Offer banner. Clean up: the theme was not saved, the Google Maps tab and our own tab were closed, and the app was uninstalled. The price fields are not changed here. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/way-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Way (Google Maps store locator) on a Shopify development store: the install, the Free plan without a card or billing screen, one location with a public address added about 1 minute after the install form, the floating pin in an unsaved theme preview (App embed on) that opens Google Maps with no API key or Google account, the notice that embedding the map into store pages needs a paid plan, the plan page with the monthly and yearly prices (Free $0, Basic $6.99, Advanced $14.99, Pro $29.99 a month, equal to the listing), a Black Friday banner and the uninstall, which asks for a reason. Nothing was paid, approved or saved. Install: the app (App Store name Way: Google Maps Store Locator, listing apps.shopify.com/sticky-navigate-to-store; in the admin Way Store Locator) was installed from its App Store listing through the install form in our own tab. The install form was sent at 22:42:54; the dialog Install app showed Way Store Locator, with the permissions View staff and contributor data (Store owner) and View and edit store data (Online Store, Shopify admin). The app opened as a store locator. The listing matches the dossier: Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99, 1, 50, 500 and 2000 locations, and the text no API key required. Plan choice: the page said Pick your plan to start a 7-days* free trial, with the footnote that each store is entitled to a maximum of undefined trial days altogether. The Free plan ($0, 1 location, Floating store locator, Online support, In-Store App Branding) was chosen. No card and no billing screen came up. The dashboard then said Welcome to Way Store Locator and Free Plan. Core action: Add store location was clicked; the title Test Stockist One and a public address (Museumstraat 1, Amsterdam, picked from the Google address suggestions) were entered and saved (Settings saved successfully). The first location stood on screen at 22:43:52, about 1 minute after the install form and in 4 steps after the plan choice. No Google Maps API key, Google account or card was needed. On the free plan the app said: Embedding the map into your store pages is available on paid plans. Upgrade to activate the app block; the tab Map in the preview was greyed out. A bar said ACTION REQUIRED: Turn on Way Store Locator's App Embed. In the theme editor preview (not saved) App embeds, Way Store Locator was switched on and a floating pin with the link Way Store Locator appeared in the lower right corner; a click on the pin opened Google Maps for the location in a new tab, which was closed. The theme change was not saved and was undone. Plans: monthly view Free $0/month, Basic Plan $6.99/month, Advanced Plan $14.99/month and Pro Plan $29.99/month (billed monthly); yearly view Basic $5.59/month, Advanced $11.99/month and Pro $23.99/month (billed annually), which equals the listing ($67.10, $143.90 and $287.90 a year). The cards say Up to 50, 500 and 2000 locations and Widget & App Block. Difference with the listing: the Free card in the app does not say No API key required (the paid cards do); in practice no API key was needed on the Free plan either. A banner said BLACK FRIDAY SALE: Up To 50% OFF with Claim Offer; it was not clicked. Checkout: only the Free plan was chosen and the paid plans were not clicked, so no Shopify approval screen, total, test charge or card field was seen. Nothing was approved. Cancelling: no paid plan was started. In Settings, Apps, Uninstall opened the dialog Uninstall Way Store Locator?, which says that the app can no longer be used and that data managed by the app will be deleted; a reason is required (Testing multiple apps was chosen). The app was uninstalled after the evidence was complete and is gone from the installed apps. Not tested: the paid plans, bulk import by CSV, the app block or widget on a page (paid plans only), more than one location, the effect of the 50 location limit, stock per store and the Claim Offer banner. Clean up: the theme was not saved, the Google Maps tab and our own tab were closed, and the app was uninstalled. The price fields are not changed here. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/way-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/way-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Way",
+    "product_id": "way",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Way (Google Maps store locator) on a Shopify development store: the install, the Free plan without a card or billing screen, one location with a public address added about 1 minute after the install form, the floating pin in an unsaved theme preview (App embed on) that opens Google Maps with no API key or Google account, the notice that embedding the map into store pages needs a paid plan, the plan page with the monthly and yearly prices (Free $0, Basic $6.99, Advanced $14.99, Pro $29.99 a month, equal to the listing), a Black Friday banner and the uninstall, which asks for a reason. Nothing was paid, approved or saved. Install: the app (App Store name Way: Google Maps Store Locator, listing apps.shopify.com/sticky-navigate-to-store; in the admin Way Store Locator) was installed from its App Store listing through the install form in our own tab. The install form was sent at 22:42:54; the dialog Install app showed Way Store Locator, with the permissions View staff and contributor data (Store owner) and View and edit store data (Online Store, Shopify admin). The app opened as a store locator. The listing matches the dossier: Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99, 1, 50, 500 and 2000 locations, and the text no API key required. Plan choice: the page said Pick your plan to start a 7-days* free trial, with the footnote that each store is entitled to a maximum of undefined trial days altogether. The Free plan ($0, 1 location, Floating store locator, Online support, In-Store App Branding) was chosen. No card and no billing screen came up. The dashboard then said Welcome to Way Store Locator and Free Plan. Core action: Add store location was clicked; the title Test Stockist One and a public address (Museumstraat 1, Amsterdam, picked from the Google address suggestions) were entered and saved (Settings saved successfully). The first location stood on screen at 22:43:52, about 1 minute after the install form and in 4 steps after the plan choice. No Google Maps API key, Google account or card was needed. On the free plan the app said: Embedding the map into your store pages is available on paid plans. Upgrade to activate the app block; the tab Map in the preview was greyed out. A bar said ACTION REQUIRED: Turn on Way Store Locator's App Embed. In the theme editor preview (not saved) App embeds, Way Store Locator was switched on and a floating pin with the link Way Store Locator appeared in the lower right corner; a click on the pin opened Google Maps for the location in a new tab, which was closed. The theme change was not saved and was undone. Plans: monthly view Free $0/month, Basic Plan $6.99/month, Advanced Plan $14.99/month and Pro Plan $29.99/month (billed monthly); yearly view Basic $5.59/month, Advanced $11.99/month and Pro $23.99/month (billed annually), which equals the listing ($67.10, $143.90 and $287.90 a year). The cards say Up to 50, 500 and 2000 locations and Widget & App Block. Difference with the listing: the Free card in the app does not say No API key required (the paid cards do); in practice no API key was needed on the Free plan either. A banner said BLACK FRIDAY SALE: Up To 50% OFF with Claim Offer; it was not clicked. Checkout: only the Free plan was chosen and the paid plans were not clicked, so no Shopify approval screen, total, test charge or card field was seen. Nothing was approved. Cancelling: no paid plan was started. In Settings, Apps, Uninstall opened the dialog Uninstall Way Store Locator?, which says that the app can no longer be used and that data managed by the app will be deleted; a reason is required (Testing multiple apps was chosen). The app was uninstalled after the evidence was complete and is gone from the installed apps. Not tested: the paid plans, bulk import by CSV, the app block or widget on a page (paid plans only), more than one location, the effect of the 50 location limit, stock per store and the Claim Offer banner. Clean up: the theme was not saved, the Google Maps tab and our own tab were closed, and the app was uninstalled. The price fields are not changed here. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"no API key required\". What we saw: On the Free plan a location was added from the Google address suggestions and the floating pin opened Google Maps without any API key, Google account or card; the Free card in the app does not name No API key required, only the paid cards do.",
+     "Text we checked: \"Floating store locator\". What we saw: After the App embed was switched on in the theme preview, a grey floating pin with the link Way Store Locator appeared in the lower right corner and a click opened Google Maps for the location. The theme change was not saved.",
+     "Text we checked: \"Embedding the map into your store pages is available on paid plans\". What we saw: On the Free plan the app said this in a blue block and the tab Map in the preview was greyed out; the app block was not tried because it needs a paid plan.",
+     "Text we checked: \"Up to 50/500/2000 locations\". What we saw: The plan cards say 1 location (Free) and Up to 50, 500 and 2000 locations for Basic, Advanced and Pro, as the listing does. One location was added on the Free plan; more locations and the 50 location limit were not tried.",
+     "Text we checked: \"Basic Plan $6.99/month; Advanced Plan $14.99/month; Pro Plan $29.99/month\". What we saw: The monthly view of the plan page shows Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99 a month, billed monthly, as the listing does."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The paid plans.",
+     "Bulk import by CSV and more than one location.",
+     "The app block or widget on a store page, which needs a paid plan.",
+     "The effect of the 50 location limit and stock per store.",
+     "The Black Friday offer.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:42:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "no API key required",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "On the Free plan a location was added from the Google address suggestions and the floating pin opened Google Maps without any API key, Google account or card; the Free card in the app does not name No API key required, only the paid cards do.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+      },
+      "plan": "Free plan only; the paid plans were not clicked",
+      "comparability": "The listing wording against one location and one floating pin in an unsaved theme preview; the paid map block was not tried, so the wording was not checked there.",
+      "status": "confirmed",
+      "buying_consequence": "You do not need a Google Maps key to get a pin on the free plan, although the free plan card does not say so.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Floating store locator",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "After the App embed was switched on in the theme preview, a grey floating pin with the link Way Store Locator appeared in the lower right corner and a click opened Google Maps for the location. The theme change was not saved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+      },
+      "plan": "Free plan only; the paid plans were not clicked",
+      "comparability": "The Free card text against the pin in the editor preview; the pin was not seen on the live store because nothing was saved.",
+      "status": "confirmed",
+      "buying_consequence": "The free plan gives one floating pin that opens Google Maps; it is not a map on a page.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Embedding the map into your store pages is available on paid plans.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "On the Free plan the app said this in a blue block and the tab Map in the preview was greyed out; the app block was not tried because it needs a paid plan.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+      },
+      "plan": "Free plan only; the paid plans were not clicked",
+      "comparability": "The notice in the app against the greyed out Map tab on the Free plan; the paid app block was not opened.",
+      "status": "confirmed",
+      "buying_consequence": "A map on your own pages needs a paid plan, from $6.99 a month; the free plan only has the floating pin.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Up to 50/500/2000 locations",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan cards say 1 location (Free) and Up to 50, 500 and 2000 locations for Basic, Advanced and Pro, as the listing does. One location was added on the Free plan; more locations and the 50 location limit were not tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+      },
+      "plan": "Free plan only; the paid plans were not clicked",
+      "comparability": "The plan cards against the listing wording and one saved location; no second location, bulk import or limit was tried.",
+      "status": "confirmed",
+      "buying_consequence": "The location limits on the cards match the listing; the limit itself was not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Basic Plan $6.99/month; Advanced Plan $14.99/month; Pro Plan $29.99/month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The monthly view of the plan page shows Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99 a month, billed monthly, as the listing does.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+      },
+      "plan": "Free plan only; the paid plans were not clicked",
+      "comparability": "The monthly prices on the cards against the listing; no approval screen was reached, so no total or tax was compared.",
+      "status": "confirmed",
+      "buying_consequence": "The monthly prices in the app equal the listing: $6.99, $14.99 and $29.99 a month.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Basic $5.59/month, Advanced $11.99/month, Pro $23.99/month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The yearly view shows $5.59, $11.99 and $23.99 a month, billed annually, which equals $67.10, $143.90 and $287.90 a year as on the listing.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+      },
+      "plan": "Free plan only; the paid plans were not clicked",
+      "comparability": "The yearly prices on the cards against the yearly totals of the listing; the yearly plan was not started.",
+      "status": "confirmed",
+      "buying_consequence": "Paying yearly saves about 20% against the monthly price, matching the listing.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Pick your plan to start a 7-days* free trial",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The heading offers a 7 day free trial on the plan page, with a footnote that each store is entitled to a maximum of undefined trial days altogether; only the Free plan was chosen, so no trial was started or seen on an approval screen.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+      },
+      "plan": "Free plan only; the paid plans were not clicked",
+      "comparability": "The heading and footnote of the plan page against a trial that was never started; no paid plan was clicked.",
+      "status": "not_testable",
+      "buying_consequence": "Whether a paid plan starts with 7 free days is not confirmed by a Shopify approval screen; the footnote on the page is unclear about the trial days.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "BLACK FRIDAY SALE: Up To 50% OFF Claim Offer",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "A banner in the app offered up to 50% off with a Claim Offer link; it was not clicked, so the discounted prices were not seen. The plan cards showed the list prices.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+      },
+      "plan": "Free plan only; the paid plans were not clicked",
+      "comparability": "The banner text against the plan cards; the offer page was not opened, so no discounted price was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The offer is time limited and its prices were not seen; the prices on the cards are the list prices.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Betaalde plannen niet aangeklikt",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The paid plans were not clicked, so no Shopify approval screen, total, tax or renewal term was seen; the prices on the plan page could not be compared with a checkout.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+      },
+      "plan": "Free plan only; the paid plans were not clicked",
+      "comparability": "The prices on the plan cards against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The price you would pay for a paid plan is not confirmed by a Shopify approval screen; start with the Free plan and check the screen before you approve a paid plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Way (Google Maps store locator) on a Shopify development store: the install, the Free plan without a card or billing screen, one location with a public address added about 1 minute after the install form, the floating pin in an unsaved theme preview (App embed on) that opens Google Maps with no API key or Google account, the notice that embedding the map into store pages needs a paid plan, the plan page with the monthly and yearly prices (Free $0, Basic $6.99, Advanced $14.99, Pro $29.99 a month, equal to the listing), a Black Friday banner and the uninstall, which asks for a reason. Nothing was paid, approved or saved. Install: the app (App Store name Way: Google Maps Store Locator, listing apps.shopify.com/sticky-navigate-to-store; in the admin Way Store Locator) was installed from its App Store listing through the install form in our own tab. The install form was sent at 22:42:54; the dialog Install app showed Way Store Locator, with the permissions View staff and contributor data (Store owner) and View and edit store data (Online Store, Shopify admin). The app opened as a store locator. The listing matches the dossier: Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99, 1, 50, 500 and 2000 locations, and the text no API key required. Plan choice: the page said Pick your plan to start a 7-days* free trial, with the footnote that each store is entitled to a maximum of undefined trial days altogether. The Free plan ($0, 1 location, Floating store locator, Online support, In-Store App Branding) was chosen. No card and no billing screen came up. The dashboard then said Welcome to Way Store Locator and Free Plan. Core action: Add store location was clicked; the title Test Stockist One and a public address (Museumstraat 1, Amsterdam, picked from the Google address suggestions) were entered and saved (Settings saved successfully). The first location stood on screen at 22:43:52, about 1 minute after the install form and in 4 steps after the plan choice. No Google Maps API key, Google account or card was needed. On the free plan the app said: Embedding the map into your store pages is available on paid plans. Upgrade to activate the app block; the tab Map in the preview was greyed out. A bar said ACTION REQUIRED: Turn on Way Store Locator's App Embed. In the theme editor preview (not saved) App embeds, Way Store Locator was switched on and a floating pin with the link Way Store Locator appeared in the lower right corner; a click on the pin opened Google Maps for the location in a new tab, which was closed. The theme change was not saved and was undone. Plans: monthly view Free $0/month, Basic Plan $6.99/month, Advanced Plan $14.99/month and Pro Plan $29.99/month (billed monthly); yearly view Basic $5.59/month, Advanced $11.99/month and Pro $23.99/month (billed annually), which equals the listing ($67.10, $143.90 and $287.90 a year). The cards say Up to 50, 500 and 2000 locations and Widget & App Block. Difference with the listing: the Free card in the app does not say No API key required (the paid cards do); in practice no API key was needed on the Free plan either. A banner said BLACK FRIDAY SALE: Up To 50% OFF with Claim Offer; it was not clicked. Checkout: only the Free plan was chosen and the paid plans were not clicked, so no Shopify approval screen, total, test charge or card field was seen. Nothing was approved. Cancelling: no paid plan was started. In Settings, Apps, Uninstall opened the dialog Uninstall Way Store Locator?, which says that the app can no longer be used and that data managed by the app will be deleted; a reason is required (Testing multiple apps was chosen). The app was uninstalled after the evidence was complete and is gone from the installed apps. Not tested: the paid plans, bulk import by CSV, the app block or widget on a page (paid plans only), more than one location, the effect of the 50 location limit, stock per store and the Claim Offer banner. Clean up: the theme was not saved, the Google Maps tab and our own tab were closed, and the app was uninstalled. The price fields are not changed here. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "On the Free plan the map can only be shown as a floating pin that opens Google Maps; embedding the map into store pages needs a paid plan. The app embed has to be switched on in the theme first (the app shows an action required bar). The Free card does not say No API key required, which the listing does, although no key was needed in practice. The heading offers a 7 day trial while a footnote speaks of undefined trial days.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "The paid plans.",
+      "Bulk import by CSV and more than one location.",
+      "The app block or widget on a store page, which needs a paid plan.",
+      "The effect of the 50 location limit and stock per store.",
+      "The Black Friday offer.",
+      "Export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:42:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "way:cancellation_terms",

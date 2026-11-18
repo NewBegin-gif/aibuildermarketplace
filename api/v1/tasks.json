@@ -3803,6 +3803,235 @@
   },
   {
    "source": "session",
+   "product_name": "EmailOctopus",
+   "product_id": "emailoctopus",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested EmailOctopus in a new free account of Daan (called Starter in the app): an inline sign-up form was ready in about 5 minutes and still shows Powered by EmailOctopus, a second form was refused (Your Starter plan is limited to one form), a campaign on the Announce template was made and previewed with nothing sent, and a welcome automation was made as a draft and not started, with no limit seen on Starter. Saving a campaign needed at least one contact, and a DMARC warning said that without a verified domain EmailOctopus sends from an address of its own. The Pro price matches the dossier ($9 a month billed yearly, $18 at 2,500 subscribers with 25,000 emails); the 10,000 emails apply only at 500 subscribers, and the Starter limits of the dossier are not visible in the app. No plan was bought. Account and start: the test used a new EmailOctopus account of Daan on the free plan, already signed in, with the interface in English. The free plan is called Starter in the app. The test started at about 11:20; the dashboard opened at once with no login step and no bot check, with the welcome line Welcome aboard! Start by adding your contacts. Setup and branding had been done before the test and nothing about an address or a person was filled in during it. The account has one single audience (Contacts, 0 subscribed contacts); the menu has Contacts, Grow, Campaigns, Automations, Reports and Brand, and no separate lists. Core action 1, a sign-up form: Grow, Forms, Create a form. The styles are Inline, Pop-up, Hello bar and Slide-in, with five templates. An inline form on one template was chosen, renamed Test form, with the title Join the Garden Notes list and one line of text. Editing inline worked at once and the form was ready in about 5 minutes (11:25 to 11:30). The preview (Desktop and Mobile) shows Powered by EmailOctopus. The settings show the success message Thanks for subscribing!, an optional consent box and a hidden Google reCAPTCHA that is on by default. A second form was refused: Upgrade to add more forms, Your Starter plan is limited to one form. Core action 2, a campaign (nothing was sent): Campaigns first asks to add contacts. The setup did not go on without a contact (None of your subscribed contacts match this selection, and saving fell back to Untitled), so one placeholder contact on example.com was added (accepted, status Subscribed, no email went to it). Sender Test Co, subject Three herbs for your balcony. Saving showed Warning: verify your domain: because of a DMARC policy on the domain, mail from that address is unlikely to be delivered, so EmailOctopus would send from an address of its own sending domain instead; the choice was Continue, not Verify domain, and no domain was linked. The design step offers Branded templates (Announce, Birthday, Explore, Share, Update, Welcome), Inspirational, Start from scratch (Drag and drop or Code your own) and Past emails; Announce was chosen and takes the brand logo over. The editor blocks are Title, Text, Logo, Image, Video, Button, Social follow, Divider and Code. Typing the title and the text inline worked; a change to the small line Introducing you to: did not come through. The preview (Desktop and Mobile, Preview as Default with no personalisation) has a Send as test button that was NOT used. The footer holds the line that the reader subscribed and can unsubscribe, a placeholder return address of EmailOctopus itself, and the badge Sent with EmailOctopus. The review step shows All at once, More sending options marked Pro (gradual sending and smart timing, coming soon) and Send now or Schedule for later; Send now was NOT clicked. Core action 3, an automation: Automations, Create an automation, with six templates (Simple welcome, Birthday celebration, Check in, Re-engagement sequence, Landing page freebie, Monday motivation). Simple welcome was chosen and renamed Test welcome: trigger Contact added and one Send email step. The step types are email, wait, branch or condition, and action. It was left as a Draft and NOT started. A second automation was not refused at the start; whether a limit applies on Starter when activating was not tested, and none was seen. Other things seen on Starter: Segments and Tags were empty and usable with no lock shown; Fields hold only Email address, First name and Last name; Reports was empty (No reports yet). A help widget with a chat photo sits at the bottom right. Plans, read in the Upgrade to Pro pop-up (nothing clicked, no checkout): Pro in euros is 10 euro per month, or 9 euro per month billed yearly (Save 12 euro) for 500 subscribers and 10,000 emails per month; the currencies offered are AUD, CAD, EUR, GBP and USD; Pro in dollars is $9 per month billed yearly (Save $12) at the same tier; with 2,500 subscribers the pop-up shows $18 per month billed yearly (Save $24) and 25,000 emails per month. The yearly switch says Save 10%. The Pro list names removal of the EmailOctopus branding, unlimited forms and landing pages, unlimited automations with no practical limits, unlimited users with roles and permissions, gradual sending and smart timing (coming soon), up to 50 tags and fields, subscriber profile pages, reports available forever and priority help. Deviations from the dossier: the Pro price matches (from $9 a month billed yearly, saves $12, 10,000 emails at the entry tier, and the price rises with the number of subscribers: $18 at 2,500), but the 10,000 emails apply only at 500 subscribers. The dossier Starter limits (2,500 subscribers, 10,000 emails a month and reports for 30 days) are NOT shown in the app: not visible in the app. The one-form limit on Starter is shown and matches the Pro benefit of unlimited forms. The price fields of our pages are not touched. Checkout: NOT reached. The Upgrade to Pro button was not clicked, so no tax, total, card or payment screen was seen. Cancelling: not applicable, no paid plan; the account was not deleted. Not tested: sending a campaign, a test email or starting an automation (on purpose); importing contacts, domain or DNS linking, integrations, landing pages, making segments or tags; complex journeys, a limit on a second automation, the subscriber and email limits of Starter, the length of report history; and the group of marketers who need complex automation. Clean up: the Test form, the Test campaign (draft), the Test welcome automation (draft) and the placeholder contact were deleted and checked empty. The account and the brand settings stay. No email was sent. The tab was closed.",
+   "findings": [
+    "Text we checked: \"from $9 a month billed yearly (saves $12)\". What we saw: The Upgrade to Pro pop-up showed $9 per month billed yearly with Save $12 at 500 subscribers and 10,000 emails per month, and in euros 10 euro per month or 9 euro billed yearly with Save 12 euro.",
+    "Text we checked: \"the price rises with subscriber count\". What we saw: Typing 2500 in the subscribers field changed the price to $18 per month billed yearly (Save $24) and the emails to 25,000 per month.",
+    "Text we checked: \"10,000 emails a month at the entry tier\". What we saw: The 10,000 emails per month are shown only together with 500 subscribers; at 2,500 subscribers the pop-up shows 25,000 emails.",
+    "Text we checked: \"Creators who outgrow the free branding\". What we saw: The form preview shows Powered by EmailOctopus and the campaign footer shows Sent with EmailOctopus on Starter, and the Pro list names removal of the EmailOctopus branding.",
+    "Text we checked: \"Pro ... adds unlimited users, landing pages and forms\". What we saw: The pop-up Upgrade to add more forms says that the Starter plan is limited to one form and that Pro gives unlimited forms and landing pages; the Pro list also names unlimited users with roles and permissions."
+   ],
+   "not_tested": [
+    "Sending a campaign or a test email, and starting an automation, on purpose.",
+    "Importing contacts, linking a domain or DNS, integrations and landing pages.",
+    "A limit on a second automation, and the subscriber, email and report limits of Starter.",
+    "Checkout, a paid plan and cancelling.",
+    "The group of marketers who need complex automation.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 11:20 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Starter: free, 2,500 subscribers, 10,000 emails a month, branded emails, reports for 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The app calls the free plan Starter, says it is limited to one form and keeps the EmailOctopus badge on the form and in the email footer, but it shows no limit for subscribers or emails per month and no report history; those figures were not visible in the app.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/emailoctopus-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Upgrade to Pro pop-up was read without clicking its button",
+     "comparability": "The dossier Starter limits against the screens of one new account; the app shows no figure for these three limits, and no limit was reached.",
+     "status": "not_testable",
+     "buying_consequence": "A reader cannot check from the app that Starter really allows 2,500 subscribers and 10,000 emails.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "from $9 a month billed yearly (saves $12)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Upgrade to Pro pop-up showed $9 per month billed yearly with Save $12 at 500 subscribers and 10,000 emails per month, and in euros 10 euro per month or 9 euro billed yearly with Save 12 euro.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/emailoctopus-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Upgrade to Pro pop-up was read without clicking its button",
+     "comparability": "The dossier entry price against the pop-up in dollars and euros at 500 subscribers; the pop-up was only read.",
+     "status": "confirmed",
+     "buying_consequence": "The entry price in the dossier is right.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "the price rises with subscriber count",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Typing 2500 in the subscribers field changed the price to $18 per month billed yearly (Save $24) and the emails to 25,000 per month.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/emailoctopus-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Upgrade to Pro pop-up was read without clicking its button",
+     "comparability": "The dossier statement against one extra point on the price calculator; other sizes were not tried.",
+     "status": "confirmed",
+     "buying_consequence": "The bill grows with the list, so a growing list needs a new price check.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "10,000 emails a month at the entry tier",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The 10,000 emails per month are shown only together with 500 subscribers; at 2,500 subscribers the pop-up shows 25,000 emails.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/emailoctopus-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Upgrade to Pro pop-up was read without clicking its button",
+     "comparability": "The dossier entry tier against two points on the calculator; the entry tier itself is the 500 subscriber setting.",
+     "status": "confirmed",
+     "buying_consequence": "The 10,000 emails belong to a list of 500 people, not to every Pro buyer.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Creators who outgrow the free branding",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The form preview shows Powered by EmailOctopus and the campaign footer shows Sent with EmailOctopus on Starter, and the Pro list names removal of the EmailOctopus branding.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/emailoctopus-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Upgrade to Pro pop-up was read without clicking its button",
+     "comparability": "The dossier audience card against the form preview, the campaign footer and the Pro list; the Pro plan was not used to see the branding gone.",
+     "status": "confirmed",
+     "buying_consequence": "The free branding is real and Pro is the way to remove it.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pro ... adds unlimited users, landing pages and forms",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pop-up Upgrade to add more forms says that the Starter plan is limited to one form and that Pro gives unlimited forms and landing pages; the Pro list also names unlimited users with roles and permissions.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/emailoctopus-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Upgrade to Pro pop-up was read without clicking its button",
+     "comparability": "The dossier Pro list against the pop-up text; the Pro plan was not used, so unlimited was not tried.",
+     "status": "confirmed",
+     "buying_consequence": "A second form needs Pro.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Unlimited automations with no practical limits",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "A welcome automation was made from a template as a draft and not started; a second one was not refused at creation, and no limit on Starter was seen, but activating more than one was not tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/emailoctopus-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Upgrade to Pro pop-up was read without clicking its button",
+     "comparability": "The Pro list line against a draft only; no automation was started, so no limit could show.",
+     "status": "not_testable",
+     "buying_consequence": "It is unknown whether Starter blocks a second active automation.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Marketers who need complex automation",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Only one simple welcome automation was made as a draft; complex journeys with branches were not built or run.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/emailoctopus-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Upgrade to Pro pop-up was read without clicking its button",
+     "comparability": "The dossier audience card against a single draft with one email step; not part of the pain test.",
+     "status": "not_testable",
+     "buying_consequence": "The test says nothing about complex automation, where the dossier points to another tool.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Warning: verify your domain",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Saving a campaign with a sender address on a domain that has a DMARC policy showed a warning that mail from it is unlikely to be delivered, and that EmailOctopus would send from an address of its own sending domain; Continue was chosen and no domain was linked.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/emailoctopus-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Upgrade to Pro pop-up was read without clicking its button",
+     "comparability": "A warning seen once with an address on a placeholder domain; the dossier makes no statement about it.",
+     "status": "not_comparable",
+     "buying_consequence": "Without a verified domain the sender address of a campaign changes, which a newcomer sees only at the save step.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Save €12",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pop-up names the plan prices and the saving for yearly billing, but the Upgrade to Pro button was not clicked, so no tax, total or payment screen was seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/emailoctopus-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the Upgrade to Pro pop-up was read without clicking its button",
+     "comparability": "The pop-up amount against a checkout that was not reached; no stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The final amount with tax is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested EmailOctopus in a new free account of Daan (called Starter in the app): an inline sign-up form was ready in about 5 minutes and still shows Powered by EmailOctopus, a second form was refused (Your Starter plan is limited to one form), a campaign on the Announce template was made and previewed with nothing sent, and a welcome automation was made as a draft and not started, with no limit seen on Starter. Saving a campaign needed at least one contact, and a DMARC warning said that without a verified domain EmailOctopus sends from an address of its own. The Pro price matches the dossier ($9 a month billed yearly, $18 at 2,500 subscribers with 25,000 emails); the 10,000 emails apply only at 500 subscribers, and the Starter limits of the dossier are not visible in the app. No plan was bought. Account and start: the test used a new EmailOctopus account of Daan on the free plan, already signed in, with the interface in English. The free plan is called Starter in the app. The test started at about 11:20; the dashboard opened at once with no login step and no bot check, with the welcome line Welcome aboard! Start by adding your contacts. Setup and branding had been done before the test and nothing about an address or a person was filled in during it. The account has one single audience (Contacts, 0 subscribed contacts); the menu has Contacts, Grow, Campaigns, Automations, Reports and Brand, and no separate lists. The dossier name is EmailOctopus and the review is on MSS (emailoctopus-review); the handson folder and the review slug are the same. Core action 1, a sign-up form: Grow, Forms, Create a form. The styles are Inline, Pop-up, Hello bar and Slide-in, with five templates. An inline form on one template was chosen, renamed Test form, with the title Join the Garden Notes list and one line of text. Editing inline worked at once and the form was ready in about 5 minutes (11:25 to 11:30). The preview (Desktop and Mobile) shows Powered by EmailOctopus. The settings show the success message Thanks for subscribing!, an optional consent box and a hidden Google reCAPTCHA that is on by default. A second form was refused: Upgrade to add more forms, Your Starter plan is limited to one form. Core action 2, a campaign (nothing was sent): Campaigns first asks to add contacts. The setup did not go on without a contact (None of your subscribed contacts match this selection, and saving fell back to Untitled), so one placeholder contact on example.com was added (accepted, status Subscribed, no email went to it). Sender Test Co, subject Three herbs for your balcony. Saving showed Warning: verify your domain: because of a DMARC policy on the domain, mail from that address is unlikely to be delivered, so EmailOctopus would send from an address of its own sending domain instead; the choice was Continue, not Verify domain, and no domain was linked. The design step offers Branded templates (Announce, Birthday, Explore, Share, Update, Welcome), Inspirational, Start from scratch (Drag and drop or Code your own) and Past emails; Announce was chosen and takes the brand logo over. The editor blocks are Title, Text, Logo, Image, Video, Button, Social follow, Divider and Code. Typing the title and the text inline worked; a change to the small line Introducing you to: did not come through. The preview (Desktop and Mobile, Preview as Default with no personalisation) has a Send as test button that was NOT used. The footer holds the line that the reader subscribed and can unsubscribe, a placeholder return address of EmailOctopus itself, and the badge Sent with EmailOctopus. The review step shows All at once, More sending options marked Pro (gradual sending and smart timing, coming soon) and Send now or Schedule for later; Send now was NOT clicked. Core action 3, an automation: Automations, Create an automation, with six templates (Simple welcome, Birthday celebration, Check in, Re-engagement sequence, Landing page freebie, Monday motivation). Simple welcome was chosen and renamed Test welcome: trigger Contact added and one Send email step. The step types are email, wait, branch or condition, and action. It was left as a Draft and NOT started. A second automation was not refused at the start; whether a limit applies on Starter when activating was not tested, and none was seen. Other things seen on Starter: Segments and Tags were empty and usable with no lock shown; Fields hold only Email address, First name and Last name; Reports was empty (No reports yet). A help widget with a chat photo sits at the bottom right. Plans, read in the Upgrade to Pro pop-up (nothing clicked, no checkout): Pro in euros is 10 euro per month, or 9 euro per month billed yearly (Save 12 euro) for 500 subscribers and 10,000 emails per month; the currencies offered are AUD, CAD, EUR, GBP and USD; Pro in dollars is $9 per month billed yearly (Save $12) at the same tier; with 2,500 subscribers the pop-up shows $18 per month billed yearly (Save $24) and 25,000 emails per month. The yearly switch says Save 10%. The Pro list names removal of the EmailOctopus branding, unlimited forms and landing pages, unlimited automations with no practical limits, unlimited users with roles and permissions, gradual sending and smart timing (coming soon), up to 50 tags and fields, subscriber profile pages, reports available forever and priority help. Deviations from the dossier: the Pro price matches (from $9 a month billed yearly, saves $12, 10,000 emails at the entry tier, and the price rises with the number of subscribers: $18 at 2,500), but the 10,000 emails apply only at 500 subscribers. The dossier Starter limits (2,500 subscribers, 10,000 emails a month and reports for 30 days) are NOT shown in the app: not visible in the app. The one-form limit on Starter is shown and matches the Pro benefit of unlimited forms. The price fields of our pages are not touched. Checkout: NOT reached. The Upgrade to Pro button was not clicked, so no tax, total, card or payment screen was seen. Cancelling: not applicable, no paid plan; the account was not deleted. Not tested: sending a campaign, a test email or starting an automation (on purpose); importing contacts, domain or DNS linking, integrations, landing pages, making segments or tags; complex journeys, a limit on a second automation, the subscriber and email limits of Starter, the length of report history; and the group of marketers who need complex automation. Clean up: the Test form, the Test campaign (draft), the Test welcome automation (draft) and the placeholder contact were deleted and checked empty. The account and the brand settings stay. No email was sent. The tab was closed.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The free Starter plan allows one form only and keeps the EmailOctopus badge on the form and in the email footer. A campaign cannot be saved without at least one contact, and a sender address on a domain with a DMARC policy only gets a warning at the save step. The dossier limits of Starter (2,500 subscribers, 10,000 emails a month, 30 days of reports) are not shown anywhere in the app that was seen.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Sending a campaign or a test email, and starting an automation, on purpose.",
+     "Importing contacts, linking a domain or DNS, integrations and landing pages.",
+     "A limit on a second automation, and the subscriber, email and report limits of Starter.",
+     "Checkout, a paid plan and cancelling.",
+     "The group of marketers who need complex automation.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 11:20 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Klap",
    "product_id": "klap",
    "run_date": "2026-10-29",
@@ -10313,6 +10542,216 @@
      "Checkout, a paid plan and deleting the project.",
      "Export and reimport.",
      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:01 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "CarouselBot",
+   "product_id": "carouselbot",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested CarouselBot in the existing Free account of Daan: a carousel of 6 slides from a topic was ready in about 20 seconds and 3 steps, the headline and the template were changed with a click, and the PDF took about 10 seconds and was 113 KB. The common brewing tips are right, but the AI made up a figure (98% Of Coffee Flavor Comes From Water Quality) and a company claim (Test Co roasts in small batches). Free counted 1 of 3 carousels and only a small CarouselBot logo was seen on page 1 of the PDF, no large watermark. The prices match the dossier; the Annual view shows $6.58 and $20.75 a month and the dossier does not mention the 3 card sets and 1 batch on Free. There is no cancel button on the account page. The test carousel is still in the library, because the delete click was refused. No plan was bought. Account and start: the test used the existing Free account of Daan, already signed in, with the interface in English (no language setting was found). The test started at about 11:16 with the welcome pop-up Welcome to CarouselBot!, which was skipped. The product is the same as the dossier domain (the page title is CarouselBot, Create LinkedIn Carousels in 2 Minutes) and the footer names a person as the maker; that name is not recorded here. Usage on Free at the start: 1/3 carousels, 0/3 card sets, 0/1 batches, 0/1 documents, 0/3 AI images (manual) and 0/1 diagrams. Core action: a carousel from a topic. The input was 5 tips for brewing better coffee at home, for the fictional coffee brand Test Co, with 6 slides, the Warm template and Title Case. The form also offers Include AI-generated diagrams (BETA, 1 free), Include data charts and Include impact slides; none was turned on. The progress bar said Generating slide 5 of 6 and This usually takes 10-20 seconds; the result was there after about 20 seconds and 3 steps (topic, Continue, edit). AI text: slide 3 holds common tips (195 to 205 degrees Fahrenheit and 1 gram to 16 grams of water) that are right. Two things are made up: slide 2 says 98% Of Coffee Flavor Comes From Water Quality, a figure that exists nowhere (coffee is mostly water, but not this percentage), and slide 4 says Test Co roasts in small batches, a company claim nobody gave. Slides 5 and 6 are general and marketing like. The style reads smoothly with no language mistakes. Editing: through Edit Page 1 of 6 the headline was changed to Test Co: Better Home Coffee in 5 Steps (tabs Content, Icon and Image, Regenerate Copy, bold text and accent words); the template was switched from Warm to Ocean with one click; the ratios are 4:5, 1:1 and 9:16; a logo upload and a handle are available. Export: Download offers PDF Single file, PNG ZIP of images and JPG ZIP of images. The PDF said Rendering PDF... for about 10 seconds and was 113 KB, followed by Your carousel is downloaded! and Saved to your library!. The design is readable, with a large headline and enough contrast on Ocean. At the bottom of every slide is the small CarouselBot logo with an arrow; the pricing page says Free exports with a watermark, but only this small logo was seen and no large watermark. Only page 1 of the PDF was looked at. No name of the maker is on the slides. Plans, read on the pricing page (US dollars, nothing clicked): Free $0 forever (3 carousels per month, 3 card sets total, 1 batch collection total, 1 document total, 3 AI images, All templates, PNG, JPG and PDF export with watermark); Creator $6.58 a month on the Annual view ($120, $79 a year, Save 34%; the FAQ says $10 a month; Unlimited carousels, 3 card sets and 3 batches a month, 10 documents a month, Unlimited AI images and diagrams, No watermark, Custom branding with logo and handle); Pro $20.75 a month on the Annual view ($360, $249 a year, Save 31%; the FAQ says $30 a month; unlimited card sets, batches and documents, up to 10,000 words per document, priority help); Business $50 a month as a starting price (bulk creation of up to 50 URLs, advanced template customization, auto-apply branding and a Claude integration (MCP), Book a demo). A newsletter offer gives $50 off Annual plans, and there is a 7-day money-back guarantee on all paid plans. Against the dossier: the prices match and no scheduling or publishing was seen. Free also lists 3 card sets and 1 batch, and the Annual view shows $6.58 and $20.75 a month. Checkout: NOT reached. No upgrade button was clicked, so no tax, total, card or payment screen was seen. Cancelling: on the account page only the email address, the plan, the usage and Upgrade are shown, with no button to cancel or delete the account (there is no paid subscription); the FAQ says Cancel anytime from your account page. Not tested: the paid plans, AI diagrams, data charts, AI images, cards, batch, documents, URL input, a second carousel, PNG and JPG export, and scheduling or publishing (connecting an account was not allowed).",
+   "findings": [
+    "Text we checked: \"98% Of Coffee Flavor Comes From Water Quality\". What we saw: Slide 2 of the generated carousel gives a precise percentage that exists nowhere; coffee is mostly water, but this figure was made up by the AI.",
+    "Text we checked: \"Test Co roasts in small batches\". What we saw: Slide 4 states that the fictional brand roasts in small batches, a company claim that was not in the input, so the AI invented a fact about the business.",
+    "Text we checked: \"3 carousels per month\". What we saw: The library showed 1/3 carousels after one carousel, as the dossier says; the allowance of 3 card sets and 1 batch on Free is not in the dossier.",
+    "Text we checked: \"3 card sets total\". What we saw: The Free plan also lists 3 card sets total, 1 batch collection total, 1 document total and 3 AI images, and the dashboard counts 0/3 card sets, 0/1 batches, 0/1 documents and 0/1 diagrams; the dossier names none of these.",
+    "Text we checked: \"$79/yr\". What we saw: The pricing page shows Creator at $79 a year and Pro at $249 a year, with the FAQ naming $10 and $30 a month, and Business from $50 a month; this matches the dossier."
+   ],
+   "not_tested": [
+    "The paid plans, AI diagrams, data charts, AI images, cards, batch and documents.",
+    "URL input, a second carousel, and the PNG and JPG export.",
+    "Scheduling and publishing, because connecting an account was not allowed.",
+    "Checkout, a paid plan and cancelling.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 11:16 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "98% Of Coffee Flavor Comes From Water Quality",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Slide 2 of the generated carousel gives a precise percentage that exists nowhere; coffee is mostly water, but this figure was made up by the AI.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+     "comparability": "The generated slide text against general knowledge of brewing; one carousel on one topic.",
+     "status": "contradicted",
+     "buying_consequence": "A poster who trusts the draft would publish a false statistic under their own name.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Test Co roasts in small batches",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Slide 4 states that the fictional brand roasts in small batches, a company claim that was not in the input, so the AI invented a fact about the business.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+     "comparability": "The generated slide text against the input of the form; one carousel.",
+     "status": "contradicted",
+     "buying_consequence": "A made-up fact about the business could end up on a public post.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This usually takes 10-20 seconds",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The progress bar said Generating slide 5 of 6 and the result was there after about 20 seconds in 3 steps (topic, Continue, edit); the PDF took about 10 seconds and was 113 KB.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+     "comparability": "Clock times from one carousel in one session against the on-screen estimate; the dossier says about 2 minutes without a measured start.",
+     "status": "not_comparable",
+     "buying_consequence": "A first carousel is ready in well under a minute of waiting.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "PNG, JPG, PDF export (with watermark)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pricing page says Free exports with a watermark, but only a small CarouselBot logo with an arrow was seen at the bottom of slide 1 of the PDF; no large watermark was seen, and only page 1 of the PDF was looked at.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+     "comparability": "The pricing page line against one page of one PDF; the paid plan was not used to compare.",
+     "status": "not_comparable",
+     "buying_consequence": "The branding on a Free export looks small, but the other pages were not checked.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "3 carousels per month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The library showed 1/3 carousels after one carousel, as the dossier says; the allowance of 3 card sets and 1 batch on Free is not in the dossier.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+     "comparability": "The dossier allowance against the usage counter and the Free plan card; the limit itself was not reached.",
+     "status": "confirmed",
+     "buying_consequence": "The Free plan fits three carousels a month, enough for a weekly poster only in part.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "3 card sets total",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Free plan also lists 3 card sets total, 1 batch collection total, 1 document total and 3 AI images, and the dashboard counts 0/3 card sets, 0/1 batches, 0/1 documents and 0/1 diagrams; the dossier names none of these.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+     "comparability": "The dossier Free limits against the pricing page and the dashboard of 18 November; none of these features was used.",
+     "status": "contradicted",
+     "buying_consequence": "The Free allowance in the dossier is incomplete: cards, batches and documents have their own small limits.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$79/yr",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pricing page shows Creator at $79 a year and Pro at $249 a year, with the FAQ naming $10 and $30 a month, and Business from $50 a month; this matches the dossier.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+     "comparability": "The dossier prices against the pricing page in US dollars on the Annual view and the FAQ.",
+     "status": "confirmed",
+     "buying_consequence": "The plan prices in the dossier are right.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$6.58 / month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "On the Annual view the pricing page leads with $6.58 a month for Creator and $20.75 a month for Pro, which are the yearly prices divided by 12; the dossier does not mention these monthly amounts.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+     "comparability": "The Annual view amounts against the dossier amounts; no checkout was seen to confirm the billing.",
+     "status": "contradicted",
+     "buying_consequence": "The big number on the page is lower than the monthly price in the dossier, but it is billed once a year.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "7-day money-back guarantee on all paid plans",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pricing page names the plan prices and a 7-day money-back guarantee, but no upgrade button was clicked, so no tax, total or payment screen was seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+     "comparability": "The pricing page amount against a checkout that was not reached; no stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The final amount with tax and the refund handling are not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested CarouselBot in the existing Free account of Daan: a carousel of 6 slides from a topic was ready in about 20 seconds and 3 steps, the headline and the template were changed with a click, and the PDF took about 10 seconds and was 113 KB. The common brewing tips are right, but the AI made up a figure (98% Of Coffee Flavor Comes From Water Quality) and a company claim (Test Co roasts in small batches). Free counted 1 of 3 carousels and only a small CarouselBot logo was seen on page 1 of the PDF, no large watermark. The prices match the dossier; the Annual view shows $6.58 and $20.75 a month and the dossier does not mention the 3 card sets and 1 batch on Free. There is no cancel button on the account page. The test carousel is still in the library, because the delete click was refused. No plan was bought. Account and start: the test used the existing Free account of Daan, already signed in, with the interface in English (no language setting was found). The test started at about 11:16 with the welcome pop-up Welcome to CarouselBot!, which was skipped. The product is the same as the dossier domain (the page title is CarouselBot, Create LinkedIn Carousels in 2 Minutes) and the footer names a person as the maker; that name is not recorded here. The dossier name is CarouselBot and the review is on MSS (carouselbot-review); the handson folder and the review slug are the same. Usage on Free at the start: 1/3 carousels, 0/3 card sets, 0/1 batches, 0/1 documents, 0/3 AI images (manual) and 0/1 diagrams. Core action: a carousel from a topic. The input was 5 tips for brewing better coffee at home, for the fictional coffee brand Test Co, with 6 slides, the Warm template and Title Case. The form also offers Include AI-generated diagrams (BETA, 1 free), Include data charts and Include impact slides; none was turned on. The progress bar said Generating slide 5 of 6 and This usually takes 10-20 seconds; the result was there after about 20 seconds and 3 steps (topic, Continue, edit). AI text: slide 3 holds common tips (195 to 205 degrees Fahrenheit and 1 gram to 16 grams of water) that are right. Two things are made up: slide 2 says 98% Of Coffee Flavor Comes From Water Quality, a figure that exists nowhere (coffee is mostly water, but not this percentage), and slide 4 says Test Co roasts in small batches, a company claim nobody gave. Slides 5 and 6 are general and marketing like. The style reads smoothly with no language mistakes. Editing: through Edit Page 1 of 6 the headline was changed to Test Co: Better Home Coffee in 5 Steps (tabs Content, Icon and Image, Regenerate Copy, bold text and accent words); the template was switched from Warm to Ocean with one click; the ratios are 4:5, 1:1 and 9:16; a logo upload and a handle are available. Export: Download offers PDF Single file, PNG ZIP of images and JPG ZIP of images. The PDF said Rendering PDF... for about 10 seconds and was 113 KB, followed by Your carousel is downloaded! and Saved to your library!. The design is readable, with a large headline and enough contrast on Ocean. At the bottom of every slide is the small CarouselBot logo with an arrow; the pricing page says Free exports with a watermark, but only this small logo was seen and no large watermark. Only page 1 of the PDF was looked at. No name of the maker is on the slides. Plans, read on the pricing page (US dollars, nothing clicked): Free $0 forever (3 carousels per month, 3 card sets total, 1 batch collection total, 1 document total, 3 AI images, All templates, PNG, JPG and PDF export with watermark); Creator $6.58 a month on the Annual view ($120, $79 a year, Save 34%; the FAQ says $10 a month; Unlimited carousels, 3 card sets and 3 batches a month, 10 documents a month, Unlimited AI images and diagrams, No watermark, Custom branding with logo and handle); Pro $20.75 a month on the Annual view ($360, $249 a year, Save 31%; the FAQ says $30 a month; unlimited card sets, batches and documents, up to 10,000 words per document, priority help); Business $50 a month as a starting price (bulk creation of up to 50 URLs, advanced template customization, auto-apply branding and a Claude integration (MCP), Book a demo). A newsletter offer gives $50 off Annual plans, and there is a 7-day money-back guarantee on all paid plans. Deviations from the dossier: the prices match (Free with 3 carousels and a watermark, Creator $10 a month or $79 a year, Pro $30 or $249, Business from $50). New: the Annual view shows $6.58 and $20.75 a month, and the dossier does not mention the 3 card sets and the 1 batch on Free. The dossier says there is no scheduling or publishing: confirmed, no planner was seen. The price fields of our pages are not touched. Checkout: NOT reached. No upgrade button was clicked, so no tax, total, card or payment screen was seen. Cancelling: on the account page only the email address, the plan, the usage and Upgrade are shown, with no button to cancel or delete the account (there is no paid subscription); the FAQ says Cancel anytime from your account page. Not tested: the paid plans, AI diagrams, data charts, AI images, cards, batch, documents, URL input, a second carousel, PNG and JPG export, and scheduling or publishing (connecting an account was not allowed). Clean up: the test carousel (now titled Test Co: Better Home Coffee in 5 Steps) is STILL in the library, because the delete click was refused by the permission layer; someone has to remove it with the bin icon on the dashboard. The tab was closed.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The AI wrote a made-up figure (98% Of Coffee Flavor Comes From Water Quality) and a made-up company claim (Test Co roasts in small batches), so every slide has to be checked before posting. The pricing page says Free exports with a watermark, but only a small logo was seen. The account page has no button to cancel or delete the account, and the test carousel could not be removed from the library in this test.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "The paid plans, AI diagrams, data charts, AI images, cards, batch and documents.",
+     "URL input, a second carousel, and the PNG and JPG export.",
+     "Scheduling and publishing, because connecting an account was not allowed.",
+     "Checkout, a paid plan and cancelling.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 11:16 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -17512,6 +17951,220 @@
   },
   {
    "source": "session",
+   "product_name": "Way",
+   "product_id": "way",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Way (Google Maps store locator) on a Shopify development store: the install, the Free plan without a card or billing screen, one location with a public address added about 1 minute after the install form, the floating pin in an unsaved theme preview (App embed on) that opens Google Maps with no API key or Google account, the notice that embedding the map into store pages needs a paid plan, the plan page with the monthly and yearly prices (Free $0, Basic $6.99, Advanced $14.99, Pro $29.99 a month, equal to the listing), a Black Friday banner and the uninstall, which asks for a reason. Nothing was paid, approved or saved. Install: the app (App Store name Way: Google Maps Store Locator, listing apps.shopify.com/sticky-navigate-to-store; in the admin Way Store Locator) was installed from its App Store listing through the install form in our own tab. The install form was sent at 22:42:54; the dialog Install app showed Way Store Locator, with the permissions View staff and contributor data (Store owner) and View and edit store data (Online Store, Shopify admin). The app opened as a store locator. The listing matches the dossier: Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99, 1, 50, 500 and 2000 locations, and the text no API key required. Plan choice: the page said Pick your plan to start a 7-days* free trial, with the footnote that each store is entitled to a maximum of undefined trial days altogether. The Free plan ($0, 1 location, Floating store locator, Online support, In-Store App Branding) was chosen. No card and no billing screen came up. The dashboard then said Welcome to Way Store Locator and Free Plan. Core action: Add store location was clicked; the title Test Stockist One and a public address (Museumstraat 1, Amsterdam, picked from the Google address suggestions) were entered and saved (Settings saved successfully). The first location stood on screen at 22:43:52, about 1 minute after the install form and in 4 steps after the plan choice. No Google Maps API key, Google account or card was needed. On the free plan the app said: Embedding the map into your store pages is available on paid plans. Upgrade to activate the app block; the tab Map in the preview was greyed out. A bar said ACTION REQUIRED: Turn on Way Store Locator's App Embed. In the theme editor preview (not saved) App embeds, Way Store Locator was switched on and a floating pin with the link Way Store Locator appeared in the lower right corner; a click on the pin opened Google Maps for the location in a new tab, which was closed. The theme change was not saved and was undone. Plans: monthly view Free $0/month, Basic Plan $6.99/month, Advanced Plan $14.99/month and Pro Plan $29.99/month (billed monthly); yearly view Basic $5.59/month, Advanced $11.99/month and Pro $23.99/month (billed annually), which equals the listing ($67.10, $143.90 and $287.90 a year). The cards say Up to 50, 500 and 2000 locations and Widget & App Block. Difference with the listing: the Free card in the app does not say No API key required (the paid cards do); in practice no API key was needed on the Free plan either. A banner said BLACK FRIDAY SALE: Up To 50% OFF with Claim Offer; it was not clicked. Checkout: only the Free plan was chosen and the paid plans were not clicked, so no Shopify approval screen, total, test charge or card field was seen. Nothing was approved. Cancelling: no paid plan was started. In Settings, Apps, Uninstall opened the dialog Uninstall Way Store Locator?, which says that the app can no longer be used and that data managed by the app will be deleted; a reason is required (Testing multiple apps was chosen). The app was uninstalled after the evidence was complete and is gone from the installed apps. Not tested: the paid plans, bulk import by CSV, the app block or widget on a page (paid plans only), more than one location, the effect of the 50 location limit, stock per store and the Claim Offer banner. Clean up: the theme was not saved, the Google Maps tab and our own tab were closed, and the app was uninstalled. The price fields are not changed here. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"no API key required\". What we saw: On the Free plan a location was added from the Google address suggestions and the floating pin opened Google Maps without any API key, Google account or card; the Free card in the app does not name No API key required, only the paid cards do.",
+    "Text we checked: \"Floating store locator\". What we saw: After the App embed was switched on in the theme preview, a grey floating pin with the link Way Store Locator appeared in the lower right corner and a click opened Google Maps for the location. The theme change was not saved.",
+    "Text we checked: \"Embedding the map into your store pages is available on paid plans\". What we saw: On the Free plan the app said this in a blue block and the tab Map in the preview was greyed out; the app block was not tried because it needs a paid plan.",
+    "Text we checked: \"Up to 50/500/2000 locations\". What we saw: The plan cards say 1 location (Free) and Up to 50, 500 and 2000 locations for Basic, Advanced and Pro, as the listing does. One location was added on the Free plan; more locations and the 50 location limit were not tried.",
+    "Text we checked: \"Basic Plan $6.99/month; Advanced Plan $14.99/month; Pro Plan $29.99/month\". What we saw: The monthly view of the plan page shows Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99 a month, billed monthly, as the listing does."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The paid plans.",
+    "Bulk import by CSV and more than one location.",
+    "The app block or widget on a store page, which needs a paid plan.",
+    "The effect of the 50 location limit and stock per store.",
+    "The Black Friday offer.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:42:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "no API key required",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "On the Free plan a location was added from the Google address suggestions and the floating pin opened Google Maps without any API key, Google account or card; the Free card in the app does not name No API key required, only the paid cards do.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not clicked",
+     "comparability": "The listing wording against one location and one floating pin in an unsaved theme preview; the paid map block was not tried, so the wording was not checked there.",
+     "status": "confirmed",
+     "buying_consequence": "You do not need a Google Maps key to get a pin on the free plan, although the free plan card does not say so.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Floating store locator",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "After the App embed was switched on in the theme preview, a grey floating pin with the link Way Store Locator appeared in the lower right corner and a click opened Google Maps for the location. The theme change was not saved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not clicked",
+     "comparability": "The Free card text against the pin in the editor preview; the pin was not seen on the live store because nothing was saved.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan gives one floating pin that opens Google Maps; it is not a map on a page.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Embedding the map into your store pages is available on paid plans.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "On the Free plan the app said this in a blue block and the tab Map in the preview was greyed out; the app block was not tried because it needs a paid plan.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not clicked",
+     "comparability": "The notice in the app against the greyed out Map tab on the Free plan; the paid app block was not opened.",
+     "status": "confirmed",
+     "buying_consequence": "A map on your own pages needs a paid plan, from $6.99 a month; the free plan only has the floating pin.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Up to 50/500/2000 locations",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan cards say 1 location (Free) and Up to 50, 500 and 2000 locations for Basic, Advanced and Pro, as the listing does. One location was added on the Free plan; more locations and the 50 location limit were not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not clicked",
+     "comparability": "The plan cards against the listing wording and one saved location; no second location, bulk import or limit was tried.",
+     "status": "confirmed",
+     "buying_consequence": "The location limits on the cards match the listing; the limit itself was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Basic Plan $6.99/month; Advanced Plan $14.99/month; Pro Plan $29.99/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The monthly view of the plan page shows Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99 a month, billed monthly, as the listing does.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not clicked",
+     "comparability": "The monthly prices on the cards against the listing; no approval screen was reached, so no total or tax was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The monthly prices in the app equal the listing: $6.99, $14.99 and $29.99 a month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Basic $5.59/month, Advanced $11.99/month, Pro $23.99/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The yearly view shows $5.59, $11.99 and $23.99 a month, billed annually, which equals $67.10, $143.90 and $287.90 a year as on the listing.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not clicked",
+     "comparability": "The yearly prices on the cards against the yearly totals of the listing; the yearly plan was not started.",
+     "status": "confirmed",
+     "buying_consequence": "Paying yearly saves about 20% against the monthly price, matching the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pick your plan to start a 7-days* free trial",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The heading offers a 7 day free trial on the plan page, with a footnote that each store is entitled to a maximum of undefined trial days altogether; only the Free plan was chosen, so no trial was started or seen on an approval screen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not clicked",
+     "comparability": "The heading and footnote of the plan page against a trial that was never started; no paid plan was clicked.",
+     "status": "not_testable",
+     "buying_consequence": "Whether a paid plan starts with 7 free days is not confirmed by a Shopify approval screen; the footnote on the page is unclear about the trial days.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "BLACK FRIDAY SALE: Up To 50% OFF Claim Offer",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "A banner in the app offered up to 50% off with a Claim Offer link; it was not clicked, so the discounted prices were not seen. The plan cards showed the list prices.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not clicked",
+     "comparability": "The banner text against the plan cards; the offer page was not opened, so no discounted price was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The offer is time limited and its prices were not seen; the prices on the cards are the list prices.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Betaalde plannen niet aangeklikt",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The paid plans were not clicked, so no Shopify approval screen, total, tax or renewal term was seen; the prices on the plan page could not be compared with a checkout.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/way-review/#claim-vs-measured"
+     },
+     "plan": "Free plan only; the paid plans were not clicked",
+     "comparability": "The prices on the plan cards against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price you would pay for a paid plan is not confirmed by a Shopify approval screen; start with the Free plan and check the screen before you approve a paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Way (Google Maps store locator) on a Shopify development store: the install, the Free plan without a card or billing screen, one location with a public address added about 1 minute after the install form, the floating pin in an unsaved theme preview (App embed on) that opens Google Maps with no API key or Google account, the notice that embedding the map into store pages needs a paid plan, the plan page with the monthly and yearly prices (Free $0, Basic $6.99, Advanced $14.99, Pro $29.99 a month, equal to the listing), a Black Friday banner and the uninstall, which asks for a reason. Nothing was paid, approved or saved. Install: the app (App Store name Way: Google Maps Store Locator, listing apps.shopify.com/sticky-navigate-to-store; in the admin Way Store Locator) was installed from its App Store listing through the install form in our own tab. The install form was sent at 22:42:54; the dialog Install app showed Way Store Locator, with the permissions View staff and contributor data (Store owner) and View and edit store data (Online Store, Shopify admin). The app opened as a store locator. The listing matches the dossier: Free $0, Basic $6.99, Advanced $14.99 and Pro $29.99, 1, 50, 500 and 2000 locations, and the text no API key required. Plan choice: the page said Pick your plan to start a 7-days* free trial, with the footnote that each store is entitled to a maximum of undefined trial days altogether. The Free plan ($0, 1 location, Floating store locator, Online support, In-Store App Branding) was chosen. No card and no billing screen came up. The dashboard then said Welcome to Way Store Locator and Free Plan. Core action: Add store location was clicked; the title Test Stockist One and a public address (Museumstraat 1, Amsterdam, picked from the Google address suggestions) were entered and saved (Settings saved successfully). The first location stood on screen at 22:43:52, about 1 minute after the install form and in 4 steps after the plan choice. No Google Maps API key, Google account or card was needed. On the free plan the app said: Embedding the map into your store pages is available on paid plans. Upgrade to activate the app block; the tab Map in the preview was greyed out. A bar said ACTION REQUIRED: Turn on Way Store Locator's App Embed. In the theme editor preview (not saved) App embeds, Way Store Locator was switched on and a floating pin with the link Way Store Locator appeared in the lower right corner; a click on the pin opened Google Maps for the location in a new tab, which was closed. The theme change was not saved and was undone. Plans: monthly view Free $0/month, Basic Plan $6.99/month, Advanced Plan $14.99/month and Pro Plan $29.99/month (billed monthly); yearly view Basic $5.59/month, Advanced $11.99/month and Pro $23.99/month (billed annually), which equals the listing ($67.10, $143.90 and $287.90 a year). The cards say Up to 50, 500 and 2000 locations and Widget & App Block. Difference with the listing: the Free card in the app does not say No API key required (the paid cards do); in practice no API key was needed on the Free plan either. A banner said BLACK FRIDAY SALE: Up To 50% OFF with Claim Offer; it was not clicked. Checkout: only the Free plan was chosen and the paid plans were not clicked, so no Shopify approval screen, total, test charge or card field was seen. Nothing was approved. Cancelling: no paid plan was started. In Settings, Apps, Uninstall opened the dialog Uninstall Way Store Locator?, which says that the app can no longer be used and that data managed by the app will be deleted; a reason is required (Testing multiple apps was chosen). The app was uninstalled after the evidence was complete and is gone from the installed apps. Not tested: the paid plans, bulk import by CSV, the app block or widget on a page (paid plans only), more than one location, the effect of the 50 location limit, stock per store and the Claim Offer banner. Clean up: the theme was not saved, the Google Maps tab and our own tab were closed, and the app was uninstalled. The price fields are not changed here. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "On the Free plan the map can only be shown as a floating pin that opens Google Maps; embedding the map into store pages needs a paid plan. The app embed has to be switched on in the theme first (the app shows an action required bar). The Free card does not say No API key required, which the listing does, although no key was needed in practice. The heading offers a 7 day trial while a footnote speaks of undefined trial days.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The paid plans.",
+     "Bulk import by CSV and more than one location.",
+     "The app block or widget on a store page, which needs a paid plan.",
+     "The effect of the 50 location limit and stock per store.",
+     "The Black Friday offer.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:42:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Tapita SEO Optimizer",
    "product_id": "tapita-seo-optimizer",
    "run_date": "2026-11-17",
@@ -23883,6 +24536,235 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "PushOwl",
+   "product_id": "pushowl",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested PushOwl (Brevo PushOwl: Email,Push,SMS in the listing) on a Shopify development store: the install, the dashboard that opens through Shopify without a Brevo account, the Welcome notifications flow that was already on with a preview, a Rival Spin to win popup preview that was not saved, the free Basic plan with 500 pushes and 500 e-mails a month, the locked Abandoned cart recovery, Browse abandonment and Shipping notifications, the Plus approval screen (not approved) and the uninstall dialog, which asks for a reason. Nothing was sent, paid or saved. Install: the listing apps.shopify.com/pushowl is now called Brevo PushOwl: Email,Push,SMS (developer Brevo PushOwl), with the label Free plan available and a rating of 4.8 from 2,321 reviews on the listing today (2,322 in our test on 17 Nov 2026); the dossier says PushOwl and 2,030 reviews, so name and count are out of date. The Install button was clicked and Install was approved on the permission screen (View customer data, View staff and contributor data, View and edit store data) at about 22:53. The app opens in its own PushOwl dashboard (dashboard.pushowl.io), logged in automatically through Shopify; no separate Brevo account or password was asked. Onboarding asks where to start (Web Push, Email, SMS) and then shows an Ad Studio screen with Continue to free trial, which was not clicked. The Home page shows First steps 0 / 4 (Activate the app embed, subscribers, Verify your email, Verify your mobile number); the phone verification was not done. Core action: about 7 minutes and about 8 steps after the install, at about 23:00, the first result was on screen. Automations shows Welcome notifications as Active, switched on by default on Basic. The preview shows the trigger When a new visitor subscribes, Reminder 1 after 0 minutes (You are subscribed / We will keep you posted with latest updates), Reminder 2 after 2 hours (We're glad to have you here!) and Reminder 3 after 1 day (Hey there! Anything specific caught your eye?); Reminder 2 and 3 are Inactive. Forms, Create campaign, Popup offers templates (Rival, Frond, Fizz, Lumina, Scoop, Villa, Studio, Edit); Rival Spin to win was chosen and its preview was seen at the step Theme. Nothing was saved or published and the wizard was left with Leave (Your customizations haven't been saved yet). Native Browser Prompt is Active and iOS Install Prompt is Inactive; browser push permission was not accepted (the Let's go! modal was closed). Nothing was sent. Locked automations on Basic: Abandoned cart recovery says it is available on the Plus bundle (with a free trial button), Browse abandonment is available on the Power bundle and Shipping notifications are locked too. Back in stock and Price drop can be switched on; they were not switched on. Plans: the Pricing page shows Basic bundle, Current plan, $0.00, Web push impressions 0 / 500 and Email credits 0 / 500 (equal to the dossier), Plus bundle $19.00 (10.000 push, 1.000 email credits) and Power bundle $79.00 (25.000 push, 1.500 email credits); SMS has 0 credits on every plan and credits are bought separately. The listing shows Plus at $19 / month ($180/year), which is $15 a month, equal to the dossier ($19 a month, $15 billed yearly). The buttons Start 14-day free trial and the Trial plans tab were not used. Checkout: Select plan on Plus opened the Shopify Approve subscription screen: Plus bundle, $19,00 USD every 30 days, subtotal $19,00 plus any applicable taxes, total due 17 Nov $19,00, an Add payment method row and a greyed out Approve button. The sentence that you will not be billed for this test charge was NOT on the screen, so Plus was not approved, no card was added and Cancel was clicked. Cancelling: no paid plan was started, so there was nothing to cancel. Settings, Apps, the app menu and Uninstall opens the dialog Uninstall Brevo PushOwl? which says you will no longer be able to use the app and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required before Uninstall becomes active (Testing multiple apps was chosen). Not tested: sending a real push or e-mail, browser push permission, verifying a mobile number or an e-mail address, Activate (the app embed in the theme), Ad Studio, the trial and the paid plans, SMS and switching on Back in stock or Price drop. Clean up: at about 23:12 the app was uninstalled in Settings, Apps and no longer showed under Installed. No popup was saved, no campaign was made, no e-mail or push was sent and the plan stayed Basic. Our own tab was closed. The price fields are not changed here. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Web Push 500 / month\". What we saw: The Pricing page shows Basic bundle as the current plan at $0.00 with web push impressions 0 / 500 for the current month, equal to the 500 pushes a month the listing and the dossier name for the free plan.",
+    "Text we checked: \"Emails From 500 / Month\". What we saw: The Pricing page shows email credits 0 / 500 on Basic, equal to the 500 e-mails a month named for the free plan; Plus shows 1.000 e-mail credits and Power 1.500.",
+    "Text we checked: \"Brevo PushOwl: Email,Push,SMS\". What we saw: The listing is now called Brevo PushOwl: Email,Push,SMS, developer Brevo PushOwl, and the dashboard shows the logo Brevo PushOwl; the dossier still says PushOwl.",
+    "Text we checked: \"rating 4.8 (2,322)\". What we saw: The listing shows a rating of 4.8 from 2,321 reviews on the listing today (2,322 in our test on 17 Nov 2026); the dossier says 2,030 reviews.",
+    "Text we checked: \"When a new visitor subscribes\". What we saw: Automations shows Welcome notifications as Active, switched on by default on Basic, with the trigger When a new visitor subscribes, Reminder 1 after 0 minutes and a preview; Reminder 2 (after 2 hours) and Reminder 3 (after 1 day) are Inactive. About 7 minutes and about 8 steps after the install this preview was on screen."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Sending a real push or e-mail and accepting browser push permission.",
+    "Verifying a mobile number or an e-mail address and the Activate step for the app embed.",
+    "Abandoned cart recovery, Browse abandonment and Shipping notifications, which are locked on Basic.",
+    "Ad Studio, the free trials, the paid plans and SMS.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:53 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Web Push 500 / month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Pricing page shows Basic bundle as the current plan at $0.00 with web push impressions 0 / 500 for the current month, equal to the 500 pushes a month the listing and the dossier name for the free plan.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pushowl-review/#claim-vs-measured"
+     },
+     "plan": "Plus approval screen, not approved, development store",
+     "comparability": "The listing and dossier cap against the counter 0 / 500 on the Pricing page; no push was sent, so the counter was not run up.",
+     "status": "confirmed",
+     "buying_consequence": "You can send up to 500 push impressions a month for free; whether 500 is enough depends on the number of subscribers, which was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Emails From 500 / Month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Pricing page shows email credits 0 / 500 on Basic, equal to the 500 e-mails a month named for the free plan; Plus shows 1.000 e-mail credits and Power 1.500.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pushowl-review/#claim-vs-measured"
+     },
+     "plan": "Plus approval screen, not approved, development store",
+     "comparability": "The listing and dossier cap against the credit counter and the three plan columns; no e-mail was sent.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan includes 500 e-mails a month and the next plan only 1.000, so the e-mail part of a paid plan is small.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Brevo PushOwl: Email,Push,SMS",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing is now called Brevo PushOwl: Email,Push,SMS, developer Brevo PushOwl, and the dashboard shows the logo Brevo PushOwl; the dossier still says PushOwl.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pushowl-review/#claim-vs-measured"
+     },
+     "plan": "Plus approval screen, not approved, development store",
+     "comparability": "The dossier name against the current listing and the dashboard logo; the name change is a fact on the listing, not a result of a test.",
+     "status": "out_of_date",
+     "buying_consequence": "The app is sold under a new name; no separate Brevo account or password was needed, because the dashboard opened through the Shopify login.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "rating 4.8 (2,322)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows a rating of 4.8 from 2,321 reviews on the listing today (2,322 in our test on 17 Nov 2026); the dossier says 2,030 reviews.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pushowl-review/#claim-vs-measured"
+     },
+     "plan": "Plus approval screen, not approved, development store",
+     "comparability": "The review count in the dossier against the count on the listing on 17 Nov; the individual reviews were not read.",
+     "status": "out_of_date",
+     "buying_consequence": "The review count in the dossier is out of date; the rating itself was not checked against the dossier.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "When a new visitor subscribes",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Automations shows Welcome notifications as Active, switched on by default on Basic, with the trigger When a new visitor subscribes, Reminder 1 after 0 minutes and a preview; Reminder 2 (after 2 hours) and Reminder 3 (after 1 day) are Inactive. About 7 minutes and about 8 steps after the install this preview was on screen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pushowl-review/#claim-vs-measured"
+     },
+     "plan": "Plus approval screen, not approved, development store",
+     "comparability": "The default state of the welcome flow in the dashboard against a first result within minutes; no visitor subscribed, so no message was seen on a device.",
+     "status": "confirmed",
+     "buying_consequence": "A welcome push flow is already on in the free plan and can be read at once, but only the first message is active and nothing was sent.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "is available on the Plus bundle",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Abandoned cart recovery is locked on Basic with the text that it is available on the Plus bundle, and a free trial button; Browse abandonment needs the Power bundle and Shipping notifications are locked too. Back in stock and Price drop can be switched on, but were not.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pushowl-review/#claim-vs-measured"
+     },
+     "plan": "Plus approval screen, not approved, development store",
+     "comparability": "The locked automation cards on Basic against the plan columns; the locked automations were not started, so nothing about their result is known.",
+     "status": "confirmed",
+     "buying_consequence": "A free store cannot set up abandoned cart push; that needs Plus at $19.00 per 30 days and browse abandonment needs Power at $79.00.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your customizations haven't been saved yet",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "In Forms, Create campaign, Popup, the Rival Spin to win template showed a preview at the step Theme of a seven step wizard; the wizard was left with Leave and nothing was saved or published, so the popup was not seen on a store page.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pushowl-review/#claim-vs-measured"
+     },
+     "plan": "Plus approval screen, not approved, development store",
+     "comparability": "The preview in the wizard against a popup that was never published or seen on the storefront; the app embed was not activated.",
+     "status": "not_testable",
+     "buying_consequence": "The opt-in popup can be previewed for free, but whether it shows on a live store and collects subscribers was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Native Browser Prompt",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Native Browser Prompt shows as Active and iOS Install Prompt as Inactive; browser push permission was not accepted (the Let's go! modal was closed), so no real subscription was made and no push was received.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pushowl-review/#claim-vs-measured"
+     },
+     "plan": "Plus approval screen, not approved, development store",
+     "comparability": "The Active label of the prompt against a subscription that was never made; no push permission was accepted.",
+     "status": "not_testable",
+     "buying_consequence": "The browser opt-in is on by default, but nobody subscribed in this test, so the path from a visitor to a push message is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$19 / month ($180/year)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing shows Plus at $19 / month and $180/year, which is $15 a month, equal to the dossier price of $19 a month ($15 billed yearly); Plus gives 10.000 push impressions and 1.000 e-mail credits, Power $79 / month ($852/year).",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pushowl-review/#claim-vs-measured"
+     },
+     "plan": "Plus approval screen, not approved, development store",
+     "comparability": "The Plus prices on the listing against the dossier; the yearly price was not seen on a Shopify approval screen.",
+     "status": "confirmed",
+     "buying_consequence": "Plus costs $19 a month, or $15 a month when billed yearly at $180, as in the dossier.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$19,00 USD every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Select plan on Plus opened the Shopify Approve subscription screen: Plus bundle, $19,00 USD every 30 days, subtotal $19,00 plus any applicable taxes, total $19,00 due 17 Nov, Add payment method and a greyed out Approve. The sentence that you will not be billed for this test charge was not on the screen, so we did not approve; no card was added.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pushowl-review/#claim-vs-measured"
+     },
+     "plan": "Plus approval screen, not approved, development store",
+     "comparability": "The Plus price on the Pricing page against the Shopify approval screen amount; no tax line was shown and no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The monthly price of $19 matches the Pricing page and is charged every 30 days, due at once without a trial; Shopify asks for a payment method.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested PushOwl (Brevo PushOwl: Email,Push,SMS in the listing) on a Shopify development store: the install, the dashboard that opens through Shopify without a Brevo account, the Welcome notifications flow that was already on with a preview, a Rival Spin to win popup preview that was not saved, the free Basic plan with 500 pushes and 500 e-mails a month, the locked Abandoned cart recovery, Browse abandonment and Shipping notifications, the Plus approval screen (not approved) and the uninstall dialog, which asks for a reason. Nothing was sent, paid or saved. Install: the listing apps.shopify.com/pushowl is now called Brevo PushOwl: Email,Push,SMS (developer Brevo PushOwl), with the label Free plan available and a rating of 4.8 from 2,321 reviews on the listing today (2,322 in our test on 17 Nov 2026); the dossier says PushOwl and 2,030 reviews, so name and count are out of date. The Install button was clicked and Install was approved on the permission screen (View customer data, View staff and contributor data, View and edit store data) at about 22:53. The app opens in its own PushOwl dashboard (dashboard.pushowl.io), logged in automatically through Shopify; no separate Brevo account or password was asked. Onboarding asks where to start (Web Push, Email, SMS) and then shows an Ad Studio screen with Continue to free trial, which was not clicked. The Home page shows First steps 0 / 4 (Activate the app embed, subscribers, Verify your email, Verify your mobile number); the phone verification was not done. Core action: about 7 minutes and about 8 steps after the install, at about 23:00, the first result was on screen. Automations shows Welcome notifications as Active, switched on by default on Basic. The preview shows the trigger When a new visitor subscribes, Reminder 1 after 0 minutes (You are subscribed / We will keep you posted with latest updates), Reminder 2 after 2 hours (We're glad to have you here!) and Reminder 3 after 1 day (Hey there! Anything specific caught your eye?); Reminder 2 and 3 are Inactive. Forms, Create campaign, Popup offers templates (Rival, Frond, Fizz, Lumina, Scoop, Villa, Studio, Edit); Rival Spin to win was chosen and its preview was seen at the step Theme. Nothing was saved or published and the wizard was left with Leave (Your customizations haven't been saved yet). Native Browser Prompt is Active and iOS Install Prompt is Inactive; browser push permission was not accepted (the Let's go! modal was closed). Nothing was sent. Locked automations on Basic: Abandoned cart recovery says it is available on the Plus bundle (with a free trial button), Browse abandonment is available on the Power bundle and Shipping notifications are locked too. Back in stock and Price drop can be switched on; they were not switched on. Plans: the Pricing page shows Basic bundle, Current plan, $0.00, Web push impressions 0 / 500 and Email credits 0 / 500 (equal to the dossier), Plus bundle $19.00 (10.000 push, 1.000 email credits) and Power bundle $79.00 (25.000 push, 1.500 email credits); SMS has 0 credits on every plan and credits are bought separately. The listing shows Plus at $19 / month ($180/year), which is $15 a month, equal to the dossier ($19 a month, $15 billed yearly). The buttons Start 14-day free trial and the Trial plans tab were not used. Checkout: Select plan on Plus opened the Shopify Approve subscription screen: Plus bundle, $19,00 USD every 30 days, subtotal $19,00 plus any applicable taxes, total due 17 Nov $19,00, an Add payment method row and a greyed out Approve button. The sentence that you will not be billed for this test charge was NOT on the screen, so Plus was not approved, no card was added and Cancel was clicked. Cancelling: no paid plan was started, so there was nothing to cancel. Settings, Apps, the app menu and Uninstall opens the dialog Uninstall Brevo PushOwl? which says you will no longer be able to use the app and that a request goes to the app developer within 48 hours to delete all personal customer information. A reason is required before Uninstall becomes active (Testing multiple apps was chosen). Not tested: sending a real push or e-mail, browser push permission, verifying a mobile number or an e-mail address, Activate (the app embed in the theme), Ad Studio, the trial and the paid plans, SMS and switching on Back in stock or Price drop. Clean up: at about 23:12 the app was uninstalled in Settings, Apps and no longer showed under Installed. No popup was saved, no campaign was made, no e-mail or push was sent and the plan stayed Basic. Our own tab was closed. The price fields are not changed here. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The dossier is out of date on the name (the listing is now Brevo PushOwl: Email,Push,SMS) and on the review count (2,321 today against 2,030). Abandoned cart recovery, the automation most shops want, needs the Plus bundle, and the Plus approval screen asks for a payment method without a test charge sentence. The app starts on a free plan with a welcome flow already on, but it sends nothing until the app embed is activated and visitors subscribe, which was not tried.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Sending a real push or e-mail and accepting browser push permission.",
+     "Verifying a mobile number or an e-mail address and the Activate step for the app embed.",
+     "Abandoned cart recovery, Browse abandonment and Shipping notifications, which are locked on Basic.",
+     "Ad Studio, the free trials, the paid plans and SMS.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 22:53 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -33808,6 +34690,267 @@
      "The PayPal step and the live price outside a development store.",
      "Moving to or comparing with AfterSell, support, invitations, export and reimport, and uninstalling the app.",
      "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:52 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "UpsellPlus",
+   "product_id": "upsellplus",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested UpsellPlus on a Shopify development store: the install without a payment or approval screen, one Smart cross-sell play for the cart drawer with 10% off that gave a preview about 4 minutes and about 6 clicks after the install click (The Inventory Not Tracked Snowboard $949.95 to $854.95, Gift Card $10.00 to $9.00), the Billing page with nine revenue steps from Basic $49 to Unlimited $999 a month, and the uninstall, which asks for a reason. Nothing was saved or published and no order was placed, so no shopper data was seen. Name: the listing (apps.shopify.com/upsellpluscheckout) is titled UpsellPlus Checkout Upsell, developer UpsellPlus, Built for Shopify, rating 5.0 from 151 reviews, and matches the dossier; the app opens as UpsellPlus. The listing says Free plan available. Free trial available. and shows a plan box with Free (Build for free. Launch with a free trial, Choose from all 12 upsell types, Checkout Upsells (Plus only), Analytics), Basic $49 (up to $500), Pro $119 (up to $2,000) and Advanced $199 (up to $5,000), each with a 14-day free trial. Install: the Install button was clicked at about 23:19. The permission screen asked to View customer data, View staff and contributor data and View and edit store data. The Install button normally opens a grant tab; in our own tab the install form was sent into the same tab and submitted with a script. The first attempt ended in the message UpsellPlus was not added to your shop because the permission screen was closed too early; the second attempt worked. After the install the product opened at once with the setup line We analyzed your last 60 days of orders. There was no Shopify approval screen and no payment screen. Core action: See my recommended strategies, Offers, Create offer, filter Cart, Smart cross-sell, Use this play opened the offer editor with Where (Cart Drawer, Cart Page, Product Detail Page) and Incentive (None, 5% off, 10% off, Custom); we chose Cart Drawer and 10% off. The preview showed The Inventory Not Tracked Snowboard at $854.95 instead of $949.95 and Gift Card at $9.00 instead of $10.00, each with an Add to Cart button, under the note that real products from the store are shown and that actual products are selected automatically by AI at runtime. A box Place your app block was marked Incomplete: the cart drawer app block still has to be added in the theme. About 4 minutes passed between the install click (23:19) and the first preview (about 23:23), and it took about 6 clicks after the install. Nothing was saved (Discard), nothing was published, the theme was not changed and no order was placed. Plans and billing: this is a development store. Settings, Billing says Development store. You have full access to every feature, free. Development, partner and Shopify staff stores are never charged. It also says that a store on a paid Shopify plan starts on the free plan like any other shop and that pricing then follows the steps below. The page How pricing works says that the price follows the upsell revenue UpsellPlus generates, with nine steps: Basic up to $500 at $49 a month, Pro up to $2,000 at $119, Advanced up to $5,000 at $199, Scale 1 up to $10,000 at $299, Scale 2 up to $15,000 at $399, Scale 3 up to $20,000 at $499, Scale 4 up to $30,000 at $699, Scale 5 up to $40,000 at $799 and Unlimited at $999 a month. All prices are in USD and appear on the Shopify invoice. No Shopify approval screen was reached, nothing was approved. Differences with the dossier and the listing: the app shows the entry step as Basic Plan where the dossier says Launch; the app shows no Free plan among the nine steps although the listing says Free plan available (on a development store the free plan cannot be tested); the listing shows tiers up to $199 while the app shows six more steps up to $999 that are tied to upsell revenue. No price field is changed here. Cancelling: no paid plan exists on a development store, so no cancel route for a plan was seen. Settings, Apps, the menu behind the three dots for UpsellPlus offered Open app, View details and Uninstall (and a help link). The dialog Uninstall UpsellPlus? says that you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request is sent to the app developer within 48 hours to delete all personal customer information. It requires a Reason for uninstalling. Not tested: checkout, thank-you page, post-purchase and POS upsells (Plus or paid, the listing says checkout upsells are Plus only), the free plan on a real paid store, A/B tests, analytics with real data, the cart drawer app block, a real order and any shopper data, so we could not tell whether shoppers would take an offer. Clean up: our own tab was used; the offer was not saved and the theme was not changed. UpsellPlus was uninstalled on 17 Nov through Settings, Apps with the reason Testing multiple apps and left the Installed list. Other apps were not touched and our own tab was closed. The price fields are not changed here. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Basic Plan\". What we saw: The Billing page names the entry step Basic Plan, Up to $500, $49/month; the dossier calls the entry plan Launch. The app shows no plan called Launch.",
+    "Text we checked: \"Basic $49 (up to $500)\". What we saw: The Billing table shows Basic Plan, Up to $500, $49/month, equal to the listing.",
+    "Text we checked: \"Pro $119 (up to $2,000)\". What we saw: The Billing table shows Pro Plan, Up to $2,000, $119/month, equal to the listing.",
+    "Text we checked: \"Advanced $199 (up to $5,000)\". What we saw: The Billing table shows Advanced Plan, Up to $5,000, $199/month, equal to the listing.",
+    "Text we checked: \"Scale 1 $299 (10,000)\". What we saw: The Billing table has six more steps than the listing: Scale 1 $299 (up to $10,000), Scale 2 $399 (15,000), Scale 3 $499 (20,000), Scale 4 $699 (30,000), Scale 5 $799 (40,000) and Unlimited $999 a month."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Checkout, thank-you page, post-purchase and POS upsells.",
+    "The free plan on a real paid store, A/B tests and analytics with real data.",
+    "The cart drawer app block, a real order and shopper data.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 23:19 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Basic Plan",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing page names the entry step Basic Plan, Up to $500, $49/month; the dossier calls the entry plan Launch. The app shows no plan called Launch.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The dossier plan name against the Billing table; the name is a fact about the app, not a test result.",
+     "status": "out_of_date",
+     "buying_consequence": "The plan the dossier calls Launch is shown as Basic Plan in the app; the review should use the app name.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free plan available. Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing says this. The Billing page of the app names no Free plan among its nine steps, but says that a store on a paid Shopify plan starts on the free plan like any other shop. On a development store everything is free, so the Free plan and the trial could not be tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The listing wording against a Billing page of a development store; no real paid store was used.",
+     "status": "not_testable",
+     "buying_consequence": "Whether a real store can use the Free plan, and for what limits, is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Basic $49 (up to $500)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing table shows Basic Plan, Up to $500, $49/month, equal to the listing.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The listing plan box against the Billing table; the amount was not seen on an approval screen.",
+     "status": "confirmed",
+     "buying_consequence": "The first paid step costs $49 a month for upsell revenue up to $500, as listed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pro $119 (up to $2,000)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing table shows Pro Plan, Up to $2,000, $119/month, equal to the listing.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The Pro price on the listing against the Billing table; Pro was not selected.",
+     "status": "confirmed",
+     "buying_consequence": "The Pro step costs $119 a month for upsell revenue up to $2,000, as listed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Advanced $199 (up to $5,000)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing table shows Advanced Plan, Up to $5,000, $199/month, equal to the listing.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The Advanced price on the listing against the Billing table; Advanced was not selected.",
+     "status": "confirmed",
+     "buying_consequence": "The Advanced step costs $199 a month for upsell revenue up to $5,000, as listed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Scale 1 $299 (10,000)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing table has six more steps than the listing: Scale 1 $299 (up to $10,000), Scale 2 $399 (15,000), Scale 3 $499 (20,000), Scale 4 $699 (30,000), Scale 5 $799 (40,000) and Unlimited $999 a month.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The tiers of the listing against the full Billing table; the revenue steps were read but not triggered.",
+     "status": "contradicted",
+     "buying_consequence": "A store with growing upsell revenue can end up at $299 to $999 a month, which the listing, ending at $199, does not show.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Incentive: None / 5% off / 10% off / Custom",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "With Cart Drawer and 10% off chosen the preview showed The Inventory Not Tracked Snowboard at $854.95 instead of $949.95 and Gift Card at $9.00 instead of $10.00, which is 10% off after rounding down.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The shown prices against ten percent of the old prices; only the preview in the editor was seen and no cart or order.",
+     "status": "confirmed",
+     "buying_consequence": "The 10% incentive was applied correctly to both preview prices.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "actual products are selected automatically by AI at runtime.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The editor says that the preview shows real products from the store and that the actual products are selected by AI at runtime. We saw two products in the preview; the choice at runtime was not seen because nothing was saved or shown to a shopper.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The editor text against a live cart that does not exist; the app block was not added and no shopper data was seen.",
+     "status": "not_testable",
+     "buying_consequence": "Which products shoppers would really see, and whether they fit the cart, is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Choose from all 12 upsell types",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing says this for the Free plan. Only one type, a Smart cross-sell for the cart drawer, was tried; the other types were not opened.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The listing list against the one offer type that was opened in the editor.",
+     "status": "not_testable",
+     "buying_consequence": "How many upsell types work, and on which plan, is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Checkout Upsells (Plus only)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing says checkout upsells are for Shopify Plus only. The store is a development store on the Basic test plan, so checkout, thank-you page, post-purchase and POS upsells were not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The listing line against a store without Plus; no checkout offer was built.",
+     "status": "not_testable",
+     "buying_consequence": "The checkout upsell is not confirmed, and the listing says it needs Plus.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Development store. You have full access to every feature, free.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing page of our development store says this, adds that development, partner and Shopify staff stores are never charged, and no approval or payment screen came up during the whole session.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The Billing text against the absence of any approval or payment screen; the text was read once and the store was not moved to a paid plan.",
+     "status": "confirmed",
+     "buying_consequence": "On a development store nothing is billed, so the test says nothing about what a real store pays.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your price follows the upsell revenue UpsellPlus generates for you.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing page says the price follows the upsell revenue the app generates, in nine steps from $49 to $999 a month. No Shopify approval screen was reached, so no total, tax or renewal term was seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+     },
+     "plan": "Development store, full access at no charge; no plan or approval screen came up",
+     "comparability": "The Billing table against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price you would pay for a given revenue is only the table in the app; a Shopify approval total was not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested UpsellPlus on a Shopify development store: the install without a payment or approval screen, one Smart cross-sell play for the cart drawer with 10% off that gave a preview about 4 minutes and about 6 clicks after the install click (The Inventory Not Tracked Snowboard $949.95 to $854.95, Gift Card $10.00 to $9.00), the Billing page with nine revenue steps from Basic $49 to Unlimited $999 a month, and the uninstall, which asks for a reason. Nothing was saved or published and no order was placed, so no shopper data was seen. Name: the listing (apps.shopify.com/upsellpluscheckout) is titled UpsellPlus Checkout Upsell, developer UpsellPlus, Built for Shopify, rating 5.0 from 151 reviews, and matches the dossier; the app opens as UpsellPlus. The listing says Free plan available. Free trial available. and shows a plan box with Free (Build for free. Launch with a free trial, Choose from all 12 upsell types, Checkout Upsells (Plus only), Analytics), Basic $49 (up to $500), Pro $119 (up to $2,000) and Advanced $199 (up to $5,000), each with a 14-day free trial. Install: the Install button was clicked at about 23:19. The permission screen asked to View customer data, View staff and contributor data and View and edit store data. The Install button normally opens a grant tab; in our own tab the install form was sent into the same tab and submitted with a script. The first attempt ended in the message UpsellPlus was not added to your shop because the permission screen was closed too early; the second attempt worked. After the install the product opened at once with the setup line We analyzed your last 60 days of orders. There was no Shopify approval screen and no payment screen. Core action: See my recommended strategies, Offers, Create offer, filter Cart, Smart cross-sell, Use this play opened the offer editor with Where (Cart Drawer, Cart Page, Product Detail Page) and Incentive (None, 5% off, 10% off, Custom); we chose Cart Drawer and 10% off. The preview showed The Inventory Not Tracked Snowboard at $854.95 instead of $949.95 and Gift Card at $9.00 instead of $10.00, each with an Add to Cart button, under the note that real products from the store are shown and that actual products are selected automatically by AI at runtime. A box Place your app block was marked Incomplete: the cart drawer app block still has to be added in the theme. About 4 minutes passed between the install click (23:19) and the first preview (about 23:23), and it took about 6 clicks after the install. Nothing was saved (Discard), nothing was published, the theme was not changed and no order was placed. Plans and billing: this is a development store. Settings, Billing says Development store. You have full access to every feature, free. Development, partner and Shopify staff stores are never charged. It also says that a store on a paid Shopify plan starts on the free plan like any other shop and that pricing then follows the steps below. The page How pricing works says that the price follows the upsell revenue UpsellPlus generates, with nine steps: Basic up to $500 at $49 a month, Pro up to $2,000 at $119, Advanced up to $5,000 at $199, Scale 1 up to $10,000 at $299, Scale 2 up to $15,000 at $399, Scale 3 up to $20,000 at $499, Scale 4 up to $30,000 at $699, Scale 5 up to $40,000 at $799 and Unlimited at $999 a month. All prices are in USD and appear on the Shopify invoice. No Shopify approval screen was reached, nothing was approved. Differences with the dossier and the listing: the app shows the entry step as Basic Plan where the dossier says Launch; the app shows no Free plan among the nine steps although the listing says Free plan available (on a development store the free plan cannot be tested); the listing shows tiers up to $199 while the app shows six more steps up to $999 that are tied to upsell revenue. No price field is changed here. Cancelling: no paid plan exists on a development store, so no cancel route for a plan was seen. Settings, Apps, the menu behind the three dots for UpsellPlus offered Open app, View details and Uninstall (and a help link). The dialog Uninstall UpsellPlus? says that you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request is sent to the app developer within 48 hours to delete all personal customer information. It requires a Reason for uninstalling. Not tested: checkout, thank-you page, post-purchase and POS upsells (Plus or paid, the listing says checkout upsells are Plus only), the free plan on a real paid store, A/B tests, analytics with real data, the cart drawer app block, a real order and any shopper data, so we could not tell whether shoppers would take an offer. Clean up: our own tab was used; the offer was not saved and the theme was not changed. UpsellPlus was uninstalled on 17 Nov through Settings, Apps with the reason Testing multiple apps and left the Installed list. Other apps were not touched and our own tab was closed. The price fields are not changed here. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The preview is only a preview: the cart drawer app block still had to be added in the theme, nothing was saved, and we saw no shopper data, so we could not tell whether shoppers would take the offer. The app calls the entry plan Basic where the dossier says Launch, shows no Free plan, and its price follows upsell revenue in nine steps up to $999 a month, while the listing shows tiers only up to $199.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Checkout, thank-you page, post-purchase and POS upsells.",
+     "The free plan on a real paid store, A/B tests and analytics with real data.",
+     "The cart drawer app block, a real order and shopper data.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 23:19 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],

@@ -73,10 +73,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -84,7 +83,571 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/upsellplus-review/",
+  "method": [
+   "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser",
+   "Built one cross-sell play and previewed it, read the Billing page, and uninstalled the app",
+   "Nothing was saved or published and no order was placed"
+  ],
+  "claims": [
+   {
+    "claim": "Basic Plan",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Billing page names the entry step Basic Plan, Up to $500, $49/month; the dossier calls the entry plan Launch. The app shows no plan called Launch.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The dossier plan name against the Billing table; the name is a fact about the app, not a test result.",
+    "status": "out_of_date",
+    "buying_consequence": "The plan the dossier calls Launch is shown as Basic Plan in the app; the review should use the app name.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Free plan available. Free trial available.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The listing says this. The Billing page of the app names no Free plan among its nine steps, but says that a store on a paid Shopify plan starts on the free plan like any other shop. On a development store everything is free, so the Free plan and the trial could not be tested.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The listing wording against a Billing page of a development store; no real paid store was used.",
+    "status": "not_testable",
+    "buying_consequence": "Whether a real store can use the Free plan, and for what limits, is not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Basic $49 (up to $500)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Billing table shows Basic Plan, Up to $500, $49/month, equal to the listing.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The listing plan box against the Billing table; the amount was not seen on an approval screen.",
+    "status": "confirmed",
+    "buying_consequence": "The first paid step costs $49 a month for upsell revenue up to $500, as listed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Pro $119 (up to $2,000)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Billing table shows Pro Plan, Up to $2,000, $119/month, equal to the listing.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The Pro price on the listing against the Billing table; Pro was not selected.",
+    "status": "confirmed",
+    "buying_consequence": "The Pro step costs $119 a month for upsell revenue up to $2,000, as listed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Advanced $199 (up to $5,000)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Billing table shows Advanced Plan, Up to $5,000, $199/month, equal to the listing.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The Advanced price on the listing against the Billing table; Advanced was not selected.",
+    "status": "confirmed",
+    "buying_consequence": "The Advanced step costs $199 a month for upsell revenue up to $5,000, as listed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Scale 1 $299 (10,000)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Billing table has six more steps than the listing: Scale 1 $299 (up to $10,000), Scale 2 $399 (15,000), Scale 3 $499 (20,000), Scale 4 $699 (30,000), Scale 5 $799 (40,000) and Unlimited $999 a month.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The tiers of the listing against the full Billing table; the revenue steps were read but not triggered.",
+    "status": "contradicted",
+    "buying_consequence": "A store with growing upsell revenue can end up at $299 to $999 a month, which the listing, ending at $199, does not show.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Incentive: None / 5% off / 10% off / Custom",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "With Cart Drawer and 10% off chosen the preview showed The Inventory Not Tracked Snowboard at $854.95 instead of $949.95 and Gift Card at $9.00 instead of $10.00, which is 10% off after rounding down.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The shown prices against ten percent of the old prices; only the preview in the editor was seen and no cart or order.",
+    "status": "confirmed",
+    "buying_consequence": "The 10% incentive was applied correctly to both preview prices.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "actual products are selected automatically by AI at runtime.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The editor says that the preview shows real products from the store and that the actual products are selected by AI at runtime. We saw two products in the preview; the choice at runtime was not seen because nothing was saved or shown to a shopper.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The editor text against a live cart that does not exist; the app block was not added and no shopper data was seen.",
+    "status": "not_testable",
+    "buying_consequence": "Which products shoppers would really see, and whether they fit the cart, is not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Choose from all 12 upsell types",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The listing says this for the Free plan. Only one type, a Smart cross-sell for the cart drawer, was tried; the other types were not opened.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The listing list against the one offer type that was opened in the editor.",
+    "status": "not_testable",
+    "buying_consequence": "How many upsell types work, and on which plan, is not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Checkout Upsells (Plus only)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The listing says checkout upsells are for Shopify Plus only. The store is a development store on the Basic test plan, so checkout, thank-you page, post-purchase and POS upsells were not tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The listing line against a store without Plus; no checkout offer was built.",
+    "status": "not_testable",
+    "buying_consequence": "The checkout upsell is not confirmed, and the listing says it needs Plus.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Development store. You have full access to every feature, free.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Billing page of our development store says this, adds that development, partner and Shopify staff stores are never charged, and no approval or payment screen came up during the whole session.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The Billing text against the absence of any approval or payment screen; the text was read once and the store was not moved to a paid plan.",
+    "status": "confirmed",
+    "buying_consequence": "On a development store nothing is billed, so the test says nothing about what a real store pays.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Your price follows the upsell revenue UpsellPlus generates for you.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Billing page says the price follows the upsell revenue the app generates, in nine steps from $49 to $999 a month. No Shopify approval screen was reached, so no total, tax or renewal term was seen.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+    },
+    "plan": "Development store, full access at no charge; no plan or approval screen came up",
+    "comparability": "The Billing table against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The price you would pay for a given revenue is only the table in the app; a Shopify approval total was not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested UpsellPlus on a Shopify development store: the install without a payment or approval screen, one Smart cross-sell play for the cart drawer with 10% off that gave a preview about 4 minutes and about 6 clicks after the install click (The Inventory Not Tracked Snowboard $949.95 to $854.95, Gift Card $10.00 to $9.00), the Billing page with nine revenue steps from Basic $49 to Unlimited $999 a month, and the uninstall, which asks for a reason. Nothing was saved or published and no order was placed, so no shopper data was seen. Name: the listing (apps.shopify.com/upsellpluscheckout) is titled UpsellPlus Checkout Upsell, developer UpsellPlus, Built for Shopify, rating 5.0 from 151 reviews, and matches the dossier; the app opens as UpsellPlus. The listing says Free plan available. Free trial available. and shows a plan box with Free (Build for free. Launch with a free trial, Choose from all 12 upsell types, Checkout Upsells (Plus only), Analytics), Basic $49 (up to $500), Pro $119 (up to $2,000) and Advanced $199 (up to $5,000), each with a 14-day free trial. Install: the Install button was clicked at about 23:19. The permission screen asked to View customer data, View staff and contributor data and View and edit store data. The Install button normally opens a grant tab; in our own tab the install form was sent into the same tab and submitted with a script. The first attempt ended in the message UpsellPlus was not added to your shop because the permission screen was closed too early; the second attempt worked. After the install the product opened at once with the setup line We analyzed your last 60 days of orders. There was no Shopify approval screen and no payment screen. Core action: See my recommended strategies, Offers, Create offer, filter Cart, Smart cross-sell, Use this play opened the offer editor with Where (Cart Drawer, Cart Page, Product Detail Page) and Incentive (None, 5% off, 10% off, Custom); we chose Cart Drawer and 10% off. The preview showed The Inventory Not Tracked Snowboard at $854.95 instead of $949.95 and Gift Card at $9.00 instead of $10.00, each with an Add to Cart button, under the note that real products from the store are shown and that actual products are selected automatically by AI at runtime. A box Place your app block was marked Incomplete: the cart drawer app block still has to be added in the theme. About 4 minutes passed between the install click (23:19) and the first preview (about 23:23), and it took about 6 clicks after the install. Nothing was saved (Discard), nothing was published, the theme was not changed and no order was placed. Plans and billing: this is a development store. Settings, Billing says Development store. You have full access to every feature, free. Development, partner and Shopify staff stores are never charged. It also says that a store on a paid Shopify plan starts on the free plan like any other shop and that pricing then follows the steps below. The page How pricing works says that the price follows the upsell revenue UpsellPlus generates, with nine steps: Basic up to $500 at $49 a month, Pro up to $2,000 at $119, Advanced up to $5,000 at $199, Scale 1 up to $10,000 at $299, Scale 2 up to $15,000 at $399, Scale 3 up to $20,000 at $499, Scale 4 up to $30,000 at $699, Scale 5 up to $40,000 at $799 and Unlimited at $999 a month. All prices are in USD and appear on the Shopify invoice. No Shopify approval screen was reached, nothing was approved. Differences with the dossier and the listing: the app shows the entry step as Basic Plan where the dossier says Launch; the app shows no Free plan among the nine steps although the listing says Free plan available (on a development store the free plan cannot be tested); the listing shows tiers up to $199 while the app shows six more steps up to $999 that are tied to upsell revenue. No price field is changed here. Cancelling: no paid plan exists on a development store, so no cancel route for a plan was seen. Settings, Apps, the menu behind the three dots for UpsellPlus offered Open app, View details and Uninstall (and a help link). The dialog Uninstall UpsellPlus? says that you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request is sent to the app developer within 48 hours to delete all personal customer information. It requires a Reason for uninstalling. Not tested: checkout, thank-you page, post-purchase and POS upsells (Plus or paid, the listing says checkout upsells are Plus only), the free plan on a real paid store, A/B tests, analytics with real data, the cart drawer app block, a real order and any shopper data, so we could not tell whether shoppers would take an offer. Clean up: our own tab was used; the offer was not saved and the theme was not changed. UpsellPlus was uninstalled on 17 Nov through Settings, Apps with the reason Testing multiple apps and left the Installed list. Other apps were not touched and our own tab was closed. The price fields are not changed here. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The preview is only a preview: the cart drawer app block still had to be added in the theme, nothing was saved, and we saw no shopper data, so we could not tell whether shoppers would take the offer. The app calls the entry plan Basic where the dossier says Launch, shows no Free plan, and its price follows upsell revenue in nine steps up to $999 a month, while the listing shows tiers only up to $199.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Checkout, thank-you page, post-purchase and POS upsells.",
+    "The free plan on a real paid store, A/B tests and analytics with real data.",
+    "The cart drawer app block, a real order and shopper data.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 23:19 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested UpsellPlus on a Shopify development store: the install without a payment or approval screen, one Smart cross-sell play for the cart drawer with 10% off that gave a preview about 4 minutes and about 6 clicks after the install click (The Inventory Not Tracked Snowboard $949.95 to $854.95, Gift Card $10.00 to $9.00), the Billing page with nine revenue steps from Basic $49 to Unlimited $999 a month, and the uninstall, which asks for a reason. Nothing was saved or published and no order was placed, so no shopper data was seen. Name: the listing (apps.shopify.com/upsellpluscheckout) is titled UpsellPlus Checkout Upsell, developer UpsellPlus, Built for Shopify, rating 5.0 from 151 reviews, and matches the dossier; the app opens as UpsellPlus. The listing says Free plan available. Free trial available. and shows a plan box with Free (Build for free. Launch with a free trial, Choose from all 12 upsell types, Checkout Upsells (Plus only), Analytics), Basic $49 (up to $500), Pro $119 (up to $2,000) and Advanced $199 (up to $5,000), each with a 14-day free trial. Install: the Install button was clicked at about 23:19. The permission screen asked to View customer data, View staff and contributor data and View and edit store data. The Install button normally opens a grant tab; in our own tab the install form was sent into the same tab and submitted with a script. The first attempt ended in the message UpsellPlus was not added to your shop because the permission screen was closed too early; the second attempt worked. After the install the product opened at once with the setup line We analyzed your last 60 days of orders. There was no Shopify approval screen and no payment screen. Core action: See my recommended strategies, Offers, Create offer, filter Cart, Smart cross-sell, Use this play opened the offer editor with Where (Cart Drawer, Cart Page, Product Detail Page) and Incentive (None, 5% off, 10% off, Custom); we chose Cart Drawer and 10% off. The preview showed The Inventory Not Tracked Snowboard at $854.95 instead of $949.95 and Gift Card at $9.00 instead of $10.00, each with an Add to Cart button, under the note that real products from the store are shown and that actual products are selected automatically by AI at runtime. A box Place your app block was marked Incomplete: the cart drawer app block still has to be added in the theme. About 4 minutes passed between the install click (23:19) and the first preview (about 23:23), and it took about 6 clicks after the install. Nothing was saved (Discard), nothing was published, the theme was not changed and no order was placed. Plans and billing: this is a development store. Settings, Billing says Development store. You have full access to every feature, free. Development, partner and Shopify staff stores are never charged. It also says that a store on a paid Shopify plan starts on the free plan like any other shop and that pricing then follows the steps below. The page How pricing works says that the price follows the upsell revenue UpsellPlus generates, with nine steps: Basic up to $500 at $49 a month, Pro up to $2,000 at $119, Advanced up to $5,000 at $199, Scale 1 up to $10,000 at $299, Scale 2 up to $15,000 at $399, Scale 3 up to $20,000 at $499, Scale 4 up to $30,000 at $699, Scale 5 up to $40,000 at $799 and Unlimited at $999 a month. All prices are in USD and appear on the Shopify invoice. No Shopify approval screen was reached, nothing was approved. Differences with the dossier and the listing: the app shows the entry step as Basic Plan where the dossier says Launch; the app shows no Free plan among the nine steps although the listing says Free plan available (on a development store the free plan cannot be tested); the listing shows tiers up to $199 while the app shows six more steps up to $999 that are tied to upsell revenue. No price field is changed here. Cancelling: no paid plan exists on a development store, so no cancel route for a plan was seen. Settings, Apps, the menu behind the three dots for UpsellPlus offered Open app, View details and Uninstall (and a help link). The dialog Uninstall UpsellPlus? says that you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request is sent to the app developer within 48 hours to delete all personal customer information. It requires a Reason for uninstalling. Not tested: checkout, thank-you page, post-purchase and POS upsells (Plus or paid, the listing says checkout upsells are Plus only), the free plan on a real paid store, A/B tests, analytics with real data, the cart drawer app block, a real order and any shopper data, so we could not tell whether shoppers would take an offer. Clean up: our own tab was used; the offer was not saved and the theme was not changed. UpsellPlus was uninstalled on 17 Nov through Settings, Apps with the reason Testing multiple apps and left the Installed list. Other apps were not touched and our own tab was closed. The price fields are not changed here. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested UpsellPlus on a Shopify development store: the install without a payment or approval screen, one Smart cross-sell play for the cart drawer with 10% off that gave a preview about 4 minutes and about 6 clicks after the install click (The Inventory Not Tracked Snowboard $949.95 to $854.95, Gift Card $10.00 to $9.00), the Billing page with nine revenue steps from Basic $49 to Unlimited $999 a month, and the uninstall, which asks for a reason. Nothing was saved or published and no order was placed, so no shopper data was seen. Name: the listing (apps.shopify.com/upsellpluscheckout) is titled UpsellPlus Checkout Upsell, developer UpsellPlus, Built for Shopify, rating 5.0 from 151 reviews, and matches the dossier; the app opens as UpsellPlus. The listing says Free plan available. Free trial available. and shows a plan box with Free (Build for free. Launch with a free trial, Choose from all 12 upsell types, Checkout Upsells (Plus only), Analytics), Basic $49 (up to $500), Pro $119 (up to $2,000) and Advanced $199 (up to $5,000), each with a 14-day free trial. Install: the Install button was clicked at about 23:19. The permission screen asked to View customer data, View staff and contributor data and View and edit store data. The Install button normally opens a grant tab; in our own tab the install form was sent into the same tab and submitted with a script. The first attempt ended in the message UpsellPlus was not added to your shop because the permission screen was closed too early; the second attempt worked. After the install the product opened at once with the setup line We analyzed your last 60 days of orders. There was no Shopify approval screen and no payment screen. Core action: See my recommended strategies, Offers, Create offer, filter Cart, Smart cross-sell, Use this play opened the offer editor with Where (Cart Drawer, Cart Page, Product Detail Page) and Incentive (None, 5% off, 10% off, Custom); we chose Cart Drawer and 10% off. The preview showed The Inventory Not Tracked Snowboard at $854.95 instead of $949.95 and Gift Card at $9.00 instead of $10.00, each with an Add to Cart button, under the note that real products from the store are shown and that actual products are selected automatically by AI at runtime. A box Place your app block was marked Incomplete: the cart drawer app block still has to be added in the theme. About 4 minutes passed between the install click (23:19) and the first preview (about 23:23), and it took about 6 clicks after the install. Nothing was saved (Discard), nothing was published, the theme was not changed and no order was placed. Plans and billing: this is a development store. Settings, Billing says Development store. You have full access to every feature, free. Development, partner and Shopify staff stores are never charged. It also says that a store on a paid Shopify plan starts on the free plan like any other shop and that pricing then follows the steps below. The page How pricing works says that the price follows the upsell revenue UpsellPlus generates, with nine steps: Basic up to $500 at $49 a month, Pro up to $2,000 at $119, Advanced up to $5,000 at $199, Scale 1 up to $10,000 at $299, Scale 2 up to $15,000 at $399, Scale 3 up to $20,000 at $499, Scale 4 up to $30,000 at $699, Scale 5 up to $40,000 at $799 and Unlimited at $999 a month. All prices are in USD and appear on the Shopify invoice. No Shopify approval screen was reached, nothing was approved. Differences with the dossier and the listing: the app shows the entry step as Basic Plan where the dossier says Launch; the app shows no Free plan among the nine steps although the listing says Free plan available (on a development store the free plan cannot be tested); the listing shows tiers up to $199 while the app shows six more steps up to $999 that are tied to upsell revenue. No price field is changed here. Cancelling: no paid plan exists on a development store, so no cancel route for a plan was seen. Settings, Apps, the menu behind the three dots for UpsellPlus offered Open app, View details and Uninstall (and a help link). The dialog Uninstall UpsellPlus? says that you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request is sent to the app developer within 48 hours to delete all personal customer information. It requires a Reason for uninstalling. Not tested: checkout, thank-you page, post-purchase and POS upsells (Plus or paid, the listing says checkout upsells are Plus only), the free plan on a real paid store, A/B tests, analytics with real data, the cart drawer app block, a real order and any shopper data, so we could not tell whether shoppers would take an offer. Clean up: our own tab was used; the offer was not saved and the theme was not changed. UpsellPlus was uninstalled on 17 Nov through Settings, Apps with the reason Testing multiple apps and left the Installed list. Other apps were not touched and our own tab was closed. The price fields are not changed here. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "UpsellPlus",
+    "product_id": "upsellplus",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested UpsellPlus on a Shopify development store: the install without a payment or approval screen, one Smart cross-sell play for the cart drawer with 10% off that gave a preview about 4 minutes and about 6 clicks after the install click (The Inventory Not Tracked Snowboard $949.95 to $854.95, Gift Card $10.00 to $9.00), the Billing page with nine revenue steps from Basic $49 to Unlimited $999 a month, and the uninstall, which asks for a reason. Nothing was saved or published and no order was placed, so no shopper data was seen. Name: the listing (apps.shopify.com/upsellpluscheckout) is titled UpsellPlus Checkout Upsell, developer UpsellPlus, Built for Shopify, rating 5.0 from 151 reviews, and matches the dossier; the app opens as UpsellPlus. The listing says Free plan available. Free trial available. and shows a plan box with Free (Build for free. Launch with a free trial, Choose from all 12 upsell types, Checkout Upsells (Plus only), Analytics), Basic $49 (up to $500), Pro $119 (up to $2,000) and Advanced $199 (up to $5,000), each with a 14-day free trial. Install: the Install button was clicked at about 23:19. The permission screen asked to View customer data, View staff and contributor data and View and edit store data. The Install button normally opens a grant tab; in our own tab the install form was sent into the same tab and submitted with a script. The first attempt ended in the message UpsellPlus was not added to your shop because the permission screen was closed too early; the second attempt worked. After the install the product opened at once with the setup line We analyzed your last 60 days of orders. There was no Shopify approval screen and no payment screen. Core action: See my recommended strategies, Offers, Create offer, filter Cart, Smart cross-sell, Use this play opened the offer editor with Where (Cart Drawer, Cart Page, Product Detail Page) and Incentive (None, 5% off, 10% off, Custom); we chose Cart Drawer and 10% off. The preview showed The Inventory Not Tracked Snowboard at $854.95 instead of $949.95 and Gift Card at $9.00 instead of $10.00, each with an Add to Cart button, under the note that real products from the store are shown and that actual products are selected automatically by AI at runtime. A box Place your app block was marked Incomplete: the cart drawer app block still has to be added in the theme. About 4 minutes passed between the install click (23:19) and the first preview (about 23:23), and it took about 6 clicks after the install. Nothing was saved (Discard), nothing was published, the theme was not changed and no order was placed. Plans and billing: this is a development store. Settings, Billing says Development store. You have full access to every feature, free. Development, partner and Shopify staff stores are never charged. It also says that a store on a paid Shopify plan starts on the free plan like any other shop and that pricing then follows the steps below. The page How pricing works says that the price follows the upsell revenue UpsellPlus generates, with nine steps: Basic up to $500 at $49 a month, Pro up to $2,000 at $119, Advanced up to $5,000 at $199, Scale 1 up to $10,000 at $299, Scale 2 up to $15,000 at $399, Scale 3 up to $20,000 at $499, Scale 4 up to $30,000 at $699, Scale 5 up to $40,000 at $799 and Unlimited at $999 a month. All prices are in USD and appear on the Shopify invoice. No Shopify approval screen was reached, nothing was approved. Differences with the dossier and the listing: the app shows the entry step as Basic Plan where the dossier says Launch; the app shows no Free plan among the nine steps although the listing says Free plan available (on a development store the free plan cannot be tested); the listing shows tiers up to $199 while the app shows six more steps up to $999 that are tied to upsell revenue. No price field is changed here. Cancelling: no paid plan exists on a development store, so no cancel route for a plan was seen. Settings, Apps, the menu behind the three dots for UpsellPlus offered Open app, View details and Uninstall (and a help link). The dialog Uninstall UpsellPlus? says that you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request is sent to the app developer within 48 hours to delete all personal customer information. It requires a Reason for uninstalling. Not tested: checkout, thank-you page, post-purchase and POS upsells (Plus or paid, the listing says checkout upsells are Plus only), the free plan on a real paid store, A/B tests, analytics with real data, the cart drawer app block, a real order and any shopper data, so we could not tell whether shoppers would take an offer. Clean up: our own tab was used; the offer was not saved and the theme was not changed. UpsellPlus was uninstalled on 17 Nov through Settings, Apps with the reason Testing multiple apps and left the Installed list. Other apps were not touched and our own tab was closed. The price fields are not changed here. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"Basic Plan\". What we saw: The Billing page names the entry step Basic Plan, Up to $500, $49/month; the dossier calls the entry plan Launch. The app shows no plan called Launch.",
+     "Text we checked: \"Basic $49 (up to $500)\". What we saw: The Billing table shows Basic Plan, Up to $500, $49/month, equal to the listing.",
+     "Text we checked: \"Pro $119 (up to $2,000)\". What we saw: The Billing table shows Pro Plan, Up to $2,000, $119/month, equal to the listing.",
+     "Text we checked: \"Advanced $199 (up to $5,000)\". What we saw: The Billing table shows Advanced Plan, Up to $5,000, $199/month, equal to the listing.",
+     "Text we checked: \"Scale 1 $299 (10,000)\". What we saw: The Billing table has six more steps than the listing: Scale 1 $299 (up to $10,000), Scale 2 $399 (15,000), Scale 3 $499 (20,000), Scale 4 $699 (30,000), Scale 5 $799 (40,000) and Unlimited $999 a month."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Checkout, thank-you page, post-purchase and POS upsells.",
+     "The free plan on a real paid store, A/B tests and analytics with real data.",
+     "The cart drawer app block, a real order and shopper data.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 23:19 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Basic Plan",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Billing page names the entry step Basic Plan, Up to $500, $49/month; the dossier calls the entry plan Launch. The app shows no plan called Launch.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The dossier plan name against the Billing table; the name is a fact about the app, not a test result.",
+      "status": "out_of_date",
+      "buying_consequence": "The plan the dossier calls Launch is shown as Basic Plan in the app; the review should use the app name.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Free plan available. Free trial available.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The listing says this. The Billing page of the app names no Free plan among its nine steps, but says that a store on a paid Shopify plan starts on the free plan like any other shop. On a development store everything is free, so the Free plan and the trial could not be tested.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The listing wording against a Billing page of a development store; no real paid store was used.",
+      "status": "not_testable",
+      "buying_consequence": "Whether a real store can use the Free plan, and for what limits, is not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Basic $49 (up to $500)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Billing table shows Basic Plan, Up to $500, $49/month, equal to the listing.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The listing plan box against the Billing table; the amount was not seen on an approval screen.",
+      "status": "confirmed",
+      "buying_consequence": "The first paid step costs $49 a month for upsell revenue up to $500, as listed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Pro $119 (up to $2,000)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Billing table shows Pro Plan, Up to $2,000, $119/month, equal to the listing.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The Pro price on the listing against the Billing table; Pro was not selected.",
+      "status": "confirmed",
+      "buying_consequence": "The Pro step costs $119 a month for upsell revenue up to $2,000, as listed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Advanced $199 (up to $5,000)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Billing table shows Advanced Plan, Up to $5,000, $199/month, equal to the listing.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The Advanced price on the listing against the Billing table; Advanced was not selected.",
+      "status": "confirmed",
+      "buying_consequence": "The Advanced step costs $199 a month for upsell revenue up to $5,000, as listed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Scale 1 $299 (10,000)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Billing table has six more steps than the listing: Scale 1 $299 (up to $10,000), Scale 2 $399 (15,000), Scale 3 $499 (20,000), Scale 4 $699 (30,000), Scale 5 $799 (40,000) and Unlimited $999 a month.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The tiers of the listing against the full Billing table; the revenue steps were read but not triggered.",
+      "status": "contradicted",
+      "buying_consequence": "A store with growing upsell revenue can end up at $299 to $999 a month, which the listing, ending at $199, does not show.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Incentive: None / 5% off / 10% off / Custom",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "With Cart Drawer and 10% off chosen the preview showed The Inventory Not Tracked Snowboard at $854.95 instead of $949.95 and Gift Card at $9.00 instead of $10.00, which is 10% off after rounding down.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The shown prices against ten percent of the old prices; only the preview in the editor was seen and no cart or order.",
+      "status": "confirmed",
+      "buying_consequence": "The 10% incentive was applied correctly to both preview prices.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "actual products are selected automatically by AI at runtime.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The editor says that the preview shows real products from the store and that the actual products are selected by AI at runtime. We saw two products in the preview; the choice at runtime was not seen because nothing was saved or shown to a shopper.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The editor text against a live cart that does not exist; the app block was not added and no shopper data was seen.",
+      "status": "not_testable",
+      "buying_consequence": "Which products shoppers would really see, and whether they fit the cart, is not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Choose from all 12 upsell types",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The listing says this for the Free plan. Only one type, a Smart cross-sell for the cart drawer, was tried; the other types were not opened.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The listing list against the one offer type that was opened in the editor.",
+      "status": "not_testable",
+      "buying_consequence": "How many upsell types work, and on which plan, is not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Checkout Upsells (Plus only)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The listing says checkout upsells are for Shopify Plus only. The store is a development store on the Basic test plan, so checkout, thank-you page, post-purchase and POS upsells were not tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The listing line against a store without Plus; no checkout offer was built.",
+      "status": "not_testable",
+      "buying_consequence": "The checkout upsell is not confirmed, and the listing says it needs Plus.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Development store. You have full access to every feature, free.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Billing page of our development store says this, adds that development, partner and Shopify staff stores are never charged, and no approval or payment screen came up during the whole session.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The Billing text against the absence of any approval or payment screen; the text was read once and the store was not moved to a paid plan.",
+      "status": "confirmed",
+      "buying_consequence": "On a development store nothing is billed, so the test says nothing about what a real store pays.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Your price follows the upsell revenue UpsellPlus generates for you.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Billing page says the price follows the upsell revenue the app generates, in nine steps from $49 to $999 a month. No Shopify approval screen was reached, so no total, tax or renewal term was seen.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/upsellplus-review/#claim-vs-measured"
+      },
+      "plan": "Development store, full access at no charge; no plan or approval screen came up",
+      "comparability": "The Billing table against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The price you would pay for a given revenue is only the table in the app; a Shopify approval total was not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested UpsellPlus on a Shopify development store: the install without a payment or approval screen, one Smart cross-sell play for the cart drawer with 10% off that gave a preview about 4 minutes and about 6 clicks after the install click (The Inventory Not Tracked Snowboard $949.95 to $854.95, Gift Card $10.00 to $9.00), the Billing page with nine revenue steps from Basic $49 to Unlimited $999 a month, and the uninstall, which asks for a reason. Nothing was saved or published and no order was placed, so no shopper data was seen. Name: the listing (apps.shopify.com/upsellpluscheckout) is titled UpsellPlus Checkout Upsell, developer UpsellPlus, Built for Shopify, rating 5.0 from 151 reviews, and matches the dossier; the app opens as UpsellPlus. The listing says Free plan available. Free trial available. and shows a plan box with Free (Build for free. Launch with a free trial, Choose from all 12 upsell types, Checkout Upsells (Plus only), Analytics), Basic $49 (up to $500), Pro $119 (up to $2,000) and Advanced $199 (up to $5,000), each with a 14-day free trial. Install: the Install button was clicked at about 23:19. The permission screen asked to View customer data, View staff and contributor data and View and edit store data. The Install button normally opens a grant tab; in our own tab the install form was sent into the same tab and submitted with a script. The first attempt ended in the message UpsellPlus was not added to your shop because the permission screen was closed too early; the second attempt worked. After the install the product opened at once with the setup line We analyzed your last 60 days of orders. There was no Shopify approval screen and no payment screen. Core action: See my recommended strategies, Offers, Create offer, filter Cart, Smart cross-sell, Use this play opened the offer editor with Where (Cart Drawer, Cart Page, Product Detail Page) and Incentive (None, 5% off, 10% off, Custom); we chose Cart Drawer and 10% off. The preview showed The Inventory Not Tracked Snowboard at $854.95 instead of $949.95 and Gift Card at $9.00 instead of $10.00, each with an Add to Cart button, under the note that real products from the store are shown and that actual products are selected automatically by AI at runtime. A box Place your app block was marked Incomplete: the cart drawer app block still has to be added in the theme. About 4 minutes passed between the install click (23:19) and the first preview (about 23:23), and it took about 6 clicks after the install. Nothing was saved (Discard), nothing was published, the theme was not changed and no order was placed. Plans and billing: this is a development store. Settings, Billing says Development store. You have full access to every feature, free. Development, partner and Shopify staff stores are never charged. It also says that a store on a paid Shopify plan starts on the free plan like any other shop and that pricing then follows the steps below. The page How pricing works says that the price follows the upsell revenue UpsellPlus generates, with nine steps: Basic up to $500 at $49 a month, Pro up to $2,000 at $119, Advanced up to $5,000 at $199, Scale 1 up to $10,000 at $299, Scale 2 up to $15,000 at $399, Scale 3 up to $20,000 at $499, Scale 4 up to $30,000 at $699, Scale 5 up to $40,000 at $799 and Unlimited at $999 a month. All prices are in USD and appear on the Shopify invoice. No Shopify approval screen was reached, nothing was approved. Differences with the dossier and the listing: the app shows the entry step as Basic Plan where the dossier says Launch; the app shows no Free plan among the nine steps although the listing says Free plan available (on a development store the free plan cannot be tested); the listing shows tiers up to $199 while the app shows six more steps up to $999 that are tied to upsell revenue. No price field is changed here. Cancelling: no paid plan exists on a development store, so no cancel route for a plan was seen. Settings, Apps, the menu behind the three dots for UpsellPlus offered Open app, View details and Uninstall (and a help link). The dialog Uninstall UpsellPlus? says that you will no longer be able to use the app, that data managed by the app, such as discounts, will be deleted, and that a request is sent to the app developer within 48 hours to delete all personal customer information. It requires a Reason for uninstalling. Not tested: checkout, thank-you page, post-purchase and POS upsells (Plus or paid, the listing says checkout upsells are Plus only), the free plan on a real paid store, A/B tests, analytics with real data, the cart drawer app block, a real order and any shopper data, so we could not tell whether shoppers would take an offer. Clean up: our own tab was used; the offer was not saved and the theme was not changed. UpsellPlus was uninstalled on 17 Nov through Settings, Apps with the reason Testing multiple apps and left the Installed list. Other apps were not touched and our own tab was closed. The price fields are not changed here. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The preview is only a preview: the cart drawer app block still had to be added in the theme, nothing was saved, and we saw no shopper data, so we could not tell whether shoppers would take the offer. The app calls the entry plan Basic where the dossier says Launch, shows no Free plan, and its price follows upsell revenue in nine steps up to $999 a month, while the listing shows tiers only up to $199.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "Checkout, thank-you page, post-purchase and POS upsells.",
+      "The free plan on a real paid store, A/B tests and analytics with real data.",
+      "The cart drawer app block, a real order and shopper data.",
+      "Export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 23:19 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "upsellplus:cancellation_terms",

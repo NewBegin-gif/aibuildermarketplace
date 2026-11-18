@@ -102,10 +102,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "quoted",
@@ -113,7 +112,469 @@
   "refund": "quoted"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/carouselbot-review.html",
+  "method": [
+   "Daan created the account and our AI assistant ran the test in Daan's browser",
+   "Made one 6-slide carousel from a topic, edited the headline and template, and exported a PDF",
+   "Read the pricing page and the account page without clicking any upgrade button"
+  ],
+  "claims": [
+   {
+    "claim": "98% Of Coffee Flavor Comes From Water Quality",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Slide 2 of the generated carousel gives a precise percentage that exists nowhere; coffee is mostly water, but this figure was made up by the AI.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+    "comparability": "The generated slide text against general knowledge of brewing; one carousel on one topic.",
+    "status": "contradicted",
+    "buying_consequence": "A poster who trusts the draft would publish a false statistic under their own name.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Test Co roasts in small batches",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Slide 4 states that the fictional brand roasts in small batches, a company claim that was not in the input, so the AI invented a fact about the business.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+    "comparability": "The generated slide text against the input of the form; one carousel.",
+    "status": "contradicted",
+    "buying_consequence": "A made-up fact about the business could end up on a public post.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "This usually takes 10-20 seconds",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The progress bar said Generating slide 5 of 6 and the result was there after about 20 seconds in 3 steps (topic, Continue, edit); the PDF took about 10 seconds and was 113 KB.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+    "comparability": "Clock times from one carousel in one session against the on-screen estimate; the dossier says about 2 minutes without a measured start.",
+    "status": "not_comparable",
+    "buying_consequence": "A first carousel is ready in well under a minute of waiting.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "PNG, JPG, PDF export (with watermark)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The pricing page says Free exports with a watermark, but only a small CarouselBot logo with an arrow was seen at the bottom of slide 1 of the PDF; no large watermark was seen, and only page 1 of the PDF was looked at.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+    "comparability": "The pricing page line against one page of one PDF; the paid plan was not used to compare.",
+    "status": "not_comparable",
+    "buying_consequence": "The branding on a Free export looks small, but the other pages were not checked.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "3 carousels per month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The library showed 1/3 carousels after one carousel, as the dossier says; the allowance of 3 card sets and 1 batch on Free is not in the dossier.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+    "comparability": "The dossier allowance against the usage counter and the Free plan card; the limit itself was not reached.",
+    "status": "confirmed",
+    "buying_consequence": "The Free plan fits three carousels a month, enough for a weekly poster only in part.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "3 card sets total",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Free plan also lists 3 card sets total, 1 batch collection total, 1 document total and 3 AI images, and the dashboard counts 0/3 card sets, 0/1 batches, 0/1 documents and 0/1 diagrams; the dossier names none of these.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+    "comparability": "The dossier Free limits against the pricing page and the dashboard of 18 November; none of these features was used.",
+    "status": "contradicted",
+    "buying_consequence": "The Free allowance in the dossier is incomplete: cards, batches and documents have their own small limits.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$79/yr",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The pricing page shows Creator at $79 a year and Pro at $249 a year, with the FAQ naming $10 and $30 a month, and Business from $50 a month; this matches the dossier.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+    "comparability": "The dossier prices against the pricing page in US dollars on the Annual view and the FAQ.",
+    "status": "confirmed",
+    "buying_consequence": "The plan prices in the dossier are right.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$6.58 / month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "On the Annual view the pricing page leads with $6.58 a month for Creator and $20.75 a month for Pro, which are the yearly prices divided by 12; the dossier does not mention these monthly amounts.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+    "comparability": "The Annual view amounts against the dossier amounts; no checkout was seen to confirm the billing.",
+    "status": "contradicted",
+    "buying_consequence": "The big number on the page is lower than the monthly price in the dossier, but it is billed once a year.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "7-day money-back guarantee on all paid plans",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The pricing page names the plan prices and a 7-day money-back guarantee, but no upgrade button was clicked, so no tax, total or payment screen was seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+    "comparability": "The pricing page amount against a checkout that was not reached; no stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The final amount with tax and the refund handling are not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested CarouselBot in the existing Free account of Daan: a carousel of 6 slides from a topic was ready in about 20 seconds and 3 steps, the headline and the template were changed with a click, and the PDF took about 10 seconds and was 113 KB. The common brewing tips are right, but the AI made up a figure (98% Of Coffee Flavor Comes From Water Quality) and a company claim (Test Co roasts in small batches). Free counted 1 of 3 carousels and only a small CarouselBot logo was seen on page 1 of the PDF, no large watermark. The prices match the dossier; the Annual view shows $6.58 and $20.75 a month and the dossier does not mention the 3 card sets and 1 batch on Free. There is no cancel button on the account page. The test carousel is still in the library, because the delete click was refused. No plan was bought. Account and start: the test used the existing Free account of Daan, already signed in, with the interface in English (no language setting was found). The test started at about 11:16 with the welcome pop-up Welcome to CarouselBot!, which was skipped. The product is the same as the dossier domain (the page title is CarouselBot, Create LinkedIn Carousels in 2 Minutes) and the footer names a person as the maker; that name is not recorded here. The dossier name is CarouselBot and the review is on MSS (carouselbot-review); the handson folder and the review slug are the same. Usage on Free at the start: 1/3 carousels, 0/3 card sets, 0/1 batches, 0/1 documents, 0/3 AI images (manual) and 0/1 diagrams. Core action: a carousel from a topic. The input was 5 tips for brewing better coffee at home, for the fictional coffee brand Test Co, with 6 slides, the Warm template and Title Case. The form also offers Include AI-generated diagrams (BETA, 1 free), Include data charts and Include impact slides; none was turned on. The progress bar said Generating slide 5 of 6 and This usually takes 10-20 seconds; the result was there after about 20 seconds and 3 steps (topic, Continue, edit). AI text: slide 3 holds common tips (195 to 205 degrees Fahrenheit and 1 gram to 16 grams of water) that are right. Two things are made up: slide 2 says 98% Of Coffee Flavor Comes From Water Quality, a figure that exists nowhere (coffee is mostly water, but not this percentage), and slide 4 says Test Co roasts in small batches, a company claim nobody gave. Slides 5 and 6 are general and marketing like. The style reads smoothly with no language mistakes. Editing: through Edit Page 1 of 6 the headline was changed to Test Co: Better Home Coffee in 5 Steps (tabs Content, Icon and Image, Regenerate Copy, bold text and accent words); the template was switched from Warm to Ocean with one click; the ratios are 4:5, 1:1 and 9:16; a logo upload and a handle are available. Export: Download offers PDF Single file, PNG ZIP of images and JPG ZIP of images. The PDF said Rendering PDF... for about 10 seconds and was 113 KB, followed by Your carousel is downloaded! and Saved to your library!. The design is readable, with a large headline and enough contrast on Ocean. At the bottom of every slide is the small CarouselBot logo with an arrow; the pricing page says Free exports with a watermark, but only this small logo was seen and no large watermark. Only page 1 of the PDF was looked at. No name of the maker is on the slides. Plans, read on the pricing page (US dollars, nothing clicked): Free $0 forever (3 carousels per month, 3 card sets total, 1 batch collection total, 1 document total, 3 AI images, All templates, PNG, JPG and PDF export with watermark); Creator $6.58 a month on the Annual view ($120, $79 a year, Save 34%; the FAQ says $10 a month; Unlimited carousels, 3 card sets and 3 batches a month, 10 documents a month, Unlimited AI images and diagrams, No watermark, Custom branding with logo and handle); Pro $20.75 a month on the Annual view ($360, $249 a year, Save 31%; the FAQ says $30 a month; unlimited card sets, batches and documents, up to 10,000 words per document, priority help); Business $50 a month as a starting price (bulk creation of up to 50 URLs, advanced template customization, auto-apply branding and a Claude integration (MCP), Book a demo). A newsletter offer gives $50 off Annual plans, and there is a 7-day money-back guarantee on all paid plans. Deviations from the dossier: the prices match (Free with 3 carousels and a watermark, Creator $10 a month or $79 a year, Pro $30 or $249, Business from $50). New: the Annual view shows $6.58 and $20.75 a month, and the dossier does not mention the 3 card sets and the 1 batch on Free. The dossier says there is no scheduling or publishing: confirmed, no planner was seen. The price fields of our pages are not touched. Checkout: NOT reached. No upgrade button was clicked, so no tax, total, card or payment screen was seen. Cancelling: on the account page only the email address, the plan, the usage and Upgrade are shown, with no button to cancel or delete the account (there is no paid subscription); the FAQ says Cancel anytime from your account page. Not tested: the paid plans, AI diagrams, data charts, AI images, cards, batch, documents, URL input, a second carousel, PNG and JPG export, and scheduling or publishing (connecting an account was not allowed). Clean up: the test carousel (now titled Test Co: Better Home Coffee in 5 Steps) is STILL in the library, because the delete click was refused by the permission layer; someone has to remove it with the bin icon on the dashboard. The tab was closed.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The AI wrote a made-up figure (98% Of Coffee Flavor Comes From Water Quality) and a made-up company claim (Test Co roasts in small batches), so every slide has to be checked before posting. The pricing page says Free exports with a watermark, but only a small logo was seen. The account page has no button to cancel or delete the account, and the test carousel could not be removed from the library in this test.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "The paid plans, AI diagrams, data charts, AI images, cards, batch and documents.",
+    "URL input, a second carousel, and the PNG and JPG export.",
+    "Scheduling and publishing, because connecting an account was not allowed.",
+    "Checkout, a paid plan and cancelling.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 11:16 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/carouselbot-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/carouselbot-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/carouselbot-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested CarouselBot in the existing Free account of Daan: a carousel of 6 slides from a topic was ready in about 20 seconds and 3 steps, the headline and the template were changed with a click, and the PDF took about 10 seconds and was 113 KB. The common brewing tips are right, but the AI made up a figure (98% Of Coffee Flavor Comes From Water Quality) and a company claim (Test Co roasts in small batches). Free counted 1 of 3 carousels and only a small CarouselBot logo was seen on page 1 of the PDF, no large watermark. The prices match the dossier; the Annual view shows $6.58 and $20.75 a month and the dossier does not mention the 3 card sets and 1 batch on Free. There is no cancel button on the account page. The test carousel is still in the library, because the delete click was refused. No plan was bought. Account and start: the test used the existing Free account of Daan, already signed in, with the interface in English (no language setting was found). The test started at about 11:16 with the welcome pop-up Welcome to CarouselBot!, which was skipped. The product is the same as the dossier domain (the page title is CarouselBot, Create LinkedIn Carousels in 2 Minutes) and the footer names a person as the maker; that name is not recorded here. The dossier name is CarouselBot and the review is on MSS (carouselbot-review); the handson folder and the review slug are the same. Usage on Free at the start: 1/3 carousels, 0/3 card sets, 0/1 batches, 0/1 documents, 0/3 AI images (manual) and 0/1 diagrams. Core action: a carousel from a topic. The input was 5 tips for brewing better coffee at home, for the fictional coffee brand Test Co, with 6 slides, the Warm template and Title Case. The form also offers Include AI-generated diagrams (BETA, 1 free), Include data charts and Include impact slides; none was turned on. The progress bar said Generating slide 5 of 6 and This usually takes 10-20 seconds; the result was there after about 20 seconds and 3 steps (topic, Continue, edit). AI text: slide 3 holds common tips (195 to 205 degrees Fahrenheit and 1 gram to 16 grams of water) that are right. Two things are made up: slide 2 says 98% Of Coffee Flavor Comes From Water Quality, a figure that exists nowhere (coffee is mostly water, but not this percentage), and slide 4 says Test Co roasts in small batches, a company claim nobody gave. Slides 5 and 6 are general and marketing like. The style reads smoothly with no language mistakes. Editing: through Edit Page 1 of 6 the headline was changed to Test Co: Better Home Coffee in 5 Steps (tabs Content, Icon and Image, Regenerate Copy, bold text and accent words); the template was switched from Warm to Ocean with one click; the ratios are 4:5, 1:1 and 9:16; a logo upload and a handle are available. Export: Download offers PDF Single file, PNG ZIP of images and JPG ZIP of images. The PDF said Rendering PDF... for about 10 seconds and was 113 KB, followed by Your carousel is downloaded! and Saved to your library!. The design is readable, with a large headline and enough contrast on Ocean. At the bottom of every slide is the small CarouselBot logo with an arrow; the pricing page says Free exports with a watermark, but only this small logo was seen and no large watermark. Only page 1 of the PDF was looked at. No name of the maker is on the slides. Plans, read on the pricing page (US dollars, nothing clicked): Free $0 forever (3 carousels per month, 3 card sets total, 1 batch collection total, 1 document total, 3 AI images, All templates, PNG, JPG and PDF export with watermark); Creator $6.58 a month on the Annual view ($120, $79 a year, Save 34%; the FAQ says $10 a month; Unlimited carousels, 3 card sets and 3 batches a month, 10 documents a month, Unlimited AI images and diagrams, No watermark, Custom branding with logo and handle); Pro $20.75 a month on the Annual view ($360, $249 a year, Save 31%; the FAQ says $30 a month; unlimited card sets, batches and documents, up to 10,000 words per document, priority help); Business $50 a month as a starting price (bulk creation of up to 50 URLs, advanced template customization, auto-apply branding and a Claude integration (MCP), Book a demo). A newsletter offer gives $50 off Annual plans, and there is a 7-day money-back guarantee on all paid plans. Deviations from the dossier: the prices match (Free with 3 carousels and a watermark, Creator $10 a month or $79 a year, Pro $30 or $249, Business from $50). New: the Annual view shows $6.58 and $20.75 a month, and the dossier does not mention the 3 card sets and the 1 batch on Free. The dossier says there is no scheduling or publishing: confirmed, no planner was seen. The price fields of our pages are not touched. Checkout: NOT reached. No upgrade button was clicked, so no tax, total, card or payment screen was seen. Cancelling: on the account page only the email address, the plan, the usage and Upgrade are shown, with no button to cancel or delete the account (there is no paid subscription); the FAQ says Cancel anytime from your account page. Not tested: the paid plans, AI diagrams, data charts, AI images, cards, batch, documents, URL input, a second carousel, PNG and JPG export, and scheduling or publishing (connecting an account was not allowed). Clean up: the test carousel (now titled Test Co: Better Home Coffee in 5 Steps) is STILL in the library, because the delete click was refused by the permission layer; someone has to remove it with the bin icon on the dashboard. The tab was closed. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/carouselbot-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested CarouselBot in the existing Free account of Daan: a carousel of 6 slides from a topic was ready in about 20 seconds and 3 steps, the headline and the template were changed with a click, and the PDF took about 10 seconds and was 113 KB. The common brewing tips are right, but the AI made up a figure (98% Of Coffee Flavor Comes From Water Quality) and a company claim (Test Co roasts in small batches). Free counted 1 of 3 carousels and only a small CarouselBot logo was seen on page 1 of the PDF, no large watermark. The prices match the dossier; the Annual view shows $6.58 and $20.75 a month and the dossier does not mention the 3 card sets and 1 batch on Free. There is no cancel button on the account page. The test carousel is still in the library, because the delete click was refused. No plan was bought. Account and start: the test used the existing Free account of Daan, already signed in, with the interface in English (no language setting was found). The test started at about 11:16 with the welcome pop-up Welcome to CarouselBot!, which was skipped. The product is the same as the dossier domain (the page title is CarouselBot, Create LinkedIn Carousels in 2 Minutes) and the footer names a person as the maker; that name is not recorded here. The dossier name is CarouselBot and the review is on MSS (carouselbot-review); the handson folder and the review slug are the same. Usage on Free at the start: 1/3 carousels, 0/3 card sets, 0/1 batches, 0/1 documents, 0/3 AI images (manual) and 0/1 diagrams. Core action: a carousel from a topic. The input was 5 tips for brewing better coffee at home, for the fictional coffee brand Test Co, with 6 slides, the Warm template and Title Case. The form also offers Include AI-generated diagrams (BETA, 1 free), Include data charts and Include impact slides; none was turned on. The progress bar said Generating slide 5 of 6 and This usually takes 10-20 seconds; the result was there after about 20 seconds and 3 steps (topic, Continue, edit). AI text: slide 3 holds common tips (195 to 205 degrees Fahrenheit and 1 gram to 16 grams of water) that are right. Two things are made up: slide 2 says 98% Of Coffee Flavor Comes From Water Quality, a figure that exists nowhere (coffee is mostly water, but not this percentage), and slide 4 says Test Co roasts in small batches, a company claim nobody gave. Slides 5 and 6 are general and marketing like. The style reads smoothly with no language mistakes. Editing: through Edit Page 1 of 6 the headline was changed to Test Co: Better Home Coffee in 5 Steps (tabs Content, Icon and Image, Regenerate Copy, bold text and accent words); the template was switched from Warm to Ocean with one click; the ratios are 4:5, 1:1 and 9:16; a logo upload and a handle are available. Export: Download offers PDF Single file, PNG ZIP of images and JPG ZIP of images. The PDF said Rendering PDF... for about 10 seconds and was 113 KB, followed by Your carousel is downloaded! and Saved to your library!. The design is readable, with a large headline and enough contrast on Ocean. At the bottom of every slide is the small CarouselBot logo with an arrow; the pricing page says Free exports with a watermark, but only this small logo was seen and no large watermark. Only page 1 of the PDF was looked at. No name of the maker is on the slides. Plans, read on the pricing page (US dollars, nothing clicked): Free $0 forever (3 carousels per month, 3 card sets total, 1 batch collection total, 1 document total, 3 AI images, All templates, PNG, JPG and PDF export with watermark); Creator $6.58 a month on the Annual view ($120, $79 a year, Save 34%; the FAQ says $10 a month; Unlimited carousels, 3 card sets and 3 batches a month, 10 documents a month, Unlimited AI images and diagrams, No watermark, Custom branding with logo and handle); Pro $20.75 a month on the Annual view ($360, $249 a year, Save 31%; the FAQ says $30 a month; unlimited card sets, batches and documents, up to 10,000 words per document, priority help); Business $50 a month as a starting price (bulk creation of up to 50 URLs, advanced template customization, auto-apply branding and a Claude integration (MCP), Book a demo). A newsletter offer gives $50 off Annual plans, and there is a 7-day money-back guarantee on all paid plans. Deviations from the dossier: the prices match (Free with 3 carousels and a watermark, Creator $10 a month or $79 a year, Pro $30 or $249, Business from $50). New: the Annual view shows $6.58 and $20.75 a month, and the dossier does not mention the 3 card sets and the 1 batch on Free. The dossier says there is no scheduling or publishing: confirmed, no planner was seen. The price fields of our pages are not touched. Checkout: NOT reached. No upgrade button was clicked, so no tax, total, card or payment screen was seen. Cancelling: on the account page only the email address, the plan, the usage and Upgrade are shown, with no button to cancel or delete the account (there is no paid subscription); the FAQ says Cancel anytime from your account page. Not tested: the paid plans, AI diagrams, data charts, AI images, cards, batch, documents, URL input, a second carousel, PNG and JPG export, and scheduling or publishing (connecting an account was not allowed). Clean up: the test carousel (now titled Test Co: Better Home Coffee in 5 Steps) is STILL in the library, because the delete click was refused by the permission layer; someone has to remove it with the bin icon on the dashboard. The tab was closed. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/carouselbot-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/carouselbot-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "CarouselBot",
+    "product_id": "carouselbot",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested CarouselBot in the existing Free account of Daan: a carousel of 6 slides from a topic was ready in about 20 seconds and 3 steps, the headline and the template were changed with a click, and the PDF took about 10 seconds and was 113 KB. The common brewing tips are right, but the AI made up a figure (98% Of Coffee Flavor Comes From Water Quality) and a company claim (Test Co roasts in small batches). Free counted 1 of 3 carousels and only a small CarouselBot logo was seen on page 1 of the PDF, no large watermark. The prices match the dossier; the Annual view shows $6.58 and $20.75 a month and the dossier does not mention the 3 card sets and 1 batch on Free. There is no cancel button on the account page. The test carousel is still in the library, because the delete click was refused. No plan was bought. Account and start: the test used the existing Free account of Daan, already signed in, with the interface in English (no language setting was found). The test started at about 11:16 with the welcome pop-up Welcome to CarouselBot!, which was skipped. The product is the same as the dossier domain (the page title is CarouselBot, Create LinkedIn Carousels in 2 Minutes) and the footer names a person as the maker; that name is not recorded here. Usage on Free at the start: 1/3 carousels, 0/3 card sets, 0/1 batches, 0/1 documents, 0/3 AI images (manual) and 0/1 diagrams. Core action: a carousel from a topic. The input was 5 tips for brewing better coffee at home, for the fictional coffee brand Test Co, with 6 slides, the Warm template and Title Case. The form also offers Include AI-generated diagrams (BETA, 1 free), Include data charts and Include impact slides; none was turned on. The progress bar said Generating slide 5 of 6 and This usually takes 10-20 seconds; the result was there after about 20 seconds and 3 steps (topic, Continue, edit). AI text: slide 3 holds common tips (195 to 205 degrees Fahrenheit and 1 gram to 16 grams of water) that are right. Two things are made up: slide 2 says 98% Of Coffee Flavor Comes From Water Quality, a figure that exists nowhere (coffee is mostly water, but not this percentage), and slide 4 says Test Co roasts in small batches, a company claim nobody gave. Slides 5 and 6 are general and marketing like. The style reads smoothly with no language mistakes. Editing: through Edit Page 1 of 6 the headline was changed to Test Co: Better Home Coffee in 5 Steps (tabs Content, Icon and Image, Regenerate Copy, bold text and accent words); the template was switched from Warm to Ocean with one click; the ratios are 4:5, 1:1 and 9:16; a logo upload and a handle are available. Export: Download offers PDF Single file, PNG ZIP of images and JPG ZIP of images. The PDF said Rendering PDF... for about 10 seconds and was 113 KB, followed by Your carousel is downloaded! and Saved to your library!. The design is readable, with a large headline and enough contrast on Ocean. At the bottom of every slide is the small CarouselBot logo with an arrow; the pricing page says Free exports with a watermark, but only this small logo was seen and no large watermark. Only page 1 of the PDF was looked at. No name of the maker is on the slides. Plans, read on the pricing page (US dollars, nothing clicked): Free $0 forever (3 carousels per month, 3 card sets total, 1 batch collection total, 1 document total, 3 AI images, All templates, PNG, JPG and PDF export with watermark); Creator $6.58 a month on the Annual view ($120, $79 a year, Save 34%; the FAQ says $10 a month; Unlimited carousels, 3 card sets and 3 batches a month, 10 documents a month, Unlimited AI images and diagrams, No watermark, Custom branding with logo and handle); Pro $20.75 a month on the Annual view ($360, $249 a year, Save 31%; the FAQ says $30 a month; unlimited card sets, batches and documents, up to 10,000 words per document, priority help); Business $50 a month as a starting price (bulk creation of up to 50 URLs, advanced template customization, auto-apply branding and a Claude integration (MCP), Book a demo). A newsletter offer gives $50 off Annual plans, and there is a 7-day money-back guarantee on all paid plans. Against the dossier: the prices match and no scheduling or publishing was seen. Free also lists 3 card sets and 1 batch, and the Annual view shows $6.58 and $20.75 a month. Checkout: NOT reached. No upgrade button was clicked, so no tax, total, card or payment screen was seen. Cancelling: on the account page only the email address, the plan, the usage and Upgrade are shown, with no button to cancel or delete the account (there is no paid subscription); the FAQ says Cancel anytime from your account page. Not tested: the paid plans, AI diagrams, data charts, AI images, cards, batch, documents, URL input, a second carousel, PNG and JPG export, and scheduling or publishing (connecting an account was not allowed).",
+    "findings": [
+     "Text we checked: \"98% Of Coffee Flavor Comes From Water Quality\". What we saw: Slide 2 of the generated carousel gives a precise percentage that exists nowhere; coffee is mostly water, but this figure was made up by the AI.",
+     "Text we checked: \"Test Co roasts in small batches\". What we saw: Slide 4 states that the fictional brand roasts in small batches, a company claim that was not in the input, so the AI invented a fact about the business.",
+     "Text we checked: \"3 carousels per month\". What we saw: The library showed 1/3 carousels after one carousel, as the dossier says; the allowance of 3 card sets and 1 batch on Free is not in the dossier.",
+     "Text we checked: \"3 card sets total\". What we saw: The Free plan also lists 3 card sets total, 1 batch collection total, 1 document total and 3 AI images, and the dashboard counts 0/3 card sets, 0/1 batches, 0/1 documents and 0/1 diagrams; the dossier names none of these.",
+     "Text we checked: \"$79/yr\". What we saw: The pricing page shows Creator at $79 a year and Pro at $249 a year, with the FAQ naming $10 and $30 a month, and Business from $50 a month; this matches the dossier."
+    ],
+    "not_tested": [
+     "The paid plans, AI diagrams, data charts, AI images, cards, batch and documents.",
+     "URL input, a second carousel, and the PNG and JPG export.",
+     "Scheduling and publishing, because connecting an account was not allowed.",
+     "Checkout, a paid plan and cancelling.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 11:16 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "98% Of Coffee Flavor Comes From Water Quality",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Slide 2 of the generated carousel gives a precise percentage that exists nowhere; coffee is mostly water, but this figure was made up by the AI.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+      "comparability": "The generated slide text against general knowledge of brewing; one carousel on one topic.",
+      "status": "contradicted",
+      "buying_consequence": "A poster who trusts the draft would publish a false statistic under their own name.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Test Co roasts in small batches",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Slide 4 states that the fictional brand roasts in small batches, a company claim that was not in the input, so the AI invented a fact about the business.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+      "comparability": "The generated slide text against the input of the form; one carousel.",
+      "status": "contradicted",
+      "buying_consequence": "A made-up fact about the business could end up on a public post.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "This usually takes 10-20 seconds",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The progress bar said Generating slide 5 of 6 and the result was there after about 20 seconds in 3 steps (topic, Continue, edit); the PDF took about 10 seconds and was 113 KB.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+      "comparability": "Clock times from one carousel in one session against the on-screen estimate; the dossier says about 2 minutes without a measured start.",
+      "status": "not_comparable",
+      "buying_consequence": "A first carousel is ready in well under a minute of waiting.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "PNG, JPG, PDF export (with watermark)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The pricing page says Free exports with a watermark, but only a small CarouselBot logo with an arrow was seen at the bottom of slide 1 of the PDF; no large watermark was seen, and only page 1 of the PDF was looked at.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+      "comparability": "The pricing page line against one page of one PDF; the paid plan was not used to compare.",
+      "status": "not_comparable",
+      "buying_consequence": "The branding on a Free export looks small, but the other pages were not checked.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "3 carousels per month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The library showed 1/3 carousels after one carousel, as the dossier says; the allowance of 3 card sets and 1 batch on Free is not in the dossier.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+      "comparability": "The dossier allowance against the usage counter and the Free plan card; the limit itself was not reached.",
+      "status": "confirmed",
+      "buying_consequence": "The Free plan fits three carousels a month, enough for a weekly poster only in part.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "3 card sets total",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Free plan also lists 3 card sets total, 1 batch collection total, 1 document total and 3 AI images, and the dashboard counts 0/3 card sets, 0/1 batches, 0/1 documents and 0/1 diagrams; the dossier names none of these.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+      "comparability": "The dossier Free limits against the pricing page and the dashboard of 18 November; none of these features was used.",
+      "status": "contradicted",
+      "buying_consequence": "The Free allowance in the dossier is incomplete: cards, batches and documents have their own small limits.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$79/yr",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The pricing page shows Creator at $79 a year and Pro at $249 a year, with the FAQ naming $10 and $30 a month, and Business from $50 a month; this matches the dossier.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+      "comparability": "The dossier prices against the pricing page in US dollars on the Annual view and the FAQ.",
+      "status": "confirmed",
+      "buying_consequence": "The plan prices in the dossier are right.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$6.58 / month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "On the Annual view the pricing page leads with $6.58 a month for Creator and $20.75 a month for Pro, which are the yearly prices divided by 12; the dossier does not mention these monthly amounts.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+      "comparability": "The Annual view amounts against the dossier amounts; no checkout was seen to confirm the billing.",
+      "status": "contradicted",
+      "buying_consequence": "The big number on the page is lower than the monthly price in the dossier, but it is billed once a year.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "7-day money-back guarantee on all paid plans",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The pricing page names the plan prices and a 7-day money-back guarantee, but no upgrade button was clicked, so no tax, total or payment screen was seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/carouselbot-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the pricing page was read without clicking an upgrade button",
+      "comparability": "The pricing page amount against a checkout that was not reached; no stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The final amount with tax and the refund handling are not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested CarouselBot in the existing Free account of Daan: a carousel of 6 slides from a topic was ready in about 20 seconds and 3 steps, the headline and the template were changed with a click, and the PDF took about 10 seconds and was 113 KB. The common brewing tips are right, but the AI made up a figure (98% Of Coffee Flavor Comes From Water Quality) and a company claim (Test Co roasts in small batches). Free counted 1 of 3 carousels and only a small CarouselBot logo was seen on page 1 of the PDF, no large watermark. The prices match the dossier; the Annual view shows $6.58 and $20.75 a month and the dossier does not mention the 3 card sets and 1 batch on Free. There is no cancel button on the account page. The test carousel is still in the library, because the delete click was refused. No plan was bought. Account and start: the test used the existing Free account of Daan, already signed in, with the interface in English (no language setting was found). The test started at about 11:16 with the welcome pop-up Welcome to CarouselBot!, which was skipped. The product is the same as the dossier domain (the page title is CarouselBot, Create LinkedIn Carousels in 2 Minutes) and the footer names a person as the maker; that name is not recorded here. The dossier name is CarouselBot and the review is on MSS (carouselbot-review); the handson folder and the review slug are the same. Usage on Free at the start: 1/3 carousels, 0/3 card sets, 0/1 batches, 0/1 documents, 0/3 AI images (manual) and 0/1 diagrams. Core action: a carousel from a topic. The input was 5 tips for brewing better coffee at home, for the fictional coffee brand Test Co, with 6 slides, the Warm template and Title Case. The form also offers Include AI-generated diagrams (BETA, 1 free), Include data charts and Include impact slides; none was turned on. The progress bar said Generating slide 5 of 6 and This usually takes 10-20 seconds; the result was there after about 20 seconds and 3 steps (topic, Continue, edit). AI text: slide 3 holds common tips (195 to 205 degrees Fahrenheit and 1 gram to 16 grams of water) that are right. Two things are made up: slide 2 says 98% Of Coffee Flavor Comes From Water Quality, a figure that exists nowhere (coffee is mostly water, but not this percentage), and slide 4 says Test Co roasts in small batches, a company claim nobody gave. Slides 5 and 6 are general and marketing like. The style reads smoothly with no language mistakes. Editing: through Edit Page 1 of 6 the headline was changed to Test Co: Better Home Coffee in 5 Steps (tabs Content, Icon and Image, Regenerate Copy, bold text and accent words); the template was switched from Warm to Ocean with one click; the ratios are 4:5, 1:1 and 9:16; a logo upload and a handle are available. Export: Download offers PDF Single file, PNG ZIP of images and JPG ZIP of images. The PDF said Rendering PDF... for about 10 seconds and was 113 KB, followed by Your carousel is downloaded! and Saved to your library!. The design is readable, with a large headline and enough contrast on Ocean. At the bottom of every slide is the small CarouselBot logo with an arrow; the pricing page says Free exports with a watermark, but only this small logo was seen and no large watermark. Only page 1 of the PDF was looked at. No name of the maker is on the slides. Plans, read on the pricing page (US dollars, nothing clicked): Free $0 forever (3 carousels per month, 3 card sets total, 1 batch collection total, 1 document total, 3 AI images, All templates, PNG, JPG and PDF export with watermark); Creator $6.58 a month on the Annual view ($120, $79 a year, Save 34%; the FAQ says $10 a month; Unlimited carousels, 3 card sets and 3 batches a month, 10 documents a month, Unlimited AI images and diagrams, No watermark, Custom branding with logo and handle); Pro $20.75 a month on the Annual view ($360, $249 a year, Save 31%; the FAQ says $30 a month; unlimited card sets, batches and documents, up to 10,000 words per document, priority help); Business $50 a month as a starting price (bulk creation of up to 50 URLs, advanced template customization, auto-apply branding and a Claude integration (MCP), Book a demo). A newsletter offer gives $50 off Annual plans, and there is a 7-day money-back guarantee on all paid plans. Deviations from the dossier: the prices match (Free with 3 carousels and a watermark, Creator $10 a month or $79 a year, Pro $30 or $249, Business from $50). New: the Annual view shows $6.58 and $20.75 a month, and the dossier does not mention the 3 card sets and the 1 batch on Free. The dossier says there is no scheduling or publishing: confirmed, no planner was seen. The price fields of our pages are not touched. Checkout: NOT reached. No upgrade button was clicked, so no tax, total, card or payment screen was seen. Cancelling: on the account page only the email address, the plan, the usage and Upgrade are shown, with no button to cancel or delete the account (there is no paid subscription); the FAQ says Cancel anytime from your account page. Not tested: the paid plans, AI diagrams, data charts, AI images, cards, batch, documents, URL input, a second carousel, PNG and JPG export, and scheduling or publishing (connecting an account was not allowed). Clean up: the test carousel (now titled Test Co: Better Home Coffee in 5 Steps) is STILL in the library, because the delete click was refused by the permission layer; someone has to remove it with the bin icon on the dashboard. The tab was closed.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The AI wrote a made-up figure (98% Of Coffee Flavor Comes From Water Quality) and a made-up company claim (Test Co roasts in small batches), so every slide has to be checked before posting. The pricing page says Free exports with a watermark, but only a small logo was seen. The account page has no button to cancel or delete the account, and the test carousel could not be removed from the library in this test.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "The paid plans, AI diagrams, data charts, AI images, cards, batch and documents.",
+      "URL input, a second carousel, and the PNG and JPG export.",
+      "Scheduling and publishing, because connecting an account was not allowed.",
+      "Checkout, a paid plan and cancelling.",
+      "Export and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 11:16 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "carouselbot:cancellation_terms",

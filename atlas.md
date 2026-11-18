@@ -2303,7 +2303,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/lusha-review.html
 
 ## MailVeri (mailveri.com)
-- **Verified pricing:** (read 2026-11-13 on mailveri.com/pricing, US dollars) MailVeri sells pay-as-you-go credit packs with no subscription, and the page says credits never expire.
+- **Verified pricing:** (read 2026-11-18 on mailveri.com and its pricing page and in our own test that day; earlier: read 2026-11-13 on mailveri.com/pricing, US dollars) MailVeri sells pay-as-you-go credit packs w…
 - **Honest take:** Bulk email verification with credits that never expire; from $9 for 10,000.
 - **Best for:** marketers and developers who verify email lists in bursts and want to buy credits once instead of paying a monthly subscription
 - **Flags:** Usage-metered
@@ -3301,9 +3301,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/salesmessage-review.html
 
 ## SalesTarget.ai (salestarget.ai)
-- **Verified pricing:** (re-read 2026-10-28 on salestarget.ai/pricing, tab by tab, monthly billing; the vendor told us on 28 October that its plans had changed.
+- **Verified pricing:** (read 2026-11-18 on salestarget.ai/pricing and in our own test that day; earlier: re-read 2026-10-28 on salestarget.ai/pricing, tab by tab, monthly billing; the vendor told us on 28 October…
 - **Honest take:** The credit numbers on the plan cards shrink once you read the price list.
-- **Best for:** small sales teams and agencies that want a B2B lead database, cold email with unlimited inboxes and warm-up, LinkedIn automation and a basic CRM under one login, priced per organisation with a few seats included (1 on Growth
+- **Best for:** small sales teams and agencies that want a B2B lead database, cold email with no stated cap on connected inboxes and warmup for 5 of them on Growth (extra slots $2 each a month)
 - **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/salestarget-ai-review.html
 
@@ -4098,7 +4098,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/track123-review.html
 
 ## Trackr (parceltrackr.com)
-- **Verified pricing:** (price re-read 2026-10-13) Four tiers and no free plan, billed in USD every 30 days through Shopify: Basic $10 a month or $96 a year for 400 shipments a month, Standard $45 or $432 for 2,00…
+- **Verified pricing:** (read 2026-11-18 on apps.shopify.com/trackr and parceltrackr.com/pricing and in our own test that day; earlier: price re-read 2026-10-13) Four tiers and no free plan, billed in USD every 30…
 - **Honest take:** The reviews are split rather than soft, 45 five-star and seven one-star of 56 on 12 September 2026, and the complaints name downtime on the page customers open when they are already worried about a parcel.
 - **Best for:** Shopify stores shipping a few hundred to a few thousand parcels a month that want where-is-my-order traffic off the support desk: one branded tracking page across every carrier, estimated delivery dates, and proactive email
 - **Flags:** Usage-metered, Annual commit

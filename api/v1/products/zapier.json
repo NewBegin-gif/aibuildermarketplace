@@ -87,16 +87,399 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "max_units": 1,
+     "price_month": 19.99,
+     "billing": "unspecified",
+     "evidence": "Professional starts from $19.99 a month and Team from $69 a month, with 1 seat on Professional and 25 on Team"
+    },
+    {
+     "id": "team",
+     "name": "Team",
+     "model": "flat",
+     "max_units": 25,
+     "price_month": 69,
+     "billing": "unspecified",
+     "evidence": "Professional starts from $19.99 a month and Team from $69 a month, with 1 seat on Professional and 25 on Team"
+    }
+   ],
+   "notes": [
+    "Both paid prices are 'from' prices: the floor at the lowest task volume. Zapier prices by tasks a month, and a task is any successful action.",
+    "The page has a Pay yearly toggle that saves 33% but does not say which billing period the starting prices assume, so the term is not confirmed.",
+    "A Free plan at $0 with 100 tasks a month exists, but its seat count is not in our notes, so it is left out of the calculation."
+   ],
+   "not_computable": [
+    "Higher task volumes on Professional and Team (price rises with tasks a month)"
+   ],
+   "rules_verified_at": "2026-11-18"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "zapier",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 19.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 19.99,
+       "team": 69.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "professional",
+      "to_plan": "team",
+      "from_plan_name": "Professional",
+      "to_plan_name": "Team"
+     },
+     {
+      "from_units": 25,
+      "to_units": 50,
+      "from_plan": "team",
+      "to_plan": null,
+      "from_plan_name": "Team",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Higher task volumes on Professional and Team (price rises with tasks a month)"
+    ]
+   },
+   "monthly": {
+    "product_id": "zapier",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 19.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 19.99,
+       "team": 69.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 69.0,
+      "billed": {
+       "amount": 69.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": 69.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "not_eligible",
+       "team": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "professional",
+      "to_plan": "team",
+      "from_plan_name": "Professional",
+      "to_plan_name": "Team"
+     },
+     {
+      "from_units": 25,
+      "to_units": 50,
+      "from_plan": "team",
+      "to_plan": null,
+      "from_plan_name": "Team",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Higher task volumes on Professional and Team (price rises with tasks a month)"
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -126,9 +509,9 @@
    "status": "open"
   },
   {
-   "question_id": "zapier:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "zapier:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Higher task volumes on Professional and Team (price rises with tasks a month). Can you publish the price or the rule?",
    "status": "open"
   }
  ],

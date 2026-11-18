@@ -2393,9 +2393,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/mk-website-assistant-review.html
 
 ## Mktg.ai (mktg.ai)
-- **Verified pricing:** No public pricing (re-verified 25 September 2026): mktg.ai/pricing still returns 404 and the navigation carries no pricing item, so every route ends at 'Book a Demo'.
-- **Honest take:** No published price: the pricing page returns a 404, and the FAQ names the tiers but no figure.
-- **Best for:** marketing teams with real media spend across channels who want an always-on AI analyst: unified creative visibility
+- **Verified pricing:** No readable public price (re-verified 18 November 2026).
+- **Honest take:** No readable price: the pricing page loads in the browser only, and the FAQ names the tiers but no figure.
+- **Best for:** marketing teams with real media spend across channels who want an always-on AI analyst: every ad and post tied to its own spend and results
 - **Flags:** Hidden pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/mktg-ai-review/
 
@@ -3960,7 +3960,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/teachable-review.html
 
 ## Team Pulse (goteampulse.io)
-- **Verified pricing:** (re-verified 2026-09-22 and 2026-10-13 in the site's own plan-config array; goteampulse.io/pricing itself returns 404, the plans sit on the home page) Genuinely free tier: $0/mo for 1 membe…
+- **Verified pricing:** (re-verified 2026-09-22, 2026-10-13 and 2026-11-18 in the site's own plan-config array; goteampulse.io/pricing itself returns 404, the plans sit on the home page) Genuinely free tier: $0/mo…
 - **Honest take:** The tiers gate on TWO axes at once (member count and project/pipeline count) so you can hit a wall on either.
 - **Best for:** solo operators and small teams who want projects, tasks, chat AND a lightweight CRM pipeline with AI in one simple tool, and value the real free tier to start
 - **Flags:** Usage-metered, Free tier

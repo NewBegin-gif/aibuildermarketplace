@@ -5126,6 +5126,583 @@
   },
   {
    "source": "session",
+   "product_name": "Zapier",
+   "product_id": "zapier",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Zapier under the automatic 14 day Professional trial, which needs no card: a form feeding a table through a Zap went live a little over 5 minutes after the start, ran 5 times without a failure and used 0 tasks, but the table records stayed empty because the whole submission was mapped to one column, and the Copilot only titled the form without adding its fields. Because everything ran under the trial, what Free allows after it was not tested. The plan page shows euros: Professional €18,62 a month billed annually or €27,93 billed monthly; the public page in US dollars gives $19.99 and $29.99, so the $19.99 in our dossier is the yearly price. The checkout was opened and nothing was paid.",
+   "findings": [
+    "Text we checked: \"14 TRIAL DAYS LEFT\". What we saw: After the onboarding the home page said 14 TRIAL DAYS LEFT, Plan tasks 0 / 1.000 and Zapier Pro trial ends Dec 2, with no card asked. The plan page still calls the account Current plan: Free.",
+    "Text we checked: \"Done! Your form is now titled Test Handoff with three required fields\". What we saw: The Copilot said the form was titled with three required fields but only set the title. The fields name, email and type were added by hand, about 12 clicks with a few failed tries, because the label was only kept after Insert field.",
+    "Text we checked: \"Form submitted!\". What we saw: Five test submissions through the public form page each showed Form submitted! and Zap history showed 5 runs, all Successful, between 14:12:29 and 14:12:49. Each run found 1 new Form Submission and sent 1 new Record to Zapier Tables.",
+    "Text we checked: \"Plan tasks 0 / 1.000\". What we saw: Zap history showed a dash for the tasks of each run and Plan tasks stayed 0 / 1.000 after 5 runs, also on Billing & usage; the tab Task usage said No results found. So Forms plus Tables used 0 tasks a run in this test.",
+    "Text we checked: \"Please add a payment method to edit your trial settings\". What we saw: The trial started without a card, but the line Please add a payment method to edit your trial settings. appeared when the trial settings were opened."
+   ],
+   "not_tested": [
+    "Zaps of more than two steps, Webhooks by Zapier, premium apps and AI steps with their task price.",
+    "What Free allows after the trial (100 tasks, two-step Zaps), because everything ran under the Professional trial.",
+    "A connection with an outside app.",
+    "Whether separate form fields can fill separate table columns.",
+    "Paying, the tax on the checkout and cancelling or downgrading a paid plan.",
+    "Deleting the account or the data, which were looked up but not clicked.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "14 TRIAL DAYS LEFT",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "After the onboarding the home page said 14 TRIAL DAYS LEFT, Plan tasks 0 / 1.000 and Zapier Pro trial ends Dec 2, with no card asked. The plan page still calls the account Current plan: Free.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The trial banner on the home page against the dossier line about a trial without a card and the Free plan on the plan page.",
+     "status": "confirmed",
+     "buying_consequence": "A new account gets a Professional trial of 14 days without a card, and for those days the page and the plan do not match, so you cannot tell what Free allows.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Solo founders automating one simple handoff",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "One handoff, a form submission into a table, was built and ran 5 times. It all ran under the automatic Professional trial, so it does not show that a solo founder can do this on Free after the trial.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The dossier audience against a test that ran under the trial; Free after the trial was not tried.",
+     "status": "not_testable",
+     "buying_consequence": "The test shows the handoff is possible on the trial, not on the Free plan that comes afterwards.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Done! Your form is now titled Test Handoff with three required fields",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Copilot said the form was titled with three required fields but only set the title. The fields name, email and type were added by hand, about 12 clicks with a few failed tries, because the label was only kept after Insert field.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The Copilot message against the form that was actually made; no dossier figure exists for this step.",
+     "status": "contradicted",
+     "buying_consequence": "Do not count on the Copilot to build the form fields; plan to add them yourself.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Text Field",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Create Table inside the Zap step made a table with a generic name and one column Text Field, so the columns name, email and type were not made. The record in the run details had empty f1 and f2, so the 5 records were empty because the whole Form Submission Values block was mapped to one column.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The run details of the Tables step against the form fields that were sent; separate columns were not built, so no comparison is possible.",
+     "status": "not_comparable",
+     "buying_consequence": "The handoff ran but no data reached the table; map the fields one by one and add the columns yourself, which was not tried here.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Success! Your Zap is live!",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Zap went live at 14:12:16 and the first run was at 14:12:29, a little over 5 minutes after the start at 14:07, including the onboarding, the form and the Zap.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The time stamps of the live message and the first run against our own start; the dossier gives no set-up time.",
+     "status": "not_comparable",
+     "buying_consequence": "A first working handoff takes a few minutes when you know the steps; the time includes the onboarding and our own set-up.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Form submitted!",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Five test submissions through the public form page each showed Form submitted! and Zap history showed 5 runs, all Successful, between 14:12:29 and 14:12:49. Each run found 1 new Form Submission and sent 1 new Record to Zapier Tables.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The count of submissions against the count of runs in Zap history; the empty records are a separate finding.",
+     "status": "confirmed",
+     "buying_consequence": "The form and the Zap ran every time without a failure, with a delay of a few seconds between runs.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Plan tasks 0 / 1.000",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Zap history showed a dash for the tasks of each run and Plan tasks stayed 0 / 1.000 after 5 runs, also on Billing & usage; the tab Task usage said No results found. So Forms plus Tables used 0 tasks a run in this test.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The task counter and the run list against 5 runs of a two-step Zap; the help text on task counting was not checked and an outside app was not used.",
+     "status": "confirmed",
+     "buying_consequence": "Runs between the built-in apps did not use up tasks in this test, so the 100 tasks of Free were not touched; this is our reading of the counter.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "100 tasks /mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The plan page lists Free at €0 with 100 tasks /mo and Two-step Zaps. The test ran under the Professional trial, so the Free limits were never met or seen working.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The plan line on the page against a test that ran under the trial.",
+     "status": "not_testable",
+     "buying_consequence": "What happens on Free after the trial, for instance at the limit of 100 tasks, is not confirmed by this test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Webhooks",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The plan page lists Webhooks under Professional, Free features plus. Webhooks by Zapier (Catch Hook) was not built, because Forms was enough to start the Zap.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The feature list on the plan page against a Zap that did not use a webhook.",
+     "status": "not_testable",
+     "buying_consequence": "A handoff from an outside app that needs a webhook would need a paid plan according to the plan page; this was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Please add a payment method to edit your trial settings.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The trial started without a card, but the line Please add a payment method to edit your trial settings. appeared when the trial settings were opened.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The message in the app against the trial start without a card.",
+     "status": "confirmed",
+     "buying_consequence": "The trial itself needs no card, but changing its settings does.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€18,62 /mo Billed Annually",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The plan page in euros shows Professional at €18,62 a month billed annually (€27,93 struck through) and €27,93 billed monthly at 750 tasks, and Team at €64,26 billed annually and €96,40 billed monthly. The dossier lists US-dollar starting prices, so the amounts are in a different currency; the public page in US dollars was read again and is in the README.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The euro prices in the app against the dossier prices in US dollars; no conversion was made, and the live US-dollar page is compared in the README.",
+     "status": "not_comparable",
+     "buying_consequence": "The monthly price is a third higher than the yearly one, so check which billing period a starting price assumes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€0,0931 per additional task",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The checkout says that with pay-per-task billing enabled and the included tasks exceeded you are charged €0,0931 per additional task on monthly billing and €0,0311 on annual billing, plus applicable taxes. It can be switched off, and then the Zaps pause. It was not changed or switched.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The text on the checkout against the plan limits; no task was ever charged because the test stayed at 0 tasks.",
+     "status": "confirmed",
+     "buying_consequence": "Going above your tasks can cost money per task unless you switch pay-per-task billing off, in which case the Zaps pause.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Delete my account",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Settings, Security and data has Delete my account and Delete my data; the data option says it keeps the account. Neither was clicked. There is no paid plan to cancel.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The Security and data page against a test that did not delete or pay anything.",
+     "status": "not_testable",
+     "buying_consequence": "The way out of the account is a separate step in Settings; cancelling a paid plan was not seen because nothing was bought.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total due today €27,93",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The checkout for Professional with 750 tasks showed Total due today €27,93 monthly and €223,41 annually, equal to the plan sums on the plan page, with no separate tax amount; no card was entered and nothing was paid.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zapier-review.html#claim-vs-measured"
+     },
+     "plan": "Automatic Professional trial without a card; the checkout was viewed up to the payment screen, nothing was paid",
+     "comparability": "The plan page price against the checkout total before the address step; no tax line, fee or stored cost rule could be compared.",
+     "status": "confirmed",
+     "buying_consequence": "The checkout total equals the plan page, but tax may be added once your address and tax number are known.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Zapier under the automatic 14 day Professional trial, which needs no card: a form feeding a table through a Zap went live a little over 5 minutes after the start, ran 5 times without a failure and used 0 tasks, but the table records stayed empty because the whole submission was mapped to one column, and the Copilot only titled the form without adding its fields. Because everything ran under the trial, what Free allows after it was not tested. The plan page shows euros: Professional €18,62 a month billed annually or €27,93 billed monthly; the public page in US dollars gives $19.99 and $29.99, so the $19.99 in our dossier is the yearly price. The checkout was opened and nothing was paid. Account and start: the account was created by Daan, who was signed in; our AI assistant ran the test in its own tab of the Chrome of Daan, starting at 14:07. The interface was already on English. The profile page said that the current account address needed to be confirmed; the account worked anyway. Onboarding: the role Business Owner (the list had no Founder or Owner), the team size 1-49 (the smallest option; Just me does not exist) and Skip question for the apps. Right after that the home page said 14 TRIAL DAYS LEFT, Plan tasks 0 / 1.000 and Zapier Pro trial ends Dec 2: an automatic Professional trial of 14 days started without a card, while the plan page still calls the account Current plan: Free. Everything that was built therefore ran under the trial and does not prove what Free allows. The dossier name is Zapier and the review is on OSM (zapier-review). The pain that was tested: telling one app when something happens in another, without paying for it. No external app was connected, only the built-in apps Forms and Tables. Core action: a form was built with Home, Form, Blank form. The Copilot said Done! Your form is now titled Test Handoff with three required fields but only set the title; the fields name, email and type had to be added by hand (Add field, a label, Insert field), about 12 clicks and a few failed tries, because the label was only kept after Insert field. The Zap: Automate form, Build your own automation opened a new browser tab with the Zap editor: step 1 Zapier Forms, Form Submission Created, step 2 Zapier Tables, Create Record. Create Table inside the step made a table with a generic name and one column Text Field, so the columns name, email and type do not exist; Form Submission Values was mapped to Text Field. The trigger test found a sample Form Submission A; the test of the Tables step was skipped. Publish said Success! Your Zap is live! (version v1). Time: the Zap went live at 14:12:16 and the first run was at 14:12:29, a little over 5 minutes after the start at 14:07, including the onboarding, the form and the Zap. Five test submissions were sent through the public form page (made up names Test Lead 1 to 5, made up addresses on example.com, type trial), each answered Form submitted!. Zap history showed 5 runs, all Successful, between 14:12:29 and 14:12:49. The run details said Found 1 new Form Submission in Zapier Forms and Sent 1 new Record to Zapier Tables, but the record in the data out had only empty f1 and f2: the column Text Field stayed empty because the whole Form Submission Values block was mapped to one column. So the handoff ran and the data did not arrive in the table. Whether separate fields work with extra columns was not tried. Tasks: Zap history showed a dash for the tasks of each run, Plan tasks stayed 0 / 1.000 after 5 runs, also on Billing & usage, and the tab Task usage said No results found. That is 0 tasks a run for Forms plus Tables; the built-in apps do not seem to count as a task, which is our reading of the counter and was not checked in the help text. Nothing in this Zap needed a paid plan. The plan page lists Multi-step Zaps, Unlimited Premium apps, Webhooks, AI fields and Conditional form logic under Professional. Webhooks by Zapier (Catch Hook) was not tested because Forms worked. The form page showed Free next to the Forms name with View plans and Upgrade, but Forms worked under the trial without a prompt. A second tab of the Zap editor gave a warning about overriding current edits (UpdateBlocked). Plans: The plans were read by the tester on 18 Nov 2026 on the plan page in the app (euros, because the app detected the Netherlands) and the public page zapier.com/pricing was read again just before this delivery the same day with the currency set to USD. In euros: Free €0 with 100 tasks /mo; Professional €18,62 /mo billed annually (€27,93 struck through) or €27,93 /mo billed monthly at 750 tasks /mo; Team €64,26 billed annually or €96,40 billed monthly at 2,000 tasks /mo and 25 users; Enterprise on request; Save 33% for annual billing. In US dollars on the public page: Professional $19.99 a month with yearly billing and $29.99 with monthly billing, Team $69 with yearly billing and $103.50 with monthly billing. So the $19.99 in the dossier is the yearly price; the page does not say which billing period the starting price assumes unless the switch is used. Free lists unlimited Zaps, Tables and Forms, two-step Zaps and Copilot with a daily limit; Professional adds multi-step Zaps, unlimited premium apps, webhooks, AI fields and conditional form logic. Checkout: on the plan page Checkout was opened for Professional with 750 tasks. Monthly: Total due today €27,93 and Next monthly charge on december 18, 2026 €27,93 /mo. Annual: Total due today €223,41 and Next annual charge on november 18, 2027; Save 33% and Save €111,76 per year with annual billing. Pay-per-task billing: if it is enabled and the included tasks are exceeded, the checkout says €0,0931 per additional task plus applicable taxes on monthly billing and €0,0311 on annual billing; it can be switched off, and then the Zaps are paused. The checkout showed no separate tax amount: Total due today equalled the plan sum, and plus applicable taxes is only named at the pay-per-task line; the tax probably appears after an address and tax number are added, which was not done. The payment screen offered Card (number, date, CVC, Full name, Country or region Netherlands, Address) and Paypal. Nothing was filled in and nothing was paid. The line Please add a payment method to edit your trial settings. shows that the trial settings need a payment method, although the trial itself started without one. Cancelling: a paid plan can be left through Settings, Billing & usage, Compare plans or Upgrade; this was not tested because there was no paid plan. The trial ends by itself on 2 Dec 2026 without a card. Deleting the account is Settings, Security and data, Delete my account (and Delete my data, which keeps the account); neither was clicked. Not tested: a Zap of more than two steps, Webhooks by Zapier, premium apps, AI steps and their task price, what Free allows after the trial (100 tasks, two-step Zaps), a connection with an outside app, the payment, the tax rule, and cancelling or downgrading a paid plan. Clean up: the Zap is switched OFF (version v1 stays published); the form Test Handoff stays reachable on its public page, the generated table with 5 empty records, the Zap with its 5 runs and the Professional trial until 2 Dec 2026 stay; no card, no payment, no outside apps. Two tabs that the Zapier editor opened by itself fell outside our tab group and could not be closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The plan page calls the account Free while the trial gives the paid features, so a first Zap proves little about the Free plan. The Copilot only titled the form and left the fields to you, and the table that the Zap creates has one generic column, so map the fields one by one. The starting prices depend on yearly billing: monthly billing costs a third more. Pay-per-task billing can charge for tasks above the included number unless you switch it off, and then the Zaps pause. Editing the trial settings needs a payment method.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Zaps of more than two steps, Webhooks by Zapier, premium apps and AI steps with their task price.",
+     "What Free allows after the trial (100 tasks, two-step Zaps), because everything ran under the Professional trial.",
+     "A connection with an outside app.",
+     "Whether separate form fields can fill separate table columns.",
+     "Paying, the tax on the checkout and cancelling or downgrading a paid plan.",
+     "Deleting the account or the data, which were looked up but not clicked.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 14:07 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "zastech",
+   "product_id": "zastech",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "No account was needed; the tool ran without signing in. On 18 November 2026 the session tested two zastech tools without an account. The free Invoice Maker made a two line invoice of $938.00 in about 2 minutes, with a live preview, local drafts and a small footer Created with zastech.dev that stays in print unless you pay $9. The PDF Redactor & Sanitizer showed the metadata of a made up test PDF and let us draw black boxes by hand (no automatic detection; the first try failed and one box was a few pixels off), with 3 free outputs counted on the server of zastech. The sanitized PDF was not downloaded, so the removal of the text was not verified. Nothing was bought.",
+   "findings": [
+    "Text we checked: \"No account required\". What we saw: Both the Invoice Maker and the PDF Redactor ran in the browser without signing in; no e-mail address, phone number, password or card was asked at any point of the test.",
+    "Text we checked: \"Professional documents with a small zastech footer\". What we saw: The free invoice shows Created with zastech.dev, free invoice maker at the bottom in small light grey text, and the print style sheet always shows this block in print. Removing it costs $9 once (Remove branding $9).",
+    "Text we checked: \"Subtotal $938.00\". What we saw: Two made up lines (2 x $349.00 and 2 x $120.00) gave $698.00 and $240.00 and the preview showed Subtotal $938.00 and Total $938.00, the right sum, about 2 minutes after the page was opened. The fields were filled by a script, so typing by hand takes a little longer.",
+    "Text we checked: \"Drag across the preview to create a black redaction. Click an existing black box to remove it\". What we saw: Redaction is manual with no detection of e-mail addresses or phone numbers. The first try failed because the page moved about 100 pixels during the drag; after Clear page redactions the second try made 2 boxes, but the box over the phone number started a few pixels too far right and the first letter of the word phone stuck out.",
+    "Text we checked: \"3 free results on every tool, then a lifetime license\". What we saw: The PDF Redactor showed Free outputs available and 3 free outputs left with no signup, and a paid license unlocks unlimited exports on up to 3 browser activations, as on the pricing page."
+   ],
+   "not_tested": [
+    "An account, which the tools do not need.",
+    "The print preview and a real PDF export of the Invoice Maker.",
+    "The download of the sanitized PDF and a check that the redacted text is really removed from the file.",
+    "White-label ($9), every paid license and the checkout of Lemon Squeezy.",
+    "The API packs, Etsy Payout Breakdown, Proposal Builder and Client Report Builder.",
+    "Export and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "No account required",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Both the Invoice Maker and the PDF Redactor ran in the browser without signing in; no e-mail address, phone number, password or card was asked at any point of the test.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The card on the tool page against a whole test run without a sign-up screen.",
+     "status": "confirmed",
+     "buying_consequence": "You can make an invoice and redact a PDF without giving zastech any personal details.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Professional documents with a small zastech footer.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The free invoice shows Created with zastech.dev, free invoice maker at the bottom in small light grey text, and the print style sheet always shows this block in print. Removing it costs $9 once (Remove branding $9).",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The footer promise on the pricing page against the live preview and the print style sheet; the printed PDF itself was not produced.",
+     "status": "confirmed",
+     "buying_consequence": "A free invoice goes out with a zastech line on it; a clean invoice costs $9 once.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Subtotal $938.00",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Two made up lines (2 x $349.00 and 2 x $120.00) gave $698.00 and $240.00 and the preview showed Subtotal $938.00 and Total $938.00, the right sum, about 2 minutes after the page was opened. The fields were filled by a script, so typing by hand takes a little longer.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "Our own sum of the two lines against the total in the live preview; tax and discount fields were not used.",
+     "status": "confirmed",
+     "buying_consequence": "A simple invoice with a correct total takes a couple of minutes without an account.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Unlimited PDF exports",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The print preview and the PDF export were not opened, because the print dialog of the browser could not be operated and nothing was to be saved on the laptop; no export was counted or limited during the test.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The pricing promise against an export that was never run.",
+     "status": "not_testable",
+     "buying_consequence": "Whether exports are really unlimited and how the PDF looks was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Drafts stay on this device",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "After saving, the page said Draft saved locally, Private, saved only on this device, and the draft was in the local storage of the test tab. The network traffic was not inspected, so it is not proven that nothing was sent.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The privacy card against the save message on screen; no network log was read.",
+     "status": "not_testable",
+     "buying_consequence": "The draft is kept in your browser, so a cleared browser or another device will not have it.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Drag across the preview to create a black redaction. Click an existing black box to remove it.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Redaction is manual with no detection of e-mail addresses or phone numbers. The first try failed because the page moved about 100 pixels during the drag; after Clear page redactions the second try made 2 boxes, but the box over the phone number started a few pixels too far right and the first letter of the word phone stuck out.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The instruction on the page against two tries on one made up test PDF; other files and longer documents were not tried.",
+     "status": "confirmed",
+     "buying_consequence": "You must find and cover every sensitive spot yourself and check each box closely, because nothing is found for you.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Flattened into page pixels",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "In the preview the boxes were half transparent and the text showed through; the site says the export is flattened into pixels. Download sanitized PDF was not clicked, so the output file was not seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The card on the tool page against a download that was not made; no text was extracted from an output file.",
+     "status": "not_testable",
+     "buying_consequence": "Whether the hidden text is really gone from the downloaded file is not confirmed by us.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Original metadata not copied",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The inspection panel showed Pages 2, Metadata fields 7, Attachments 0 and JavaScript actions 0 and listed the original metadata of the test file. Whether the metadata is left out of the output was not checked, because nothing was downloaded.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The metadata card against the inspection panel only; the output file was never opened.",
+     "status": "not_testable",
+     "buying_consequence": "You can see what metadata a file carries before you redact it; that it is removed in the output is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "PDF stays in this browser",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The small print in the Trial / License window says free outputs are counted on the server of zastech. The file was handled in the page, but the network traffic was not inspected, so it is not known what is sent with the count.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The privacy card against the counter text in the license window; no network log was read.",
+     "status": "not_testable",
+     "buying_consequence": "The redaction runs in the browser, but the free result counter talks to the server of zastech.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "3 free results on every tool, then a lifetime license",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The PDF Redactor showed Free outputs available and 3 free outputs left with no signup, and a paid license unlocks unlimited exports on up to 3 browser activations, as on the pricing page.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The pricing page terms against the counter in the license window; no free output was used.",
+     "status": "confirmed",
+     "buying_consequence": "You get three free redacted PDFs without an account before you have to pay once.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "PDF Redactor & Sanitizer $19",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pricing page lists PDF Redactor & Sanitizer at $19 once, and the tool shows Buy unlimited $19; this is within the dossier range of $15 to $29. White-label Invoice Maker is $9 on the pricing page and on the Remove branding button.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The pricing page against the buy buttons inside the tools; neither was clicked.",
+     "status": "confirmed",
+     "buying_consequence": "An unlimited PDF Redactor license costs $19 once and a clean Invoice Maker $9 once.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Freelancer Kit $39",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The pricing page lists the Freelancer Kit at $39 once with Invoice Maker, Proposal Builder, Contract Workspace and Client Report Builder (team of 10 $149, team of 25 $299). Two of these tools are free with a footer; the kit was not bought or opened.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The kit price against the single prices on the same page; the kit contents were not used.",
+     "status": "not_comparable",
+     "buying_consequence": "The kit pays off only if you want the footer gone on several tools and also need Contract Workspace.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Any sales tax or VAT is shown at checkout by Lemon Squeezy before you pay.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The checkout of Lemon Squeezy was not opened, so no total with tax, no fee and no payment screen was seen for any license.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/zastech-review.html#claim-vs-measured"
+     },
+     "plan": "No plan or license was bought; the pricing page and the buy buttons inside the tools were read without clicking",
+     "comparability": "The pricing page against a checkout that was never opened; no tax line, fee or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "No price you would pay at checkout was seen, so only the list prices on the pricing page are confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "No account was needed; the tool ran without signing in. On 18 November 2026 the session tested two zastech tools without an account. The free Invoice Maker made a two line invoice of $938.00 in about 2 minutes, with a live preview, local drafts and a small footer Created with zastech.dev that stays in print unless you pay $9. The PDF Redactor & Sanitizer showed the metadata of a made up test PDF and let us draw black boxes by hand (no automatic detection; the first try failed and one box was a few pixels off), with 3 free outputs counted on the server of zastech. The sanitized PDF was not downloaded, so the removal of the text was not verified. Nothing was bought. Account and start: NO account was made and none was used. The tools of zastech run in the browser without signing in; our AI assistant ran the test in our own tab of the browser of Daan, starting at 13:15. Nothing was installed and no e-mail address, phone number, password or card was typed in anywhere. The dossier name is zastech and the review is on OSM (zastech-review). Core action 1, Invoice Maker (zastech.dev/tools/invoice-maker): the page says you can create and save a professional invoice without an account, with unlimited free exports and no signup, and shows the cards No account required, A4 PDF unlimited free and Drafts stay on this device. It was filled with made up data: seller Example Snowboards Ltd, buyer Sample Store Inc., currency USD (the default) and two lines, Freestyle snowboard 2 x $349.00 = $698.00 and Snowboard bindings 2 x $120.00 = $240.00. The live preview showed Subtotal $938.00 and Total $938.00, which is the right sum. A usable invoice was on screen about 2 minutes after the page was opened, with one form and two lines; the fields were filled by a script and not typed, so typing by hand takes a little longer. The preview updates while you type, without a generate button. Footer: the free invoice carries the line Created with zastech.dev, free invoice maker, small and light grey at the bottom, and the print style sheet of the page always shows this block in print. The buttons are New, Save, History, Remove branding $9, License / Activate and Print / Save PDF. Saving is local (Draft saved locally, Private, saved only on this device). Document type (Invoice or Estimate / Quote) and Upload logo (PNG, JPG or WebP, at most 150 KB) are free. The print preview and the PDF export itself were NOT opened: the print dialog of Chrome cannot be operated by the browser tool and nothing was to be saved on the laptop of Daan. The print style sheet was read: it hides the header, the editor and the buttons and leaves only the invoice. Core action 2, PDF Redactor & Sanitizer (zastech.dev/tools/pdf-redactor-sanitizer): the cards say Flattened into page pixels, Original metadata not copied and PDF stays in this browser. A made up test invoice of 2 KB and 2 pages was uploaded with the file picker; it holds a made up buyer line with a contact e-mail address and a phone number. The inspection panel showed Pages 2, Metadata fields 7, Attachments 0 and JavaScript actions 0, plus the original metadata (title, author, creator, producer, creation date and more). Redaction is MANUAL: you drag across the preview to create a black box and click a box to remove it. There is no automatic detection of e-mail addresses or phone numbers. The first try failed (the page moved about 100 pixels during the drag and the boxes landed above the line); Clear page redactions said Page redactions cleared. The second try made 2 boxes and the counter said 2 redactions. The box over the phone number starts a few pixels too far right, so the first letter of the word phone sticks out. In the preview the boxes are half transparent and the text shows through; the site says the export is flattened into pixels. Download sanitized PDF was NOT clicked, because it would save a file on the laptop of Daan and use one free result. So whether the text is really gone from the output was not verified. Free results: the Trial / License window said Free outputs available and 3 free outputs left, no signup needed; the small print says 3 free sanitized exports need no signup, free outputs are counted on the server of zastech, and a paid license unlocks unlimited sanitized exports on up to 3 browser activations. So the counter lives on the server, next to the claim that the PDF stays in the browser; the network traffic was not inspected. Plans: The pricing page zastech.dev/pricing was read on 18 Nov 2026 by the tester and read again just before this delivery the same day, with the same prices: Free forever, $0 always, with a small zastech footer, for Invoice Maker, Proposal Builder and Client Report Builder; white-label, once, Invoice Maker $9, Proposal Builder $15 and Client Report Builder $19; the other browser tools give 3 free results and then cost $15 to $29 once (PDF Redactor & Sanitizer $19), no subscription or renewal, up to three browsers per license; API packs $15 or $19 prepaid; Freelancer Kit $39 once (Invoice Maker, Proposal Builder, Contract Workspace and Client Report Builder; team of 10 $149, team of 25 $299), Finance Ops Kit $79 once and Starter Kit $99. Prices are in USD and any sales tax or VAT is shown at checkout by Lemon Squeezy before you pay. The dossier matches the pricing page; the PDF Redactor at $19 falls within its range of $15 to $29. The checkout of Lemon Squeezy was NOT opened and nothing was filled in. Cancelling: there is no account and no subscription, so there was nothing to cancel. Not tested: the print preview and a real PDF export of the Invoice Maker; the download of the sanitized PDF and a check that the text is really removed from the file; white-label ($9) and every paid license and payment screen; the API packs (the developers group); Etsy Payout Breakdown, which needs real statements; Proposal Builder and Client Report Builder. Clean up: there is no account and no file was saved on the laptop (no download). The invoice draft sits only in the local browser storage of the test tab (Draft saved locally). All our own tabs were closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The free invoice carries a small zastech footer that the print style sheet always shows, so a clean invoice costs $9 once. Redaction is fully manual: there is no detection of e-mail addresses or phone numbers, the page moved during our first drag, and one box ended a few pixels short, which you only see if you look closely. The boxes look half transparent in the preview, and we could not check that the downloaded file is clean. The site says the PDF stays in the browser, while the free outputs are counted on its server.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "An account, which the tools do not need.",
+     "The print preview and a real PDF export of the Invoice Maker.",
+     "The download of the sanitized PDF and a check that the redacted text is really removed from the file.",
+     "White-label ($9), every paid license and the checkout of Lemon Squeezy.",
+     "The API packs, Etsy Payout Breakdown, Proposal Builder and Client Report Builder.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:15 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "BeSure Checkout Rules",
    "product_id": "besure-checkout-rules",
    "run_date": "2026-11-17",
@@ -8087,6 +8664,319 @@
      "Paying, and the cancellation of a subscription.",
      "Export and reimport.",
      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 16:06 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Petty Cash Manager",
+   "product_id": "petty-cash-manager",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Petty Cash Manager on its 14 day free trial in the browser: after about 6 steps the first expense with a receipt photo was saved, and 10 test expenses later 8 were approved and 1 rejected, and the november report showed 127.24 for 8 entries, split by category. The CSV export had a header and 10 lines. Everything stays on the device: no account, no cloud, and a banner asks you to download a backup. Cloud sync, which needs an e-mail code, was not tested. The page says Cloud sync costs +$3 a month on any plan, but that is true only for the Monthly plan: Yearly goes from $41.99 to $69.99, which is +$28 a year. Cancelling is only possible after paying. Nothing was paid.",
+   "findings": [
+    "Text we checked: \"Try free for 14 days first, no card\". What we saw: The app opened with Free trial: 14 days left and no card, account or e-mail address was asked; the setup form and sample data came straight after.",
+    "Text we checked: \"Balance 495.50\". What we saw: The first expense of 4.50 with a receipt photo was saved after about 6 steps and the balance showed 495.50 with 4.50 under Awaiting approval, from a float of 500.",
+    "Text we checked: \"APPROVED EXPENSES 127.24, 8 entries\". What we saw: Of 10 test expenses 8 were approved, 1 was rejected and 1 stayed waiting; the november report showed 127.24 for 8 entries, and the seven categories add up to 127.24. Cash added was 500.00.",
+    "Text we checked: \"Export to Excel (CSV)\". What we saw: The Entries export gave petty-cash-all.csv of 1259 bytes with 11 lines: a header and the 10 expenses, with columns for date, ref, custodian, category, net, tax, total and status. The file was not opened further.",
+    "Text we checked: \"Your data stays on this device\". What we saw: Settings, Backup & restore says the data stays on this device and that browser storage is not protected and may be cleared; a banner said no backup had been downloaded yet. No cloud account was used."
+   ],
+   "not_tested": [
+    "Cloud sync, which needs an e-mail sign-in code.",
+    "The staff link, reading the total from the receipt photo and the PDF report.",
+    "The Zoho Books, QuickBooks and Xero exports, the language switch and installing as an app.",
+    "Paying, and cancelling, which is only possible from the receipt e-mail after payment.",
+    "Tax on the checkout, which showed no amount before an address was entered.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Try free for 14 days first, no card",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The app opened with Free trial: 14 days left and no card, account or e-mail address was asked; the setup form and sample data came straight after.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The line on the plan page against the trial banner and a start without any sign-in.",
+     "status": "confirmed",
+     "buying_consequence": "You can try the app for 14 days without giving any payment or personal details.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Teams where several cashiers record spending",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The dossier group of teams with several cashiers depends on Cloud sync. The staff link per custodian was not used and Cloud sync was not switched on, so recording by several people was not tested.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The dossier group against a test with one local browser and one custodian.",
+     "status": "not_testable",
+     "buying_consequence": "Whether several cashiers can work in one shared set of entries is not confirmed by this test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The photo stays on your device.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The app shows this line when a receipt photo is added and says data stays on the device until Cloud sync is on. Network traffic was not inspected, so it is the claim of the app that was not checked.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The message in the app against a test without network inspection.",
+     "status": "not_testable",
+     "buying_consequence": "The vendor says the receipt photo stays on your device; this was not checked at the network level.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Balance 495.50",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The first expense of 4.50 with a receipt photo was saved after about 6 steps and the balance showed 495.50 with 4.50 under Awaiting approval, from a float of 500.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "Our own count of the steps and amounts for one expense; later expenses were added by a script on the form fields.",
+     "status": "confirmed",
+     "buying_consequence": "Recording one expense with a photo is quick, and the balance follows the float at once.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "No e-invoice QR code found on this photo.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The app looked for an e-invoice QR code on the made up receipt and found none, and offered Read the total from the photo, which was not used.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The message in the app against a photo without a QR code; the read-the-total button was not tried.",
+     "status": "not_testable",
+     "buying_consequence": "Whether the app reads the total from a real receipt photo is not confirmed; our test receipt had no QR code.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "APPROVED EXPENSES 127.24, 8 entries",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Of 10 test expenses 8 were approved, 1 was rejected and 1 stayed waiting; the november report showed 127.24 for 8 entries, and the seven categories add up to 127.24. Cash added was 500.00.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "Our own sum of the 8 approved amounts against the report; the 144.54 total of all 10 was not shown by the report.",
+     "status": "confirmed",
+     "buying_consequence": "The monthly report counts only approved expenses and splits them by category correctly.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Export to Excel (CSV)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Entries export gave petty-cash-all.csv of 1259 bytes with 11 lines: a header and the 10 expenses, with columns for date, ref, custodian, category, net, tax, total and status. The file was not opened further.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The line count of the downloaded file against 10 expenses; no cell values were compared.",
+     "status": "confirmed",
+     "buying_consequence": "You can get the entries out as a CSV file for a spreadsheet; the cell contents were not checked.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Print, PDF",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The report has Print and PDF buttons. They were not used, because the print and PDF dialog was avoided, so the PDF report was not seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The report buttons against a PDF that was not opened.",
+     "status": "not_testable",
+     "buying_consequence": "What the PDF report looks like is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Zoho Books / QuickBooks / Xero export",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The report offers exports for Zoho Books, QuickBooks and Xero. None was used, so the files and their import were not seen.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The export buttons against files that were not made.",
+     "status": "not_testable",
+     "buying_consequence": "Check an accounting export with your own software before you rely on it.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your data stays on this device.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Settings, Backup & restore says the data stays on this device and that browser storage is not protected and may be cleared; a banner said no backup had been downloaded yet. No cloud account was used.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The text in Settings and the banner against a test that stored everything locally.",
+     "status": "confirmed",
+     "buying_consequence": "Download a backup yourself, because a cleared browser or a lost phone loses the data unless Cloud sync is on.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Cloud sync is included in your free trial.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Settings shows Cloud sync as included in the trial and needing a + Cloud plan afterwards. Signing in needs an e-mail address and a sign-in code, which was not tested.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The Cloud sync card against a test that did not sign in.",
+     "status": "not_testable",
+     "buying_consequence": "Whether Cloud sync works across devices and what happens to the data after the trial is not confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "+$3 a month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The page and the FAQ say Add Cloud sync to any plan for +$3 a month. The prices show +$3 only on Monthly ($7 to $10). On 3 months it is +$8.01, on 6 months +$15 and on Yearly +$28 a year ($41.99 to $69.99), which is less than $3 a month.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The add-on text against the difference between the with-Cloud and on-this-device prices for each term, as read on the live vendor page.",
+     "status": "contradicted",
+     "buying_consequence": "On the longer plans Cloud sync costs less than +$3 a month, but you still pay more in total for the term, so compare the with-Cloud prices.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Yearly $41.99",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The plan page and the live vendor page give Yearly $41.99 ($3.50 a month, Save 50%) on 6 devices, with 3 months, 6 months and Monthly at $16.99, $26.99 and $7; this matches the dossier.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The on-this-device prices on the vendor page against the dossier ladder; no plan was bought.",
+     "status": "confirmed",
+     "buying_consequence": "The yearly plan on this device costs $41.99, the best price per month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Cancel at any time from the link in your receipt email",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The FAQ says you cancel from the link in your receipt e-mail and can ask for a refund within 14 days of a payment. The app has no cancel button, only Erase all data, which was not clicked, so cancelling was not tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The FAQ text against an app without a cancel button and a test without payment.",
+     "status": "not_testable",
+     "buying_consequence": "You can only cancel after paying, through the receipt e-mail.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Totaal US$ 69,99",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Lemon Squeezy checkout for Yearly + Cloud showed US$ 69,99 billed every 12 months, Subtotaal and Totaal both US$ 69,99, with no tax yet because no address was entered; nothing was paid. The amount equals the Yearly $69.99 on the plan page.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+     },
+     "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+     "comparability": "The plan page price against the checkout total before the address step; no tax line, fee or stored cost rule could be compared.",
+     "status": "confirmed",
+     "buying_consequence": "The yearly price with Cloud sync at checkout equals the plan page, but VAT or GST may be added once your address is known.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Petty Cash Manager on its 14 day free trial in the browser: after about 6 steps the first expense with a receipt photo was saved, and 10 test expenses later 8 were approved and 1 rejected, and the november report showed 127.24 for 8 entries, split by category. The CSV export had a header and 10 lines. Everything stays on the device: no account, no cloud, and a banner asks you to download a backup. Cloud sync, which needs an e-mail code, was not tested. The page says Cloud sync costs +$3 a month on any plan, but that is true only for the Monthly plan: Yearly goes from $41.99 to $69.99, which is +$28 a year. Cancelling is only possible after paying. Nothing was paid. Account and start: the app is local in the browser and has no separate account; the Chrome of Daan, who created the account, was signed in, and our AI assistant ran the test in its own tab, starting at about 13:54 on the clock of the shell, which ran unreliably fast, so no durations are taken from it. The interface was already in English and the free trial said Free trial: 14 days left. The dossier name is Petty Cash Manager and the review is on OSM (petty-cash-manager-review). Start: the first screen was the setup form Set up your petty cash (Country Other, Currency USD, Tax 0, Language English, the box for anonymous usage counts left unticked). The app then showed sample data, which was cleared with Clear sample data and start. Core action: a custodian Test Cashier (Test Shop, float 500, opening cash 500) and then a first expense of 4.50, category Office supplies, paid to Sample Shop, description Test pens, with a receipt photo of a made up receipt. It saved with Saved, the balance became 495.50 and Awaiting approval 4.50. That took about 6 steps: 1 setup form, 1 clearing the sample data, 1 custodian with 4 fields, 1 expense with 5 fields and a photo, and Save. The receipt photo: the app said Looking for the e-invoice QR code..., then No e-invoice QR code found on this photo, with a button Read the total from the photo (not used), and says The photo stays on your device. Nine more expenses were added (3.20 Courier & postage, 12.80 Coffee, 25.00 Miscellaneous cleaning, 9.99 Office, 6.40 Transport, 18.75 Tools, 7.30 Meals, 41.00 Utilities, 15.60 coffee beans), 10 entries and 144.54 USD in total; the form fields were filled by a script on the real fields and Save was clicked on the button. Approvals: 8 were approved, 1 was rejected and 1 stayed waiting. The report for november 2026 shows APPROVED EXPENSES 127.24 (8 entries), NET 127.24 USD, RECOVERABLE INPUT TAX 0.00, CASH ADDED 500.00 and the spending by category (Utilities 41.00, Miscellaneous 25.00, Meals & refreshments 22.90, Tools & hardware 18.75, Office supplies 9.99, Transport 6.40, Courier & postage 3.20); the categories add up to 127.24. The report offers Print, PDF, Export to Excel (CSV) for the Input Tax register and exports for Zoho Books, QuickBooks and Xero. Export: Entries, Export to Excel (CSV) gave petty-cash-all.csv (1259 bytes, 11 lines: a header and 10 expenses, columns Date, Ref, Type, Custodian, Category, Paid to, Invoice no., Description, Cash source, Net, Tax, Total, Status, Note; refs Nov00126 to Nov01026). The file was not opened further and the PDF report was not opened (the print and PDF dialog was avoided). Local or cloud: everything is stored locally in the browser. Settings, Backup & restore says Your data stays on this device. Download a backup regularly and keep it safe, and Browser storage: Not protected, the browser may clear it if space runs low; a banner says no backup was downloaded yet and that the data is gone if the browser is cleared. Cloud sync is included in the free trial and after the trial needs a + Cloud plan; signing in needs an e-mail address and a sign-in code, which was NOT tested (no e-mail or code was used). When cloud sync is on, entries and receipt photos are also stored on the cloud server of the vendor. The staff link per custodian was not used. Plans: The plans were read by the tester on 18 Nov 2026 on the vendor site (pettycash.getdailytools.com, section pricing) and read again just before this delivery the same day, with the same prices. On this device: Monthly $7 a month on 2 devices, 3 months $16.99 ($5.66 a month, Save 19%) on 3 devices, 6 months $26.99 ($4.50 a month, Save 36%) on 5 devices, Yearly $41.99 ($3.50 a month, Save 50%) on 6 devices. With Cloud sync: Monthly $10 a month on 2 devices, 3 months $24.99 ($8.33 a month), 6 months $41.99 ($7 a month), Yearly $69.99 ($5.83 a month), on 2, 3, 5 and 6 devices. Prices are in US dollars; VAT or GST is added at checkout where your country requires it. The page says Try free for 14 days first, no card, a 14-day money-back guarantee and Renews automatically, cancel any time. The prices on the live vendor page are unchanged and match the dossier. Difference on the page: the page and the FAQ say Add Cloud sync to any plan for +$3 a month. In the prices Cloud sync costs +$3 a month only on the Monthly plan; Yearly goes from $41.99 to $69.99 (+$28 a year, $2.33 a month), 6 months from $26.99 to $41.99 (+$15, $2.50 a month) and 3 months from $16.99 to $24.99 (+$8.01, $2.67 a month). Checkout: the vendor site opened a Lemon Squeezy checkout for Petty Cash Manager (Yearly + Cloud) with US$ 69,99 billed every 12 months, Subtotaal US$ 69,99, Totaal US$ 69,99 and the button US$ 69,99 betalen; no tax was shown yet because no address was entered. The payment methods were card, PayPal and Link, Google Pay and Cash App Pay. Nothing was filled in or clicked except opening the page; the checkout showed saved payment details of the account owner, so no screenshot of it was kept, and the checkout was left. The cookie banner of the vendor site was set to Decline. Cancelling: there is no cancel button in the app and no account, since the trial is local. The FAQ says you cancel at any time from the link in your receipt e-mail, with the plan staying active until the end of the paid period, and that an e-mail within 14 days of a payment gives a full refund. So cancelling is only possible after paying. Settings has Erase all data at the bottom (local, not clicked); deleting a cloud account was not seen. Not tested: cloud sync (needs an e-mail code), the staff link, reading the total from the photo, the PDF report, the Zoho Books, QuickBooks and Xero exports, the language switch, installing as an app, and paying. Clean up: the test data stays in the browser storage of the Chrome of Daan: the custodian Test Cashier, 10 test expenses and 1 receipt photo; the sample data was cleared; the file petty-cash-all.csv is still in the Downloads folder; our own tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Your data lives in the browser only, which the app itself calls not protected, so you have to download a backup yourself or it can be gone when the browser is cleared. Teams that want several devices to share entries need Cloud sync, which we could not try, and which costs less than +$3 a month on the longer plans but more than the plan price alone. There is no cancel button in the app: you cancel from the link in your receipt e-mail after you have paid. The receipt photo scan found no e-invoice QR code on our test receipt, so the total had to be typed in.",
+    "friction": {
+     "export_route": "The CSV export petty-cash-all.csv was downloaded (1259 bytes, a header and 10 expenses) but not opened further; no kit records were entered and no reimport was run.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Cloud sync, which needs an e-mail sign-in code.",
+     "The staff link, reading the total from the receipt photo and the PDF report.",
+     "The Zoho Books, QuickBooks and Xero exports, the language switch and installing as an app.",
+     "Paying, and cancelling, which is only possible from the receipt e-mail after payment.",
+     "Tax on the checkout, which showed no amount before an address was entered.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -25185,6 +26075,287 @@
   },
   {
    "source": "session",
+   "product_name": "Thordata",
+   "product_id": "thordata",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free Webpage trial of Thordata: 500 answers for 7 days at $0, claimed in 3 clicks in about a minute with no KYC, card or phone number. Every answer took 2 credits, so the balance went from 500 to 484 after 8 requests, about 250 requests in all, all HTTP 200. The dashboard counts answers and shows no gigabytes; by our own calculation from 3636 byte test pages the Webpage API comes to about $361 per GB, or about $722 per GB counting the 2 credits, against $2 per GB for residential. The httpbin answers showed a Googlebot identity (observation only). The residential prices are unchanged against the dossier ($2 per GB for 1 GB down to $0.65 per GB at 5,000 GB); the order summary of 350 GB now shows Price before discount $595 and 55% Discount -$315. Nothing was bought and the payment screen was not opened.",
+   "findings": [
+    "Text we checked: \"Successfully claimed the trial!\". What we saw: Webpage, Pricing, Start with Trial: 3 clicks and about 1 minute, with an order summary of 500 for 7 Days at $0 and no KYC, card or phone number asked; the Overview showed Wallet $0.000. The dossier only says free API trials.",
+    "Text we checked: \"\"credits\":2\". What we saw: Every one of the 8 answers carried \"credits\":2, and the balance went from 500 to 484, so 16 for 8 requests. The 500 of the trial are therefore about 250 requests.",
+    "Text we checked: \"The advertised rate looks cheap, but my first project is nowhere near the size that earns it\". What we saw: A first project can start at 1 GB for $2, but the rate falls from $2 per GB to $0.65 per GB only at 5,000 GB for $3250, so a small first project pays the high rates.",
+    "Text we checked: \"Total usage: 8\". What we saw: The Statistics tab showed 8 successful, 0 failed and an average time of 0.38 seconds, and no gigabytes. Our own measure of the answers was 97 to 3636 bytes.",
+    "Text we checked: \"$2/GB\". What we saw: The residential tiers were 1 GB $2/GB (total $2), 10 GB $1.8/GB ($18), 50 GB $1.5/GB ($75), 150 GB $1/GB ($150) and 350 GB $0.8/GB ($280), with $2.85, $2.75, $1.95, $1.5 and $1.7 per GB struck through; the minimum purchase is 1 GB. The same numbers are in the dossier and were seen again on the public page."
+   ],
+   "not_tested": [
+    "The residential proxies themselves: nothing was bought and no proxy traffic was sent.",
+    "A refund, the tax on the checkout and the payment screen.",
+    "Where the IP addresses come from.",
+    "Whether Residential Proxies need the account verification (KYC).",
+    "Bandwidth in GB for the Webpage API, which the dashboard does not show.",
+    "Deleting the account, which was looked up but not clicked.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Successfully claimed the trial!",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Webpage, Pricing, Start with Trial: 3 clicks and about 1 minute, with an order summary of 500 for 7 Days at $0 and no KYC, card or phone number asked; the Overview showed Wallet $0.000. The dossier only says free API trials.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The trial claim in the dossier against the trial that was claimed; the dossier names no trial size or length.",
+     "status": "confirmed",
+     "buying_consequence": "A free trial of the Webpage API exists and needs no card, so you can try it without paying.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "\"credits\":2",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Every one of the 8 answers carried \"credits\":2, and the balance went from 500 to 484, so 16 for 8 requests. The 500 of the trial are therefore about 250 requests.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The trial size in the order summary against the credits that the answers took from the balance.",
+     "status": "contradicted",
+     "buying_consequence": "The trial gives half the requests that the headline number suggests.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The advertised rate looks cheap, but my first project is nowhere near the size that earns it.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "A first project can start at 1 GB for $2, but the rate falls from $2 per GB to $0.65 per GB only at 5,000 GB for $3250, so a small first project pays the high rates.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The tier list in the plan pages against the pain in the dossier; no proxy traffic was bought, so real project costs were not measured.",
+     "status": "confirmed",
+     "buying_consequence": "You can start small for $2, but the low per-GB rates need a volume that a first project does not reach.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$361 per GB",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Own calculation: the Webpage API charges per answer ($1.30 per 1K at the 10,000 pack), so for answers of 3636 bytes it comes to about $361 per GB, and about $722 per GB counting 2 credits per answer, against $2 per GB for residential. Larger real pages lower the figure; the dashboard shows no gigabytes.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "Our own arithmetic on 8 test answers against the per-GB price; the vendor shows no per-GB figure for this product.",
+     "status": "not_comparable",
+     "buying_consequence": "For small pages the per-answer Webpage API is far more expensive per GB than residential traffic; for larger pages it gets cheaper per GB.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "googlebot(at)googlebot.com",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The httpbin answers showed an outgoing IP address together with a User-Agent and a From header that identify Googlebot. This is a plain observation; the cause was not investigated and other target sites were not tried.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The httpbin /headers answer against no dossier claim on the identity of the requests.",
+     "status": "not_comparable",
+     "buying_consequence": "The requests did not show an ordinary browser identity; check what your own target sites see before you rely on it.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total usage: 8",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Statistics tab showed 8 successful, 0 failed and an average time of 0.38 seconds, and no gigabytes. Our own measure of the answers was 97 to 3636 bytes.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The count in the dashboard against our own 8 requests; the bandwidth could not be compared.",
+     "status": "confirmed",
+     "buying_consequence": "You pay per answer and the dashboard counts answers, so measure the size of your own pages yourself.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$2/GB",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The residential tiers were 1 GB $2/GB (total $2), 10 GB $1.8/GB ($18), 50 GB $1.5/GB ($75), 150 GB $1/GB ($150) and 350 GB $0.8/GB ($280), with $2.85, $2.75, $1.95, $1.5 and $1.7 per GB struck through; the minimum purchase is 1 GB. The same numbers are in the dossier and were seen again on the public page.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The five tiers in the dashboard against the dossier and the public page; no tax was shown.",
+     "status": "confirmed",
+     "buying_consequence": "The residential prices have not changed against the dossier.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "55% Discount",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The order summary for 350 GB showed Price before discount $595, 55% Discount -$315 and Total $280. The public page shows no discount percentage and no price before discount.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The order summary against the dossier, which has no discount line; our own division of the discount is in the README.",
+     "status": "confirmed",
+     "buying_consequence": "The $280 for 350 GB is presented as a 55% discount; the discount line is new against the dossier.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "1,000 GB $0.73/GB = $730",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Enterprise rows were 1,000 GB $0.73/GB = $730, 2,000 GB $0.7/GB = $1400 and 5,000 GB $0.65/GB = $3250, the same as in the dossier; above that the page says Contact sales.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The three Enterprise rows against the dossier rows; nothing was bought.",
+     "status": "confirmed",
+     "buying_consequence": "The big-volume rates are unchanged and need at least 1,000 GB.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total $13 / Continue to checkout",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Right after the trial was claimed, the page behind the message showed Total $13 with Continue to checkout for the 10,000 pack. It was not clicked.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The upsell on screen against the free claim that had just been completed; the checkout was not opened.",
+     "status": "confirmed",
+     "buying_consequence": "A paid pack is offered at once after the free claim; nothing is charged unless you continue.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Account verification (KYC) Not verified",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Account Settings page showed Account verification (KYC) with Not verified and a Verify account button, and says that other products remain available as usual. The trial asked for no verification; whether Residential Proxies need it was not tested.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The account page against a test that stayed on the free Webpage trial and did not buy residential traffic.",
+     "status": "not_testable",
+     "buying_consequence": "It is unknown whether buying residential traffic needs the verification; the Webpage trial did not.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Once your account is deleted, your service will be deactivated immediately.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Avatar, My Account, Account Settings has a Delete Account button with this text. It was not clicked. There was no paid plan to cancel.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The warning text against a test that did not delete or pay anything.",
+     "status": "not_testable",
+     "buying_consequence": "Leaving means deleting the account; a paid plan was never bought, so cancelling it was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total $280",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The order summary for 350 GB ended in Total $280 with Continue to checkout, which was not clicked; no tax line, no payment screen and no card form was seen for any pack.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+     },
+     "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+     "comparability": "The plan page against a checkout that was never opened; no tax line, fee or stored cost rule was compared.",
+     "status": "not_testable",
+     "buying_consequence": "No price you would pay at checkout was seen, so only the list prices are confirmed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free Webpage trial of Thordata: 500 answers for 7 days at $0, claimed in 3 clicks in about a minute with no KYC, card or phone number. Every answer took 2 credits, so the balance went from 500 to 484 after 8 requests, about 250 requests in all, all HTTP 200. The dashboard counts answers and shows no gigabytes; by our own calculation from 3636 byte test pages the Webpage API comes to about $361 per GB, or about $722 per GB counting the 2 credits, against $2 per GB for residential. The httpbin answers showed a Googlebot identity (observation only). The residential prices are unchanged against the dossier ($2 per GB for 1 GB down to $0.65 per GB at 5,000 GB); the order summary of 350 GB now shows Price before discount $595 and 55% Discount -$315. Nothing was bought and the payment screen was not opened. Account and start: the account was created by Daan (registration 18/11/2026, dashboard.thordata.com, interface already in English); our AI assistant ran the test in the Chrome of Daan from about 14:35 (Amsterdam). The Overview showed Wallet $0.000 and the trial token was valid until 25/11/2026. No KYC, card or phone number was asked for the trial. The dossier name is Thordata and the review is on AIBM (b2b/thordata-review). The pain that was tested: Teams starting a first scraping project, \"The advertised rate looks cheap, but my first project is nowhere near the size that earns it.\" (dossier: solved in part, no alternative listed). Core action: Webpage, Pricing, the Webpage pack of 500 answers for 7 days at $0, Start with Trial. The order summary said 500 for 7 Days and $0, the message was Successfully claimed the trial! with the button Go use it: 3 clicks, about 1 minute. Right after the claim the page behind it showed Total $13 with Continue to checkout (the 10,000 pack); it was not clicked. Playground: the balance said 500 with Expiration time 25/11/2026, and the example is a cURL POST to the Webunlocker endpoint with a Bearer token (the token is not recorded anywhere). 8 requests were sent, only to httpbin (/ip, /headers and /html), all HTTP 200 in 0.4 to 0.75 seconds. Every answer carried \"credits\":2. The answers were 97, 374 and 3636 bytes, 15,487 bytes in total. Observation, no judgment: the httpbin answers showed an outgoing IP address and a User-Agent and a From header that identify Googlebot (googlebot(at)googlebot.com). The cause was not investigated and whether a normal target site sees the same was not tested. Statistics: Total usage 8, successful 8, failed 0, average response time 0.38 seconds; the dashboard shows no gigabytes for the Webpage API. The balance fell from 500 to 484, so 16 for 8 requests, 2 per answer, which leaves about 250 requests in the trial. After the 8 requests the API token was refreshed in the dashboard (Refresh, Confirm, Refresh successfully); a 9th request with the old key gave {\"code\":401,\"data\":\"API key authentication failed:API Token is error\"}. 9 requests in all, within the limit of 20. The new token was not viewed or recorded. Own calculation, not a vendor figure: the Webpage API is priced per answer, the dashboard shows no gigabytes, and the tester measured the size of the answers himself: 97, 374 and 3636 bytes, 15,487 bytes in all for 8 requests (15.487 in the raw note, a Dutch thousands dot). At $1.30 per 1K for the 10,000 pack, a page of the largest test size (3636 bytes, about 3,6 KB) is 3,6 MB per 1K answers, which is about $361 per GB. Because every answer took 2 credits from the balance, the reading with credits is about $722 per GB. Residential Proxies cost $2 per GB at the 1 GB tier, far below that. The figure only holds for pages as small as the httpbin test pages; real pages are larger, so the cost per GB of the Webpage API would drop in proportion, and whether a credit costs the price of an answer or half of it was not verified. The 8 test requests are too small a sample for more. Plans, up to the point of paying: Residential Proxies, tab Regular, pay-as-you-go, never expires, read by the tester in the dashboard on 18 Nov 2026: 1 GB $2/GB ($2.85/GB struck through), total $2 (tag New Users); 10 GB $1.8/GB, total $18; 50 GB $1.5/GB, total $75; 150 GB $1/GB, total $150; 350 GB $0.8/GB, total $280 (tag Best price). The order summary for 350 GB shows validity 30 Days, Price before discount $595, 55% Discount -$315 and Total $280. Enterprise, never expires: 1,000 GB $0.73/GB = $730; 2,000 GB $0.7/GB = $1400; 5,000 GB $0.65/GB = $3250; above that Custom Pricing Based on Demand / Contact sales. The minimum purchase is 1 GB ($2). Tax was not shown before checkout and the payment screen was not opened; card and crypto icons were visible. Webpage API, per answer: 10,000 answers $1.30/1K = $13; 50,000 $1.20/1K = $60; 100,000 $1.10/1K = $110; 200,000 $1.00/1K = $200. The public page thordata.com/pricing/residential-proxies was read again just before this delivery the same day and shows the same five Regular tiers (1 GB $2.00, 10 GB $1.80, 50 GB $1.50, 150 GB $1.00, 350 GB $0.80 per GB; totals $2.00, $18.00, $75.00, $150.00, $280.00; struck through $2.85, $2.75, $1.95, $1.50, $1.70), the High Volume rows (1000 GB $730.00, 2000 GB $1400.00, 5000 GB $3250.00) and the same Webpage packs. So the prices are unchanged against the dossier. Only the 55% discount line is new: it appears in the order summary of the dashboard, and the public page shows no discount percentage and no price before discount. The refund rule was not tested. Cancelling: Avatar, My Account, Account Settings has a Delete Account button with the text that the service is deactivated immediately after deletion; it was not clicked. The same page shows Account verification (KYC) Not verified with a Verify account button; it was not clicked, so whether Residential Proxies need the verification is unknown. Not tested: the residential proxies themselves (not bought, no proxy traffic), a refund, tax and the payment screen, where the IP addresses come from, the KYC rule for residential, and bandwidth in GB for the Webpage API. Clean up: the account, the trial (484 answers left until 25/11/2026) and the new token stay; there is no wallet balance and nothing was bought; our own tab was closed, no other tab was touched; no login details were saved in files. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The free Webpage trial is smaller than it looks: every answer takes 2 credits, so 500 gives about 250 requests. The dashboard counts answers and not gigabytes, so you cannot compare the Webpage API with the per-GB prices of residential traffic without measuring your own page sizes; for pages as small as our test pages it comes out far more expensive per GB. The low per-GB rates need volume: $2 per GB at 1 GB and $0.65 per GB only at 5,000 GB. Our httpbin answers showed a Googlebot identity, so check what your own target sites see. The account page shows KYC as not verified; whether residential needs it was not tested.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "The residential proxies themselves: nothing was bought and no proxy traffic was sent.",
+     "A refund, the tax on the checkout and the payment screen.",
+     "Where the IP addresses come from.",
+     "Whether Residential Proxies need the account verification (KYC).",
+     "Bandwidth in GB for the Webpage API, which the dashboard does not show.",
+     "Deleting the account, which was looked up but not clicked.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 14:35 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "BillingNow",
    "product_id": "billingnow",
    "run_date": "2026-11-02",
@@ -40429,6 +41600,285 @@
      "Cancelling a paid plan, because no paid plan was started.",
      "Export and reimport.",
      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 12:43 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "SoftSync",
+   "product_id": "softsync",
+   "run_date": "2026-11-18",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested SoftSync on its 14 day Business trial, which needs no card: a CSV of 20 test contacts was mapped by the AI step in about 20 s and imported in about 40 s, with 20 valid and 0 invalid rows, but the Record Matching default (First Name) would have merged all 20 rows, so it had to be changed to Emails. The imported deal stage lands in the contact field Lifecycle Stage and not in Deals, so a Kanban view Lead pipeline was made, which was ready about 5 min after the start. The MCP page offers only an OAuth connection and was not connected, so working from Claude or ChatGPT directly was not tested. An API key could be made without payment. The USD prices match our dossier, but the Business plan card in the app lists 5.000 AI chats, emails and enrichments a month where the public pricing page says 10,000, and the trial gives 200 enrichment credits. No checkout was opened and nothing was paid.",
+   "findings": [
+    "Text we checked: \"Skip for now\". What we saw: The onboarding went from the workspace set-up to Open my workspace without a card, phone number or password. The e-mail and calendar connection was offered and skipped with Skip for now; nothing was connected.",
+    "Text we checked: \"Up to 5 seats, 10 groups\". What we saw: The Pro card says up to 5 seats and 10 groups, with 1 mailbox per user, which matches the plan limits in our dossier and on the public pricing table. Only 1 seat was used in this test.",
+    "Text we checked: \"20 valid, 0 invalid of 20 rows\". What we saw: The made up file of 20 contacts was analysed by the AI header step in about 20 s, validated as 20 valid and 0 invalid of 20 rows, and imported with the message Importing 40 records in about 40 s (20 contacts and 20 company rows); Contacts then showed 25 in view with the 5 sample contacts.",
+    "Text we checked: \"Create a key\". What we saw: An API key named My integration was created with Create a key and Set it up without any payment, on the Business trial, and the dialog said It's live. The key is masked in the screenshot, was not used and was revoked afterwards; the list said No API keys found again.",
+    "Text we checked: \"$29.00 per seat / month\". What we saw: The plan card shows Pro at $29.00 per seat a month billed yearly ($348.00 a year for 1 seat) and Business at $59.00 ($708.00 a year); the monthly prices are $39.00 and $79.00. The public pricing page in USD gave the same amounts. They match the dossier."
+   ],
+   "not_tested": [
+    "Claude or ChatGPT working in the CRM through MCP, which needs an OAuth sign-in with an outside account.",
+    "The e-mail and calendar connection, campaigns, meeting notes and Autopilot.",
+    "The audiences Sales teams about to hire a sixth rep and Outbound reps sending heavy cold email.",
+    "Paying, the checkout and the tax and total on it, because no checkout was opened.",
+    "Cancelling, which was looked up (Delete Organization in the Danger Zone) but not clicked.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Skip for now",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The onboarding went from the workspace set-up to Open my workspace without a card, phone number or password. The e-mail and calendar connection was offered and skipped with Skip for now; nothing was connected.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The onboarding screens against our own walk through them; the mailbox connection itself was not tried.",
+     "status": "confirmed",
+     "buying_consequence": "You can start and fill a workspace without connecting a mailbox or entering payment details.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Up to 5 seats, 10 groups",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Pro card says up to 5 seats and 10 groups, with 1 mailbox per user, which matches the plan limits in our dossier and on the public pricing table. Only 1 seat was used in this test.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The plan card on the Billing page against the dossier and the public pricing table; a second seat was not added.",
+     "status": "confirmed",
+     "buying_consequence": "A team of five or fewer fits on Pro by the plan card; a sixth seat is above that limit; the limit itself was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "20 valid, 0 invalid of 20 rows",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The made up file of 20 contacts was analysed by the AI header step in about 20 s, validated as 20 valid and 0 invalid of 20 rows, and imported with the message Importing 40 records in about 40 s (20 contacts and 20 company rows); Contacts then showed 25 in view with the 5 sample contacts.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The counts in the wizard and in the Contacts and Companies lists against the 20 rows of our own file; a larger or messier file was not tried.",
+     "status": "confirmed",
+     "buying_consequence": "A small spreadsheet comes in within a minute or two with the columns mapped for you.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Record Matching",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Record Matching for Contacts was set to First Name by default. All 20 rows of the test file have the same first name, so that setting would have merged them; Emails was chosen by hand.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The default setting in the wizard has no counterpart in our dossier; it was changed before the import, so the merge itself was not seen.",
+     "status": "not_comparable",
+     "buying_consequence": "Check the matching field before you import, because the default can merge people who share a first name.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Lead pipeline",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The deal stage column went to the contact field Lifecycle Stage, not to Deals. A Kanban view Lead pipeline was made in Contacts grouped by Lifecycle Stage: New 5, Contacted 4, Qualified 4, Customer 0, Lost 1, Proposal 4, Won 2 and No Status 5 (the sample contacts), 20 of 20 imported contacts. It took about 5 min and about 25 clicks from the start to this view.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "Our count of the stage columns against the 20 rows of the file; the dossier has no statement about how stages from a file are imported, and the clicks and minutes are our own set-up times.",
+     "status": "not_comparable",
+     "buying_consequence": "Imported stages do not become deals; for a pipeline of imported leads you make your own view in Contacts, which is quick but is a step you must know about.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This connection uses OAuth",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The MCP page shows the server address https://api.softsync.ai/mcp/softsync with the text that the connection uses OAuth and the buttons Set up in ChatGPT, Set up in Claude and Set up in Grok. No plan limit was seen on the page. Nothing was connected, because it needs an OAuth sign-in with an outside account.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The settings page against a test that did not connect an assistant; the 18 fixed prompts under Agent skills were not run.",
+     "status": "not_testable",
+     "buying_consequence": "You can see how the connection is set up, but whether Claude or ChatGPT really works in the CRM is not confirmed by this test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Create a key",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "An API key named My integration was created with Create a key and Set it up without any payment, on the Business trial, and the dialog said It's live. The key is masked in the screenshot, was not used and was revoked afterwards; the list said No API keys found again.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The key list before and after the revoke against the dossier line that API access comes with a paid plan; the key was never used for a request.",
+     "status": "confirmed",
+     "buying_consequence": "API access is open on the trial and a key can be removed again at once; whether a key works on a paid Pro plan was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$29.00 per seat / month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The plan card shows Pro at $29.00 per seat a month billed yearly ($348.00 a year for 1 seat) and Business at $59.00 ($708.00 a year); the monthly prices are $39.00 and $79.00. The public pricing page in USD gave the same amounts. They match the dossier.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The Change plan prices in the app and the public pricing page against the dossier; tax was not shown and no checkout was opened.",
+     "status": "confirmed",
+     "buying_consequence": "The seat prices are as listed: Pro $29 and Business $59 a month when paid yearly, $39 and $79 when paid monthly, per seat.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "5.000 AI chats, emails and enrichments a month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Business plan card says 5.000 AI chats, emails and enrichments a month. The public pricing page and our dossier list 10,000 a month for Business. The Credits panel of the trial shows 5,000 AI chats and 10,000 campaign emails.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The wording on the plan card against the 10,000 on the public pricing page and in the dossier; the allowances were not used up.",
+     "status": "contradicted",
+     "buying_consequence": "The plan card for Business shows half the monthly allowance that the public pricing page lists, so check your own Billing page before you size a team on Business.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Enrichment 200",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The trial Credits panel shows Enrichment credits 200 for the month, renewing 2 dec. The dossier lists 1,000 enrichment credits a month on Pro and the public pricing table lists 1,000 on Pro and 10,000 on Business.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The trial credit figure against the dossier and the public table; a paid plan was not opened, so its real allowance was not seen.",
+     "status": "contradicted",
+     "buying_consequence": "During the Business trial you get fewer enrichment credits than either paid plan lists, so the trial does not show the full allowance.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free until 2 dec 2026",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "The Billing page says Business, Trial, Billing Not chosen yet, Price Free until 2 dec 2026 and Trial ends 2 dec 2026, which is a trial of 14 days from 18 Nov 2026, and no card was asked. The dossier gives no trial length. The partner offer of 30 days did not apply because the account did not use our partner link.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The trial dates on the Billing page against a dossier without a trial length; what happens on 2 dec 2026 was not tested.",
+     "status": "not_comparable",
+     "buying_consequence": "The standard trial is 14 days on Business without a card; a longer trial only comes through the partner offer.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Danger Zone",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "Settings, Organization, Danger Zone shows Delete Organization with the text that there is no going back; it was not clicked. Billing has no separate cancel button, only Downgrade to Pro, and there is no card on the trial.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The Danger Zone and Billing page against a test that did not delete or pay anything.",
+     "status": "not_testable",
+     "buying_consequence": "The only visible way to end the account is to delete the organization; cancelling a paid plan was not seen because nothing was bought.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Price Free until 2 dec 2026",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-18",
+     "observed": "No checkout was opened and no plan button was clicked; the Billing page shows the trial price and the plan prices, but no tax, fee or total at checkout was shown, and no card was asked.",
+     "observed_on": "2026-11-18",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/softsync-review.html#claim-vs-measured"
+     },
+     "plan": "14 day Business trial without a card; no checkout was opened, nothing was paid",
+     "comparability": "The plan page prices against a checkout that was not opened; no tax line, fee or stored cost rule could be compared.",
+     "status": "not_testable",
+     "buying_consequence": "What you pay at checkout, with tax and the seat minimum, is not known from this test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-18",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested SoftSync on its 14 day Business trial, which needs no card: a CSV of 20 test contacts was mapped by the AI step in about 20 s and imported in about 40 s, with 20 valid and 0 invalid rows, but the Record Matching default (First Name) would have merged all 20 rows, so it had to be changed to Emails. The imported deal stage lands in the contact field Lifecycle Stage and not in Deals, so a Kanban view Lead pipeline was made, which was ready about 5 min after the start. The MCP page offers only an OAuth connection and was not connected, so working from Claude or ChatGPT directly was not tested. An API key could be made without payment. The USD prices match our dossier, but the Business plan card in the app lists 5.000 AI chats, emails and enrichments a month where the public pricing page says 10,000, and the trial gives 200 enrichment credits. No checkout was opened and nothing was paid. Account and start: the account was created by Daan, who was signed in at app.softsync.ai in his Chrome; our AI assistant ran the test in its own tab, starting at 13:59 with the onboarding. The interface was already on English (US). The onboarding filled a test name into the profile of the account (a made up name) and a made up company Sample Snowboards with the website example.com; the profile name was not changed back. The dossier name is SoftSync and the review is on MSS (softsync-review). The pain that was tested: manual CRM updates, wanting Claude or ChatGPT to work in the CRM directly. Onboarding: workspace set-up with a name, a website (the app read example.com and showed a card Example Domain, changed to the company name), a role (Sales), a team size (2-10), Invite your teammates (Not now), How did you hear about us (Website), a skipped story, Where are your contacts today (Spreadsheet), Bring your contacts in, Connect your email and calendar (Skip for now, the Connect email button was not used) and You're all set. No card, phone number or password was asked. Core action: import of a made up test file test-contacten-20.csv (1.4 KB, 20 contacts) via Import a spreadsheet, Contacts, Separate files. The step AI is analyzing your headers took about 20 s and mapped first_name, last_name, email, company, title and phone by itself; the column deal_stage went to Contacts, Lifecycle Stage and deal_value to Companies, Revenue. Review & Validate Data said 20 valid, 0 invalid of 20 rows; the step Map Field Options mapped 6 of 6 stage values (Contacted, Lost, New, Proposal, Qualified, Won) as new options. Pitfall: Record Matching for Contacts was set to First Name by default; all 20 rows have the first name Test, which would have merged them, so Emails was chosen. The import said Import started! Importing 40 records (20 contacts and 20 company rows), took about 40 s and ended with Your data has been successfully imported. Contacts then showed 25 in view (20 imported and 5 sample contacts marked [SAMPLE]) and Companies 20 companies. Pipeline: the Deals group already has a standard Pipeline view with the stages New, Qualification, Proposal, Negotiation, Won and Lost and three sample deals. The imported contacts do not land in Deals, so a new view Lead pipeline was made in Contacts (Kanban, group by Lifecycle Stage): New 5, Contacted 4, Qualified 4, Customer 0, Lost 1, Proposal 4, Won 2 and No Status 5 (the sample contacts), 20 of 20 imported contacts. The standard Deals pipeline was visible about 4 min after the start and the own contact pipeline was ready about 5 min after the start; the import and the pipeline took about 25 clicks. MCP: Settings, MCP shows Set up MCP with your AI assistant with the buttons Set up in ChatGPT, Set up in Claude and Set up in Grok, the MCP server address https://api.softsync.ai/mcp/softsync and the text This connection uses OAuth. The assistant will open a sign-in page so you can approve access without sharing an API key. It also says Access follows your SoftSync permissions, Review write actions before approving and Only connect trusted servers. No plan limit was seen on the page. Under Agent skills there are 18 fixed prompts, for example Fill in the missing Emails on 20 records in Companies. The connection itself was NOT made: it needs an OAuth sign-in with an outside account, which was not allowed, so Claude or ChatGPT working in the CRM directly was not tested. API key: Settings, API keys, Create a key, the name My integration and Set it up worked without any payment and showed It's live. Copy your key now: you won't see it again. The key was not written down, is masked in the screenshot and was not used. It was then revoked with the bin icon (Revoke API Key ... This action cannot be undone) and the list said No API keys found again. There is also a tab OAuth Apps. Plans: The plans were read by the tester on 18 Nov 2026 in the app (Settings, Billing, Change plan, in USD) and read again just before this delivery the same day on the public page softsync.ai/pricing with the currency set to USD, with the same amounts. Pro: $29.00 per seat a month when billed yearly ($348.00 a year for 1 seat) and $39.00 when billed monthly; up to 5 seats, 10 groups and 1 mailbox per user. Business: $59.00 per seat a month when billed yearly ($708.00 a year for 1 seat) and $79.00 when billed monthly; up to 25 seats, 100 groups and 5 mailboxes per user. The switch says Yearly (-25%). Enterprise is on request. The public pricing table lists, per user a month, 1,000 campaign emails, chats and enrichment credits on Pro and 10,000 of each on Business. Trial: Settings, Billing says Your plan: Business, Trial, Seats 1 seat(s), Billing Not chosen yet, Price Free until 2 dec 2026 and Trial ends 2 dec 2026. That is a trial of 14 days on the Business plan from 18 Nov 2026 and no card was asked. The credits in the trial are Enrichment 200 (renews 2 dec), AI chats 5,000, Campaign emails 10,000 and Text messages 120 (renews 1 dec). The partner offer of 30 days came through our partner link and this account did not use that link, so the standard trial applied. Differences against the dossier: (a) the public pricing page lists 10,000 chats, campaign emails and enrichment credits a month for Business, while the plan card in the app says 5.000 AI chats, emails and enrichments a month for Business (and the Credits panel shows 5,000 chats, 10,000 campaign emails and 200 enrichment credits); (b) the dossier gives no trial length, while the app gave a trial until 2 dec 2026 on Business without a card; (c) the dossier lists 1,000 enrichment credits a month on Pro, while the trial shows 200 enrichment credits. The USD prices themselves are unchanged. Checkout: no checkout was opened, the plan buttons were not clicked, no card was asked and no tax or total was shown, so no price at checkout is known. Cancelling: Settings, Organization, Danger Zone has Delete Organization (Once you delete a organization, there is no going back. Please be certain.), which was not clicked. Billing has no separate cancel button; going lower is Downgrade to Pro. Because there is no card, the trial runs out without a charge on the page, which was not tested further. Not tested: Claude or ChatGPT working in the CRM through MCP, the e-mail and calendar connection, campaigns, meeting notes, Autopilot, cancelling itself, and the audiences Sales teams about to hire a sixth rep and Outbound reps sending heavy cold email. Clean up: the account and the test data stay: the organization Sample Snowboards, 20 test contacts, 20 test companies and the view Lead pipeline in Contacts; the profile name stays on the made up name from the onboarding; the API key was revoked; nothing was connected; the empty tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The import wizard keeps First Name as the matching field for contacts by default, which merges people who share a first name; check it before you start. A deal stage column in your file does not become a deal: it lands in a contact field, so you need your own view if you want a pipeline of imported leads. The plan card for Business shows lower monthly allowances than the public pricing page, and the trial gives only 200 enrichment credits, so check the numbers in your own Billing page. There is no separate cancel button; the only end is Delete Organization in the Danger Zone, and the trial has no card.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Claude or ChatGPT working in the CRM through MCP, which needs an OAuth sign-in with an outside account.",
+     "The e-mail and calendar connection, campaigns, meeting notes and Autopilot.",
+     "The audiences Sales teams about to hire a sixth rep and Outbound reps sending heavy cold email.",
+     "Paying, the checkout and the tax and total on it, because no checkout was opened.",
+     "Cancelling, which was looked up (Delete Organization in the Danger Zone) but not clicked.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:59 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],

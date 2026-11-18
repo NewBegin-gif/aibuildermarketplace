@@ -82,10 +82,9 @@
  "unknowns": [
   "Pricing status is 'see_details': no single public entry price.",
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -93,7 +92,609 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/thordata-review/",
+  "method": [
+   "The test used an account Daan made, and our AI assistant ran it in Daan's browser; the free Webpage trial was claimed without KYC, card or phone number; nothing was bought and nothing was paid",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Successfully claimed the trial!",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Webpage, Pricing, Start with Trial: 3 clicks and about 1 minute, with an order summary of 500 for 7 Days at $0 and no KYC, card or phone number asked; the Overview showed Wallet $0.000. The dossier only says free API trials.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The trial claim in the dossier against the trial that was claimed; the dossier names no trial size or length.",
+    "status": "confirmed",
+    "buying_consequence": "A free trial of the Webpage API exists and needs no card, so you can try it without paying.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "\"credits\":2",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Every one of the 8 answers carried \"credits\":2, and the balance went from 500 to 484, so 16 for 8 requests. The 500 of the trial are therefore about 250 requests.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The trial size in the order summary against the credits that the answers took from the balance.",
+    "status": "contradicted",
+    "buying_consequence": "The trial gives half the requests that the headline number suggests.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "The advertised rate looks cheap, but my first project is nowhere near the size that earns it.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "A first project can start at 1 GB for $2, but the rate falls from $2 per GB to $0.65 per GB only at 5,000 GB for $3250, so a small first project pays the high rates.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The tier list in the plan pages against the pain in the dossier; no proxy traffic was bought, so real project costs were not measured.",
+    "status": "confirmed",
+    "buying_consequence": "You can start small for $2, but the low per-GB rates need a volume that a first project does not reach.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$361 per GB",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Own calculation: the Webpage API charges per answer ($1.30 per 1K at the 10,000 pack), so for answers of 3636 bytes it comes to about $361 per GB, and about $722 per GB counting 2 credits per answer, against $2 per GB for residential. Larger real pages lower the figure; the dashboard shows no gigabytes.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "Our own arithmetic on 8 test answers against the per-GB price; the vendor shows no per-GB figure for this product.",
+    "status": "not_comparable",
+    "buying_consequence": "For small pages the per-answer Webpage API is far more expensive per GB than residential traffic; for larger pages it gets cheaper per GB.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "googlebot(at)googlebot.com",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The httpbin answers showed an outgoing IP address together with a User-Agent and a From header that identify Googlebot. This is a plain observation; the cause was not investigated and other target sites were not tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The httpbin /headers answer against no dossier claim on the identity of the requests.",
+    "status": "not_comparable",
+    "buying_consequence": "The requests did not show an ordinary browser identity; check what your own target sites see before you rely on it.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Total usage: 8",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Statistics tab showed 8 successful, 0 failed and an average time of 0.38 seconds, and no gigabytes. Our own measure of the answers was 97 to 3636 bytes.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The count in the dashboard against our own 8 requests; the bandwidth could not be compared.",
+    "status": "confirmed",
+    "buying_consequence": "You pay per answer and the dashboard counts answers, so measure the size of your own pages yourself.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$2/GB",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The residential tiers were 1 GB $2/GB (total $2), 10 GB $1.8/GB ($18), 50 GB $1.5/GB ($75), 150 GB $1/GB ($150) and 350 GB $0.8/GB ($280), with $2.85, $2.75, $1.95, $1.5 and $1.7 per GB struck through; the minimum purchase is 1 GB. The same numbers are in the dossier and were seen again on the public page.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The five tiers in the dashboard against the dossier and the public page; no tax was shown.",
+    "status": "confirmed",
+    "buying_consequence": "The residential prices have not changed against the dossier.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "55% Discount",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The order summary for 350 GB showed Price before discount $595, 55% Discount -$315 and Total $280. The public page shows no discount percentage and no price before discount.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The order summary against the dossier, which has no discount line; our own division of the discount is in the README.",
+    "status": "confirmed",
+    "buying_consequence": "The $280 for 350 GB is presented as a 55% discount; the discount line is new against the dossier.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "1,000 GB $0.73/GB = $730",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Enterprise rows were 1,000 GB $0.73/GB = $730, 2,000 GB $0.7/GB = $1400 and 5,000 GB $0.65/GB = $3250, the same as in the dossier; above that the page says Contact sales.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The three Enterprise rows against the dossier rows; nothing was bought.",
+    "status": "confirmed",
+    "buying_consequence": "The big-volume rates are unchanged and need at least 1,000 GB.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Total $13 / Continue to checkout",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Right after the trial was claimed, the page behind the message showed Total $13 with Continue to checkout for the 10,000 pack. It was not clicked.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The upsell on screen against the free claim that had just been completed; the checkout was not opened.",
+    "status": "confirmed",
+    "buying_consequence": "A paid pack is offered at once after the free claim; nothing is charged unless you continue.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Account verification (KYC) Not verified",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Account Settings page showed Account verification (KYC) with Not verified and a Verify account button, and says that other products remain available as usual. The trial asked for no verification; whether Residential Proxies need it was not tested.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The account page against a test that stayed on the free Webpage trial and did not buy residential traffic.",
+    "status": "not_testable",
+    "buying_consequence": "It is unknown whether buying residential traffic needs the verification; the Webpage trial did not.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Once your account is deleted, your service will be deactivated immediately.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Avatar, My Account, Account Settings has a Delete Account button with this text. It was not clicked. There was no paid plan to cancel.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The warning text against a test that did not delete or pay anything.",
+    "status": "not_testable",
+    "buying_consequence": "Leaving means deleting the account; a paid plan was never bought, so cancelling it was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Total $280",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The order summary for 350 GB ended in Total $280 with Continue to checkout, which was not clicked; no tax line, no payment screen and no card form was seen for any pack.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+    },
+    "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+    "comparability": "The plan page against a checkout that was never opened; no tax line, fee or stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "No price you would pay at checkout was seen, so only the list prices are confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free Webpage trial of Thordata: 500 answers for 7 days at $0, claimed in 3 clicks in about a minute with no KYC, card or phone number. Every answer took 2 credits, so the balance went from 500 to 484 after 8 requests, about 250 requests in all, all HTTP 200. The dashboard counts answers and shows no gigabytes; by our own calculation from 3636 byte test pages the Webpage API comes to about $361 per GB, or about $722 per GB counting the 2 credits, against $2 per GB for residential. The httpbin answers showed a Googlebot identity (observation only). The residential prices are unchanged against the dossier ($2 per GB for 1 GB down to $0.65 per GB at 5,000 GB); the order summary of 350 GB now shows Price before discount $595 and 55% Discount -$315. Nothing was bought and the payment screen was not opened. Account and start: the account was created by Daan (registration 18/11/2026, dashboard.thordata.com, interface already in English); our AI assistant ran the test in the Chrome of Daan from about 14:35 (Amsterdam). The Overview showed Wallet $0.000 and the trial token was valid until 25/11/2026. No KYC, card or phone number was asked for the trial. The dossier name is Thordata and the review is on AIBM (b2b/thordata-review). The pain that was tested: Teams starting a first scraping project, \"The advertised rate looks cheap, but my first project is nowhere near the size that earns it.\" (dossier: solved in part, no alternative listed). Core action: Webpage, Pricing, the Webpage pack of 500 answers for 7 days at $0, Start with Trial. The order summary said 500 for 7 Days and $0, the message was Successfully claimed the trial! with the button Go use it: 3 clicks, about 1 minute. Right after the claim the page behind it showed Total $13 with Continue to checkout (the 10,000 pack); it was not clicked. Playground: the balance said 500 with Expiration time 25/11/2026, and the example is a cURL POST to the Webunlocker endpoint with a Bearer token (the token is not recorded anywhere). 8 requests were sent, only to httpbin (/ip, /headers and /html), all HTTP 200 in 0.4 to 0.75 seconds. Every answer carried \"credits\":2. The answers were 97, 374 and 3636 bytes, 15,487 bytes in total. Observation, no judgment: the httpbin answers showed an outgoing IP address and a User-Agent and a From header that identify Googlebot (googlebot(at)googlebot.com). The cause was not investigated and whether a normal target site sees the same was not tested. Statistics: Total usage 8, successful 8, failed 0, average response time 0.38 seconds; the dashboard shows no gigabytes for the Webpage API. The balance fell from 500 to 484, so 16 for 8 requests, 2 per answer, which leaves about 250 requests in the trial. After the 8 requests the API token was refreshed in the dashboard (Refresh, Confirm, Refresh successfully); a 9th request with the old key gave {\"code\":401,\"data\":\"API key authentication failed:API Token is error\"}. 9 requests in all, within the limit of 20. The new token was not viewed or recorded. Own calculation, not a vendor figure: the Webpage API is priced per answer, the dashboard shows no gigabytes, and the tester measured the size of the answers himself: 97, 374 and 3636 bytes, 15,487 bytes in all for 8 requests (15.487 in the raw note, a Dutch thousands dot). At $1.30 per 1K for the 10,000 pack, a page of the largest test size (3636 bytes, about 3,6 KB) is 3,6 MB per 1K answers, which is about $361 per GB. Because every answer took 2 credits from the balance, the reading with credits is about $722 per GB. Residential Proxies cost $2 per GB at the 1 GB tier, far below that. The figure only holds for pages as small as the httpbin test pages; real pages are larger, so the cost per GB of the Webpage API would drop in proportion, and whether a credit costs the price of an answer or half of it was not verified. The 8 test requests are too small a sample for more. Plans, up to the point of paying: Residential Proxies, tab Regular, pay-as-you-go, never expires, read by the tester in the dashboard on 18 Nov 2026: 1 GB $2/GB ($2.85/GB struck through), total $2 (tag New Users); 10 GB $1.8/GB, total $18; 50 GB $1.5/GB, total $75; 150 GB $1/GB, total $150; 350 GB $0.8/GB, total $280 (tag Best price). The order summary for 350 GB shows validity 30 Days, Price before discount $595, 55% Discount -$315 and Total $280. Enterprise, never expires: 1,000 GB $0.73/GB = $730; 2,000 GB $0.7/GB = $1400; 5,000 GB $0.65/GB = $3250; above that Custom Pricing Based on Demand / Contact sales. The minimum purchase is 1 GB ($2). Tax was not shown before checkout and the payment screen was not opened; card and crypto icons were visible. Webpage API, per answer: 10,000 answers $1.30/1K = $13; 50,000 $1.20/1K = $60; 100,000 $1.10/1K = $110; 200,000 $1.00/1K = $200. The public page thordata.com/pricing/residential-proxies was read again just before this delivery the same day and shows the same five Regular tiers (1 GB $2.00, 10 GB $1.80, 50 GB $1.50, 150 GB $1.00, 350 GB $0.80 per GB; totals $2.00, $18.00, $75.00, $150.00, $280.00; struck through $2.85, $2.75, $1.95, $1.50, $1.70), the High Volume rows (1000 GB $730.00, 2000 GB $1400.00, 5000 GB $3250.00) and the same Webpage packs. So the prices are unchanged against the dossier. Only the 55% discount line is new: it appears in the order summary of the dashboard, and the public page shows no discount percentage and no price before discount. The refund rule was not tested. Cancelling: Avatar, My Account, Account Settings has a Delete Account button with the text that the service is deactivated immediately after deletion; it was not clicked. The same page shows Account verification (KYC) Not verified with a Verify account button; it was not clicked, so whether Residential Proxies need the verification is unknown. Not tested: the residential proxies themselves (not bought, no proxy traffic), a refund, tax and the payment screen, where the IP addresses come from, the KYC rule for residential, and bandwidth in GB for the Webpage API. Clean up: the account, the trial (484 answers left until 25/11/2026) and the new token stay; there is no wallet balance and nothing was bought; our own tab was closed, no other tab was touched; no login details were saved in files. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The free Webpage trial is smaller than it looks: every answer takes 2 credits, so 500 gives about 250 requests. The dashboard counts answers and not gigabytes, so you cannot compare the Webpage API with the per-GB prices of residential traffic without measuring your own page sizes; for pages as small as our test pages it comes out far more expensive per GB. The low per-GB rates need volume: $2 per GB at 1 GB and $0.65 per GB only at 5,000 GB. Our httpbin answers showed a Googlebot identity, so check what your own target sites see. The account page shows KYC as not verified; whether residential needs it was not tested.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "The residential proxies themselves: nothing was bought and no proxy traffic was sent.",
+    "A refund, the tax on the checkout and the payment screen.",
+    "Where the IP addresses come from.",
+    "Whether Residential Proxies need the account verification (KYC).",
+    "Bandwidth in GB for the Webpage API, which the dashboard does not show.",
+    "Deleting the account, which was looked up but not clicked.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 14:35 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/thordata-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/thordata-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/thordata-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free Webpage trial of Thordata: 500 answers for 7 days at $0, claimed in 3 clicks in about a minute with no KYC, card or phone number. Every answer took 2 credits, so the balance went from 500 to 484 after 8 requests, about 250 requests in all, all HTTP 200. The dashboard counts answers and shows no gigabytes; by our own calculation from 3636 byte test pages the Webpage API comes to about $361 per GB, or about $722 per GB counting the 2 credits, against $2 per GB for residential. The httpbin answers showed a Googlebot identity (observation only). The residential prices are unchanged against the dossier ($2 per GB for 1 GB down to $0.65 per GB at 5,000 GB); the order summary of 350 GB now shows Price before discount $595 and 55% Discount -$315. Nothing was bought and the payment screen was not opened. Account and start: the account was created by Daan (registration 18/11/2026, dashboard.thordata.com, interface already in English); our AI assistant ran the test in the Chrome of Daan from about 14:35 (Amsterdam). The Overview showed Wallet $0.000 and the trial token was valid until 25/11/2026. No KYC, card or phone number was asked for the trial. The dossier name is Thordata and the review is on AIBM (b2b/thordata-review). The pain that was tested: Teams starting a first scraping project, \"The advertised rate looks cheap, but my first project is nowhere near the size that earns it.\" (dossier: solved in part, no alternative listed). Core action: Webpage, Pricing, the Webpage pack of 500 answers for 7 days at $0, Start with Trial. The order summary said 500 for 7 Days and $0, the message was Successfully claimed the trial! with the button Go use it: 3 clicks, about 1 minute. Right after the claim the page behind it showed Total $13 with Continue to checkout (the 10,000 pack); it was not clicked. Playground: the balance said 500 with Expiration time 25/11/2026, and the example is a cURL POST to the Webunlocker endpoint with a Bearer token (the token is not recorded anywhere). 8 requests were sent, only to httpbin (/ip, /headers and /html), all HTTP 200 in 0.4 to 0.75 seconds. Every answer carried \"credits\":2. The answers were 97, 374 and 3636 bytes, 15,487 bytes in total. Observation, no judgment: the httpbin answers showed an outgoing IP address and a User-Agent and a From header that identify Googlebot (googlebot(at)googlebot.com). The cause was not investigated and whether a normal target site sees the same was not tested. Statistics: Total usage 8, successful 8, failed 0, average response time 0.38 seconds; the dashboard shows no gigabytes for the Webpage API. The balance fell from 500 to 484, so 16 for 8 requests, 2 per answer, which leaves about 250 requests in the trial. After the 8 requests the API token was refreshed in the dashboard (Refresh, Confirm, Refresh successfully); a 9th request with the old key gave {\"code\":401,\"data\":\"API key authentication failed:API Token is error\"}. 9 requests in all, within the limit of 20. The new token was not viewed or recorded. Own calculation, not a vendor figure: the Webpage API is priced per answer, the dashboard shows no gigabytes, and the tester measured the size of the answers himself: 97, 374 and 3636 bytes, 15,487 bytes in all for 8 requests (15.487 in the raw note, a Dutch thousands dot). At $1.30 per 1K for the 10,000 pack, a page of the largest test size (3636 bytes, about 3,6 KB) is 3,6 MB per 1K answers, which is about $361 per GB. Because every answer took 2 credits from the balance, the reading with credits is about $722 per GB. Residential Proxies cost $2 per GB at the 1 GB tier, far below that. The figure only holds for pages as small as the httpbin test pages; real pages are larger, so the cost per GB of the Webpage API would drop in proportion, and whether a credit costs the price of an answer or half of it was not verified. The 8 test requests are too small a sample for more. Plans, up to the point of paying: Residential Proxies, tab Regular, pay-as-you-go, never expires, read by the tester in the dashboard on 18 Nov 2026: 1 GB $2/GB ($2.85/GB struck through), total $2 (tag New Users); 10 GB $1.8/GB, total $18; 50 GB $1.5/GB, total $75; 150 GB $1/GB, total $150; 350 GB $0.8/GB, total $280 (tag Best price). The order summary for 350 GB shows validity 30 Days, Price before discount $595, 55% Discount -$315 and Total $280. Enterprise, never expires: 1,000 GB $0.73/GB = $730; 2,000 GB $0.7/GB = $1400; 5,000 GB $0.65/GB = $3250; above that Custom Pricing Based on Demand / Contact sales. The minimum purchase is 1 GB ($2). Tax was not shown before checkout and the payment screen was not opened; card and crypto icons were visible. Webpage API, per answer: 10,000 answers $1.30/1K = $13; 50,000 $1.20/1K = $60; 100,000 $1.10/1K = $110; 200,000 $1.00/1K = $200. The public page thordata.com/pricing/residential-proxies was read again just before this delivery the same day and shows the same five Regular tiers (1 GB $2.00, 10 GB $1.80, 50 GB $1.50, 150 GB $1.00, 350 GB $0.80 per GB; totals $2.00, $18.00, $75.00, $150.00, $280.00; struck through $2.85, $2.75, $1.95, $1.50, $1.70), the High Volume rows (1000 GB $730.00, 2000 GB $1400.00, 5000 GB $3250.00) and the same Webpage packs. So the prices are unchanged against the dossier. Only the 55% discount line is new: it appears in the order summary of the dashboard, and the public page shows no discount percentage and no price before discount. The refund rule was not tested. Cancelling: Avatar, My Account, Account Settings has a Delete Account button with the text that the service is deactivated immediately after deletion; it was not clicked. The same page shows Account verification (KYC) Not verified with a Verify account button; it was not clicked, so whether Residential Proxies need the verification is unknown. Not tested: the residential proxies themselves (not bought, no proxy traffic), a refund, tax and the payment screen, where the IP addresses come from, the KYC rule for residential, and bandwidth in GB for the Webpage API. Clean up: the account, the trial (484 answers left until 25/11/2026) and the new token stay; there is no wallet balance and nothing was bought; our own tab was closed, no other tab was touched; no login details were saved in files. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/thordata-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free Webpage trial of Thordata: 500 answers for 7 days at $0, claimed in 3 clicks in about a minute with no KYC, card or phone number. Every answer took 2 credits, so the balance went from 500 to 484 after 8 requests, about 250 requests in all, all HTTP 200. The dashboard counts answers and shows no gigabytes; by our own calculation from 3636 byte test pages the Webpage API comes to about $361 per GB, or about $722 per GB counting the 2 credits, against $2 per GB for residential. The httpbin answers showed a Googlebot identity (observation only). The residential prices are unchanged against the dossier ($2 per GB for 1 GB down to $0.65 per GB at 5,000 GB); the order summary of 350 GB now shows Price before discount $595 and 55% Discount -$315. Nothing was bought and the payment screen was not opened. Account and start: the account was created by Daan (registration 18/11/2026, dashboard.thordata.com, interface already in English); our AI assistant ran the test in the Chrome of Daan from about 14:35 (Amsterdam). The Overview showed Wallet $0.000 and the trial token was valid until 25/11/2026. No KYC, card or phone number was asked for the trial. The dossier name is Thordata and the review is on AIBM (b2b/thordata-review). The pain that was tested: Teams starting a first scraping project, \"The advertised rate looks cheap, but my first project is nowhere near the size that earns it.\" (dossier: solved in part, no alternative listed). Core action: Webpage, Pricing, the Webpage pack of 500 answers for 7 days at $0, Start with Trial. The order summary said 500 for 7 Days and $0, the message was Successfully claimed the trial! with the button Go use it: 3 clicks, about 1 minute. Right after the claim the page behind it showed Total $13 with Continue to checkout (the 10,000 pack); it was not clicked. Playground: the balance said 500 with Expiration time 25/11/2026, and the example is a cURL POST to the Webunlocker endpoint with a Bearer token (the token is not recorded anywhere). 8 requests were sent, only to httpbin (/ip, /headers and /html), all HTTP 200 in 0.4 to 0.75 seconds. Every answer carried \"credits\":2. The answers were 97, 374 and 3636 bytes, 15,487 bytes in total. Observation, no judgment: the httpbin answers showed an outgoing IP address and a User-Agent and a From header that identify Googlebot (googlebot(at)googlebot.com). The cause was not investigated and whether a normal target site sees the same was not tested. Statistics: Total usage 8, successful 8, failed 0, average response time 0.38 seconds; the dashboard shows no gigabytes for the Webpage API. The balance fell from 500 to 484, so 16 for 8 requests, 2 per answer, which leaves about 250 requests in the trial. After the 8 requests the API token was refreshed in the dashboard (Refresh, Confirm, Refresh successfully); a 9th request with the old key gave {\"code\":401,\"data\":\"API key authentication failed:API Token is error\"}. 9 requests in all, within the limit of 20. The new token was not viewed or recorded. Own calculation, not a vendor figure: the Webpage API is priced per answer, the dashboard shows no gigabytes, and the tester measured the size of the answers himself: 97, 374 and 3636 bytes, 15,487 bytes in all for 8 requests (15.487 in the raw note, a Dutch thousands dot). At $1.30 per 1K for the 10,000 pack, a page of the largest test size (3636 bytes, about 3,6 KB) is 3,6 MB per 1K answers, which is about $361 per GB. Because every answer took 2 credits from the balance, the reading with credits is about $722 per GB. Residential Proxies cost $2 per GB at the 1 GB tier, far below that. The figure only holds for pages as small as the httpbin test pages; real pages are larger, so the cost per GB of the Webpage API would drop in proportion, and whether a credit costs the price of an answer or half of it was not verified. The 8 test requests are too small a sample for more. Plans, up to the point of paying: Residential Proxies, tab Regular, pay-as-you-go, never expires, read by the tester in the dashboard on 18 Nov 2026: 1 GB $2/GB ($2.85/GB struck through), total $2 (tag New Users); 10 GB $1.8/GB, total $18; 50 GB $1.5/GB, total $75; 150 GB $1/GB, total $150; 350 GB $0.8/GB, total $280 (tag Best price). The order summary for 350 GB shows validity 30 Days, Price before discount $595, 55% Discount -$315 and Total $280. Enterprise, never expires: 1,000 GB $0.73/GB = $730; 2,000 GB $0.7/GB = $1400; 5,000 GB $0.65/GB = $3250; above that Custom Pricing Based on Demand / Contact sales. The minimum purchase is 1 GB ($2). Tax was not shown before checkout and the payment screen was not opened; card and crypto icons were visible. Webpage API, per answer: 10,000 answers $1.30/1K = $13; 50,000 $1.20/1K = $60; 100,000 $1.10/1K = $110; 200,000 $1.00/1K = $200. The public page thordata.com/pricing/residential-proxies was read again just before this delivery the same day and shows the same five Regular tiers (1 GB $2.00, 10 GB $1.80, 50 GB $1.50, 150 GB $1.00, 350 GB $0.80 per GB; totals $2.00, $18.00, $75.00, $150.00, $280.00; struck through $2.85, $2.75, $1.95, $1.50, $1.70), the High Volume rows (1000 GB $730.00, 2000 GB $1400.00, 5000 GB $3250.00) and the same Webpage packs. So the prices are unchanged against the dossier. Only the 55% discount line is new: it appears in the order summary of the dashboard, and the public page shows no discount percentage and no price before discount. The refund rule was not tested. Cancelling: Avatar, My Account, Account Settings has a Delete Account button with the text that the service is deactivated immediately after deletion; it was not clicked. The same page shows Account verification (KYC) Not verified with a Verify account button; it was not clicked, so whether Residential Proxies need the verification is unknown. Not tested: the residential proxies themselves (not bought, no proxy traffic), a refund, tax and the payment screen, where the IP addresses come from, the KYC rule for residential, and bandwidth in GB for the Webpage API. Clean up: the account, the trial (484 answers left until 25/11/2026) and the new token stay; there is no wallet balance and nothing was bought; our own tab was closed, no other tab was touched; no login details were saved in files. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/thordata-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/thordata-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Thordata",
+    "product_id": "thordata",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free Webpage trial of Thordata: 500 answers for 7 days at $0, claimed in 3 clicks in about a minute with no KYC, card or phone number. Every answer took 2 credits, so the balance went from 500 to 484 after 8 requests, about 250 requests in all, all HTTP 200. The dashboard counts answers and shows no gigabytes; by our own calculation from 3636 byte test pages the Webpage API comes to about $361 per GB, or about $722 per GB counting the 2 credits, against $2 per GB for residential. The httpbin answers showed a Googlebot identity (observation only). The residential prices are unchanged against the dossier ($2 per GB for 1 GB down to $0.65 per GB at 5,000 GB); the order summary of 350 GB now shows Price before discount $595 and 55% Discount -$315. Nothing was bought and the payment screen was not opened.",
+    "findings": [
+     "Text we checked: \"Successfully claimed the trial!\". What we saw: Webpage, Pricing, Start with Trial: 3 clicks and about 1 minute, with an order summary of 500 for 7 Days at $0 and no KYC, card or phone number asked; the Overview showed Wallet $0.000. The dossier only says free API trials.",
+     "Text we checked: \"\"credits\":2\". What we saw: Every one of the 8 answers carried \"credits\":2, and the balance went from 500 to 484, so 16 for 8 requests. The 500 of the trial are therefore about 250 requests.",
+     "Text we checked: \"The advertised rate looks cheap, but my first project is nowhere near the size that earns it\". What we saw: A first project can start at 1 GB for $2, but the rate falls from $2 per GB to $0.65 per GB only at 5,000 GB for $3250, so a small first project pays the high rates.",
+     "Text we checked: \"Total usage: 8\". What we saw: The Statistics tab showed 8 successful, 0 failed and an average time of 0.38 seconds, and no gigabytes. Our own measure of the answers was 97 to 3636 bytes.",
+     "Text we checked: \"$2/GB\". What we saw: The residential tiers were 1 GB $2/GB (total $2), 10 GB $1.8/GB ($18), 50 GB $1.5/GB ($75), 150 GB $1/GB ($150) and 350 GB $0.8/GB ($280), with $2.85, $2.75, $1.95, $1.5 and $1.7 per GB struck through; the minimum purchase is 1 GB. The same numbers are in the dossier and were seen again on the public page."
+    ],
+    "not_tested": [
+     "The residential proxies themselves: nothing was bought and no proxy traffic was sent.",
+     "A refund, the tax on the checkout and the payment screen.",
+     "Where the IP addresses come from.",
+     "Whether Residential Proxies need the account verification (KYC).",
+     "Bandwidth in GB for the Webpage API, which the dashboard does not show.",
+     "Deleting the account, which was looked up but not clicked.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Successfully claimed the trial!",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Webpage, Pricing, Start with Trial: 3 clicks and about 1 minute, with an order summary of 500 for 7 Days at $0 and no KYC, card or phone number asked; the Overview showed Wallet $0.000. The dossier only says free API trials.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The trial claim in the dossier against the trial that was claimed; the dossier names no trial size or length.",
+      "status": "confirmed",
+      "buying_consequence": "A free trial of the Webpage API exists and needs no card, so you can try it without paying.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "\"credits\":2",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Every one of the 8 answers carried \"credits\":2, and the balance went from 500 to 484, so 16 for 8 requests. The 500 of the trial are therefore about 250 requests.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The trial size in the order summary against the credits that the answers took from the balance.",
+      "status": "contradicted",
+      "buying_consequence": "The trial gives half the requests that the headline number suggests.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "The advertised rate looks cheap, but my first project is nowhere near the size that earns it.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "A first project can start at 1 GB for $2, but the rate falls from $2 per GB to $0.65 per GB only at 5,000 GB for $3250, so a small first project pays the high rates.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The tier list in the plan pages against the pain in the dossier; no proxy traffic was bought, so real project costs were not measured.",
+      "status": "confirmed",
+      "buying_consequence": "You can start small for $2, but the low per-GB rates need a volume that a first project does not reach.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$361 per GB",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Own calculation: the Webpage API charges per answer ($1.30 per 1K at the 10,000 pack), so for answers of 3636 bytes it comes to about $361 per GB, and about $722 per GB counting 2 credits per answer, against $2 per GB for residential. Larger real pages lower the figure; the dashboard shows no gigabytes.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "Our own arithmetic on 8 test answers against the per-GB price; the vendor shows no per-GB figure for this product.",
+      "status": "not_comparable",
+      "buying_consequence": "For small pages the per-answer Webpage API is far more expensive per GB than residential traffic; for larger pages it gets cheaper per GB.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "googlebot(at)googlebot.com",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The httpbin answers showed an outgoing IP address together with a User-Agent and a From header that identify Googlebot. This is a plain observation; the cause was not investigated and other target sites were not tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The httpbin /headers answer against no dossier claim on the identity of the requests.",
+      "status": "not_comparable",
+      "buying_consequence": "The requests did not show an ordinary browser identity; check what your own target sites see before you rely on it.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Total usage: 8",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Statistics tab showed 8 successful, 0 failed and an average time of 0.38 seconds, and no gigabytes. Our own measure of the answers was 97 to 3636 bytes.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The count in the dashboard against our own 8 requests; the bandwidth could not be compared.",
+      "status": "confirmed",
+      "buying_consequence": "You pay per answer and the dashboard counts answers, so measure the size of your own pages yourself.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$2/GB",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The residential tiers were 1 GB $2/GB (total $2), 10 GB $1.8/GB ($18), 50 GB $1.5/GB ($75), 150 GB $1/GB ($150) and 350 GB $0.8/GB ($280), with $2.85, $2.75, $1.95, $1.5 and $1.7 per GB struck through; the minimum purchase is 1 GB. The same numbers are in the dossier and were seen again on the public page.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The five tiers in the dashboard against the dossier and the public page; no tax was shown.",
+      "status": "confirmed",
+      "buying_consequence": "The residential prices have not changed against the dossier.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "55% Discount",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The order summary for 350 GB showed Price before discount $595, 55% Discount -$315 and Total $280. The public page shows no discount percentage and no price before discount.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The order summary against the dossier, which has no discount line; our own division of the discount is in the README.",
+      "status": "confirmed",
+      "buying_consequence": "The $280 for 350 GB is presented as a 55% discount; the discount line is new against the dossier.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "1,000 GB $0.73/GB = $730",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Enterprise rows were 1,000 GB $0.73/GB = $730, 2,000 GB $0.7/GB = $1400 and 5,000 GB $0.65/GB = $3250, the same as in the dossier; above that the page says Contact sales.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The three Enterprise rows against the dossier rows; nothing was bought.",
+      "status": "confirmed",
+      "buying_consequence": "The big-volume rates are unchanged and need at least 1,000 GB.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Total $13 / Continue to checkout",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Right after the trial was claimed, the page behind the message showed Total $13 with Continue to checkout for the 10,000 pack. It was not clicked.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The upsell on screen against the free claim that had just been completed; the checkout was not opened.",
+      "status": "confirmed",
+      "buying_consequence": "A paid pack is offered at once after the free claim; nothing is charged unless you continue.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Account verification (KYC) Not verified",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Account Settings page showed Account verification (KYC) with Not verified and a Verify account button, and says that other products remain available as usual. The trial asked for no verification; whether Residential Proxies need it was not tested.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The account page against a test that stayed on the free Webpage trial and did not buy residential traffic.",
+      "status": "not_testable",
+      "buying_consequence": "It is unknown whether buying residential traffic needs the verification; the Webpage trial did not.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Once your account is deleted, your service will be deactivated immediately.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Avatar, My Account, Account Settings has a Delete Account button with this text. It was not clicked. There was no paid plan to cancel.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The warning text against a test that did not delete or pay anything.",
+      "status": "not_testable",
+      "buying_consequence": "Leaving means deleting the account; a paid plan was never bought, so cancelling it was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Total $280",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The order summary for 350 GB ended in Total $280 with Continue to checkout, which was not clicked; no tax line, no payment screen and no card form was seen for any pack.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/thordata-review/#claim-vs-measured"
+      },
+      "plan": "Free Webpage trial; the plan pages and the order summary were viewed, nothing was paid",
+      "comparability": "The plan page against a checkout that was never opened; no tax line, fee or stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "No price you would pay at checkout was seen, so only the list prices are confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested the free Webpage trial of Thordata: 500 answers for 7 days at $0, claimed in 3 clicks in about a minute with no KYC, card or phone number. Every answer took 2 credits, so the balance went from 500 to 484 after 8 requests, about 250 requests in all, all HTTP 200. The dashboard counts answers and shows no gigabytes; by our own calculation from 3636 byte test pages the Webpage API comes to about $361 per GB, or about $722 per GB counting the 2 credits, against $2 per GB for residential. The httpbin answers showed a Googlebot identity (observation only). The residential prices are unchanged against the dossier ($2 per GB for 1 GB down to $0.65 per GB at 5,000 GB); the order summary of 350 GB now shows Price before discount $595 and 55% Discount -$315. Nothing was bought and the payment screen was not opened. Account and start: the account was created by Daan (registration 18/11/2026, dashboard.thordata.com, interface already in English); our AI assistant ran the test in the Chrome of Daan from about 14:35 (Amsterdam). The Overview showed Wallet $0.000 and the trial token was valid until 25/11/2026. No KYC, card or phone number was asked for the trial. The dossier name is Thordata and the review is on AIBM (b2b/thordata-review). The pain that was tested: Teams starting a first scraping project, \"The advertised rate looks cheap, but my first project is nowhere near the size that earns it.\" (dossier: solved in part, no alternative listed). Core action: Webpage, Pricing, the Webpage pack of 500 answers for 7 days at $0, Start with Trial. The order summary said 500 for 7 Days and $0, the message was Successfully claimed the trial! with the button Go use it: 3 clicks, about 1 minute. Right after the claim the page behind it showed Total $13 with Continue to checkout (the 10,000 pack); it was not clicked. Playground: the balance said 500 with Expiration time 25/11/2026, and the example is a cURL POST to the Webunlocker endpoint with a Bearer token (the token is not recorded anywhere). 8 requests were sent, only to httpbin (/ip, /headers and /html), all HTTP 200 in 0.4 to 0.75 seconds. Every answer carried \"credits\":2. The answers were 97, 374 and 3636 bytes, 15,487 bytes in total. Observation, no judgment: the httpbin answers showed an outgoing IP address and a User-Agent and a From header that identify Googlebot (googlebot(at)googlebot.com). The cause was not investigated and whether a normal target site sees the same was not tested. Statistics: Total usage 8, successful 8, failed 0, average response time 0.38 seconds; the dashboard shows no gigabytes for the Webpage API. The balance fell from 500 to 484, so 16 for 8 requests, 2 per answer, which leaves about 250 requests in the trial. After the 8 requests the API token was refreshed in the dashboard (Refresh, Confirm, Refresh successfully); a 9th request with the old key gave {\"code\":401,\"data\":\"API key authentication failed:API Token is error\"}. 9 requests in all, within the limit of 20. The new token was not viewed or recorded. Own calculation, not a vendor figure: the Webpage API is priced per answer, the dashboard shows no gigabytes, and the tester measured the size of the answers himself: 97, 374 and 3636 bytes, 15,487 bytes in all for 8 requests (15.487 in the raw note, a Dutch thousands dot). At $1.30 per 1K for the 10,000 pack, a page of the largest test size (3636 bytes, about 3,6 KB) is 3,6 MB per 1K answers, which is about $361 per GB. Because every answer took 2 credits from the balance, the reading with credits is about $722 per GB. Residential Proxies cost $2 per GB at the 1 GB tier, far below that. The figure only holds for pages as small as the httpbin test pages; real pages are larger, so the cost per GB of the Webpage API would drop in proportion, and whether a credit costs the price of an answer or half of it was not verified. The 8 test requests are too small a sample for more. Plans, up to the point of paying: Residential Proxies, tab Regular, pay-as-you-go, never expires, read by the tester in the dashboard on 18 Nov 2026: 1 GB $2/GB ($2.85/GB struck through), total $2 (tag New Users); 10 GB $1.8/GB, total $18; 50 GB $1.5/GB, total $75; 150 GB $1/GB, total $150; 350 GB $0.8/GB, total $280 (tag Best price). The order summary for 350 GB shows validity 30 Days, Price before discount $595, 55% Discount -$315 and Total $280. Enterprise, never expires: 1,000 GB $0.73/GB = $730; 2,000 GB $0.7/GB = $1400; 5,000 GB $0.65/GB = $3250; above that Custom Pricing Based on Demand / Contact sales. The minimum purchase is 1 GB ($2). Tax was not shown before checkout and the payment screen was not opened; card and crypto icons were visible. Webpage API, per answer: 10,000 answers $1.30/1K = $13; 50,000 $1.20/1K = $60; 100,000 $1.10/1K = $110; 200,000 $1.00/1K = $200. The public page thordata.com/pricing/residential-proxies was read again just before this delivery the same day and shows the same five Regular tiers (1 GB $2.00, 10 GB $1.80, 50 GB $1.50, 150 GB $1.00, 350 GB $0.80 per GB; totals $2.00, $18.00, $75.00, $150.00, $280.00; struck through $2.85, $2.75, $1.95, $1.50, $1.70), the High Volume rows (1000 GB $730.00, 2000 GB $1400.00, 5000 GB $3250.00) and the same Webpage packs. So the prices are unchanged against the dossier. Only the 55% discount line is new: it appears in the order summary of the dashboard, and the public page shows no discount percentage and no price before discount. The refund rule was not tested. Cancelling: Avatar, My Account, Account Settings has a Delete Account button with the text that the service is deactivated immediately after deletion; it was not clicked. The same page shows Account verification (KYC) Not verified with a Verify account button; it was not clicked, so whether Residential Proxies need the verification is unknown. Not tested: the residential proxies themselves (not bought, no proxy traffic), a refund, tax and the payment screen, where the IP addresses come from, the KYC rule for residential, and bandwidth in GB for the Webpage API. Clean up: the account, the trial (484 answers left until 25/11/2026) and the new token stay; there is no wallet balance and nothing was bought; our own tab was closed, no other tab was touched; no login details were saved in files. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The free Webpage trial is smaller than it looks: every answer takes 2 credits, so 500 gives about 250 requests. The dashboard counts answers and not gigabytes, so you cannot compare the Webpage API with the per-GB prices of residential traffic without measuring your own page sizes; for pages as small as our test pages it comes out far more expensive per GB. The low per-GB rates need volume: $2 per GB at 1 GB and $0.65 per GB only at 5,000 GB. Our httpbin answers showed a Googlebot identity, so check what your own target sites see. The account page shows KYC as not verified; whether residential needs it was not tested.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "The residential proxies themselves: nothing was bought and no proxy traffic was sent.",
+      "A refund, the tax on the checkout and the payment screen.",
+      "Where the IP addresses come from.",
+      "Whether Residential Proxies need the account verification (KYC).",
+      "Bandwidth in GB for the Webpage API, which the dashboard does not show.",
+      "Deleting the account, which was looked up but not clicked.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 14:35 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "thordata:cancellation_terms",

@@ -70,10 +70,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -81,7 +80,332 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/autowrite-review.html",
+  "method": [
+   "Daan created the account and our AI assistant ran the test in Daan's browser",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "10 posts every 30 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Free plan in the app and on the Shopify plan screen gives 10 posts and 10 images every 30 days, and the counter went from 0 / 10 to 1 / 10 after one post. The vendor FAQ read before the test said 3 posts; the app and the plan screen say 10, as the listing does.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the paid plans were Not available on a development store",
+    "comparability": "Dossier and listing figure of 10 free posts against the Usage & Plan page and the counter after one post; one post was made, not ten.",
+    "status": "confirmed",
+    "buying_consequence": "A store on Free can make up to 10 posts a month according to the app counter; the older FAQ figure of 3 should not be used.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Brand voices",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The dossier lists brand voices as a Starter feature, but on the Free plan Settings accepted a new voice and showed Brand voice saved and 1 voice, Test voice, professional. Whether the voice is used in a generation on Free was not tested.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the paid plans were Not available on a development store",
+    "comparability": "Dossier plan split for brand voices against the saved voice on Free; use in a generation was not tested.",
+    "status": "contradicted",
+    "buying_consequence": "A store on Free can save a brand voice, which is more than the dossier says; its effect on a generated post is not known.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Content quality 95/100",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The post got 95/100 from the app itself, with checks for length, titles, headings, readability and AI filler phrases. The text reads well but opens with an invented anecdote and has no sources. The score was not checked by a second tool.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the paid plans were Not available on a development store",
+    "comparability": "The app's own score of its own output; no independent score and no ranking outcome was available.",
+    "status": "not_testable",
+    "buying_consequence": "The 95/100 is the app's own measure of its own post and says little about whether the post would rank or whether it is accurate.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "auto-publish",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "Auto-publish is listed as a Starter feature and the editor has a button Publish to Shopify, but publishing was not tried and the paid plans could not be picked on a development store.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the paid plans were Not available on a development store",
+    "comparability": "Dossier and plan card feature against a button that was seen but not used; nothing was compared.",
+    "status": "not_testable",
+    "buying_consequence": "It is not known from this test whether a post can be published to the blog on the Free plan or what auto-publish does on Starter.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Starter $9 / 30 days, Pro $29 / 30 days, Business $79 / 30 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Shopify plan screen lists Starter $9, Pro $29 and Business $79 every 30 days, the same amounts and contents as the dossier and the listing, but all three were greyed out with Not available on a development store. No approval screen, tax line or total was seen.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the paid plans were Not available on a development store",
+    "comparability": "Plan screen amounts against the dossier amounts with no checkout reached in the app and no stored cost rule compared.",
+    "status": "not_testable",
+    "buying_consequence": "The amounts match, but what a buyer is charged at checkout, with tax, was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AutoWrite on a Shopify development store: the install (with an error on the first open that went away after a reload), one SEO blog post made on the Free plan in 4 steps without a card (1500 words, a featured image, Content quality 95/100, status Draft), the usage counter (1 / 10), a brand voice saved on Free, and the plan screen on which Starter, Pro and Business were Not available on a development store. The generation screen did not refresh by itself and the text appeared only after a reload, about 3 minutes after the start. Publishing, automations and the paid plans were not tested, and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:05; the Shopify dialog Install app asked only for View staff and contributor data (store owner, blog contributors) and View and edit store data (products, Online Store). No card was asked. The install was done at about 19:07. First open: the first screen after the install was an error, Application Error: Cannot coerce the result to a single JSON object. The result contains 0 rows. Code: PGRST116. After reloading the same address the dashboard opened normally (Total Posts 0, Published 0, Scheduled 0). It looks like a first-time error while the store record was being created; it was not seen again. The admin was in English. Core action, make an SEO blog post: on the Free plan, Posts, Create New Post, Create with AI, the topic How to choose a snowboard for beginners, Generate post: 4 steps, no keyword and no product chosen. The screen stayed on This post is still generating, with a line that a generation stuck for a long time may have failed silently, and empty text; it did not refresh by itself, and the text appeared only after reloading the page, about 3 minutes after the start. A message about unsaved changes blocked leaving the page until Discard was clicked; the post stayed. Result: the title How to Choose Your First Snowboard (and Avoid Bad Advice), 1500 words with 5 H2 and 6 H3 headings, an excerpt, a generated featured image of snowboards, status Draft, and Content quality 95/100 with checks for length, SEO title, meta description, headings, URL handle (a warning), readability (Flesch 83/100), AI filler phrases, sentence rhythm and active voice, plus Version History (1). The text reads well but opens with an invented anecdote and has no sources and no store products (product references are a Pro feature). The score is the app's own and was not checked by a second tool. The post was not published to the blog; it stayed a draft in the app. Counter: Usage & Plan showed Posts generated 0 / 10 and Images generated 0 / 10 before the post and 1 / 10 for both after it. What is included on Free: 10 posts and 10 images every 30 days, 1 automation, Basic SEO; usage window 17-11-2026 to 17-12-2026. The vendor FAQ, as read before the test, says 3 posts for the free plan; the app and the plan screen say 10. Plans: Manage plan opened the Shopify screen Select a plan. Free to test: these plans are free to test on this store, regular pricing applies when the store goes live; Free with a Select button. Under Unavailable on dev stores: Starter $9 / 30 days, Pro $29 / 30 days and Business $79 / 30 days, all with a greyed out Not available. The amounts and contents match the dossier and the listing (the listing of 17 November: Free, Starter $9, Pro $29, Business $79, all charges billed in USD, no reviews yet). Because paid plans cannot be picked on a development store, no Approve subscription or test charge screen was reached, nothing was approved, nothing was paid and no card was asked. Difference with the dossier: the dossier lists brand voices and auto-publish as Starter features; on Free, Settings, Brand voices accepted a new voice (name, tone, custom instructions, banned words, preferred words) and showed Brand voice saved and 1 voice, Test voice, professional. Whether a saved voice is used in a generation or an automation on Free was not tested. Automations on Free: the page showed No automations yet with a Create automation button; not tested (the plan says 1 automation). Cancelling: Free plan, no subscription to cancel; the uninstall dialog (Settings, Apps, AutoWrite, Uninstall) says that the app can no longer be used, that data managed by the app, such as discounts, will be deleted and that a request goes to the app developer within 48 hours to delete personal customer information; a reason is required (Testing multiple apps was chosen). Not tested: publishing to the Shopify blog, scheduling in the calendar, automations, bulk generation, keyword research, product or collection references, Google grounding, other languages, paid plans and checkout. Clean up: the test brand voice and the draft post existed only in the app and went away with the uninstall; AutoWrite no longer appeared in the list of installed apps; other apps were not touched; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The first screen after the install was an error that needed a reload; the generation screen did not refresh by itself and the text appeared only after a reload, about 3 minutes after the start; a message about unsaved changes blocked leaving the page until Discard was clicked; the paid plans could not be picked on a development store, so their checkout was not seen.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Publishing to the Shopify blog, the calendar, automations and bulk generation.",
+    "Keyword research, product and collection references, Google grounding and other languages.",
+    "Whether a saved brand voice is used in a generation.",
+    "Paid plans, the Shopify approval screen and checkout.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 19:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/autowrite-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/autowrite-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/autowrite-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AutoWrite on a Shopify development store: the install (with an error on the first open that went away after a reload), one SEO blog post made on the Free plan in 4 steps without a card (1500 words, a featured image, Content quality 95/100, status Draft), the usage counter (1 / 10), a brand voice saved on Free, and the plan screen on which Starter, Pro and Business were Not available on a development store. The generation screen did not refresh by itself and the text appeared only after a reload, about 3 minutes after the start. Publishing, automations and the paid plans were not tested, and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:05; the Shopify dialog Install app asked only for View staff and contributor data (store owner, blog contributors) and View and edit store data (products, Online Store). No card was asked. The install was done at about 19:07. First open: the first screen after the install was an error, Application Error: Cannot coerce the result to a single JSON object. The result contains 0 rows. Code: PGRST116. After reloading the same address the dashboard opened normally (Total Posts 0, Published 0, Scheduled 0). It looks like a first-time error while the store record was being created; it was not seen again. The admin was in English. Core action, make an SEO blog post: on the Free plan, Posts, Create New Post, Create with AI, the topic How to choose a snowboard for beginners, Generate post: 4 steps, no keyword and no product chosen. The screen stayed on This post is still generating, with a line that a generation stuck for a long time may have failed silently, and empty text; it did not refresh by itself, and the text appeared only after reloading the page, about 3 minutes after the start. A message about unsaved changes blocked leaving the page until Discard was clicked; the post stayed. Result: the title How to Choose Your First Snowboard (and Avoid Bad Advice), 1500 words with 5 H2 and 6 H3 headings, an excerpt, a generated featured image of snowboards, status Draft, and Content quality 95/100 with checks for length, SEO title, meta description, headings, URL handle (a warning), readability (Flesch 83/100), AI filler phrases, sentence rhythm and active voice, plus Version History (1). The text reads well but opens with an invented anecdote and has no sources and no store products (product references are a Pro feature). The score is the app's own and was not checked by a second tool. The post was not published to the blog; it stayed a draft in the app. Counter: Usage & Plan showed Posts generated 0 / 10 and Images generated 0 / 10 before the post and 1 / 10 for both after it. What is included on Free: 10 posts and 10 images every 30 days, 1 automation, Basic SEO; usage window 17-11-2026 to 17-12-2026. The vendor FAQ, as read before the test, says 3 posts for the free plan; the app and the plan screen say 10. Plans: Manage plan opened the Shopify screen Select a plan. Free to test: these plans are free to test on this store, regular pricing applies when the store goes live; Free with a Select button. Under Unavailable on dev stores: Starter $9 / 30 days, Pro $29 / 30 days and Business $79 / 30 days, all with a greyed out Not available. The amounts and contents match the dossier and the listing (the listing of 17 November: Free, Starter $9, Pro $29, Business $79, all charges billed in USD, no reviews yet). Because paid plans cannot be picked on a development store, no Approve subscription or test charge screen was reached, nothing was approved, nothing was paid and no card was asked. Difference with the dossier: the dossier lists brand voices and auto-publish as Starter features; on Free, Settings, Brand voices accepted a new voice (name, tone, custom instructions, banned words, preferred words) and showed Brand voice saved and 1 voice, Test voice, professional. Whether a saved voice is used in a generation or an automation on Free was not tested. Automations on Free: the page showed No automations yet with a Create automation button; not tested (the plan says 1 automation). Cancelling: Free plan, no subscription to cancel; the uninstall dialog (Settings, Apps, AutoWrite, Uninstall) says that the app can no longer be used, that data managed by the app, such as discounts, will be deleted and that a request goes to the app developer within 48 hours to delete personal customer information; a reason is required (Testing multiple apps was chosen). Not tested: publishing to the Shopify blog, scheduling in the calendar, automations, bulk generation, keyword research, product or collection references, Google grounding, other languages, paid plans and checkout. Clean up: the test brand voice and the draft post existed only in the app and went away with the uninstall; AutoWrite no longer appeared in the list of installed apps; other apps were not touched; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/autowrite-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AutoWrite on a Shopify development store: the install (with an error on the first open that went away after a reload), one SEO blog post made on the Free plan in 4 steps without a card (1500 words, a featured image, Content quality 95/100, status Draft), the usage counter (1 / 10), a brand voice saved on Free, and the plan screen on which Starter, Pro and Business were Not available on a development store. The generation screen did not refresh by itself and the text appeared only after a reload, about 3 minutes after the start. Publishing, automations and the paid plans were not tested, and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:05; the Shopify dialog Install app asked only for View staff and contributor data (store owner, blog contributors) and View and edit store data (products, Online Store). No card was asked. The install was done at about 19:07. First open: the first screen after the install was an error, Application Error: Cannot coerce the result to a single JSON object. The result contains 0 rows. Code: PGRST116. After reloading the same address the dashboard opened normally (Total Posts 0, Published 0, Scheduled 0). It looks like a first-time error while the store record was being created; it was not seen again. The admin was in English. Core action, make an SEO blog post: on the Free plan, Posts, Create New Post, Create with AI, the topic How to choose a snowboard for beginners, Generate post: 4 steps, no keyword and no product chosen. The screen stayed on This post is still generating, with a line that a generation stuck for a long time may have failed silently, and empty text; it did not refresh by itself, and the text appeared only after reloading the page, about 3 minutes after the start. A message about unsaved changes blocked leaving the page until Discard was clicked; the post stayed. Result: the title How to Choose Your First Snowboard (and Avoid Bad Advice), 1500 words with 5 H2 and 6 H3 headings, an excerpt, a generated featured image of snowboards, status Draft, and Content quality 95/100 with checks for length, SEO title, meta description, headings, URL handle (a warning), readability (Flesch 83/100), AI filler phrases, sentence rhythm and active voice, plus Version History (1). The text reads well but opens with an invented anecdote and has no sources and no store products (product references are a Pro feature). The score is the app's own and was not checked by a second tool. The post was not published to the blog; it stayed a draft in the app. Counter: Usage & Plan showed Posts generated 0 / 10 and Images generated 0 / 10 before the post and 1 / 10 for both after it. What is included on Free: 10 posts and 10 images every 30 days, 1 automation, Basic SEO; usage window 17-11-2026 to 17-12-2026. The vendor FAQ, as read before the test, says 3 posts for the free plan; the app and the plan screen say 10. Plans: Manage plan opened the Shopify screen Select a plan. Free to test: these plans are free to test on this store, regular pricing applies when the store goes live; Free with a Select button. Under Unavailable on dev stores: Starter $9 / 30 days, Pro $29 / 30 days and Business $79 / 30 days, all with a greyed out Not available. The amounts and contents match the dossier and the listing (the listing of 17 November: Free, Starter $9, Pro $29, Business $79, all charges billed in USD, no reviews yet). Because paid plans cannot be picked on a development store, no Approve subscription or test charge screen was reached, nothing was approved, nothing was paid and no card was asked. Difference with the dossier: the dossier lists brand voices and auto-publish as Starter features; on Free, Settings, Brand voices accepted a new voice (name, tone, custom instructions, banned words, preferred words) and showed Brand voice saved and 1 voice, Test voice, professional. Whether a saved voice is used in a generation or an automation on Free was not tested. Automations on Free: the page showed No automations yet with a Create automation button; not tested (the plan says 1 automation). Cancelling: Free plan, no subscription to cancel; the uninstall dialog (Settings, Apps, AutoWrite, Uninstall) says that the app can no longer be used, that data managed by the app, such as discounts, will be deleted and that a request goes to the app developer within 48 hours to delete personal customer information; a reason is required (Testing multiple apps was chosen). Not tested: publishing to the Shopify blog, scheduling in the calendar, automations, bulk generation, keyword research, product or collection references, Google grounding, other languages, paid plans and checkout. Clean up: the test brand voice and the draft post existed only in the app and went away with the uninstall; AutoWrite no longer appeared in the list of installed apps; other apps were not touched; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/autowrite-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://marketingandsalessoftware.com/autowrite-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "AutoWrite",
+    "product_id": "autowrite",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AutoWrite on a Shopify development store: the install (with an error on the first open that went away after a reload), one SEO blog post made on the Free plan in 4 steps without a card (1500 words, a featured image, Content quality 95/100, status Draft), the usage counter (1 / 10), a brand voice saved on Free, and the plan screen on which Starter, Pro and Business were Not available on a development store. The generation screen did not refresh by itself and the text appeared only after a reload, about 3 minutes after the start. Publishing, automations and the paid plans were not tested, and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:05; the Shopify dialog Install app asked only for View staff and contributor data (store owner, blog contributors) and View and edit store data (products, Online Store). No card was asked. The install was done at about 19:07. First open: the first screen after the install was an error, Application Error: Cannot coerce the result to a single JSON object. The result contains 0 rows. Code: PGRST116. After reloading the same address the dashboard opened normally (Total Posts 0, Published 0, Scheduled 0). It looks like a first-time error while the store record was being created; it was not seen again. The admin was in English. Core action, make an SEO blog post: on the Free plan, Posts, Create New Post, Create with AI, the topic How to choose a snowboard for beginners, Generate post: 4 steps, no keyword and no product chosen. The screen stayed on This post is still generating, with a line that a generation stuck for a long time may have failed silently, and empty text; it did not refresh by itself, and the text appeared only after reloading the page, about 3 minutes after the start. A message about unsaved changes blocked leaving the page until Discard was clicked; the post stayed. Result: the title How to Choose Your First Snowboard (and Avoid Bad Advice), 1500 words with 5 H2 and 6 H3 headings, an excerpt, a generated featured image of snowboards, status Draft, and Content quality 95/100 with checks for length, SEO title, meta description, headings, URL handle (a warning), readability (Flesch 83/100), AI filler phrases, sentence rhythm and active voice, plus Version History (1). The text reads well but opens with an invented anecdote and has no sources and no store products (product references are a Pro feature). The score is the app's own and was not checked by a second tool. The post was not published to the blog; it stayed a draft in the app. Counter: Usage & Plan showed Posts generated 0 / 10 and Images generated 0 / 10 before the post and 1 / 10 for both after it. What is included on Free: 10 posts and 10 images every 30 days, 1 automation, Basic SEO; usage window 17-11-2026 to 17-12-2026. The vendor FAQ, as read before the test, says 3 posts for the free plan; the app and the plan screen say 10. Plans: Manage plan opened the Shopify screen Select a plan. Free to test: these plans are free to test on this store, regular pricing applies when the store goes live; Free with a Select button. Under Unavailable on dev stores: Starter $9 / 30 days, Pro $29 / 30 days and Business $79 / 30 days, all with a greyed out Not available. The amounts and contents match the dossier and the listing (the listing of 17 November: Free, Starter $9, Pro $29, Business $79, all charges billed in USD, no reviews yet). Because paid plans cannot be picked on a development store, no Approve subscription or test charge screen was reached, nothing was approved, nothing was paid and no card was asked. Difference with the dossier: the dossier lists brand voices and auto-publish as Starter features; on Free, Settings, Brand voices accepted a new voice (name, tone, custom instructions, banned words, preferred words) and showed Brand voice saved and 1 voice, Test voice, professional. Whether a saved voice is used in a generation or an automation on Free was not tested. Automations on Free: the page showed No automations yet with a Create automation button; not tested (the plan says 1 automation). Cancelling: Free plan, no subscription to cancel; the uninstall dialog (Settings, Apps, AutoWrite, Uninstall) says that the app can no longer be used, that data managed by the app, such as discounts, will be deleted and that a request goes to the app developer within 48 hours to delete personal customer information; a reason is required (Testing multiple apps was chosen). Not tested: publishing to the Shopify blog, scheduling in the calendar, automations, bulk generation, keyword research, product or collection references, Google grounding, other languages, paid plans and checkout. Clean up: the test brand voice and the draft post existed only in the app and went away with the uninstall; AutoWrite no longer appeared in the list of installed apps; other apps were not touched; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"10 posts every 30 days\". What we saw: The Free plan in the app and on the Shopify plan screen gives 10 posts and 10 images every 30 days, and the counter went from 0 / 10 to 1 / 10 after one post. The vendor FAQ read before the test said 3 posts; the app and the plan screen say 10, as the listing does.",
+     "Text we checked: \"Brand voices\". What we saw: The dossier lists brand voices as a Starter feature, but on the Free plan Settings accepted a new voice and showed Brand voice saved and 1 voice, Test voice, professional. Whether the voice is used in a generation on Free was not tested."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Publishing to the Shopify blog, the calendar, automations and bulk generation.",
+     "Keyword research, product and collection references, Google grounding and other languages.",
+     "Whether a saved brand voice is used in a generation.",
+     "Paid plans, the Shopify approval screen and checkout.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 19:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "10 posts every 30 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Free plan in the app and on the Shopify plan screen gives 10 posts and 10 images every 30 days, and the counter went from 0 / 10 to 1 / 10 after one post. The vendor FAQ read before the test said 3 posts; the app and the plan screen say 10, as the listing does.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the paid plans were Not available on a development store",
+      "comparability": "Dossier and listing figure of 10 free posts against the Usage & Plan page and the counter after one post; one post was made, not ten.",
+      "status": "confirmed",
+      "buying_consequence": "A store on Free can make up to 10 posts a month according to the app counter; the older FAQ figure of 3 should not be used.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Brand voices",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The dossier lists brand voices as a Starter feature, but on the Free plan Settings accepted a new voice and showed Brand voice saved and 1 voice, Test voice, professional. Whether the voice is used in a generation on Free was not tested.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the paid plans were Not available on a development store",
+      "comparability": "Dossier plan split for brand voices against the saved voice on Free; use in a generation was not tested.",
+      "status": "contradicted",
+      "buying_consequence": "A store on Free can save a brand voice, which is more than the dossier says; its effect on a generated post is not known.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Content quality 95/100",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The post got 95/100 from the app itself, with checks for length, titles, headings, readability and AI filler phrases. The text reads well but opens with an invented anecdote and has no sources. The score was not checked by a second tool.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the paid plans were Not available on a development store",
+      "comparability": "The app's own score of its own output; no independent score and no ranking outcome was available.",
+      "status": "not_testable",
+      "buying_consequence": "The 95/100 is the app's own measure of its own post and says little about whether the post would rank or whether it is accurate.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "auto-publish",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "Auto-publish is listed as a Starter feature and the editor has a button Publish to Shopify, but publishing was not tried and the paid plans could not be picked on a development store.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the paid plans were Not available on a development store",
+      "comparability": "Dossier and plan card feature against a button that was seen but not used; nothing was compared.",
+      "status": "not_testable",
+      "buying_consequence": "It is not known from this test whether a post can be published to the blog on the Free plan or what auto-publish does on Starter.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Starter $9 / 30 days, Pro $29 / 30 days, Business $79 / 30 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Shopify plan screen lists Starter $9, Pro $29 and Business $79 every 30 days, the same amounts and contents as the dossier and the listing, but all three were greyed out with Not available on a development store. No approval screen, tax line or total was seen.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the paid plans were Not available on a development store",
+      "comparability": "Plan screen amounts against the dossier amounts with no checkout reached in the app and no stored cost rule compared.",
+      "status": "not_testable",
+      "buying_consequence": "The amounts match, but what a buyer is charged at checkout, with tax, was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AutoWrite on a Shopify development store: the install (with an error on the first open that went away after a reload), one SEO blog post made on the Free plan in 4 steps without a card (1500 words, a featured image, Content quality 95/100, status Draft), the usage counter (1 / 10), a brand voice saved on Free, and the plan screen on which Starter, Pro and Business were Not available on a development store. The generation screen did not refresh by itself and the text appeared only after a reload, about 3 minutes after the start. Publishing, automations and the paid plans were not tested, and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:05; the Shopify dialog Install app asked only for View staff and contributor data (store owner, blog contributors) and View and edit store data (products, Online Store). No card was asked. The install was done at about 19:07. First open: the first screen after the install was an error, Application Error: Cannot coerce the result to a single JSON object. The result contains 0 rows. Code: PGRST116. After reloading the same address the dashboard opened normally (Total Posts 0, Published 0, Scheduled 0). It looks like a first-time error while the store record was being created; it was not seen again. The admin was in English. Core action, make an SEO blog post: on the Free plan, Posts, Create New Post, Create with AI, the topic How to choose a snowboard for beginners, Generate post: 4 steps, no keyword and no product chosen. The screen stayed on This post is still generating, with a line that a generation stuck for a long time may have failed silently, and empty text; it did not refresh by itself, and the text appeared only after reloading the page, about 3 minutes after the start. A message about unsaved changes blocked leaving the page until Discard was clicked; the post stayed. Result: the title How to Choose Your First Snowboard (and Avoid Bad Advice), 1500 words with 5 H2 and 6 H3 headings, an excerpt, a generated featured image of snowboards, status Draft, and Content quality 95/100 with checks for length, SEO title, meta description, headings, URL handle (a warning), readability (Flesch 83/100), AI filler phrases, sentence rhythm and active voice, plus Version History (1). The text reads well but opens with an invented anecdote and has no sources and no store products (product references are a Pro feature). The score is the app's own and was not checked by a second tool. The post was not published to the blog; it stayed a draft in the app. Counter: Usage & Plan showed Posts generated 0 / 10 and Images generated 0 / 10 before the post and 1 / 10 for both after it. What is included on Free: 10 posts and 10 images every 30 days, 1 automation, Basic SEO; usage window 17-11-2026 to 17-12-2026. The vendor FAQ, as read before the test, says 3 posts for the free plan; the app and the plan screen say 10. Plans: Manage plan opened the Shopify screen Select a plan. Free to test: these plans are free to test on this store, regular pricing applies when the store goes live; Free with a Select button. Under Unavailable on dev stores: Starter $9 / 30 days, Pro $29 / 30 days and Business $79 / 30 days, all with a greyed out Not available. The amounts and contents match the dossier and the listing (the listing of 17 November: Free, Starter $9, Pro $29, Business $79, all charges billed in USD, no reviews yet). Because paid plans cannot be picked on a development store, no Approve subscription or test charge screen was reached, nothing was approved, nothing was paid and no card was asked. Difference with the dossier: the dossier lists brand voices and auto-publish as Starter features; on Free, Settings, Brand voices accepted a new voice (name, tone, custom instructions, banned words, preferred words) and showed Brand voice saved and 1 voice, Test voice, professional. Whether a saved voice is used in a generation or an automation on Free was not tested. Automations on Free: the page showed No automations yet with a Create automation button; not tested (the plan says 1 automation). Cancelling: Free plan, no subscription to cancel; the uninstall dialog (Settings, Apps, AutoWrite, Uninstall) says that the app can no longer be used, that data managed by the app, such as discounts, will be deleted and that a request goes to the app developer within 48 hours to delete personal customer information; a reason is required (Testing multiple apps was chosen). Not tested: publishing to the Shopify blog, scheduling in the calendar, automations, bulk generation, keyword research, product or collection references, Google grounding, other languages, paid plans and checkout. Clean up: the test brand voice and the draft post existed only in the app and went away with the uninstall; AutoWrite no longer appeared in the list of installed apps; other apps were not touched; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The first screen after the install was an error that needed a reload; the generation screen did not refresh by itself and the text appeared only after a reload, about 3 minutes after the start; a message about unsaved changes blocked leaving the page until Discard was clicked; the paid plans could not be picked on a development store, so their checkout was not seen.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "Publishing to the Shopify blog, the calendar, automations and bulk generation.",
+      "Keyword research, product and collection references, Google grounding and other languages.",
+      "Whether a saved brand voice is used in a generation.",
+      "Paid plans, the Shopify approval screen and checkout.",
+      "Export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 19:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "autowrite:autowrite-q1",

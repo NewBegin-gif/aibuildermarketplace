@@ -70,10 +70,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -81,7 +80,368 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-17",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://zerotouchsupport.com/asknest-review.html",
+  "method": [
+   "Daan created the account and our AI assistant ran the test in Daan's browser",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Show me best sellers",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "On the Free plan the chip Show me best sellers gave four product cards in about 6 seconds, while the listing and the Starter card put best-seller suggestions on Starter and up.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Starter approval screen, not approved, development store",
+    "comparability": "Listing plan list with best-seller suggestions on Starter versus four product cards on the Free plan.",
+    "status": "contradicted",
+    "buying_consequence": "A Free store gets best-seller suggestions that the plan list keeps for Starter; this was seen once on a store with 18 products.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Policy page answers",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "With one policy page synced (Policies synced 1), the question What is your return policy? still got an answer without details that points to an e-mail address, the same as before the sync; the text of the policy page was not looked at.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Starter approval screen, not approved, development store",
+    "comparability": "Free feature Policy page answers versus the same answer before and after one sync; the policy text was not read.",
+    "status": "not_testable",
+    "buying_consequence": "The return question was not answered from a synced policy page, but it is not known whether that page held a return policy.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "50 AI replies/month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Free card shows 50 AI replies a month, as the listing says; the limit was not reached and reply 51 was not tried.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Starter approval screen, not approved, development store",
+    "comparability": "Listing Free allowance versus the Free card; behaviour at the limit was not tried.",
+    "status": "confirmed",
+    "buying_consequence": "Free is limited to 50 replies a month, as listed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Best-seller suggestions",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Starter card lists 500 AI replies a month, Best-seller suggestions and Product recommendations at $4.99 a month, as the listing says.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Starter approval screen, not approved, development store",
+    "comparability": "Listing Starter features versus the Starter card; the Starter plan was not started.",
+    "status": "confirmed",
+    "buying_consequence": "Starter at $4.99 adds replies, best-seller suggestions and recommendations, as listed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Free plan available",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The app opened on the Free plan with no payment step, no account and no e-mail address, as the listing says Free plan available.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Starter approval screen, not approved, development store",
+    "comparability": "Listing remark on a Free plan versus the first screen after the install.",
+    "status": "confirmed",
+    "buying_consequence": "A Free plan works straight after the install.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$4,99 USD every 30 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-17",
+    "observed": "The Shopify approval screen shows Starter at $4,99 USD every 30 days with a total of $4,99 due 17 Nov plus any applicable taxes and no trial, as the card says $4.99 a month; Approve was greyed out and nothing was approved.",
+    "observed_on": "2026-11-17",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; Starter approval screen, not approved, development store",
+    "comparability": "Plan card amount versus the approval screen with no tax line; no stored cost rule was compared.",
+    "status": "confirmed",
+    "buying_consequence": "Starter costs $4.99 for each 30 days from the first day, plus any taxes, with no trial.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-17",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AskNest AI on a Shopify development store on the Free plan: the install, a product sync of 18 items, the widget switched on in the theme editor preview (not saved), a best-sellers question that gave four product cards although the listing puts best-seller suggestions on Starter, a return question that got no details both before and after a policy page was synced (the text of that page was not looked at), the plan cards and the Starter approval screen (not approved). The first answer came after about 8 minutes and 5 steps. Nothing was paid, and the app was uninstalled afterwards. Install: the App Store listing (English) was read first; at 18:00 the install form was submitted in our own tab and the Shopify dialog Install app asked for View customer data (device and activity data), View staff and contributor data (store owner, blog contributors) and View store data (products, orders, Online Store, Shopify admin); Install was clicked. The app opened at once, with no separate account, no password and no e-mail address needed, on a dashboard with Current plan: Free and App: Inactive (Activate). The setup guide showed Total FAQs 0, Active FAQs 0, Synced products 0, Synced policies 0 and Replies used 0. The admin was in English. Core action, a shopper question answered in the widget: Sync products on the Products page gave, after about 5 seconds, Synced products 18 (Available 16, Unavailable 2, Vendors 6, Product types 4). In the theme editor, under App embeds, AskNest AI Widget was switched on and a button Ask AI appeared in the preview; this theme change was NOT saved. The widget says Hi! Ask me about store FAQs, products, shipping, returns, or product recommendations., with two chips, Show me best sellers and What is your return policy?, and the line Answers use this store's saved FAQs and synced product data. Question 1, with no policy and no FAQs: What is your return policy? The answer said that the bot does not have the return details available and asked the shopper to contact the shop by e-mail (the address of the shop was in the answer and is hidden in the images). Question 2: Show me best sellers on the Free plan gave four product cards with View product, The Multi-managed Snowboard, Selling Plans Ski Wax, The Collection Snowboard: Hydrogen and The Videographer Snowboard, in about 6 seconds. The listing says best-seller suggestions are on Starter and up, so this card list appeared on a plan where the listing says it is not included. Policy sync: Sync policies on the Knowledge page gave 1 policy page synced successfully., Policies synced 1 and Answer priority Hybrid (FAQs first, product-specific data second, policy pages third, then safe AI fallback). What text the synced policy page held was not looked at. The same return question after the sync again gave the answer that no details were available and to contact the shop by e-mail. So with one policy page synced the bot still could not answer the return question, but because the policy text was not checked it is not known whether the page was empty. Time: the first answer came at about 18:08, about 8 minutes and 5 steps after the install (install, sync products, theme editor, widget on and open, ask a question); the policy sync and the FAQ entry are not in that count. Plans: in the app, Current plan: Free and Shopify billing: No paid subscription; Free $0 a month with 50 AI replies a month, AI FAQ answers, Product finder widget, Policy page answers, Storefront chat widget and Usage tracking; Starter $4.99 with 500 AI replies a month, Best-seller suggestions, Product recommendations and an e-mail fallback; Growth $9.99 with 1,500 replies; Pro $19.99 with 5,000 replies. The listing has the same four prices and says AI replies in up to 3 shopper languages on Starter and in all supported languages on Growth and Pro; the app shows no language difference per plan. Checkout: Upgrade to Starter opened the Shopify screen Approve subscription: AskNest AI by Ecommerce Storez, plan AskNest AI Starter, $4,99 USD every 30 days, Subtotal $4,99 plus any applicable taxes, Total $4,99 Due 17 Nov, a row Add payment method and a greyed out Approve button. There is no free trial. The sentence about a test charge was NOT on the screen and a payment method had to be added, so nothing was approved; no card was entered; the screen was closed with Cancel. Cancelling: on the Free plan there is no subscription. For a paid plan the app says that downgrading to Free cancels the active Shopify subscription; that was not tried because no subscription existed. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the dialog says that you can no longer use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required (we chose Testing multiple apps). Not tested: own FAQs and a return question answered from them, the text of the synced policy page, the languages (one chosen language on Free, detection on Starter), hand over to a person, questions outside the FAQs after the limit of 50 replies, reply 51, the real shop (it has a password), a paid plan, any other question than the two chips, and a question about shipping. Clean up: the theme change (the app embed on) was not saved and was left with Leave page; the widget was off afterwards; the app was uninstalled after the test and left the list of installed apps; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The return question got no answer with a policy page synced; the widget answered best sellers on Free although the listing keeps that for Starter; the widget needs a separate switch in the theme editor; the first answer took about 8 minutes; and the Starter approval screen asked for a payment method and had no test charge sentence.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Own FAQs and a return answer from them, and the text of the synced policy page.",
+    "Languages, hand over to a person, and what happens after the limit of 50 replies.",
+    "The real shop with the widget saved in the theme.",
+    "A paid plan and the cancellation.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://zerotouchsupport.com/asknest-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://zerotouchsupport.com/asknest-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://zerotouchsupport.com/asknest-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AskNest AI on a Shopify development store on the Free plan: the install, a product sync of 18 items, the widget switched on in the theme editor preview (not saved), a best-sellers question that gave four product cards although the listing puts best-seller suggestions on Starter, a return question that got no details both before and after a policy page was synced (the text of that page was not looked at), the plan cards and the Starter approval screen (not approved). The first answer came after about 8 minutes and 5 steps. Nothing was paid, and the app was uninstalled afterwards. Install: the App Store listing (English) was read first; at 18:00 the install form was submitted in our own tab and the Shopify dialog Install app asked for View customer data (device and activity data), View staff and contributor data (store owner, blog contributors) and View store data (products, orders, Online Store, Shopify admin); Install was clicked. The app opened at once, with no separate account, no password and no e-mail address needed, on a dashboard with Current plan: Free and App: Inactive (Activate). The setup guide showed Total FAQs 0, Active FAQs 0, Synced products 0, Synced policies 0 and Replies used 0. The admin was in English. Core action, a shopper question answered in the widget: Sync products on the Products page gave, after about 5 seconds, Synced products 18 (Available 16, Unavailable 2, Vendors 6, Product types 4). In the theme editor, under App embeds, AskNest AI Widget was switched on and a button Ask AI appeared in the preview; this theme change was NOT saved. The widget says Hi! Ask me about store FAQs, products, shipping, returns, or product recommendations., with two chips, Show me best sellers and What is your return policy?, and the line Answers use this store's saved FAQs and synced product data. Question 1, with no policy and no FAQs: What is your return policy? The answer said that the bot does not have the return details available and asked the shopper to contact the shop by e-mail (the address of the shop was in the answer and is hidden in the images). Question 2: Show me best sellers on the Free plan gave four product cards with View product, The Multi-managed Snowboard, Selling Plans Ski Wax, The Collection Snowboard: Hydrogen and The Videographer Snowboard, in about 6 seconds. The listing says best-seller suggestions are on Starter and up, so this card list appeared on a plan where the listing says it is not included. Policy sync: Sync policies on the Knowledge page gave 1 policy page synced successfully., Policies synced 1 and Answer priority Hybrid (FAQs first, product-specific data second, policy pages third, then safe AI fallback). What text the synced policy page held was not looked at. The same return question after the sync again gave the answer that no details were available and to contact the shop by e-mail. So with one policy page synced the bot still could not answer the return question, but because the policy text was not checked it is not known whether the page was empty. Time: the first answer came at about 18:08, about 8 minutes and 5 steps after the install (install, sync products, theme editor, widget on and open, ask a question); the policy sync and the FAQ entry are not in that count. Plans: in the app, Current plan: Free and Shopify billing: No paid subscription; Free $0 a month with 50 AI replies a month, AI FAQ answers, Product finder widget, Policy page answers, Storefront chat widget and Usage tracking; Starter $4.99 with 500 AI replies a month, Best-seller suggestions, Product recommendations and an e-mail fallback; Growth $9.99 with 1,500 replies; Pro $19.99 with 5,000 replies. The listing has the same four prices and says AI replies in up to 3 shopper languages on Starter and in all supported languages on Growth and Pro; the app shows no language difference per plan. Checkout: Upgrade to Starter opened the Shopify screen Approve subscription: AskNest AI by Ecommerce Storez, plan AskNest AI Starter, $4,99 USD every 30 days, Subtotal $4,99 plus any applicable taxes, Total $4,99 Due 17 Nov, a row Add payment method and a greyed out Approve button. There is no free trial. The sentence about a test charge was NOT on the screen and a payment method had to be added, so nothing was approved; no card was entered; the screen was closed with Cancel. Cancelling: on the Free plan there is no subscription. For a paid plan the app says that downgrading to Free cancels the active Shopify subscription; that was not tried because no subscription existed. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the dialog says that you can no longer use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required (we chose Testing multiple apps). Not tested: own FAQs and a return question answered from them, the text of the synced policy page, the languages (one chosen language on Free, detection on Starter), hand over to a person, questions outside the FAQs after the limit of 50 replies, reply 51, the real shop (it has a password), a paid plan, any other question than the two chips, and a question about shipping. Clean up: the theme change (the app embed on) was not saved and was left with Leave page; the widget was off afterwards; the app was uninstalled after the test and left the list of installed apps; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://zerotouchsupport.com/asknest-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AskNest AI on a Shopify development store on the Free plan: the install, a product sync of 18 items, the widget switched on in the theme editor preview (not saved), a best-sellers question that gave four product cards although the listing puts best-seller suggestions on Starter, a return question that got no details both before and after a policy page was synced (the text of that page was not looked at), the plan cards and the Starter approval screen (not approved). The first answer came after about 8 minutes and 5 steps. Nothing was paid, and the app was uninstalled afterwards. Install: the App Store listing (English) was read first; at 18:00 the install form was submitted in our own tab and the Shopify dialog Install app asked for View customer data (device and activity data), View staff and contributor data (store owner, blog contributors) and View store data (products, orders, Online Store, Shopify admin); Install was clicked. The app opened at once, with no separate account, no password and no e-mail address needed, on a dashboard with Current plan: Free and App: Inactive (Activate). The setup guide showed Total FAQs 0, Active FAQs 0, Synced products 0, Synced policies 0 and Replies used 0. The admin was in English. Core action, a shopper question answered in the widget: Sync products on the Products page gave, after about 5 seconds, Synced products 18 (Available 16, Unavailable 2, Vendors 6, Product types 4). In the theme editor, under App embeds, AskNest AI Widget was switched on and a button Ask AI appeared in the preview; this theme change was NOT saved. The widget says Hi! Ask me about store FAQs, products, shipping, returns, or product recommendations., with two chips, Show me best sellers and What is your return policy?, and the line Answers use this store's saved FAQs and synced product data. Question 1, with no policy and no FAQs: What is your return policy? The answer said that the bot does not have the return details available and asked the shopper to contact the shop by e-mail (the address of the shop was in the answer and is hidden in the images). Question 2: Show me best sellers on the Free plan gave four product cards with View product, The Multi-managed Snowboard, Selling Plans Ski Wax, The Collection Snowboard: Hydrogen and The Videographer Snowboard, in about 6 seconds. The listing says best-seller suggestions are on Starter and up, so this card list appeared on a plan where the listing says it is not included. Policy sync: Sync policies on the Knowledge page gave 1 policy page synced successfully., Policies synced 1 and Answer priority Hybrid (FAQs first, product-specific data second, policy pages third, then safe AI fallback). What text the synced policy page held was not looked at. The same return question after the sync again gave the answer that no details were available and to contact the shop by e-mail. So with one policy page synced the bot still could not answer the return question, but because the policy text was not checked it is not known whether the page was empty. Time: the first answer came at about 18:08, about 8 minutes and 5 steps after the install (install, sync products, theme editor, widget on and open, ask a question); the policy sync and the FAQ entry are not in that count. Plans: in the app, Current plan: Free and Shopify billing: No paid subscription; Free $0 a month with 50 AI replies a month, AI FAQ answers, Product finder widget, Policy page answers, Storefront chat widget and Usage tracking; Starter $4.99 with 500 AI replies a month, Best-seller suggestions, Product recommendations and an e-mail fallback; Growth $9.99 with 1,500 replies; Pro $19.99 with 5,000 replies. The listing has the same four prices and says AI replies in up to 3 shopper languages on Starter and in all supported languages on Growth and Pro; the app shows no language difference per plan. Checkout: Upgrade to Starter opened the Shopify screen Approve subscription: AskNest AI by Ecommerce Storez, plan AskNest AI Starter, $4,99 USD every 30 days, Subtotal $4,99 plus any applicable taxes, Total $4,99 Due 17 Nov, a row Add payment method and a greyed out Approve button. There is no free trial. The sentence about a test charge was NOT on the screen and a payment method had to be added, so nothing was approved; no card was entered; the screen was closed with Cancel. Cancelling: on the Free plan there is no subscription. For a paid plan the app says that downgrading to Free cancels the active Shopify subscription; that was not tried because no subscription existed. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the dialog says that you can no longer use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required (we chose Testing multiple apps). Not tested: own FAQs and a return question answered from them, the text of the synced policy page, the languages (one chosen language on Free, detection on Starter), hand over to a person, questions outside the FAQs after the limit of 50 replies, reply 51, the real shop (it has a password), a paid plan, any other question than the two chips, and a question about shipping. Clean up: the theme change (the app embed on) was not saved and was left with Leave page; the widget was off afterwards; the app was uninstalled after the test and left the list of installed apps; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://zerotouchsupport.com/asknest-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-17",
+    "evidence_url": "https://zerotouchsupport.com/asknest-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-17",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "AskNest",
+    "product_id": "asknest",
+    "run_date": "2026-11-17",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AskNest AI on a Shopify development store on the Free plan: the install, a product sync of 18 items, the widget switched on in the theme editor preview (not saved), a best-sellers question that gave four product cards although the listing puts best-seller suggestions on Starter, a return question that got no details both before and after a policy page was synced (the text of that page was not looked at), the plan cards and the Starter approval screen (not approved). The first answer came after about 8 minutes and 5 steps. Nothing was paid, and the app was uninstalled afterwards. Install: the App Store listing (English) was read first; at 18:00 the install form was submitted in our own tab and the Shopify dialog Install app asked for View customer data (device and activity data), View staff and contributor data (store owner, blog contributors) and View store data (products, orders, Online Store, Shopify admin); Install was clicked. The app opened at once, with no separate account, no password and no e-mail address needed, on a dashboard with Current plan: Free and App: Inactive (Activate). The setup guide showed Total FAQs 0, Active FAQs 0, Synced products 0, Synced policies 0 and Replies used 0. The admin was in English. Core action, a shopper question answered in the widget: Sync products on the Products page gave, after about 5 seconds, Synced products 18 (Available 16, Unavailable 2, Vendors 6, Product types 4). In the theme editor, under App embeds, AskNest AI Widget was switched on and a button Ask AI appeared in the preview; this theme change was NOT saved. The widget says Hi! Ask me about store FAQs, products, shipping, returns, or product recommendations., with two chips, Show me best sellers and What is your return policy?, and the line Answers use this store's saved FAQs and synced product data. Question 1, with no policy and no FAQs: What is your return policy? The answer said that the bot does not have the return details available and asked the shopper to contact the shop by e-mail (the address of the shop was in the answer and is hidden in the images). Question 2: Show me best sellers on the Free plan gave four product cards with View product, The Multi-managed Snowboard, Selling Plans Ski Wax, The Collection Snowboard: Hydrogen and The Videographer Snowboard, in about 6 seconds. The listing says best-seller suggestions are on Starter and up, so this card list appeared on a plan where the listing says it is not included. Policy sync: Sync policies on the Knowledge page gave 1 policy page synced successfully., Policies synced 1 and Answer priority Hybrid (FAQs first, product-specific data second, policy pages third, then safe AI fallback). What text the synced policy page held was not looked at. The same return question after the sync again gave the answer that no details were available and to contact the shop by e-mail. So with one policy page synced the bot still could not answer the return question, but because the policy text was not checked it is not known whether the page was empty. Time: the first answer came at about 18:08, about 8 minutes and 5 steps after the install (install, sync products, theme editor, widget on and open, ask a question); the policy sync and the FAQ entry are not in that count. Plans: in the app, Current plan: Free and Shopify billing: No paid subscription; Free $0 a month with 50 AI replies a month, AI FAQ answers, Product finder widget, Policy page answers, Storefront chat widget and Usage tracking; Starter $4.99 with 500 AI replies a month, Best-seller suggestions, Product recommendations and an e-mail fallback; Growth $9.99 with 1,500 replies; Pro $19.99 with 5,000 replies. The listing has the same four prices and says AI replies in up to 3 shopper languages on Starter and in all supported languages on Growth and Pro; the app shows no language difference per plan. Checkout: Upgrade to Starter opened the Shopify screen Approve subscription: AskNest AI by Ecommerce Storez, plan AskNest AI Starter, $4,99 USD every 30 days, Subtotal $4,99 plus any applicable taxes, Total $4,99 Due 17 Nov, a row Add payment method and a greyed out Approve button. There is no free trial. The sentence about a test charge was NOT on the screen and a payment method had to be added, so nothing was approved; no card was entered; the screen was closed with Cancel. Cancelling: on the Free plan there is no subscription. For a paid plan the app says that downgrading to Free cancels the active Shopify subscription; that was not tried because no subscription existed. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the dialog says that you can no longer use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required (we chose Testing multiple apps). Not tested: own FAQs and a return question answered from them, the text of the synced policy page, the languages (one chosen language on Free, detection on Starter), hand over to a person, questions outside the FAQs after the limit of 50 replies, reply 51, the real shop (it has a password), a paid plan, any other question than the two chips, and a question about shipping. Clean up: the theme change (the app embed on) was not saved and was left with Leave page; the widget was off afterwards; the app was uninstalled after the test and left the list of installed apps; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "findings": [
+     "Text we checked: \"Show me best sellers\". What we saw: On the Free plan the chip Show me best sellers gave four product cards in about 6 seconds, while the listing and the Starter card put best-seller suggestions on Starter and up.",
+     "Text we checked: \"50 AI replies/month\". What we saw: The Free card shows 50 AI replies a month, as the listing says; the limit was not reached and reply 51 was not tried.",
+     "Text we checked: \"Best-seller suggestions\". What we saw: The Starter card lists 500 AI replies a month, Best-seller suggestions and Product recommendations at $4.99 a month, as the listing says.",
+     "Text we checked: \"Free plan available\". What we saw: The app opened on the Free plan with no payment step, no account and no e-mail address, as the listing says Free plan available."
+    ],
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Own FAQs and a return answer from them, and the text of the synced policy page.",
+     "Languages, hand over to a person, and what happens after the limit of 50 replies.",
+     "The real shop with the widget saved in the theme.",
+     "A paid plan and the cancellation.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Show me best sellers",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "On the Free plan the chip Show me best sellers gave four product cards in about 6 seconds, while the listing and the Starter card put best-seller suggestions on Starter and up.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Starter approval screen, not approved, development store",
+      "comparability": "Listing plan list with best-seller suggestions on Starter versus four product cards on the Free plan.",
+      "status": "contradicted",
+      "buying_consequence": "A Free store gets best-seller suggestions that the plan list keeps for Starter; this was seen once on a store with 18 products.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Policy page answers",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "With one policy page synced (Policies synced 1), the question What is your return policy? still got an answer without details that points to an e-mail address, the same as before the sync; the text of the policy page was not looked at.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Starter approval screen, not approved, development store",
+      "comparability": "Free feature Policy page answers versus the same answer before and after one sync; the policy text was not read.",
+      "status": "not_testable",
+      "buying_consequence": "The return question was not answered from a synced policy page, but it is not known whether that page held a return policy.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "50 AI replies/month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Free card shows 50 AI replies a month, as the listing says; the limit was not reached and reply 51 was not tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Starter approval screen, not approved, development store",
+      "comparability": "Listing Free allowance versus the Free card; behaviour at the limit was not tried.",
+      "status": "confirmed",
+      "buying_consequence": "Free is limited to 50 replies a month, as listed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Best-seller suggestions",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Starter card lists 500 AI replies a month, Best-seller suggestions and Product recommendations at $4.99 a month, as the listing says.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Starter approval screen, not approved, development store",
+      "comparability": "Listing Starter features versus the Starter card; the Starter plan was not started.",
+      "status": "confirmed",
+      "buying_consequence": "Starter at $4.99 adds replies, best-seller suggestions and recommendations, as listed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Free plan available",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The app opened on the Free plan with no payment step, no account and no e-mail address, as the listing says Free plan available.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Starter approval screen, not approved, development store",
+      "comparability": "Listing remark on a Free plan versus the first screen after the install.",
+      "status": "confirmed",
+      "buying_consequence": "A Free plan works straight after the install.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$4,99 USD every 30 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Shopify approval screen shows Starter at $4,99 USD every 30 days with a total of $4,99 due 17 Nov plus any applicable taxes and no trial, as the card says $4.99 a month; Approve was greyed out and nothing was approved.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; Starter approval screen, not approved, development store",
+      "comparability": "Plan card amount versus the approval screen with no tax line; no stored cost rule was compared.",
+      "status": "confirmed",
+      "buying_consequence": "Starter costs $4.99 for each 30 days from the first day, plus any taxes, with no trial.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-17",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AskNest AI on a Shopify development store on the Free plan: the install, a product sync of 18 items, the widget switched on in the theme editor preview (not saved), a best-sellers question that gave four product cards although the listing puts best-seller suggestions on Starter, a return question that got no details both before and after a policy page was synced (the text of that page was not looked at), the plan cards and the Starter approval screen (not approved). The first answer came after about 8 minutes and 5 steps. Nothing was paid, and the app was uninstalled afterwards. Install: the App Store listing (English) was read first; at 18:00 the install form was submitted in our own tab and the Shopify dialog Install app asked for View customer data (device and activity data), View staff and contributor data (store owner, blog contributors) and View store data (products, orders, Online Store, Shopify admin); Install was clicked. The app opened at once, with no separate account, no password and no e-mail address needed, on a dashboard with Current plan: Free and App: Inactive (Activate). The setup guide showed Total FAQs 0, Active FAQs 0, Synced products 0, Synced policies 0 and Replies used 0. The admin was in English. Core action, a shopper question answered in the widget: Sync products on the Products page gave, after about 5 seconds, Synced products 18 (Available 16, Unavailable 2, Vendors 6, Product types 4). In the theme editor, under App embeds, AskNest AI Widget was switched on and a button Ask AI appeared in the preview; this theme change was NOT saved. The widget says Hi! Ask me about store FAQs, products, shipping, returns, or product recommendations., with two chips, Show me best sellers and What is your return policy?, and the line Answers use this store's saved FAQs and synced product data. Question 1, with no policy and no FAQs: What is your return policy? The answer said that the bot does not have the return details available and asked the shopper to contact the shop by e-mail (the address of the shop was in the answer and is hidden in the images). Question 2: Show me best sellers on the Free plan gave four product cards with View product, The Multi-managed Snowboard, Selling Plans Ski Wax, The Collection Snowboard: Hydrogen and The Videographer Snowboard, in about 6 seconds. The listing says best-seller suggestions are on Starter and up, so this card list appeared on a plan where the listing says it is not included. Policy sync: Sync policies on the Knowledge page gave 1 policy page synced successfully., Policies synced 1 and Answer priority Hybrid (FAQs first, product-specific data second, policy pages third, then safe AI fallback). What text the synced policy page held was not looked at. The same return question after the sync again gave the answer that no details were available and to contact the shop by e-mail. So with one policy page synced the bot still could not answer the return question, but because the policy text was not checked it is not known whether the page was empty. Time: the first answer came at about 18:08, about 8 minutes and 5 steps after the install (install, sync products, theme editor, widget on and open, ask a question); the policy sync and the FAQ entry are not in that count. Plans: in the app, Current plan: Free and Shopify billing: No paid subscription; Free $0 a month with 50 AI replies a month, AI FAQ answers, Product finder widget, Policy page answers, Storefront chat widget and Usage tracking; Starter $4.99 with 500 AI replies a month, Best-seller suggestions, Product recommendations and an e-mail fallback; Growth $9.99 with 1,500 replies; Pro $19.99 with 5,000 replies. The listing has the same four prices and says AI replies in up to 3 shopper languages on Starter and in all supported languages on Growth and Pro; the app shows no language difference per plan. Checkout: Upgrade to Starter opened the Shopify screen Approve subscription: AskNest AI by Ecommerce Storez, plan AskNest AI Starter, $4,99 USD every 30 days, Subtotal $4,99 plus any applicable taxes, Total $4,99 Due 17 Nov, a row Add payment method and a greyed out Approve button. There is no free trial. The sentence about a test charge was NOT on the screen and a payment method had to be added, so nothing was approved; no card was entered; the screen was closed with Cancel. Cancelling: on the Free plan there is no subscription. For a paid plan the app says that downgrading to Free cancels the active Shopify subscription; that was not tried because no subscription existed. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the dialog says that you can no longer use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required (we chose Testing multiple apps). Not tested: own FAQs and a return question answered from them, the text of the synced policy page, the languages (one chosen language on Free, detection on Starter), hand over to a person, questions outside the FAQs after the limit of 50 replies, reply 51, the real shop (it has a password), a paid plan, any other question than the two chips, and a question about shipping. Clean up: the theme change (the app embed on) was not saved and was left with Leave page; the widget was off afterwards; the app was uninstalled after the test and left the list of installed apps; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The return question got no answer with a policy page synced; the widget answered best sellers on Free although the listing keeps that for Starter; the widget needs a separate switch in the theme editor; the first answer took about 8 minutes; and the Starter approval screen asked for a payment method and had no test charge sentence.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Original store creation and identity check, which Daan did himself.",
+      "Own FAQs and a return answer from them, and the text of the synced policy page.",
+      "Languages, hand over to a person, and what happens after the limit of 50 replies.",
+      "The real shop with the widget saved in the theme.",
+      "A paid plan and the cancellation.",
+      "Export and reimport.",
+      "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "asknest:cancellation_terms",

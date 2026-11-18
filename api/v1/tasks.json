@@ -16518,6 +16518,342 @@
   },
   {
    "source": "session",
+   "product_name": "AskNest",
+   "product_id": "asknest",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AskNest AI on a Shopify development store on the Free plan: the install, a product sync of 18 items, the widget switched on in the theme editor preview (not saved), a best-sellers question that gave four product cards although the listing puts best-seller suggestions on Starter, a return question that got no details both before and after a policy page was synced (the text of that page was not looked at), the plan cards and the Starter approval screen (not approved). The first answer came after about 8 minutes and 5 steps. Nothing was paid, and the app was uninstalled afterwards. Install: the App Store listing (English) was read first; at 18:00 the install form was submitted in our own tab and the Shopify dialog Install app asked for View customer data (device and activity data), View staff and contributor data (store owner, blog contributors) and View store data (products, orders, Online Store, Shopify admin); Install was clicked. The app opened at once, with no separate account, no password and no e-mail address needed, on a dashboard with Current plan: Free and App: Inactive (Activate). The setup guide showed Total FAQs 0, Active FAQs 0, Synced products 0, Synced policies 0 and Replies used 0. The admin was in English. Core action, a shopper question answered in the widget: Sync products on the Products page gave, after about 5 seconds, Synced products 18 (Available 16, Unavailable 2, Vendors 6, Product types 4). In the theme editor, under App embeds, AskNest AI Widget was switched on and a button Ask AI appeared in the preview; this theme change was NOT saved. The widget says Hi! Ask me about store FAQs, products, shipping, returns, or product recommendations., with two chips, Show me best sellers and What is your return policy?, and the line Answers use this store's saved FAQs and synced product data. Question 1, with no policy and no FAQs: What is your return policy? The answer said that the bot does not have the return details available and asked the shopper to contact the shop by e-mail (the address of the shop was in the answer and is hidden in the images). Question 2: Show me best sellers on the Free plan gave four product cards with View product, The Multi-managed Snowboard, Selling Plans Ski Wax, The Collection Snowboard: Hydrogen and The Videographer Snowboard, in about 6 seconds. The listing says best-seller suggestions are on Starter and up, so this card list appeared on a plan where the listing says it is not included. Policy sync: Sync policies on the Knowledge page gave 1 policy page synced successfully., Policies synced 1 and Answer priority Hybrid (FAQs first, product-specific data second, policy pages third, then safe AI fallback). What text the synced policy page held was not looked at. The same return question after the sync again gave the answer that no details were available and to contact the shop by e-mail. So with one policy page synced the bot still could not answer the return question, but because the policy text was not checked it is not known whether the page was empty. Time: the first answer came at about 18:08, about 8 minutes and 5 steps after the install (install, sync products, theme editor, widget on and open, ask a question); the policy sync and the FAQ entry are not in that count. Plans: in the app, Current plan: Free and Shopify billing: No paid subscription; Free $0 a month with 50 AI replies a month, AI FAQ answers, Product finder widget, Policy page answers, Storefront chat widget and Usage tracking; Starter $4.99 with 500 AI replies a month, Best-seller suggestions, Product recommendations and an e-mail fallback; Growth $9.99 with 1,500 replies; Pro $19.99 with 5,000 replies. The listing has the same four prices and says AI replies in up to 3 shopper languages on Starter and in all supported languages on Growth and Pro; the app shows no language difference per plan. Checkout: Upgrade to Starter opened the Shopify screen Approve subscription: AskNest AI by Ecommerce Storez, plan AskNest AI Starter, $4,99 USD every 30 days, Subtotal $4,99 plus any applicable taxes, Total $4,99 Due 17 Nov, a row Add payment method and a greyed out Approve button. There is no free trial. The sentence about a test charge was NOT on the screen and a payment method had to be added, so nothing was approved; no card was entered; the screen was closed with Cancel. Cancelling: on the Free plan there is no subscription. For a paid plan the app says that downgrading to Free cancels the active Shopify subscription; that was not tried because no subscription existed. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the dialog says that you can no longer use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required (we chose Testing multiple apps). Not tested: own FAQs and a return question answered from them, the text of the synced policy page, the languages (one chosen language on Free, detection on Starter), hand over to a person, questions outside the FAQs after the limit of 50 replies, reply 51, the real shop (it has a password), a paid plan, any other question than the two chips, and a question about shipping. Clean up: the theme change (the app embed on) was not saved and was left with Leave page; the widget was off afterwards; the app was uninstalled after the test and left the list of installed apps; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Show me best sellers\". What we saw: On the Free plan the chip Show me best sellers gave four product cards in about 6 seconds, while the listing and the Starter card put best-seller suggestions on Starter and up.",
+    "Text we checked: \"50 AI replies/month\". What we saw: The Free card shows 50 AI replies a month, as the listing says; the limit was not reached and reply 51 was not tried.",
+    "Text we checked: \"Best-seller suggestions\". What we saw: The Starter card lists 500 AI replies a month, Best-seller suggestions and Product recommendations at $4.99 a month, as the listing says.",
+    "Text we checked: \"Free plan available\". What we saw: The app opened on the Free plan with no payment step, no account and no e-mail address, as the listing says Free plan available."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Own FAQs and a return answer from them, and the text of the synced policy page.",
+    "Languages, hand over to a person, and what happens after the limit of 50 replies.",
+    "The real shop with the widget saved in the theme.",
+    "A paid plan and the cancellation.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Show me best sellers",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "On the Free plan the chip Show me best sellers gave four product cards in about 6 seconds, while the listing and the Starter card put best-seller suggestions on Starter and up.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen, not approved, development store",
+     "comparability": "Listing plan list with best-seller suggestions on Starter versus four product cards on the Free plan.",
+     "status": "contradicted",
+     "buying_consequence": "A Free store gets best-seller suggestions that the plan list keeps for Starter; this was seen once on a store with 18 products.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Policy page answers",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "With one policy page synced (Policies synced 1), the question What is your return policy? still got an answer without details that points to an e-mail address, the same as before the sync; the text of the policy page was not looked at.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen, not approved, development store",
+     "comparability": "Free feature Policy page answers versus the same answer before and after one sync; the policy text was not read.",
+     "status": "not_testable",
+     "buying_consequence": "The return question was not answered from a synced policy page, but it is not known whether that page held a return policy.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "50 AI replies/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free card shows 50 AI replies a month, as the listing says; the limit was not reached and reply 51 was not tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen, not approved, development store",
+     "comparability": "Listing Free allowance versus the Free card; behaviour at the limit was not tried.",
+     "status": "confirmed",
+     "buying_consequence": "Free is limited to 50 replies a month, as listed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Best-seller suggestions",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Starter card lists 500 AI replies a month, Best-seller suggestions and Product recommendations at $4.99 a month, as the listing says.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen, not approved, development store",
+     "comparability": "Listing Starter features versus the Starter card; the Starter plan was not started.",
+     "status": "confirmed",
+     "buying_consequence": "Starter at $4.99 adds replies, best-seller suggestions and recommendations, as listed.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free plan available",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app opened on the Free plan with no payment step, no account and no e-mail address, as the listing says Free plan available.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen, not approved, development store",
+     "comparability": "Listing remark on a Free plan versus the first screen after the install.",
+     "status": "confirmed",
+     "buying_consequence": "A Free plan works straight after the install.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$4,99 USD every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen shows Starter at $4,99 USD every 30 days with a total of $4,99 due 17 Nov plus any applicable taxes and no trial, as the card says $4.99 a month; Approve was greyed out and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/asknest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; Starter approval screen, not approved, development store",
+     "comparability": "Plan card amount versus the approval screen with no tax line; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "Starter costs $4.99 for each 30 days from the first day, plus any taxes, with no trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AskNest AI on a Shopify development store on the Free plan: the install, a product sync of 18 items, the widget switched on in the theme editor preview (not saved), a best-sellers question that gave four product cards although the listing puts best-seller suggestions on Starter, a return question that got no details both before and after a policy page was synced (the text of that page was not looked at), the plan cards and the Starter approval screen (not approved). The first answer came after about 8 minutes and 5 steps. Nothing was paid, and the app was uninstalled afterwards. Install: the App Store listing (English) was read first; at 18:00 the install form was submitted in our own tab and the Shopify dialog Install app asked for View customer data (device and activity data), View staff and contributor data (store owner, blog contributors) and View store data (products, orders, Online Store, Shopify admin); Install was clicked. The app opened at once, with no separate account, no password and no e-mail address needed, on a dashboard with Current plan: Free and App: Inactive (Activate). The setup guide showed Total FAQs 0, Active FAQs 0, Synced products 0, Synced policies 0 and Replies used 0. The admin was in English. Core action, a shopper question answered in the widget: Sync products on the Products page gave, after about 5 seconds, Synced products 18 (Available 16, Unavailable 2, Vendors 6, Product types 4). In the theme editor, under App embeds, AskNest AI Widget was switched on and a button Ask AI appeared in the preview; this theme change was NOT saved. The widget says Hi! Ask me about store FAQs, products, shipping, returns, or product recommendations., with two chips, Show me best sellers and What is your return policy?, and the line Answers use this store's saved FAQs and synced product data. Question 1, with no policy and no FAQs: What is your return policy? The answer said that the bot does not have the return details available and asked the shopper to contact the shop by e-mail (the address of the shop was in the answer and is hidden in the images). Question 2: Show me best sellers on the Free plan gave four product cards with View product, The Multi-managed Snowboard, Selling Plans Ski Wax, The Collection Snowboard: Hydrogen and The Videographer Snowboard, in about 6 seconds. The listing says best-seller suggestions are on Starter and up, so this card list appeared on a plan where the listing says it is not included. Policy sync: Sync policies on the Knowledge page gave 1 policy page synced successfully., Policies synced 1 and Answer priority Hybrid (FAQs first, product-specific data second, policy pages third, then safe AI fallback). What text the synced policy page held was not looked at. The same return question after the sync again gave the answer that no details were available and to contact the shop by e-mail. So with one policy page synced the bot still could not answer the return question, but because the policy text was not checked it is not known whether the page was empty. Time: the first answer came at about 18:08, about 8 minutes and 5 steps after the install (install, sync products, theme editor, widget on and open, ask a question); the policy sync and the FAQ entry are not in that count. Plans: in the app, Current plan: Free and Shopify billing: No paid subscription; Free $0 a month with 50 AI replies a month, AI FAQ answers, Product finder widget, Policy page answers, Storefront chat widget and Usage tracking; Starter $4.99 with 500 AI replies a month, Best-seller suggestions, Product recommendations and an e-mail fallback; Growth $9.99 with 1,500 replies; Pro $19.99 with 5,000 replies. The listing has the same four prices and says AI replies in up to 3 shopper languages on Starter and in all supported languages on Growth and Pro; the app shows no language difference per plan. Checkout: Upgrade to Starter opened the Shopify screen Approve subscription: AskNest AI by Ecommerce Storez, plan AskNest AI Starter, $4,99 USD every 30 days, Subtotal $4,99 plus any applicable taxes, Total $4,99 Due 17 Nov, a row Add payment method and a greyed out Approve button. There is no free trial. The sentence about a test charge was NOT on the screen and a payment method had to be added, so nothing was approved; no card was entered; the screen was closed with Cancel. Cancelling: on the Free plan there is no subscription. For a paid plan the app says that downgrading to Free cancels the active Shopify subscription; that was not tried because no subscription existed. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the dialog says that you can no longer use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required (we chose Testing multiple apps). Not tested: own FAQs and a return question answered from them, the text of the synced policy page, the languages (one chosen language on Free, detection on Starter), hand over to a person, questions outside the FAQs after the limit of 50 replies, reply 51, the real shop (it has a password), a paid plan, any other question than the two chips, and a question about shipping. Clean up: the theme change (the app embed on) was not saved and was left with Leave page; the widget was off afterwards; the app was uninstalled after the test and left the list of installed apps; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The return question got no answer with a policy page synced; the widget answered best sellers on Free although the listing keeps that for Starter; the widget needs a separate switch in the theme editor; the first answer took about 8 minutes; and the Starter approval screen asked for a payment method and had no test charge sentence.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Own FAQs and a return answer from them, and the text of the synced policy page.",
+     "Languages, hand over to a person, and what happens after the limit of 50 replies.",
+     "The real shop with the widget saved in the theme.",
+     "A paid plan and the cancellation.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "AgentNest",
+   "product_id": "agentnest",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AgentNest on a Shopify development store on the Free plan: the install, the approval of the Free plan ($0, no card), five clicks on Run first catalog scan that gave no score, no issue list and no message, the Usage and Billing page and the Revenue page (Not imported). Starter $19, Growth $49 and Scale $99 were Not available on dev stores, so what one fix counts as was not tested. The app asked to view and edit store data already on Free. Nothing was paid and the app was uninstalled afterwards. Install: the App Store listing (English) was opened and the install form was submitted in our own tab at 18:07; the Shopify dialog Install app asked for View customer data (device and activity data), View staff and contributor data (store owner) and View and edit store data (products, orders, Shopify admin), and Install was clicked. The app opened on Welcome to AgentNest with a button Run first catalog scan, a button Upgrade plan and a score that reads -- out of 100. The admin was in English. No account on the vendor site, password, card or phone number was asked. Core action, the first catalog scan: the button Run first catalog scan was clicked once before a plan was chosen (about 18:08), with no visible reaction. After the Free plan was chosen it was clicked four more times, five times in all until about 18:10. The button turned grey for a moment and then active again. After a reload and after waiting more than 10 seconds the dashboard still showed -- out of 100, of 0 products have critical issues, of 0 products have 1-click fixes and of 0 products require your input. There was no error message, no notice and no scan result. Time to a first result: not reached. Steps: 3 (install, plan, scan). Why the scan gave nothing is not known; it can be a limit of a development store or a fault of the app, and it was not tried again on another store. Revenue page: Not imported, Revenue import required, status NOT_STARTED, 0 qualifying orders and Affected product revenue $0.00; the import was not started. Plans: the Shopify screen Select a plan has Free to test (these plans are free to test on this store; regular pricing applies when the store goes live) with the Free card (Unlimited catalog scans, Catalog readiness score, Product-level issue reports, View catalog findings), and Unavailable on dev stores (these plans can't be selected while the store is in development) with Starter $19 / 30 days (100 successful automated fixes a month), Growth $49 / 30 days (1,000) and Scale $99 / 30 days (5,000), each with a greyed out button Not available. The prices agree with the dossier and the listing. Checkout: the only approval screen was for the Free plan: Approve charge, Plan Free, This plan is free. You will not be billed. It was approved (an exception of $0) and no card or payment method was asked. The paid plans could not be selected on the development store, so no Shopify approval screen for a paid plan, no test charge sentence, no tax and no renewal term were seen. Usage and Billing: Current plan Free, Unlimited scans and reports with no AgentNest-applied fixes, Successful fixes 0, Upgrade to apply fixes, a reset on 17 Dec 2026, the sentence that product updates already applied by AgentNest are not reversed after a downgrade or uninstall, and the sentence that AgentNest does not collect payment details. Permissions: already on the Free plan the app asked to view and edit store data (products, orders, Shopify admin), although the Free plan has no applied fixes. Cancelling: on the Free plan there is no paid subscription. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the dialog says that you can no longer use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required (we chose Testing multiple apps). Not tested: the automatic fixes (paid plans only, not available on the development store), so also what counts as one fix; the scan result, the readiness score and the issue list, because the scan gave nothing; the revenue import and the ChatGPT Ads link. Clean up: the app was uninstalled after the test and left the list of installed apps; our own tabs were closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"View and edit store data\". What we saw: At the install already on the Free plan, the dialog asked for rights to view and edit store data (products, orders, Shopify admin), while the Free plan applies no fixes.",
+    "Text we checked: \"This plan is free. You will not be billed\". What we saw: The Shopify screen Approve charge for the Free plan said This plan is free. You will not be billed.; it was approved and no card or payment method was asked.",
+    "Text we checked: \"Growth $49 / 30 days\". What we saw: The plan screen shows Starter $19, Growth $49 and Scale $99, each per 30 days, as the dossier and the listing say; all three are greyed out Not available on a development store."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The automatic fixes of the paid plans and what counts as one fix.",
+    "The scan result, the readiness score and the issue list, because the scan gave nothing.",
+    "The revenue import and the ChatGPT Ads link.",
+    "A paid plan, its Shopify approval screen and the cancellation.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:07 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Unlimited catalog scans",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free plan was approved without a card and the scan button was clicked five times in about 2 minutes; the dashboard stayed at -- out of 100 with no message and no scan result, so the scans could not be judged; why is not known.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/agentnest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan approved at $0; paid plans not available on a development store",
+     "comparability": "Listing Free scans versus five clicks with an empty dashboard; no result was produced on a development store.",
+     "status": "not_testable",
+     "buying_consequence": "The scan that the Free plan is meant for gave nothing on this store; whether it works on a live shop is unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Catalog readiness score",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The score ring read -- out of 100 before and after the scan attempts, and the cards showed of 0 products for critical issues, 1-click fixes and input needed; no readiness score was shown.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/agentnest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan approved at $0; paid plans not available on a development store",
+     "comparability": "Listing readiness score versus a ring that never filled; the scan gave nothing.",
+     "status": "not_testable",
+     "buying_consequence": "No readiness score was seen, so its content and use are unknown.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "View and edit store data",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "At the install already on the Free plan, the dialog asked for rights to view and edit store data (products, orders, Shopify admin), while the Free plan applies no fixes.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/agentnest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan approved at $0; paid plans not available on a development store",
+     "comparability": "Free plan with no applied fixes versus the permission list in the install dialog.",
+     "status": "confirmed",
+     "buying_consequence": "The app asks for edit rights over the catalog before any paid fix is bought.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This plan is free. You will not be billed.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify screen Approve charge for the Free plan said This plan is free. You will not be billed.; it was approved and no card or payment method was asked.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/agentnest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan approved at $0; paid plans not available on a development store",
+     "comparability": "Listing Free plan versus the Free approval screen with no payment method row.",
+     "status": "confirmed",
+     "buying_consequence": "The Free plan can be started without any payment details.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Growth $49 / 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan screen shows Starter $19, Growth $49 and Scale $99, each per 30 days, as the dossier and the listing say; all three are greyed out Not available on a development store.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/agentnest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan approved at $0; paid plans not available on a development store",
+     "comparability": "Dossier plan prices versus the greyed out plan cards; no approval screen was reached.",
+     "status": "confirmed",
+     "buying_consequence": "The three paid prices are $19, $49 and $99 for each 30 days.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "100 successful automated fixes/month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Starter, with 100 fixes a month, cannot be selected on a development store, so no fix was applied and what one fix counts as was not seen; the Free plan shows Successful fixes 0.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/agentnest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan approved at $0; paid plans not available on a development store",
+     "comparability": "Listing allowance of 100 fixes versus no paid plan available; the fix unit is not defined in the listing either.",
+     "status": "not_testable",
+     "buying_consequence": "The unit that the paid plans are priced in could not be counted in advance.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Starter $19 / 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Starter is shown at $19 / 30 days with a greyed out Not available button under Unavailable on dev stores, so the Shopify approval screen for a paid plan, any tax and the renewal terms were not seen; only the Free approval screen was.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/agentnest-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan approved at $0; paid plans not available on a development store",
+     "comparability": "Plan card price versus no paid checkout reached, with no stored cost rule compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price at the end of the buying path could not be compared with the plan card.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AgentNest on a Shopify development store on the Free plan: the install, the approval of the Free plan ($0, no card), five clicks on Run first catalog scan that gave no score, no issue list and no message, the Usage and Billing page and the Revenue page (Not imported). Starter $19, Growth $49 and Scale $99 were Not available on dev stores, so what one fix counts as was not tested. The app asked to view and edit store data already on Free. Nothing was paid and the app was uninstalled afterwards. Install: the App Store listing (English) was opened and the install form was submitted in our own tab at 18:07; the Shopify dialog Install app asked for View customer data (device and activity data), View staff and contributor data (store owner) and View and edit store data (products, orders, Shopify admin), and Install was clicked. The app opened on Welcome to AgentNest with a button Run first catalog scan, a button Upgrade plan and a score that reads -- out of 100. The admin was in English. No account on the vendor site, password, card or phone number was asked. Core action, the first catalog scan: the button Run first catalog scan was clicked once before a plan was chosen (about 18:08), with no visible reaction. After the Free plan was chosen it was clicked four more times, five times in all until about 18:10. The button turned grey for a moment and then active again. After a reload and after waiting more than 10 seconds the dashboard still showed -- out of 100, of 0 products have critical issues, of 0 products have 1-click fixes and of 0 products require your input. There was no error message, no notice and no scan result. Time to a first result: not reached. Steps: 3 (install, plan, scan). Why the scan gave nothing is not known; it can be a limit of a development store or a fault of the app, and it was not tried again on another store. Revenue page: Not imported, Revenue import required, status NOT_STARTED, 0 qualifying orders and Affected product revenue $0.00; the import was not started. Plans: the Shopify screen Select a plan has Free to test (these plans are free to test on this store; regular pricing applies when the store goes live) with the Free card (Unlimited catalog scans, Catalog readiness score, Product-level issue reports, View catalog findings), and Unavailable on dev stores (these plans can't be selected while the store is in development) with Starter $19 / 30 days (100 successful automated fixes a month), Growth $49 / 30 days (1,000) and Scale $99 / 30 days (5,000), each with a greyed out button Not available. The prices agree with the dossier and the listing. Checkout: the only approval screen was for the Free plan: Approve charge, Plan Free, This plan is free. You will not be billed. It was approved (an exception of $0) and no card or payment method was asked. The paid plans could not be selected on the development store, so no Shopify approval screen for a paid plan, no test charge sentence, no tax and no renewal term were seen. Usage and Billing: Current plan Free, Unlimited scans and reports with no AgentNest-applied fixes, Successful fixes 0, Upgrade to apply fixes, a reset on 17 Dec 2026, the sentence that product updates already applied by AgentNest are not reversed after a downgrade or uninstall, and the sentence that AgentNest does not collect payment details. Permissions: already on the Free plan the app asked to view and edit store data (products, orders, Shopify admin), although the Free plan has no applied fixes. Cancelling: on the Free plan there is no paid subscription. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the dialog says that you can no longer use the app, that any data managed by the app, such as discounts, will be deleted, and that a request goes to the app developer within 48 hours to delete all personal customer information; a reason is required (we chose Testing multiple apps). Not tested: the automatic fixes (paid plans only, not available on the development store), so also what counts as one fix; the scan result, the readiness score and the issue list, because the scan gave nothing; the revenue import and the ChatGPT Ads link. Clean up: the app was uninstalled after the test and left the list of installed apps; our own tabs were closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The first scan gave no result after five clicks and no message; the Free plan already asked for rights to edit store data; the paid plans cannot be selected on a development store, so the unit of a fix was not tested; and the revenue import was not started.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The automatic fixes of the paid plans and what counts as one fix.",
+     "The scan result, the readiness score and the issue list, because the scan gave nothing.",
+     "The revenue import and the ChatGPT Ads link.",
+     "A paid plan, its Shopify approval screen and the cancellation.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:07 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Modelize",
    "product_id": "modelize",
    "run_date": "2026-11-16",
@@ -16859,6 +17195,167 @@
      "A catalogue above 100 products and the behaviour at the limit of 25 conversations.",
      "Contact with the developer, support, export and reimport, and uninstalling the app.",
      "Session and source-reading date: 16 November 2026. Times are CET. The session started at about 14:06 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "StoreSEO",
+   "product_id": "storeseo",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested StoreSEO on a Shopify development store: the install, one scan of 20 products that took 13 seconds and gave a score of 44 (19 of 20 meta titles and all 20 meta descriptions need work), no fix, the plan step with the Black Friday offer and all four plans including Growth, and the Lite checkout, where the Shopify approval screen showed $3,99 due 17 Nov, asked to add a payment method and had no test charge sentence. Nothing was approved or paid, the Free plan was not looked at, and the app was uninstalled afterwards. Install: the App Store listing (English) was opened at 18:16, the install form was submitted in our own tab, and the Shopify dialog Install app asked for View customer data, View staff and contributor data and View and edit store data; Install was clicked at about 18:17. The app opened on a short start with the text that it was ready to scan the store and the buttons I want free SEO consultation, Detailed documentation guides, Full walkthrough and Analyze My Store; only Analyze My Store was used. The footer says Version: 4.1.7. No account on the vendor site, password, card or phone number was asked and no Google account was connected. The admin was in English. Core action, one SEO scan of the store: Analyze My Store was clicked once at about 18:17 and the result stood there at about 18:18. The progress line said Scan Progress 13 sec 100% Complete, with the steps Scanning Product and Analyzing SEO Score (Meta Title, Image Alt Text, Meta Description, Product Description, Focus Keyword Density, Optimized Images). The result: Your Current SEO Score is: 44; I've analyzed 20 products from your catalog; 19 of 20 Meta titles need work; 20 of 20 Meta descriptions need work; 20 of 20 Product descriptions need work; 0 of 18 Images missing alt text. Under Fix your first product the lowest products were The Hidden Snowboard (Not Optimized, Score 31), Harbour Tour Test (37), The Complete Snowboard (37), The Multi-managed Snowboard (38) and The Compare at Price Snowboard (38). No fix was run, Fix SEO score was not used and nothing was saved. Time from install to the scan result: about 1 to 2 minutes and 2 steps (install, Analyze My Store). Plans: Skip setup led to the plan step, Fix your 20 products with AI, Pick a plan. Every plan starts with a 7-day free trial., with a banner Grab Your First Month Black Friday Deal, Flat 80% OFF. In the app: Lite $3.99 the first month, then $19.99 a month (100 products, 500 images, 1,000 AI content credits, 50 keywords rank tracking); Essential $7.99, then $39.99 (250 products, 2,000 images, 5,000 credits, 100 keywords, AI Brand Analysis); Growth $19.99, then $99.99 (1,000 products, 5,000 images, 12,500 credits, 200 keywords, AI Brand Analysis, Multilingual SEO); Advanced $49.99, then $249.99 (10,000 products, 50,000 images, 50,000 credits, 1,000 keywords, AI Brand Analysis, Multilingual SEO). The buttons are Continue with FREE, Try free for 7 days and Subscribe. The Free plan was not chosen or looked at. Difference with the dossier: the dossier says the $99.99 Growth plan is sold only on the vendor's own site; in the app Growth is a card with $19.99 for the first month and $99.99 a month after that. The Black Friday offer in the app uses the code BFCM2026 for 80% off the first month. Checkout: by accident the checkout of Essential was opened first (it was preselected) and closed without paying. Then Lite was chosen and the dialog Checkout: Lite showed Plan Price $19.99, Duration 1 month, Sub Total $19.99, Discount BFCM2026 -$16.00 (applied 80% discount for the next 1 month, after that the regular price applies) and Total $3.99; Subscribe now was clicked. The Shopify screen Approve subscription then showed Lite, 1000 AI Credits, 500 Images, $19,99 $3,99 USD every 30 days, Your next bill Subtotal $19,99 plus any applicable taxes, Discount $16,00 and Total $3,99 Due 17 Nov, a row Add payment method and a greyed out Approve button. There was no free trial on this path and the sentence about a test charge was NOT on the screen. A payment method had to be added, so nothing was approved; no card was entered and the screen was closed with Cancel. The link Try free for 7 days was not used. Cancelling: no subscription was started, so nothing could be cancelled. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the app was uninstalled after the test. Not tested: a fix of one product, the bulk AI fix, the Free plan after Continue with FREE, the 7-day trial path, Google Search Console and Analytics, schema, the sitemap, LLMs.txt, the MCP connector, buying credits and a refund. Clean up: no subscription was made, no theme change was saved and no product was changed; the app was uninstalled; our own tabs were closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"19 of 20 Meta titles need work\". What we saw: The scan of 20 products took 13 seconds and gave a score of 44, with 19 of 20 meta titles, 20 of 20 meta descriptions and 20 of 20 product descriptions marked as needing work and 0 of 18 images missing alt text; no fix was run.",
+    "Text we checked: \"Every plan starts with a 7-day free trial\". What we saw: The plan step says every plan starts with a 7-day free trial, but the Subscribe path for Lite showed a first charge of $3,99 due 17 Nov on the Shopify screen with no trial; the link Try free for 7 days was not used.",
+    "Text we checked: \"Growth $19.99\". What we saw: Growth is a card in the app, $19.99 for the first month and then $99.99 a month, although the dossier says the $99.99 Growth plan is sold only on the vendor's own site.",
+    "Text we checked: \"Lite $3.99\". What we saw: Lite is $3.99 for the first month with the code BFCM2026 (80% off, $16.00) and then $19.99 a month, as the dossier says for Lite; the Black Friday price is a first-month price only.",
+    "Text we checked: \"Essential $7.99\". What we saw: Essential is $7.99 for the first month and then $39.99 a month with 250 products and 5,000 credits, as the dossier says."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "A fix of one product and the bulk AI fix, so no credits were used.",
+    "The Free plan after Continue with FREE and the 7-day trial path.",
+    "Google Search Console and Analytics, schema, the sitemap, LLMs.txt and the MCP connector.",
+    "A paid plan, buying credits, a refund and the cancellation.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:16 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "19 of 20 Meta titles need work",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The scan of 20 products took 13 seconds and gave a score of 44, with 19 of 20 meta titles, 20 of 20 meta descriptions and 20 of 20 product descriptions marked as needing work and 0 of 18 images missing alt text; no fix was run.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/storeseo-review.html#claim-vs-measured"
+     },
+     "plan": "Lite approval screen, not approved, development store",
+     "comparability": "Dossier pain of weak meta tags versus one scan of 20 products on a development store; no fix was applied.",
+     "status": "confirmed",
+     "buying_consequence": "The app finds the missing or weak meta titles and descriptions of a store quickly; what a fix produces was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Every plan starts with a 7-day free trial.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan step says every plan starts with a 7-day free trial, but the Subscribe path for Lite showed a first charge of $3,99 due 17 Nov on the Shopify screen with no trial; the link Try free for 7 days was not used.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/storeseo-review.html#claim-vs-measured"
+     },
+     "plan": "Lite approval screen, not approved, development store",
+     "comparability": "Plan step line on a 7-day trial versus the Lite approval screen with a charge due the same day.",
+     "status": "contradicted",
+     "buying_consequence": "The trial may exist only on another path; on the path used a payment method was needed at once.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Growth $19.99",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Growth is a card in the app, $19.99 for the first month and then $99.99 a month, although the dossier says the $99.99 Growth plan is sold only on the vendor's own site.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/storeseo-review.html#claim-vs-measured"
+     },
+     "plan": "Lite approval screen, not approved, development store",
+     "comparability": "Dossier remark on a vendor-site-only Growth plan versus the Growth card in the app.",
+     "status": "contradicted",
+     "buying_consequence": "A buyer can pick Growth inside the app, so the dossier line that it is vendor-site only is out of date.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Lite $3.99",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Lite is $3.99 for the first month with the code BFCM2026 (80% off, $16.00) and then $19.99 a month, as the dossier says for Lite; the Black Friday price is a first-month price only.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/storeseo-review.html#claim-vs-measured"
+     },
+     "plan": "Lite approval screen, not approved, development store",
+     "comparability": "Dossier Lite price versus the card and checkout dialog; the discount applies to one month.",
+     "status": "confirmed",
+     "buying_consequence": "The regular Lite price is $19.99 a month; the first month is cheaper during the Black Friday offer.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Essential $7.99",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Essential is $7.99 for the first month and then $39.99 a month with 250 products and 5,000 credits, as the dossier says.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/storeseo-review.html#claim-vs-measured"
+     },
+     "plan": "Lite approval screen, not approved, development store",
+     "comparability": "Dossier Essential price versus the Essential card; its checkout was opened by accident and closed.",
+     "status": "confirmed",
+     "buying_consequence": "The regular Essential price is $39.99 a month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$19,99 $3,99 USD every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen shows Lite at $19,99 reduced to $3,99 USD every 30 days with a total of $3,99 due 17 Nov plus any applicable taxes, no trial and no test charge sentence; Add payment method was needed, Approve was greyed out and nothing was approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/storeseo-review.html#claim-vs-measured"
+     },
+     "plan": "Lite approval screen, not approved, development store",
+     "comparability": "Plan card price versus the approval screen with no tax line; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "Lite costs $3,99 today and $19,99 after the discount month, plus any taxes, with no trial on this path.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested StoreSEO on a Shopify development store: the install, one scan of 20 products that took 13 seconds and gave a score of 44 (19 of 20 meta titles and all 20 meta descriptions need work), no fix, the plan step with the Black Friday offer and all four plans including Growth, and the Lite checkout, where the Shopify approval screen showed $3,99 due 17 Nov, asked to add a payment method and had no test charge sentence. Nothing was approved or paid, the Free plan was not looked at, and the app was uninstalled afterwards. Install: the App Store listing (English) was opened at 18:16, the install form was submitted in our own tab, and the Shopify dialog Install app asked for View customer data, View staff and contributor data and View and edit store data; Install was clicked at about 18:17. The app opened on a short start with the text that it was ready to scan the store and the buttons I want free SEO consultation, Detailed documentation guides, Full walkthrough and Analyze My Store; only Analyze My Store was used. The footer says Version: 4.1.7. No account on the vendor site, password, card or phone number was asked and no Google account was connected. The admin was in English. Core action, one SEO scan of the store: Analyze My Store was clicked once at about 18:17 and the result stood there at about 18:18. The progress line said Scan Progress 13 sec 100% Complete, with the steps Scanning Product and Analyzing SEO Score (Meta Title, Image Alt Text, Meta Description, Product Description, Focus Keyword Density, Optimized Images). The result: Your Current SEO Score is: 44; I've analyzed 20 products from your catalog; 19 of 20 Meta titles need work; 20 of 20 Meta descriptions need work; 20 of 20 Product descriptions need work; 0 of 18 Images missing alt text. Under Fix your first product the lowest products were The Hidden Snowboard (Not Optimized, Score 31), Harbour Tour Test (37), The Complete Snowboard (37), The Multi-managed Snowboard (38) and The Compare at Price Snowboard (38). No fix was run, Fix SEO score was not used and nothing was saved. Time from install to the scan result: about 1 to 2 minutes and 2 steps (install, Analyze My Store). Plans: Skip setup led to the plan step, Fix your 20 products with AI, Pick a plan. Every plan starts with a 7-day free trial., with a banner Grab Your First Month Black Friday Deal, Flat 80% OFF. In the app: Lite $3.99 the first month, then $19.99 a month (100 products, 500 images, 1,000 AI content credits, 50 keywords rank tracking); Essential $7.99, then $39.99 (250 products, 2,000 images, 5,000 credits, 100 keywords, AI Brand Analysis); Growth $19.99, then $99.99 (1,000 products, 5,000 images, 12,500 credits, 200 keywords, AI Brand Analysis, Multilingual SEO); Advanced $49.99, then $249.99 (10,000 products, 50,000 images, 50,000 credits, 1,000 keywords, AI Brand Analysis, Multilingual SEO). The buttons are Continue with FREE, Try free for 7 days and Subscribe. The Free plan was not chosen or looked at. Difference with the dossier: the dossier says the $99.99 Growth plan is sold only on the vendor's own site; in the app Growth is a card with $19.99 for the first month and $99.99 a month after that. The Black Friday offer in the app uses the code BFCM2026 for 80% off the first month. Checkout: by accident the checkout of Essential was opened first (it was preselected) and closed without paying. Then Lite was chosen and the dialog Checkout: Lite showed Plan Price $19.99, Duration 1 month, Sub Total $19.99, Discount BFCM2026 -$16.00 (applied 80% discount for the next 1 month, after that the regular price applies) and Total $3.99; Subscribe now was clicked. The Shopify screen Approve subscription then showed Lite, 1000 AI Credits, 500 Images, $19,99 $3,99 USD every 30 days, Your next bill Subtotal $19,99 plus any applicable taxes, Discount $16,00 and Total $3,99 Due 17 Nov, a row Add payment method and a greyed out Approve button. There was no free trial on this path and the sentence about a test charge was NOT on the screen. A payment method had to be added, so nothing was approved; no card was entered and the screen was closed with Cancel. The link Try free for 7 days was not used. Cancelling: no subscription was started, so nothing could be cancelled. Removing the app goes through Settings, Apps, the menu of the app and Uninstall; the app was uninstalled after the test. Not tested: a fix of one product, the bulk AI fix, the Free plan after Continue with FREE, the 7-day trial path, Google Search Console and Analytics, schema, the sitemap, LLMs.txt, the MCP connector, buying credits and a refund. Clean up: no subscription was made, no theme change was saved and no product was changed; the app was uninstalled; our own tabs were closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The Lite checkout asked to add a payment method with no test charge sentence and no trial although the plan step says every plan starts with a 7-day free trial; the Growth plan is in the app although the dossier says it is only on the vendor site; the preselected Essential checkout opened by accident; and no fix was tried, so the result of a fix is unknown.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A fix of one product and the bulk AI fix, so no credits were used.",
+     "The Free plan after Continue with FREE and the 7-day trial path.",
+     "Google Search Console and Analytics, schema, the sitemap, LLMs.txt and the MCP connector.",
+     "A paid plan, buying credits, a refund and the cancellation.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:16 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -17531,6 +18028,253 @@
     "not_offered": [
      "Customer creation changed Zoë to Zoe and Bèta to Beta before export. This is an input-stage change, not measured export loss."
     ],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Postscript",
+   "product_id": "postscript",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested the start of Postscript on a Shopify development store: the permissions, a page that stayed on Loading Postscript, an onboarding with three Not Found toasts, a billing address (made up test data) and a second step that asked for a phone number, an own e-mail address and consent to the terms, with Continue greyed out. No campaign or popup was made and nothing was sent. No plan or payment screen was reached, so all prices come from the listing and not from a test. Install: the install button on the App Store listing (English) was used in our own tab at 18:24; it led through a page of the vendor (the pay page of Postscript) to the Shopify dialog Install app, which asked for View customer data, View staff and contributor data and View and edit store data, and the app permissions were approved. After that the vendor page app.postscript.io/shopify/auth stayed on Loading Postscript for more than 20 seconds. Postscript did not appear in Settings, Apps (the list showed 8 other apps), so it is not known whether the install was completed; it may only finish after the onboarding, or the auth step failed. Onboarding: through the login address of the vendor for the store the onboarding did open: Welcome to Postscript! (step 1 of 10), with three toasts Not Found and a promo popup about syncs with another e-mail tool that was closed without accepting anything. Continue first gave a modal Add a billing address (Country/region, Address line 1, City, State/province, Postal code); made up test data was entered (an address in Austin, Texas) and saved, and no card was asked. Step 2 of 10, Contact information, asked for First name, Last name, Phone number and Email address (Use an email only you control. You'll use it to access your account.), a box to receive text updates, a required box to agree to the terms of service and a box for marketing e-mails of Postscript. Continue stayed greyed out. Core action, a draft SMS campaign or sign-up popup: NOT reached. The set-up needs a phone number, an own e-mail address for a separate Postscript account and consent to the terms before any campaign screen, and nothing of that was entered, so nothing was sent, no number was bought or verified and no campaign or popup was made. Time to the block: about 2 minutes (18:24 to about 18:26), with no result. Plans (from the listing, NOT a test result): the App Store listing of 17 Nov says Starter is Free to install with a $49 monthly minimum spend and a $100 credit for the first 30 days, then $0.009 per SMS and $0.045 per MMS plus carrier fees; Growth is $100 a month with $0.008 per SMS, $0.03 per MMS and a 30-day free trial; Professional is $500 a month with $0.007 per SMS, $0.024 per MMS and a 30-day free trial; all charges are billed in USD. Difference with the dossier (from the listing, not from the app): the dossier gives Starter as $0.015 per SMS and then $0.009, and the listing names only $0.009 (after the credit); the other amounts are the same. This was not checked in the app because the plan screen was not reached. Checkout: NOT reached. No Shopify approval screen and no plan screen were seen, no card was entered and nothing was approved or paid. Cancelling: not tested. Postscript was not in Settings, Apps, so there was nothing to uninstall. Not tested: a campaign, the sign-up popup, the plans and the payment screen, the cancellation route, a sender number, 10DLC and TCPA registration, and a short code. Clean up: no uninstall was needed (Postscript was not in the app list at about 18:28); the made up billing address was saved in the vendor onboarding and nothing else was entered; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Use an email only you control\". What we saw: Step 2 of 10 asked for a first and last name, a phone number and an e-mail address that only we control, for a separate Postscript account, and a required agreement to the terms of service; Continue stayed greyed out and nothing was entered."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "A draft SMS campaign or sign-up popup, and anything after step 2 of 10.",
+    "The plans, the payment screen and any price in the app.",
+    "The cancellation route, a sender number, 10DLC and TCPA registration, and a short code.",
+    "Whether SMS pays off for a store, which this test did not measure.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:24 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Use an email only you control.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Step 2 of 10 asked for a first and last name, a phone number and an e-mail address that only we control, for a separate Postscript account, and a required agreement to the terms of service; Continue stayed greyed out and nothing was entered.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/postscript-review.html#claim-vs-measured"
+     },
+     "plan": "Onboarding only; no plan reached",
+     "comparability": "Observed onboarding step 2 of 10 on a development store; the plan and the campaign screens were not reached.",
+     "status": "confirmed",
+     "buying_consequence": "A store cannot look at the product before it has given a phone number, a personal e-mail address and consent to the terms.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Then $0.009/SMS",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "This price is from the listing, not from the test: the listing names $0.009 per SMS after the credit; the dossier gives $0.015 and then $0.009. The plan screen was not reached, so the app was not checked.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/postscript-review.html#claim-vs-measured"
+     },
+     "plan": "Onboarding only; no plan reached",
+     "comparability": "Dossier per-message rates versus the listing text; the app showed no price.",
+     "status": "not_testable",
+     "buying_consequence": "The listing gives only the price after the credit, so the first rate in the dossier is not confirmed by the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$100 credit for your first 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The credit is from the listing, not from the test; no plan or billing screen was reached, so it was not seen in the app.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/postscript-review.html#claim-vs-measured"
+     },
+     "plan": "Onboarding only; no plan reached",
+     "comparability": "Listing credit versus no plan screen reached; nothing was observed.",
+     "status": "not_testable",
+     "buying_consequence": "The first month is cheaper by the listed credit, but this was not seen in the app.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free to install. $49 monthly minimum spend.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing says Starter is free to install with a $49 monthly minimum spend; the app showed no plan, price or Shopify approval screen, so the minimum spend and the end price were not seen in the app.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/postscript-review.html#claim-vs-measured"
+     },
+     "plan": "Onboarding only; no plan reached",
+     "comparability": "Listing price versus no checkout reached, with no stored cost rule compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price at the end of the buying path could not be compared with the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested the start of Postscript on a Shopify development store: the permissions, a page that stayed on Loading Postscript, an onboarding with three Not Found toasts, a billing address (made up test data) and a second step that asked for a phone number, an own e-mail address and consent to the terms, with Continue greyed out. No campaign or popup was made and nothing was sent. No plan or payment screen was reached, so all prices come from the listing and not from a test. Install: the install button on the App Store listing (English) was used in our own tab at 18:24; it led through a page of the vendor (the pay page of Postscript) to the Shopify dialog Install app, which asked for View customer data, View staff and contributor data and View and edit store data, and the app permissions were approved. After that the vendor page app.postscript.io/shopify/auth stayed on Loading Postscript for more than 20 seconds. Postscript did not appear in Settings, Apps (the list showed 8 other apps), so it is not known whether the install was completed; it may only finish after the onboarding, or the auth step failed. Onboarding: through the login address of the vendor for the store the onboarding did open: Welcome to Postscript! (step 1 of 10), with three toasts Not Found and a promo popup about syncs with another e-mail tool that was closed without accepting anything. Continue first gave a modal Add a billing address (Country/region, Address line 1, City, State/province, Postal code); made up test data was entered (an address in Austin, Texas) and saved, and no card was asked. Step 2 of 10, Contact information, asked for First name, Last name, Phone number and Email address (Use an email only you control. You'll use it to access your account.), a box to receive text updates, a required box to agree to the terms of service and a box for marketing e-mails of Postscript. Continue stayed greyed out. Core action, a draft SMS campaign or sign-up popup: NOT reached. The set-up needs a phone number, an own e-mail address for a separate Postscript account and consent to the terms before any campaign screen, and nothing of that was entered, so nothing was sent, no number was bought or verified and no campaign or popup was made. Time to the block: about 2 minutes (18:24 to about 18:26), with no result. Plans (from the listing, NOT a test result): the App Store listing of 17 Nov says Starter is Free to install with a $49 monthly minimum spend and a $100 credit for the first 30 days, then $0.009 per SMS and $0.045 per MMS plus carrier fees; Growth is $100 a month with $0.008 per SMS, $0.03 per MMS and a 30-day free trial; Professional is $500 a month with $0.007 per SMS, $0.024 per MMS and a 30-day free trial; all charges are billed in USD. Difference with the dossier (from the listing, not from the app): the dossier gives Starter as $0.015 per SMS and then $0.009, and the listing names only $0.009 (after the credit); the other amounts are the same. This was not checked in the app because the plan screen was not reached. Checkout: NOT reached. No Shopify approval screen and no plan screen were seen, no card was entered and nothing was approved or paid. Cancelling: not tested. Postscript was not in Settings, Apps, so there was nothing to uninstall. Not tested: a campaign, the sign-up popup, the plans and the payment screen, the cancellation route, a sender number, 10DLC and TCPA registration, and a short code. Clean up: no uninstall was needed (Postscript was not in the app list at about 18:28); the made up billing address was saved in the vendor onboarding and nothing else was entered; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app stayed on Loading Postscript after the permissions and was not in the app list; the onboarding showed three Not Found toasts; a billing address was asked before step 2; and step 2 of 10 needed a phone number, an own e-mail address for a separate account and consent to the terms before anything could be tried.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "A draft SMS campaign or sign-up popup, and anything after step 2 of 10.",
+     "The plans, the payment screen and any price in the app.",
+     "The cancellation route, a sender number, 10DLC and TCPA registration, and a short code.",
+     "Whether SMS pays off for a store, which this test did not measure.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:24 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Gorgias",
+   "product_id": "gorgias",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Gorgias on a Shopify development store: the install, a workspace made by the app on its own with no password or card, one macro with made up text saved in about 1.5 minutes and 5 steps, and the Billing page with a free trial from 17 to 24 November, Starter at $10 a month for 50 tickets and the AI Agent at $30 a month for 30 interactions. The app said Shopify billing was inactive, and Activate in Shopify led to an empty screen, so nothing was approved and the checkout was not tested. Nothing was sent, no channel was connected, and the app was uninstalled afterwards. Install: the App Store listing (English) was opened and the install form was submitted at 18:33 in our own tab. The first screen was Connect your Gorgias account to Shopify, with the choices Create Your Account and Already have an account. Create Your Account led to the Shopify dialog Install app, which asked for View customer data, View staff and contributor data and View and edit store data; Install was clicked. The app then showed Generating your Gorgias workspace and opened a workspace of the vendor on its own; the address of that workspace contains the name of our development store, so it is not shown. No password, card, phone number or form was asked: the account came from the Shopify identity. A banner said Your account is not verified. Please check your email.; no e-mail was sent or opened. The admin was in English. Core action, one macro (a saved reply): Settings, Macros, Create macro, the name Test: Snowboard shipping delay and the text Hi, thanks for your patience. Your snowboard is packed and leaves our test warehouse tomorrow. This is invented test text., then Create macro. It was done at about 18:34, about 1.5 minutes after the start and 5 steps after the form was opened. The macro appeared in the list with usage count 0; the list already held 12 example macros of the vendor. No mailbox, social channel or phone number was connected and no ticket or message was sent. The AI Agent was not tested. Plans in the app: Billing, Usage & Plans said Your free trial started on November 17, 2026 and will expire on November 24, 2026 (seven days). Helpdesk was Starter at $10/month with 0 of 50 tickets used; AI Agent was $30/month with 0 of 30 automated interactions used; Voice (from $30/month) and SMS (from $20/month) were inactive and locked. Together Starter and the AI Agent are $40 a month, as the dossier says. The Basic plan and above were not looked at in the app. Difference with the dossier (from the listing, not from the app): the listing names Basic at $60 a month or $600 a year, while the dossier gives Basic at $90 a month or $77 a month billed annually. This comes from the listing and is not a test result; Basic was not opened in the app. Checkout: NOT reached. A banner said Your Shopify billing is inactive, so your payments may not go through, and that after activation the Starter plan ($10/month), the AI Agent ($30/month) and Gaia would be billed through Shopify, excluding sales tax. The button Activate in Shopify first opened an extra tab (closed) and, in our own tab, led to the billing activation address of the vendor and stayed on an empty screen of the vendor. The Shopify screen Approve subscription was not reached, nothing was approved, no card was entered and nothing was paid; so the checkout was not tested and no total, tax or test charge text was seen. Cancelling: not tested as a separate step; the app was removed through Settings, Apps, Uninstall (reason: Testing multiple apps) at about 18:37 and Gorgias no longer appeared in the list. Not tested: the AI Agent, live chat, real tickets, Shopify order data in tickets, seats, Basic and higher plans, cancelling inside Gorgias, e-mail verification and the Shopify approval screen. Clean up: the app was uninstalled; the test macro stayed in the workspace of the vendor, which is no longer linked to the store; no plan was approved and no theme change was made; our own tabs were closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"From $10/month. Free trial available\". What we saw: The Billing page said the free trial started on 17 November 2026 and expires on 24 November 2026, seven days, with Starter at $10 a month and 0 of 50 tickets used.",
+    "Text we checked: \"0 of 30 automated interactions used\". What we saw: The AI Agent was listed separately at $30 a month with 0 of 30 automated interactions used, next to Starter at $10 with 50 tickets, so the two together are $40 a month, as the dossier says."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The AI Agent, live chat, real tickets and Shopify order data in tickets.",
+    "Seats, Basic and higher plans, and the Shopify approval screen.",
+    "Cancelling inside Gorgias and e-mail verification.",
+    "Whether the helpdesk pays off for a store, which this test did not measure.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:33 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "From $10/month. Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Billing page said the free trial started on 17 November 2026 and expires on 24 November 2026, seven days, with Starter at $10 a month and 0 of 50 tickets used.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/gorgias-review.html#claim-vs-measured"
+     },
+     "plan": "Trial of Starter and AI Agent in the app; no approval screen reached",
+     "comparability": "Listing trial and $10 price versus the Billing page of the app on a development store; no charge was made.",
+     "status": "confirmed",
+     "buying_consequence": "A store can try the helpdesk for a week without paying, on the path used.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "0 of 30 automated interactions used",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The AI Agent was listed separately at $30 a month with 0 of 30 automated interactions used, next to Starter at $10 with 50 tickets, so the two together are $40 a month, as the dossier says.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/gorgias-review.html#claim-vs-measured"
+     },
+     "plan": "Trial of Starter and AI Agent in the app; no approval screen reached",
+     "comparability": "Dossier price of Starter with the AI Agent versus the two plan cards on the Billing page.",
+     "status": "confirmed",
+     "buying_consequence": "The honest entry price with the AI Agent is $40 a month, not the $10 of the listing headline.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "or $600/year and save 17%",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing gives Basic at $60 a month or $600 a year, the dossier gives $90 a month or $77 a month billed annually; Basic was not opened in the app, so the difference comes from the listing and is not a test result.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/gorgias-review.html#claim-vs-measured"
+     },
+     "plan": "Trial of Starter and AI Agent in the app; no approval screen reached",
+     "comparability": "Listing Basic price versus dossier Basic price; the app showed only Starter and the AI Agent.",
+     "status": "not_testable",
+     "buying_consequence": "The Basic price a buyer meets is not known from this test, so the dossier price needs a new check against the live price.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Activate in Shopify",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The banner said Shopify billing was inactive and that the plans would be billed through Shopify, excluding sales tax; the button Activate in Shopify led to an empty screen of the vendor, so the Shopify approval screen and the end price were not seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/gorgias-review.html#claim-vs-measured"
+     },
+     "plan": "Trial of Starter and AI Agent in the app; no approval screen reached",
+     "comparability": "Banner text and plan cards versus no checkout reached, with no stored cost rule compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price at the end of the buying path could not be compared with the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Gorgias on a Shopify development store: the install, a workspace made by the app on its own with no password or card, one macro with made up text saved in about 1.5 minutes and 5 steps, and the Billing page with a free trial from 17 to 24 November, Starter at $10 a month for 50 tickets and the AI Agent at $30 a month for 30 interactions. The app said Shopify billing was inactive, and Activate in Shopify led to an empty screen, so nothing was approved and the checkout was not tested. Nothing was sent, no channel was connected, and the app was uninstalled afterwards. Install: the App Store listing (English) was opened and the install form was submitted at 18:33 in our own tab. The first screen was Connect your Gorgias account to Shopify, with the choices Create Your Account and Already have an account. Create Your Account led to the Shopify dialog Install app, which asked for View customer data, View staff and contributor data and View and edit store data; Install was clicked. The app then showed Generating your Gorgias workspace and opened a workspace of the vendor on its own; the address of that workspace contains the name of our development store, so it is not shown. No password, card, phone number or form was asked: the account came from the Shopify identity. A banner said Your account is not verified. Please check your email.; no e-mail was sent or opened. The admin was in English. Core action, one macro (a saved reply): Settings, Macros, Create macro, the name Test: Snowboard shipping delay and the text Hi, thanks for your patience. Your snowboard is packed and leaves our test warehouse tomorrow. This is invented test text., then Create macro. It was done at about 18:34, about 1.5 minutes after the start and 5 steps after the form was opened. The macro appeared in the list with usage count 0; the list already held 12 example macros of the vendor. No mailbox, social channel or phone number was connected and no ticket or message was sent. The AI Agent was not tested. Plans in the app: Billing, Usage & Plans said Your free trial started on November 17, 2026 and will expire on November 24, 2026 (seven days). Helpdesk was Starter at $10/month with 0 of 50 tickets used; AI Agent was $30/month with 0 of 30 automated interactions used; Voice (from $30/month) and SMS (from $20/month) were inactive and locked. Together Starter and the AI Agent are $40 a month, as the dossier says. The Basic plan and above were not looked at in the app. Difference with the dossier (from the listing, not from the app): the listing names Basic at $60 a month or $600 a year, while the dossier gives Basic at $90 a month or $77 a month billed annually. This comes from the listing and is not a test result; Basic was not opened in the app. Checkout: NOT reached. A banner said Your Shopify billing is inactive, so your payments may not go through, and that after activation the Starter plan ($10/month), the AI Agent ($30/month) and Gaia would be billed through Shopify, excluding sales tax. The button Activate in Shopify first opened an extra tab (closed) and, in our own tab, led to the billing activation address of the vendor and stayed on an empty screen of the vendor. The Shopify screen Approve subscription was not reached, nothing was approved, no card was entered and nothing was paid; so the checkout was not tested and no total, tax or test charge text was seen. Cancelling: not tested as a separate step; the app was removed through Settings, Apps, Uninstall (reason: Testing multiple apps) at about 18:37 and Gorgias no longer appeared in the list. Not tested: the AI Agent, live chat, real tickets, Shopify order data in tickets, seats, Basic and higher plans, cancelling inside Gorgias, e-mail verification and the Shopify approval screen. Clean up: the app was uninstalled; the test macro stayed in the workspace of the vendor, which is no longer linked to the store; no plan was approved and no theme change was made; our own tabs were closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The workspace address contains the store name and the app was not verified by e-mail; the Billing page said Shopify billing was inactive and Activate in Shopify led to an empty screen; an extra tab opened first; and the listing gives a different Basic price than the dossier.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The AI Agent, live chat, real tickets and Shopify order data in tickets.",
+     "Seats, Basic and higher plans, and the Shopify approval screen.",
+     "Cancelling inside Gorgias and e-mail verification.",
+     "Whether the helpdesk pays off for a store, which this test did not measure.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:33 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
@@ -22489,6 +23233,766 @@
      "Roles, API entitlement, downgrade, cancellation and passive follow up.",
      "Reverse lookup, Find leads, CRM enrichment, CSV upload and any successful lookup, so credit use on a hit is unknown.",
      "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:22 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Atlas AI Store Builder",
+   "product_id": "atlas-ai-store-builder",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Atlas AI Store Builder on a Shopify development store: the install with no payment screen, one AI product page for Demo Mug made in about 1.5 minutes and 9 clicks and saved as a draft, with invented placeholder social proof in the preview (10,000+ and 438 people purchased) and a sample review, then Upgrade to generate and Upgrade to publish everywhere. The Subscription page showed the $39 plan with a 7-day trial and the limits as the dossier says, and a dialog with the usage rates; Start 7-day free trial kept spinning and led to a login page of the vendor, so the Shopify approval screen was not reached and nothing was approved. The app was uninstalled afterwards. Install: the App Store listing (English) was used and the install form was submitted in our own tab at 18:41; the Shopify dialog Install app asked for View customer data, View staff and contributor data and View and edit store data; Install was clicked. There was no plan choice and no payment screen at the install. The app opened directly on Create with Atlas AI with three choices (Store, Product pages, Landing pages); the sidebar of the app had Your Pages, Bundle Deals, Cart Upsells and Subscription. No password, card, phone number or sign-up form of the vendor was asked. The admin was in English. Core action, one AI product page for the product Demo Mug: Product pages, Demo Mug ticked (1 product selected), Continue setup, the template Atlas Default (Universal) (Used by 174,553 stores), Continue setup, Upload research (Optional) skipped, Continue setup, then Researching your product... and Writing your page.... The result stood there at 18:43, about 1 minute 30 seconds after the install and 9 clicks. The editor showed the page of Demo Mug with $9.50, four labels, 10,000+ next to the stars, the line Sarah and 438 people purchased, a sample review card that says This is a sample review, please input your genuine customer review and 25 in stock. The store had no such numbers: they are invented placeholder social proof in the preview, recorded here as an observation. The buttons were Save as draft and Upgrade to publish; Save as draft was clicked and nothing was published. After that every generate button on the home page of the app said Upgrade to generate (Full store, Product page and so on) and the setup guide said 1 out of 4 steps completed. Plans in the app: the Subscription page showed the Atlas base plan, $39 per month, All features included, only pay more as your business grows, with a button Start 7-day free trial. Included: published product and landing pages up to 10, bundle revenue up to $1,000, cart orders up to 250. The text says that if the usage is exceeded, the usage rates are charged. Usage rates (read in the app, they answer the open dossier question about them): published pages, Base up to 10 included, up to 15 +$10 a month, up to 25 +$20, up to 50 +$30, up to 75 +$40, up to 100 +$50, unlimited +$70; bundler, Base up to $1,000 included, up to $2,500 +$10, up to $5,000 +$20, up to $10,000 +$35, up to $20,000 +$65, up to $35,000 +$110, up to $50,000 +$150 and above $50,000 +$195 a month. The tab Cart drawer could not be read because the click was not processed. Difference with the dossier: the dossier says the rendered pricing page showed no per-feature prices on 9 October; the app shows the usage rates in a dialog, so that line is out of date for the app. The $39 plan, the 7-day trial and the limits (10 pages, $1,000, 250 orders) are as the dossier says. Checkout: NOT reached. Start 7-day free trial was clicked; the button kept spinning for more than 20 seconds and the Shopify screen Approve subscription did not appear. A next click (closing the rates dialog) sent the tab to the login page of the vendor (app.helloatlas.io/api/auth), which only said Enter your shop domain to log in or install this app.; nothing was entered. No test charge was seen, nothing was approved, no card was entered and nothing was paid. The app home was blank several times (about 30 seconds, directly by address and from the sidebar) and loaded after a detour. Cancelling: no plan was started, so a stop of the billing could not be tested. The uninstall route is Settings, Apps, the menu of Atlas, Uninstall; the dialog says that after uninstalling any data managed by the app, such as discounts, will be deleted and that a request goes to the developer within 48 hours to delete personal customer information; a reason for uninstalling is required before the button works. Not tested: publishing (it needs an upgrade), bundles, cart upsells, Store and Landing pages, the trial approval screen, the Cart drawer tab of the rates and whether billing stops after the uninstall. Clean up: before the uninstall no new page was found under Online Store, Pages (5 existing pages, none from Atlas) and no new theme was found (the live theme and two drafts were older); the draft stays in the app, not in Shopify; the app embeds in the theme were not checked. Atlas was uninstalled after the test in our own tab and our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Published product and landing pages Up to 10\". What we saw: The Subscription page showed the Atlas base plan at $39 per month with a button Start 7-day free trial and the limits up to 10 published pages, up to $1,000 of bundle revenue and up to 250 cart orders, as the dossier says; the trial itself was not started.",
+    "Text we checked: \"If you exceed your plan usage, you are charged based on this usage rates\". What we saw: The app has a dialog Usage rates with a charge per tier: published pages from +$10 a month up to +$70 for unlimited, and bundle revenue from +$10 a month above $1,000 up to +$195 a month above $50,000; the dossier says the rendered pricing page showed no per-feature prices on 9 October.",
+    "Text we checked: \"$50,000+ +$195/mo\". What we saw: The bundler tiers rise with the revenue of the store, from $10 a month above $1,000 to $195 a month above $50,000, so the bill grows with sales, as the dossier says."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Publishing a page, bundles, cart upsells, and the Store and Landing pages options.",
+    "The trial and the Shopify approval screen.",
+    "The Cart drawer tab of the usage rates and whether billing stops after the uninstall.",
+    "Whether the generated page converts, which this test did not measure.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:41 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Published product and landing pages Up to 10",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Subscription page showed the Atlas base plan at $39 per month with a button Start 7-day free trial and the limits up to 10 published pages, up to $1,000 of bundle revenue and up to 250 cart orders, as the dossier says; the trial itself was not started.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/atlas-ai-store-builder-review.html#claim-vs-measured"
+     },
+     "plan": "Base plan $39 with a 7-day trial; no approval screen reached",
+     "comparability": "Dossier plan and limits versus the Subscription page of the app on a development store; no charge was made.",
+     "status": "confirmed",
+     "buying_consequence": "The $39 headline and the three caps are what a buyer sees in the app before the trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "If you exceed your plan usage, you are charged based on this usage rates.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app has a dialog Usage rates with a charge per tier: published pages from +$10 a month up to +$70 for unlimited, and bundle revenue from +$10 a month above $1,000 up to +$195 a month above $50,000; the dossier says the rendered pricing page showed no per-feature prices on 9 October.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/atlas-ai-store-builder-review.html#claim-vs-measured"
+     },
+     "plan": "Base plan $39 with a 7-day trial; no approval screen reached",
+     "comparability": "Dossier remark about missing per-feature prices versus the usage rates dialog of the app; the Cart drawer tab was not read.",
+     "status": "out_of_date",
+     "buying_consequence": "The size of the extra charge can be read in the app before paying, so the dossier line is out of date for the app.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$50,000+ +$195/mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The bundler tiers rise with the revenue of the store, from $10 a month above $1,000 to $195 a month above $50,000, so the bill grows with sales, as the dossier says.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/atlas-ai-store-builder-review.html#claim-vs-measured"
+     },
+     "plan": "Base plan $39 with a 7-day trial; no approval screen reached",
+     "comparability": "Dossier remark that the meter runs on success versus the bundler tiers read in the app.",
+     "status": "confirmed",
+     "buying_consequence": "A store that sells more pays more than the $39 base plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Sarah and 438 people purchased",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The generated preview of Demo Mug showed 10,000+ next to the stars, the line Sarah and 438 people purchased and a sample review card, none of which came from the store; the review card says it is a sample.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/atlas-ai-store-builder-review.html#claim-vs-measured"
+     },
+     "plan": "Base plan $39 with a 7-day trial; no approval screen reached",
+     "comparability": "The dossier makes no claim about the content of generated pages, so this is recorded as an observation and not compared.",
+     "status": "not_comparable",
+     "buying_consequence": "A merchant has to replace the invented numbers before publishing, or shoppers would see social proof that is not true.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "After uninstalling, any data managed by the app, such as discounts, will be deleted.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The uninstall dialog needed a reason before the button worked and says a request goes to the developer within 48 hours to delete personal customer information; no paid plan was started, so charges after the uninstall could not be tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/atlas-ai-store-builder-review.html#claim-vs-measured"
+     },
+     "plan": "Base plan $39 with a 7-day trial; no approval screen reached",
+     "comparability": "Dossier remark on charges after uninstall versus an uninstall without a paid plan.",
+     "status": "not_testable",
+     "buying_consequence": "The buyer complaint about charges after the uninstall was not tested here.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Start 7-day free trial",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The button kept spinning for more than 20 seconds, then a click sent the tab to a login page of the vendor; the Shopify approval screen was not reached, so the end price was not seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/atlas-ai-store-builder-review.html#claim-vs-measured"
+     },
+     "plan": "Base plan $39 with a 7-day trial; no approval screen reached",
+     "comparability": "Plan card and usage rates versus no checkout reached, with no stored cost rule compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price at the end of the buying path could not be compared with the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested Atlas AI Store Builder on a Shopify development store: the install with no payment screen, one AI product page for Demo Mug made in about 1.5 minutes and 9 clicks and saved as a draft, with invented placeholder social proof in the preview (10,000+ and 438 people purchased) and a sample review, then Upgrade to generate and Upgrade to publish everywhere. The Subscription page showed the $39 plan with a 7-day trial and the limits as the dossier says, and a dialog with the usage rates; Start 7-day free trial kept spinning and led to a login page of the vendor, so the Shopify approval screen was not reached and nothing was approved. The app was uninstalled afterwards. Install: the App Store listing (English) was used and the install form was submitted in our own tab at 18:41; the Shopify dialog Install app asked for View customer data, View staff and contributor data and View and edit store data; Install was clicked. There was no plan choice and no payment screen at the install. The app opened directly on Create with Atlas AI with three choices (Store, Product pages, Landing pages); the sidebar of the app had Your Pages, Bundle Deals, Cart Upsells and Subscription. No password, card, phone number or sign-up form of the vendor was asked. The admin was in English. Core action, one AI product page for the product Demo Mug: Product pages, Demo Mug ticked (1 product selected), Continue setup, the template Atlas Default (Universal) (Used by 174,553 stores), Continue setup, Upload research (Optional) skipped, Continue setup, then Researching your product... and Writing your page.... The result stood there at 18:43, about 1 minute 30 seconds after the install and 9 clicks. The editor showed the page of Demo Mug with $9.50, four labels, 10,000+ next to the stars, the line Sarah and 438 people purchased, a sample review card that says This is a sample review, please input your genuine customer review and 25 in stock. The store had no such numbers: they are invented placeholder social proof in the preview, recorded here as an observation. The buttons were Save as draft and Upgrade to publish; Save as draft was clicked and nothing was published. After that every generate button on the home page of the app said Upgrade to generate (Full store, Product page and so on) and the setup guide said 1 out of 4 steps completed. Plans in the app: the Subscription page showed the Atlas base plan, $39 per month, All features included, only pay more as your business grows, with a button Start 7-day free trial. Included: published product and landing pages up to 10, bundle revenue up to $1,000, cart orders up to 250. The text says that if the usage is exceeded, the usage rates are charged. Usage rates (read in the app, they answer the open dossier question about them): published pages, Base up to 10 included, up to 15 +$10 a month, up to 25 +$20, up to 50 +$30, up to 75 +$40, up to 100 +$50, unlimited +$70; bundler, Base up to $1,000 included, up to $2,500 +$10, up to $5,000 +$20, up to $10,000 +$35, up to $20,000 +$65, up to $35,000 +$110, up to $50,000 +$150 and above $50,000 +$195 a month. The tab Cart drawer could not be read because the click was not processed. Difference with the dossier: the dossier says the rendered pricing page showed no per-feature prices on 9 October; the app shows the usage rates in a dialog, so that line is out of date for the app. The $39 plan, the 7-day trial and the limits (10 pages, $1,000, 250 orders) are as the dossier says. Checkout: NOT reached. Start 7-day free trial was clicked; the button kept spinning for more than 20 seconds and the Shopify screen Approve subscription did not appear. A next click (closing the rates dialog) sent the tab to the login page of the vendor (app.helloatlas.io/api/auth), which only said Enter your shop domain to log in or install this app.; nothing was entered. No test charge was seen, nothing was approved, no card was entered and nothing was paid. The app home was blank several times (about 30 seconds, directly by address and from the sidebar) and loaded after a detour. Cancelling: no plan was started, so a stop of the billing could not be tested. The uninstall route is Settings, Apps, the menu of Atlas, Uninstall; the dialog says that after uninstalling any data managed by the app, such as discounts, will be deleted and that a request goes to the developer within 48 hours to delete personal customer information; a reason for uninstalling is required before the button works. Not tested: publishing (it needs an upgrade), bundles, cart upsells, Store and Landing pages, the trial approval screen, the Cart drawer tab of the rates and whether billing stops after the uninstall. Clean up: before the uninstall no new page was found under Online Store, Pages (5 existing pages, none from Atlas) and no new theme was found (the live theme and two drafts were older); the draft stays in the app, not in Shopify; the app embeds in the theme were not checked. Atlas was uninstalled after the test in our own tab and our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "After the first draft every generate and publish button said Upgrade; the generated preview carried invented numbers (10,000+, 438 people purchased) and a sample review the merchant has to replace; Start 7-day free trial kept spinning and ended on a login page of the vendor; the app home was blank several times for about 30 seconds; and the uninstall asked for a reason before it worked.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Publishing a page, bundles, cart upsells, and the Store and Landing pages options.",
+     "The trial and the Shopify approval screen.",
+     "The Cart drawer tab of the usage rates and whether billing stops after the uninstall.",
+     "Whether the generated page converts, which this test did not measure.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:41 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "HelpCenter",
+   "product_id": "helpcenter",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested HelpCenter on a Shopify development store: the install, an onboarding, the Free plan with 10 tickets and a FAQ limit of 5 articles, and two FAQ questions saved in the app. We did not see the FAQ page in the web shop: the checklist item and the preview did not open anything, and the theme editor has embeds only for a contact form, live chat, tabs and a widget. The plan page showed Standard $40, Advanced $70 and Enterprise $120 a month (500, 1000 and 2000 tickets) and, on the yearly view, $33.33, $58.33 and $100 a month, without a price per extra ticket. No paid plan was started, so nothing was approved, and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at 18:49; the Shopify dialog asked for View customer data, View staff and contributor data and View and edit store data; Install was clicked at about 18:50 and the app was open at about 18:51. In the admin the app is called SB: FAQ | HelpCenter (Shark Byte, Inc). The onboarding was Thank you for installing Helpcenter!, Continue, Unlock AI Content Generation and Later. No password, card, phone number or sign-up form of the vendor was asked. The admin was in English. Plan choice: Free was chosen with Get started at about 18:52, free and with no card. The Helpdesk tab said My plan: Free, Tickets: 10, Monthly ticket limit 0/10 (0%) and Top-ups are only available on paid plans, and asked to Create account for the helpdesk (not done). The FAQ Page tab said My plan: Free and FAQ: Up to 5 articles; the template Minimalistic was already Active, and the example categories Orders (Tracking, Shipping) and Exchange & Returns were there, switched off. Core action, a FAQ page with two test questions: the articles How long does shipping take? and What is your return policy? were made in Orders, Tracking, with the message Article saved! (about 18:57 and 18:59). Each article took 3 steps (the question, the answer in the text editor, Save); the slug field filled itself. New articles were switched on by default and the example article How to track my order? stayed off. In all 3 articles of the 5 allowed on Free were in the app. From the install click (about 18:50) to the second saved question (about 18:59) it took about 9 minutes, including the onboarding and the plan choice. The FAQ page in the web shop was NOT seen: the checklist item Add FAQ page to your store did not react to a click; Preview in Customize FAQ template opened nothing in our tab; in the theme editor, App embeds, HelpCenter has only Contact form, Live Chat, Tabs and Widget (all off) and no embed for a FAQ page. The Widget was switched on in the preview, showed no visible result on the home page, and was switched off again; the editor was left with Leave page and nothing was saved. So the two questions were saved in the app (yes), but that they show in the web shop is not proven, and no route to the FAQ page was found without a theme change. Plans in the app, monthly view: Standard $40/month (14-Day Free Trial; Knowledge Base 100 Articles; FAQ translations up to 5; AI-generated FAQs; unlimited seats; CRM with 500 tickets/mo), Advanced $70/month (14-Day Free Trial; All from Standard; unlimited articles and translations; premium templates; CRM with 1000 tickets/mo) and Enterprise $120/month (All from Advanced; prioritized support; performance report; CRM with 2000 tickets/mo); under them the Free plan: No AI integrations, Limited FAQ articles, Default FAQ designs, Knowledge Base: Up to 10 Articles. Annual view (Annual (save 2 months)): Standard $33.33/month, Advanced $58.33/month and Enterprise $100/month, with CRM 6000 tickets/yr, 12000 and 24000. Difference with the listing and the dossier: the listing says save 17% and names the price per extra ticket ($0.25, $0.15, $0.12); the app did not show a price per extra ticket on the plan cards. The plan prices and ticket limits in the app are the same as in the dossier; the Free plan limit of FAQ: Up to 5 articles was seen in the app. Checkout: NOT reached. Only the Free plan was chosen; no paid plan was started, so no Shopify approval screen, no trial and no test charge was seen. Cancelling: no plan was paid, so nothing could be cancelled. The uninstall route is Settings, Apps, the menu of the app, Uninstall; the dialog says a request will be sent to the app developer within 48 hours to delete all personal customer information, and a reason for uninstalling is required (Testing multiple apps). Not tested: paid plans, the trial, the Helpdesk account (Create account), live chat, the e-mail channel, Messenger, AI generation, translations, Product Tabs, Contact Form and the FAQ page in the web shop. Clean up: the app was uninstalled at about 19:03 with the message that it was uninstalled; nothing was saved or left in the live theme (the Widget switch was not saved); our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Monthly ticket limit 0/10 (0%)\". What we saw: The Helpdesk tab on the Free plan showed Tickets: 10 and Monthly ticket limit 0/10 (0%), with Top-ups only on paid plans; the price per extra ticket was not shown and the Create account button was not used.",
+    "Text we checked: \"FAQ: Up to 5 articles\". What we saw: The FAQ Page tab on the Free plan said FAQ: Up to 5 articles; with the example article, 3 of the 5 were in use after two test questions were added. The plan strip says Knowledge Base: Up to 10 Articles for Free, which is another feature.",
+    "Text we checked: \"$40 /month\". What we saw: The plan page showed Standard $40, Advanced $70 and Enterprise $120 a month with CRM for 500, 1000 and 2000 tickets a month and a 14-Day Free Trial on Standard and Advanced; the yearly view showed $33.33, $58.33 and $100 a month. These are the plan prices and ticket limits of the dossier."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The FAQ page in the web shop, which was not seen.",
+    "Paid plans, the 14-day trial and the Shopify approval screen.",
+    "The Helpdesk account, live chat, the e-mail channel, Messenger, AI generation and translations.",
+    "Product Tabs and the Contact Form.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:49 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Monthly ticket limit 0/10 (0%)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Helpdesk tab on the Free plan showed Tickets: 10 and Monthly ticket limit 0/10 (0%), with Top-ups only on paid plans; the price per extra ticket was not shown and the Create account button was not used.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/helpcenter-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan reached",
+     "comparability": "Dossier Free ticket allowance versus the Helpdesk tab of the app; the extra-ticket price was not shown.",
+     "status": "confirmed",
+     "buying_consequence": "Free covers about 10 tickets a month in the app, as the dossier says; what an extra ticket costs was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "FAQ: Up to 5 articles",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The FAQ Page tab on the Free plan said FAQ: Up to 5 articles; with the example article, 3 of the 5 were in use after two test questions were added. The plan strip says Knowledge Base: Up to 10 Articles for Free, which is another feature.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/helpcenter-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan reached",
+     "comparability": "Dossier remark on a Free FAQ cut to five articles versus the FAQ Page tab of the app.",
+     "status": "confirmed",
+     "buying_consequence": "On Free a store can keep only five FAQ articles, as the buyer reports in the dossier say.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$40 /month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The plan page showed Standard $40, Advanced $70 and Enterprise $120 a month with CRM for 500, 1000 and 2000 tickets a month and a 14-Day Free Trial on Standard and Advanced; the yearly view showed $33.33, $58.33 and $100 a month. These are the plan prices and ticket limits of the dossier.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/helpcenter-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan reached",
+     "comparability": "Dossier plan prices and ticket limits versus the plan cards on the plan page of the app; no charge was made.",
+     "status": "confirmed",
+     "buying_consequence": "The three paid prices and the yearly prices match the dossier; the trial was not started.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$0.25, $0.15, $0.12",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing names a price per extra ticket of $0.25, $0.15 and $0.12; the plan cards in the app did not show any price per extra ticket, so the dossier rates could not be checked in the app.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/helpcenter-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan reached",
+     "comparability": "Listing and dossier extra-ticket prices versus plan cards that show none; the price fields were not changed.",
+     "status": "not_testable",
+     "buying_consequence": "The cost of a busy month above the included tickets cannot be read from the plan cards.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Add FAQ page to your store",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Two questions were saved in the app (Article saved!), but the FAQ page in the web shop was not seen: the checklist item and the preview did not open anything and the theme editor has no FAQ page embed; nothing was saved in the theme.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/helpcenter-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan reached",
+     "comparability": "Dossier remark that the FAQ builder is the reason people stay versus a FAQ page that was not shown in the web shop.",
+     "status": "not_testable",
+     "buying_consequence": "It is not proven that the saved questions show in the web shop, and no route to the page was found without a theme change.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Annual (save 2 months)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Only the Free plan was chosen; no paid plan was started, so no Shopify approval screen, trial or end price was seen; the yearly view of the plan page said Annual (save 2 months).",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/helpcenter-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan only; no paid plan reached",
+     "comparability": "Plan page prices versus no checkout reached, with no stored cost rule compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price at the end of the buying path could not be compared with the listing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested HelpCenter on a Shopify development store: the install, an onboarding, the Free plan with 10 tickets and a FAQ limit of 5 articles, and two FAQ questions saved in the app. We did not see the FAQ page in the web shop: the checklist item and the preview did not open anything, and the theme editor has embeds only for a contact form, live chat, tabs and a widget. The plan page showed Standard $40, Advanced $70 and Enterprise $120 a month (500, 1000 and 2000 tickets) and, on the yearly view, $33.33, $58.33 and $100 a month, without a price per extra ticket. No paid plan was started, so nothing was approved, and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at 18:49; the Shopify dialog asked for View customer data, View staff and contributor data and View and edit store data; Install was clicked at about 18:50 and the app was open at about 18:51. In the admin the app is called SB: FAQ | HelpCenter (Shark Byte, Inc). The onboarding was Thank you for installing Helpcenter!, Continue, Unlock AI Content Generation and Later. No password, card, phone number or sign-up form of the vendor was asked. The admin was in English. Plan choice: Free was chosen with Get started at about 18:52, free and with no card. The Helpdesk tab said My plan: Free, Tickets: 10, Monthly ticket limit 0/10 (0%) and Top-ups are only available on paid plans, and asked to Create account for the helpdesk (not done). The FAQ Page tab said My plan: Free and FAQ: Up to 5 articles; the template Minimalistic was already Active, and the example categories Orders (Tracking, Shipping) and Exchange & Returns were there, switched off. Core action, a FAQ page with two test questions: the articles How long does shipping take? and What is your return policy? were made in Orders, Tracking, with the message Article saved! (about 18:57 and 18:59). Each article took 3 steps (the question, the answer in the text editor, Save); the slug field filled itself. New articles were switched on by default and the example article How to track my order? stayed off. In all 3 articles of the 5 allowed on Free were in the app. From the install click (about 18:50) to the second saved question (about 18:59) it took about 9 minutes, including the onboarding and the plan choice. The FAQ page in the web shop was NOT seen: the checklist item Add FAQ page to your store did not react to a click; Preview in Customize FAQ template opened nothing in our tab; in the theme editor, App embeds, HelpCenter has only Contact form, Live Chat, Tabs and Widget (all off) and no embed for a FAQ page. The Widget was switched on in the preview, showed no visible result on the home page, and was switched off again; the editor was left with Leave page and nothing was saved. So the two questions were saved in the app (yes), but that they show in the web shop is not proven, and no route to the FAQ page was found without a theme change. Plans in the app, monthly view: Standard $40/month (14-Day Free Trial; Knowledge Base 100 Articles; FAQ translations up to 5; AI-generated FAQs; unlimited seats; CRM with 500 tickets/mo), Advanced $70/month (14-Day Free Trial; All from Standard; unlimited articles and translations; premium templates; CRM with 1000 tickets/mo) and Enterprise $120/month (All from Advanced; prioritized support; performance report; CRM with 2000 tickets/mo); under them the Free plan: No AI integrations, Limited FAQ articles, Default FAQ designs, Knowledge Base: Up to 10 Articles. Annual view (Annual (save 2 months)): Standard $33.33/month, Advanced $58.33/month and Enterprise $100/month, with CRM 6000 tickets/yr, 12000 and 24000. Difference with the listing and the dossier: the listing says save 17% and names the price per extra ticket ($0.25, $0.15, $0.12); the app did not show a price per extra ticket on the plan cards. The plan prices and ticket limits in the app are the same as in the dossier; the Free plan limit of FAQ: Up to 5 articles was seen in the app. Checkout: NOT reached. Only the Free plan was chosen; no paid plan was started, so no Shopify approval screen, no trial and no test charge was seen. Cancelling: no plan was paid, so nothing could be cancelled. The uninstall route is Settings, Apps, the menu of the app, Uninstall; the dialog says a request will be sent to the app developer within 48 hours to delete all personal customer information, and a reason for uninstalling is required (Testing multiple apps). Not tested: paid plans, the trial, the Helpdesk account (Create account), live chat, the e-mail channel, Messenger, AI generation, translations, Product Tabs, Contact Form and the FAQ page in the web shop. Clean up: the app was uninstalled at about 19:03 with the message that it was uninstalled; nothing was saved or left in the live theme (the Widget switch was not saved); our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The FAQ page in the web shop could not be reached: the checklist item Add FAQ page to your store did not react, Preview opened nothing, and the theme editor has no FAQ page embed; the plan cards show no price per extra ticket; and the Free plan limits the FAQ to 5 articles.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The FAQ page in the web shop, which was not seen.",
+     "Paid plans, the 14-day trial and the Shopify approval screen.",
+     "The Helpdesk account, live chat, the e-mail channel, Messenger, AI generation and translations.",
+     "Product Tabs and the Contact Form.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 18:49 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Attribuly",
+   "product_id": "attribuly",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested the start of Attribuly on a Shopify development store: the install, a welcome survey and then four screen steps to a wall. The first screen offered only Klaviyo, MambaSMS, Omnisend and CartSee, with Book a Demo for stores on another e-mail platform; the onboarding asked to connect a Klaviyo account and its Continue button stayed greyed out; the link for an attribution-only set-up did nothing when clicked twice. So the first result was not reached, no plan or checkout screen was seen, and the prices come from the listing and not from a test. The uninstall dialog was seen and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:00; the Shopify dialog Install app asked for View customer data, View staff and contributor data and View and edit store data; Install was clicked at about 19:01. The app went through a page of the vendor (Verifying your session authorization) and was open at about 19:02. Welcome to Attribuly asked how we first heard about it (Shopify App Store was chosen) and had a required field about what we searched for; a popup about a new attribution template was closed. No password, card or phone number was asked. The admin was in English. Core action, set up abandoned-cart recovery or attribution: NOT reached. At about 19:04 the screen Choose your ESP offered Klaviyo (Selected), MambaSMS, Omnisend and CartSee, with the line Not using above ESPs or want to identify anonymous visitors? Book a Demo and the line Only want to use Attribution? Click here to set up. The link Click here to set up was clicked twice and did nothing visible (no new page and no new tab). Start email recovery led to the onboarding Find the shoppers Klaviyo can't see, with four steps (Connect Klaviyo, Select events, Enable App embed, Activate Klaviyo flow) and the text Connect your Klaviyo account to start recovering missed revenue; the button Continue stayed greyed out as long as no Klaviyo account was connected. Connecting Klaviyo was not done, because it needs an account at another vendor. So there were 4 screen steps up to the wall, about 5 minutes after the start, and no first result: no recovery e-mail, no attribution view and no measurement. What the app looked like in Shopify after the install (Manage app): Pixels Disconnected, Extensions 0 active, Expiring access tokens Missing, Enforced IP restrictions Enforced; access to Online Store, Customers and Discounts (view and edit), Orders and Products (view only) and Marketing and Store analytics (view and edit). Plans: no plan choice and no subscription screen was seen in the app, because the onboarding blocked first. The charges address of the app in Shopify (charges, pricing plans) gave There's no page at this address. The Shopify screen Approve subscription was not reached, so nothing was approved. From the App Store listing of 17 November (not a test result): Free plan available and Free trial available; Free recovers $1000 of e-mail revenue and has multi-touch attribution, new customer CPA benchmarks by cohort and a missed revenue audit for Klaviyo or another ESP; Pro $99 a month and Enterprise $219 a month, both charged based on the GMV (with Capture, to identify anonymous visitors, as an add-on on Enterprise), with a 7-day free trial on both; all charges in USD, recurring and usage-based charges billed every 30 days. Difference with the dossier (from the listing, not from the app): the dossier of 14 October gives ReCapture at $100 a month plus a 10% revenue share and Capture at $450 a month flat; the listing now shows Pro $99 and Enterprise $219, GMV based, so the dossier prices are out of date or renamed; the rating on the listing is 4.8 from 172 reviews (the dossier says 167). The price fields are not changed here; this is for the price bundle. Checkout: NOT reached, no plan screen and no Shopify approval screen were seen, no card was entered and nothing was paid. Cancelling: no paid plan ran, so nothing could be cancelled; the uninstall dialog was seen: it says that after uninstalling any data managed by the app, such as discounts, will be deleted and that a request goes to the app developer within 48 hours to delete personal customer information, and it has a list of reasons (Testing multiple apps, Too expensive and others). Not tested: connecting Klaviyo or Omnisend, abandoned-cart recovery, e-mail, anonymous visitors (Capture), the attribution dashboard, the app embed, the ROI guarantee, paid plans, payment, a plan choice in the app and Book a Demo. Clean up: Attribuly was uninstalled at about 19:12 with the reason Testing multiple apps and no longer appeared in the list of installed apps; other apps were not touched; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Klaviyo or Omnisend stores with real traffic\". What we saw: The first screen offered Klaviyo, MambaSMS, Omnisend and CartSee, and the onboarding for Klaviyo asked to connect a Klaviyo account; Klaviyo and Omnisend are on the list, but the connection itself was not made, so what the app does for such a store was not tested.",
+    "Text we checked: \"Not using above ESPs or want to identify anonymous visitors? Book a Demo\". What we saw: Other stores were pointed to Book a Demo, and for Klaviyo the button Continue stayed greyed out until an account was connected, so a store without one of the four platforms could not continue on its own path; this is the group that could not do the task, and the test ended after four screen steps at the wall."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Connecting Klaviyo or Omnisend, abandoned-cart recovery, e-mail and the attribution dashboard.",
+    "Anonymous visitors (Capture), the app embed and the ROI guarantee.",
+    "Paid plans, the trial, the in-app plan choice and the Shopify approval screen.",
+    "Book a Demo.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 19:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Klaviyo or Omnisend stores with real traffic",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The first screen offered Klaviyo, MambaSMS, Omnisend and CartSee, and the onboarding for Klaviyo asked to connect a Klaviyo account; Klaviyo and Omnisend are on the list, but the connection itself was not made, so what the app does for such a store was not tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/attribuly-review.html#claim-vs-measured"
+     },
+     "plan": "No plan screen reached; prices from the listing only",
+     "comparability": "Dossier audience of Klaviyo or Omnisend stores versus the platform list of the app; no account was connected.",
+     "status": "confirmed",
+     "buying_consequence": "A store on Klaviyo or Omnisend is on the list of platforms; the result of the app for it is not known from this test.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Not using above ESPs or want to identify anonymous visitors? Book a Demo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Other stores were pointed to Book a Demo, and for Klaviyo the button Continue stayed greyed out until an account was connected, so a store without one of the four platforms could not continue on its own path; this is the group that could not do the task, and the test ended after four screen steps at the wall.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/attribuly-review.html#claim-vs-measured"
+     },
+     "plan": "No plan screen reached; prices from the listing only",
+     "comparability": "Dossier group of stores without one of the four e-mail platforms versus the Choose your ESP screen and the greyed out Continue button.",
+     "status": "confirmed",
+     "buying_consequence": "A store without Klaviyo, MambaSMS, Omnisend or CartSee cannot set up the cart recovery by itself and has to book a demo.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Only want to use Attribution?",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The line Only want to use Attribution? Click here to set up was clicked twice and did nothing visible, so an attribution-only set-up could not be tried.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/attribuly-review.html#claim-vs-measured"
+     },
+     "plan": "No plan screen reached; prices from the listing only",
+     "comparability": "Attribution-only route on the first screen; the link gave no page and no tab, so nothing could be compared.",
+     "status": "not_testable",
+     "buying_consequence": "It is not known whether a store can use only the attribution without a connected e-mail platform.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "After uninstalling, any data managed by the app, such as discounts, will be deleted.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The uninstall dialog says the data managed by the app will be deleted and that a request goes to the developer within 48 hours to delete personal customer information, with a list of reasons; no paid plan ran, so a stop of the billing was not tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/attribuly-review.html#claim-vs-measured"
+     },
+     "plan": "No plan screen reached; prices from the listing only",
+     "comparability": "Uninstall dialog text versus no paid plan to stop; nothing was compared.",
+     "status": "not_testable",
+     "buying_consequence": "What happens to billing after the uninstall could not be seen without a paid plan.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$219 / month, We charge based on your GMV",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing of 17 November shows a Free plan, Pro $99 a month and Enterprise $219 a month, both GMV based, with a 7-day trial; the dossier of 14 October gives $100 plus 10% and $450. The app showed no plan screen, so this comes from the listing and is not a test result; the price fields are not changed here.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/attribuly-review.html#claim-vs-measured"
+     },
+     "plan": "No plan screen reached; prices from the listing only",
+     "comparability": "Listing plans versus dossier plans, with no plan screen and no checkout reached in the app and no stored cost rule compared.",
+     "status": "not_testable",
+     "buying_consequence": "The price a buyer meets is not known from this test, and the dossier prices differ from the listing and need a new check against the live price.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested the start of Attribuly on a Shopify development store: the install, a welcome survey and then four screen steps to a wall. The first screen offered only Klaviyo, MambaSMS, Omnisend and CartSee, with Book a Demo for stores on another e-mail platform; the onboarding asked to connect a Klaviyo account and its Continue button stayed greyed out; the link for an attribution-only set-up did nothing when clicked twice. So the first result was not reached, no plan or checkout screen was seen, and the prices come from the listing and not from a test. The uninstall dialog was seen and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:00; the Shopify dialog Install app asked for View customer data, View staff and contributor data and View and edit store data; Install was clicked at about 19:01. The app went through a page of the vendor (Verifying your session authorization) and was open at about 19:02. Welcome to Attribuly asked how we first heard about it (Shopify App Store was chosen) and had a required field about what we searched for; a popup about a new attribution template was closed. No password, card or phone number was asked. The admin was in English. Core action, set up abandoned-cart recovery or attribution: NOT reached. At about 19:04 the screen Choose your ESP offered Klaviyo (Selected), MambaSMS, Omnisend and CartSee, with the line Not using above ESPs or want to identify anonymous visitors? Book a Demo and the line Only want to use Attribution? Click here to set up. The link Click here to set up was clicked twice and did nothing visible (no new page and no new tab). Start email recovery led to the onboarding Find the shoppers Klaviyo can't see, with four steps (Connect Klaviyo, Select events, Enable App embed, Activate Klaviyo flow) and the text Connect your Klaviyo account to start recovering missed revenue; the button Continue stayed greyed out as long as no Klaviyo account was connected. Connecting Klaviyo was not done, because it needs an account at another vendor. So there were 4 screen steps up to the wall, about 5 minutes after the start, and no first result: no recovery e-mail, no attribution view and no measurement. What the app looked like in Shopify after the install (Manage app): Pixels Disconnected, Extensions 0 active, Expiring access tokens Missing, Enforced IP restrictions Enforced; access to Online Store, Customers and Discounts (view and edit), Orders and Products (view only) and Marketing and Store analytics (view and edit). Plans: no plan choice and no subscription screen was seen in the app, because the onboarding blocked first. The charges address of the app in Shopify (charges, pricing plans) gave There's no page at this address. The Shopify screen Approve subscription was not reached, so nothing was approved. From the App Store listing of 17 November (not a test result): Free plan available and Free trial available; Free recovers $1000 of e-mail revenue and has multi-touch attribution, new customer CPA benchmarks by cohort and a missed revenue audit for Klaviyo or another ESP; Pro $99 a month and Enterprise $219 a month, both charged based on the GMV (with Capture, to identify anonymous visitors, as an add-on on Enterprise), with a 7-day free trial on both; all charges in USD, recurring and usage-based charges billed every 30 days. Difference with the dossier (from the listing, not from the app): the dossier of 14 October gives ReCapture at $100 a month plus a 10% revenue share and Capture at $450 a month flat; the listing now shows Pro $99 and Enterprise $219, GMV based, so the dossier prices are out of date or renamed; the rating on the listing is 4.8 from 172 reviews (the dossier says 167). The price fields are not changed here; this is for the price bundle. Checkout: NOT reached, no plan screen and no Shopify approval screen were seen, no card was entered and nothing was paid. Cancelling: no paid plan ran, so nothing could be cancelled; the uninstall dialog was seen: it says that after uninstalling any data managed by the app, such as discounts, will be deleted and that a request goes to the app developer within 48 hours to delete personal customer information, and it has a list of reasons (Testing multiple apps, Too expensive and others). Not tested: connecting Klaviyo or Omnisend, abandoned-cart recovery, e-mail, anonymous visitors (Capture), the attribution dashboard, the app embed, the ROI guarantee, paid plans, payment, a plan choice in the app and Book a Demo. Clean up: Attribuly was uninstalled at about 19:12 with the reason Testing multiple apps and no longer appeared in the list of installed apps; other apps were not touched; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The set-up needed a connected account at another vendor (Klaviyo) before Continue worked; the link for an attribution-only set-up did nothing; stores on other e-mail platforms were pointed to Book a Demo; no plan or price was shown in the app; and the charges address of the app in Shopify gave an empty page.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Connecting Klaviyo or Omnisend, abandoned-cart recovery, e-mail and the attribution dashboard.",
+     "Anonymous visitors (Capture), the app embed and the ROI guarantee.",
+     "Paid plans, the trial, the in-app plan choice and the Shopify approval screen.",
+     "Book a Demo.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 19:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "AutoWrite",
+   "product_id": "autowrite",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AutoWrite on a Shopify development store: the install (with an error on the first open that went away after a reload), one SEO blog post made on the Free plan in 4 steps without a card (1500 words, a featured image, Content quality 95/100, status Draft), the usage counter (1 / 10), a brand voice saved on Free, and the plan screen on which Starter, Pro and Business were Not available on a development store. The generation screen did not refresh by itself and the text appeared only after a reload, about 3 minutes after the start. Publishing, automations and the paid plans were not tested, and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:05; the Shopify dialog Install app asked only for View staff and contributor data (store owner, blog contributors) and View and edit store data (products, Online Store). No card was asked. The install was done at about 19:07. First open: the first screen after the install was an error, Application Error: Cannot coerce the result to a single JSON object. The result contains 0 rows. Code: PGRST116. After reloading the same address the dashboard opened normally (Total Posts 0, Published 0, Scheduled 0). It looks like a first-time error while the store record was being created; it was not seen again. The admin was in English. Core action, make an SEO blog post: on the Free plan, Posts, Create New Post, Create with AI, the topic How to choose a snowboard for beginners, Generate post: 4 steps, no keyword and no product chosen. The screen stayed on This post is still generating, with a line that a generation stuck for a long time may have failed silently, and empty text; it did not refresh by itself, and the text appeared only after reloading the page, about 3 minutes after the start. A message about unsaved changes blocked leaving the page until Discard was clicked; the post stayed. Result: the title How to Choose Your First Snowboard (and Avoid Bad Advice), 1500 words with 5 H2 and 6 H3 headings, an excerpt, a generated featured image of snowboards, status Draft, and Content quality 95/100 with checks for length, SEO title, meta description, headings, URL handle (a warning), readability (Flesch 83/100), AI filler phrases, sentence rhythm and active voice, plus Version History (1). The text reads well but opens with an invented anecdote and has no sources and no store products (product references are a Pro feature). The score is the app's own and was not checked by a second tool. The post was not published to the blog; it stayed a draft in the app. Counter: Usage & Plan showed Posts generated 0 / 10 and Images generated 0 / 10 before the post and 1 / 10 for both after it. What is included on Free: 10 posts and 10 images every 30 days, 1 automation, Basic SEO; usage window 17-11-2026 to 17-12-2026. The vendor FAQ, as read before the test, says 3 posts for the free plan; the app and the plan screen say 10. Plans: Manage plan opened the Shopify screen Select a plan. Free to test: these plans are free to test on this store, regular pricing applies when the store goes live; Free with a Select button. Under Unavailable on dev stores: Starter $9 / 30 days, Pro $29 / 30 days and Business $79 / 30 days, all with a greyed out Not available. The amounts and contents match the dossier and the listing (the listing of 17 November: Free, Starter $9, Pro $29, Business $79, all charges billed in USD, no reviews yet). Because paid plans cannot be picked on a development store, no Approve subscription or test charge screen was reached, nothing was approved, nothing was paid and no card was asked. Difference with the dossier: the dossier lists brand voices and auto-publish as Starter features; on Free, Settings, Brand voices accepted a new voice (name, tone, custom instructions, banned words, preferred words) and showed Brand voice saved and 1 voice, Test voice, professional. Whether a saved voice is used in a generation or an automation on Free was not tested. Automations on Free: the page showed No automations yet with a Create automation button; not tested (the plan says 1 automation). Cancelling: Free plan, no subscription to cancel; the uninstall dialog (Settings, Apps, AutoWrite, Uninstall) says that the app can no longer be used, that data managed by the app, such as discounts, will be deleted and that a request goes to the app developer within 48 hours to delete personal customer information; a reason is required (Testing multiple apps was chosen). Not tested: publishing to the Shopify blog, scheduling in the calendar, automations, bulk generation, keyword research, product or collection references, Google grounding, other languages, paid plans and checkout. Clean up: the test brand voice and the draft post existed only in the app and went away with the uninstall; AutoWrite no longer appeared in the list of installed apps; other apps were not touched; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"10 posts every 30 days\". What we saw: The Free plan in the app and on the Shopify plan screen gives 10 posts and 10 images every 30 days, and the counter went from 0 / 10 to 1 / 10 after one post. The vendor FAQ read before the test said 3 posts; the app and the plan screen say 10, as the listing does.",
+    "Text we checked: \"Brand voices\". What we saw: The dossier lists brand voices as a Starter feature, but on the Free plan Settings accepted a new voice and showed Brand voice saved and 1 voice, Test voice, professional. Whether the voice is used in a generation on Free was not tested."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "Publishing to the Shopify blog, the calendar, automations and bulk generation.",
+    "Keyword research, product and collection references, Google grounding and other languages.",
+    "Whether a saved brand voice is used in a generation.",
+    "Paid plans, the Shopify approval screen and checkout.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 19:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "10 posts every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Free plan in the app and on the Shopify plan screen gives 10 posts and 10 images every 30 days, and the counter went from 0 / 10 to 1 / 10 after one post. The vendor FAQ read before the test said 3 posts; the app and the plan screen say 10, as the listing does.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the paid plans were Not available on a development store",
+     "comparability": "Dossier and listing figure of 10 free posts against the Usage & Plan page and the counter after one post; one post was made, not ten.",
+     "status": "confirmed",
+     "buying_consequence": "A store on Free can make up to 10 posts a month according to the app counter; the older FAQ figure of 3 should not be used.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Brand voices",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The dossier lists brand voices as a Starter feature, but on the Free plan Settings accepted a new voice and showed Brand voice saved and 1 voice, Test voice, professional. Whether the voice is used in a generation on Free was not tested.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the paid plans were Not available on a development store",
+     "comparability": "Dossier plan split for brand voices against the saved voice on Free; use in a generation was not tested.",
+     "status": "contradicted",
+     "buying_consequence": "A store on Free can save a brand voice, which is more than the dossier says; its effect on a generated post is not known.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Content quality 95/100",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The post got 95/100 from the app itself, with checks for length, titles, headings, readability and AI filler phrases. The text reads well but opens with an invented anecdote and has no sources. The score was not checked by a second tool.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the paid plans were Not available on a development store",
+     "comparability": "The app's own score of its own output; no independent score and no ranking outcome was available.",
+     "status": "not_testable",
+     "buying_consequence": "The 95/100 is the app's own measure of its own post and says little about whether the post would rank or whether it is accurate.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "auto-publish",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Auto-publish is listed as a Starter feature and the editor has a button Publish to Shopify, but publishing was not tried and the paid plans could not be picked on a development store.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the paid plans were Not available on a development store",
+     "comparability": "Dossier and plan card feature against a button that was seen but not used; nothing was compared.",
+     "status": "not_testable",
+     "buying_consequence": "It is not known from this test whether a post can be published to the blog on the Free plan or what auto-publish does on Starter.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Starter $9 / 30 days, Pro $29 / 30 days, Business $79 / 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify plan screen lists Starter $9, Pro $29 and Business $79 every 30 days, the same amounts and contents as the dossier and the listing, but all three were greyed out with Not available on a development store. No approval screen, tax line or total was seen.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/autowrite-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the paid plans were Not available on a development store",
+     "comparability": "Plan screen amounts against the dossier amounts with no checkout reached in the app and no stored cost rule compared.",
+     "status": "not_testable",
+     "buying_consequence": "The amounts match, but what a buyer is charged at checkout, with tax, was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested AutoWrite on a Shopify development store: the install (with an error on the first open that went away after a reload), one SEO blog post made on the Free plan in 4 steps without a card (1500 words, a featured image, Content quality 95/100, status Draft), the usage counter (1 / 10), a brand voice saved on Free, and the plan screen on which Starter, Pro and Business were Not available on a development store. The generation screen did not refresh by itself and the text appeared only after a reload, about 3 minutes after the start. Publishing, automations and the paid plans were not tested, and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:05; the Shopify dialog Install app asked only for View staff and contributor data (store owner, blog contributors) and View and edit store data (products, Online Store). No card was asked. The install was done at about 19:07. First open: the first screen after the install was an error, Application Error: Cannot coerce the result to a single JSON object. The result contains 0 rows. Code: PGRST116. After reloading the same address the dashboard opened normally (Total Posts 0, Published 0, Scheduled 0). It looks like a first-time error while the store record was being created; it was not seen again. The admin was in English. Core action, make an SEO blog post: on the Free plan, Posts, Create New Post, Create with AI, the topic How to choose a snowboard for beginners, Generate post: 4 steps, no keyword and no product chosen. The screen stayed on This post is still generating, with a line that a generation stuck for a long time may have failed silently, and empty text; it did not refresh by itself, and the text appeared only after reloading the page, about 3 minutes after the start. A message about unsaved changes blocked leaving the page until Discard was clicked; the post stayed. Result: the title How to Choose Your First Snowboard (and Avoid Bad Advice), 1500 words with 5 H2 and 6 H3 headings, an excerpt, a generated featured image of snowboards, status Draft, and Content quality 95/100 with checks for length, SEO title, meta description, headings, URL handle (a warning), readability (Flesch 83/100), AI filler phrases, sentence rhythm and active voice, plus Version History (1). The text reads well but opens with an invented anecdote and has no sources and no store products (product references are a Pro feature). The score is the app's own and was not checked by a second tool. The post was not published to the blog; it stayed a draft in the app. Counter: Usage & Plan showed Posts generated 0 / 10 and Images generated 0 / 10 before the post and 1 / 10 for both after it. What is included on Free: 10 posts and 10 images every 30 days, 1 automation, Basic SEO; usage window 17-11-2026 to 17-12-2026. The vendor FAQ, as read before the test, says 3 posts for the free plan; the app and the plan screen say 10. Plans: Manage plan opened the Shopify screen Select a plan. Free to test: these plans are free to test on this store, regular pricing applies when the store goes live; Free with a Select button. Under Unavailable on dev stores: Starter $9 / 30 days, Pro $29 / 30 days and Business $79 / 30 days, all with a greyed out Not available. The amounts and contents match the dossier and the listing (the listing of 17 November: Free, Starter $9, Pro $29, Business $79, all charges billed in USD, no reviews yet). Because paid plans cannot be picked on a development store, no Approve subscription or test charge screen was reached, nothing was approved, nothing was paid and no card was asked. Difference with the dossier: the dossier lists brand voices and auto-publish as Starter features; on Free, Settings, Brand voices accepted a new voice (name, tone, custom instructions, banned words, preferred words) and showed Brand voice saved and 1 voice, Test voice, professional. Whether a saved voice is used in a generation or an automation on Free was not tested. Automations on Free: the page showed No automations yet with a Create automation button; not tested (the plan says 1 automation). Cancelling: Free plan, no subscription to cancel; the uninstall dialog (Settings, Apps, AutoWrite, Uninstall) says that the app can no longer be used, that data managed by the app, such as discounts, will be deleted and that a request goes to the app developer within 48 hours to delete personal customer information; a reason is required (Testing multiple apps was chosen). Not tested: publishing to the Shopify blog, scheduling in the calendar, automations, bulk generation, keyword research, product or collection references, Google grounding, other languages, paid plans and checkout. Clean up: the test brand voice and the draft post existed only in the app and went away with the uninstall; AutoWrite no longer appeared in the list of installed apps; other apps were not touched; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The first screen after the install was an error that needed a reload; the generation screen did not refresh by itself and the text appeared only after a reload, about 3 minutes after the start; a message about unsaved changes blocked leaving the page until Discard was clicked; the paid plans could not be picked on a development store, so their checkout was not seen.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "Publishing to the Shopify blog, the calendar, automations and bulk generation.",
+     "Keyword research, product and collection references, Google grounding and other languages.",
+     "Whether a saved brand voice is used in a generation.",
+     "Paid plans, the Shopify approval screen and checkout.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 19:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "GeoStock",
+   "product_id": "geostock",
+   "run_date": "2026-11-17",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested GeoStock on a Shopify development store: the install, a three step onboarding on the Free plan, two of three locations chosen, the app embed and the block Product inventory added in the theme editor, and the stock per location on a product page. The first result came after about 5 minutes and about 30 steps and showed My Custom Location 50, but the app said that 1 of the 2 selected locations was no longer valid and not published, so the second location never showed, and a product stocked only there showed Not Available. The Basic approval screen asked for a payment method and was cancelled. The theme was put back and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:20; the Shopify dialog Install app asked for View customer data, View staff and contributor data and View and edit store data, and Install was clicked. The app is called GeoStock Inventory By Location in the admin and GeoStock: Multi Location Stock in the App Store. We went straight into the app, with no payment step. No card was asked. The admin was in English. Onboarding in 3 steps: Which stores should shoppers see (3 Shopify locations offered, with the line 0 selected, Free publishes up to 2), Add GeoStock to your store (the app embed and an inventory block), and Setup complete. Core action, show stock per location on a product page: 2 of the 3 locations were chosen, the app embed was switched on and the block Product inventory was added to Product information in the theme editor (in our own tab) and saved, which is needed to see the result. The first result in the preview came at about 19:25, about 5 minutes after the install and about 30 steps, many of them navigation in the theme editor. At first the block showed only Not Available on the products tried (Appointment, 3p Fulfilled Snowboard, Hydrogen). On The Collection Snowboard: Hydrogen, which has 50 available at the Shop location in Shopify, the block kept showing Not Available. In the app, the page Store locator showed 1 selected location(s) are no longer valid and are not published. Choose replacements. next to 2 of 2 locations selected (the location names were not visible in the list). Save locations gave Locations saved., but the warning stayed. On The Multi-location Snowboard the preview then showed My Custom Location 50; the Shop location did not appear. So stock per location works for one of the two chosen locations, and the other was not published; a product stocked only there showed Not Available. Why the second location counted as no longer valid was not found. Plans: the app screen Plan & billing showed Current plan Free, 2 locations, Standard design, 14 trial day(s) remaining, and a button Start a trial with Shopify Basic Plan $9.99/month; Free includes a store locator with up to 2 locations, search, directions, e-mail and business hours, and the standard design. Only Basic could be chosen in the app; a Plus Plan at $29.99 was not offered in the app. The App Store listing of 17 November says Free plan available and Free trial available, with a rating of 4.8 (80). Checkout: Start a trial opened the Shopify screen Approve subscription: Base Plan, $9,99 USD every 30 days, a 14-day free trial ending on 1 Dec, Subtotal $9,99 plus any applicable taxes, Total $9,99 due 1 Dec, and Add payment method, with Approve greyed out. The sentence that you will not be billed for this test charge was not there and a payment method was asked, so nothing was approved; Cancel was clicked, no card was entered and nothing was paid. Difference with the dossier: the dossier says there is no free plan, but the app and the listing have a Free plan with a store locator for up to 2 locations; the rating on the listing is 4.8 from 80 reviews while the dossier says 4.9 from 99. The price fields are not changed here; this is for the price bundle. Cancelling: no subscription was started; the uninstall dialog (Settings, Apps, GeoStock, Uninstall) says that data managed by the app, such as discounts, will be deleted and requires a reason (Testing multiple apps was chosen). Not tested: the Plus Plan (not offered in the app), a custom theme integration, batch loading with many locations, back-in-stock alerts (Notify me), the store locator map, detecting the nearest store from the visitor's location, and the paid Basic features. Clean up: in the theme the block Product inventory was removed and the app embed was switched off and saved, so the theme is as before the test; GeoStock was uninstalled with the reason Testing multiple apps and no longer appeared in the list of installed apps; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+   "findings": [
+    "Text we checked: \"Free plan available. Free trial available\". What we saw: The app and the listing offer a Free plan with a store locator for up to 2 locations (shown on the plan screen as Free, 2 locations, Standard design), while the dossier says there is no free plan.",
+    "Text we checked: \"My Custom Location 50\". What we saw: After the block Product inventory was added and saved, the preview of The Multi-location Snowboard showed the line My Custom Location 50, so stock per location does show on the product page for one location.",
+    "Text we checked: \"1 selected location(s) are no longer valid and are not published\". What we saw: Of the 2 chosen locations 1 was reported as no longer valid and not published, Locations saved. did not remove the warning, the Shop location never appeared, and a product with 50 in stock only at the Shop location kept showing Not Available.",
+    "Text we checked: \"4.8 (80)\". What we saw: The listing of 17 November shows a rating of 4.8 from 80 reviews, while the dossier says 4.9 from 99; the listing figure is newer."
+   ],
+   "not_tested": [
+    "Original store creation and identity check, which Daan did himself.",
+    "The Plus plan, which was not offered in the app, and the paid Basic features.",
+    "A custom theme integration and batch loading with many locations.",
+    "Back-in-stock alerts, the store locator map and detecting the nearest store.",
+    "Approving the Basic subscription.",
+    "Export and reimport.",
+    "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 19:19 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free plan available. Free trial available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The app and the listing offer a Free plan with a store locator for up to 2 locations (shown on the plan screen as Free, 2 locations, Standard design), while the dossier says there is no free plan.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/geostock-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the Basic approval screen was seen and not approved",
+     "comparability": "Dossier statement of no free plan against the Plan & billing page and the listing of 17 November.",
+     "status": "contradicted",
+     "buying_consequence": "A store can start on Free with up to 2 locations and does not have to pay first, which is more than the dossier says.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "My Custom Location 50",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "After the block Product inventory was added and saved, the preview of The Multi-location Snowboard showed the line My Custom Location 50, so stock per location does show on the product page for one location.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/geostock-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the Basic approval screen was seen and not approved",
+     "comparability": "Dossier description of stock per location against the line seen in the preview for one location of two.",
+     "status": "confirmed",
+     "buying_consequence": "Stock per location can be shown on a product page, but only after an app embed and a block were added in the theme.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "1 selected location(s) are no longer valid and are not published",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "Of the 2 chosen locations 1 was reported as no longer valid and not published, Locations saved. did not remove the warning, the Shop location never appeared, and a product with 50 in stock only at the Shop location kept showing Not Available.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/geostock-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the Basic approval screen was seen and not approved",
+     "comparability": "Dossier promise of stock per chosen location against the warning and the products seen in the preview; the cause of the warning was not found.",
+     "status": "contradicted",
+     "buying_consequence": "A shop with two locations may find only one of them on the product page, and a product stocked only at the other one shows as not available to shoppers.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Plus Plan ($29.99)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The dossier lists a Plus plan at $29.99, but the app offered only the Basic plan at $9.99 a month; the Plus plan was not seen anywhere in the app.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/geostock-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the Basic approval screen was seen and not approved",
+     "comparability": "Dossier plan list against the plan screen of the app, where no Plus plan was offered; nothing was compared.",
+     "status": "not_testable",
+     "buying_consequence": "It is not known from this test whether the Plus plan exists for this store or what it adds.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "4.8 (80)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The listing of 17 November shows a rating of 4.8 from 80 reviews, while the dossier says 4.9 from 99; the listing figure is newer.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/geostock-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the Basic approval screen was seen and not approved",
+     "comparability": "Dossier rating against the listing rating read on the day of the test; not a product test.",
+     "status": "out_of_date",
+     "buying_consequence": "The rating in the dossier is out of date; the new listing figure is slightly lower.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$9,99 USD every 30 days",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-17",
+     "observed": "The Shopify approval screen shows $9,99 USD every 30 days, a Subtotal and Total of $9,99 plus any applicable taxes, due 1 Dec after a 14-day trial, which matches the $9.99 a month on the plan page; it asked for a payment method and had no test charge sentence, so it was not approved.",
+     "observed_on": "2026-11-17",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/geostock-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the Basic approval screen was seen and not approved",
+     "comparability": "Plan page price versus the approval screen amount; no stored cost rule was compared.",
+     "status": "confirmed",
+     "buying_consequence": "The amount at the end of the buying path equals the plan page price, with taxes not included.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-17",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 17 November 2026 the session tested GeoStock on a Shopify development store: the install, a three step onboarding on the Free plan, two of three locations chosen, the app embed and the block Product inventory added in the theme editor, and the stock per location on a product page. The first result came after about 5 minutes and about 30 steps and showed My Custom Location 50, but the app said that 1 of the 2 selected locations was no longer valid and not published, so the second location never showed, and a product stocked only there showed Not Available. The Basic approval screen asked for a payment method and was cancelled. The theme was put back and the app was uninstalled afterwards. Install: the install form of the App Store listing (English) was submitted in our own tab at about 19:20; the Shopify dialog Install app asked for View customer data, View staff and contributor data and View and edit store data, and Install was clicked. The app is called GeoStock Inventory By Location in the admin and GeoStock: Multi Location Stock in the App Store. We went straight into the app, with no payment step. No card was asked. The admin was in English. Onboarding in 3 steps: Which stores should shoppers see (3 Shopify locations offered, with the line 0 selected, Free publishes up to 2), Add GeoStock to your store (the app embed and an inventory block), and Setup complete. Core action, show stock per location on a product page: 2 of the 3 locations were chosen, the app embed was switched on and the block Product inventory was added to Product information in the theme editor (in our own tab) and saved, which is needed to see the result. The first result in the preview came at about 19:25, about 5 minutes after the install and about 30 steps, many of them navigation in the theme editor. At first the block showed only Not Available on the products tried (Appointment, 3p Fulfilled Snowboard, Hydrogen). On The Collection Snowboard: Hydrogen, which has 50 available at the Shop location in Shopify, the block kept showing Not Available. In the app, the page Store locator showed 1 selected location(s) are no longer valid and are not published. Choose replacements. next to 2 of 2 locations selected (the location names were not visible in the list). Save locations gave Locations saved., but the warning stayed. On The Multi-location Snowboard the preview then showed My Custom Location 50; the Shop location did not appear. So stock per location works for one of the two chosen locations, and the other was not published; a product stocked only there showed Not Available. Why the second location counted as no longer valid was not found. Plans: the app screen Plan & billing showed Current plan Free, 2 locations, Standard design, 14 trial day(s) remaining, and a button Start a trial with Shopify Basic Plan $9.99/month; Free includes a store locator with up to 2 locations, search, directions, e-mail and business hours, and the standard design. Only Basic could be chosen in the app; a Plus Plan at $29.99 was not offered in the app. The App Store listing of 17 November says Free plan available and Free trial available, with a rating of 4.8 (80). Checkout: Start a trial opened the Shopify screen Approve subscription: Base Plan, $9,99 USD every 30 days, a 14-day free trial ending on 1 Dec, Subtotal $9,99 plus any applicable taxes, Total $9,99 due 1 Dec, and Add payment method, with Approve greyed out. The sentence that you will not be billed for this test charge was not there and a payment method was asked, so nothing was approved; Cancel was clicked, no card was entered and nothing was paid. Difference with the dossier: the dossier says there is no free plan, but the app and the listing have a Free plan with a store locator for up to 2 locations; the rating on the listing is 4.8 from 80 reviews while the dossier says 4.9 from 99. The price fields are not changed here; this is for the price bundle. Cancelling: no subscription was started; the uninstall dialog (Settings, Apps, GeoStock, Uninstall) says that data managed by the app, such as discounts, will be deleted and requires a reason (Testing multiple apps was chosen). Not tested: the Plus Plan (not offered in the app), a custom theme integration, batch loading with many locations, back-in-stock alerts (Notify me), the store locator map, detecting the nearest store from the visitor's location, and the paid Basic features. Clean up: in the theme the block Product inventory was removed and the app embed was switched off and saved, so the theme is as before the test; GeoStock was uninstalled with the reason Testing multiple apps and no longer appeared in the list of installed apps; our own tab was closed. The clock times in the notes can be a few minutes off. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "About 30 steps and about 5 minutes were needed to see the first result, mostly in the theme editor; one of the two chosen locations was not published and the warning stayed after Locations saved; a product stocked only at that location showed Not Available; the Plus plan was not offered in the app; the approval screen asked for a payment method and had no test charge sentence.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Original store creation and identity check, which Daan did himself.",
+     "The Plus plan, which was not offered in the app, and the paid Basic features.",
+     "A custom theme integration and batch loading with many locations.",
+     "Back-in-stock alerts, the store locator map and detecting the nearest store.",
+     "Approving the Basic subscription.",
+     "Export and reimport.",
+     "Session and source-reading date: 17 November 2026. Times are CET. The session started at about 19:19 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],

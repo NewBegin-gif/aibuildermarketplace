@@ -720,7 +720,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/carbon6-review.html
 
 ## CarouselBot (carouselbot.app)
-- **Verified pricing:** (read 2026-10-17 in a browser on carouselbot.app/pricing, Monthly and Annual views; the cards show a $ sign without naming the currency) Free is $0 forever: 3 carousels a month, plus 3 card…
+- **Verified pricing:** (read 2026-11-18 in a browser on carouselbot.app/pricing, Monthly and Annual views; earlier: read 2026-10-17; the cards show a $ sign without naming the currency) Free is $0 forever: 3 caro…
 - **Honest take:** Free exports carry a watermark; Creator caps batches at 3 a month; refunds only within 7 days.
 - **Best for:** solo creators, consultants and small marketing teams who post LinkedIn and Instagram carousels every week and want to turn articles and ideas into branded slides without designing them by hand
 - **Flags:** Annual commit
@@ -1298,7 +1298,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/emaillistverify-review/
 
 ## EmailOctopus (emailoctopus.com)
-- **Verified pricing:** (read 2026-11-17 on emailoctopus.com/pricing, US dollars) Starter: free, 2,500 subscribers, 10,000 emails a month, branded emails, reports for 30 days.
+- **Verified pricing:** (read 2026-11-18 on emailoctopus.com/pricing and its Markdown version, US dollars; earlier: read 2026-11-17) Starter: free, 2,500 subscribers, 10,000 emails a month, branded emails, reports…
 - **Honest take:** Simple email marketing: free to 2,500 subscribers, Pro from $9 a month.
 - **Best for:** newsletter publishers and small businesses that want a cheap, simple sender with a free tier and no trial clock
 - **Flags:** Free tier
@@ -2328,7 +2328,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Visual automation for connecting apps; free plan, paid from $15 a month.
 - **Best for:** small and mid-sized teams that want to connect several apps and AI steps in a visual builder, with branching logic, and are happy to watch a credit meter
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/make-review/
+- **Full review:** https://officesoftwaremarketplace.com/make-review.html
 
 ## ManyChat (manychat.com)
 - **Verified pricing:** Read on their own pricing page, 6 September 2026, and again, unchanged, 25 September 2026.
@@ -3457,10 +3457,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seo-space-review/
 
 ## Seobility (seobility.net)
-- **Verified pricing:** (read 2026-11-17 on seobility.net/pricing, euros, plus VAT) Basic: free, no time limit, 1 project, 10 keywords, 100 pages per crawl, limited website audit.
+- **Verified pricing:** (read 2026-11-18 on seobility.net/pricing, euros, plus VAT; earlier: read 2026-11-17) Basic: free, no time limit, 1 project, 10 keywords, 100 pages per crawl, limited website audit, 5 daily…
 - **Honest take:** SEO suite with a free Basic account; Premium from 59.90 EUR a month.
 - **Best for:** small businesses, freelancers and agencies that want a website audit, rank tracking and backlink monitoring in one suite, with a free account to start
-- **Flags:** Add-ons extra
+- **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/seobility-review.html
 
 ## SEOKart (seokart.com)
@@ -3918,7 +3918,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/synthesia-review.html
 
 ## Systeme.io (systeme.io)
-- **Verified pricing:** (read 2026-11-17 on systeme.io/pricing, US dollars a month) Free $0: 2,000 contacts, 3 sales funnels, 1 blog, 1 course, 1 affiliate program, 1 custom domain, 1 automation rule, 1 email camp…
+- **Verified pricing:** (read 2026-11-18 on systeme.io/pricing, US dollars a month; earlier: read 2026-11-17) Free $0: 2,000 contacts, 3 sales funnels with 15 funnel steps, 1 website, 1 blog, 1 course, 1 affiliate…
 - **Honest take:** All-in-one funnels, email and courses; free to 2,000 contacts, paid from $17.
 - **Best for:** solo creators, coaches and small online businesses that want funnels, email, courses and an affiliate program under one login, and are happy to start free and move up as the contact list grows
 - **Flags:** Usage-metered, Annual commit, Free tier

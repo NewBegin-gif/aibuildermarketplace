@@ -4187,7 +4187,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/typewise-review.html
 
 ## UENI (ueni.com)
-- **Verified pricing:** (re-verified 2026-09-09 on www.ueni.com/pricing and re-read unchanged 2026-09-26; every figure below unchanged since the August reading) A done-for-you website, now sold in four tiers rathe…
+- **Verified pricing:** (re-verified 2026-11-18 on ueni.com/en-us/pricing and ueni.com/llms.txt; the separate Ecommerce tier recorded on 2026-09-09 and 2026-09-26 is no longer offered) A done-for-you website, now …
 - **Honest take:** DIY editing and customisation are limited, e-commerce and integrations are basic, and the most common complaint is slow design turnaround against the 7-day promise.
 - **Best for:** small-business owners with no time or tech skills who want a professional site built for them, not another tool to learn
 - **Full review:** https://aibuildermarketplace.com/b2b/ueni-review/
@@ -4212,7 +4212,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/uniqode-review.html
 
 ## UniTel Voice (unitelvoice.com)
-- **Verified pricing:** (re-verified 2026-10-24 on signup.unitelvoice.com/pick-plan, where unitelvoice.com/pricing now lands) Three plans, no contracts: Solo $9.99/mo, Team $19.99/mo and Office $29.99/mo, each wit…
+- **Verified pricing:** (re-verified 2026-10-24 and again 2026-11-18 on signup.unitelvoice.com/pick-plan, where unitelvoice.com/pricing now lands) Three plans, no contracts: Solo $9.99/mo, Team $19.99/mo and Offic…
 - **Honest take:** It's a virtual phone layer, not a full unified-comms suite: you won't find the deep team messaging, video meetings and contact-center features pricier platforms bundle.
 - **Best for:** solopreneurs and small teams that want a professional toll-free or local number, auto-attendant and call routing on their existing phones: no hardware
 - **Flags:** Per-seat pricing, Usage-metered
@@ -4465,10 +4465,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wegic-review/
 
 ## WhatConverts (whatconverts.com)
-- **Verified pricing:** (re-verified 25 September 2026 on whatconverts.com/pricing) Two ladders behind one toggle, and the page opens on the single-account one.
+- **Verified pricing:** (re-verified 25 September 2026 and again 18 November 2026 on whatconverts.com/pricing) Two ladders behind one toggle, and the page opens on the single-account one.
 - **Honest take:** The meter is honest and only half of it is printed: every phone number, call minute, text, form, chat, appointment, email, event and transaction is charged against a monthly credit.
 - **Best for:** agencies and lead-gen businesses that want every lead (calls, forms, chats) attributed to its source and campaign without enterprise-suite prices
-- **Flags:** Usage-metered
+- **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/whatconverts-review/
 
 ## WhisperTranscribe (whispertranscribe.com)
@@ -4600,7 +4600,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/zastech-review.html
 
 ## Zedonk (zedonk.co.uk)
-- **Verified pricing:** (price re-verified 2026-09-09, re-read unchanged 2026-09-27 and again 2026-10-20 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per building b…
+- **Verified pricing:** (price re-verified 2026-09-09, re-read unchanged 2026-09-27, 2026-10-20 and 2026-11-18 against zedonk.co.uk/pricing; unchanged since our August reading) Modular fashion-ERP, priced per buil…
 - **Honest take:** The 'starting from' wording is doing real work: £166/mo is the floor of the cheapest module, billed annually.
 - **Best for:** small and mid-size fashion brands that need sales, production, inventory and wholesale in one system built around size curves, seasons and linesheets
 - **Flags:** Add-ons extra

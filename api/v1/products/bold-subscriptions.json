@@ -15,26 +15,10 @@
   "entry_price": "$24.99",
   "entry_price_terms": "Launch · per month, plus a 2% transaction fee",
   "from_price_usd_month": 24.99,
-  "plans": [
-   {
-    "name": "Launch",
-    "price": "$24.99 a month plus 2% transaction fee",
-    "includes": "subscription maximizers, customizable frequencies, order-based and fixed-date billing, dunning, prepaid subscriptions, unlimited subscribers, standard support"
-   },
-   {
-    "name": "Grow",
-    "price": "$49.99 a month plus 1% transaction fee",
-    "includes": "standard support; no additional features named beyond lower fee"
-   },
-   {
-    "name": "Scale",
-    "price": "$74.99 a month plus 0.9% transaction fee",
-    "includes": "standard support; no additional features named beyond lower fee"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(read 2026-10-05 on the Shopify App Store listing at apps.shopify.com/bold-subscriptions, prices in USD) Three plans, each a monthly fee plus a transaction fee, and each with a 30-day free trial. Launch is $24.99 a month plus a 2% transaction fee and already includes the working core: subscription maximizers, customizable frequencies, order-based and fixed-date billing, dunning, prepaid subscriptions, unlimited subscribers and standard support. Grow is $49.99 a month plus 1%, and Scale is $74.99 a month plus 0.9%. The listing names no feature that Grow or Scale adds beyond the lower fee; the support line reads 'Standard support' on all three. All charges are billed in USD, and recurring and usage-based charges are billed every 30 days. The listing does not say which transactions the fee is charged on; we read it as the subscription orders the app processes, and that is worth confirming before you install.",
-  "verified_at": "2026-10-05",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(read 2026-10-05 on the Shopify App Store listing at apps.shopify.com/bold-subscriptions, prices in USD) Three plans, each a monthly fee plus a transaction fee, and each with a 30-day free trial. Launch is $24.99 a month plus a 2% transaction fee and already includes the working core: subscription maximizers, customizable frequencies, order-based and fixed-date billing, dunning, prepaid subscriptions, unlimited subscribers and standard support. Grow is $49.99 a month plus 1%, and Scale is $74.99 a month plus 0.9%. The listing names no feature that Grow or Scale adds beyond the lower fee; the support line reads 'Standard support' on all three. All charges are billed in USD, and recurring and usage-based charges are billed every 30 days. The listing does not say which transactions the fee is charged on; we read it as the subscription orders the app processes, and that is worth confirming before you install. Our install on 18 November 2026 showed two more tiers in the app's own plan picker: Ultimate Retention at $399.99 a month plus 0.90%, and Enterprise on request; the picker says 'A 30-day free trial is available to first-time installs on all plans, excluding Ultimate Retention.' Choosing Launch opened Shopify's 'Approve subscription' screen with 'You have a 30-day free trial ending on 18 Dec', a total of $24.99 due 18 Dec and an 'Add payment method' row, and Approve stayed disabled until a payment method was added. We approved nothing.",
+  "verified_at": "2026-11-18",
   "source_url": null,
   "schema_offer": {
    "price": 24.99,
@@ -104,6 +88,20 @@
      "monthly": 74.99,
      "annual_status": "unknown",
      "evidence": "and Scale is $74.99 a month plus 0.9%"
+    },
+    {
+     "id": "ultimate-retention",
+     "name": "Ultimate Retention",
+     "model": "per_unit",
+     "monthly": 399.99,
+     "annual_status": "unknown",
+     "evidence": "Ultimate Retention at $399.99 a month plus 0.90%"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "and Enterprise on request"
     }
    ],
    "usage": [
@@ -114,18 +112,20 @@
      "percent_by_plan": {
       "launch": 2,
       "grow": 1,
-      "scale": 0.9
+      "scale": 0.9,
+      "ultimate-retention": 0.9
      },
      "evidence": "Launch is $24.99 a month plus a 2% transaction fee and already includes the working core: subscription maximizers, customizable frequencies, order-based and fixed-date billing, dunning, prepaid subscriptions, unlimited subscribers and standard support. Grow is $49.99 a month plus 1%, and Scale is $74.99 a month plus 0.9%"
     }
    ],
    "notes": [
-    "A Shopify app is billed per store that installs it; charges are billed in USD every 30 days."
+    "A Shopify app is billed per store that installs it; charges are billed in USD every 30 days.",
+    "Ultimate Retention and Enterprise showed only in the app's own plan picker on 18 November 2026, not on the Shopify listing; the 30-day free trial excludes Ultimate Retention."
    ],
    "not_computable": [
     "The listing does not say which transactions the fee is charged on; the revenue you enter is treated as the subscription revenue the app processes."
    ],
-   "rules_verified_at": "2026-10-07"
+   "rules_verified_at": "2026-11-18"
   },
   "growth": {
    "annual": {
@@ -145,7 +145,9 @@
       "per_plan": {
        "launch": "price_unknown_on_billing",
        "grow": "price_unknown_on_billing",
-       "scale": "price_unknown_on_billing"
+       "scale": "price_unknown_on_billing",
+       "ultimate-retention": "price_unknown_on_billing",
+       "enterprise": "quote"
       }
      },
      {
@@ -158,7 +160,9 @@
       "per_plan": {
        "launch": "price_unknown_on_billing",
        "grow": "price_unknown_on_billing",
-       "scale": "price_unknown_on_billing"
+       "scale": "price_unknown_on_billing",
+       "ultimate-retention": "price_unknown_on_billing",
+       "enterprise": "quote"
       }
      },
      {
@@ -171,7 +175,9 @@
       "per_plan": {
        "launch": "price_unknown_on_billing",
        "grow": "price_unknown_on_billing",
-       "scale": "price_unknown_on_billing"
+       "scale": "price_unknown_on_billing",
+       "ultimate-retention": "price_unknown_on_billing",
+       "enterprise": "quote"
       }
      },
      {
@@ -184,7 +190,9 @@
       "per_plan": {
        "launch": "price_unknown_on_billing",
        "grow": "price_unknown_on_billing",
-       "scale": "price_unknown_on_billing"
+       "scale": "price_unknown_on_billing",
+       "ultimate-retention": "price_unknown_on_billing",
+       "enterprise": "quote"
       }
      },
      {
@@ -197,7 +205,9 @@
       "per_plan": {
        "launch": "price_unknown_on_billing",
        "grow": "price_unknown_on_billing",
-       "scale": "price_unknown_on_billing"
+       "scale": "price_unknown_on_billing",
+       "ultimate-retention": "price_unknown_on_billing",
+       "enterprise": "quote"
       }
      }
     ],
@@ -227,7 +237,9 @@
       "per_plan": {
        "launch": 24.99,
        "grow": 49.99,
-       "scale": 74.99
+       "scale": 74.99,
+       "ultimate-retention": 399.99,
+       "enterprise": "quote"
       }
      },
      {
@@ -243,7 +255,9 @@
       "per_plan": {
        "launch": 49.98,
        "grow": 99.98,
-       "scale": 149.98
+       "scale": 149.98,
+       "ultimate-retention": 799.98,
+       "enterprise": "quote"
       }
      },
      {
@@ -259,7 +273,9 @@
       "per_plan": {
        "launch": 74.97,
        "grow": 149.97,
-       "scale": 224.97
+       "scale": 224.97,
+       "ultimate-retention": 1199.97,
+       "enterprise": "quote"
       }
      },
      {
@@ -275,7 +291,9 @@
       "per_plan": {
        "launch": 124.95,
        "grow": 249.95,
-       "scale": 374.95
+       "scale": 374.95,
+       "ultimate-retention": 1999.95,
+       "enterprise": "quote"
       }
      },
      {
@@ -291,7 +309,9 @@
       "per_plan": {
        "launch": 249.9,
        "grow": 499.9,
-       "scale": 749.9
+       "scale": 749.9,
+       "ultimate-retention": 3999.9,
+       "enterprise": "quote"
       }
      }
     ],
@@ -304,6 +324,7 @@
   }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

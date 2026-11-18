@@ -652,7 +652,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/bugherd-review.html
 
 ## BulkCertPDF (bulkcertpdf.com)
-- **Verified pricing:** (read 2026-11-11 on bulkcertpdf.com/pricing, US dollars) BulkCertPDF has a Free plan, a one-off Batch Pass and a Pro subscription.
+- **Verified pricing:** (read 2026-11-18 on bulkcertpdf.com/pricing, US dollars; earlier: read 2026-11-11) BulkCertPDF has a Free plan, a one-off Batch Pass and a Pro subscription.
 - **Honest take:** Certificates from Excel; free for 25 a month, Batch Pass $19.
 - **Best for:** training providers, course organisers and HR teams who need named PDF certificates from a spreadsheet without designing each one
 - **Flags:** Free tier
@@ -782,7 +782,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/circle-review.html
 
 ## CiteRoute (citeroute.com)
-- **Verified pricing:** (read 2026-10-13 in a live browser on citeroute.com/pricing, the home page and the terms of service dated 10 September 2026) Four plans, billed monthly.
+- **Verified pricing:** (read 2026-11-18 on citeroute.com/pricing and the home page and in our own test that day; earlier: read 2026-10-13 in a live browser on those pages and the terms of service dated 10 Septemb…
 - **Honest take:** The GEO score is CiteRoute's own model and its terms rule out any citation guarantee; real AI-crawler data starts at $79 a month for one site.
 - **Best for:** founders and marketers who want to see whether AI crawlers visit their site and how ready their pages look for AI answers, and agencies that want white-label GEO reports for a handful of client sites
 - **Flags:** Usage-metered
@@ -1209,7 +1209,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/easy-bundles-review.html
 
 ## Easy-Peasy.AI (easy-peasy.ai)
-- **Verified pricing:** (read 2026-11-17 on easy-peasy.ai/pricing, US dollars) Free: $0, 1,000 words, 1 image credit, 1 transcription, 1,000 text-to-speech characters, 1 bot, 170+ templates, public images, no card.
+- **Verified pricing:** (read 2026-11-18 on easy-peasy.ai/pricing, US dollars, unchanged since 2026-11-17, and in our own test that day) Free: $0, 1,000 words, 1 image credit, 1 transcription, 1,000 text-to-speech…
 - **Honest take:** All-in-one AI writing, image and audio tool: free plan, paid from $8 a month.
 - **Best for:** solo creators, marketers and small teams that want writing, images, transcription and voice in one subscription with a free tier to try first
 - **Flags:** Usage-metered, Free tier
@@ -2255,7 +2255,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/lindy-ai-review/
 
 ## LinkShortener.io (linkshortener.io)
-- **Verified pricing:** (read 2026-11-12 on linkshortener.io/pricing, US dollars) LinkShortener.io has a Free plan and three paid plans, each with a shared monthly allowance of short links and QR codes.
+- **Verified pricing:** (read 2026-11-18 on linkshortener.io/pricing, US dollars, and in our own test that day; earlier: read 2026-11-12) LinkShortener.io has a Free plan and three paid plans, each with a shared m…
 - **Honest take:** Branded short links and QR codes; free for 20 a month.
 - **Best for:** marketers and small teams who want branded short links and dynamic QR codes with click reports, and who are fine staying within a monthly link allowance
 - **Flags:** Free tier
@@ -2345,7 +2345,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/meeri-review.html
 
 ## MeetGeek (meetgeek.ai)
-- **Verified pricing:** (re-verified 2026-09-19 on meetgeek.ai/pricing; amounts unchanged since 2026-09-04) The page loads on annual billing, so the figures it shows first are the annual ones; both terms are given…
+- **Verified pricing:** (read 2026-11-18 on meetgeek.ai/pricing and in our own test that day; earlier: re-verified 2026-09-19, amounts unchanged since 2026-09-04) The page loads on annual billing, so the figures i…
 - **Honest take:** The meter is transcription hours and Pro gives you twenty a month, which is about an hour a working day.
 - **Best for:** people who run many external meetings and need a searchable record: the summaries earn their keep when you cannot remember which of four calls a detail came from
 - **Flags:** Per-seat pricing, Usage-metered, Annual commit
@@ -3137,10 +3137,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/readymode-review.html
 
 ## Reclaim.ai (reclaim.ai)
-- **Verified pricing:** (re-verified 2026-10-03 on their own pricing page, USD) Four levels, and the page keeps both billing terms in the markup rather than recomputing them.
+- **Verified pricing:** (read 2026-11-18 on reclaim.ai/pricing, USD, and in our own test that day; earlier: re-verified 2026-10-03) Four levels, and the page keeps both billing terms in the markup rather than reco…
 - **Honest take:** The magic only works on a calendar it can write to.
 - **Best for:** Google Calendar teams that want AI to auto-schedule tasks, habits and meetings around their priorities
-- **Flags:** Per-seat pricing, Add-ons extra, Free tier
+- **Flags:** Per-seat pricing, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/reclaim-ai-review/
 
 ## Recruit CRM (recruitcrm.io)
@@ -3876,10 +3876,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/survicate-review/
 
 ## SurvIQ (surviqapp.com)
-- **Verified pricing:** (read 2026-11-10 on surviqapp.com/en, US dollars) SurvIQ has a Free plan with 50 responses a month, 1 user and up to 3 active surveys.
+- **Verified pricing:** (read 2026-11-18 on surviqapp.com/en, US dollars, and in our own test that day; earlier: read 2026-11-10) SurvIQ has a Free plan with 50 responses a month, 1 user and up to 3 active surveys.
 - **Honest take:** Surveys with analysis and AI; free plan, then $9 to $79 a month.
 - **Best for:** freelancers, consultants, small teams and students who want a survey builder with built-in cross-tab analysis and AI summaries without paying for every feature separately
-- **Flags:** Usage-metered, Annual commit, Free tier
+- **Flags:** Usage-metered, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/surviq-review.html
 
 ## Switcher Studio (switcherstudio.com)
@@ -4254,10 +4254,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/upwork-review.html
 
 ## UserHelp.co (userhelp.co)
-- **Verified pricing:** (read 2026-10-17 in a browser on userhelp.co/pricing; the card shows a $ sign without naming the currency) Two plans.
+- **Verified pricing:** (read 2026-11-18 on userhelp.co/pricing and in our own test that day; earlier: read 2026-10-17 in a browser; the card shows a $ sign without naming the currency) Two plans, and the page say…
 - **Honest take:** Free for one project with a watermark; Pro is $59 once, with no stated refund rule.
 - **Best for:** freelancers, small agencies and site owners who want a feedback button on their websites that collects annotated screenshots and bug reports, and who prefer one payment to a subscription
-- **Flags:** Free tier
+- **Flags:** Add-ons extra, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/userhelp-co-review.html
 
 ## UserTrail (usertrail.io)

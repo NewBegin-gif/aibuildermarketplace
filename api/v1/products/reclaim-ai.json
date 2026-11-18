@@ -15,31 +15,10 @@
   "entry_price": "$10",
   "entry_price_terms": "per seat a month billed yearly ($12 monthly)",
   "from_price_usd_month": 10.0,
-  "plans": [
-   {
-    "name": "Lite",
-    "price": "free forever",
-    "includes": "1 user; AI-agent allowance 5 per seat"
-   },
-   {
-    "name": "Starter",
-    "price": "Billed yearly $10/seat/mo; billed monthly $12/seat/mo",
-    "includes": "Up to 10 seats; AI-agent allowance 10 per seat"
-   },
-   {
-    "name": "Business",
-    "price": "Billed yearly $15/seat/mo; billed monthly $18/seat/mo",
-    "includes": "Up to 100 seats; AI-agent allowance 100 per seat"
-   },
-   {
-    "name": "Enterprise",
-    "price": "Billed yearly $22/seat/mo; no monthly figure given",
-    "includes": "Over 100 seats; AI-agent allowance unlimited per seat"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-10-03 on their own pricing page, USD) Four levels, and the page keeps both billing terms in the markup rather than recomputing them. Lite is free forever for a single user. Billed yearly the seats are Starter $10, Business $15 and Enterprise $22 per seat a month; billed monthly Starter is $12 and Business $18, and the monthly column prints no Enterprise figure at all. Enterprise carrying a list price is new here — we described it as quote-only until this reading, and Business had no number in our dossier at all. Seats are capped by tier rather than open: 1 user on Lite, up to 10 on Starter, up to 100 on Business and over 100 on Enterprise, with the AI-agent allowance per seat stepping 5, 10, 100 and unlimited beside them. The mechanism most reviews miss is Attendee Units, and it survives this redesign even though the plan cards no longer mention it. AUs are attendees without a paid Reclaim seat in Smart Meetings of 3 or more people (two-person meetings do not need them), and they accumulate across a team account. Extra AUs are bought in packs on top of the seat, and the packs follow the same two terms. On yearly billing Starter packs run $8 for 3, $16 for 6, $24 for 9 and $32 for 12, and Business $12 for 6, $24 for 12, $36 for 18 and $48 for 24; billed monthly those become $10/$20/$30/$40 and $15/$30/$45/$60. Enterprise packs are $18 for 10, $36 for 20, $54 for 30 and $72 for 40 on either term. Each extra pack also includes a free seat of the same tier to assign to a team member: a Starter seat with every 3-pack, a Business seat with every 6-pack and an Enterprise seat with every 10-pack. If you schedule across people who do not have seats, the AU packs rather than the seat price are what determines your bill. One caveat on that arithmetic: the page still carries a launch-promo line saying AUs are 100% free through July 31st, a date that has passed, so confirm at checkout whether the packs are billing yet. Discount codes appear periodically; on 14 September a banner offered 30% off Starter and Business to new users, and on 3 October 2026 it read \"20% off with code MEETINGS\".",
-  "verified_at": "2026-10-03",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(read 2026-11-18 on reclaim.ai/pricing, USD, and in our own test that day; earlier: re-verified 2026-10-03) Four levels, and the page keeps both billing terms in the markup rather than recomputing them. Lite is free forever for a single user. Billed yearly the seats are Starter $10, Business $15 and Enterprise $22 per seat a month; billed monthly Starter is $12 and Business $18, and the monthly column marks Enterprise 'Unavailable on monthly plans'. Seats are capped by tier rather than open: 1 user on Lite, up to 10 on Starter, up to 100 on Business and over 100 on Enterprise, with the AI-agent allowance per seat stepping 5, 10, 100 and unlimited beside them. Calendar Syncs are counted per plan: 1 on Lite, 3 on Starter and unlimited from Business. In our test on 18 November 2026 the app showed Unlimited Calendar Syncs on Starter, and on Lite the 'Add a sync' button carried a STARTER label, so check the count in your own account. The Attendee Unit packs are no longer shown: on 18 November 2026 the page showed neither the AU packs nor the '20% off with code MEETINGS' banner. Both are still in the page code but hidden, so we no longer count either as part of the price. Our October reading listed AU packs from $8 for 3 on Starter, for attendees without a paid seat in Smart Meetings of 3 or more. The page now lists four discounts you apply for: Student 50% for 12 months (students, educators and faculty), Nonprofit 20% for 3 years, Startup 20% for 3 years, and Switching Providers 20% for 6 months when you move from Clockwise, Motion or Calendly. The site now carries a Dropbox Reclaim logo (alt text 'Reclaim.ai from Dropbox').",
+  "verified_at": "2026-11-18",
   "source_url": null,
   "schema_offer": {
    "price": 12.0,
@@ -70,15 +49,8 @@
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
-   "evidence": "Billed yearly the seats are Starter $10, Business $15 and Enterprise $22 per seat a month; billed monthly Starter is $12 and Business $18, and the monthly column prints no Enterprise figure at all.",
-   "verified_at": "2026-10-03",
-   "source_url": null
-  },
-  {
-   "id": "addons_extra",
-   "label": "Key features are paid add-ons",
-   "evidence": "Extra AUs are bought in packs on top of the seat, and the packs follow the same two terms.",
-   "verified_at": "2026-10-03",
+   "evidence": "Billed yearly the seats are Starter $10, Business $15 and Enterprise $22 per seat a month; billed monthly Starter is $12 and Business $18, and the monthly column marks Enterprise 'Unavailable on monthly plans'.",
+   "verified_at": "2026-11-18",
    "source_url": null
   }
  ],
@@ -564,6 +536,7 @@
   }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."

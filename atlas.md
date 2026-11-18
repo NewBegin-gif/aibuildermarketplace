@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 680 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-18.
+All 679 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-18.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2176,7 +2176,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Translates a Shopify store and converts currencies; free for 5,000 words.
 - **Best for:** Shopify merchants who want their store in several languages and currencies without hiring translators, and who can start on a free or $9.99 plan
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/langwill-review/
+- **Full review:** https://marketingandsalessoftware.com/langwill-review.html
 
 ## Later (later.com)
 - **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07) Starter $18.75/month, Growth $37.50 and Scale $82.50, all billed yearly, which Later advertises as three months free and 25% off against monthly.
@@ -2393,9 +2393,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/mk-website-assistant-review.html
 
 ## Mktg.ai (mktg.ai)
-- **Verified pricing:** No public pricing (re-verified 25 September 2026): mktg.ai/pricing still returns 404 and the navigation carries no pricing item, so every route ends at 'Book a Demo'.
-- **Honest take:** No published price: the pricing page returns a 404, and the FAQ names the tiers but no figure.
-- **Best for:** marketing teams with real media spend across channels who want an always-on AI analyst: unified creative visibility
+- **Verified pricing:** No readable public price (re-verified 18 November 2026).
+- **Honest take:** No readable price: the pricing page loads in the browser only, and the FAQ names the tiers but no figure.
+- **Best for:** marketing teams with real media spend across channels who want an always-on AI analyst: every ad and post tied to its own spend and results
 - **Flags:** Hidden pricing
 - **Full review:** https://aibuildermarketplace.com/b2b/mktg-ai-review/
 
@@ -3388,13 +3388,6 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/selixer-review.html
 
-## Selleasy (logbase.io)
-- **Verified pricing:** (prices read 2026-10-30 on apps.shopify.com/upsell-cross-sell-kit-1 and on logbase.io/selleasy/pricing; the order-based ladder read on 19 September and 20 October 2026 has been replaced) Bi…
-- **Honest take:** The pricing changed under this review in October 2026, and the vendor's own page has not caught up.
-- **Best for:** shopify stores that want bundles, add-ons, cart funnels and post-purchase offers out of one app on a flat fee that never takes a share of upsell revenue: small stores can test on the free plan
-- **Flags:** Free tier
-- **Full review:** https://marketingandsalessoftware.com/selleasy-review.html
-
 ## Seller Investigators (sellerinvestigators.com)
 - **Verified pricing:** (2026-08-15, read on their own site) One number, and it is the whole model: a 25% commission, charged only after Amazon has deposited recovered funds in your account.
 - **Honest take:** Contingency pricing is the honest kind, you pay only out of money that arrived, but 25% of a recovery is not the same as 25% of a profit, and there is one question that decides whether this is worth it for you.
@@ -3685,7 +3678,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-18 on the Shopify App Store listing, US dollars, billed every 30 days) Snow Day: $249 a month plus 3% of affiliate revenue; unlimited affiliates, influencer management, post-p…
 - **Honest take:** Affiliate, referral and influencer programmes for Shopify; from $249 a month.
 - **Best for:** Shopify brands with enough sales to justify $249 or more a month on affiliate, referral and influencer programmes, and that want payouts, attribution and fraud checks in one place
-- **Full review:** https://aibuildermarketplace.com/b2b/social-snowball-review/
+- **Full review:** https://marketingandsalessoftware.com/social-snowball-review.html
 
 ## SocialBee (socialbee.io)
 - **Verified pricing:** (re-verified 2026-09-22 on socialbee.com/pricing/; every named-plan amount unchanged to the cent.
@@ -3967,7 +3960,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/teachable-review.html
 
 ## Team Pulse (goteampulse.io)
-- **Verified pricing:** (re-verified 2026-09-22 and 2026-10-13 in the site's own plan-config array; goteampulse.io/pricing itself returns 404, the plans sit on the home page) Genuinely free tier: $0/mo for 1 membe…
+- **Verified pricing:** (re-verified 2026-09-22, 2026-10-13 and 2026-11-18 in the site's own plan-config array; goteampulse.io/pricing itself returns 404, the plans sit on the home page) Genuinely free tier: $0/mo…
 - **Honest take:** The tiers gate on TWO axes at once (member count and project/pipeline count) so you can hit a wall on either.
 - **Best for:** solo operators and small teams who want projects, tasks, chat AND a lightweight CRM pipeline with AI in one simple tool, and value the real free tier to start
 - **Flags:** Usage-metered, Free tier
@@ -4198,10 +4191,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/unbounce-review/
 
 ## Uniqode (uniqode.com)
-- **Verified pricing:** (re-verified 2026-10-28 on their own pricing page, read both as plain HTML and as a live browser render) The plan cards are rendered in the browser and carry no price in either reading, so …
-- **Honest take:** The tier jumps are steep and a lot is gated: analytics are capped at 60 days on the entry plan, scan limits apply across all tiers, and custom domains sit behind higher pricing.
+- **Verified pricing:** (re-verified 2026-11-18 on their own pricing page, plain HTML) The page now shows four plans.
+- **Honest take:** The tier jumps are steep and a lot is gated.
 - **Best for:** marketing teams that need dynamic QR codes with real analytics and enterprise compliance (SOC 2, GDPR, ISO 27001, optional HIPAA)
-- **Flags:** Per-seat pricing, Add-ons extra
+- **Flags:** Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/uniqode-review.html
 
 ## UniTel Voice (unitelvoice.com)

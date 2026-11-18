@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 679 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-18.
+All 681 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-18.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1816,6 +1816,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/hive-review.html
 
+## HOL Guard (hol.org)
+- **Verified pricing:** (read 2026-11-18 on hol.org/guard/pricing, US dollars, monthly view; annual billing is shown as 2 months free) Free: $0 forever, local protection, no account or card.
+- **Honest take:** Local guard for AI coding agents; free tier, paid cloud plans from $4.99.
+- **Best for:** developers and small teams who run coding agents such as Claude Code, Codex or Cursor on their own machines and want risky actions paused before they run
+- **Flags:** Per-seat pricing, Annual commit, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/hol-guard-review/
+
 ## Hopp (gethopp.com)
 - **Verified pricing:** (price re-verified 2026-09-23 on gethopp.com/en/business/) Hopp Business publishes no subscription price because it does not charge one: the page states there are no activation costs and no…
 - **Honest take:** The honest note is that the platform is free and the rides are not.
@@ -2315,6 +2322,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** marketers and developers who verify email lists in bursts and want to buy credits once instead of paying a monthly subscription
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/mailveri-review.html
+
+## Make (make.com)
+- **Verified pricing:** (read 2026-11-18 on make.com/pricing, US dollars a month, credit slider at 10,000 credits) Free: $0, 1,000 credits a month, 15-minute minimum interval.
+- **Honest take:** Visual automation for connecting apps; free plan, paid from $15 a month.
+- **Best for:** small and mid-sized teams that want to connect several apps and AI steps in a visual builder, with branching logic, and are happy to watch a credit meter
+- **Flags:** Usage-metered, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/make-review/
 
 ## ManyChat (manychat.com)
 - **Verified pricing:** Read on their own pricing page, 6 September 2026, and again, unchanged, 25 September 2026.

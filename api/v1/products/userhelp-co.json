@@ -81,10 +81,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "quoted",
@@ -92,7 +91,364 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/userhelp-co-review.html",
+  "method": [
+   "The test used an account Daan made, and our AI assistant ran it in Daan's browser",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Upgrade with a one-time payment to view all of them.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Responses tab on the free plan says that only the 5 oldest responses are shown and offers a one-time payment to see all of them. The dossier says that Free has unlimited responses.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+    "comparability": "The dossier wording on Free against the notice in the Responses tab of one free project; no report was received, so the table was empty.",
+    "status": "contradicted",
+    "buying_consequence": "A free user who wants to read all incoming feedback is limited to the first 5 and has to pay.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Free accounts are limited to one project",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "A second project was refused on the free plan with a notice that the project limit was reached and that unlimited projects need a one-time payment; no second project was made.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+    "comparability": "The dossier plan wording against the refusal of a second project; the dossier project count for Free was not compared figure by figure.",
+    "status": "contradicted",
+    "buying_consequence": "A free user can run feedback on one site or product only.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Categories, Team workflow, Public discussions",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Upgrade page lists Categories as an upgrade feature, while the dossier puts categories on Free; the Content tab does show an Add category button, and whether it works on the free plan was not tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+    "comparability": "The dossier Free list against the Upgrade page; the Add category button was not used.",
+    "status": "contradicted",
+    "buying_consequence": "Sorting feedback into categories may need the paid upgrade, against what the dossier says.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Email add-on",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Upgrade page shows an Email add-on with an email inbox, notifications and branded emails, with the line to upgrade your account first and no price. The dossier does not have this add-on.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+    "comparability": "The Upgrade page add-on against a dossier without it; no price or checkout for it was seen.",
+    "status": "not_comparable",
+    "buying_consequence": "There may be an extra paid add-on on top of the $59 whose price is not shown.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "capturing a screenshot is disabled during the preview",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The preview of the widget form says that submitting and capturing a screenshot are disabled during the preview and Submit did nothing, so no real report was sent or received.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+    "comparability": "The widget form preview only; the widget code was not placed on a site.",
+    "status": "not_testable",
+    "buying_consequence": "What a real report looks like, and whether the screenshot capture works, is not shown by this test.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "paying $59 one-time",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Upgrade page shows the button to upgrade by paying $59 one-time, which matches the dossier price, but the button was not clicked, so no tax, total or payment screen was seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+    "comparability": "The Upgrade page price against a checkout that was not reached; no tax or stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The amount you would pay in the end, with tax, is not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested UserHelp.co in the existing free account of Daan: a project was made in about a minute and the widget form was previewed, but Submit does nothing in the preview, so no real report was received and the widget was not put on a site. The free plan shows only the 5 oldest responses (the dossier says unlimited), refuses a second project and lists Categories as an upgrade feature, and the Upgrade page shows an Email add-on without a price that the dossier does not have. The price of $59 one-time matches. No plan was bought. Account and start: the test used the existing UserHelp account of Daan, on the Free plan, with the interface in English (the app has no language setting). The test started at 09:01 in our own tab on app.userhelp.co, signed in, with the text Select or create a new project. The dossier name is UserHelp.co and the review is on OSM (userhelp-co-review). UserHelp is a feedback widget that you put on your own site; it is not a help desk or a knowledge base, and no AI assistant was seen in the app. Core action: a project called Test Project Acme was made in 1 step (type a name and press Enter), in about 1 minute, with the message Your new project has been created. The project has the tabs Content, Setup, Responses and Settings. Content has the button text (Report a problem), the button color, text color, Dark mode, a language choice, Add category and a privacy policy URL. The preview of the widget form has Name, Email, Description (required), Capture screenshot, Include my browser details, Submit and the line Powered by UserHelp.co. The preview says that features such as submitting a response and capturing a screenshot are disabled during the preview, and Submit did nothing there, so no real report was received. A real test needs the widget code on a site; that was not done, because the code was not allowed on a site. Setup shows two script lines for the head of a page (run.userhelp.co). Limits on Free: the Responses tab says Only the 5 oldest responses are shown. Upgrade with a one-time payment to view all of them. A second project was refused with an alert that the project limit of the Free account was reached and that unlimited projects need a one-time payment; no second project was made. Plans, read up to the payment step: the Upgrade page (Upgrade your account) lists Unlimited projects (Free accounts are limited to one project), Every response (all of your responses, not just the first 5, and search and filter them), Session replay, Technical details (browser, operating system, error logs, network requests and web vitals), Categories, Team workflow, Public discussions, Integrations (Zapier, webhook) and No watermark, with a button to upgrade by paying $59 one-time. Next to it stands an Email add-on (Email support inbox, Reply notifications, Branded emails, with the line Upgrade your account first to add email features) with no price, and a Lifetime deal box with an LTD code field. Nothing was clicked or filled in. Deviations from the dossier: (a) the dossier says Free has unlimited responses, while the app shows only the 5 oldest on Free. (b) A second project on Free is refused. (c) The dossier puts categories on Free; the app lists Categories as an upgrade feature, although the Add category button is in the Content tab (whether adding a category works on Free was not tried). (d) The Email add-on without a price and the LTD code are not in the dossier. The price of $59 one-time matches the dossier. The number of team members, the retention of recordings, the length of the one-time access and the refund rule are not stated anywhere in the app, which fits the dossier. No price field is changed here. Checkout: NOT reached. The $59 button was not clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no subscription; a project can be removed under Settings, Danger zone, Delete project, which was not clicked, and the profile page only has Log out and Edit profile, with no account deletion. Not tested: a real submission and screenshot (the widget code was not placed on a site), the Pro features, the payment screen, the email functions, the docs site and the terms. Clean up: the project Test Project Acme stays in the account, because Free allows only one project; it can be deleted under Settings. The tab was closed. A first try to make a second project froze the page after the alert; it was restarted by navigating and nothing was made. The profile page, which shows an email address, was not photographed.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Submit does nothing in the preview, so you cannot see what a report looks like without putting the widget code on a site. The free plan shows only the 5 oldest responses and allows one project. Categories appear as an upgrade feature, while Add category stands in the Content tab. The Email add-on has no price on the Upgrade page.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "A real submission and screenshot with the widget code on a site.",
+    "The Pro features, the Email add-on and the LTD code.",
+    "Sign-up, which was done earlier by Daan.",
+    "Checkout, a paid plan and deleting the project.",
+    "Export and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:01 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested UserHelp.co in the existing free account of Daan: a project was made in about a minute and the widget form was previewed, but Submit does nothing in the preview, so no real report was received and the widget was not put on a site. The free plan shows only the 5 oldest responses (the dossier says unlimited), refuses a second project and lists Categories as an upgrade feature, and the Upgrade page shows an Email add-on without a price that the dossier does not have. The price of $59 one-time matches. No plan was bought. Account and start: the test used the existing UserHelp account of Daan, on the Free plan, with the interface in English (the app has no language setting). The test started at 09:01 in our own tab on app.userhelp.co, signed in, with the text Select or create a new project. The dossier name is UserHelp.co and the review is on OSM (userhelp-co-review). UserHelp is a feedback widget that you put on your own site; it is not a help desk or a knowledge base, and no AI assistant was seen in the app. Core action: a project called Test Project Acme was made in 1 step (type a name and press Enter), in about 1 minute, with the message Your new project has been created. The project has the tabs Content, Setup, Responses and Settings. Content has the button text (Report a problem), the button color, text color, Dark mode, a language choice, Add category and a privacy policy URL. The preview of the widget form has Name, Email, Description (required), Capture screenshot, Include my browser details, Submit and the line Powered by UserHelp.co. The preview says that features such as submitting a response and capturing a screenshot are disabled during the preview, and Submit did nothing there, so no real report was received. A real test needs the widget code on a site; that was not done, because the code was not allowed on a site. Setup shows two script lines for the head of a page (run.userhelp.co). Limits on Free: the Responses tab says Only the 5 oldest responses are shown. Upgrade with a one-time payment to view all of them. A second project was refused with an alert that the project limit of the Free account was reached and that unlimited projects need a one-time payment; no second project was made. Plans, read up to the payment step: the Upgrade page (Upgrade your account) lists Unlimited projects (Free accounts are limited to one project), Every response (all of your responses, not just the first 5, and search and filter them), Session replay, Technical details (browser, operating system, error logs, network requests and web vitals), Categories, Team workflow, Public discussions, Integrations (Zapier, webhook) and No watermark, with a button to upgrade by paying $59 one-time. Next to it stands an Email add-on (Email support inbox, Reply notifications, Branded emails, with the line Upgrade your account first to add email features) with no price, and a Lifetime deal box with an LTD code field. Nothing was clicked or filled in. Deviations from the dossier: (a) the dossier says Free has unlimited responses, while the app shows only the 5 oldest on Free. (b) A second project on Free is refused. (c) The dossier puts categories on Free; the app lists Categories as an upgrade feature, although the Add category button is in the Content tab (whether adding a category works on Free was not tried). (d) The Email add-on without a price and the LTD code are not in the dossier. The price of $59 one-time matches the dossier. The number of team members, the retention of recordings, the length of the one-time access and the refund rule are not stated anywhere in the app, which fits the dossier. No price field is changed here. Checkout: NOT reached. The $59 button was not clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no subscription; a project can be removed under Settings, Danger zone, Delete project, which was not clicked, and the profile page only has Log out and Edit profile, with no account deletion. Not tested: a real submission and screenshot (the widget code was not placed on a site), the Pro features, the payment screen, the email functions, the docs site and the terms. Clean up: the project Test Project Acme stays in the account, because Free allows only one project; it can be deleted under Settings. The tab was closed. A first try to make a second project froze the page after the alert; it was restarted by navigating and nothing was made. The profile page, which shows an email address, was not photographed. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested UserHelp.co in the existing free account of Daan: a project was made in about a minute and the widget form was previewed, but Submit does nothing in the preview, so no real report was received and the widget was not put on a site. The free plan shows only the 5 oldest responses (the dossier says unlimited), refuses a second project and lists Categories as an upgrade feature, and the Upgrade page shows an Email add-on without a price that the dossier does not have. The price of $59 one-time matches. No plan was bought. Account and start: the test used the existing UserHelp account of Daan, on the Free plan, with the interface in English (the app has no language setting). The test started at 09:01 in our own tab on app.userhelp.co, signed in, with the text Select or create a new project. The dossier name is UserHelp.co and the review is on OSM (userhelp-co-review). UserHelp is a feedback widget that you put on your own site; it is not a help desk or a knowledge base, and no AI assistant was seen in the app. Core action: a project called Test Project Acme was made in 1 step (type a name and press Enter), in about 1 minute, with the message Your new project has been created. The project has the tabs Content, Setup, Responses and Settings. Content has the button text (Report a problem), the button color, text color, Dark mode, a language choice, Add category and a privacy policy URL. The preview of the widget form has Name, Email, Description (required), Capture screenshot, Include my browser details, Submit and the line Powered by UserHelp.co. The preview says that features such as submitting a response and capturing a screenshot are disabled during the preview, and Submit did nothing there, so no real report was received. A real test needs the widget code on a site; that was not done, because the code was not allowed on a site. Setup shows two script lines for the head of a page (run.userhelp.co). Limits on Free: the Responses tab says Only the 5 oldest responses are shown. Upgrade with a one-time payment to view all of them. A second project was refused with an alert that the project limit of the Free account was reached and that unlimited projects need a one-time payment; no second project was made. Plans, read up to the payment step: the Upgrade page (Upgrade your account) lists Unlimited projects (Free accounts are limited to one project), Every response (all of your responses, not just the first 5, and search and filter them), Session replay, Technical details (browser, operating system, error logs, network requests and web vitals), Categories, Team workflow, Public discussions, Integrations (Zapier, webhook) and No watermark, with a button to upgrade by paying $59 one-time. Next to it stands an Email add-on (Email support inbox, Reply notifications, Branded emails, with the line Upgrade your account first to add email features) with no price, and a Lifetime deal box with an LTD code field. Nothing was clicked or filled in. Deviations from the dossier: (a) the dossier says Free has unlimited responses, while the app shows only the 5 oldest on Free. (b) A second project on Free is refused. (c) The dossier puts categories on Free; the app lists Categories as an upgrade feature, although the Add category button is in the Content tab (whether adding a category works on Free was not tried). (d) The Email add-on without a price and the LTD code are not in the dossier. The price of $59 one-time matches the dossier. The number of team members, the retention of recordings, the length of the one-time access and the refund rule are not stated anywhere in the app, which fits the dossier. No price field is changed here. Checkout: NOT reached. The $59 button was not clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no subscription; a project can be removed under Settings, Danger zone, Delete project, which was not clicked, and the profile page only has Log out and Edit profile, with no account deletion. Not tested: a real submission and screenshot (the widget code was not placed on a site), the Pro features, the payment screen, the email functions, the docs site and the terms. Clean up: the project Test Project Acme stays in the account, because Free allows only one project; it can be deleted under Settings. The tab was closed. A first try to make a second project froze the page after the alert; it was restarted by navigating and nothing was made. The profile page, which shows an email address, was not photographed. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "UserHelp.co",
+    "product_id": "userhelp-co",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested UserHelp.co in the existing free account of Daan: a project was made in about a minute and the widget form was previewed, but Submit does nothing in the preview, so no real report was received and the widget was not put on a site. The free plan shows only the 5 oldest responses (the dossier says unlimited), refuses a second project and lists Categories as an upgrade feature, and the Upgrade page shows an Email add-on without a price that the dossier does not have. The price of $59 one-time matches. No plan was bought. Account and start: the test used the existing UserHelp account of Daan, on the Free plan, with the interface in English (the app has no language setting). The test started at 09:01 in our own tab on app.userhelp.co, signed in, with the text Select or create a new project. UserHelp is a feedback widget that you put on your own site; it is not a help desk or a knowledge base, and no AI assistant was seen in the app. Core action: a project called Test Project Acme was made in 1 step (type a name and press Enter), in about 1 minute, with the message Your new project has been created. The project has the tabs Content, Setup, Responses and Settings. Content has the button text (Report a problem), the button color, text color, Dark mode, a language choice, Add category and a privacy policy URL. The preview of the widget form has Name, Email, Description (required), Capture screenshot, Include my browser details, Submit and the line Powered by UserHelp.co. The preview says that features such as submitting a response and capturing a screenshot are disabled during the preview, and Submit did nothing there, so no real report was received. A real test needs the widget code on a site; that was not done, because the code was not allowed on a site. Setup shows two script lines for the head of a page (run.userhelp.co). Limits on Free: the Responses tab says Only the 5 oldest responses are shown. Upgrade with a one-time payment to view all of them. A second project was refused with an alert that the project limit of the Free account was reached and that unlimited projects need a one-time payment; no second project was made. Plans, read up to the payment step: the Upgrade page (Upgrade your account) lists Unlimited projects (Free accounts are limited to one project), Every response (all of your responses, not just the first 5, and search and filter them), Session replay, Technical details (browser, operating system, error logs, network requests and web vitals), Categories, Team workflow, Public discussions, Integrations (Zapier, webhook) and No watermark, with a button to upgrade by paying $59 one-time. Next to it stands an Email add-on (Email support inbox, Reply notifications, Branded emails, with the line Upgrade your account first to add email features) with no price, and a Lifetime deal box with an LTD code field. Nothing was clicked or filled in. Deviations from the dossier: (a) the dossier says Free has unlimited responses, while the app shows only the 5 oldest on Free. (b) A second project on Free is refused. (c) The dossier puts categories on Free; the app lists Categories as an upgrade feature, although the Add category button is in the Content tab (whether adding a category works on Free was not tried). (d) The Email add-on without a price and the LTD code are not in the dossier. The price of $59 one-time matches the dossier. The number of team members, the retention of recordings, the length of the one-time access and the refund rule are not stated anywhere in the app, which fits the dossier. No price field is changed here. Checkout: NOT reached. The $59 button was not clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no subscription; a project can be removed under Settings, Danger zone, Delete project, which was not clicked, and the profile page only has Log out and Edit profile, with no account deletion. Not tested: a real submission and screenshot (the widget code was not placed on a site), the Pro features, the payment screen, the email functions, the docs site and the terms. Clean up: the project Test Project Acme stays in the account, because Free allows only one project; it can be deleted under Settings. The tab was closed. A first try to make a second project froze the page after the alert; it was restarted by navigating and nothing was made. The profile page, which shows an email address, was not photographed.",
+    "findings": [
+     "Text we checked: \"Upgrade with a one-time payment to view all of them\". What we saw: The Responses tab on the free plan says that only the 5 oldest responses are shown and offers a one-time payment to see all of them. The dossier says that Free has unlimited responses.",
+     "Text we checked: \"Free accounts are limited to one project\". What we saw: A second project was refused on the free plan with a notice that the project limit was reached and that unlimited projects need a one-time payment; no second project was made.",
+     "Text we checked: \"Categories, Team workflow, Public discussions\". What we saw: The Upgrade page lists Categories as an upgrade feature, while the dossier puts categories on Free; the Content tab does show an Add category button, and whether it works on the free plan was not tried."
+    ],
+    "not_tested": [
+     "A real submission and screenshot with the widget code on a site.",
+     "The Pro features, the Email add-on and the LTD code.",
+     "Sign-up, which was done earlier by Daan.",
+     "Checkout, a paid plan and deleting the project.",
+     "Export and reimport.",
+     "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:01 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Upgrade with a one-time payment to view all of them.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Responses tab on the free plan says that only the 5 oldest responses are shown and offers a one-time payment to see all of them. The dossier says that Free has unlimited responses.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+      "comparability": "The dossier wording on Free against the notice in the Responses tab of one free project; no report was received, so the table was empty.",
+      "status": "contradicted",
+      "buying_consequence": "A free user who wants to read all incoming feedback is limited to the first 5 and has to pay.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Free accounts are limited to one project",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "A second project was refused on the free plan with a notice that the project limit was reached and that unlimited projects need a one-time payment; no second project was made.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+      "comparability": "The dossier plan wording against the refusal of a second project; the dossier project count for Free was not compared figure by figure.",
+      "status": "contradicted",
+      "buying_consequence": "A free user can run feedback on one site or product only.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Categories, Team workflow, Public discussions",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Upgrade page lists Categories as an upgrade feature, while the dossier puts categories on Free; the Content tab does show an Add category button, and whether it works on the free plan was not tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+      "comparability": "The dossier Free list against the Upgrade page; the Add category button was not used.",
+      "status": "contradicted",
+      "buying_consequence": "Sorting feedback into categories may need the paid upgrade, against what the dossier says.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Email add-on",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Upgrade page shows an Email add-on with an email inbox, notifications and branded emails, with the line to upgrade your account first and no price. The dossier does not have this add-on.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+      "comparability": "The Upgrade page add-on against a dossier without it; no price or checkout for it was seen.",
+      "status": "not_comparable",
+      "buying_consequence": "There may be an extra paid add-on on top of the $59 whose price is not shown.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "capturing a screenshot is disabled during the preview",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The preview of the widget form says that submitting and capturing a screenshot are disabled during the preview and Submit did nothing, so no real report was sent or received.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+      "comparability": "The widget form preview only; the widget code was not placed on a site.",
+      "status": "not_testable",
+      "buying_consequence": "What a real report looks like, and whether the screenshot capture works, is not shown by this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "paying $59 one-time",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Upgrade page shows the button to upgrade by paying $59 one-time, which matches the dossier price, but the button was not clicked, so no tax, total or payment screen was seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/userhelp-co-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the Upgrade page was read without clicking the $59 button",
+      "comparability": "The Upgrade page price against a checkout that was not reached; no tax or stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The amount you would pay in the end, with tax, is not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested UserHelp.co in the existing free account of Daan: a project was made in about a minute and the widget form was previewed, but Submit does nothing in the preview, so no real report was received and the widget was not put on a site. The free plan shows only the 5 oldest responses (the dossier says unlimited), refuses a second project and lists Categories as an upgrade feature, and the Upgrade page shows an Email add-on without a price that the dossier does not have. The price of $59 one-time matches. No plan was bought. Account and start: the test used the existing UserHelp account of Daan, on the Free plan, with the interface in English (the app has no language setting). The test started at 09:01 in our own tab on app.userhelp.co, signed in, with the text Select or create a new project. The dossier name is UserHelp.co and the review is on OSM (userhelp-co-review). UserHelp is a feedback widget that you put on your own site; it is not a help desk or a knowledge base, and no AI assistant was seen in the app. Core action: a project called Test Project Acme was made in 1 step (type a name and press Enter), in about 1 minute, with the message Your new project has been created. The project has the tabs Content, Setup, Responses and Settings. Content has the button text (Report a problem), the button color, text color, Dark mode, a language choice, Add category and a privacy policy URL. The preview of the widget form has Name, Email, Description (required), Capture screenshot, Include my browser details, Submit and the line Powered by UserHelp.co. The preview says that features such as submitting a response and capturing a screenshot are disabled during the preview, and Submit did nothing there, so no real report was received. A real test needs the widget code on a site; that was not done, because the code was not allowed on a site. Setup shows two script lines for the head of a page (run.userhelp.co). Limits on Free: the Responses tab says Only the 5 oldest responses are shown. Upgrade with a one-time payment to view all of them. A second project was refused with an alert that the project limit of the Free account was reached and that unlimited projects need a one-time payment; no second project was made. Plans, read up to the payment step: the Upgrade page (Upgrade your account) lists Unlimited projects (Free accounts are limited to one project), Every response (all of your responses, not just the first 5, and search and filter them), Session replay, Technical details (browser, operating system, error logs, network requests and web vitals), Categories, Team workflow, Public discussions, Integrations (Zapier, webhook) and No watermark, with a button to upgrade by paying $59 one-time. Next to it stands an Email add-on (Email support inbox, Reply notifications, Branded emails, with the line Upgrade your account first to add email features) with no price, and a Lifetime deal box with an LTD code field. Nothing was clicked or filled in. Deviations from the dossier: (a) the dossier says Free has unlimited responses, while the app shows only the 5 oldest on Free. (b) A second project on Free is refused. (c) The dossier puts categories on Free; the app lists Categories as an upgrade feature, although the Add category button is in the Content tab (whether adding a category works on Free was not tried). (d) The Email add-on without a price and the LTD code are not in the dossier. The price of $59 one-time matches the dossier. The number of team members, the retention of recordings, the length of the one-time access and the refund rule are not stated anywhere in the app, which fits the dossier. No price field is changed here. Checkout: NOT reached. The $59 button was not clicked, so no tax, total, card or payment screen was seen. Cancelling: there is no subscription; a project can be removed under Settings, Danger zone, Delete project, which was not clicked, and the profile page only has Log out and Edit profile, with no account deletion. Not tested: a real submission and screenshot (the widget code was not placed on a site), the Pro features, the payment screen, the email functions, the docs site and the terms. Clean up: the project Test Project Acme stays in the account, because Free allows only one project; it can be deleted under Settings. The tab was closed. A first try to make a second project froze the page after the alert; it was restarted by navigating and nothing was made. The profile page, which shows an email address, was not photographed.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Submit does nothing in the preview, so you cannot see what a report looks like without putting the widget code on a site. The free plan shows only the 5 oldest responses and allows one project. Categories appear as an upgrade feature, while Add category stands in the Content tab. The Email add-on has no price on the Upgrade page.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "A real submission and screenshot with the widget code on a site.",
+      "The Pro features, the Email add-on and the LTD code.",
+      "Sign-up, which was done earlier by Daan.",
+      "Checkout, a paid plan and deleting the project.",
+      "Export and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 09:01 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "userhelp-co:cancellation_terms",

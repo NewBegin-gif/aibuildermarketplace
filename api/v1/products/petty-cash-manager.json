@@ -73,18 +73,684 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html",
+  "method": [
+   "Tested in the browser on the 14 day free trial; test expenses with a receipt photo were entered and approved or rejected; the checkout was viewed without an address and nothing was paid",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Try free for 14 days first, no card",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The app opened with Free trial: 14 days left and no card, account or e-mail address was asked; the setup form and sample data came straight after.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The line on the plan page against the trial banner and a start without any sign-in.",
+    "status": "confirmed",
+    "buying_consequence": "You can try the app for 14 days without giving any payment or personal details.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Teams where several cashiers record spending",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The dossier group of teams with several cashiers depends on Cloud sync. The staff link per custodian was not used and Cloud sync was not switched on, so recording by several people was not tested.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The dossier group against a test with one local browser and one custodian.",
+    "status": "not_testable",
+    "buying_consequence": "Whether several cashiers can work in one shared set of entries is not confirmed by this test.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "The photo stays on your device.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The app shows this line when a receipt photo is added and says data stays on the device until Cloud sync is on. Network traffic was not inspected, so it is the claim of the app that was not checked.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The message in the app against a test without network inspection.",
+    "status": "not_testable",
+    "buying_consequence": "The vendor says the receipt photo stays on your device; this was not checked at the network level.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Balance 495.50",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The first expense of 4.50 with a receipt photo was saved after about 6 steps and the balance showed 495.50 with 4.50 under Awaiting approval, from a float of 500.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "Our own count of the steps and amounts for one expense; later expenses were added by a script on the form fields.",
+    "status": "confirmed",
+    "buying_consequence": "Recording one expense with a photo is quick, and the balance follows the float at once.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "No e-invoice QR code found on this photo.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The app looked for an e-invoice QR code on the made up receipt and found none, and offered Read the total from the photo, which was not used.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The message in the app against a photo without a QR code; the read-the-total button was not tried.",
+    "status": "not_testable",
+    "buying_consequence": "Whether the app reads the total from a real receipt photo is not confirmed; our test receipt had no QR code.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "APPROVED EXPENSES 127.24, 8 entries",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Of 10 test expenses 8 were approved, 1 was rejected and 1 stayed waiting; the november report showed 127.24 for 8 entries, and the seven categories add up to 127.24. Cash added was 500.00.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "Our own sum of the 8 approved amounts against the report; the 144.54 total of all 10 was not shown by the report.",
+    "status": "confirmed",
+    "buying_consequence": "The monthly report counts only approved expenses and splits them by category correctly.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Export to Excel (CSV)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Entries export gave petty-cash-all.csv of 1259 bytes with 11 lines: a header and the 10 expenses, with columns for date, ref, custodian, category, net, tax, total and status. The file was not opened further.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The line count of the downloaded file against 10 expenses; no cell values were compared.",
+    "status": "confirmed",
+    "buying_consequence": "You can get the entries out as a CSV file for a spreadsheet; the cell contents were not checked.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Print, PDF",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The report has Print and PDF buttons. They were not used, because the print and PDF dialog was avoided, so the PDF report was not seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The report buttons against a PDF that was not opened.",
+    "status": "not_testable",
+    "buying_consequence": "What the PDF report looks like is not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Zoho Books / QuickBooks / Xero export",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The report offers exports for Zoho Books, QuickBooks and Xero. None was used, so the files and their import were not seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The export buttons against files that were not made.",
+    "status": "not_testable",
+    "buying_consequence": "Check an accounting export with your own software before you rely on it.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Your data stays on this device.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Settings, Backup & restore says the data stays on this device and that browser storage is not protected and may be cleared; a banner said no backup had been downloaded yet. No cloud account was used.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The text in Settings and the banner against a test that stored everything locally.",
+    "status": "confirmed",
+    "buying_consequence": "Download a backup yourself, because a cleared browser or a lost phone loses the data unless Cloud sync is on.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Cloud sync is included in your free trial.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Settings shows Cloud sync as included in the trial and needing a + Cloud plan afterwards. Signing in needs an e-mail address and a sign-in code, which was not tested.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The Cloud sync card against a test that did not sign in.",
+    "status": "not_testable",
+    "buying_consequence": "Whether Cloud sync works across devices and what happens to the data after the trial is not confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "+$3 a month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The page and the FAQ say Add Cloud sync to any plan for +$3 a month. The prices show +$3 only on Monthly ($7 to $10). On 3 months it is +$8.01, on 6 months +$15 and on Yearly +$28 a year ($41.99 to $69.99), which is less than $3 a month.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The add-on text against the difference between the with-Cloud and on-this-device prices for each term, as read on the live vendor page.",
+    "status": "contradicted",
+    "buying_consequence": "On the longer plans Cloud sync costs less than +$3 a month, but you still pay more in total for the term, so compare the with-Cloud prices.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Yearly $41.99",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The plan page and the live vendor page give Yearly $41.99 ($3.50 a month, Save 50%) on 6 devices, with 3 months, 6 months and Monthly at $16.99, $26.99 and $7; this matches the dossier.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The on-this-device prices on the vendor page against the dossier ladder; no plan was bought.",
+    "status": "confirmed",
+    "buying_consequence": "The yearly plan on this device costs $41.99, the best price per month.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Cancel at any time from the link in your receipt email",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The FAQ says you cancel from the link in your receipt e-mail and can ask for a refund within 14 days of a payment. The app has no cancel button, only Erase all data, which was not clicked, so cancelling was not tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The FAQ text against an app without a cancel button and a test without payment.",
+    "status": "not_testable",
+    "buying_consequence": "You can only cancel after paying, through the receipt e-mail.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Totaal US$ 69,99",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Lemon Squeezy checkout for Yearly + Cloud showed US$ 69,99 billed every 12 months, Subtotaal and Totaal both US$ 69,99, with no tax yet because no address was entered; nothing was paid. The amount equals the Yearly $69.99 on the plan page.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+    },
+    "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+    "comparability": "The plan page price against the checkout total before the address step; no tax line, fee or stored cost rule could be compared.",
+    "status": "confirmed",
+    "buying_consequence": "The yearly price with Cloud sync at checkout equals the plan page, but VAT or GST may be added once your address is known.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Petty Cash Manager on its 14 day free trial in the browser: after about 6 steps the first expense with a receipt photo was saved, and 10 test expenses later 8 were approved and 1 rejected, and the november report showed 127.24 for 8 entries, split by category. The CSV export had a header and 10 lines. Everything stays on the device: no account, no cloud, and a banner asks you to download a backup. Cloud sync, which needs an e-mail code, was not tested. The page says Cloud sync costs +$3 a month on any plan, but that is true only for the Monthly plan: Yearly goes from $41.99 to $69.99, which is +$28 a year. Cancelling is only possible after paying. Nothing was paid. Account and start: the app is local in the browser and has no separate account; the Chrome of Daan, who created the account, was signed in, and our AI assistant ran the test in its own tab, starting at about 13:54 on the clock of the shell, which ran unreliably fast, so no durations are taken from it. The interface was already in English and the free trial said Free trial: 14 days left. The dossier name is Petty Cash Manager and the review is on OSM (petty-cash-manager-review). Start: the first screen was the setup form Set up your petty cash (Country Other, Currency USD, Tax 0, Language English, the box for anonymous usage counts left unticked). The app then showed sample data, which was cleared with Clear sample data and start. Core action: a custodian Test Cashier (Test Shop, float 500, opening cash 500) and then a first expense of 4.50, category Office supplies, paid to Sample Shop, description Test pens, with a receipt photo of a made up receipt. It saved with Saved, the balance became 495.50 and Awaiting approval 4.50. That took about 6 steps: 1 setup form, 1 clearing the sample data, 1 custodian with 4 fields, 1 expense with 5 fields and a photo, and Save. The receipt photo: the app said Looking for the e-invoice QR code..., then No e-invoice QR code found on this photo, with a button Read the total from the photo (not used), and says The photo stays on your device. Nine more expenses were added (3.20 Courier & postage, 12.80 Coffee, 25.00 Miscellaneous cleaning, 9.99 Office, 6.40 Transport, 18.75 Tools, 7.30 Meals, 41.00 Utilities, 15.60 coffee beans), 10 entries and 144.54 USD in total; the form fields were filled by a script on the real fields and Save was clicked on the button. Approvals: 8 were approved, 1 was rejected and 1 stayed waiting. The report for november 2026 shows APPROVED EXPENSES 127.24 (8 entries), NET 127.24 USD, RECOVERABLE INPUT TAX 0.00, CASH ADDED 500.00 and the spending by category (Utilities 41.00, Miscellaneous 25.00, Meals & refreshments 22.90, Tools & hardware 18.75, Office supplies 9.99, Transport 6.40, Courier & postage 3.20); the categories add up to 127.24. The report offers Print, PDF, Export to Excel (CSV) for the Input Tax register and exports for Zoho Books, QuickBooks and Xero. Export: Entries, Export to Excel (CSV) gave petty-cash-all.csv (1259 bytes, 11 lines: a header and 10 expenses, columns Date, Ref, Type, Custodian, Category, Paid to, Invoice no., Description, Cash source, Net, Tax, Total, Status, Note; refs Nov00126 to Nov01026). The file was not opened further and the PDF report was not opened (the print and PDF dialog was avoided). Local or cloud: everything is stored locally in the browser. Settings, Backup & restore says Your data stays on this device. Download a backup regularly and keep it safe, and Browser storage: Not protected, the browser may clear it if space runs low; a banner says no backup was downloaded yet and that the data is gone if the browser is cleared. Cloud sync is included in the free trial and after the trial needs a + Cloud plan; signing in needs an e-mail address and a sign-in code, which was NOT tested (no e-mail or code was used). When cloud sync is on, entries and receipt photos are also stored on the cloud server of the vendor. The staff link per custodian was not used. Plans: The plans were read by the tester on 18 Nov 2026 on the vendor site (pettycash.getdailytools.com, section pricing) and read again just before this delivery the same day, with the same prices. On this device: Monthly $7 a month on 2 devices, 3 months $16.99 ($5.66 a month, Save 19%) on 3 devices, 6 months $26.99 ($4.50 a month, Save 36%) on 5 devices, Yearly $41.99 ($3.50 a month, Save 50%) on 6 devices. With Cloud sync: Monthly $10 a month on 2 devices, 3 months $24.99 ($8.33 a month), 6 months $41.99 ($7 a month), Yearly $69.99 ($5.83 a month), on 2, 3, 5 and 6 devices. Prices are in US dollars; VAT or GST is added at checkout where your country requires it. The page says Try free for 14 days first, no card, a 14-day money-back guarantee and Renews automatically, cancel any time. The prices on the live vendor page are unchanged and match the dossier. Difference on the page: the page and the FAQ say Add Cloud sync to any plan for +$3 a month. In the prices Cloud sync costs +$3 a month only on the Monthly plan; Yearly goes from $41.99 to $69.99 (+$28 a year, $2.33 a month), 6 months from $26.99 to $41.99 (+$15, $2.50 a month) and 3 months from $16.99 to $24.99 (+$8.01, $2.67 a month). Checkout: the vendor site opened a Lemon Squeezy checkout for Petty Cash Manager (Yearly + Cloud) with US$ 69,99 billed every 12 months, Subtotaal US$ 69,99, Totaal US$ 69,99 and the button US$ 69,99 betalen; no tax was shown yet because no address was entered. The payment methods were card, PayPal and Link, Google Pay and Cash App Pay. Nothing was filled in or clicked except opening the page; the checkout showed saved payment details of the account owner, so no screenshot of it was kept, and the checkout was left. The cookie banner of the vendor site was set to Decline. Cancelling: there is no cancel button in the app and no account, since the trial is local. The FAQ says you cancel at any time from the link in your receipt e-mail, with the plan staying active until the end of the paid period, and that an e-mail within 14 days of a payment gives a full refund. So cancelling is only possible after paying. Settings has Erase all data at the bottom (local, not clicked); deleting a cloud account was not seen. Not tested: cloud sync (needs an e-mail code), the staff link, reading the total from the photo, the PDF report, the Zoho Books, QuickBooks and Xero exports, the language switch, installing as an app, and paying. Clean up: the test data stays in the browser storage of the Chrome of Daan: the custodian Test Cashier, 10 test expenses and 1 receipt photo; the sample data was cleared; the file petty-cash-all.csv is still in the Downloads folder; our own tab was closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Your data lives in the browser only, which the app itself calls not protected, so you have to download a backup yourself or it can be gone when the browser is cleared. Teams that want several devices to share entries need Cloud sync, which we could not try, and which costs less than +$3 a month on the longer plans but more than the plan price alone. There is no cancel button in the app: you cancel from the link in your receipt e-mail after you have paid. The receipt photo scan found no e-invoice QR code on our test receipt, so the total had to be typed in.",
+   "friction": {
+    "export_route": "The CSV export petty-cash-all.csv was downloaded (1259 bytes, a header and 10 expenses) but not opened further; no kit records were entered and no reimport was run.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Cloud sync, which needs an e-mail sign-in code.",
+    "The staff link, reading the total from the receipt photo and the PDF report.",
+    "The Zoho Books, QuickBooks and Xero exports, the language switch and installing as an app.",
+    "Paying, and cancelling, which is only possible from the receipt e-mail after payment.",
+    "Tax on the checkout, which showed no amount before an address was entered.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "The app opened with Free trial: 14 days left and no card, account or e-mail address was asked; the setup form and sample data came straight after.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Petty Cash Manager on its 14 day free trial in the browser: after about 6 steps the first expense with a receipt photo was saved, and 10 test expenses later 8 were approved and 1 rejected, and the november report showed 127.24 for 8 entries, split by category. The CSV export had a header and 10 lines. Everything stays on the device: no account, no cloud, and a banner asks you to download a backup. Cloud sync, which needs an e-mail code, was not tested. The page says Cloud sync costs +$3 a month on any plan, but that is true only for the Monthly plan: Yearly goes from $41.99 to $69.99, which is +$28 a year. Cancelling is only possible after paying. Nothing was paid. Account and start: the app is local in the browser and has no separate account; the Chrome of Daan, who created the account, was signed in, and our AI assistant ran the test in its own tab, starting at about 13:54 on the clock of the shell, which ran unreliably fast, so no durations are taken from it. The interface was already in English and the free trial said Free trial: 14 days left. The dossier name is Petty Cash Manager and the review is on OSM (petty-cash-manager-review). Start: the first screen was the setup form Set up your petty cash (Country Other, Currency USD, Tax 0, Language English, the box for anonymous usage counts left unticked). The app then showed sample data, which was cleared with Clear sample data and start. Core action: a custodian Test Cashier (Test Shop, float 500, opening cash 500) and then a first expense of 4.50, category Office supplies, paid to Sample Shop, description Test pens, with a receipt photo of a made up receipt. It saved with Saved, the balance became 495.50 and Awaiting approval 4.50. That took about 6 steps: 1 setup form, 1 clearing the sample data, 1 custodian with 4 fields, 1 expense with 5 fields and a photo, and Save. The receipt photo: the app said Looking for the e-invoice QR code..., then No e-invoice QR code found on this photo, with a button Read the total from the photo (not used), and says The photo stays on your device. Nine more expenses were added (3.20 Courier & postage, 12.80 Coffee, 25.00 Miscellaneous cleaning, 9.99 Office, 6.40 Transport, 18.75 Tools, 7.30 Meals, 41.00 Utilities, 15.60 coffee beans), 10 entries and 144.54 USD in total; the form fields were filled by a script on the real fields and Save was clicked on the button. Approvals: 8 were approved, 1 was rejected and 1 stayed waiting. The report for november 2026 shows APPROVED EXPENSES 127.24 (8 entries), NET 127.24 USD, RECOVERABLE INPUT TAX 0.00, CASH ADDED 500.00 and the spending by category (Utilities 41.00, Miscellaneous 25.00, Meals & refreshments 22.90, Tools & hardware 18.75, Office supplies 9.99, Transport 6.40, Courier & postage 3.20); the categories add up to 127.24. The report offers Print, PDF, Export to Excel (CSV) for the Input Tax register and exports for Zoho Books, QuickBooks and Xero. Export: Entries, Export to Excel (CSV) gave petty-cash-all.csv (1259 bytes, 11 lines: a header and 10 expenses, columns Date, Ref, Type, Custodian, Category, Paid to, Invoice no., Description, Cash source, Net, Tax, Total, Status, Note; refs Nov00126 to Nov01026). The file was not opened further and the PDF report was not opened (the print and PDF dialog was avoided). Local or cloud: everything is stored locally in the browser. Settings, Backup & restore says Your data stays on this device. Download a backup regularly and keep it safe, and Browser storage: Not protected, the browser may clear it if space runs low; a banner says no backup was downloaded yet and that the data is gone if the browser is cleared. Cloud sync is included in the free trial and after the trial needs a + Cloud plan; signing in needs an e-mail address and a sign-in code, which was NOT tested (no e-mail or code was used). When cloud sync is on, entries and receipt photos are also stored on the cloud server of the vendor. The staff link per custodian was not used. Plans: The plans were read by the tester on 18 Nov 2026 on the vendor site (pettycash.getdailytools.com, section pricing) and read again just before this delivery the same day, with the same prices. On this device: Monthly $7 a month on 2 devices, 3 months $16.99 ($5.66 a month, Save 19%) on 3 devices, 6 months $26.99 ($4.50 a month, Save 36%) on 5 devices, Yearly $41.99 ($3.50 a month, Save 50%) on 6 devices. With Cloud sync: Monthly $10 a month on 2 devices, 3 months $24.99 ($8.33 a month), 6 months $41.99 ($7 a month), Yearly $69.99 ($5.83 a month), on 2, 3, 5 and 6 devices. Prices are in US dollars; VAT or GST is added at checkout where your country requires it. The page says Try free for 14 days first, no card, a 14-day money-back guarantee and Renews automatically, cancel any time. The prices on the live vendor page are unchanged and match the dossier. Difference on the page: the page and the FAQ say Add Cloud sync to any plan for +$3 a month. In the prices Cloud sync costs +$3 a month only on the Monthly plan; Yearly goes from $41.99 to $69.99 (+$28 a year, $2.33 a month), 6 months from $26.99 to $41.99 (+$15, $2.50 a month) and 3 months from $16.99 to $24.99 (+$8.01, $2.67 a month). Checkout: the vendor site opened a Lemon Squeezy checkout for Petty Cash Manager (Yearly + Cloud) with US$ 69,99 billed every 12 months, Subtotaal US$ 69,99, Totaal US$ 69,99 and the button US$ 69,99 betalen; no tax was shown yet because no address was entered. The payment methods were card, PayPal and Link, Google Pay and Cash App Pay. Nothing was filled in or clicked except opening the page; the checkout showed saved payment details of the account owner, so no screenshot of it was kept, and the checkout was left. The cookie banner of the vendor site was set to Decline. Cancelling: there is no cancel button in the app and no account, since the trial is local. The FAQ says you cancel at any time from the link in your receipt e-mail, with the plan staying active until the end of the paid period, and that an e-mail within 14 days of a payment gives a full refund. So cancelling is only possible after paying. Settings has Erase all data at the bottom (local, not clicked); deleting a cloud account was not seen. Not tested: cloud sync (needs an e-mail code), the staff link, reading the total from the photo, the PDF report, the Zoho Books, QuickBooks and Xero exports, the language switch, installing as an app, and paying. Clean up: the test data stays in the browser storage of the Chrome of Daan: the custodian Test Cashier, 10 test expenses and 1 receipt photo; the sample data was cleared; the file petty-cash-all.csv is still in the Downloads folder; our own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Petty Cash Manager on its 14 day free trial in the browser: after about 6 steps the first expense with a receipt photo was saved, and 10 test expenses later 8 were approved and 1 rejected, and the november report showed 127.24 for 8 entries, split by category. The CSV export had a header and 10 lines. Everything stays on the device: no account, no cloud, and a banner asks you to download a backup. Cloud sync, which needs an e-mail code, was not tested. The page says Cloud sync costs +$3 a month on any plan, but that is true only for the Monthly plan: Yearly goes from $41.99 to $69.99, which is +$28 a year. Cancelling is only possible after paying. Nothing was paid. Account and start: the app is local in the browser and has no separate account; the Chrome of Daan, who created the account, was signed in, and our AI assistant ran the test in its own tab, starting at about 13:54 on the clock of the shell, which ran unreliably fast, so no durations are taken from it. The interface was already in English and the free trial said Free trial: 14 days left. The dossier name is Petty Cash Manager and the review is on OSM (petty-cash-manager-review). Start: the first screen was the setup form Set up your petty cash (Country Other, Currency USD, Tax 0, Language English, the box for anonymous usage counts left unticked). The app then showed sample data, which was cleared with Clear sample data and start. Core action: a custodian Test Cashier (Test Shop, float 500, opening cash 500) and then a first expense of 4.50, category Office supplies, paid to Sample Shop, description Test pens, with a receipt photo of a made up receipt. It saved with Saved, the balance became 495.50 and Awaiting approval 4.50. That took about 6 steps: 1 setup form, 1 clearing the sample data, 1 custodian with 4 fields, 1 expense with 5 fields and a photo, and Save. The receipt photo: the app said Looking for the e-invoice QR code..., then No e-invoice QR code found on this photo, with a button Read the total from the photo (not used), and says The photo stays on your device. Nine more expenses were added (3.20 Courier & postage, 12.80 Coffee, 25.00 Miscellaneous cleaning, 9.99 Office, 6.40 Transport, 18.75 Tools, 7.30 Meals, 41.00 Utilities, 15.60 coffee beans), 10 entries and 144.54 USD in total; the form fields were filled by a script on the real fields and Save was clicked on the button. Approvals: 8 were approved, 1 was rejected and 1 stayed waiting. The report for november 2026 shows APPROVED EXPENSES 127.24 (8 entries), NET 127.24 USD, RECOVERABLE INPUT TAX 0.00, CASH ADDED 500.00 and the spending by category (Utilities 41.00, Miscellaneous 25.00, Meals & refreshments 22.90, Tools & hardware 18.75, Office supplies 9.99, Transport 6.40, Courier & postage 3.20); the categories add up to 127.24. The report offers Print, PDF, Export to Excel (CSV) for the Input Tax register and exports for Zoho Books, QuickBooks and Xero. Export: Entries, Export to Excel (CSV) gave petty-cash-all.csv (1259 bytes, 11 lines: a header and 10 expenses, columns Date, Ref, Type, Custodian, Category, Paid to, Invoice no., Description, Cash source, Net, Tax, Total, Status, Note; refs Nov00126 to Nov01026). The file was not opened further and the PDF report was not opened (the print and PDF dialog was avoided). Local or cloud: everything is stored locally in the browser. Settings, Backup & restore says Your data stays on this device. Download a backup regularly and keep it safe, and Browser storage: Not protected, the browser may clear it if space runs low; a banner says no backup was downloaded yet and that the data is gone if the browser is cleared. Cloud sync is included in the free trial and after the trial needs a + Cloud plan; signing in needs an e-mail address and a sign-in code, which was NOT tested (no e-mail or code was used). When cloud sync is on, entries and receipt photos are also stored on the cloud server of the vendor. The staff link per custodian was not used. Plans: The plans were read by the tester on 18 Nov 2026 on the vendor site (pettycash.getdailytools.com, section pricing) and read again just before this delivery the same day, with the same prices. On this device: Monthly $7 a month on 2 devices, 3 months $16.99 ($5.66 a month, Save 19%) on 3 devices, 6 months $26.99 ($4.50 a month, Save 36%) on 5 devices, Yearly $41.99 ($3.50 a month, Save 50%) on 6 devices. With Cloud sync: Monthly $10 a month on 2 devices, 3 months $24.99 ($8.33 a month), 6 months $41.99 ($7 a month), Yearly $69.99 ($5.83 a month), on 2, 3, 5 and 6 devices. Prices are in US dollars; VAT or GST is added at checkout where your country requires it. The page says Try free for 14 days first, no card, a 14-day money-back guarantee and Renews automatically, cancel any time. The prices on the live vendor page are unchanged and match the dossier. Difference on the page: the page and the FAQ say Add Cloud sync to any plan for +$3 a month. In the prices Cloud sync costs +$3 a month only on the Monthly plan; Yearly goes from $41.99 to $69.99 (+$28 a year, $2.33 a month), 6 months from $26.99 to $41.99 (+$15, $2.50 a month) and 3 months from $16.99 to $24.99 (+$8.01, $2.67 a month). Checkout: the vendor site opened a Lemon Squeezy checkout for Petty Cash Manager (Yearly + Cloud) with US$ 69,99 billed every 12 months, Subtotaal US$ 69,99, Totaal US$ 69,99 and the button US$ 69,99 betalen; no tax was shown yet because no address was entered. The payment methods were card, PayPal and Link, Google Pay and Cash App Pay. Nothing was filled in or clicked except opening the page; the checkout showed saved payment details of the account owner, so no screenshot of it was kept, and the checkout was left. The cookie banner of the vendor site was set to Decline. Cancelling: there is no cancel button in the app and no account, since the trial is local. The FAQ says you cancel at any time from the link in your receipt e-mail, with the plan staying active until the end of the paid period, and that an e-mail within 14 days of a payment gives a full refund. So cancelling is only possible after paying. Settings has Erase all data at the bottom (local, not clicked); deleting a cloud account was not seen. Not tested: cloud sync (needs an e-mail code), the staff link, reading the total from the photo, the PDF report, the Zoho Books, QuickBooks and Xero exports, the language switch, installing as an app, and paying. Clean up: the test data stays in the browser storage of the Chrome of Daan: the custodian Test Cashier, 10 test expenses and 1 receipt photo; the sample data was cleared; the file petty-cash-all.csv is still in the Downloads folder; our own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Petty Cash Manager",
+    "product_id": "petty-cash-manager",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Petty Cash Manager on its 14 day free trial in the browser: after about 6 steps the first expense with a receipt photo was saved, and 10 test expenses later 8 were approved and 1 rejected, and the november report showed 127.24 for 8 entries, split by category. The CSV export had a header and 10 lines. Everything stays on the device: no account, no cloud, and a banner asks you to download a backup. Cloud sync, which needs an e-mail code, was not tested. The page says Cloud sync costs +$3 a month on any plan, but that is true only for the Monthly plan: Yearly goes from $41.99 to $69.99, which is +$28 a year. Cancelling is only possible after paying. Nothing was paid.",
+    "findings": [
+     "Text we checked: \"Try free for 14 days first, no card\". What we saw: The app opened with Free trial: 14 days left and no card, account or e-mail address was asked; the setup form and sample data came straight after.",
+     "Text we checked: \"Balance 495.50\". What we saw: The first expense of 4.50 with a receipt photo was saved after about 6 steps and the balance showed 495.50 with 4.50 under Awaiting approval, from a float of 500.",
+     "Text we checked: \"APPROVED EXPENSES 127.24, 8 entries\". What we saw: Of 10 test expenses 8 were approved, 1 was rejected and 1 stayed waiting; the november report showed 127.24 for 8 entries, and the seven categories add up to 127.24. Cash added was 500.00.",
+     "Text we checked: \"Export to Excel (CSV)\". What we saw: The Entries export gave petty-cash-all.csv of 1259 bytes with 11 lines: a header and the 10 expenses, with columns for date, ref, custodian, category, net, tax, total and status. The file was not opened further.",
+     "Text we checked: \"Your data stays on this device\". What we saw: Settings, Backup & restore says the data stays on this device and that browser storage is not protected and may be cleared; a banner said no backup had been downloaded yet. No cloud account was used."
+    ],
+    "not_tested": [
+     "Cloud sync, which needs an e-mail sign-in code.",
+     "The staff link, reading the total from the receipt photo and the PDF report.",
+     "The Zoho Books, QuickBooks and Xero exports, the language switch and installing as an app.",
+     "Paying, and cancelling, which is only possible from the receipt e-mail after payment.",
+     "Tax on the checkout, which showed no amount before an address was entered.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Try free for 14 days first, no card",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The app opened with Free trial: 14 days left and no card, account or e-mail address was asked; the setup form and sample data came straight after.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The line on the plan page against the trial banner and a start without any sign-in.",
+      "status": "confirmed",
+      "buying_consequence": "You can try the app for 14 days without giving any payment or personal details.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Teams where several cashiers record spending",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The dossier group of teams with several cashiers depends on Cloud sync. The staff link per custodian was not used and Cloud sync was not switched on, so recording by several people was not tested.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The dossier group against a test with one local browser and one custodian.",
+      "status": "not_testable",
+      "buying_consequence": "Whether several cashiers can work in one shared set of entries is not confirmed by this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "The photo stays on your device.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The app shows this line when a receipt photo is added and says data stays on the device until Cloud sync is on. Network traffic was not inspected, so it is the claim of the app that was not checked.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The message in the app against a test without network inspection.",
+      "status": "not_testable",
+      "buying_consequence": "The vendor says the receipt photo stays on your device; this was not checked at the network level.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Balance 495.50",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The first expense of 4.50 with a receipt photo was saved after about 6 steps and the balance showed 495.50 with 4.50 under Awaiting approval, from a float of 500.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "Our own count of the steps and amounts for one expense; later expenses were added by a script on the form fields.",
+      "status": "confirmed",
+      "buying_consequence": "Recording one expense with a photo is quick, and the balance follows the float at once.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "No e-invoice QR code found on this photo.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The app looked for an e-invoice QR code on the made up receipt and found none, and offered Read the total from the photo, which was not used.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The message in the app against a photo without a QR code; the read-the-total button was not tried.",
+      "status": "not_testable",
+      "buying_consequence": "Whether the app reads the total from a real receipt photo is not confirmed; our test receipt had no QR code.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "APPROVED EXPENSES 127.24, 8 entries",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Of 10 test expenses 8 were approved, 1 was rejected and 1 stayed waiting; the november report showed 127.24 for 8 entries, and the seven categories add up to 127.24. Cash added was 500.00.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "Our own sum of the 8 approved amounts against the report; the 144.54 total of all 10 was not shown by the report.",
+      "status": "confirmed",
+      "buying_consequence": "The monthly report counts only approved expenses and splits them by category correctly.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Export to Excel (CSV)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Entries export gave petty-cash-all.csv of 1259 bytes with 11 lines: a header and the 10 expenses, with columns for date, ref, custodian, category, net, tax, total and status. The file was not opened further.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The line count of the downloaded file against 10 expenses; no cell values were compared.",
+      "status": "confirmed",
+      "buying_consequence": "You can get the entries out as a CSV file for a spreadsheet; the cell contents were not checked.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Print, PDF",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The report has Print and PDF buttons. They were not used, because the print and PDF dialog was avoided, so the PDF report was not seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The report buttons against a PDF that was not opened.",
+      "status": "not_testable",
+      "buying_consequence": "What the PDF report looks like is not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Zoho Books / QuickBooks / Xero export",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The report offers exports for Zoho Books, QuickBooks and Xero. None was used, so the files and their import were not seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The export buttons against files that were not made.",
+      "status": "not_testable",
+      "buying_consequence": "Check an accounting export with your own software before you rely on it.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Your data stays on this device.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Settings, Backup & restore says the data stays on this device and that browser storage is not protected and may be cleared; a banner said no backup had been downloaded yet. No cloud account was used.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The text in Settings and the banner against a test that stored everything locally.",
+      "status": "confirmed",
+      "buying_consequence": "Download a backup yourself, because a cleared browser or a lost phone loses the data unless Cloud sync is on.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Cloud sync is included in your free trial.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Settings shows Cloud sync as included in the trial and needing a + Cloud plan afterwards. Signing in needs an e-mail address and a sign-in code, which was not tested.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The Cloud sync card against a test that did not sign in.",
+      "status": "not_testable",
+      "buying_consequence": "Whether Cloud sync works across devices and what happens to the data after the trial is not confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "+$3 a month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The page and the FAQ say Add Cloud sync to any plan for +$3 a month. The prices show +$3 only on Monthly ($7 to $10). On 3 months it is +$8.01, on 6 months +$15 and on Yearly +$28 a year ($41.99 to $69.99), which is less than $3 a month.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The add-on text against the difference between the with-Cloud and on-this-device prices for each term, as read on the live vendor page.",
+      "status": "contradicted",
+      "buying_consequence": "On the longer plans Cloud sync costs less than +$3 a month, but you still pay more in total for the term, so compare the with-Cloud prices.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Yearly $41.99",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The plan page and the live vendor page give Yearly $41.99 ($3.50 a month, Save 50%) on 6 devices, with 3 months, 6 months and Monthly at $16.99, $26.99 and $7; this matches the dossier.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The on-this-device prices on the vendor page against the dossier ladder; no plan was bought.",
+      "status": "confirmed",
+      "buying_consequence": "The yearly plan on this device costs $41.99, the best price per month.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Cancel at any time from the link in your receipt email",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The FAQ says you cancel from the link in your receipt e-mail and can ask for a refund within 14 days of a payment. The app has no cancel button, only Erase all data, which was not clicked, so cancelling was not tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The FAQ text against an app without a cancel button and a test without payment.",
+      "status": "not_testable",
+      "buying_consequence": "You can only cancel after paying, through the receipt e-mail.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Totaal US$ 69,99",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Lemon Squeezy checkout for Yearly + Cloud showed US$ 69,99 billed every 12 months, Subtotaal and Totaal both US$ 69,99, with no tax yet because no address was entered; nothing was paid. The amount equals the Yearly $69.99 on the plan page.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/petty-cash-manager-review.html#claim-vs-measured"
+      },
+      "plan": "14 day free trial in the browser; the Yearly + Cloud checkout was viewed, nothing was paid",
+      "comparability": "The plan page price against the checkout total before the address step; no tax line, fee or stored cost rule could be compared.",
+      "status": "confirmed",
+      "buying_consequence": "The yearly price with Cloud sync at checkout equals the plan page, but VAT or GST may be added once your address is known.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session tested Petty Cash Manager on its 14 day free trial in the browser: after about 6 steps the first expense with a receipt photo was saved, and 10 test expenses later 8 were approved and 1 rejected, and the november report showed 127.24 for 8 entries, split by category. The CSV export had a header and 10 lines. Everything stays on the device: no account, no cloud, and a banner asks you to download a backup. Cloud sync, which needs an e-mail code, was not tested. The page says Cloud sync costs +$3 a month on any plan, but that is true only for the Monthly plan: Yearly goes from $41.99 to $69.99, which is +$28 a year. Cancelling is only possible after paying. Nothing was paid. Account and start: the app is local in the browser and has no separate account; the Chrome of Daan, who created the account, was signed in, and our AI assistant ran the test in its own tab, starting at about 13:54 on the clock of the shell, which ran unreliably fast, so no durations are taken from it. The interface was already in English and the free trial said Free trial: 14 days left. The dossier name is Petty Cash Manager and the review is on OSM (petty-cash-manager-review). Start: the first screen was the setup form Set up your petty cash (Country Other, Currency USD, Tax 0, Language English, the box for anonymous usage counts left unticked). The app then showed sample data, which was cleared with Clear sample data and start. Core action: a custodian Test Cashier (Test Shop, float 500, opening cash 500) and then a first expense of 4.50, category Office supplies, paid to Sample Shop, description Test pens, with a receipt photo of a made up receipt. It saved with Saved, the balance became 495.50 and Awaiting approval 4.50. That took about 6 steps: 1 setup form, 1 clearing the sample data, 1 custodian with 4 fields, 1 expense with 5 fields and a photo, and Save. The receipt photo: the app said Looking for the e-invoice QR code..., then No e-invoice QR code found on this photo, with a button Read the total from the photo (not used), and says The photo stays on your device. Nine more expenses were added (3.20 Courier & postage, 12.80 Coffee, 25.00 Miscellaneous cleaning, 9.99 Office, 6.40 Transport, 18.75 Tools, 7.30 Meals, 41.00 Utilities, 15.60 coffee beans), 10 entries and 144.54 USD in total; the form fields were filled by a script on the real fields and Save was clicked on the button. Approvals: 8 were approved, 1 was rejected and 1 stayed waiting. The report for november 2026 shows APPROVED EXPENSES 127.24 (8 entries), NET 127.24 USD, RECOVERABLE INPUT TAX 0.00, CASH ADDED 500.00 and the spending by category (Utilities 41.00, Miscellaneous 25.00, Meals & refreshments 22.90, Tools & hardware 18.75, Office supplies 9.99, Transport 6.40, Courier & postage 3.20); the categories add up to 127.24. The report offers Print, PDF, Export to Excel (CSV) for the Input Tax register and exports for Zoho Books, QuickBooks and Xero. Export: Entries, Export to Excel (CSV) gave petty-cash-all.csv (1259 bytes, 11 lines: a header and 10 expenses, columns Date, Ref, Type, Custodian, Category, Paid to, Invoice no., Description, Cash source, Net, Tax, Total, Status, Note; refs Nov00126 to Nov01026). The file was not opened further and the PDF report was not opened (the print and PDF dialog was avoided). Local or cloud: everything is stored locally in the browser. Settings, Backup & restore says Your data stays on this device. Download a backup regularly and keep it safe, and Browser storage: Not protected, the browser may clear it if space runs low; a banner says no backup was downloaded yet and that the data is gone if the browser is cleared. Cloud sync is included in the free trial and after the trial needs a + Cloud plan; signing in needs an e-mail address and a sign-in code, which was NOT tested (no e-mail or code was used). When cloud sync is on, entries and receipt photos are also stored on the cloud server of the vendor. The staff link per custodian was not used. Plans: The plans were read by the tester on 18 Nov 2026 on the vendor site (pettycash.getdailytools.com, section pricing) and read again just before this delivery the same day, with the same prices. On this device: Monthly $7 a month on 2 devices, 3 months $16.99 ($5.66 a month, Save 19%) on 3 devices, 6 months $26.99 ($4.50 a month, Save 36%) on 5 devices, Yearly $41.99 ($3.50 a month, Save 50%) on 6 devices. With Cloud sync: Monthly $10 a month on 2 devices, 3 months $24.99 ($8.33 a month), 6 months $41.99 ($7 a month), Yearly $69.99 ($5.83 a month), on 2, 3, 5 and 6 devices. Prices are in US dollars; VAT or GST is added at checkout where your country requires it. The page says Try free for 14 days first, no card, a 14-day money-back guarantee and Renews automatically, cancel any time. The prices on the live vendor page are unchanged and match the dossier. Difference on the page: the page and the FAQ say Add Cloud sync to any plan for +$3 a month. In the prices Cloud sync costs +$3 a month only on the Monthly plan; Yearly goes from $41.99 to $69.99 (+$28 a year, $2.33 a month), 6 months from $26.99 to $41.99 (+$15, $2.50 a month) and 3 months from $16.99 to $24.99 (+$8.01, $2.67 a month). Checkout: the vendor site opened a Lemon Squeezy checkout for Petty Cash Manager (Yearly + Cloud) with US$ 69,99 billed every 12 months, Subtotaal US$ 69,99, Totaal US$ 69,99 and the button US$ 69,99 betalen; no tax was shown yet because no address was entered. The payment methods were card, PayPal and Link, Google Pay and Cash App Pay. Nothing was filled in or clicked except opening the page; the checkout showed saved payment details of the account owner, so no screenshot of it was kept, and the checkout was left. The cookie banner of the vendor site was set to Decline. Cancelling: there is no cancel button in the app and no account, since the trial is local. The FAQ says you cancel at any time from the link in your receipt e-mail, with the plan staying active until the end of the paid period, and that an e-mail within 14 days of a payment gives a full refund. So cancelling is only possible after paying. Settings has Erase all data at the bottom (local, not clicked); deleting a cloud account was not seen. Not tested: cloud sync (needs an e-mail code), the staff link, reading the total from the photo, the PDF report, the Zoho Books, QuickBooks and Xero exports, the language switch, installing as an app, and paying. Clean up: the test data stays in the browser storage of the Chrome of Daan: the custodian Test Cashier, 10 test expenses and 1 receipt photo; the sample data was cleared; the file petty-cash-all.csv is still in the Downloads folder; our own tab was closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Your data lives in the browser only, which the app itself calls not protected, so you have to download a backup yourself or it can be gone when the browser is cleared. Teams that want several devices to share entries need Cloud sync, which we could not try, and which costs less than +$3 a month on the longer plans but more than the plan price alone. There is no cancel button in the app: you cancel from the link in your receipt e-mail after you have paid. The receipt photo scan found no e-invoice QR code on our test receipt, so the total had to be typed in.",
+     "friction": {
+      "export_route": "The CSV export petty-cash-all.csv was downloaded (1259 bytes, a header and 10 expenses) but not opened further; no kit records were entered and no reimport was run.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Cloud sync, which needs an e-mail sign-in code.",
+      "The staff link, reading the total from the receipt photo and the PDF report.",
+      "The Zoho Books, QuickBooks and Xero exports, the language switch and installing as an app.",
+      "Paying, and cancelling, which is only possible from the receipt e-mail after payment.",
+      "Tax on the checkout, which showed no amount before an address was entered.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "petty-cash-manager:petty-cash-manager-q1",

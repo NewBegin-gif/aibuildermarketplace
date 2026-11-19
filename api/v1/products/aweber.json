@@ -85,15 +85,615 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "stale",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "subscriber",
+   "axis": "contacts",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 500,
+     "evidence": "A free plan still exists (up to 500 subscribers, 3,000 emails a month)"
+    },
+    {
+     "id": "lite",
+     "name": "Lite",
+     "model": "ladder",
+     "beyond": "unknown",
+     "rungs": [
+      {
+       "units": 500,
+       "monthly": 15,
+       "annual_month": 12.5
+      },
+      {
+       "units": 1000,
+       "monthly": 25,
+       "annual_month": 20.83
+      },
+      {
+       "units": 2500,
+       "monthly": 35,
+       "annual_month": 29.17
+      },
+      {
+       "units": 5000,
+       "monthly": 60,
+       "annual_month": 50.0
+      },
+      {
+       "units": 7500,
+       "monthly": 85,
+       "annual_month": 70.83
+      },
+      {
+       "units": 10000,
+       "monthly": 100,
+       "annual_month": 83.33
+      },
+      {
+       "units": 15000,
+       "monthly": 150,
+       "annual_month": 125.0
+      },
+      {
+       "units": 20000,
+       "monthly": 185,
+       "annual_month": 154.17
+      },
+      {
+       "units": 25000,
+       "monthly": 210,
+       "annual_month": 175.0
+      },
+      {
+       "units": 35000,
+       "monthly": 275,
+       "annual_month": 229.17
+      },
+      {
+       "units": 50000,
+       "monthly": 375,
+       "annual_month": 312.5
+      },
+      {
+       "units": 75000,
+       "monthly": 500,
+       "annual_month": 416.67
+      },
+      {
+       "units": 100000,
+       "monthly": 600,
+       "annual_month": 500.0
+      },
+      {
+       "units": 150000,
+       "monthly": 920,
+       "annual_month": 766.67
+      }
+     ],
+     "evidence": "Read again on 9 October 2026: the pricing page shows Lite and Plus, plus 'Done For You' (Plus with a setup fee shown as $599 struck to $79), with a Monthly/Annually switch and a subscriber slider. Lite billed monthly: $15 up to 500, $25 up to 1,000, $35 up to 2,500, $60 up to 5,000, $85 up to 7,500, $100 up to 10,000, $150 up to 15,000, $185 up to 20,000, $210 up to 25,000, $275 up to 35,000, $375 up to 50,000, $500 up to 75,000, $600 up to 100,000, $920 up to 150,000 subscribers; billed annually, per month: $12.50, $20.83, $29.17, $50.00, $70.83, $83.33, $125.00, $154.17, $175.00, $229.17, $312.50, $416.67, $500.00, $766.67. Plus billed monthly: $30, $45, $55, $90, $120, $135, $180, $215, $250, $350, $400, $600, $750, $1,050; billed annually, per month: $20.00, $37.50, $45.83, $75.00, $100.00, $112.50, $150.00, $179.17, $208.33, $291.67, $333.33, $500.00, $625.00, $875.00."
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "ladder",
+     "beyond": "unknown",
+     "rungs": [
+      {
+       "units": 500,
+       "monthly": 30,
+       "annual_month": 20.0
+      },
+      {
+       "units": 1000,
+       "monthly": 45,
+       "annual_month": 37.5
+      },
+      {
+       "units": 2500,
+       "monthly": 55,
+       "annual_month": 45.83
+      },
+      {
+       "units": 5000,
+       "monthly": 90,
+       "annual_month": 75.0
+      },
+      {
+       "units": 7500,
+       "monthly": 120,
+       "annual_month": 100.0
+      },
+      {
+       "units": 10000,
+       "monthly": 135,
+       "annual_month": 112.5
+      },
+      {
+       "units": 15000,
+       "monthly": 180,
+       "annual_month": 150.0
+      },
+      {
+       "units": 20000,
+       "monthly": 215,
+       "annual_month": 179.17
+      },
+      {
+       "units": 25000,
+       "monthly": 250,
+       "annual_month": 208.33
+      },
+      {
+       "units": 35000,
+       "monthly": 350,
+       "annual_month": 291.67
+      },
+      {
+       "units": 50000,
+       "monthly": 400,
+       "annual_month": 333.33
+      },
+      {
+       "units": 75000,
+       "monthly": 600,
+       "annual_month": 500.0
+      },
+      {
+       "units": 100000,
+       "monthly": 750,
+       "annual_month": 625.0
+      },
+      {
+       "units": 150000,
+       "monthly": 1050,
+       "annual_month": 875.0
+      }
+     ],
+     "evidence": "Read again on 9 October 2026: the pricing page shows Lite and Plus, plus 'Done For You' (Plus with a setup fee shown as $599 struck to $79), with a Monthly/Annually switch and a subscriber slider. Lite billed monthly: $15 up to 500, $25 up to 1,000, $35 up to 2,500, $60 up to 5,000, $85 up to 7,500, $100 up to 10,000, $150 up to 15,000, $185 up to 20,000, $210 up to 25,000, $275 up to 35,000, $375 up to 50,000, $500 up to 75,000, $600 up to 100,000, $920 up to 150,000 subscribers; billed annually, per month: $12.50, $20.83, $29.17, $50.00, $70.83, $83.33, $125.00, $154.17, $175.00, $229.17, $312.50, $416.67, $500.00, $766.67. Plus billed monthly: $30, $45, $55, $90, $120, $135, $180, $215, $250, $350, $400, $600, $750, $1,050; billed annually, per month: $20.00, $37.50, $45.83, $75.00, $100.00, $112.50, $150.00, $179.17, $208.33, $291.67, $333.33, $500.00, $625.00, $875.00."
+    }
+   ],
+   "notes": [
+    "'Done For You' is Plus with a one-off setup fee; not modelled.",
+    "Entry rung re-read 19 November 2026: Lite $12.49 and Plus $19.99 a month billed annually at 500 subscribers, unchanged; the higher rungs are from the 9 October 2026 reading."
+   ],
+   "rules_verified_at": "2026-11-19"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "aweber",
+    "currency": "USD",
+    "axis": "contacts",
+    "unit": "subscriber",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 12.5,
+       "plus": 20.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 12.5,
+       "plus": 20.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 12.5,
+       "plus": 20.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 12.5,
+       "plus": 20.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 12.5,
+       "plus": 20.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 12.5,
+       "plus": 20.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 12.5,
+       "plus": 20.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 12.5,
+       "plus": 20.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 12.5,
+       "plus": 20.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 12.5,
+       "plus": 20.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "get started for free",
+      "claim_source": "https://www.aweber.com/free.htm",
+      "claim_read_on": "2026-10-29",
+      "observed": "Free is available without a card; extra-user invitation is locked. The Lite paid trial separately requires a card.",
+      "observed_on": "2026-10-29",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/aweber-review/#claim-vs-measured"
+      },
+      "plan": "Free",
+      "comparability": "Compared on AWeber Free as we used it; the paid Lite trial is a separate route with its own card step.",
+      "status": "confirmed",
+      "buying_consequence": "Free access does not include additional users or the same terms as the paid trial.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/aweber-review/"
+     },
+     {
+      "claim": "$15/month",
+      "claim_source": "https://www.aweber.com/",
+      "claim_read_on": "2026-10-29",
+      "observed": "Lite monthly price $15 converts at the displayed 0.9317 EUR per USD to €13.98. Stripe shows 14 free days, €0 today and €13.98 monthly from 12 November 2026; card required and tax zero before address.",
+      "observed_on": "2026-10-29",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/aweber-review/#claim-vs-measured"
+      },
+      "plan": "Free",
+      "comparability": "Lite, billed monthly, 0-500 subscribers; the checkout converted USD to EUR and showed tax before an address was entered.",
+      "status": "confirmed",
+      "buying_consequence": "Displayed conversion matches; paid trial requires a card and final tax depends on billing details.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/aweber-review/"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "aweber",
+    "currency": "USD",
+    "axis": "contacts",
+    "unit": "subscriber",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 15.0,
+       "plus": 30.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 15.0,
+       "plus": 30.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 15.0,
+       "plus": 30.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 15.0,
+       "plus": 30.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 15.0,
+       "plus": 30.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 15.0,
+       "plus": 30.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 15.0,
+       "plus": 30.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 15.0,
+       "plus": 30.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 15.0,
+       "plus": 30.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "lite": 15.0,
+       "plus": 30.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "get started for free",
+      "claim_source": "https://www.aweber.com/free.htm",
+      "claim_read_on": "2026-10-29",
+      "observed": "Free is available without a card; extra-user invitation is locked. The Lite paid trial separately requires a card.",
+      "observed_on": "2026-10-29",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/aweber-review/#claim-vs-measured"
+      },
+      "plan": "Free",
+      "comparability": "Compared on AWeber Free as we used it; the paid Lite trial is a separate route with its own card step.",
+      "status": "confirmed",
+      "buying_consequence": "Free access does not include additional users or the same terms as the paid trial.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/aweber-review/"
+     },
+     {
+      "claim": "$15/month",
+      "claim_source": "https://www.aweber.com/",
+      "claim_read_on": "2026-10-29",
+      "observed": "Lite monthly price $15 converts at the displayed 0.9317 EUR per USD to €13.98. Stripe shows 14 free days, €0 today and €13.98 monthly from 12 November 2026; card required and tax zero before address.",
+      "observed_on": "2026-10-29",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/aweber-review/#claim-vs-measured"
+      },
+      "plan": "Free",
+      "comparability": "Lite, billed monthly, 0-500 subscribers; the checkout converted USD to EUR and showed tax before an address was entered.",
+      "status": "confirmed",
+      "buying_consequence": "Displayed conversion matches; paid trial requires a card and final tax depends on billing details.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/aweber-review/"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Data export tested on 2026-10-29; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -486,12 +1086,6 @@
    "question_id": "aweber:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "aweber:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

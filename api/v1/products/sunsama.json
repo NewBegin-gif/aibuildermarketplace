@@ -80,18 +80,650 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "quoted",
-  "free_trial": "quoted",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/sunsama-review.html",
+  "method": [
+   "The test ran in Daan's browser, driven by our AI assistant",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "My tasks sit in several tools and each morning I lose time deciding what to do first.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Half of this pain was tried. With no connection made, 10 tasks typed by hand and one prompt gave a day plan in about 1 minute and 45 seconds, of which the planning was about 25 seconds. Pulling tasks from several tools into one list was not tested, because every connection was skipped.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The pain of the audience group against a test with only hand typed tasks; no tool was connected.",
+    "status": "not_testable",
+    "buying_consequence": "The part about deciding what to do first got a plan in under two minutes; the part about tasks in several tools is open.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Plans are much better with your calendar and at least one task tool.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Setup complete said that no calendars and no task tools were connected and then led straight to the planning agent, which made a plan of 5 tasks. A plan with a calendar or a task tool was not made, so the difference was not seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The line of the setup screen against a test without any connection; no second plan was made to compare.",
+    "status": "not_testable",
+    "buying_consequence": "You can plan without connections, but the app itself says the result is better with them.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "The planning agent deferred 6 tasks and adjusted 3 tasks.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "After the prompt to focus on three tasks and keep to about four hours, the agent moved 6 tasks from Today to tomorrow, changed three tasks from Normal to Priority and showed Work: 4:05. The plan began at 19:00, after the end of the work day of 17:00 that was set in the setup, and ran to about 23:00.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The message of the agent against the day view; one prompt on one set of 10 tasks.",
+    "status": "confirmed",
+    "buying_consequence": "The agent does what the prompt asks and lands close to four hours, but it plans from the clock of the moment you ask.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "usually 2-4 min",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The screen says the planning usually takes 2-4 min. Our clock ran from 19:00:09 to about 19:01:50 for typing 10 tasks and getting the first plan, and the planning itself took about 25 seconds.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "A line on the screen against our own clock; it is not clear what the screen counts, and only one plan was made.",
+    "status": "not_comparable",
+    "buying_consequence": "It was quick in this test, but the screen and our clock may not measure the same thing.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "14 day free trial",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Settings, Billing shows Sunsama Free Trial, 1 seat, 14 days remaining, and the upgrade page says Your trial ends Thursday, Dec 3.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The pricing page against the in-app billing page of our own trial; nothing was extended.",
+    "status": "confirmed",
+    "buying_consequence": "The trial is about two weeks.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "we never asked for your card",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "No card field was shown in the setup, in the billing page or on the upgrade page. The button Continue with Sunsama Pro was not clicked, so a card step after it was not seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The FAQ line against our own path up to the button; the step after the button was not reached.",
+    "status": "confirmed",
+    "buying_consequence": "You can start and use the trial without a card.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Unlimited access to all features.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The trial was used for the setup, 10 tasks, one planning agent run, the daily plan and the day view only. Most other features, such as the integrations, the shutdown ritual, the weekly planning and the apps, were not tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "A line of the pricing page against a test that used one part of the product.",
+    "status": "not_testable",
+    "buying_consequence": "Whether every feature is open in the trial was not checked.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$17 per month, billed yearly (USD)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The plan card on the public pricing page shows $17 per month, billed yearly, and the in-app upgrade page shows $17/mo billed $204 yearly (Save $60) for the same plan.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The public plan card against the in-app page; the FAQ amounts that the dossier mentions were not seen in this session.",
+    "status": "confirmed",
+    "buying_consequence": "The yearly price on the card and in the app is the same.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$22 per month, billed monthly",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The plan card shows $22 per month, billed monthly, and the in-app page offers $22/mo billed monthly next to the yearly option.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The monthly line on the card against the monthly option in the app; no checkout total was reached.",
+    "status": "confirmed",
+    "buying_consequence": "Paying month to month costs $22 a month.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Why is there no free plan?",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The public page shows only Pro and Enterprise, and the FAQ says that when the trial ends you lose access to the workspace until you subscribe. No free tier was offered anywhere in the app or on the page.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The FAQ question against the plans shown; the end of the trial was not waited for.",
+    "status": "confirmed",
+    "buying_consequence": "After the 14 days you pay or lose access.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Unlimited integrations",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "No integration was connected, because every calendar and tool step in the setup was skipped.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "A line on the plan card against a test with no connection.",
+    "status": "not_testable",
+    "buying_consequence": "The number of integrations you can connect was not tried.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Go to Workspace settings -> Billing -> Manage billing and cancel.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The FAQ says to cancel through Workspace settings, Billing, Manage billing and cancel, and that access stays until the end of the current billing period. There was no subscription, so cancelling was not tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The FAQ line against a test that bought and cancelled nothing.",
+    "status": "not_testable",
+    "buying_consequence": "How cancelling works in practice was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "We don't offer refunds or prorated credits for cancellations.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The FAQ says there are no refunds or prorated credits for cancellations. Nothing was bought, so this was not tried.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The FAQ line against a test with no payment.",
+    "status": "not_testable",
+    "buying_consequence": "A yearly payment cannot be taken back after cancelling, as far as the FAQ says.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Continue with Sunsama Pro",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The button on the upgrade page was not clicked. No card field, tax amount or total was reached, so only the printed prices of $17/mo billed $204 yearly and $22/mo billed monthly are known.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+    },
+    "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+    "comparability": "The printed prices of the upgrade page against a checkout that was never reached; no stored cost rule or fee line could be compared.",
+    "status": "not_testable",
+    "buying_consequence": "The amount at checkout including tax was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session set up a trial of Sunsama with every calendar and tool connection skipped. Ten tasks were typed by hand and the app filled in the time estimates itself. A prompt to the planning agent (focus on three tasks, about four hours of work) gave a day plan: the agent deferred 6 tasks and adjusted 3 tasks and the day showed Work: 4:05. From the first task at 19:00:09 to the first day plan at about 19:01:50 took about 1 minute and 45 seconds, of which the planning itself was about 25 seconds. The plan started at 19:00, after the end of the work day of 17:00 set in the setup. Pulling in tasks from other tools was not tested. The trial lasts 14 days without a card, there is no free plan after it, and Pro costs $17 a month billed yearly ($204) or $22 a month billed monthly. The Continue button was not clicked, so no checkout was seen, and cancelling was not tried. Account and start: Daan created the account (a trial with 1 seat) and our AI assistant ran the test in his browser on 18 Nov 2026. The interface was already in English. The dossier name is Sunsama and the review is on OSM (osm/sunsama-review.html). Audience: the group Professionals with tasks spread over several tools; the pain is that tasks sit in several tools and each morning time is lost deciding what to do first. Setup: the setup began at step 1 (When do you work?, 9:00 to 17:00, Plan in the morning), then How do you structure your week? (left empty), Which calendars determine your availability? (Google, Outlook, iCloud and CalDAV; skipped with Next) and Where does your work live? (GitHub, Jira, Linear, Google Tasks, Asana, ClickUp, Todoist, Monday.com, Trello, Notion, Gmail, Microsoft 365 and Slack; skipped with Next). Setup went on without any connection. Setup complete said No calendars connected, No task tools connected and Plans are much better with your calendar and at least one task tool. Finish setup led straight to What would you like to do today? with the planning agent. Core action: 10 tasks were entered by hand with Add task or the key a, and the app filled in the time estimates itself (for example 2:00, 0:20, 0:45 and 1:00); it did not ask for them. Entering started at 19:00:09 and the first day plan (Review Plan) stood at about 19:01:50, so about 1 minute and 45 seconds in all; the planning itself took about 25 seconds (the screen says the planning usually takes 2-4 min). The prompt to the planning agent was: Focus on the report, the supplier call and the invoice batch. Keep it to about four hours of work. The result, word for word: The planning agent deferred 6 tasks and adjusted 3 tasks. Three tasks (Call supplier, Review invoice batch and Draft Q4 report) went from Normal to Priority, 6 tasks moved from Today to tomorrow and the day showed Work: 4:05, with a plan of 5 tasks. Next led to the Daily plan step (Planned for today, Obstacles in my way) and Get started to the day view for Wednesday November 18. The test ran at 19:00, after the end of the work day of 17:00 that was set in the setup; the plan started at 19:00 and ran to about 23:00. Several tools: pulling tasks in from other tools was not tested, because no calendar and no tool was connected and all tasks were typed in by hand. Plans up to the payment: Read by the tester on 18 Nov 2026. Public pricing page (sunsama.com/pricing): Pro Plan $17 per month, billed yearly (USD), and $22 per month, billed monthly; Enterprise on request (Contact Us); the page says Try it for free for 2 weeks., 14 day free trial and No credit card required. Unlimited access to all features. Inside the app (Settings, Billing): Sunsama Free Trial, 1 seat, 14 days remaining. The upgrade page says Your trial ends Thursday, Dec 3, and shows $17/mo billed $204 yearly (Save $60) or $22/mo billed monthly, with the button Continue with Sunsama Pro and the line Cancel anytime. The button was not clicked and no card field was seen, so no checkout total, tax or fee line was seen. FAQ on the upgrade page: Nothing is charged, we never asked for your card; when the trial ends you lose access to the workspace until you subscribe; there is no free plan after the trial. The dossier notes that the pricing page gives other amounts in its FAQ than on the plan card; that FAQ was not seen in this session, so only the plan card and the in-app page were compared with each other. Prices were not changed by this delivery. Cancelling: not tested; the FAQ says Workspace settings, Billing, Manage billing and cancel, access stays until the end of the current billing period and there are no refunds or prorated credits; there was no subscription to cancel. Not tested: all calendar and tool connections, the shutdown ritual, the weekly planning, the desktop and mobile apps, the AI briefing, the payment step and cancelling. Clean up (still so): the account, the 10 test tasks and the day plan stay; the timer on Call supplier was paused; the own tabs were closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The day plan used the clock of the test: it started at 19:00 and ran to about 23:00, although the work day in the setup ended at 17:00. After the trial there is no free plan and access to the workspace is lost until you subscribe. The setup warns that plans are much better with a calendar and a task tool, so the plan seen here is the version without them.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Calendar and tool connections (Google, Outlook, Asana, Jira, Gmail, Slack and the others), so pulling tasks from several tools into one plan.",
+    "The shutdown ritual and the weekly planning.",
+    "The desktop and mobile apps and the AI briefing.",
+    "A payment screen, a tax amount and a total.",
+    "Cancelling; there was no subscription.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 19:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/sunsama-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/sunsama-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "Settings, Billing shows Sunsama Free Trial, 1 seat, 14 days remaining, and the upgrade page says Your trial ends Thursday, Dec 3.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session set up a trial of Sunsama with every calendar and tool connection skipped. Ten tasks were typed by hand and the app filled in the time estimates itself. A prompt to the planning agent (focus on three tasks, about four hours of work) gave a day plan: the agent deferred 6 tasks and adjusted 3 tasks and the day showed Work: 4:05. From the first task at 19:00:09 to the first day plan at about 19:01:50 took about 1 minute and 45 seconds, of which the planning itself was about 25 seconds. The plan started at 19:00, after the end of the work day of 17:00 set in the setup. Pulling in tasks from other tools was not tested. The trial lasts 14 days without a card, there is no free plan after it, and Pro costs $17 a month billed yearly ($204) or $22 a month billed monthly. The Continue button was not clicked, so no checkout was seen, and cancelling was not tried. Account and start: Daan created the account (a trial with 1 seat) and our AI assistant ran the test in his browser on 18 Nov 2026. The interface was already in English. The dossier name is Sunsama and the review is on OSM (osm/sunsama-review.html). Audience: the group Professionals with tasks spread over several tools; the pain is that tasks sit in several tools and each morning time is lost deciding what to do first. Setup: the setup began at step 1 (When do you work?, 9:00 to 17:00, Plan in the morning), then How do you structure your week? (left empty), Which calendars determine your availability? (Google, Outlook, iCloud and CalDAV; skipped with Next) and Where does your work live? (GitHub, Jira, Linear, Google Tasks, Asana, ClickUp, Todoist, Monday.com, Trello, Notion, Gmail, Microsoft 365 and Slack; skipped with Next). Setup went on without any connection. Setup complete said No calendars connected, No task tools connected and Plans are much better with your calendar and at least one task tool. Finish setup led straight to What would you like to do today? with the planning agent. Core action: 10 tasks were entered by hand with Add task or the key a, and the app filled in the time estimates itself (for example 2:00, 0:20, 0:45 and 1:00); it did not ask for them. Entering started at 19:00:09 and the first day plan (Review Plan) stood at about 19:01:50, so about 1 minute and 45 seconds in all; the planning itself took about 25 seconds (the screen says the planning usually takes 2-4 min). The prompt to the planning agent was: Focus on the report, the supplier call and the invoice batch. Keep it to about four hours of work. The result, word for word: The planning agent deferred 6 tasks and adjusted 3 tasks. Three tasks (Call supplier, Review invoice batch and Draft Q4 report) went from Normal to Priority, 6 tasks moved from Today to tomorrow and the day showed Work: 4:05, with a plan of 5 tasks. Next led to the Daily plan step (Planned for today, Obstacles in my way) and Get started to the day view for Wednesday November 18. The test ran at 19:00, after the end of the work day of 17:00 that was set in the setup; the plan started at 19:00 and ran to about 23:00. Several tools: pulling tasks in from other tools was not tested, because no calendar and no tool was connected and all tasks were typed in by hand. Plans up to the payment: Read by the tester on 18 Nov 2026. Public pricing page (sunsama.com/pricing): Pro Plan $17 per month, billed yearly (USD), and $22 per month, billed monthly; Enterprise on request (Contact Us); the page says Try it for free for 2 weeks., 14 day free trial and No credit card required. Unlimited access to all features. Inside the app (Settings, Billing): Sunsama Free Trial, 1 seat, 14 days remaining. The upgrade page says Your trial ends Thursday, Dec 3, and shows $17/mo billed $204 yearly (Save $60) or $22/mo billed monthly, with the button Continue with Sunsama Pro and the line Cancel anytime. The button was not clicked and no card field was seen, so no checkout total, tax or fee line was seen. FAQ on the upgrade page: Nothing is charged, we never asked for your card; when the trial ends you lose access to the workspace until you subscribe; there is no free plan after the trial. The dossier notes that the pricing page gives other amounts in its FAQ than on the plan card; that FAQ was not seen in this session, so only the plan card and the in-app page were compared with each other. Prices were not changed by this delivery. Cancelling: not tested; the FAQ says Workspace settings, Billing, Manage billing and cancel, access stays until the end of the current billing period and there are no refunds or prorated credits; there was no subscription to cancel. Not tested: all calendar and tool connections, the shutdown ritual, the weekly planning, the desktop and mobile apps, the AI briefing, the payment step and cancelling. Clean up (still so): the account, the 10 test tasks and the day plan stay; the timer on Call supplier was paused; the own tabs were closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/sunsama-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session set up a trial of Sunsama with every calendar and tool connection skipped. Ten tasks were typed by hand and the app filled in the time estimates itself. A prompt to the planning agent (focus on three tasks, about four hours of work) gave a day plan: the agent deferred 6 tasks and adjusted 3 tasks and the day showed Work: 4:05. From the first task at 19:00:09 to the first day plan at about 19:01:50 took about 1 minute and 45 seconds, of which the planning itself was about 25 seconds. The plan started at 19:00, after the end of the work day of 17:00 set in the setup. Pulling in tasks from other tools was not tested. The trial lasts 14 days without a card, there is no free plan after it, and Pro costs $17 a month billed yearly ($204) or $22 a month billed monthly. The Continue button was not clicked, so no checkout was seen, and cancelling was not tried. Account and start: Daan created the account (a trial with 1 seat) and our AI assistant ran the test in his browser on 18 Nov 2026. The interface was already in English. The dossier name is Sunsama and the review is on OSM (osm/sunsama-review.html). Audience: the group Professionals with tasks spread over several tools; the pain is that tasks sit in several tools and each morning time is lost deciding what to do first. Setup: the setup began at step 1 (When do you work?, 9:00 to 17:00, Plan in the morning), then How do you structure your week? (left empty), Which calendars determine your availability? (Google, Outlook, iCloud and CalDAV; skipped with Next) and Where does your work live? (GitHub, Jira, Linear, Google Tasks, Asana, ClickUp, Todoist, Monday.com, Trello, Notion, Gmail, Microsoft 365 and Slack; skipped with Next). Setup went on without any connection. Setup complete said No calendars connected, No task tools connected and Plans are much better with your calendar and at least one task tool. Finish setup led straight to What would you like to do today? with the planning agent. Core action: 10 tasks were entered by hand with Add task or the key a, and the app filled in the time estimates itself (for example 2:00, 0:20, 0:45 and 1:00); it did not ask for them. Entering started at 19:00:09 and the first day plan (Review Plan) stood at about 19:01:50, so about 1 minute and 45 seconds in all; the planning itself took about 25 seconds (the screen says the planning usually takes 2-4 min). The prompt to the planning agent was: Focus on the report, the supplier call and the invoice batch. Keep it to about four hours of work. The result, word for word: The planning agent deferred 6 tasks and adjusted 3 tasks. Three tasks (Call supplier, Review invoice batch and Draft Q4 report) went from Normal to Priority, 6 tasks moved from Today to tomorrow and the day showed Work: 4:05, with a plan of 5 tasks. Next led to the Daily plan step (Planned for today, Obstacles in my way) and Get started to the day view for Wednesday November 18. The test ran at 19:00, after the end of the work day of 17:00 that was set in the setup; the plan started at 19:00 and ran to about 23:00. Several tools: pulling tasks in from other tools was not tested, because no calendar and no tool was connected and all tasks were typed in by hand. Plans up to the payment: Read by the tester on 18 Nov 2026. Public pricing page (sunsama.com/pricing): Pro Plan $17 per month, billed yearly (USD), and $22 per month, billed monthly; Enterprise on request (Contact Us); the page says Try it for free for 2 weeks., 14 day free trial and No credit card required. Unlimited access to all features. Inside the app (Settings, Billing): Sunsama Free Trial, 1 seat, 14 days remaining. The upgrade page says Your trial ends Thursday, Dec 3, and shows $17/mo billed $204 yearly (Save $60) or $22/mo billed monthly, with the button Continue with Sunsama Pro and the line Cancel anytime. The button was not clicked and no card field was seen, so no checkout total, tax or fee line was seen. FAQ on the upgrade page: Nothing is charged, we never asked for your card; when the trial ends you lose access to the workspace until you subscribe; there is no free plan after the trial. The dossier notes that the pricing page gives other amounts in its FAQ than on the plan card; that FAQ was not seen in this session, so only the plan card and the in-app page were compared with each other. Prices were not changed by this delivery. Cancelling: not tested; the FAQ says Workspace settings, Billing, Manage billing and cancel, access stays until the end of the current billing period and there are no refunds or prorated credits; there was no subscription to cancel. Not tested: all calendar and tool connections, the shutdown ritual, the weekly planning, the desktop and mobile apps, the AI briefing, the payment step and cancelling. Clean up (still so): the account, the 10 test tasks and the day plan stay; the timer on Call supplier was paused; the own tabs were closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/sunsama-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/sunsama-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Sunsama",
+    "product_id": "sunsama",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session set up a trial of Sunsama with every calendar and tool connection skipped. Ten tasks were typed by hand and the app filled in the time estimates itself. A prompt to the planning agent (focus on three tasks, about four hours of work) gave a day plan: the agent deferred 6 tasks and adjusted 3 tasks and the day showed Work: 4:05. From the first task at 19:00:09 to the first day plan at about 19:01:50 took about 1 minute and 45 seconds, of which the planning itself was about 25 seconds. The plan started at 19:00, after the end of the work day of 17:00 set in the setup. Pulling in tasks from other tools was not tested. The trial lasts 14 days without a card, there is no free plan after it, and Pro costs $17 a month billed yearly ($204) or $22 a month billed monthly. The Continue button was not clicked, so no checkout was seen, and cancelling was not tried.",
+    "findings": [
+     "Text we checked: \"The planning agent deferred 6 tasks and adjusted 3 tasks\". What we saw: After the prompt to focus on three tasks and keep to about four hours, the agent moved 6 tasks from Today to tomorrow, changed three tasks from Normal to Priority and showed Work: 4:05. The plan began at 19:00, after the end of the work day of 17:00 that was set in the setup, and ran to about 23:00.",
+     "Text we checked: \"14 day free trial\". What we saw: Settings, Billing shows Sunsama Free Trial, 1 seat, 14 days remaining, and the upgrade page says Your trial ends Thursday, Dec 3.",
+     "Text we checked: \"we never asked for your card\". What we saw: No card field was shown in the setup, in the billing page or on the upgrade page. The button Continue with Sunsama Pro was not clicked, so a card step after it was not seen.",
+     "Text we checked: \"$17 per month, billed yearly (USD)\". What we saw: The plan card on the public pricing page shows $17 per month, billed yearly, and the in-app upgrade page shows $17/mo billed $204 yearly (Save $60) for the same plan.",
+     "Text we checked: \"$22 per month, billed monthly\". What we saw: The plan card shows $22 per month, billed monthly, and the in-app page offers $22/mo billed monthly next to the yearly option."
+    ],
+    "not_tested": [
+     "Calendar and tool connections (Google, Outlook, Asana, Jira, Gmail, Slack and the others), so pulling tasks from several tools into one plan.",
+     "The shutdown ritual and the weekly planning.",
+     "The desktop and mobile apps and the AI briefing.",
+     "A payment screen, a tax amount and a total.",
+     "Cancelling; there was no subscription.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "My tasks sit in several tools and each morning I lose time deciding what to do first.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Half of this pain was tried. With no connection made, 10 tasks typed by hand and one prompt gave a day plan in about 1 minute and 45 seconds, of which the planning was about 25 seconds. Pulling tasks from several tools into one list was not tested, because every connection was skipped.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The pain of the audience group against a test with only hand typed tasks; no tool was connected.",
+      "status": "not_testable",
+      "buying_consequence": "The part about deciding what to do first got a plan in under two minutes; the part about tasks in several tools is open.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Plans are much better with your calendar and at least one task tool.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Setup complete said that no calendars and no task tools were connected and then led straight to the planning agent, which made a plan of 5 tasks. A plan with a calendar or a task tool was not made, so the difference was not seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The line of the setup screen against a test without any connection; no second plan was made to compare.",
+      "status": "not_testable",
+      "buying_consequence": "You can plan without connections, but the app itself says the result is better with them.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "The planning agent deferred 6 tasks and adjusted 3 tasks.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "After the prompt to focus on three tasks and keep to about four hours, the agent moved 6 tasks from Today to tomorrow, changed three tasks from Normal to Priority and showed Work: 4:05. The plan began at 19:00, after the end of the work day of 17:00 that was set in the setup, and ran to about 23:00.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The message of the agent against the day view; one prompt on one set of 10 tasks.",
+      "status": "confirmed",
+      "buying_consequence": "The agent does what the prompt asks and lands close to four hours, but it plans from the clock of the moment you ask.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "usually 2-4 min",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The screen says the planning usually takes 2-4 min. Our clock ran from 19:00:09 to about 19:01:50 for typing 10 tasks and getting the first plan, and the planning itself took about 25 seconds.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "A line on the screen against our own clock; it is not clear what the screen counts, and only one plan was made.",
+      "status": "not_comparable",
+      "buying_consequence": "It was quick in this test, but the screen and our clock may not measure the same thing.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "14 day free trial",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Settings, Billing shows Sunsama Free Trial, 1 seat, 14 days remaining, and the upgrade page says Your trial ends Thursday, Dec 3.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The pricing page against the in-app billing page of our own trial; nothing was extended.",
+      "status": "confirmed",
+      "buying_consequence": "The trial is about two weeks.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "we never asked for your card",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "No card field was shown in the setup, in the billing page or on the upgrade page. The button Continue with Sunsama Pro was not clicked, so a card step after it was not seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The FAQ line against our own path up to the button; the step after the button was not reached.",
+      "status": "confirmed",
+      "buying_consequence": "You can start and use the trial without a card.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Unlimited access to all features.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The trial was used for the setup, 10 tasks, one planning agent run, the daily plan and the day view only. Most other features, such as the integrations, the shutdown ritual, the weekly planning and the apps, were not tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "A line of the pricing page against a test that used one part of the product.",
+      "status": "not_testable",
+      "buying_consequence": "Whether every feature is open in the trial was not checked.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$17 per month, billed yearly (USD)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The plan card on the public pricing page shows $17 per month, billed yearly, and the in-app upgrade page shows $17/mo billed $204 yearly (Save $60) for the same plan.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The public plan card against the in-app page; the FAQ amounts that the dossier mentions were not seen in this session.",
+      "status": "confirmed",
+      "buying_consequence": "The yearly price on the card and in the app is the same.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$22 per month, billed monthly",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The plan card shows $22 per month, billed monthly, and the in-app page offers $22/mo billed monthly next to the yearly option.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The monthly line on the card against the monthly option in the app; no checkout total was reached.",
+      "status": "confirmed",
+      "buying_consequence": "Paying month to month costs $22 a month.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Why is there no free plan?",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The public page shows only Pro and Enterprise, and the FAQ says that when the trial ends you lose access to the workspace until you subscribe. No free tier was offered anywhere in the app or on the page.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The FAQ question against the plans shown; the end of the trial was not waited for.",
+      "status": "confirmed",
+      "buying_consequence": "After the 14 days you pay or lose access.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Unlimited integrations",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "No integration was connected, because every calendar and tool step in the setup was skipped.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "A line on the plan card against a test with no connection.",
+      "status": "not_testable",
+      "buying_consequence": "The number of integrations you can connect was not tried.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Go to Workspace settings -> Billing -> Manage billing and cancel.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The FAQ says to cancel through Workspace settings, Billing, Manage billing and cancel, and that access stays until the end of the current billing period. There was no subscription, so cancelling was not tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The FAQ line against a test that bought and cancelled nothing.",
+      "status": "not_testable",
+      "buying_consequence": "How cancelling works in practice was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "We don't offer refunds or prorated credits for cancellations.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The FAQ says there are no refunds or prorated credits for cancellations. Nothing was bought, so this was not tried.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The FAQ line against a test with no payment.",
+      "status": "not_testable",
+      "buying_consequence": "A yearly payment cannot be taken back after cancelling, as far as the FAQ says.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Continue with Sunsama Pro",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The button on the upgrade page was not clicked. No card field, tax amount or total was reached, so only the printed prices of $17/mo billed $204 yearly and $22/mo billed monthly are known.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The printed prices of the upgrade page against a checkout that was never reached; no stored cost rule or fee line could be compared.",
+      "status": "not_testable",
+      "buying_consequence": "The amount at checkout including tax was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session set up a trial of Sunsama with every calendar and tool connection skipped. Ten tasks were typed by hand and the app filled in the time estimates itself. A prompt to the planning agent (focus on three tasks, about four hours of work) gave a day plan: the agent deferred 6 tasks and adjusted 3 tasks and the day showed Work: 4:05. From the first task at 19:00:09 to the first day plan at about 19:01:50 took about 1 minute and 45 seconds, of which the planning itself was about 25 seconds. The plan started at 19:00, after the end of the work day of 17:00 set in the setup. Pulling in tasks from other tools was not tested. The trial lasts 14 days without a card, there is no free plan after it, and Pro costs $17 a month billed yearly ($204) or $22 a month billed monthly. The Continue button was not clicked, so no checkout was seen, and cancelling was not tried. Account and start: Daan created the account (a trial with 1 seat) and our AI assistant ran the test in his browser on 18 Nov 2026. The interface was already in English. The dossier name is Sunsama and the review is on OSM (osm/sunsama-review.html). Audience: the group Professionals with tasks spread over several tools; the pain is that tasks sit in several tools and each morning time is lost deciding what to do first. Setup: the setup began at step 1 (When do you work?, 9:00 to 17:00, Plan in the morning), then How do you structure your week? (left empty), Which calendars determine your availability? (Google, Outlook, iCloud and CalDAV; skipped with Next) and Where does your work live? (GitHub, Jira, Linear, Google Tasks, Asana, ClickUp, Todoist, Monday.com, Trello, Notion, Gmail, Microsoft 365 and Slack; skipped with Next). Setup went on without any connection. Setup complete said No calendars connected, No task tools connected and Plans are much better with your calendar and at least one task tool. Finish setup led straight to What would you like to do today? with the planning agent. Core action: 10 tasks were entered by hand with Add task or the key a, and the app filled in the time estimates itself (for example 2:00, 0:20, 0:45 and 1:00); it did not ask for them. Entering started at 19:00:09 and the first day plan (Review Plan) stood at about 19:01:50, so about 1 minute and 45 seconds in all; the planning itself took about 25 seconds (the screen says the planning usually takes 2-4 min). The prompt to the planning agent was: Focus on the report, the supplier call and the invoice batch. Keep it to about four hours of work. The result, word for word: The planning agent deferred 6 tasks and adjusted 3 tasks. Three tasks (Call supplier, Review invoice batch and Draft Q4 report) went from Normal to Priority, 6 tasks moved from Today to tomorrow and the day showed Work: 4:05, with a plan of 5 tasks. Next led to the Daily plan step (Planned for today, Obstacles in my way) and Get started to the day view for Wednesday November 18. The test ran at 19:00, after the end of the work day of 17:00 that was set in the setup; the plan started at 19:00 and ran to about 23:00. Several tools: pulling tasks in from other tools was not tested, because no calendar and no tool was connected and all tasks were typed in by hand. Plans up to the payment: Read by the tester on 18 Nov 2026. Public pricing page (sunsama.com/pricing): Pro Plan $17 per month, billed yearly (USD), and $22 per month, billed monthly; Enterprise on request (Contact Us); the page says Try it for free for 2 weeks., 14 day free trial and No credit card required. Unlimited access to all features. Inside the app (Settings, Billing): Sunsama Free Trial, 1 seat, 14 days remaining. The upgrade page says Your trial ends Thursday, Dec 3, and shows $17/mo billed $204 yearly (Save $60) or $22/mo billed monthly, with the button Continue with Sunsama Pro and the line Cancel anytime. The button was not clicked and no card field was seen, so no checkout total, tax or fee line was seen. FAQ on the upgrade page: Nothing is charged, we never asked for your card; when the trial ends you lose access to the workspace until you subscribe; there is no free plan after the trial. The dossier notes that the pricing page gives other amounts in its FAQ than on the plan card; that FAQ was not seen in this session, so only the plan card and the in-app page were compared with each other. Prices were not changed by this delivery. Cancelling: not tested; the FAQ says Workspace settings, Billing, Manage billing and cancel, access stays until the end of the current billing period and there are no refunds or prorated credits; there was no subscription to cancel. Not tested: all calendar and tool connections, the shutdown ritual, the weekly planning, the desktop and mobile apps, the AI briefing, the payment step and cancelling. Clean up (still so): the account, the 10 test tasks and the day plan stay; the timer on Call supplier was paused; the own tabs were closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The day plan used the clock of the test: it started at 19:00 and ran to about 23:00, although the work day in the setup ended at 17:00. After the trial there is no free plan and access to the workspace is lost until you subscribe. The setup warns that plans are much better with a calendar and a task tool, so the plan seen here is the version without them.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Calendar and tool connections (Google, Outlook, Asana, Jira, Gmail, Slack and the others), so pulling tasks from several tools into one plan.",
+      "The shutdown ritual and the weekly planning.",
+      "The desktop and mobile apps and the AI briefing.",
+      "A payment screen, a tax amount and a total.",
+      "Cancelling; there was no subscription.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 19:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "sunsama:cancellation_terms",

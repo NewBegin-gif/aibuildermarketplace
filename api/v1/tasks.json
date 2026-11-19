@@ -3573,6 +3573,132 @@
   },
   {
    "source": "session",
+   "product_name": "HOL Guard",
+   "product_id": "hol-guard",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested the HOL Guard web dashboard in the Pro trial that Daan started. Guard only works after a local install by script, so without a machine every screen stayed empty. A plain-language policy rule was turned into a draft block rule at once. Cancelling the renewal took two clicks with no offer.",
+   "findings": [
+    "Text we checked: \"Pro \"$15 / mo\"\". What we saw: The plan page shows Pro at $15 / mo as the current plan in the trial, which matches the dossier price for Pro.",
+    "Text we checked: \"Run this on the machine you want to protect. It shows up here after its first sync\". What we saw: Every core screen (machines, Evidence, Review, AI Firewall) stays empty until Guard is installed on a machine by curl script or PowerShell and connected with hol-guard connect.",
+    "Text we checked: \"Renewal canceled. Ends 22 nov 2026\". What we saw: Cancel renewal and Confirm cancellation ended the renewal in two clicks, without a reason form, offer or password; Pro stays until the trial ends."
+   ],
+   "not_tested": [
+    "Installing Guard on a machine and hol-guard connect.",
+    "Real blocks, Evidence records and the AI Firewall for npm and pip.",
+    "Reviewing paused actions.",
+    "Team workspaces and members.",
+    "Publishing the policy.",
+    "The risk check report: Get my report failed.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Pro \"$15 / mo\"",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The plan page shows Pro at $15 / mo as the current plan in the trial, which matches the dossier price for Pro.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/hol-guard-review/#claim-vs-measured"
+     },
+     "plan": "HOL Guard Pro trial until 22 November 2026, $15 a month after the trial",
+     "comparability": "The plan page against the dossier price list.",
+     "status": "confirmed",
+     "buying_consequence": "After the trial Pro costs $15 a month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Run this on the machine you want to protect. It shows up here after its first sync.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Every core screen (machines, Evidence, Review, AI Firewall) stays empty until Guard is installed on a machine by curl script or PowerShell and connected with hol-guard connect.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/hol-guard-review/#claim-vs-measured"
+     },
+     "plan": "HOL Guard Pro trial until 22 November 2026, $15 a month after the trial",
+     "comparability": "The dashboard in the session; nothing was installed by agreement.",
+     "status": "confirmed",
+     "buying_consequence": "You cannot judge Guard in the browser alone; plan a test machine.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Renewal canceled. Ends 22 nov 2026.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Cancel renewal and Confirm cancellation ended the renewal in two clicks, without a reason form, offer or password; Pro stays until the trial ends.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/hol-guard-review/#claim-vs-measured"
+     },
+     "plan": "HOL Guard Pro trial until 22 November 2026, $15 a month after the trial",
+     "comparability": "The cancellation in the session; the dossier names no cancel route.",
+     "status": "confirmed",
+     "buying_consequence": "You can cancel on day one and keep the trial.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Trial ends Nov 22",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The billing page shows the trial end and Pro at $15 / mo, but no card number and no separate charge date. The trial was started by Daan before the session and no checkout was seen, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/hol-guard-review/#claim-vs-measured"
+     },
+     "plan": "HOL Guard Pro trial until 22 November 2026, $15 a month after the trial",
+     "comparability": "The billing page against the dossier; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Nothing is charged during the trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested the HOL Guard web dashboard in the Pro trial that Daan started. Guard only works after a local install by script, so without a machine every screen stayed empty. A plain-language policy rule was turned into a draft block rule at once. Cancelling the renewal took two clicks with no offer. Account and start: Daan created the account and started the trial; the workspace runs a Pro trial, Billed monthly, Trial ends Nov 22, Pro $15 / mo. Our AI assistant ran the test in Daan's browser on 19 November 2026 from about 16:05 to 16:35 CET. The interface was in English; only one date followed the browser locale and is covered in the screenshots. A hard limit for this test: nothing was installed on the laptop, so only the web account and dashboard were tested. Usage at the start: PROTECTED DEVICES 0 / 5, AUTOMATION CREDITS 500 / 2,500 Running low, PROTECTED ACTIONS 0 No blocks. Invoices: No invoices. Settings show Data retention 180 days and Machine limit Up to 5 machines. Core action, the web parts: Home said Nothing needs you and pointed to Install Guard on your first machine. Add a machine shows a curl install script for macOS and Linux and a PowerShell command for Windows, then hol-guard connect; without a machine the dashboard, Evidence, Review and AI Firewall stay empty. Policy: Describe a rule lets you write a rule in plain words. The example Block the left-pad npm package for 30 days was sent at once and gave 1 rule to check: Block left-pad in every AI tool, until 2026-12-19, with the warning This blocks every version of left-pad, since rules match package names, not versions. After Add 1 rule the policy read Draft, saved, Not published. It was not published. Ask Guard answered the question what Guard checks before an AI coding agent runs a command: the tool, the exact command, package requests and publisher, file reads, MCP servers, new network domains and changed artifacts, each ending as allow, warn, review or block with a receipt. It said the draft policy had zero rules while it already had 1, so the assistant ran behind. The free risk check, which needs no install, asked 3 of its 7 questions and then offered a report by e-mail; Get my report failed twice with Something went wrong. Please try again. Accounts your AI can use: Accounts are not available on this Guard Cloud yet. Checkout: the trial was started by Daan before the session and no checkout was seen. The web interface shows no card number and no separate charge date, only the period end. Cancelling, done the same day: Billing, Subscriptions, Cancel renewal next to Guard Cloud Pro. One inline step: This stops the next renewal. Your current term ends 22 nov 2026, with Confirm cancellation and Keep subscription. No reason form, no retention offer and no password. After a reload: Renewal canceled. Ends 22 nov 2026. Pro stays usable until the trial ends. Not tested: anything that needs a machine (installing Guard, hol-guard connect, real blocks, Evidence records, the AI Firewall for npm and pip, reviewing paused actions), team workspaces, publishing the policy and the risk check report. Clean up: one saved draft policy with 1 rule (not published) and one Ask Guard chat stay; the renewal is cancelled. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Without a local install nothing can be tested beyond the policy draft and Ask Guard. Ask Guard described the draft as having zero rules after a rule had been added. The free risk check failed at Get my report.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling takes two clicks in the web dashboard: Cancel renewal, then Confirm cancellation, with no reason, offer or password. Pro stays active until the trial ends."
+    },
+    "not_tested": [
+     "Installing Guard on a machine and hol-guard connect.",
+     "Real blocks, Evidence records and the AI Firewall for npm and pip.",
+     "Reviewing paused actions.",
+     "Team workspaces and members.",
+     "Publishing the policy.",
+     "The risk check report: Get my report failed.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 16:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Gymcatch",
    "product_id": "gymcatch",
    "run_date": "19 November 2026",
@@ -8890,6 +9016,130 @@
   },
   {
    "source": "session",
+   "product_name": "Tradelle",
+   "product_id": "tradelle",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Tradelle in the 7-day trial that Daan started with his card and a $1 trial fee. The trial ran on Starter at $49.99 a month. Product research worked within seconds, but each research tool allows 5 searches in the trial and nothing can be sold without a Shopify store. Cancelling took 4 steps with a 50% offer and ended access at once.",
+   "findings": [
+    "Text we checked: \"Your trial will end on November 26, 2026 and you will be charged $49.99\". What we saw: Subscriptions shows Tradelle Starter Monthly Plan $49.99 / month after a 7-day trial, and the Stripe portal shows a paid Trial Fee of $1; the dossier gives Starter at $49.99 a month and a 7-day trial for $1.",
+    "Text we checked: \"50 Product Imports/mo\". What we saw: The cancel page lists 50 Product Imports/mo for Lite, while the dossier, read from the pricing page, gives Lite 25 product imports a month.",
+    "Text we checked: \"You will immediately lose access to Tradelle Starter\". What we saw: Confirm cancellation ended the subscription at once, during the trial, after a 50% offer and a reason form; no password was asked."
+   ],
+   "not_tested": [
+    "The Shopify connection and Import to Shopify.",
+    "Orders, fulfilment and the separate product and shipping charges.",
+    "An AI store builder: not found in the Starter dashboard.",
+    "The Done-For-You Store and upgrading.",
+    "Connecting Tradelle to an AI app through MCP.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Your trial will end on November 26, 2026 and you will be charged $49.99.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Subscriptions shows Tradelle Starter Monthly Plan $49.99 / month after a 7-day trial, and the Stripe portal shows a paid Trial Fee of $1; the dossier gives Starter at $49.99 a month and a 7-day trial for $1.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tradelle-review.html#claim-vs-measured"
+     },
+     "plan": "Tradelle Starter monthly, 7-day trial with a $1 trial fee, $49.99 a month after the trial",
+     "comparability": "The subscription page and Stripe portal against the dossier price list.",
+     "status": "confirmed",
+     "buying_consequence": "Expect a $1 charge at sign-up and $49.99 after 7 days.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "50 Product Imports/mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The cancel page lists 50 Product Imports/mo for Lite, while the dossier, read from the pricing page, gives Lite 25 product imports a month.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tradelle-review.html#claim-vs-measured"
+     },
+     "plan": "Tradelle Starter monthly, 7-day trial with a $1 trial fee, $49.99 a month after the trial",
+     "comparability": "The in-app plan list against the dossier; the pricing page was not re-read in this session.",
+     "status": "contradicted",
+     "buying_consequence": "The Lite import quota differs between the cancel page and the dossier.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "You will immediately lose access to Tradelle Starter.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Confirm cancellation ended the subscription at once, during the trial, after a 50% offer and a reason form; no password was asked.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tradelle-review.html#claim-vs-measured"
+     },
+     "plan": "Tradelle Starter monthly, 7-day trial with a $1 trial fee, $49.99 a month after the trial",
+     "comparability": "The cancellation in the session; the dossier names no cancel route.",
+     "status": "confirmed",
+     "buying_consequence": "Cancel only when you are done testing: the rest of the trial is lost.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Trial Fee",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The Stripe portal lists the Trial Fee of $1 as paid on 19 November 2026. The trial checkout itself was done by Daan before the session and was not seen, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/tradelle-review.html#claim-vs-measured"
+     },
+     "plan": "Tradelle Starter monthly, 7-day trial with a $1 trial fee, $49.99 a month after the trial",
+     "comparability": "The billing portal against the dossier; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "The $1 is charged at sign-up.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Tradelle in the 7-day trial that Daan started with his card and a $1 trial fee. The trial ran on Starter at $49.99 a month. Product research worked within seconds, but each research tool allows 5 searches in the trial and nothing can be sold without a Shopify store. Cancelling took 4 steps with a 50% offer and ended access at once. Account and start: Daan created the account and started the 7-day trial with his own card; the checkout landed on Starter monthly, not Lite. Our AI assistant ran the test in Daan's browser on 19 November 2026 from 15:58 to 16:03 CET, in its own tab. The interface was in English. The welcome screen said Your trial runs until November 26, 2026, then $49.99 / month. Core action, product research: we chose Research the market and the brand Meller in onboarding. Product Picks shows per product what you pay and the suggested price, for example Pay $3.69, Sell $39.99. A product page listed product cost $3.69 per unit, shipping $6.99 in 4-8 days, selling price $39.99 suggested, gross profit +$29.31 before ads and total cost $10.68 excl. VAT. Save worked: Product saved. Find it under Saved in Product Picks. Import to Shopify was not used. Store Explorer showed Trial Searches Remaining: 5. A search for dog bed gave shops such as Muddy Mat and Casper Sleep in about 3 seconds, after which the banner read 4. Competitor Research, Brand Library and Ad Explorer each showed their own count of 5 trial searches. Current Trends lists trending products. Store: Connected Stores said No store connected yet and only offers a Shopify connection; Your Starter plan includes 3 stores. A draft store without Shopify is not possible. An AI store builder was not found in the Starter dashboard; there is only a banner for a paid Done-For-You Store at $49. Connect AI (MCP) lists ChatGPT, Claude, Gemini and other AI apps, Every plan, Free included; nothing was connected. Plans and trial: Subscriptions shows Tradelle Starter Monthly Plan $49.99 / month and Your trial will end on November 26, 2026 and you will be charged $49.99. The Stripe billing portal, only read, lists a paid Trial Fee of $1 on 19 November 2026. Checkout: the trial checkout was done by Daan before the session and was not seen. Cancelling, done the same day: Subscriptions, Cancel subscription, then 4 steps. Step 1, Features you'll lose if you cancel: Your benefits will expire immediately. Step 2, Get a 50% discount, a one-time offer with a countdown of about 5 minutes: Lite $29.99 to $14.99, Starter $49.99 to $24.99, Pro $79.99 to $39.99; declined. Step 3, Why do you want to cancel? with 9 reasons; Other reasons, Just testing. Step 4, Time to decide: You will immediately lose access to Tradelle Starter. Confirm cancellation showed All stopped for you. Your subscription has ended and will not renew. Automatic collection has been stopped. No password and no support contact. The cancel page lists 50 Product Imports/mo for Lite. Not tested: the Shopify connection, Import to Shopify, orders and fulfilment, upgrading, the Done-For-You Store, connecting the MCP, the supplier catalogue section, Global Bestsellers, Academy and support chat. Clean up: the account, the saved product and one test search stay; the subscription has ended. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Each research tool has its own count of 5 trial searches. A store needs Shopify; there is no draft store. Cancelling ends access at once, so you lose the rest of the trial.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling takes 4 steps in the app with a 50% one-time offer and a reason form, and no password. Confirming ends access at once, also during the trial."
+    },
+    "not_tested": [
+     "The Shopify connection and Import to Shopify.",
+     "Orders, fulfilment and the separate product and shipping charges.",
+     "An AI store builder: not found in the Starter dashboard.",
+     "The Done-For-You Store and upgrading.",
+     "Connecting Tradelle to an AI app through MCP.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 15:58 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "AML Watcher",
    "product_id": "aml-watcher",
    "run_date": "18 November 2026",
@@ -9212,6 +9462,130 @@
      "Whether the trial features stay open after cancelling until 3 December.",
      "Export of a file into a kit, and reimport.",
      "Session and source-reading date: 19 November 2026. Times are CET. The session took place on this day; the exact time was not recorded. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "EazyChat",
+   "product_id": "eazychat",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested EazyChat in the Launch trial, which ran without a card. A chatbot built from a short text answered a return question from that text and said it could not confirm a question outside it. The trial counter shows 500 AI requests. Cancelling took one dialog, but the first Confirm click gave no feedback.",
+   "findings": [
+    "Text we checked: \"Price per Agent: $29.99\". What we saw: Plan & Billing shows Launch Eazychat at $29.99 per agent, monthly, which matches the dossier price for Launch.",
+    "Text we checked: \"Total: 500 • Used: 3 • Remaining: 497\". What we saw: The trial counter shows 500 AI requests, which matches what EazyChat's team wrote; the pricing page in the dossier does not show this limit.",
+    "Text we checked: \"This will schedule the cancellation at the end of the current billing cycle. You will keep access until the period ends\". What we saw: After typing subscription and a second Confirm click the page said access stays until Dec 4, 2026; no reason form, offer or password."
+   ],
+   "not_tested": [
+    "The widget on a real website.",
+    "WhatsApp, Instagram and Facebook.",
+    "Real visitor chats and handover to a person.",
+    "Team members and routing.",
+    "Adding a payment method, upgrading and invoices.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Price per Agent: $29.99",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Plan & Billing shows Launch Eazychat at $29.99 per agent, monthly, which matches the dossier price for Launch.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/eazychat-review.html#claim-vs-measured"
+     },
+     "plan": "EazyChat Launch trial, $29.99 per agent a month after the trial",
+     "comparability": "The billing page against the dossier price list.",
+     "status": "confirmed",
+     "buying_consequence": "Each extra agent adds $29.99 a month.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total: 500 • Used: 3 • Remaining: 497",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The trial counter shows 500 AI requests, which matches what EazyChat's team wrote; the pricing page in the dossier does not show this limit.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/eazychat-review.html#claim-vs-measured"
+     },
+     "plan": "EazyChat Launch trial, $29.99 per agent a month after the trial",
+     "comparability": "The usage page against the dossier and the vendor email.",
+     "status": "confirmed",
+     "buying_consequence": "The trial can end before 15 days if you use 500 AI requests.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This will schedule the cancellation at the end of the current billing cycle. You will keep access until the period ends.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "After typing subscription and a second Confirm click the page said access stays until Dec 4, 2026; no reason form, offer or password.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/eazychat-review.html#claim-vs-measured"
+     },
+     "plan": "EazyChat Launch trial, $29.99 per agent a month after the trial",
+     "comparability": "The cancellation in the session; the dossier names no cancel route.",
+     "status": "confirmed",
+     "buying_consequence": "You can cancel early and keep the trial.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Total Price: $0.00",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The account ran the trial without a payment method, while the dossier recorded a Stripe checkout for a plan called Basic on 18 November. No checkout screen was seen in this session, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/eazychat-review.html#claim-vs-measured"
+     },
+     "plan": "EazyChat Launch trial, $29.99 per agent a month after the trial",
+     "comparability": "The billing page against the dossier; no checkout was observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Nothing is charged while no card is added.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested EazyChat in the Launch trial, which ran without a card. A chatbot built from a short text answered a return question from that text and said it could not confirm a question outside it. The trial counter shows 500 AI requests. Cancelling took one dialog, but the first Confirm click gave no feedback. Account and start: Daan created the account and was signed in; no card or payment method was added. Our AI assistant ran the test in Daan's browser on 19 November 2026 from about 16:00 to 16:20 CET, in its own tab. The interface was in English. The dashboard banner said Your account is in trial mode. Your trial period ends on December 4, 2026. Add a payment method now to avoid losing access when your trial ends. No Stripe screen came before the app this time; the account was already on Launch Eazychat. Core action, a chatbot from a short text: setup has 6 steps: Site, AI profile, Resources, Analysis, Widget and Test. We entered a test shop with no website and a text resource of 274 characters with a return policy, shipping, opening hours and prices. Analysis took about 15 seconds and showed What the AI understood, including Ceramic vases cost €25; table lamps cost €60. Time to the first answer was about 4 minutes. Test 1, inside the source: Can I return an unopened vase after 10 days? The answer: Yes! Your unopened vase is eligible for a full refund if returned within 14 days of delivery, so 10 days is within the return window. Test 2, outside the source: Do you ship to Norway, and do you sell gift cards? The answer: We only ship within the Netherlands, so we can't ship to Norway. I can't confirm whether we sell gift cards. It then offered to connect a person. It did not invent an answer. The widget code was shown but not placed on a site. Teams stayed empty, Reports showed Total Chats 0 and External APIs had none connected. Plans and trial: Plan & Billing shows Launch Eazychat, Number of Agents: 1, Billing Type: monthly, Price per Agent: $29.99, Renewal Date: 12/4/26, Total Price: $0.00, and no payment method. Adding an agent shows New Total Price: $29.99 from the next cycle. AI usage: Total: 500, Used: 3, Remaining: 497. Checkout: no checkout or payment screen was seen in this session. Cancelling, done the same day: Plan & Billing, Cancel subscription, then the dialog Confirm cancellation: This will schedule the cancellation at the end of the current billing cycle. You will keep access until the period ends. You must type subscription before Confirm turns active. The first Confirm click gave no feedback; the second gave Your subscription was canceled. Your service has been canceled, but you will still have access until: Dec 4, 2026. No reason form, no retention offer and no password. Not tested: the widget on a real site, WhatsApp, Instagram and Facebook, real visitor chats, inviting team members, adding a payment method, upgrading and invoices. Clean up: the account and the test site stay; the subscription is cancelled with access until Dec 4. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The first Confirm click in the cancel dialog gave no feedback. The Teams page stayed empty.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling takes one dialog in which you type subscription, with no reason, offer or password. The first Confirm click gave no feedback, so check that you see the was canceled message."
+    },
+    "not_tested": [
+     "The widget on a real website.",
+     "WhatsApp, Instagram and Facebook.",
+     "Real visitor chats and handover to a person.",
+     "Team members and routing.",
+     "Adding a payment method, upgrading and invoices.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 16:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -39473,21 +39847,123 @@
    "source": "session",
    "product_name": "Beautiful.ai",
    "product_id": "beautiful-ai",
-   "run_date": "2026-09-28",
+   "run_date": "2026-11-19",
    "session_type": "hands_on",
-   "what": "On 28 September 2026 we gave Gamma, Beautiful.ai, Prezi and Canva the same brief for a ten-slide investor deck: eleven facts about a made-up bakery chain and the rule to add no other numbers. We checked every deck against 15 tests written down before the first one was generated. Beautiful.ai offered us only its 14-day Pro trial, which asks for a payment card and bills a year of Pro on day 14; we cancelled it the same morning.",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Beautiful.ai in the 14-day Pro trial that Daan started with his card. The trial runs on annual billing, so the first bill is $174.00. One prompt gave a polished 8-slide deck in about 55 seconds, but with placeholders instead of figures, and a layout switch dropped the chart. Cancelling took 2 screens with no offer.",
    "findings": [
-    "It showed an outline within seconds and a finished deck about two and a half minutes after the prompt, with no numbers of its own.",
-    "The outline had a [MARKET SIZE] placeholder, but the finished market slide dropped it (without inventing a figure) and added Amsterdam as a target city.",
-    "Both charts carry the right data but read oddly: the revenue line's axis labels are rounded to 0 and 1, and use of funds is shown in euros (280,000, 80,000, 40,000) instead of the 70/20/10 we gave.",
-    "There is no AI that changes the deck as a whole: moving the ask to €450,000 meant two text edits and three chart values by hand. PowerPoint export defaults to flat images; the editable option keeps the text editable but turns the charts into pictures. Its public player shows the account's email address."
+    "Text we checked: \"Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026\". What we saw: Billing shows annual billing by default; $174.00 is a year of Pro at the dossier price at $14.50 a month billed annually.",
+    "Text we checked: \"Quarterly Performance Review: [Bakery Name]\". What we saw: One prompt gave a polished 8-slide deck in about 55 seconds, with placeholders instead of figures; switching the chart slide to a list layout dropped the chart and the 68% figure.",
+    "Text we checked: \"Your trial will be canceled immediately\". What we saw: After Cancel plan, Billing said Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026, so access stays until the end of the trial.",
+    "In our head-to-head test of four deck tools on 28 September 2026, Beautiful.ai showed an outline within seconds and a finished deck about two and a half minutes after the prompt, with no numbers of its own."
    ],
-   "not_tested": "One run on one day, on the Pro trial rather than a paid plan. We did not judge design quality.",
+   "not_tested": [
+    "A real export to PowerPoint or PDF and the Offline Player.",
+    "Public sharing and inviting people.",
+    "Editing chart figures.",
+    "The Team plan and PowerPoint import.",
+    "Export of a file into a kit, and reimport."
+   ],
    "report": "/research/one-pitch-deck-four-ai-presentation-tools/",
    "disclosure": null,
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Billing shows annual billing by default; $174.00 is a year of Pro at the dossier price at $14.50 a month billed annually.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+     "comparability": "The billing page against the dossier price list.",
+     "status": "confirmed",
+     "buying_consequence": "Without cancelling, day 14 bills a full year.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Quarterly Performance Review: [Bakery Name]",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "One prompt gave a polished 8-slide deck in about 55 seconds, with placeholders instead of figures; switching the chart slide to a list layout dropped the chart and the 68% figure.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+     "comparability": "The generated deck against the dossier note that the template engine looks polished but constrains layouts.",
+     "status": "confirmed",
+     "buying_consequence": "Fast first drafts; expect to fill in every figure yourself.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your trial will be canceled immediately.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "After Cancel plan, Billing said Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026, so access stays until the end of the trial.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+     "comparability": "The cancel dialog against the billing page after the cancellation.",
+     "status": "contradicted",
+     "buying_consequence": "You keep the trial after cancelling, despite the warning.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Billing Period: Annual",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The trial ran on annual billing. The trial checkout itself was done by Daan before the session and was not seen, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+     },
+     "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+     "comparability": "The billing page against the dossier; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Nothing is charged during the 14-day trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Beautiful.ai in the 14-day Pro trial that Daan started with his card. The trial runs on annual billing, so the first bill is $174.00. One prompt gave a polished 8-slide deck in about 55 seconds, but with placeholders instead of figures, and a layout switch dropped the chart. Cancelling took 2 screens with no offer. Account and start: Daan created the account and started the 14-day Pro trial with his own card; the trial checkout defaults to annual billing. Our AI assistant ran the test in its own tab on 19 November 2026 from 17:46 CET. The account was in Dutch; we set the language to English in the preferences before the first screenshot. Billing at the start: Current Plan: Pro - You have 14 days remaining in your free trial, Billing Period: Annual, Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026, Seats: 1 total. Payment history has one line of $0. Core action, a deck from a prompt: Create with AI, the prompt Quarterly update for a small bakery, a few quick questions with the defaults kept, then an outline of 8 slides and the deck about 30 seconds after Generate presentation: about 55 seconds and 5 steps in all. The deck uses placeholders instead of figures, such as Quarterly Performance Review: [Bakery Name], $[Placeholder] and [X]%, with generated bakery photos and a chart slide. Smart Slides: switching the Revenue Drivers chart slide to a list layout took one click, but the chart and the 68% figure did not carry over; Undo brought them back. A template, Corporate Presentation Template, opened in the editor after about 10 seconds. The Brand Kit screen covers colours, typography, decoration, footer and import from PowerPoint; nothing was changed. Share and export, only viewed: Share Securely offers Password Protection and Viewer Authentication; export offers a view link, Offline Player, PDF, PowerPoint and Google Slides, with the note Exported presentations do not support animations or video at this time. Nothing was shared or downloaded. Plans: Pro $14.50 /mo billed annually, Team $40 /mo with 3 seats included billed annually, Enterprise custom. Checkout: the trial checkout was done by Daan before the session and was not seen; it defaulted to annual billing at $174 a year. Cancelling, done the same day: Billing, Manage plan, Cancel plan. Screen 1, Already working in ChatGPT?, with Continue to cancellation. Screen 2: Are you sure you want to cancel your plan? You will no longer be able to create or edit presentations. Your trial will be canceled immediately. Then Cancel plan. No reason form, no discount offer, no password and no support contact. After a reload Billing showed Your trial has been canceled, Pro - Trial Canceled, and Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026. Not tested: Generate Ideas, the Offline Player, a real export to PowerPoint or PDF, public sharing, editing chart figures, the Team plan and PowerPoint import. Clean up: two presentations stay; the trial is cancelled and the account language is now English. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The trial defaults to annual billing. Switching a chart slide to another layout drops the chart data. The cancel dialog says the trial ends immediately, while Billing keeps access until Dec 03, 2026.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling takes 2 screens in Billing with no reason, offer or password; the first screen points to the ChatGPT app. The dialog says the trial ends immediately, but Billing then shows access until Dec 03, 2026."
+    },
+    "not_tested": [
+     "A real export to PowerPoint or PDF and the Offline Player.",
+     "Public sharing and inviting people.",
+     "Editing chart figures.",
+     "The Team plan and PowerPoint import.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 17:46 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -45633,6 +46109,129 @@
     ],
     "lost": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Kartra",
+   "product_id": "kartra",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Kartra in the Essentials trial that Daan started with his card. Billing shows a 30-day trial and USD 71.39 a month after it, which is the $59 price plus 21 percent VAT. A draft page from a template took about 1 minute 25 seconds, but helpdesks and calendars are locked on Essentials. Cancelling took 3 steps with a 50% offer and stopped the account at once.",
+   "findings": [
+    "Text we checked: \"Transaction fee 5% of sales\". What we saw: The Essentials plan card lists a 5% transaction fee on sales, as the dossier says; the tiers above it list None.",
+    "Text we checked: \"I understand that, by cancelling my trial now, my subscription will be deactivated and no longer renew\". What we saw: After Confirm Billing showed Account inactive the same day, after a 50% offer, a freeze option and two required questions; no password."
+   ],
+   "not_tested": [
+    "Building a form or a checkout.",
+    "Sending real mail and a custom domain.",
+    "A payment processor and publishing a product.",
+    "Webinars and the AI writing help.",
+    "The helpdesk: locked on Essentials.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Next bill Essentials USD 71.39 19 Dec 2026",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Billing shows USD 71.39 a month with Taxes included for a Dutch address; that is the dossier price of $59 plus 21 percent VAT. The other cards show Starter USD 143.99, Growth USD 277.09 and Professional USD 664.29 against $119, $229 and $549 in the dossier.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kartra-review.html#claim-vs-measured"
+     },
+     "plan": "Kartra Essentials, 30-day trial, USD 71.39 a month including VAT after the trial",
+     "comparability": "Prices with VAT against list prices without VAT.",
+     "status": "not_comparable",
+     "buying_consequence": "A Dutch buyer pays USD 71.39 a month on Essentials, VAT included.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Transaction fee 5% of sales",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The Essentials plan card lists a 5% transaction fee on sales, as the dossier says; the tiers above it list None.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kartra-review.html#claim-vs-measured"
+     },
+     "plan": "Kartra Essentials, 30-day trial, USD 71.39 a month including VAT after the trial",
+     "comparability": "The plan card against the dossier price text.",
+     "status": "confirmed",
+     "buying_consequence": "On Essentials you pay 5% of your sales on top of the plan.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "I understand that, by cancelling my trial now, my subscription will be deactivated and no longer renew. My account assets (pages, products, memberships, etc) will stop functioning.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "After Confirm Billing showed Account inactive the same day, after a 50% offer, a freeze option and two required questions; no password.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kartra-review.html#claim-vs-measured"
+     },
+     "plan": "Kartra Essentials, 30-day trial, USD 71.39 a month including VAT after the trial",
+     "comparability": "The cancellation in the session; the dossier names no cancel route.",
+     "status": "confirmed",
+     "buying_consequence": "Cancel only when you are done testing: the account stops at once.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "To pay today USD 0.00",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Daan reported this from the checkout; Billing shows the last bill of USD 0.00 on 19 Nov 2026 and the next on 19 Dec 2026, a 30-day trial where the dossier says 14 days. The checkout itself was not observed here, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/kartra-review.html#claim-vs-measured"
+     },
+     "plan": "Kartra Essentials, 30-day trial, USD 71.39 a month including VAT after the trial",
+     "comparability": "The billing page against the dossier; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Nothing is charged during the trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Kartra in the Essentials trial that Daan started with his card. Billing shows a 30-day trial and USD 71.39 a month after it, which is the $59 price plus 21 percent VAT. A draft page from a template took about 1 minute 25 seconds, but helpdesks and calendars are locked on Essentials. Cancelling took 3 steps with a 50% offer and stopped the account at once. Account and start: Daan created the account and started the Essentials trial with his own card; he also typed the password and secret question himself when the app asked for them. Our AI assistant ran the rest in Daan's browser on 19 November 2026 from 16:37 to 16:43 CET. Setup asked for a business address (A valid physical mailing address is required for emails sent for business purposes by the CAN-SPAM Act.) and a tick box for the Terms of Service and DPA; we entered a company name and a test street. Setting up took about 25 seconds. No phone number and no code were asked. The interface was in English. Core action, the marketing parts: Pages offers 669 results in the template library. A page from a template, named Test Draft Page, opened in the builder after about 6 seconds and is listed as Draft, NOT PUBLISHED YET; from dashboard to draft page took about 1 minute 25 seconds and 6 clicks. Nothing was published. A list was created after a required public description: Your list has been created! A sequence opened in the Sequence builder with blocks for email and SMS, tags, lists, splits and waits; no mail was sent. A product opened in Demo mode with PayPal and Test credit card, and the list says Your product is unpublished, it won't be accessible, and it won't process any sales. No checkout and no form were built. Helpdesks and Calendars are locked on Essentials: To unlock this option, upgrade your plan. Contacts Analytics showed Total contacts 1. Plans and trial: Billing, My payment plans: Last bill Essentials USD 0.00 19 Nov 2026 and Next bill Essentials USD 71.39 19 Dec 2026, so the trial runs 30 days. Meters: contacts 0 of 500, AI uses 0 of 100, emails 0 of 1000. The plan cards say Taxes included: Essentials USD 71.39, Starter USD 143.99, Growth USD 277.09, Professional USD 664.29 a month. The Essentials card lists Transaction fee 5% of sales and 5 published pages. The billing address is in the Netherlands, so 21 percent VAT is added. Checkout: the trial checkout was done by Daan before the session and was not seen; Daan reported To pay today USD 0.00. Cancelling, done the same day: Billing, the red Cancel on the Essentials card. Step 1, Wait! Exclusive Offer.: 50% off the first payment if you stay; declined with No, thank you. Step 2, Cancel account: Freeze my account or Cancel my account; we chose Cancel my account. Step 3: a tick box, I understand that, by cancelling my trial now, my subscription will be deactivated and no longer renew. My account assets (pages, products, memberships, etc) will stop functioning., two required questions and a text box. Then Confirm. After a reload Billing showed Account inactive. No password and no support contact. Not tested: building a form or checkout, webinars, the AI writing help, sending real mail, a custom domain, a payment processor and the helpdesk itself. Clean up: the draft page, the list, the sequence and the demo product stay; the account is inactive. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The app asked for a password and secret question before the first use. The plan cards show prices with tax, so they differ from the pricing page. Cancelling in the trial stops pages and products at once, and the Freeze my account option sits next to Cancel my account.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling takes 3 steps in Billing with a 50% offer, a choice between freezing and cancelling, a tick box and two required questions; no password. Cancelling in the trial deactivates the account at once."
+    },
+    "not_tested": [
+     "Building a form or a checkout.",
+     "Sending real mail and a custom domain.",
+     "A payment processor and publishing a product.",
+     "Webinars and the AI writing help.",
+     "The helpdesk: locked on Essentials.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 16:37 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },

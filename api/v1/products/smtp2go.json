@@ -81,10 +81,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -92,7 +91,577 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-19",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/smtp2go-review.html",
+  "method": [
+   "Our AI assistant ran the test in Daan's browser and our notes record what it showed",
+   "No paid plan was bought and no card was entered"
+  ],
+  "claims": [
+   {
+    "claim": "\"succeeded\":1,\"failed\":0",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The API answered with this after the curl at 08:06:16. The report showed Processed at 8:06:18 AM and Delivered at 8:06:27 AM, 11 seconds after the curl, and the message was in our own mailbox.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "The API answer and the report lines against one test message to our own mailbox; no bulk, no other provider mailbox and no bounce was tried.",
+    "status": "confirmed",
+    "buying_consequence": "A first mail through the API reaches your own mailbox within seconds; other mailboxes were not tried.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "0,00% BOUNCE RATE",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "After one message the dashboard showed a bounce rate of 0,00% and a spam rate of 0,00%, both marked GOOD. No bounce or complaint was caused on purpose.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "Two rates on the dashboard against a sample of one message; no rate can be compared.",
+    "status": "not_testable",
+    "buying_consequence": "The dossier point on delivery quality cannot be judged from one message to our own mailbox.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Your email is now a Verified Sender",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "A single sender address was verified through a link in a confirmation mail, with no DNS and no domain check. The screen said 5 of 5 verified senders remaining on the free plan.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "The setup screens against our own run from the dashboard to Delivered; domain verification was not tried.",
+    "status": "confirmed",
+    "buying_consequence": "You can send from a single address within minutes without touching DNS; a domain still needs DNS later.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "0/1.000 EMAILS SENT THIS BILLING MONTH. RESETS ON DECEMBER 19TH.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The dashboard showed 0/1.000 before and 1/1.000 after the test message, so the monthly limit of the Free plan is 1.000 and counts a sent message at once.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "The monthly counter before and after one message against the 1,000 of the plan; a fuller month was not tried.",
+    "status": "confirmed",
+    "buying_consequence": "The free allowance is easy to see on the dashboard.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Limited to 200 emails/day.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The daily maximum of 200 is on the pricing page only. The dashboard shows the monthly counter and no daily figure, and one message does not reach the limit.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "A pricing page line against a dashboard without a daily figure and a test of one message.",
+    "status": "not_testable",
+    "buying_consequence": "You only learn of the daily cap from the pricing page; what happens at 200 a day was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "*Limited to 14 days for the free plan.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The asterisk sits behind Toll-Free Phone* and Live Chat* in the list of help options on the pricing page, so phone and live chat last 14 days on the free plan; tickets remain. This was read, not tried.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "The footnote against the list it belongs to; no phone call or chat was started.",
+    "status": "not_testable",
+    "buying_consequence": "The 14-day limit applies to phone and chat only, not to the account; it was not tried.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$15.00/mo",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "In the app Starter shows 10.000 emails/month at $15.00/mo (+ $1.20 per thousand extra emails) and 50.000 at $30.00/mo (+ $1.00); the pricing page shows Starter $15/mo for 10,000. The dossier has both steps.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "The plan list in the app and the pricing page against the dossier amounts; tax is not part of the printed amounts.",
+    "status": "confirmed",
+    "buying_consequence": "Starter costs $15 a month for 10.000 emails or $30 for 50.000; the prices did not change since the dossier of 17 Nov 2026.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "1 free dedicated IP address included.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Professional starts at 100.000 emails/month for $75.00/mo (+ $0.85 per thousand) and each Professional step lists 1 free dedicated IP address included. No dedicated IP was set up.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "A plan card line against a Free account; the IP was only read on the card.",
+    "status": "not_testable",
+    "buying_consequence": "The dedicated IP starts at $75 a month; what it takes to set it up was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Annual (save 17%)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The switch Annual (save 17%) is on the plan page. The annual amounts were not opened in the app, so the saving was not worked out.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "A switch label against a page that was only read with monthly billing.",
+    "status": "not_testable",
+    "buying_consequence": "The yearly saving was not checked against an amount.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Our Promise: If you don't love us within 30 days, we'll give you a full refund.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "This promise is on the pricing page. Nothing was paid, so no refund route was used.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "A pricing page promise against a Free account that never paid.",
+    "status": "not_testable",
+    "buying_consequence": "The refund promise exists on the page; how a refund works was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Close your account",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Account, Change Plan has a link at the bottom that opens a survey page We're sad to see you go... with reasons. It was not clicked through and nothing was confirmed; the free plan costs nothing, so no cancelling is needed.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "A link in the app against a Free account; the closing step was not confirmed.",
+    "status": "not_testable",
+    "buying_consequence": "Ending a free account is a survey page away; what closing does to data and a paid plan was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Proceed to Checkout",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "In Change Plan the summary showed Free Plan $0.00/mo and Total $0.00 with a greyed out Proceed to Checkout. It was not used, the card step was not reached, and no tax or total of a paid plan was seen, so the plan prices could not be compared with a checkout.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+    "comparability": "The printed plan prices against a checkout that was never reached; no stored cost rule or fee line could be compared.",
+    "status": "not_testable",
+    "buying_consequence": "The amount at checkout including tax was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-19",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested SMTP2GO on a Free account that Daan created. A Verified Sender was set up by a link in a mail, without DNS; one API key was made and one test mail was sent through the API at 08:06:16. The report showed Processed at 08:06:18 and Delivered at 08:06:27, 11 seconds after the curl, to our own mailbox only. The dashboard showed 1/1.000 emails for the month and no daily maximum; the 200 a day is on the pricing page only. The prices in the app and on the pricing page match our dossier, and the card step sits behind Proceed to Checkout, which was not clicked. Cancelling was not tried: the free plan costs nothing and the link Close your account opens a survey page. Account and start: Daan created and activated the account (EU region), so the sign-up does not count in the times, and our AI assistant ran the test in its own tab of Daan's browser. The dashboard was opened at 08:04 on 19 November 2026; the interface was already in English. The test plan was Free (1.000 emails/month). The dossier name is SMTP2GO and the review is on OSM (osm/smtp2go-review.html). First screen: a banner Before you can send emails, you'll need to add a Verified Sender to your account. and a setup list Almost there! Complete your account setup (25% complete). The dashboard showed 0/1.000 EMAILS SENT THIS BILLING MONTH. RESETS ON DECEMBER 19TH. A daily maximum of 200 is not shown in the dashboard. Core action: (1) Sending, Verified Senders, Single Sender Emails, Add single sender email, with a sender address of ours, no DNS and no domain check; the screen said 5 of 5 verified senders remaining on the free plan. (2) The confirmation mail arrived at 08:04 (subject [SMTP2GO] Please verify your email address for sending); its link opened Your email is now a Verified Sender. (3) Sending, API Keys, Add API Key with the description hands-on test and only the default permission (the dialog says Your API key has only one permission enabled: /email/send); the message Successfully added API Key followed. (4) A curl POST to the send endpoint of the API at 08:06:16, sender and recipient our own mailbox, subject SMTP2GO hands-on test 19 Nov 2026; the answer said \"succeeded\":1,\"failed\":0. (5) Reports, Activity showed Processed at 8:06:18 AM and Delivered at 8:06:27 AM, Email Activity (1 total) after a refresh; the log keeps Last 5 Days. (6) The message was in the inbox of our own mailbox. Time: from the dashboard opening at 08:04 to Delivered at 08:06:27 it took a little over 2 minutes, of which a short minute was waiting for the confirmation mail and reading, and about 12 clicks and entries. From the curl to Delivered: 11 seconds. The dashboard then showed 1/1.000 emails, 0,00% bounce rate and 0,00% spam rate. Plans up to the payment: Read by the tester on 19 Nov 2026 in the app (Account, Change Plan, monthly, in USD, with a switch Annual (save 17%)) and on the public pricing page smtp2go.com/pricing. Free Plan: 1.000 emails/month, 5 days of reporting, extra emails not permitted, Limited to 200 emails/day. Starter: 10.000 emails/month at $15.00/mo (+ $1.20 per thousand extra emails) and 50.000 at $30.00/mo (+ $1.00); the page shows Starter $15/mo for 10,000 emails and 30 days of email reporting. Professional: 100.000 at $75.00/mo (+ $0.85 per thousand extra emails, 1 free dedicated IP address included), then 250.000 at $170.00/mo, 500.000 at $280.00/mo and 1.000.000 at $520.00/mo. These are the amounts of the dossier (re-verified 17 Nov 2026), so the prices did not change; both Starter steps, $15 for 10.000 and $30 for 50.000, are already in the dossier. The footnote *Limited to 14 days for the free plan. sits behind Toll-Free Phone* and Live Chat* in the list of help options, so phone and live chat last 14 days on the free plan and tickets remain. The page promises Our Promise: If you don't love us within 30 days, we'll give you a full refund., and Sign Up Free says No credit card required. Checkout: the card step was not reached. In Change Plan the summary showed Free Plan $0.00/mo and Total $0.00 with Proceed to Checkout; it was not clicked, and the card would come only there. No tax, total or card field was seen. Cancelling: no cancelling is needed because the free plan costs nothing. Account, Change Plan has a link Close your account at the bottom; it opens a survey page We're sad to see you go... with reasons (Missing features I need, Switching to another product, Too expensive, Technical issues). It was not clicked through and nothing was confirmed. Not tested: domain verification and DNS (on purpose), an SMTP connection with a test script (only the API was used), a dedicated IP (only seen on the plan cards), a real bounce or spam complaint (only 0,00% bounce rate and 0,00% spam rate were seen), delivery to Gmail or Outlook (only our own mailbox), a paid plan and the card step. Clean up: the API key hands-on test was deleted with one click (the message Successfully deleted API Key, and the list says You currently don't have any API Keys.); the sender address stays as a Verified Sender (needed, no cost); the account and the one test message stay; our own tab was closed and Daan's other tabs were not touched. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Before you can send anything you need a Verified Sender, and the confirmation mail has to arrive first. The dashboard shows the monthly limit but not the daily maximum of 200, which is only on the pricing page. The footnote of 14 days on the free plan sits behind phone and live chat in a list of help options, which is easy to read as a limit on everything. The full API key is hidden behind a Copy button.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Domain verification and DNS, on purpose.",
+    "An SMTP connection with a test script; only the API was used.",
+    "A dedicated IP, which was only seen on the plan cards.",
+    "A real bounce or spam complaint; only 0,00% bounce rate and 0,00% spam rate were seen.",
+    "Delivery to Gmail or Outlook; only our own mailbox received the mail.",
+    "A paid plan, the card step, tax and a total.",
+    "Closing the account.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 08:04 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/smtp2go-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/smtp2go-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/smtp2go-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested SMTP2GO on a Free account that Daan created. A Verified Sender was set up by a link in a mail, without DNS; one API key was made and one test mail was sent through the API at 08:06:16. The report showed Processed at 08:06:18 and Delivered at 08:06:27, 11 seconds after the curl, to our own mailbox only. The dashboard showed 1/1.000 emails for the month and no daily maximum; the 200 a day is on the pricing page only. The prices in the app and on the pricing page match our dossier, and the card step sits behind Proceed to Checkout, which was not clicked. Cancelling was not tried: the free plan costs nothing and the link Close your account opens a survey page. Account and start: Daan created and activated the account (EU region), so the sign-up does not count in the times, and our AI assistant ran the test in its own tab of Daan's browser. The dashboard was opened at 08:04 on 19 November 2026; the interface was already in English. The test plan was Free (1.000 emails/month). The dossier name is SMTP2GO and the review is on OSM (osm/smtp2go-review.html). First screen: a banner Before you can send emails, you'll need to add a Verified Sender to your account. and a setup list Almost there! Complete your account setup (25% complete). The dashboard showed 0/1.000 EMAILS SENT THIS BILLING MONTH. RESETS ON DECEMBER 19TH. A daily maximum of 200 is not shown in the dashboard. Core action: (1) Sending, Verified Senders, Single Sender Emails, Add single sender email, with a sender address of ours, no DNS and no domain check; the screen said 5 of 5 verified senders remaining on the free plan. (2) The confirmation mail arrived at 08:04 (subject [SMTP2GO] Please verify your email address for sending); its link opened Your email is now a Verified Sender. (3) Sending, API Keys, Add API Key with the description hands-on test and only the default permission (the dialog says Your API key has only one permission enabled: /email/send); the message Successfully added API Key followed. (4) A curl POST to the send endpoint of the API at 08:06:16, sender and recipient our own mailbox, subject SMTP2GO hands-on test 19 Nov 2026; the answer said \"succeeded\":1,\"failed\":0. (5) Reports, Activity showed Processed at 8:06:18 AM and Delivered at 8:06:27 AM, Email Activity (1 total) after a refresh; the log keeps Last 5 Days. (6) The message was in the inbox of our own mailbox. Time: from the dashboard opening at 08:04 to Delivered at 08:06:27 it took a little over 2 minutes, of which a short minute was waiting for the confirmation mail and reading, and about 12 clicks and entries. From the curl to Delivered: 11 seconds. The dashboard then showed 1/1.000 emails, 0,00% bounce rate and 0,00% spam rate. Plans up to the payment: Read by the tester on 19 Nov 2026 in the app (Account, Change Plan, monthly, in USD, with a switch Annual (save 17%)) and on the public pricing page smtp2go.com/pricing. Free Plan: 1.000 emails/month, 5 days of reporting, extra emails not permitted, Limited to 200 emails/day. Starter: 10.000 emails/month at $15.00/mo (+ $1.20 per thousand extra emails) and 50.000 at $30.00/mo (+ $1.00); the page shows Starter $15/mo for 10,000 emails and 30 days of email reporting. Professional: 100.000 at $75.00/mo (+ $0.85 per thousand extra emails, 1 free dedicated IP address included), then 250.000 at $170.00/mo, 500.000 at $280.00/mo and 1.000.000 at $520.00/mo. These are the amounts of the dossier (re-verified 17 Nov 2026), so the prices did not change; both Starter steps, $15 for 10.000 and $30 for 50.000, are already in the dossier. The footnote *Limited to 14 days for the free plan. sits behind Toll-Free Phone* and Live Chat* in the list of help options, so phone and live chat last 14 days on the free plan and tickets remain. The page promises Our Promise: If you don't love us within 30 days, we'll give you a full refund., and Sign Up Free says No credit card required. Checkout: the card step was not reached. In Change Plan the summary showed Free Plan $0.00/mo and Total $0.00 with Proceed to Checkout; it was not clicked, and the card would come only there. No tax, total or card field was seen. Cancelling: no cancelling is needed because the free plan costs nothing. Account, Change Plan has a link Close your account at the bottom; it opens a survey page We're sad to see you go... with reasons (Missing features I need, Switching to another product, Too expensive, Technical issues). It was not clicked through and nothing was confirmed. Not tested: domain verification and DNS (on purpose), an SMTP connection with a test script (only the API was used), a dedicated IP (only seen on the plan cards), a real bounce or spam complaint (only 0,00% bounce rate and 0,00% spam rate were seen), delivery to Gmail or Outlook (only our own mailbox), a paid plan and the card step. Clean up: the API key hands-on test was deleted with one click (the message Successfully deleted API Key, and the list says You currently don't have any API Keys.); the sender address stays as a Verified Sender (needed, no cost); the account and the one test message stay; our own tab was closed and Daan's other tabs were not touched. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/smtp2go-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested SMTP2GO on a Free account that Daan created. A Verified Sender was set up by a link in a mail, without DNS; one API key was made and one test mail was sent through the API at 08:06:16. The report showed Processed at 08:06:18 and Delivered at 08:06:27, 11 seconds after the curl, to our own mailbox only. The dashboard showed 1/1.000 emails for the month and no daily maximum; the 200 a day is on the pricing page only. The prices in the app and on the pricing page match our dossier, and the card step sits behind Proceed to Checkout, which was not clicked. Cancelling was not tried: the free plan costs nothing and the link Close your account opens a survey page. Account and start: Daan created and activated the account (EU region), so the sign-up does not count in the times, and our AI assistant ran the test in its own tab of Daan's browser. The dashboard was opened at 08:04 on 19 November 2026; the interface was already in English. The test plan was Free (1.000 emails/month). The dossier name is SMTP2GO and the review is on OSM (osm/smtp2go-review.html). First screen: a banner Before you can send emails, you'll need to add a Verified Sender to your account. and a setup list Almost there! Complete your account setup (25% complete). The dashboard showed 0/1.000 EMAILS SENT THIS BILLING MONTH. RESETS ON DECEMBER 19TH. A daily maximum of 200 is not shown in the dashboard. Core action: (1) Sending, Verified Senders, Single Sender Emails, Add single sender email, with a sender address of ours, no DNS and no domain check; the screen said 5 of 5 verified senders remaining on the free plan. (2) The confirmation mail arrived at 08:04 (subject [SMTP2GO] Please verify your email address for sending); its link opened Your email is now a Verified Sender. (3) Sending, API Keys, Add API Key with the description hands-on test and only the default permission (the dialog says Your API key has only one permission enabled: /email/send); the message Successfully added API Key followed. (4) A curl POST to the send endpoint of the API at 08:06:16, sender and recipient our own mailbox, subject SMTP2GO hands-on test 19 Nov 2026; the answer said \"succeeded\":1,\"failed\":0. (5) Reports, Activity showed Processed at 8:06:18 AM and Delivered at 8:06:27 AM, Email Activity (1 total) after a refresh; the log keeps Last 5 Days. (6) The message was in the inbox of our own mailbox. Time: from the dashboard opening at 08:04 to Delivered at 08:06:27 it took a little over 2 minutes, of which a short minute was waiting for the confirmation mail and reading, and about 12 clicks and entries. From the curl to Delivered: 11 seconds. The dashboard then showed 1/1.000 emails, 0,00% bounce rate and 0,00% spam rate. Plans up to the payment: Read by the tester on 19 Nov 2026 in the app (Account, Change Plan, monthly, in USD, with a switch Annual (save 17%)) and on the public pricing page smtp2go.com/pricing. Free Plan: 1.000 emails/month, 5 days of reporting, extra emails not permitted, Limited to 200 emails/day. Starter: 10.000 emails/month at $15.00/mo (+ $1.20 per thousand extra emails) and 50.000 at $30.00/mo (+ $1.00); the page shows Starter $15/mo for 10,000 emails and 30 days of email reporting. Professional: 100.000 at $75.00/mo (+ $0.85 per thousand extra emails, 1 free dedicated IP address included), then 250.000 at $170.00/mo, 500.000 at $280.00/mo and 1.000.000 at $520.00/mo. These are the amounts of the dossier (re-verified 17 Nov 2026), so the prices did not change; both Starter steps, $15 for 10.000 and $30 for 50.000, are already in the dossier. The footnote *Limited to 14 days for the free plan. sits behind Toll-Free Phone* and Live Chat* in the list of help options, so phone and live chat last 14 days on the free plan and tickets remain. The page promises Our Promise: If you don't love us within 30 days, we'll give you a full refund., and Sign Up Free says No credit card required. Checkout: the card step was not reached. In Change Plan the summary showed Free Plan $0.00/mo and Total $0.00 with Proceed to Checkout; it was not clicked, and the card would come only there. No tax, total or card field was seen. Cancelling: no cancelling is needed because the free plan costs nothing. Account, Change Plan has a link Close your account at the bottom; it opens a survey page We're sad to see you go... with reasons (Missing features I need, Switching to another product, Too expensive, Technical issues). It was not clicked through and nothing was confirmed. Not tested: domain verification and DNS (on purpose), an SMTP connection with a test script (only the API was used), a dedicated IP (only seen on the plan cards), a real bounce or spam complaint (only 0,00% bounce rate and 0,00% spam rate were seen), delivery to Gmail or Outlook (only our own mailbox), a paid plan and the card step. Clean up: the API key hands-on test was deleted with one click (the message Successfully deleted API Key, and the list says You currently don't have any API Keys.); the sender address stays as a Verified Sender (needed, no cost); the account and the one test message stay; our own tab was closed and Daan's other tabs were not touched. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/smtp2go-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/smtp2go-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-19",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "SMTP2GO",
+    "product_id": "smtp2go",
+    "run_date": "2026-11-19",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested SMTP2GO on a Free account that Daan created. A Verified Sender was set up by a link in a mail, without DNS; one API key was made and one test mail was sent through the API at 08:06:16. The report showed Processed at 08:06:18 and Delivered at 08:06:27, 11 seconds after the curl, to our own mailbox only. The dashboard showed 1/1.000 emails for the month and no daily maximum; the 200 a day is on the pricing page only. The prices in the app and on the pricing page match our dossier, and the card step sits behind Proceed to Checkout, which was not clicked. Cancelling was not tried: the free plan costs nothing and the link Close your account opens a survey page.",
+    "findings": [
+     "Text we checked: \"\"succeeded\":1,\"failed\":0\". What we saw: The API answered with this after the curl at 08:06:16. The report showed Processed at 8:06:18 AM and Delivered at 8:06:27 AM, 11 seconds after the curl, and the message was in our own mailbox.",
+     "Text we checked: \"Your email is now a Verified Sender\". What we saw: A single sender address was verified through a link in a confirmation mail, with no DNS and no domain check. The screen said 5 of 5 verified senders remaining on the free plan.",
+     "Text we checked: \"0/1.000 EMAILS SENT THIS BILLING MONTH. RESETS ON DECEMBER 19TH\". What we saw: The dashboard showed 0/1.000 before and 1/1.000 after the test message, so the monthly limit of the Free plan is 1.000 and counts a sent message at once.",
+     "Text we checked: \"$15.00/mo\". What we saw: In the app Starter shows 10.000 emails/month at $15.00/mo (+ $1.20 per thousand extra emails) and 50.000 at $30.00/mo (+ $1.00); the pricing page shows Starter $15/mo for 10,000. The dossier has both steps."
+    ],
+    "not_tested": [
+     "Domain verification and DNS, on purpose.",
+     "An SMTP connection with a test script; only the API was used.",
+     "A dedicated IP, which was only seen on the plan cards.",
+     "A real bounce or spam complaint; only 0,00% bounce rate and 0,00% spam rate were seen.",
+     "Delivery to Gmail or Outlook; only our own mailbox received the mail.",
+     "A paid plan, the card step, tax and a total.",
+     "Closing the account.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "\"succeeded\":1,\"failed\":0",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The API answered with this after the curl at 08:06:16. The report showed Processed at 8:06:18 AM and Delivered at 8:06:27 AM, 11 seconds after the curl, and the message was in our own mailbox.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "The API answer and the report lines against one test message to our own mailbox; no bulk, no other provider mailbox and no bounce was tried.",
+      "status": "confirmed",
+      "buying_consequence": "A first mail through the API reaches your own mailbox within seconds; other mailboxes were not tried.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "0,00% BOUNCE RATE",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "After one message the dashboard showed a bounce rate of 0,00% and a spam rate of 0,00%, both marked GOOD. No bounce or complaint was caused on purpose.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "Two rates on the dashboard against a sample of one message; no rate can be compared.",
+      "status": "not_testable",
+      "buying_consequence": "The dossier point on delivery quality cannot be judged from one message to our own mailbox.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Your email is now a Verified Sender",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "A single sender address was verified through a link in a confirmation mail, with no DNS and no domain check. The screen said 5 of 5 verified senders remaining on the free plan.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "The setup screens against our own run from the dashboard to Delivered; domain verification was not tried.",
+      "status": "confirmed",
+      "buying_consequence": "You can send from a single address within minutes without touching DNS; a domain still needs DNS later.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "0/1.000 EMAILS SENT THIS BILLING MONTH. RESETS ON DECEMBER 19TH.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The dashboard showed 0/1.000 before and 1/1.000 after the test message, so the monthly limit of the Free plan is 1.000 and counts a sent message at once.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "The monthly counter before and after one message against the 1,000 of the plan; a fuller month was not tried.",
+      "status": "confirmed",
+      "buying_consequence": "The free allowance is easy to see on the dashboard.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Limited to 200 emails/day.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The daily maximum of 200 is on the pricing page only. The dashboard shows the monthly counter and no daily figure, and one message does not reach the limit.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "A pricing page line against a dashboard without a daily figure and a test of one message.",
+      "status": "not_testable",
+      "buying_consequence": "You only learn of the daily cap from the pricing page; what happens at 200 a day was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "*Limited to 14 days for the free plan.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The asterisk sits behind Toll-Free Phone* and Live Chat* in the list of help options on the pricing page, so phone and live chat last 14 days on the free plan; tickets remain. This was read, not tried.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "The footnote against the list it belongs to; no phone call or chat was started.",
+      "status": "not_testable",
+      "buying_consequence": "The 14-day limit applies to phone and chat only, not to the account; it was not tried.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$15.00/mo",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "In the app Starter shows 10.000 emails/month at $15.00/mo (+ $1.20 per thousand extra emails) and 50.000 at $30.00/mo (+ $1.00); the pricing page shows Starter $15/mo for 10,000. The dossier has both steps.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "The plan list in the app and the pricing page against the dossier amounts; tax is not part of the printed amounts.",
+      "status": "confirmed",
+      "buying_consequence": "Starter costs $15 a month for 10.000 emails or $30 for 50.000; the prices did not change since the dossier of 17 Nov 2026.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "1 free dedicated IP address included.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Professional starts at 100.000 emails/month for $75.00/mo (+ $0.85 per thousand) and each Professional step lists 1 free dedicated IP address included. No dedicated IP was set up.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "A plan card line against a Free account; the IP was only read on the card.",
+      "status": "not_testable",
+      "buying_consequence": "The dedicated IP starts at $75 a month; what it takes to set it up was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Annual (save 17%)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The switch Annual (save 17%) is on the plan page. The annual amounts were not opened in the app, so the saving was not worked out.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "A switch label against a page that was only read with monthly billing.",
+      "status": "not_testable",
+      "buying_consequence": "The yearly saving was not checked against an amount.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Our Promise: If you don't love us within 30 days, we'll give you a full refund.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "This promise is on the pricing page. Nothing was paid, so no refund route was used.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "A pricing page promise against a Free account that never paid.",
+      "status": "not_testable",
+      "buying_consequence": "The refund promise exists on the page; how a refund works was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Close your account",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Account, Change Plan has a link at the bottom that opens a survey page We're sad to see you go... with reasons. It was not clicked through and nothing was confirmed; the free plan costs nothing, so no cancelling is needed.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "A link in the app against a Free account; the closing step was not confirmed.",
+      "status": "not_testable",
+      "buying_consequence": "Ending a free account is a survey page away; what closing does to data and a paid plan was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Proceed to Checkout",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "In Change Plan the summary showed Free Plan $0.00/mo and Total $0.00 with a greyed out Proceed to Checkout. It was not used, the card step was not reached, and no tax or total of a paid plan was seen, so the plan prices could not be compared with a checkout.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+      "comparability": "The printed plan prices against a checkout that was never reached; no stored cost rule or fee line could be compared.",
+      "status": "not_testable",
+      "buying_consequence": "The amount at checkout including tax was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-19",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested SMTP2GO on a Free account that Daan created. A Verified Sender was set up by a link in a mail, without DNS; one API key was made and one test mail was sent through the API at 08:06:16. The report showed Processed at 08:06:18 and Delivered at 08:06:27, 11 seconds after the curl, to our own mailbox only. The dashboard showed 1/1.000 emails for the month and no daily maximum; the 200 a day is on the pricing page only. The prices in the app and on the pricing page match our dossier, and the card step sits behind Proceed to Checkout, which was not clicked. Cancelling was not tried: the free plan costs nothing and the link Close your account opens a survey page. Account and start: Daan created and activated the account (EU region), so the sign-up does not count in the times, and our AI assistant ran the test in its own tab of Daan's browser. The dashboard was opened at 08:04 on 19 November 2026; the interface was already in English. The test plan was Free (1.000 emails/month). The dossier name is SMTP2GO and the review is on OSM (osm/smtp2go-review.html). First screen: a banner Before you can send emails, you'll need to add a Verified Sender to your account. and a setup list Almost there! Complete your account setup (25% complete). The dashboard showed 0/1.000 EMAILS SENT THIS BILLING MONTH. RESETS ON DECEMBER 19TH. A daily maximum of 200 is not shown in the dashboard. Core action: (1) Sending, Verified Senders, Single Sender Emails, Add single sender email, with a sender address of ours, no DNS and no domain check; the screen said 5 of 5 verified senders remaining on the free plan. (2) The confirmation mail arrived at 08:04 (subject [SMTP2GO] Please verify your email address for sending); its link opened Your email is now a Verified Sender. (3) Sending, API Keys, Add API Key with the description hands-on test and only the default permission (the dialog says Your API key has only one permission enabled: /email/send); the message Successfully added API Key followed. (4) A curl POST to the send endpoint of the API at 08:06:16, sender and recipient our own mailbox, subject SMTP2GO hands-on test 19 Nov 2026; the answer said \"succeeded\":1,\"failed\":0. (5) Reports, Activity showed Processed at 8:06:18 AM and Delivered at 8:06:27 AM, Email Activity (1 total) after a refresh; the log keeps Last 5 Days. (6) The message was in the inbox of our own mailbox. Time: from the dashboard opening at 08:04 to Delivered at 08:06:27 it took a little over 2 minutes, of which a short minute was waiting for the confirmation mail and reading, and about 12 clicks and entries. From the curl to Delivered: 11 seconds. The dashboard then showed 1/1.000 emails, 0,00% bounce rate and 0,00% spam rate. Plans up to the payment: Read by the tester on 19 Nov 2026 in the app (Account, Change Plan, monthly, in USD, with a switch Annual (save 17%)) and on the public pricing page smtp2go.com/pricing. Free Plan: 1.000 emails/month, 5 days of reporting, extra emails not permitted, Limited to 200 emails/day. Starter: 10.000 emails/month at $15.00/mo (+ $1.20 per thousand extra emails) and 50.000 at $30.00/mo (+ $1.00); the page shows Starter $15/mo for 10,000 emails and 30 days of email reporting. Professional: 100.000 at $75.00/mo (+ $0.85 per thousand extra emails, 1 free dedicated IP address included), then 250.000 at $170.00/mo, 500.000 at $280.00/mo and 1.000.000 at $520.00/mo. These are the amounts of the dossier (re-verified 17 Nov 2026), so the prices did not change; both Starter steps, $15 for 10.000 and $30 for 50.000, are already in the dossier. The footnote *Limited to 14 days for the free plan. sits behind Toll-Free Phone* and Live Chat* in the list of help options, so phone and live chat last 14 days on the free plan and tickets remain. The page promises Our Promise: If you don't love us within 30 days, we'll give you a full refund., and Sign Up Free says No credit card required. Checkout: the card step was not reached. In Change Plan the summary showed Free Plan $0.00/mo and Total $0.00 with Proceed to Checkout; it was not clicked, and the card would come only there. No tax, total or card field was seen. Cancelling: no cancelling is needed because the free plan costs nothing. Account, Change Plan has a link Close your account at the bottom; it opens a survey page We're sad to see you go... with reasons (Missing features I need, Switching to another product, Too expensive, Technical issues). It was not clicked through and nothing was confirmed. Not tested: domain verification and DNS (on purpose), an SMTP connection with a test script (only the API was used), a dedicated IP (only seen on the plan cards), a real bounce or spam complaint (only 0,00% bounce rate and 0,00% spam rate were seen), delivery to Gmail or Outlook (only our own mailbox), a paid plan and the card step. Clean up: the API key hands-on test was deleted with one click (the message Successfully deleted API Key, and the list says You currently don't have any API Keys.); the sender address stays as a Verified Sender (needed, no cost); the account and the one test message stay; our own tab was closed and Daan's other tabs were not touched. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Before you can send anything you need a Verified Sender, and the confirmation mail has to arrive first. The dashboard shows the monthly limit but not the daily maximum of 200, which is only on the pricing page. The footnote of 14 days on the free plan sits behind phone and live chat in a list of help options, which is easy to read as a limit on everything. The full API key is hidden behind a Copy button.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Domain verification and DNS, on purpose.",
+      "An SMTP connection with a test script; only the API was used.",
+      "A dedicated IP, which was only seen on the plan cards.",
+      "A real bounce or spam complaint; only 0,00% bounce rate and 0,00% spam rate were seen.",
+      "Delivery to Gmail or Outlook; only our own mailbox received the mail.",
+      "A paid plan, the card step, tax and a total.",
+      "Closing the account.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 08:04 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "smtp2go:cancellation_terms",

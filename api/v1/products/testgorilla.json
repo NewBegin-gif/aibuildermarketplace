@@ -82,10 +82,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -93,7 +92,479 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-19",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/testgorilla-review.html",
+  "method": [
+   "Our AI assistant ran the test in Daan's browser and our notes record what it showed",
+   "No paid plan was bought and no card was entered"
+  ],
+  "claims": [
+   {
+    "claim": "from $215 /mo",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The text of the public pricing page, read while it loaded, gave Assessments Core from $215 per month and Plus from $520, billed annually. The dossier has Core from $77 a month billed annually and from $287 billed monthly. Neither amount was seen now; when the same page was shown in the browser it gave Core from EUR 66 and Plus from EUR 345.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+    },
+    "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+    "comparability": "The pricing page text in USD against the dossier line of $77 and $287; recorded as a vendor update dated 19 Nov 2026, not as a correction of the dossier.",
+    "status": "out_of_date",
+    "buying_consequence": "The dossier amounts do not match what we saw now, and the from price depends on the view; get the credit allowance and the price in writing before you buy.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "from EUR 66 /mo",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The rendered pricing page and the plan window in the app both give Assessments Core at EUR 66 per month, per account, billed annually; in the app this is the 250 credits a year choice, EUR 792 billed annually.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+    },
+    "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+    "comparability": "Two euro views of the plan, the rendered page and the app, against each other; the USD text of the page was not the same.",
+    "status": "confirmed",
+    "buying_consequence": "The cheapest Core price is EUR 66 a month in euros, for 250 credits a year and a yearly contract.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Switch to Pay annually to see our offering",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "With the switch on Pay monthly, Gorilla Assessments shows no price, only the 10 free credits a month and the line to switch to Pay annually to see the offering. A monthly price for Assessments, such as the $287 of the dossier, was not shown.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+    },
+    "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+    "comparability": "The monthly view of the plan window against the dossier amount for a monthly bill; the monthly offer may be gone or hidden, which was not tried further.",
+    "status": "out_of_date",
+    "buying_consequence": "You cannot see a monthly Assessments price in the app; Core is bought per year.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Includes 10 credits per month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The start screen said Free plan active and Includes 10 credits per month, and Account, Plan & billing showed 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1. No card was asked during the sign-up.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+    },
+    "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+    "comparability": "The start screen and the billing page against each other; no credit was spent, so the monthly refresh was not seen.",
+    "status": "confirmed",
+    "buying_consequence": "The free plan gives 10 credits a month without a card.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Your Free plan includes 5 essential tests you can use with unlimited candidates, no credits needed.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The Content step says this above five essential tests. No candidate was invited, so unlimited use was not tried.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+    },
+    "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+    "comparability": "A line of the app against a test that invited nobody.",
+    "status": "not_testable",
+    "buying_consequence": "The essentials are free of credits by the text of the app; no candidate ran them.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Consumes 1 credit per candidate from your free monthly allocation.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The Settings step says anti-cheating consumes 1 credit per candidate from the free allocation and shows 1 free credit per candidate; with the premium test Email Skills (Gmail) the same line says 1 credit per candidate. No candidate ran the assessment, so the cost per candidate was read and not measured.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+    },
+    "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+    "comparability": "The credit lines of the builder against a test that invited no candidate.",
+    "status": "not_testable",
+    "buying_consequence": "On the free plan about 10 candidates a month fit in 10 credits, if one assessment costs 1 credit per candidate; this was not run.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "I agree to the Terms and Conditions and understand my Core subscription remains annual",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The payment details of Assessments Core show this tick box next to Assessment Core (750 credits) EUR 2,220/year and the line that it renews automatically on November 19th, 2027. Nothing was ticked; the window was closed with the cross.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+    },
+    "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+    "comparability": "The tick box and renewal line of the payment details against the annual only plan list; cancelling a paid plan was not seen.",
+    "status": "confirmed",
+    "buying_consequence": "Core is a yearly contract that renews by itself, with no monthly option to try it first.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "250 credits/year",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The summary box of the plan window shows Core with 250 credits/year at EUR 66 per month (EUR 792 billed annually); the list also has 450 credits/year at EUR 115 and 750 credits/year at EUR 185, pooled for the year. How many candidates a credit covers depends on the tests chosen and was not run.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+    },
+    "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+    "comparability": "A credit allowance in a plan list against a test that spent no credit.",
+    "status": "not_testable",
+    "buying_consequence": "The credit pool is per year and is spent per candidate and per test; the number of candidates it covers was not tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "EUR 2,220 billed annually",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The plan list gives 750 credits/year at EUR 185 per month, EUR 2,220 billed annually, and the payment details of Assessment Core (750 credits) showed Total due today EUR 2,220 (EUR) and EUR 2,220/year. The two amounts agree. A tax line was not recorded and the card was not entered.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+    },
+    "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+    "comparability": "The plan list against the payment details; no stored cost rule or fee line was compared, so a total including tax is not known.",
+    "status": "confirmed",
+    "buying_consequence": "The yearly price of the 750 credit Core plan is EUR 2,220 at the plan list and at the payment details.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-19",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested TestGorilla on Free plans that Daan created. An assessment for a made-up Customer Support Agent, with the tests Communication, Problem Solving and Email Skills (Gmail), was ready about 3 minutes after the onboarding was opened (3 onboarding screens, 4 build steps, about 25 clicks and entries); nobody was invited, so no candidate round and no score report were run. The Free plan showed 10 credits a month and the paid plans were read in the app and on the pricing page: the from amount of Assessments Core differs per view (from $215 in the text of the page, EUR 66 for 250 credits a year in the app and in the rendered page), and neither the $77 nor the $287 of our dossier was seen, so this is recorded as a vendor update dated 19 Nov 2026. The payment details of Core (EUR 2,220 for a year, renewing automatically) were seen and closed with no card. Account and start: Daan created the account and set the password, so the sign-up does not count in the times, and our AI assistant ran the test in its own tab of Daan's browser. The onboarding was opened at 08:48 on 19 November 2026; the interface was already in English. The plans were Assessment Free and Sourcing Free. The dossier name is TestGorilla and the review is on OSM (osm/testgorilla-review.html). The made-up job and data were Test Recruiter, Test Company and Customer Support Agent for a small online shop. Onboarding: step 1 Tell us more about yourself (first name, last name and a phone number; the three boxes for marketing, SMS and WhatsApp stayed empty and no SMS code came), step 2 Tell us about your company (company name, 1-15 employees, role Recruiter), step 3 Where do you want to start? with Gorilla Sourcing (Find candidates) or Gorilla Assessments (Assess candidates); we chose Assess candidates. No link with an ATS, Google or LinkedIn was asked. The start screen said Hi Test!, Free plan active, Includes 10 credits per month and a checklist Jumpstart hiring at 20%. No card was asked during the whole sign-up. Core action, an assessment in four steps: (1) Job details, the question What role are you hiring for? and the language English, filled with Customer Support Agent for a small online shop and the skills written English, problem solving and attention to detail. (2) Tools (0/8): Qualifying questions Free, ID verification Upgrade, Skills tests 0-1 credit, Custom questions Free, AI interviews 2 credits, Video questions 1 credit, Resume scoring Free and Job simulations Upgrade; we chose Skills tests. (3) Content: Essentials, unlimited on your plan, with five tests (Big 5 (OCEAN), Communication, Problem Solving, Motivation and Time Management), with the line Your Free plan includes 5 essential tests you can use with unlimited candidates, no credits needed. We chose Communication (8 mins) and Problem Solving (9 mins), and from the Included test suggestions, which cost 1 credit per candidate from the 10 monthly free credits, Email Skills (Gmail), 1 credit, 10 mins, 16 questions. The total said 3 added, 27 mins. Other suggestions were Email Skills (Microsoft Outlook), Salesforce CRM and Verbal Reasoning, each 1 credit. (4) Settings: Job invitation details; Manage team access, Intro/Outro Video and Deadline and expiration date all say Upgrade required. Anti-cheating is on by default: a webcam photo every 15 seconds, an AI analysis of the photos and Candidates must use a single screen, with the lines Consumes 1 credit per candidate from your free monthly allocation and 1 free credit per candidate. The button Finalize ended it. After Finalize the job page New job, 19 November 2026 with the label Draft showed the cards Invite candidates, Try your assessment and Find candidates for this job, and the tabs Candidates, Assessment tools, Analytics, Job details and Settings. Time: from the onboarding at 08:48 to Finalize at 08:50 it took about 3 minutes, with 3 onboarding screens, 4 build steps and about 25 clicks and entries. Candidate view and plans: the eye icon in the builder opens an Assessment preview with sample questions only (tabs Communication, Problem Solving and Email Skills (Gmail)); nobody was invited and no mail was sent. Try your assessment and Invite were not used, because they send an invitation to an address, so there was no own candidate round and no score report. Account, Plan & billing shows Assessment Free, 10 credits/month, refreshes monthly, 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1; Sourcing Free has no contact credits and contacting and opening up candidates starts on Sourcing Core. A credit is 1 per candidate for a premium test, so our assessment costs 1 credit per candidate and 10 candidates a month fit in the free credits; this was read, not run. Plans: In the app (Upgrade, Pricing plans window, currency EUR, switch Pay monthly or Pay annually with SAVE 25%): Gorilla Sourcing, annually, Free EUR 0 (0 invites, browse and preview only), Core EUR 64 per Sourcing seat per month and Plus EUR 116; monthly Core EUR 85 and Plus EUR 154. Gorilla Assessments, annually, Free EUR 0 (10 credits/mo), Core from EUR 66 per month and Plus from EUR 345 per month. Core has a list: 250 credits/year at EUR 66 per month (EUR 792 billed annually), 450 credits/year at EUR 115 (EUR 1,380 billed annually) and 750 credits/year at EUR 185 (EUR 2,220 billed annually), all pooled for the year. With the switch on Pay monthly, Assessments shows no price, only Free Assessments included: 10 credits a month and the line to switch to Pay annually to see the offering. On the public pricing page (USD, text read while loading): Sourcing Free $0, Core $74 per seat and Plus $134 per seat, billed annually; Assessments Free $0 (10 credits per month, refreshes monthly), Core from $215 per month and Plus from $520 per month, billed annually, SAVE 25%. When the same page was shown in the browser it showed the same cards in euros, Core from EUR 66 and Plus from EUR 345, so the from amount of Core differs per view ($215 in the text, EUR 66 in the app and in the rendered page). Credits on the pricing page: skills tests (350+ premium) 1 credit per candidate, video questions 1 credit per candidate, AI interviews 2 credits per candidate (Plus), job simulations 2 credits (Plus), ID verification 1 credit (Plus). Free: 5 essentials with unlimited use and no credits, 180+ limited tests at 1 Free plan credit per candidate, 5 preset custom questions, 1 premium user role. Core: the full test library of 350+ tests, a shared account-wide credit pool and 2 premium user roles. Plus: the full AI interviews library of 100+, ATS and API integrations, removal of the TestGorilla branding and unlimited premium user roles. The dossier says Core from $77 a month billed annually and from $287 billed monthly; neither amount was seen now (the page text says from $215, the app says EUR 66 for 250 credits a year, and Assessments has no monthly price in the app). This is recorded as a vendor update dated 19 Nov 2026, not as a correction of the dossier. Checkout: Get started at Assessments Core opened Payment details with Assessment Core (750 credits) EUR 2,220/year, Total due today EUR 2,220 (EUR), the line that the subscription renews automatically on November 19th, 2027, the box I agree to the Terms and Conditions and understand my Core subscription remains annual, and a saved Link payment method. Nothing was filled in and nothing was clicked except the cross to close it. No image of this screen was kept, because it shows a payment method. Cancelling: a free plan has nothing to cancel. Account, Plan & billing shows Manage plan and Upgrade now for both products; Manage plan was not opened. Account, My profile has only Switch account (Leave this account to join another) and no button to delete the account. The cancelling route of the paid annual Core plan was not seen. Not tested: inviting a candidate, finishing the test yourself and the score report; Try your assessment and Invite; writing an own custom question; Gorilla Sourcing (search, 900M profiles); Plus features, ATS links, Manage plan and the monthly prices of Assessments (not shown in the app); what one candidate really costs in credits. Clean up: the account, the draft job New job, 19 November 2026 (job id and assessment id in the note) and the test data stay; no candidate, no mail and no payment; the own tab was closed and Daan's other tabs, including a TestGorilla tab on the onboarding address, were not touched. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The from price of Assessments Core is not the same in every view: from $215 in the text of the pricing page, EUR 66 in the app and in the rendered page, and the monthly price of Assessments is not shown at all in the app. Core is annual only, and what the 250 credits a year buy per candidate is only clear from the line 1 credit per candidate. Settings, the anti-cheating options (a webcam photo every 15 seconds and one screen) are on by default and use a credit per candidate. There is no button to delete the account in My profile.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Inviting a candidate, finishing the test as a candidate and the score report.",
+    "Try your assessment and Invite, because they send an invitation to an address.",
+    "Writing an own custom question.",
+    "Gorilla Sourcing (search and the 900M profiles).",
+    "Plus features, ATS links, Manage plan and the monthly prices of Assessments.",
+    "What one candidate really costs in credits; only the lines 1 credit per candidate were read.",
+    "A paid plan, a card, tax and the final total; only the payment details screen was seen and closed.",
+    "Cancelling a paid plan; a free plan has nothing to cancel.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 08:48 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/testgorilla-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": false,
+    "basis": "The start screen said Free plan active and Includes 10 credits per month, and Account, Plan & billing showed 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1. No card was asked during the sign-up.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/testgorilla-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested TestGorilla on Free plans that Daan created. An assessment for a made-up Customer Support Agent, with the tests Communication, Problem Solving and Email Skills (Gmail), was ready about 3 minutes after the onboarding was opened (3 onboarding screens, 4 build steps, about 25 clicks and entries); nobody was invited, so no candidate round and no score report were run. The Free plan showed 10 credits a month and the paid plans were read in the app and on the pricing page: the from amount of Assessments Core differs per view (from $215 in the text of the page, EUR 66 for 250 credits a year in the app and in the rendered page), and neither the $77 nor the $287 of our dossier was seen, so this is recorded as a vendor update dated 19 Nov 2026. The payment details of Core (EUR 2,220 for a year, renewing automatically) were seen and closed with no card. Account and start: Daan created the account and set the password, so the sign-up does not count in the times, and our AI assistant ran the test in its own tab of Daan's browser. The onboarding was opened at 08:48 on 19 November 2026; the interface was already in English. The plans were Assessment Free and Sourcing Free. The dossier name is TestGorilla and the review is on OSM (osm/testgorilla-review.html). The made-up job and data were Test Recruiter, Test Company and Customer Support Agent for a small online shop. Onboarding: step 1 Tell us more about yourself (first name, last name and a phone number; the three boxes for marketing, SMS and WhatsApp stayed empty and no SMS code came), step 2 Tell us about your company (company name, 1-15 employees, role Recruiter), step 3 Where do you want to start? with Gorilla Sourcing (Find candidates) or Gorilla Assessments (Assess candidates); we chose Assess candidates. No link with an ATS, Google or LinkedIn was asked. The start screen said Hi Test!, Free plan active, Includes 10 credits per month and a checklist Jumpstart hiring at 20%. No card was asked during the whole sign-up. Core action, an assessment in four steps: (1) Job details, the question What role are you hiring for? and the language English, filled with Customer Support Agent for a small online shop and the skills written English, problem solving and attention to detail. (2) Tools (0/8): Qualifying questions Free, ID verification Upgrade, Skills tests 0-1 credit, Custom questions Free, AI interviews 2 credits, Video questions 1 credit, Resume scoring Free and Job simulations Upgrade; we chose Skills tests. (3) Content: Essentials, unlimited on your plan, with five tests (Big 5 (OCEAN), Communication, Problem Solving, Motivation and Time Management), with the line Your Free plan includes 5 essential tests you can use with unlimited candidates, no credits needed. We chose Communication (8 mins) and Problem Solving (9 mins), and from the Included test suggestions, which cost 1 credit per candidate from the 10 monthly free credits, Email Skills (Gmail), 1 credit, 10 mins, 16 questions. The total said 3 added, 27 mins. Other suggestions were Email Skills (Microsoft Outlook), Salesforce CRM and Verbal Reasoning, each 1 credit. (4) Settings: Job invitation details; Manage team access, Intro/Outro Video and Deadline and expiration date all say Upgrade required. Anti-cheating is on by default: a webcam photo every 15 seconds, an AI analysis of the photos and Candidates must use a single screen, with the lines Consumes 1 credit per candidate from your free monthly allocation and 1 free credit per candidate. The button Finalize ended it. After Finalize the job page New job, 19 November 2026 with the label Draft showed the cards Invite candidates, Try your assessment and Find candidates for this job, and the tabs Candidates, Assessment tools, Analytics, Job details and Settings. Time: from the onboarding at 08:48 to Finalize at 08:50 it took about 3 minutes, with 3 onboarding screens, 4 build steps and about 25 clicks and entries. Candidate view and plans: the eye icon in the builder opens an Assessment preview with sample questions only (tabs Communication, Problem Solving and Email Skills (Gmail)); nobody was invited and no mail was sent. Try your assessment and Invite were not used, because they send an invitation to an address, so there was no own candidate round and no score report. Account, Plan & billing shows Assessment Free, 10 credits/month, refreshes monthly, 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1; Sourcing Free has no contact credits and contacting and opening up candidates starts on Sourcing Core. A credit is 1 per candidate for a premium test, so our assessment costs 1 credit per candidate and 10 candidates a month fit in the free credits; this was read, not run. Plans: In the app (Upgrade, Pricing plans window, currency EUR, switch Pay monthly or Pay annually with SAVE 25%): Gorilla Sourcing, annually, Free EUR 0 (0 invites, browse and preview only), Core EUR 64 per Sourcing seat per month and Plus EUR 116; monthly Core EUR 85 and Plus EUR 154. Gorilla Assessments, annually, Free EUR 0 (10 credits/mo), Core from EUR 66 per month and Plus from EUR 345 per month. Core has a list: 250 credits/year at EUR 66 per month (EUR 792 billed annually), 450 credits/year at EUR 115 (EUR 1,380 billed annually) and 750 credits/year at EUR 185 (EUR 2,220 billed annually), all pooled for the year. With the switch on Pay monthly, Assessments shows no price, only Free Assessments included: 10 credits a month and the line to switch to Pay annually to see the offering. On the public pricing page (USD, text read while loading): Sourcing Free $0, Core $74 per seat and Plus $134 per seat, billed annually; Assessments Free $0 (10 credits per month, refreshes monthly), Core from $215 per month and Plus from $520 per month, billed annually, SAVE 25%. When the same page was shown in the browser it showed the same cards in euros, Core from EUR 66 and Plus from EUR 345, so the from amount of Core differs per view ($215 in the text, EUR 66 in the app and in the rendered page). Credits on the pricing page: skills tests (350+ premium) 1 credit per candidate, video questions 1 credit per candidate, AI interviews 2 credits per candidate (Plus), job simulations 2 credits (Plus), ID verification 1 credit (Plus). Free: 5 essentials with unlimited use and no credits, 180+ limited tests at 1 Free plan credit per candidate, 5 preset custom questions, 1 premium user role. Core: the full test library of 350+ tests, a shared account-wide credit pool and 2 premium user roles. Plus: the full AI interviews library of 100+, ATS and API integrations, removal of the TestGorilla branding and unlimited premium user roles. The dossier says Core from $77 a month billed annually and from $287 billed monthly; neither amount was seen now (the page text says from $215, the app says EUR 66 for 250 credits a year, and Assessments has no monthly price in the app). This is recorded as a vendor update dated 19 Nov 2026, not as a correction of the dossier. Checkout: Get started at Assessments Core opened Payment details with Assessment Core (750 credits) EUR 2,220/year, Total due today EUR 2,220 (EUR), the line that the subscription renews automatically on November 19th, 2027, the box I agree to the Terms and Conditions and understand my Core subscription remains annual, and a saved Link payment method. Nothing was filled in and nothing was clicked except the cross to close it. No image of this screen was kept, because it shows a payment method. Cancelling: a free plan has nothing to cancel. Account, Plan & billing shows Manage plan and Upgrade now for both products; Manage plan was not opened. Account, My profile has only Switch account (Leave this account to join another) and no button to delete the account. The cancelling route of the paid annual Core plan was not seen. Not tested: inviting a candidate, finishing the test yourself and the score report; Try your assessment and Invite; writing an own custom question; Gorilla Sourcing (search, 900M profiles); Plus features, ATS links, Manage plan and the monthly prices of Assessments (not shown in the app); what one candidate really costs in credits. Clean up: the account, the draft job New job, 19 November 2026 (job id and assessment id in the note) and the test data stay; no candidate, no mail and no payment; the own tab was closed and Daan's other tabs, including a TestGorilla tab on the onboarding address, were not touched. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/testgorilla-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested TestGorilla on Free plans that Daan created. An assessment for a made-up Customer Support Agent, with the tests Communication, Problem Solving and Email Skills (Gmail), was ready about 3 minutes after the onboarding was opened (3 onboarding screens, 4 build steps, about 25 clicks and entries); nobody was invited, so no candidate round and no score report were run. The Free plan showed 10 credits a month and the paid plans were read in the app and on the pricing page: the from amount of Assessments Core differs per view (from $215 in the text of the page, EUR 66 for 250 credits a year in the app and in the rendered page), and neither the $77 nor the $287 of our dossier was seen, so this is recorded as a vendor update dated 19 Nov 2026. The payment details of Core (EUR 2,220 for a year, renewing automatically) were seen and closed with no card. Account and start: Daan created the account and set the password, so the sign-up does not count in the times, and our AI assistant ran the test in its own tab of Daan's browser. The onboarding was opened at 08:48 on 19 November 2026; the interface was already in English. The plans were Assessment Free and Sourcing Free. The dossier name is TestGorilla and the review is on OSM (osm/testgorilla-review.html). The made-up job and data were Test Recruiter, Test Company and Customer Support Agent for a small online shop. Onboarding: step 1 Tell us more about yourself (first name, last name and a phone number; the three boxes for marketing, SMS and WhatsApp stayed empty and no SMS code came), step 2 Tell us about your company (company name, 1-15 employees, role Recruiter), step 3 Where do you want to start? with Gorilla Sourcing (Find candidates) or Gorilla Assessments (Assess candidates); we chose Assess candidates. No link with an ATS, Google or LinkedIn was asked. The start screen said Hi Test!, Free plan active, Includes 10 credits per month and a checklist Jumpstart hiring at 20%. No card was asked during the whole sign-up. Core action, an assessment in four steps: (1) Job details, the question What role are you hiring for? and the language English, filled with Customer Support Agent for a small online shop and the skills written English, problem solving and attention to detail. (2) Tools (0/8): Qualifying questions Free, ID verification Upgrade, Skills tests 0-1 credit, Custom questions Free, AI interviews 2 credits, Video questions 1 credit, Resume scoring Free and Job simulations Upgrade; we chose Skills tests. (3) Content: Essentials, unlimited on your plan, with five tests (Big 5 (OCEAN), Communication, Problem Solving, Motivation and Time Management), with the line Your Free plan includes 5 essential tests you can use with unlimited candidates, no credits needed. We chose Communication (8 mins) and Problem Solving (9 mins), and from the Included test suggestions, which cost 1 credit per candidate from the 10 monthly free credits, Email Skills (Gmail), 1 credit, 10 mins, 16 questions. The total said 3 added, 27 mins. Other suggestions were Email Skills (Microsoft Outlook), Salesforce CRM and Verbal Reasoning, each 1 credit. (4) Settings: Job invitation details; Manage team access, Intro/Outro Video and Deadline and expiration date all say Upgrade required. Anti-cheating is on by default: a webcam photo every 15 seconds, an AI analysis of the photos and Candidates must use a single screen, with the lines Consumes 1 credit per candidate from your free monthly allocation and 1 free credit per candidate. The button Finalize ended it. After Finalize the job page New job, 19 November 2026 with the label Draft showed the cards Invite candidates, Try your assessment and Find candidates for this job, and the tabs Candidates, Assessment tools, Analytics, Job details and Settings. Time: from the onboarding at 08:48 to Finalize at 08:50 it took about 3 minutes, with 3 onboarding screens, 4 build steps and about 25 clicks and entries. Candidate view and plans: the eye icon in the builder opens an Assessment preview with sample questions only (tabs Communication, Problem Solving and Email Skills (Gmail)); nobody was invited and no mail was sent. Try your assessment and Invite were not used, because they send an invitation to an address, so there was no own candidate round and no score report. Account, Plan & billing shows Assessment Free, 10 credits/month, refreshes monthly, 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1; Sourcing Free has no contact credits and contacting and opening up candidates starts on Sourcing Core. A credit is 1 per candidate for a premium test, so our assessment costs 1 credit per candidate and 10 candidates a month fit in the free credits; this was read, not run. Plans: In the app (Upgrade, Pricing plans window, currency EUR, switch Pay monthly or Pay annually with SAVE 25%): Gorilla Sourcing, annually, Free EUR 0 (0 invites, browse and preview only), Core EUR 64 per Sourcing seat per month and Plus EUR 116; monthly Core EUR 85 and Plus EUR 154. Gorilla Assessments, annually, Free EUR 0 (10 credits/mo), Core from EUR 66 per month and Plus from EUR 345 per month. Core has a list: 250 credits/year at EUR 66 per month (EUR 792 billed annually), 450 credits/year at EUR 115 (EUR 1,380 billed annually) and 750 credits/year at EUR 185 (EUR 2,220 billed annually), all pooled for the year. With the switch on Pay monthly, Assessments shows no price, only Free Assessments included: 10 credits a month and the line to switch to Pay annually to see the offering. On the public pricing page (USD, text read while loading): Sourcing Free $0, Core $74 per seat and Plus $134 per seat, billed annually; Assessments Free $0 (10 credits per month, refreshes monthly), Core from $215 per month and Plus from $520 per month, billed annually, SAVE 25%. When the same page was shown in the browser it showed the same cards in euros, Core from EUR 66 and Plus from EUR 345, so the from amount of Core differs per view ($215 in the text, EUR 66 in the app and in the rendered page). Credits on the pricing page: skills tests (350+ premium) 1 credit per candidate, video questions 1 credit per candidate, AI interviews 2 credits per candidate (Plus), job simulations 2 credits (Plus), ID verification 1 credit (Plus). Free: 5 essentials with unlimited use and no credits, 180+ limited tests at 1 Free plan credit per candidate, 5 preset custom questions, 1 premium user role. Core: the full test library of 350+ tests, a shared account-wide credit pool and 2 premium user roles. Plus: the full AI interviews library of 100+, ATS and API integrations, removal of the TestGorilla branding and unlimited premium user roles. The dossier says Core from $77 a month billed annually and from $287 billed monthly; neither amount was seen now (the page text says from $215, the app says EUR 66 for 250 credits a year, and Assessments has no monthly price in the app). This is recorded as a vendor update dated 19 Nov 2026, not as a correction of the dossier. Checkout: Get started at Assessments Core opened Payment details with Assessment Core (750 credits) EUR 2,220/year, Total due today EUR 2,220 (EUR), the line that the subscription renews automatically on November 19th, 2027, the box I agree to the Terms and Conditions and understand my Core subscription remains annual, and a saved Link payment method. Nothing was filled in and nothing was clicked except the cross to close it. No image of this screen was kept, because it shows a payment method. Cancelling: a free plan has nothing to cancel. Account, Plan & billing shows Manage plan and Upgrade now for both products; Manage plan was not opened. Account, My profile has only Switch account (Leave this account to join another) and no button to delete the account. The cancelling route of the paid annual Core plan was not seen. Not tested: inviting a candidate, finishing the test yourself and the score report; Try your assessment and Invite; writing an own custom question; Gorilla Sourcing (search, 900M profiles); Plus features, ATS links, Manage plan and the monthly prices of Assessments (not shown in the app); what one candidate really costs in credits. Clean up: the account, the draft job New job, 19 November 2026 (job id and assessment id in the note) and the test data stay; no candidate, no mail and no payment; the own tab was closed and Daan's other tabs, including a TestGorilla tab on the onboarding address, were not touched. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/testgorilla-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/testgorilla-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-19",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "TestGorilla",
+    "product_id": "testgorilla",
+    "run_date": "2026-11-19",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested TestGorilla on Free plans that Daan created. An assessment for a made-up Customer Support Agent, with the tests Communication, Problem Solving and Email Skills (Gmail), was ready about 3 minutes after the onboarding was opened (3 onboarding screens, 4 build steps, about 25 clicks and entries); nobody was invited, so no candidate round and no score report were run. The Free plan showed 10 credits a month and the paid plans were read in the app and on the pricing page: the from amount of Assessments Core differs per view (from $215 in the text of the page, EUR 66 for 250 credits a year in the app and in the rendered page), and neither the $77 nor the $287 of our dossier was seen, so this is recorded as a vendor update dated 19 Nov 2026. The payment details of Core (EUR 2,220 for a year, renewing automatically) were seen and closed with no card.",
+    "findings": [
+     "Text we checked: \"from $215 /mo\". What we saw: The text of the public pricing page, read while it loaded, gave Assessments Core from $215 per month and Plus from $520, billed annually. The dossier has Core from $77 a month billed annually and from $287 billed monthly. Neither amount was seen now; when the same page was shown in the browser it gave Core from EUR 66 and Plus from EUR 345.",
+     "Text we checked: \"from EUR 66 /mo\". What we saw: The rendered pricing page and the plan window in the app both give Assessments Core at EUR 66 per month, per account, billed annually; in the app this is the 250 credits a year choice, EUR 792 billed annually.",
+     "Text we checked: \"Switch to Pay annually to see our offering\". What we saw: With the switch on Pay monthly, Gorilla Assessments shows no price, only the 10 free credits a month and the line to switch to Pay annually to see the offering. A monthly price for Assessments, such as the $287 of the dossier, was not shown.",
+     "Text we checked: \"Includes 10 credits per month\". What we saw: The start screen said Free plan active and Includes 10 credits per month, and Account, Plan & billing showed 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1. No card was asked during the sign-up.",
+     "Text we checked: \"I agree to the Terms and Conditions and understand my Core subscription remains annual\". What we saw: The payment details of Assessments Core show this tick box next to Assessment Core (750 credits) EUR 2,220/year and the line that it renews automatically on November 19th, 2027. Nothing was ticked; the window was closed with the cross."
+    ],
+    "not_tested": [
+     "Inviting a candidate, finishing the test as a candidate and the score report.",
+     "Try your assessment and Invite, because they send an invitation to an address.",
+     "Writing an own custom question.",
+     "Gorilla Sourcing (search and the 900M profiles).",
+     "Plus features, ATS links, Manage plan and the monthly prices of Assessments.",
+     "What one candidate really costs in credits; only the lines 1 credit per candidate were read.",
+     "A paid plan, a card, tax and the final total; only the payment details screen was seen and closed.",
+     "Cancelling a paid plan; a free plan has nothing to cancel.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "from $215 /mo",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The text of the public pricing page, read while it loaded, gave Assessments Core from $215 per month and Plus from $520, billed annually. The dossier has Core from $77 a month billed annually and from $287 billed monthly. Neither amount was seen now; when the same page was shown in the browser it gave Core from EUR 66 and Plus from EUR 345.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+      },
+      "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+      "comparability": "The pricing page text in USD against the dossier line of $77 and $287; recorded as a vendor update dated 19 Nov 2026, not as a correction of the dossier.",
+      "status": "out_of_date",
+      "buying_consequence": "The dossier amounts do not match what we saw now, and the from price depends on the view; get the credit allowance and the price in writing before you buy.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "from EUR 66 /mo",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The rendered pricing page and the plan window in the app both give Assessments Core at EUR 66 per month, per account, billed annually; in the app this is the 250 credits a year choice, EUR 792 billed annually.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+      },
+      "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+      "comparability": "Two euro views of the plan, the rendered page and the app, against each other; the USD text of the page was not the same.",
+      "status": "confirmed",
+      "buying_consequence": "The cheapest Core price is EUR 66 a month in euros, for 250 credits a year and a yearly contract.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Switch to Pay annually to see our offering",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "With the switch on Pay monthly, Gorilla Assessments shows no price, only the 10 free credits a month and the line to switch to Pay annually to see the offering. A monthly price for Assessments, such as the $287 of the dossier, was not shown.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+      },
+      "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+      "comparability": "The monthly view of the plan window against the dossier amount for a monthly bill; the monthly offer may be gone or hidden, which was not tried further.",
+      "status": "out_of_date",
+      "buying_consequence": "You cannot see a monthly Assessments price in the app; Core is bought per year.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Includes 10 credits per month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The start screen said Free plan active and Includes 10 credits per month, and Account, Plan & billing showed 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1. No card was asked during the sign-up.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+      },
+      "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+      "comparability": "The start screen and the billing page against each other; no credit was spent, so the monthly refresh was not seen.",
+      "status": "confirmed",
+      "buying_consequence": "The free plan gives 10 credits a month without a card.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Your Free plan includes 5 essential tests you can use with unlimited candidates, no credits needed.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The Content step says this above five essential tests. No candidate was invited, so unlimited use was not tried.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+      },
+      "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+      "comparability": "A line of the app against a test that invited nobody.",
+      "status": "not_testable",
+      "buying_consequence": "The essentials are free of credits by the text of the app; no candidate ran them.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Consumes 1 credit per candidate from your free monthly allocation.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The Settings step says anti-cheating consumes 1 credit per candidate from the free allocation and shows 1 free credit per candidate; with the premium test Email Skills (Gmail) the same line says 1 credit per candidate. No candidate ran the assessment, so the cost per candidate was read and not measured.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+      },
+      "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+      "comparability": "The credit lines of the builder against a test that invited no candidate.",
+      "status": "not_testable",
+      "buying_consequence": "On the free plan about 10 candidates a month fit in 10 credits, if one assessment costs 1 credit per candidate; this was not run.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "I agree to the Terms and Conditions and understand my Core subscription remains annual",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The payment details of Assessments Core show this tick box next to Assessment Core (750 credits) EUR 2,220/year and the line that it renews automatically on November 19th, 2027. Nothing was ticked; the window was closed with the cross.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+      },
+      "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+      "comparability": "The tick box and renewal line of the payment details against the annual only plan list; cancelling a paid plan was not seen.",
+      "status": "confirmed",
+      "buying_consequence": "Core is a yearly contract that renews by itself, with no monthly option to try it first.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "250 credits/year",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The summary box of the plan window shows Core with 250 credits/year at EUR 66 per month (EUR 792 billed annually); the list also has 450 credits/year at EUR 115 and 750 credits/year at EUR 185, pooled for the year. How many candidates a credit covers depends on the tests chosen and was not run.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+      },
+      "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+      "comparability": "A credit allowance in a plan list against a test that spent no credit.",
+      "status": "not_testable",
+      "buying_consequence": "The credit pool is per year and is spent per candidate and per test; the number of candidates it covers was not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "EUR 2,220 billed annually",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The plan list gives 750 credits/year at EUR 185 per month, EUR 2,220 billed annually, and the payment details of Assessment Core (750 credits) showed Total due today EUR 2,220 (EUR) and EUR 2,220/year. The two amounts agree. A tax line was not recorded and the card was not entered.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+      },
+      "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+      "comparability": "The plan list against the payment details; no stored cost rule or fee line was compared, so a total including tax is not known.",
+      "status": "confirmed",
+      "buying_consequence": "The yearly price of the 750 credit Core plan is EUR 2,220 at the plan list and at the payment details.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-19",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested TestGorilla on Free plans that Daan created. An assessment for a made-up Customer Support Agent, with the tests Communication, Problem Solving and Email Skills (Gmail), was ready about 3 minutes after the onboarding was opened (3 onboarding screens, 4 build steps, about 25 clicks and entries); nobody was invited, so no candidate round and no score report were run. The Free plan showed 10 credits a month and the paid plans were read in the app and on the pricing page: the from amount of Assessments Core differs per view (from $215 in the text of the page, EUR 66 for 250 credits a year in the app and in the rendered page), and neither the $77 nor the $287 of our dossier was seen, so this is recorded as a vendor update dated 19 Nov 2026. The payment details of Core (EUR 2,220 for a year, renewing automatically) were seen and closed with no card. Account and start: Daan created the account and set the password, so the sign-up does not count in the times, and our AI assistant ran the test in its own tab of Daan's browser. The onboarding was opened at 08:48 on 19 November 2026; the interface was already in English. The plans were Assessment Free and Sourcing Free. The dossier name is TestGorilla and the review is on OSM (osm/testgorilla-review.html). The made-up job and data were Test Recruiter, Test Company and Customer Support Agent for a small online shop. Onboarding: step 1 Tell us more about yourself (first name, last name and a phone number; the three boxes for marketing, SMS and WhatsApp stayed empty and no SMS code came), step 2 Tell us about your company (company name, 1-15 employees, role Recruiter), step 3 Where do you want to start? with Gorilla Sourcing (Find candidates) or Gorilla Assessments (Assess candidates); we chose Assess candidates. No link with an ATS, Google or LinkedIn was asked. The start screen said Hi Test!, Free plan active, Includes 10 credits per month and a checklist Jumpstart hiring at 20%. No card was asked during the whole sign-up. Core action, an assessment in four steps: (1) Job details, the question What role are you hiring for? and the language English, filled with Customer Support Agent for a small online shop and the skills written English, problem solving and attention to detail. (2) Tools (0/8): Qualifying questions Free, ID verification Upgrade, Skills tests 0-1 credit, Custom questions Free, AI interviews 2 credits, Video questions 1 credit, Resume scoring Free and Job simulations Upgrade; we chose Skills tests. (3) Content: Essentials, unlimited on your plan, with five tests (Big 5 (OCEAN), Communication, Problem Solving, Motivation and Time Management), with the line Your Free plan includes 5 essential tests you can use with unlimited candidates, no credits needed. We chose Communication (8 mins) and Problem Solving (9 mins), and from the Included test suggestions, which cost 1 credit per candidate from the 10 monthly free credits, Email Skills (Gmail), 1 credit, 10 mins, 16 questions. The total said 3 added, 27 mins. Other suggestions were Email Skills (Microsoft Outlook), Salesforce CRM and Verbal Reasoning, each 1 credit. (4) Settings: Job invitation details; Manage team access, Intro/Outro Video and Deadline and expiration date all say Upgrade required. Anti-cheating is on by default: a webcam photo every 15 seconds, an AI analysis of the photos and Candidates must use a single screen, with the lines Consumes 1 credit per candidate from your free monthly allocation and 1 free credit per candidate. The button Finalize ended it. After Finalize the job page New job, 19 November 2026 with the label Draft showed the cards Invite candidates, Try your assessment and Find candidates for this job, and the tabs Candidates, Assessment tools, Analytics, Job details and Settings. Time: from the onboarding at 08:48 to Finalize at 08:50 it took about 3 minutes, with 3 onboarding screens, 4 build steps and about 25 clicks and entries. Candidate view and plans: the eye icon in the builder opens an Assessment preview with sample questions only (tabs Communication, Problem Solving and Email Skills (Gmail)); nobody was invited and no mail was sent. Try your assessment and Invite were not used, because they send an invitation to an address, so there was no own candidate round and no score report. Account, Plan & billing shows Assessment Free, 10 credits/month, refreshes monthly, 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1; Sourcing Free has no contact credits and contacting and opening up candidates starts on Sourcing Core. A credit is 1 per candidate for a premium test, so our assessment costs 1 credit per candidate and 10 candidates a month fit in the free credits; this was read, not run. Plans: In the app (Upgrade, Pricing plans window, currency EUR, switch Pay monthly or Pay annually with SAVE 25%): Gorilla Sourcing, annually, Free EUR 0 (0 invites, browse and preview only), Core EUR 64 per Sourcing seat per month and Plus EUR 116; monthly Core EUR 85 and Plus EUR 154. Gorilla Assessments, annually, Free EUR 0 (10 credits/mo), Core from EUR 66 per month and Plus from EUR 345 per month. Core has a list: 250 credits/year at EUR 66 per month (EUR 792 billed annually), 450 credits/year at EUR 115 (EUR 1,380 billed annually) and 750 credits/year at EUR 185 (EUR 2,220 billed annually), all pooled for the year. With the switch on Pay monthly, Assessments shows no price, only Free Assessments included: 10 credits a month and the line to switch to Pay annually to see the offering. On the public pricing page (USD, text read while loading): Sourcing Free $0, Core $74 per seat and Plus $134 per seat, billed annually; Assessments Free $0 (10 credits per month, refreshes monthly), Core from $215 per month and Plus from $520 per month, billed annually, SAVE 25%. When the same page was shown in the browser it showed the same cards in euros, Core from EUR 66 and Plus from EUR 345, so the from amount of Core differs per view ($215 in the text, EUR 66 in the app and in the rendered page). Credits on the pricing page: skills tests (350+ premium) 1 credit per candidate, video questions 1 credit per candidate, AI interviews 2 credits per candidate (Plus), job simulations 2 credits (Plus), ID verification 1 credit (Plus). Free: 5 essentials with unlimited use and no credits, 180+ limited tests at 1 Free plan credit per candidate, 5 preset custom questions, 1 premium user role. Core: the full test library of 350+ tests, a shared account-wide credit pool and 2 premium user roles. Plus: the full AI interviews library of 100+, ATS and API integrations, removal of the TestGorilla branding and unlimited premium user roles. The dossier says Core from $77 a month billed annually and from $287 billed monthly; neither amount was seen now (the page text says from $215, the app says EUR 66 for 250 credits a year, and Assessments has no monthly price in the app). This is recorded as a vendor update dated 19 Nov 2026, not as a correction of the dossier. Checkout: Get started at Assessments Core opened Payment details with Assessment Core (750 credits) EUR 2,220/year, Total due today EUR 2,220 (EUR), the line that the subscription renews automatically on November 19th, 2027, the box I agree to the Terms and Conditions and understand my Core subscription remains annual, and a saved Link payment method. Nothing was filled in and nothing was clicked except the cross to close it. No image of this screen was kept, because it shows a payment method. Cancelling: a free plan has nothing to cancel. Account, Plan & billing shows Manage plan and Upgrade now for both products; Manage plan was not opened. Account, My profile has only Switch account (Leave this account to join another) and no button to delete the account. The cancelling route of the paid annual Core plan was not seen. Not tested: inviting a candidate, finishing the test yourself and the score report; Try your assessment and Invite; writing an own custom question; Gorilla Sourcing (search, 900M profiles); Plus features, ATS links, Manage plan and the monthly prices of Assessments (not shown in the app); what one candidate really costs in credits. Clean up: the account, the draft job New job, 19 November 2026 (job id and assessment id in the note) and the test data stay; no candidate, no mail and no payment; the own tab was closed and Daan's other tabs, including a TestGorilla tab on the onboarding address, were not touched. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The from price of Assessments Core is not the same in every view: from $215 in the text of the pricing page, EUR 66 in the app and in the rendered page, and the monthly price of Assessments is not shown at all in the app. Core is annual only, and what the 250 credits a year buy per candidate is only clear from the line 1 credit per candidate. Settings, the anti-cheating options (a webcam photo every 15 seconds and one screen) are on by default and use a credit per candidate. There is no button to delete the account in My profile.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Inviting a candidate, finishing the test as a candidate and the score report.",
+      "Try your assessment and Invite, because they send an invitation to an address.",
+      "Writing an own custom question.",
+      "Gorilla Sourcing (search and the 900M profiles).",
+      "Plus features, ATS links, Manage plan and the monthly prices of Assessments.",
+      "What one candidate really costs in credits; only the lines 1 credit per candidate were read.",
+      "A paid plan, a card, tax and the final total; only the payment details screen was seen and closed.",
+      "Cancelling a paid plan; a free plan has nothing to cancel.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 08:48 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "testgorilla:testgorilla-q1",

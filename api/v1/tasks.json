@@ -3573,6 +3573,176 @@
   },
   {
    "source": "session",
+   "product_name": "Gymcatch",
+   "product_id": "gymcatch",
+   "run_date": "19 November 2026",
+   "session_type": "signup_attempt",
+   "what": "We looked at the pricing page and the registration form of Gymcatch on 19 November 2026 and stopped at the form. The pricing page says EUR 14 a month with 1 month free and \"No credit card required\", but the form has a Card details field and a line that authorises Gymcatch to charge the card, with a first payment date of 19-12-2026. We entered no card, sent nothing and made no account, so the product was not tested.",
+   "findings": [
+    "Pricing page, 19 Nov 2026: \"1 month free. No credit card required. Cancel anytime.\" The form behind its Get started button has a Card details field under Billing information.",
+    "The form says \"Your first payment is due to be taken on 19-12-2026 and you can cancel your subscription at any time before then without being charged.\" We read this and did not try the cancelling route.",
+    "The form also has a line in which you authorise Gymcatch to send instructions to the issuer of your card to take payments. Nothing was ticked or sent, so we do not know whether the form can be sent without a card."
+   ],
+   "not_tested": [
+    "Not tested: the booking features and the rest of the product; the form was not completed.",
+    "Whether the form works without a card, the card processing fees, the bolt-on prices and cancelling."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "1 month free. No credit card required. Cancel anytime.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The pricing page says this under the Get started button. The registration form that the button leads to has a Card details field and a line that authorises Gymcatch to charge the card. We did not enter a card, so we do not know whether the form can be sent without one.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the pricing page and the registration form were only read",
+     "comparability": "A promise on the pricing page against the form of the registration page; one form read once, nothing entered or sent.",
+     "status": "contradicted",
+     "buying_consequence": "A card is asked at sign-up although the page says none is needed.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Card details",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Under Billing information the form has the field Card details and then the button Get started. Nothing was entered.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the pricing page and the registration form were only read",
+     "comparability": "The field on the form against our own reading of the form; the field was not filled in.",
+     "status": "confirmed",
+     "buying_consequence": "The form has a card field.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "I authorise Gymcatch to send instructions to the financial institution that issued my card",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The form has a line that authorises Gymcatch to send instructions to the card issuer to take payments from the card account. It was not ticked or sent.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the pricing page and the registration form were only read",
+     "comparability": "A line on the form against our own reading of it; no authorisation was given.",
+     "status": "confirmed",
+     "buying_consequence": "Sending the form lets Gymcatch charge your card from the first payment date.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your first payment is due to be taken on 19-12-2026 and you can cancel your subscription at any time before then without being charged.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The form says the first payment is due on 19-12-2026, one month after the day of the test, and that you can cancel before then without being charged. No account was made, so the cancelling route was not seen.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the pricing page and the registration form were only read",
+     "comparability": "A sentence on the form against a test that made no account and saw no cancelling route.",
+     "status": "not_testable",
+     "buying_consequence": "You can cancel before the first payment according to the form; how was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The Gymcatch business plan is €14 per month after an initial 1 month free.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The form and the pricing page both say EUR 14 per month after 1 month free. The dossier has From 10 pounds plus VAT per month, read on 16 November on another pricing page in pounds; the amounts are in different currencies and were not converted.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the pricing page and the registration form were only read",
+     "comparability": "A euro amount on the registration page against a dossier amount in pounds plus VAT from another pricing page.",
+     "status": "not_comparable",
+     "buying_consequence": "The price per month is EUR 14 on this page; the dossier amount is in pounds plus VAT.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Any bolt-ons are charged in addition and included in your free month.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The form says bolt-ons are charged in addition and are included in the free month. Processing fees for card payments by customers are not mentioned on the form or the pricing page text that was read, and no bolt-on was chosen.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the pricing page and the registration form were only read",
+     "comparability": "A line on the form against a test that chose no bolt-on and found no fee rates.",
+     "status": "not_testable",
+     "buying_consequence": "The bolt-on prices and the card processing fees were not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "I am authorised by the above business to sign up to Gymcatch and accept the Gymcatch Terms of Use and Data and Privacy Policy.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The form has this line next to the sections for the business and the card. It was not ticked, no account was made and no payment screen with a total or tax was reached, so the plan price could not be compared with a checkout.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the pricing page and the registration form were only read",
+     "comparability": "The printed price against a checkout that was never reached; no stored cost rule or fee line could be compared.",
+     "status": "not_testable",
+     "buying_consequence": "The amount at checkout including tax was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "No account was made; the registration form of Gymcatch has a Card details field and nothing was filled in or sent. On 19 November 2026 the session looked at the pricing page and the registration form of Gymcatch and stopped there: the pricing page says EUR 14 per month with 1 month free and No credit card required, while the form has a Card details field, a line that authorises Gymcatch to charge the card and a first payment date of 19-12-2026. We entered no card, sent nothing and made no account, so the product was not tested. Account and start: no account was made. The pages were looked at in an own Chrome tab on 19 November 2026; the registration form is loaded with JavaScript; nothing was filled in and nothing was sent. The dossier name is Gymcatch (gymcatch.com) and the review is on OSM (osm/gymcatch-review.html). Pricing page https://gymcatch.com/business/pricing/: Gymcatch, from, EUR 14, per month, with 1 month free, the button Get started, and below it 1 month free. No credit card required. Cancel anytime. Registration form https://portal.gymcatch.com/register: Create a new business account. The Gymcatch business plan is EUR 14 per month after an initial 1 month free. Any bolt-ons are charged in addition and included in your free month. The sections are Personal information, Business details and Billing information. Under Billing information: If you have a code please enter it here; Your first payment is due to be taken on 19-12-2026 and you can cancel your subscription at any time before then without being charged.; the line I am authorised by the above business to sign up to Gymcatch and accept the Gymcatch Terms of Use and Data and Privacy Policy.; and the line I authorise Gymcatch to send instructions to the financial institution that issued my card to take payments from my card account in accordance with the terms of my agreement with Gymcatch. After these come the field Card details and the button Get started. Conclusion from the text: the form has a card field and an authorisation to charge the card, while the pricing page says No credit card required. We did not enter a card and did not send anything. Not tested: the core function and the cancelling route; only the sentence on the form that you can cancel before 19-12-2026 was read. Screenshots: none were made; there is no image to check or mask. Clean up: no account was made, so nothing needs deleting; the own tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The pricing page says No credit card required, but the registration form has a Card details field and an authorisation to charge the card, with the first payment due on 19-12-2026 and no payment before then if you cancel. A buyer who reads only the pricing page does not expect to need a card.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Everything after the form: the product and its booking features.",
+     "Whether the form can be sent without a card; nothing was entered.",
+     "The card processing fees and the bolt-on prices.",
+     "Cancelling; only the sentence on the form that you can cancel before 19-12-2026 was read.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session took place on this day; the exact time was not recorded. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "My Stories",
    "product_id": "my-stories",
    "run_date": "2026-11-17",
@@ -11981,6 +12151,175 @@
      "Roles, API entitlement, downgrade, cancellation and passive follow up.",
      "Speech to speech, speech to text, voice cloning, several speakers and any paid plan.",
      "Session and source-reading date: 13 November 2026. Times are CET. The session started at about 17:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Signable",
+   "product_id": "signable",
+   "run_date": "19 November 2026",
+   "session_type": "signup_attempt",
+   "what": "We looked at the sign-up of Signable on 19 November 2026 and stopped at the plans page. The register page sent us on to a plans page where every option is paid: Pay As You Go from EUR 3 per envelope, Essentials at EUR 47 a month billed annually for 300 envelopes, and Business and Enterprise through Talk To Sales. There is no free plan and no trial, so we made no account and could not test the product. We never enter a card in a test.",
+   "findings": [
+    "The register page at signable.com/register has no sign-up form; it leads to the EU plans page, where each plan has a Get Started or Talk To Sales button.",
+    "Plan lines on 19 Nov 2026, in euros: Pay As You Go from EUR 3 per envelope; Essentials EUR 47 per month billed annually with 300 envelopes; Business from EUR 117 per month billed annually from 1,200 envelopes; Enterprise from EUR 292 per month billed annually from 5,000 envelopes.",
+    "The page lists unlimited users and unlimited templates, and says nothing of a free plan or a trial period."
+   ],
+   "not_tested": [
+    "Not tested: sending a document for signature and the signing page; the product itself was not used.",
+    "The payment screen, tax, a final price and cancelling: no button was clicked."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "From €3PER ENVELOPE",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The plans page of the EU variant gives Pay As You Go from EUR 3 per envelope with the buttons Get Started and View Envelope Bundles. The dossier gives the EU page from EUR 3.03 per envelope; the page now shows a rounded EUR 3 and no decimals.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signable-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the plans page was only read",
+     "comparability": "A rounded from price on the page against a dossier amount with decimals; the bundles page was not opened.",
+     "status": "not_comparable",
+     "buying_consequence": "The pay as you go price is from about EUR 3 per envelope; the exact amount per bundle was not opened.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€47PER MONTH",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Essentials is shown as EUR 47 per month, billed annually, with 300 envelopes included and a Get Started button. The dossier has Essentials at EUR 560 a year, which is about EUR 46.67 a month.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signable-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the plans page was only read",
+     "comparability": "The monthly figure on the plans page against the yearly dossier amount; the two agree after rounding.",
+     "status": "confirmed",
+     "buying_consequence": "Essentials costs about EUR 47 a month on a yearly contract for 300 envelopes.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "From €117PER MONTH",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Business is shown as From EUR 117 per month, billed annually, from 1,200 envelopes, with the button Talk To Sales; Enterprise is From EUR 292 per month from 5,000 envelopes. Neither has a button to buy directly.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signable-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the plans page was only read",
+     "comparability": "From prices that go through sales against a test that clicked nothing.",
+     "status": "not_testable",
+     "buying_consequence": "Business and Enterprise need a talk with sales before you can start; the final price was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Get Started",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The Get Started buttons of Pay As You Go and Essentials were not clicked, so the screen after them, a sign-up form or a payment screen, was not seen.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signable-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the plans page was only read",
+     "comparability": "A button label against a test that clicked no button.",
+     "status": "not_testable",
+     "buying_consequence": "What happens after Get Started was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "UNLIMITED USERS",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The feature row of the plans page lists UNLIMITED USERS, UNLIMITED TEMPLATES and ADVANCED ELECTRONIC SIGNATURES (AES). No account was made, so none of them was tried.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signable-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the plans page was only read",
+     "comparability": "A feature row against a test that made no account.",
+     "status": "not_testable",
+     "buying_consequence": "You pay by the envelope, not by the user; the features were read and not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Plans that grow with your needs, not your headcount",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The page offers only paid options. It has no free plan and no trial period, so a buyer cannot try the product before choosing a plan; no sign-up form is reachable without picking one.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signable-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the plans page was only read",
+     "comparability": "The heading of the page against our own look at the register route; one page and one route were seen.",
+     "status": "confirmed",
+     "buying_consequence": "You must pick a paid plan before you can sign up.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "BILLED ANNUALLY",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Essentials, Business and Enterprise are all billed annually. No payment screen was reached, so no total with tax, no renewal line and no cancelling route were seen, and the plan prices could not be compared with a checkout.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/signable-review.html#claim-vs-measured"
+     },
+     "plan": "No plan was chosen; the plans page was only read",
+     "comparability": "The printed plan prices against a checkout that was never reached; no stored cost rule or fee line could be compared.",
+     "status": "not_testable",
+     "buying_consequence": "The amount at checkout including tax was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "No account was made; the register page of Signable only led on to a plans page with paid options and nothing was filled in. On 19 November 2026 the session looked at the sign-up of Signable and stopped at the plans page: the register page sends you to a page with paid options only, Pay As You Go from EUR 3 per envelope or Essentials at EUR 47 per month billed annually for 300 envelopes, and Business and Enterprise through Talk To Sales. There is no free plan and no trial. Nothing was clicked, no account was made and the product itself was not tested. Account and start: no account was made. The page was looked at in an own Chrome tab on 19 November 2026; nothing was filled in and no button for signing up was clicked. The dossier name is Signable (signable.com) and the review is on OSM (osm/signable-review.html). Route: https://www.signable.com/register sent us on to https://www.signable.com/plans/, which loaded the EU variant https://www.signable.com/plans-eu/ (page title Pricing Information - Signable eSignature Software). There is no sign-up form without a choice of plan. Plan lines of the EU page, in euros: PAY AS YOU GO, From EUR 3 PER ENVELOPE, with the buttons Get Started and View Envelope Bundles. ESSENTIALS, EUR 47 PER MONTH, BILLED ANNUALLY, button Get Started, 300 envelopes included. MOST POPULAR, BUSINESS, From EUR 117 PER MONTH, BILLED ANNUALLY, button Talk To Sales, FROM 1,200 envelopes. ENTERPRISE, From EUR 292 PER MONTH, BILLED ANNUALLY, button Talk To Sales, FROM 5,000 envelopes. Headings of the page: Choose the plan that fits the way you work and Plans that grow with your needs, not your headcount; the feature row has UNLIMITED USERS, UNLIMITED TEMPLATES and ADVANCED ELECTRONIC SIGNATURES (AES). What the page does not have: no free plan and no trial period; only paid options. Not tested: the core function (sending a document for signature), the cancelling route and the payment screen, which was not reached because no button was clicked. Screenshots: none were made; there is no image to check or mask. Clean up: no account was made, so nothing needs deleting; the own tab was closed. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The register page does not lead to a sign-up form but to a plans page, and every option is paid: there is no free plan and no trial, so you cannot try the product before you choose a plan. Business and Enterprise are only from prices through Talk To Sales.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Everything after the plans page: sending a document for signature and the signing page.",
+     "A payment screen, tax and a final price; no button was clicked.",
+     "Cancelling.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session took place on this day; the exact time was not recorded. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -27307,6 +27646,223 @@
   },
   {
    "source": "session",
+   "product_name": "TestGorilla",
+   "product_id": "testgorilla",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested TestGorilla on Free plans that Daan created. An assessment for a made-up Customer Support Agent, with the tests Communication, Problem Solving and Email Skills (Gmail), was ready about 3 minutes after the onboarding was opened (3 onboarding screens, 4 build steps, about 25 clicks and entries); nobody was invited, so no candidate round and no score report were run. The Free plan showed 10 credits a month and the paid plans were read in the app and on the pricing page: the from amount of Assessments Core differs per view (from $215 in the text of the page, EUR 66 for 250 credits a year in the app and in the rendered page), and neither the $77 nor the $287 of our dossier was seen, so this is recorded as a vendor update dated 19 Nov 2026. The payment details of Core (EUR 2,220 for a year, renewing automatically) were seen and closed with no card.",
+   "findings": [
+    "Text we checked: \"from $215 /mo\". What we saw: The text of the public pricing page, read while it loaded, gave Assessments Core from $215 per month and Plus from $520, billed annually. The dossier has Core from $77 a month billed annually and from $287 billed monthly. Neither amount was seen now; when the same page was shown in the browser it gave Core from EUR 66 and Plus from EUR 345.",
+    "Text we checked: \"from EUR 66 /mo\". What we saw: The rendered pricing page and the plan window in the app both give Assessments Core at EUR 66 per month, per account, billed annually; in the app this is the 250 credits a year choice, EUR 792 billed annually.",
+    "Text we checked: \"Switch to Pay annually to see our offering\". What we saw: With the switch on Pay monthly, Gorilla Assessments shows no price, only the 10 free credits a month and the line to switch to Pay annually to see the offering. A monthly price for Assessments, such as the $287 of the dossier, was not shown.",
+    "Text we checked: \"Includes 10 credits per month\". What we saw: The start screen said Free plan active and Includes 10 credits per month, and Account, Plan & billing showed 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1. No card was asked during the sign-up.",
+    "Text we checked: \"I agree to the Terms and Conditions and understand my Core subscription remains annual\". What we saw: The payment details of Assessments Core show this tick box next to Assessment Core (750 credits) EUR 2,220/year and the line that it renews automatically on November 19th, 2027. Nothing was ticked; the window was closed with the cross."
+   ],
+   "not_tested": [
+    "Inviting a candidate, finishing the test as a candidate and the score report.",
+    "Try your assessment and Invite, because they send an invitation to an address.",
+    "Writing an own custom question.",
+    "Gorilla Sourcing (search and the 900M profiles).",
+    "Plus features, ATS links, Manage plan and the monthly prices of Assessments.",
+    "What one candidate really costs in credits; only the lines 1 credit per candidate were read.",
+    "A paid plan, a card, tax and the final total; only the payment details screen was seen and closed.",
+    "Cancelling a paid plan; a free plan has nothing to cancel.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "from $215 /mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The text of the public pricing page, read while it loaded, gave Assessments Core from $215 per month and Plus from $520, billed annually. The dossier has Core from $77 a month billed annually and from $287 billed monthly. Neither amount was seen now; when the same page was shown in the browser it gave Core from EUR 66 and Plus from EUR 345.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+     },
+     "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+     "comparability": "The pricing page text in USD against the dossier line of $77 and $287; recorded as a vendor update dated 19 Nov 2026, not as a correction of the dossier.",
+     "status": "out_of_date",
+     "buying_consequence": "The dossier amounts do not match what we saw now, and the from price depends on the view; get the credit allowance and the price in writing before you buy.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "from EUR 66 /mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The rendered pricing page and the plan window in the app both give Assessments Core at EUR 66 per month, per account, billed annually; in the app this is the 250 credits a year choice, EUR 792 billed annually.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+     },
+     "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+     "comparability": "Two euro views of the plan, the rendered page and the app, against each other; the USD text of the page was not the same.",
+     "status": "confirmed",
+     "buying_consequence": "The cheapest Core price is EUR 66 a month in euros, for 250 credits a year and a yearly contract.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Switch to Pay annually to see our offering",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "With the switch on Pay monthly, Gorilla Assessments shows no price, only the 10 free credits a month and the line to switch to Pay annually to see the offering. A monthly price for Assessments, such as the $287 of the dossier, was not shown.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+     },
+     "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+     "comparability": "The monthly view of the plan window against the dossier amount for a monthly bill; the monthly offer may be gone or hidden, which was not tried further.",
+     "status": "out_of_date",
+     "buying_consequence": "You cannot see a monthly Assessments price in the app; Core is bought per year.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Includes 10 credits per month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The start screen said Free plan active and Includes 10 credits per month, and Account, Plan & billing showed 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1. No card was asked during the sign-up.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+     },
+     "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+     "comparability": "The start screen and the billing page against each other; no credit was spent, so the monthly refresh was not seen.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan gives 10 credits a month without a card.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your Free plan includes 5 essential tests you can use with unlimited candidates, no credits needed.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The Content step says this above five essential tests. No candidate was invited, so unlimited use was not tried.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+     },
+     "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+     "comparability": "A line of the app against a test that invited nobody.",
+     "status": "not_testable",
+     "buying_consequence": "The essentials are free of credits by the text of the app; no candidate ran them.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Consumes 1 credit per candidate from your free monthly allocation.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The Settings step says anti-cheating consumes 1 credit per candidate from the free allocation and shows 1 free credit per candidate; with the premium test Email Skills (Gmail) the same line says 1 credit per candidate. No candidate ran the assessment, so the cost per candidate was read and not measured.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+     },
+     "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+     "comparability": "The credit lines of the builder against a test that invited no candidate.",
+     "status": "not_testable",
+     "buying_consequence": "On the free plan about 10 candidates a month fit in 10 credits, if one assessment costs 1 credit per candidate; this was not run.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "I agree to the Terms and Conditions and understand my Core subscription remains annual",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The payment details of Assessments Core show this tick box next to Assessment Core (750 credits) EUR 2,220/year and the line that it renews automatically on November 19th, 2027. Nothing was ticked; the window was closed with the cross.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+     },
+     "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+     "comparability": "The tick box and renewal line of the payment details against the annual only plan list; cancelling a paid plan was not seen.",
+     "status": "confirmed",
+     "buying_consequence": "Core is a yearly contract that renews by itself, with no monthly option to try it first.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "250 credits/year",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The summary box of the plan window shows Core with 250 credits/year at EUR 66 per month (EUR 792 billed annually); the list also has 450 credits/year at EUR 115 and 750 credits/year at EUR 185, pooled for the year. How many candidates a credit covers depends on the tests chosen and was not run.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+     },
+     "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+     "comparability": "A credit allowance in a plan list against a test that spent no credit.",
+     "status": "not_testable",
+     "buying_consequence": "The credit pool is per year and is spent per candidate and per test; the number of candidates it covers was not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "EUR 2,220 billed annually",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The plan list gives 750 credits/year at EUR 185 per month, EUR 2,220 billed annually, and the payment details of Assessment Core (750 credits) showed Total due today EUR 2,220 (EUR) and EUR 2,220/year. The two amounts agree. A tax line was not recorded and the card was not entered.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/testgorilla-review.html#claim-vs-measured"
+     },
+     "plan": "Assessment Free and Sourcing Free; the plans were read in the app and on the pricing page; the payment details of Core were seen and closed",
+     "comparability": "The plan list against the payment details; no stored cost rule or fee line was compared, so a total including tax is not known.",
+     "status": "confirmed",
+     "buying_consequence": "The yearly price of the 750 credit Core plan is EUR 2,220 at the plan list and at the payment details.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested TestGorilla on Free plans that Daan created. An assessment for a made-up Customer Support Agent, with the tests Communication, Problem Solving and Email Skills (Gmail), was ready about 3 minutes after the onboarding was opened (3 onboarding screens, 4 build steps, about 25 clicks and entries); nobody was invited, so no candidate round and no score report were run. The Free plan showed 10 credits a month and the paid plans were read in the app and on the pricing page: the from amount of Assessments Core differs per view (from $215 in the text of the page, EUR 66 for 250 credits a year in the app and in the rendered page), and neither the $77 nor the $287 of our dossier was seen, so this is recorded as a vendor update dated 19 Nov 2026. The payment details of Core (EUR 2,220 for a year, renewing automatically) were seen and closed with no card. Account and start: Daan created the account and set the password, so the sign-up does not count in the times, and our AI assistant ran the test in its own tab of Daan's browser. The onboarding was opened at 08:48 on 19 November 2026; the interface was already in English. The plans were Assessment Free and Sourcing Free. The dossier name is TestGorilla and the review is on OSM (osm/testgorilla-review.html). The made-up job and data were Test Recruiter, Test Company and Customer Support Agent for a small online shop. Onboarding: step 1 Tell us more about yourself (first name, last name and a phone number; the three boxes for marketing, SMS and WhatsApp stayed empty and no SMS code came), step 2 Tell us about your company (company name, 1-15 employees, role Recruiter), step 3 Where do you want to start? with Gorilla Sourcing (Find candidates) or Gorilla Assessments (Assess candidates); we chose Assess candidates. No link with an ATS, Google or LinkedIn was asked. The start screen said Hi Test!, Free plan active, Includes 10 credits per month and a checklist Jumpstart hiring at 20%. No card was asked during the whole sign-up. Core action, an assessment in four steps: (1) Job details, the question What role are you hiring for? and the language English, filled with Customer Support Agent for a small online shop and the skills written English, problem solving and attention to detail. (2) Tools (0/8): Qualifying questions Free, ID verification Upgrade, Skills tests 0-1 credit, Custom questions Free, AI interviews 2 credits, Video questions 1 credit, Resume scoring Free and Job simulations Upgrade; we chose Skills tests. (3) Content: Essentials, unlimited on your plan, with five tests (Big 5 (OCEAN), Communication, Problem Solving, Motivation and Time Management), with the line Your Free plan includes 5 essential tests you can use with unlimited candidates, no credits needed. We chose Communication (8 mins) and Problem Solving (9 mins), and from the Included test suggestions, which cost 1 credit per candidate from the 10 monthly free credits, Email Skills (Gmail), 1 credit, 10 mins, 16 questions. The total said 3 added, 27 mins. Other suggestions were Email Skills (Microsoft Outlook), Salesforce CRM and Verbal Reasoning, each 1 credit. (4) Settings: Job invitation details; Manage team access, Intro/Outro Video and Deadline and expiration date all say Upgrade required. Anti-cheating is on by default: a webcam photo every 15 seconds, an AI analysis of the photos and Candidates must use a single screen, with the lines Consumes 1 credit per candidate from your free monthly allocation and 1 free credit per candidate. The button Finalize ended it. After Finalize the job page New job, 19 November 2026 with the label Draft showed the cards Invite candidates, Try your assessment and Find candidates for this job, and the tabs Candidates, Assessment tools, Analytics, Job details and Settings. Time: from the onboarding at 08:48 to Finalize at 08:50 it took about 3 minutes, with 3 onboarding screens, 4 build steps and about 25 clicks and entries. Candidate view and plans: the eye icon in the builder opens an Assessment preview with sample questions only (tabs Communication, Problem Solving and Email Skills (Gmail)); nobody was invited and no mail was sent. Try your assessment and Invite were not used, because they send an invitation to an address, so there was no own candidate round and no score report. Account, Plan & billing shows Assessment Free, 10 credits/month, refreshes monthly, 10 credits remaining, 0 of 10 credits used and Next reset: Dec 1; Sourcing Free has no contact credits and contacting and opening up candidates starts on Sourcing Core. A credit is 1 per candidate for a premium test, so our assessment costs 1 credit per candidate and 10 candidates a month fit in the free credits; this was read, not run. Plans: In the app (Upgrade, Pricing plans window, currency EUR, switch Pay monthly or Pay annually with SAVE 25%): Gorilla Sourcing, annually, Free EUR 0 (0 invites, browse and preview only), Core EUR 64 per Sourcing seat per month and Plus EUR 116; monthly Core EUR 85 and Plus EUR 154. Gorilla Assessments, annually, Free EUR 0 (10 credits/mo), Core from EUR 66 per month and Plus from EUR 345 per month. Core has a list: 250 credits/year at EUR 66 per month (EUR 792 billed annually), 450 credits/year at EUR 115 (EUR 1,380 billed annually) and 750 credits/year at EUR 185 (EUR 2,220 billed annually), all pooled for the year. With the switch on Pay monthly, Assessments shows no price, only Free Assessments included: 10 credits a month and the line to switch to Pay annually to see the offering. On the public pricing page (USD, text read while loading): Sourcing Free $0, Core $74 per seat and Plus $134 per seat, billed annually; Assessments Free $0 (10 credits per month, refreshes monthly), Core from $215 per month and Plus from $520 per month, billed annually, SAVE 25%. When the same page was shown in the browser it showed the same cards in euros, Core from EUR 66 and Plus from EUR 345, so the from amount of Core differs per view ($215 in the text, EUR 66 in the app and in the rendered page). Credits on the pricing page: skills tests (350+ premium) 1 credit per candidate, video questions 1 credit per candidate, AI interviews 2 credits per candidate (Plus), job simulations 2 credits (Plus), ID verification 1 credit (Plus). Free: 5 essentials with unlimited use and no credits, 180+ limited tests at 1 Free plan credit per candidate, 5 preset custom questions, 1 premium user role. Core: the full test library of 350+ tests, a shared account-wide credit pool and 2 premium user roles. Plus: the full AI interviews library of 100+, ATS and API integrations, removal of the TestGorilla branding and unlimited premium user roles. The dossier says Core from $77 a month billed annually and from $287 billed monthly; neither amount was seen now (the page text says from $215, the app says EUR 66 for 250 credits a year, and Assessments has no monthly price in the app). This is recorded as a vendor update dated 19 Nov 2026, not as a correction of the dossier. Checkout: Get started at Assessments Core opened Payment details with Assessment Core (750 credits) EUR 2,220/year, Total due today EUR 2,220 (EUR), the line that the subscription renews automatically on November 19th, 2027, the box I agree to the Terms and Conditions and understand my Core subscription remains annual, and a saved Link payment method. Nothing was filled in and nothing was clicked except the cross to close it. No image of this screen was kept, because it shows a payment method. Cancelling: a free plan has nothing to cancel. Account, Plan & billing shows Manage plan and Upgrade now for both products; Manage plan was not opened. Account, My profile has only Switch account (Leave this account to join another) and no button to delete the account. The cancelling route of the paid annual Core plan was not seen. Not tested: inviting a candidate, finishing the test yourself and the score report; Try your assessment and Invite; writing an own custom question; Gorilla Sourcing (search, 900M profiles); Plus features, ATS links, Manage plan and the monthly prices of Assessments (not shown in the app); what one candidate really costs in credits. Clean up: the account, the draft job New job, 19 November 2026 (job id and assessment id in the note) and the test data stay; no candidate, no mail and no payment; the own tab was closed and Daan's other tabs, including a TestGorilla tab on the onboarding address, were not touched. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The from price of Assessments Core is not the same in every view: from $215 in the text of the pricing page, EUR 66 in the app and in the rendered page, and the monthly price of Assessments is not shown at all in the app. Core is annual only, and what the 250 credits a year buy per candidate is only clear from the line 1 credit per candidate. Settings, the anti-cheating options (a webcam photo every 15 seconds and one screen) are on by default and use a credit per candidate. There is no button to delete the account in My profile.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Inviting a candidate, finishing the test as a candidate and the score report.",
+     "Try your assessment and Invite, because they send an invitation to an address.",
+     "Writing an own custom question.",
+     "Gorilla Sourcing (search and the 900M profiles).",
+     "Plus features, ATS links, Manage plan and the monthly prices of Assessments.",
+     "What one candidate really costs in credits; only the lines 1 credit per candidate were read.",
+     "A paid plan, a card, tax and the final total; only the payment details screen was seen and closed.",
+     "Cancelling a paid plan; a free plan has nothing to cancel.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 08:48 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Freshworks",
    "product_id": "freshworks",
    "run_date": "2026-10-21",
@@ -33494,6 +34050,271 @@
      "Actual cancellation, expiry and deletion.",
      "All kit fields that were not entered.",
      "Application reimport or restoration."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "SMTP2GO",
+   "product_id": "smtp2go",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested SMTP2GO on a Free account that Daan created. A Verified Sender was set up by a link in a mail, without DNS; one API key was made and one test mail was sent through the API at 08:06:16. The report showed Processed at 08:06:18 and Delivered at 08:06:27, 11 seconds after the curl, to our own mailbox only. The dashboard showed 1/1.000 emails for the month and no daily maximum; the 200 a day is on the pricing page only. The prices in the app and on the pricing page match our dossier, and the card step sits behind Proceed to Checkout, which was not clicked. Cancelling was not tried: the free plan costs nothing and the link Close your account opens a survey page.",
+   "findings": [
+    "Text we checked: \"\"succeeded\":1,\"failed\":0\". What we saw: The API answered with this after the curl at 08:06:16. The report showed Processed at 8:06:18 AM and Delivered at 8:06:27 AM, 11 seconds after the curl, and the message was in our own mailbox.",
+    "Text we checked: \"Your email is now a Verified Sender\". What we saw: A single sender address was verified through a link in a confirmation mail, with no DNS and no domain check. The screen said 5 of 5 verified senders remaining on the free plan.",
+    "Text we checked: \"0/1.000 EMAILS SENT THIS BILLING MONTH. RESETS ON DECEMBER 19TH\". What we saw: The dashboard showed 0/1.000 before and 1/1.000 after the test message, so the monthly limit of the Free plan is 1.000 and counts a sent message at once.",
+    "Text we checked: \"$15.00/mo\". What we saw: In the app Starter shows 10.000 emails/month at $15.00/mo (+ $1.20 per thousand extra emails) and 50.000 at $30.00/mo (+ $1.00); the pricing page shows Starter $15/mo for 10,000. The dossier has both steps."
+   ],
+   "not_tested": [
+    "Domain verification and DNS, on purpose.",
+    "An SMTP connection with a test script; only the API was used.",
+    "A dedicated IP, which was only seen on the plan cards.",
+    "A real bounce or spam complaint; only 0,00% bounce rate and 0,00% spam rate were seen.",
+    "Delivery to Gmail or Outlook; only our own mailbox received the mail.",
+    "A paid plan, the card step, tax and a total.",
+    "Closing the account.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "\"succeeded\":1,\"failed\":0",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The API answered with this after the curl at 08:06:16. The report showed Processed at 8:06:18 AM and Delivered at 8:06:27 AM, 11 seconds after the curl, and the message was in our own mailbox.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "The API answer and the report lines against one test message to our own mailbox; no bulk, no other provider mailbox and no bounce was tried.",
+     "status": "confirmed",
+     "buying_consequence": "A first mail through the API reaches your own mailbox within seconds; other mailboxes were not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "0,00% BOUNCE RATE",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "After one message the dashboard showed a bounce rate of 0,00% and a spam rate of 0,00%, both marked GOOD. No bounce or complaint was caused on purpose.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "Two rates on the dashboard against a sample of one message; no rate can be compared.",
+     "status": "not_testable",
+     "buying_consequence": "The dossier point on delivery quality cannot be judged from one message to our own mailbox.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your email is now a Verified Sender",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "A single sender address was verified through a link in a confirmation mail, with no DNS and no domain check. The screen said 5 of 5 verified senders remaining on the free plan.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "The setup screens against our own run from the dashboard to Delivered; domain verification was not tried.",
+     "status": "confirmed",
+     "buying_consequence": "You can send from a single address within minutes without touching DNS; a domain still needs DNS later.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "0/1.000 EMAILS SENT THIS BILLING MONTH. RESETS ON DECEMBER 19TH.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The dashboard showed 0/1.000 before and 1/1.000 after the test message, so the monthly limit of the Free plan is 1.000 and counts a sent message at once.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "The monthly counter before and after one message against the 1,000 of the plan; a fuller month was not tried.",
+     "status": "confirmed",
+     "buying_consequence": "The free allowance is easy to see on the dashboard.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Limited to 200 emails/day.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The daily maximum of 200 is on the pricing page only. The dashboard shows the monthly counter and no daily figure, and one message does not reach the limit.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "A pricing page line against a dashboard without a daily figure and a test of one message.",
+     "status": "not_testable",
+     "buying_consequence": "You only learn of the daily cap from the pricing page; what happens at 200 a day was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "*Limited to 14 days for the free plan.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The asterisk sits behind Toll-Free Phone* and Live Chat* in the list of help options on the pricing page, so phone and live chat last 14 days on the free plan; tickets remain. This was read, not tried.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "The footnote against the list it belongs to; no phone call or chat was started.",
+     "status": "not_testable",
+     "buying_consequence": "The 14-day limit applies to phone and chat only, not to the account; it was not tried.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$15.00/mo",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "In the app Starter shows 10.000 emails/month at $15.00/mo (+ $1.20 per thousand extra emails) and 50.000 at $30.00/mo (+ $1.00); the pricing page shows Starter $15/mo for 10,000. The dossier has both steps.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "The plan list in the app and the pricing page against the dossier amounts; tax is not part of the printed amounts.",
+     "status": "confirmed",
+     "buying_consequence": "Starter costs $15 a month for 10.000 emails or $30 for 50.000; the prices did not change since the dossier of 17 Nov 2026.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "1 free dedicated IP address included.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Professional starts at 100.000 emails/month for $75.00/mo (+ $0.85 per thousand) and each Professional step lists 1 free dedicated IP address included. No dedicated IP was set up.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "A plan card line against a Free account; the IP was only read on the card.",
+     "status": "not_testable",
+     "buying_consequence": "The dedicated IP starts at $75 a month; what it takes to set it up was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Annual (save 17%)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The switch Annual (save 17%) is on the plan page. The annual amounts were not opened in the app, so the saving was not worked out.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "A switch label against a page that was only read with monthly billing.",
+     "status": "not_testable",
+     "buying_consequence": "The yearly saving was not checked against an amount.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Our Promise: If you don't love us within 30 days, we'll give you a full refund.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "This promise is on the pricing page. Nothing was paid, so no refund route was used.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "A pricing page promise against a Free account that never paid.",
+     "status": "not_testable",
+     "buying_consequence": "The refund promise exists on the page; how a refund works was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Close your account",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Account, Change Plan has a link at the bottom that opens a survey page We're sad to see you go... with reasons. It was not clicked through and nothing was confirmed; the free plan costs nothing, so no cancelling is needed.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "A link in the app against a Free account; the closing step was not confirmed.",
+     "status": "not_testable",
+     "buying_consequence": "Ending a free account is a survey page away; what closing does to data and a paid plan was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Proceed to Checkout",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "In Change Plan the summary showed Free Plan $0.00/mo and Total $0.00 with a greyed out Proceed to Checkout. It was not used, the card step was not reached, and no tax or total of a paid plan was seen, so the plan prices could not be compared with a checkout.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/smtp2go-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan; the plans were read in the app and on the pricing page; the card step was not reached",
+     "comparability": "The printed plan prices against a checkout that was never reached; no stored cost rule or fee line could be compared.",
+     "status": "not_testable",
+     "buying_consequence": "The amount at checkout including tax was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested SMTP2GO on a Free account that Daan created. A Verified Sender was set up by a link in a mail, without DNS; one API key was made and one test mail was sent through the API at 08:06:16. The report showed Processed at 08:06:18 and Delivered at 08:06:27, 11 seconds after the curl, to our own mailbox only. The dashboard showed 1/1.000 emails for the month and no daily maximum; the 200 a day is on the pricing page only. The prices in the app and on the pricing page match our dossier, and the card step sits behind Proceed to Checkout, which was not clicked. Cancelling was not tried: the free plan costs nothing and the link Close your account opens a survey page. Account and start: Daan created and activated the account (EU region), so the sign-up does not count in the times, and our AI assistant ran the test in its own tab of Daan's browser. The dashboard was opened at 08:04 on 19 November 2026; the interface was already in English. The test plan was Free (1.000 emails/month). The dossier name is SMTP2GO and the review is on OSM (osm/smtp2go-review.html). First screen: a banner Before you can send emails, you'll need to add a Verified Sender to your account. and a setup list Almost there! Complete your account setup (25% complete). The dashboard showed 0/1.000 EMAILS SENT THIS BILLING MONTH. RESETS ON DECEMBER 19TH. A daily maximum of 200 is not shown in the dashboard. Core action: (1) Sending, Verified Senders, Single Sender Emails, Add single sender email, with a sender address of ours, no DNS and no domain check; the screen said 5 of 5 verified senders remaining on the free plan. (2) The confirmation mail arrived at 08:04 (subject [SMTP2GO] Please verify your email address for sending); its link opened Your email is now a Verified Sender. (3) Sending, API Keys, Add API Key with the description hands-on test and only the default permission (the dialog says Your API key has only one permission enabled: /email/send); the message Successfully added API Key followed. (4) A curl POST to the send endpoint of the API at 08:06:16, sender and recipient our own mailbox, subject SMTP2GO hands-on test 19 Nov 2026; the answer said \"succeeded\":1,\"failed\":0. (5) Reports, Activity showed Processed at 8:06:18 AM and Delivered at 8:06:27 AM, Email Activity (1 total) after a refresh; the log keeps Last 5 Days. (6) The message was in the inbox of our own mailbox. Time: from the dashboard opening at 08:04 to Delivered at 08:06:27 it took a little over 2 minutes, of which a short minute was waiting for the confirmation mail and reading, and about 12 clicks and entries. From the curl to Delivered: 11 seconds. The dashboard then showed 1/1.000 emails, 0,00% bounce rate and 0,00% spam rate. Plans up to the payment: Read by the tester on 19 Nov 2026 in the app (Account, Change Plan, monthly, in USD, with a switch Annual (save 17%)) and on the public pricing page smtp2go.com/pricing. Free Plan: 1.000 emails/month, 5 days of reporting, extra emails not permitted, Limited to 200 emails/day. Starter: 10.000 emails/month at $15.00/mo (+ $1.20 per thousand extra emails) and 50.000 at $30.00/mo (+ $1.00); the page shows Starter $15/mo for 10,000 emails and 30 days of email reporting. Professional: 100.000 at $75.00/mo (+ $0.85 per thousand extra emails, 1 free dedicated IP address included), then 250.000 at $170.00/mo, 500.000 at $280.00/mo and 1.000.000 at $520.00/mo. These are the amounts of the dossier (re-verified 17 Nov 2026), so the prices did not change; both Starter steps, $15 for 10.000 and $30 for 50.000, are already in the dossier. The footnote *Limited to 14 days for the free plan. sits behind Toll-Free Phone* and Live Chat* in the list of help options, so phone and live chat last 14 days on the free plan and tickets remain. The page promises Our Promise: If you don't love us within 30 days, we'll give you a full refund., and Sign Up Free says No credit card required. Checkout: the card step was not reached. In Change Plan the summary showed Free Plan $0.00/mo and Total $0.00 with Proceed to Checkout; it was not clicked, and the card would come only there. No tax, total or card field was seen. Cancelling: no cancelling is needed because the free plan costs nothing. Account, Change Plan has a link Close your account at the bottom; it opens a survey page We're sad to see you go... with reasons (Missing features I need, Switching to another product, Too expensive, Technical issues). It was not clicked through and nothing was confirmed. Not tested: domain verification and DNS (on purpose), an SMTP connection with a test script (only the API was used), a dedicated IP (only seen on the plan cards), a real bounce or spam complaint (only 0,00% bounce rate and 0,00% spam rate were seen), delivery to Gmail or Outlook (only our own mailbox), a paid plan and the card step. Clean up: the API key hands-on test was deleted with one click (the message Successfully deleted API Key, and the list says You currently don't have any API Keys.); the sender address stays as a Verified Sender (needed, no cost); the account and the one test message stay; our own tab was closed and Daan's other tabs were not touched. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Before you can send anything you need a Verified Sender, and the confirmation mail has to arrive first. The dashboard shows the monthly limit but not the daily maximum of 200, which is only on the pricing page. The footnote of 14 days on the free plan sits behind phone and live chat in a list of help options, which is easy to read as a limit on everything. The full API key is hidden behind a Copy button.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Domain verification and DNS, on purpose.",
+     "An SMTP connection with a test script; only the API was used.",
+     "A dedicated IP, which was only seen on the plan cards.",
+     "A real bounce or spam complaint; only 0,00% bounce rate and 0,00% spam rate were seen.",
+     "Delivery to Gmail or Outlook; only our own mailbox received the mail.",
+     "A paid plan, the card step, tax and a total.",
+     "Closing the account.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 08:04 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -45813,6 +46634,177 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Modge",
+   "product_id": "modge",
+   "run_date": "19 November 2026",
+   "session_type": "signup_attempt",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the sign-up of Modge stopped at step 5 of 5: after the organisation (a phone number is required), the company size and the plan (Pro at $7.00 per seat a month was preselected), an embedded Stripe screen asked for a card for the 14 day trial, with Due today $0.00 and US$ 7,00 a month from 3 December 2026. Our dossier had a 14 day trial with no card. We entered no card, so the trial did not start, and opening the app sent us back to \"Preparing your checkout\". The product was not tested.",
+   "findings": [
+    "Step 4 of 5 says \"Start a full-feature free trial. Cancel anytime.\" and a plan must be chosen; monthly prices per seat were Basic $5.00, Pro $7.00 and Premium $9.00, with the add-on More Screenshots at +$2.00 per seat a month.",
+    "Step 5 of 5 shows Due today $0.00, 14 days free and then US$ 7,00 a month from 3 December 2026, and asks for card information before the trial starts. The public pricing page did not say \"no credit card\".",
+    "The organisation step requires a phone number (left empty, the app said \"Phone number is required\"); with a number filled in, no SMS code came.",
+    "Opening the app address in the same tab went back to \"Preparing your checkout\", so without a card the app could not be reached."
+   ],
+   "not_tested": [
+    "Not tested: team members, a project, manual hours, the timesheet, a report, an export and the time to the first line of hours; the app was never reached.",
+    "The trial counter, the plans and cancelling inside the app, and whether another route opens the app without a card."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Start a full-feature free trial. Cancel anytime.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Step 4/5 says this above the plans, and the Start Free Trial button leads to a Stripe screen that asks for card information. The dossier has the trial as no card; the public pricing page did not say no credit card. We did not enter a card.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
+     },
+     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
+     "comparability": "The plan step and the Stripe screen against the dossier line of a 14 day trial with no card; one sign-up, one plan chosen, nothing entered.",
+     "status": "contradicted",
+     "buying_consequence": "The trial is not card free: a card is asked before the app opens.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Due today $0.00",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Step 5/5 shows Selected plan Pro plan $7.00/seat/month and Due today $0.00, and the card fields are still required to start the trial. The Stripe screen says 14 days free and then US$ 7,00 per month from 3 December 2026.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
+     },
+     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
+     "comparability": "The summary and the Stripe text against each other; 14 days from 19 November runs to 3 December, which was not run.",
+     "status": "confirmed",
+     "buying_consequence": "You pay nothing today, but a card is stored and $7.00 a month is taken from 3 December unless you cancel.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Basic $5.00",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Step 4/5, monthly, per seat: Basic $5.00, Pro $7.00 (Popular) and Premium $9.00. The dossier has Basic at $5 monthly and $4 billed annually, and the public pricing page read in the first attempt had Basic $4, Pro $5.50 and Premium $7 billed annually.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
+     },
+     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
+     "comparability": "The monthly amounts in the app against the dossier and the annual amounts of the public page; tax is not part of the printed amounts.",
+     "status": "confirmed",
+     "buying_consequence": "The monthly price of Basic is $5 per seat; Pro is $7 and Premium $9.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "-29%",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The Yearly switch in step 4/5 is marked -29%. The yearly amounts were not opened, and the public page has Basic at $4 against $5 monthly, which is about 20%, so the saving could not be worked out.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
+     },
+     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
+     "comparability": "A switch label against a plan step that was only read with monthly billing; the dossier already says the numbers on the pages do not agree.",
+     "status": "not_testable",
+     "buying_consequence": "The yearly saving was not checked against an amount.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Phone Number *",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The organisation step has a required field Phone Number. In the first attempt, left empty, the app said Phone number is required; in the second attempt a number was filled in and Next was accepted with no SMS code.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
+     },
+     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
+     "comparability": "The required field in two attempts, one with and one without a number; the second one went on.",
+     "status": "confirmed",
+     "buying_consequence": "You need a phone number to make an organisation; no code was asked.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Preparing your checkout...",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Opening https://app.modge.com/ in the same tab sent us back to Step 5/5 Preparing your checkout. Without a card the app was not reached and the organisation could not be used.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
+     },
+     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
+     "comparability": "Our own attempt to open the app after the card step against the claim of a trial; one tab, one attempt.",
+     "status": "confirmed",
+     "buying_consequence": "You cannot use or look at the product before a card is given.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Vervolgens US$ 7,00 per maand vanaf 3 december 2026",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The Stripe screen says, in Dutch, 14 days free and then US$ 7,00 per month from 3 December 2026. No card was entered and no payment screen with tax or a total of a paid month was seen, so the plan price could not be compared with a checkout.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
+     },
+     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
+     "comparability": "The printed plan price against a checkout that was never completed; no stored cost rule or fee line could be compared.",
+     "status": "not_testable",
+     "buying_consequence": "The amount at checkout including tax was not seen.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session went through the sign-up of Modge in the account that Daan created and stopped at step 5 of 5: after the organisation (a phone number is required), the company size and the plan (Pro $7.00 per seat per month was preselected), an embedded Stripe screen asks for a card for the 14 day trial, with Due today $0.00 and US$ 7,00 per month from 3 December 2026. Our dossier says a 14 day trial with no card. Nothing was entered, so the trial did not start and the app could not be used: opening the app sent us back to Preparing your checkout. The product itself was not tested. Account and start: Daan created the account (the e-mail was confirmed and he was logged in) and our AI assistant worked in its own tab of Daan's browser; the second attempt started at 08:45 on 19 November 2026 at https://app.modge.com/setup-organization. The dossier name is Modge (modge.com) and the review is on OSM (osm/modge-review.html). The app was in English; only the Stripe payment screen was in Dutch. The second session leads; the first session (08:35) is only used where it adds a fact that the second does not repeat, and is named as such. First screen: Welcome to Modge! with the button Create Organization. It leads to Step 2/5, Let's Create Organization, with the fields Organization Name, Phone Number (with a separate country field) and Organization Timezone (Europe/Amsterdam (GMT+1)). We filled in a made-up organisation name, the country Netherlands (+31) and a mobile number, which Daan has given standing permission for; no box for marketing or for contact by sales was present. Next was accepted and no SMS code came. In the first attempt the same step was tried without a phone number and the app said Phone number is required, so the phone number is required to make the organisation. Step 3/5, How big is your company?: we chose 2-19. Step 4/5, Choose The Plan That Fits Your Team: Start a full-feature free trial. Cancel anytime. Monthly: Basic $5.00, Pro $7.00 (Popular) and Premium $9.00 per seat per month; Yearly is marked -29%. Pro stood preselected (1 seat, 1 seat x $7.00/mo) and the add-on More Screenshots at +$2.00 per seat per month was unticked. Choosing a plan is required in the sign-up; there is no button without a plan. Plans as the app shows them (step 4/5, monthly, per seat): Basic $5.00 with manual and automatic time tracking, screenshots (18 an hour), timesheets and approvals, projects, clients and payroll exports, Tracked Hours and App Usage reports and an API. Pro $7.00 (Popular) adds on-demand screenshots, Stripe client billing, shifts and scheduling with a Schedule Adherence report, leave, teams, a Manual Time Edits report and Priority support. Premium $9.00 adds the Unusual Activity report, Burnout-risk insights, the Profitability report and contract signing. The add-on More Screenshots is +$2.00 per seat per month (60 an hour). The public pricing page https://modge.com/pricing (first session, 19 November 2026): Start a full-feature 14-day free trial. Cancel anytime. Basic $4 per seat per month, billed annually, Pro $5.50 and Premium $7 (annual), Enterprise Custom, add-ons More Screenshots and Extended Data Retention at $2 per seat per month. No sentence about no credit card was found on that page. A seat is anyone whose time the desktop agent tracks; after the trial you convert to a paid plan or the account stays read-only for 30 days for export and is then removed; cancelling is from settings and runs to the end of the billing period (the cancelling route was read on the page, not seen in the app). Card step: Start Free Trial led to Step 5/5 with Selected plan Pro plan $7.00/seat/month and Due today $0.00, and an embedded Stripe screen in Dutch with 14 dagen gratis, then Vervolgens US$ 7,00 per maand vanaf 3 december 2026, a secure payment line with Link, an e-mail field and card information fields (card number, MM / JJ, CVC, name of the card holder). We stopped here and entered nothing. Opening https://app.modge.com/ in the same tab went back to Step 5/5 Preparing your checkout..., so without a card the app is not reachable and the organisation cannot be used. The trial counter was not seen in the app, because the app was not reached; Stripe says 14 days free from 19 November, so it runs to 3 December. Not tested: team members without an invitation mail, a project, 3 manual hours, the timesheet and a report, an export (CSV and PDF), the time to the first line of hours, the plans and the cancelling route inside the app. Screenshots: none are in the repo; the images of step 5/5 show Daan's e-mail address and a Dutch Stripe text and were not used. Clean up: the account exists; the organisation was filled in at step 2 but the sign-up was not finished, no trial started and no card was entered; the phone number was entered under standing permission and no SMS code was asked; the own tab was closed and Daan's own Modge tab was not touched. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The trial needs a card at step 5 of 5, before the app opens, although Due today is $0.00 and the plan page says Cancel anytime. A plan must be chosen in the sign-up, and a phone number is required for the organisation. The app sends you back to the checkout until a card is given, so you cannot look at the product first.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Everything after the card screen: team members, a project, 3 manual hours, the timesheet, a report and an export.",
+     "The time to the first line of hours.",
+     "The trial counter, the plans and cancelling inside the app.",
+     "Whether the app can be reached without a card by another route; only opening the app address was tried.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The second attempt started at about 08:45 CET; the first one at about 08:35. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {

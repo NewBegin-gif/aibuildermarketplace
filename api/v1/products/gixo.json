@@ -73,18 +73,681 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/gixo-review/",
+  "method": [
+   "The test ran in Daan's browser, driven by our AI assistant",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Content writers drafting long articles from sources",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "An article of about 800 words chosen was written from who.int and cdc.gov in about three and a half minutes (Start writing at about 16:03:30, draft ready at about 16:07), after 8 clicks or inputs from the trial button.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "One article on one topic and one day against a dossier audience line that gives no time or step count.",
+    "status": "not_comparable",
+    "buying_consequence": "A writer gets a full long draft in a few minutes, but it still has to be checked.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "It's longer than you asked for: about 800 words chosen, 1,159 written.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The length setting was Short (About 800 words) and the draft came out at 1,159 words; the panel says Quill kept every fact rather than cut it short.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "One draft against a length setting; the dossier makes no claim about how closely the length is kept.",
+    "status": "not_comparable",
+    "buying_consequence": "Expect to trim a draft yourself when the length matters.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Final source review flagged 6 passage(s) to check against the sources",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The final review flagged 6 passages, among them the source list itself, with the labels no supplied source backs it and a source contradicts it; Quill also said it could not finish checking every fact. The dossier quotes one public buyer review that says only minor manual edits were needed.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "One test draft against one buyer review; the amount of editing needed was not measured.",
+    "status": "not_comparable",
+    "buying_consequence": "Budget time to check the draft against the sources before you publish.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "seven or more hours",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The CDC page About Sleep gives adult 18 to 60 years 7 or more hours, 61 to 64 years 7 to 9 hours and 65 years and older 7 to 8 hours. The article says seven or more hours for all adults and only that sleep needs change with age, so the age bands are missing.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "One source of ten read by hand against the article; the other nine sources were not opened.",
+    "status": "confirmed",
+    "buying_consequence": "The main figure in the article is right, but a reader does not get the age nuance.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Sources captured during generation",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The article ends with a list of 10 sources, all marked (n.d.) with no author or year, and there are no inline source links in the running text. The tester counted 8 CDC pages and 3 WHO pages, which does not add up to 10.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "The list of one draft against the dossier line that the product works from your sources; the dossier says nothing about how sources are shown.",
+    "status": "not_comparable",
+    "buying_consequence": "A reader cannot tell who wrote a source or when from the list alone.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "WHO technical meeting on sleep and health: Bonn Germany",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The WHO source in the list is a report from 2004 on noise and sleep disturbance, not an adult guideline, and the article text says that it does not set the duration target.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "One source list against the two websites that were allowed; the choice of source is up to the tool and the tester did not compare other topics.",
+    "status": "not_comparable",
+    "buying_consequence": "Allowing only who.int and cdc.gov does not guarantee a current guideline from each site.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Start your Quill trial. 14 days, no card.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Start my 14 days started the Quill trial without asking for a card; the banner then said 14 days left in your Gixo Quill trial. The page also says each product gets one trial per account, as the dossier FAQ says no card for 14 days.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "The trial page and banner against the dossier FAQ line; the end of the trial was not waited for, so the lock after 14 days was not seen.",
+    "status": "confirmed",
+    "buying_consequence": "You can try Quill for 14 days without a card, once per account.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$10/seat/month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The plans page shows Lite at $10/seat/month (EUR 9) for one person publishing now and then, with Minimum 1, as in the dossier.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "The Lite card against the dossier Lite price; the annual view was not opened.",
+    "status": "confirmed",
+    "buying_consequence": "The cheapest Quill plan costs $10 a month for one seat.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$59/seat/month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The plans page shows Starter at $59/seat/month (EUR 53), marked Recommended, with Minimum 1, as in the dossier; the step up from Lite is from $10 to $59.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "The Starter card against the dossier Starter price and its remark about the jump from Lite; the annual view was not opened.",
+    "status": "confirmed",
+    "buying_consequence": "The first plan with Brand Voice costs almost six times Lite.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Room to publish every week, not now and then",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Starter card promises room to publish every week, not now and then, and gives no number of drafts or words.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "A Starter card line against a dossier that says the generation allowances are not quantified; no allowance was counted in this test.",
+    "status": "not_testable",
+    "buying_consequence": "You cannot see from the card how many articles a month Starter allows.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Minimum 3",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Professional shows $79/seat/month (EUR 71) with Minimum 3, 3 seats selected and Total $237/month, as in the dossier.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "The Professional card and its seat box against the dossier minimum of three seats; no checkout was opened.",
+    "status": "confirmed",
+    "buying_consequence": "A team that needs review and collaboration pays at least $237 a month.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Minimum 5",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Business shows $99/seat/month (EUR 90) with Minimum 5, 5 seats selected and Total $495/month, as in the dossier.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "The Business card and its seat box against the dossier minimum of five seats; no checkout was opened.",
+    "status": "confirmed",
+    "buying_consequence": "A content team at volume pays at least $495 a month.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Sold through Azure Marketplace or private offer.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Enterprise shows $129/seat/month (EUR 117) with Minimum 10 and the text Starts at 10 seats, sold through Azure Marketplace or private offer, as in the dossier.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "The Enterprise card against the dossier Azure Marketplace line; no private offer was asked for.",
+    "status": "confirmed",
+    "buying_consequence": "Enterprise is not bought on the page itself, so the smallest bill is arranged outside the plans page.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "You pay in euros",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Under each dollar price the page shows the euro price that checkout charges, set at the European Central Bank reference rate for 13 November 2026 (EUR 9 for $10, EUR 53 for $59, EUR 71 for $79, EUR 90 for $99, EUR 117 for $129). The dossier gives dollar prices only.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "The euro line on the plans page against a dossier that is in US dollars; the rate on the day of a real checkout was not seen.",
+    "status": "not_comparable",
+    "buying_consequence": "A buyer in Europe is charged in euros at a daily reference rate, so the amount can differ a little from the dollar price.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Start paid checkout",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Nothing was clicked past the Start paid checkout buttons, so no checkout screen, euro total, tax or card step was seen and the plan prices could not be set against a final amount.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+    },
+    "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+    "comparability": "The plans page prices against a test that stopped before checkout; no total, tax or stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The final amount a buyer pays was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session started the 14 day Quill trial in the account that Daan made (no card) and had Quill write an article of about 800 words from who.int and cdc.gov. The draft was ready in about three and a half minutes after 8 clicks or inputs, but it came out longer than asked (1,159 words) and the panel To check (3) flagged 6 passages. The sources all carry (n.d.), the WHO source is a report from 2004 on noise and sleep disturbance, and the CDC age bands are missing from the text, although the main figure of seven or more hours is right. The Quill plans are the same as in the dossier (Lite $10, Starter $59, Professional $79, Business $99, Enterprise $129), and checkout charges in euros. Nothing was paid and checkout was not reached. Account and start: Daan made the Gixo account before the test and our AI assistant ran the test in a tab of Daan's Chrome at about 16:00 (Europe/Amsterdam) on gixo.ai/start-trial. The interface was in English; a cookie banner was answered with Reject all. The dashboard showed the products Accord and Keystone under Your products and Quill under More products with a lock. The dossier audience tested is Content writers drafting long articles from sources. Trial: Start your Quill trial. 14 days, no card. The clock starts when you click below, and each product gets one trial per account. The button Start my 14 days started it; no card was asked for. A banner then said 14 days left in your Gixo Quill trial with a Choose a plan link. The trial is now used for this account (one trial per product). Core action: through Choose the format, pictures and sources the topic was What adults need to know about sleep and health, based on guidance from WHO and CDC, with the format Blog Post, the length Short (About 800 words), the box Only these websites set to who.int and cdc.gov, and pictures on (the default). From the trial button to Start writing it took 8 clicks or inputs. Start writing was clicked at about 16:03:30 and the message Your draft is ready. came at about 16:07, so about three and a half minutes. The progress bar showed Generating text content 20% and Attaching cited sources 90%. Result: the article Sleep and Adult Health: What to Know. The panel To check (3) held three Review cards: It's longer than you asked for (about 800 words chosen, 1,159 written), Quill couldn't finish checking every fact against your sources, and Final source review flagged 6 passage(s) to check against the sources, among them the source list itself, with the labels no supplied source backs it and a source contradicts it. The draft was saved as written and the cards say to check it before you publish. Sources: the paragraph Sources captured during generation lists 10 sources, of which the tester counted 8 from cdc.gov or stacks.cdc.gov and 3 from iris.who.int (these counts do not add up to 10 in the notes). All of them carry (n.d.) with no author or year. The WHO source is a report from 2004 on noise and sleep disturbance (WHO technical meeting on sleep and health: Bonn Germany, 22 to 24 January 2004), not an adult guideline, and the article text itself says that the report does not set that duration target. There were no inline source links in the running text, only the list under Sources at the bottom. The pictures were stock photos marked Photo via Pexels. One source was checked by hand: https://www.cdc.gov/sleep/about/index.html gives adult 18 to 60 years 7 or more hours, adult 61 to 64 years 7 to 9 hours and adult 65 years and older 7 to 8 hours. The article says seven or more hours for all adults and only that sleep needs change with age, so the age bands are missing. The core claim is right and the nuance is missing. The other sources were not checked one by one. Plans read on gixo.ai/products/content?upgrade=true#plans on 18 Nov 2026, in US dollars per seat per month, with the euro price under it: Lite $10 (EUR 9), Starter $59 (EUR 53, Recommended), Professional $79 (EUR 71, Minimum 3, 3 seats selected, Total $237/month), Business $99 (EUR 90, Minimum 5, Total $495/month) and Enterprise $129 (EUR 117, Minimum 10, sold through Azure Marketplace or private offer). The page says You pay in euros: the price under each US dollar price is what checkout charges, set at the European Central Bank reference rate for 13 November 2026. These dollar prices are the same as in the dossier, so the price is UNCHANGED; the euro charge is a detail the dossier does not mention. The plans page was read up to the Start paid checkout buttons and nothing was clicked past them. The billing menu showed No active plans and Manage billing, which was not opened. Cancelling: there is no paid plan, so there was nothing to cancel; the trial ends by itself and existing work stays visible according to the dossier. Not tested: download or export (PDF, Word), publishing, Share, checking all 10 sources one by one (only CDC About Sleep was read), Brand Voice and the other Gixo products. Clean up: the account and the trial stay; the test draft sits in Quill under Your drafts. The own tab was closed and Daan's tab was not touched. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The article came out longer than the length that was chosen. The final review flagged 6 passages and Quill said it could not finish checking every fact, so the writer has to check the draft. The sources carry (n.d.) with no author or year, the one WHO source is a report from 2004 on noise and not an adult guideline, and the CDC age bands are missing from the text. There are no inline source links, only a list at the bottom. The Professional plan has a minimum of three seats, so the smallest bill is $237 a month.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Download or export (PDF, Word), publishing and Share.",
+    "Checking all 10 sources one by one; only CDC About Sleep was read.",
+    "Brand Voice and the other Gixo products.",
+    "Checkout, a paid plan and cancelling.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about about 16:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/gixo-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/gixo-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "Start my 14 days started the Quill trial without asking for a card; the banner then said 14 days left in your Gixo Quill trial. The page also says each product gets one trial per account, as the dossier FAQ says no card for 14 days.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session started the 14 day Quill trial in the account that Daan made (no card) and had Quill write an article of about 800 words from who.int and cdc.gov. The draft was ready in about three and a half minutes after 8 clicks or inputs, but it came out longer than asked (1,159 words) and the panel To check (3) flagged 6 passages. The sources all carry (n.d.), the WHO source is a report from 2004 on noise and sleep disturbance, and the CDC age bands are missing from the text, although the main figure of seven or more hours is right. The Quill plans are the same as in the dossier (Lite $10, Starter $59, Professional $79, Business $99, Enterprise $129), and checkout charges in euros. Nothing was paid and checkout was not reached. Account and start: Daan made the Gixo account before the test and our AI assistant ran the test in a tab of Daan's Chrome at about 16:00 (Europe/Amsterdam) on gixo.ai/start-trial. The interface was in English; a cookie banner was answered with Reject all. The dashboard showed the products Accord and Keystone under Your products and Quill under More products with a lock. The dossier audience tested is Content writers drafting long articles from sources. Trial: Start your Quill trial. 14 days, no card. The clock starts when you click below, and each product gets one trial per account. The button Start my 14 days started it; no card was asked for. A banner then said 14 days left in your Gixo Quill trial with a Choose a plan link. The trial is now used for this account (one trial per product). Core action: through Choose the format, pictures and sources the topic was What adults need to know about sleep and health, based on guidance from WHO and CDC, with the format Blog Post, the length Short (About 800 words), the box Only these websites set to who.int and cdc.gov, and pictures on (the default). From the trial button to Start writing it took 8 clicks or inputs. Start writing was clicked at about 16:03:30 and the message Your draft is ready. came at about 16:07, so about three and a half minutes. The progress bar showed Generating text content 20% and Attaching cited sources 90%. Result: the article Sleep and Adult Health: What to Know. The panel To check (3) held three Review cards: It's longer than you asked for (about 800 words chosen, 1,159 written), Quill couldn't finish checking every fact against your sources, and Final source review flagged 6 passage(s) to check against the sources, among them the source list itself, with the labels no supplied source backs it and a source contradicts it. The draft was saved as written and the cards say to check it before you publish. Sources: the paragraph Sources captured during generation lists 10 sources, of which the tester counted 8 from cdc.gov or stacks.cdc.gov and 3 from iris.who.int (these counts do not add up to 10 in the notes). All of them carry (n.d.) with no author or year. The WHO source is a report from 2004 on noise and sleep disturbance (WHO technical meeting on sleep and health: Bonn Germany, 22 to 24 January 2004), not an adult guideline, and the article text itself says that the report does not set that duration target. There were no inline source links in the running text, only the list under Sources at the bottom. The pictures were stock photos marked Photo via Pexels. One source was checked by hand: https://www.cdc.gov/sleep/about/index.html gives adult 18 to 60 years 7 or more hours, adult 61 to 64 years 7 to 9 hours and adult 65 years and older 7 to 8 hours. The article says seven or more hours for all adults and only that sleep needs change with age, so the age bands are missing. The core claim is right and the nuance is missing. The other sources were not checked one by one. Plans read on gixo.ai/products/content?upgrade=true#plans on 18 Nov 2026, in US dollars per seat per month, with the euro price under it: Lite $10 (EUR 9), Starter $59 (EUR 53, Recommended), Professional $79 (EUR 71, Minimum 3, 3 seats selected, Total $237/month), Business $99 (EUR 90, Minimum 5, Total $495/month) and Enterprise $129 (EUR 117, Minimum 10, sold through Azure Marketplace or private offer). The page says You pay in euros: the price under each US dollar price is what checkout charges, set at the European Central Bank reference rate for 13 November 2026. These dollar prices are the same as in the dossier, so the price is UNCHANGED; the euro charge is a detail the dossier does not mention. The plans page was read up to the Start paid checkout buttons and nothing was clicked past them. The billing menu showed No active plans and Manage billing, which was not opened. Cancelling: there is no paid plan, so there was nothing to cancel; the trial ends by itself and existing work stays visible according to the dossier. Not tested: download or export (PDF, Word), publishing, Share, checking all 10 sources one by one (only CDC About Sleep was read), Brand Voice and the other Gixo products. Clean up: the account and the trial stay; the test draft sits in Quill under Your drafts. The own tab was closed and Daan's tab was not touched. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/gixo-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session started the 14 day Quill trial in the account that Daan made (no card) and had Quill write an article of about 800 words from who.int and cdc.gov. The draft was ready in about three and a half minutes after 8 clicks or inputs, but it came out longer than asked (1,159 words) and the panel To check (3) flagged 6 passages. The sources all carry (n.d.), the WHO source is a report from 2004 on noise and sleep disturbance, and the CDC age bands are missing from the text, although the main figure of seven or more hours is right. The Quill plans are the same as in the dossier (Lite $10, Starter $59, Professional $79, Business $99, Enterprise $129), and checkout charges in euros. Nothing was paid and checkout was not reached. Account and start: Daan made the Gixo account before the test and our AI assistant ran the test in a tab of Daan's Chrome at about 16:00 (Europe/Amsterdam) on gixo.ai/start-trial. The interface was in English; a cookie banner was answered with Reject all. The dashboard showed the products Accord and Keystone under Your products and Quill under More products with a lock. The dossier audience tested is Content writers drafting long articles from sources. Trial: Start your Quill trial. 14 days, no card. The clock starts when you click below, and each product gets one trial per account. The button Start my 14 days started it; no card was asked for. A banner then said 14 days left in your Gixo Quill trial with a Choose a plan link. The trial is now used for this account (one trial per product). Core action: through Choose the format, pictures and sources the topic was What adults need to know about sleep and health, based on guidance from WHO and CDC, with the format Blog Post, the length Short (About 800 words), the box Only these websites set to who.int and cdc.gov, and pictures on (the default). From the trial button to Start writing it took 8 clicks or inputs. Start writing was clicked at about 16:03:30 and the message Your draft is ready. came at about 16:07, so about three and a half minutes. The progress bar showed Generating text content 20% and Attaching cited sources 90%. Result: the article Sleep and Adult Health: What to Know. The panel To check (3) held three Review cards: It's longer than you asked for (about 800 words chosen, 1,159 written), Quill couldn't finish checking every fact against your sources, and Final source review flagged 6 passage(s) to check against the sources, among them the source list itself, with the labels no supplied source backs it and a source contradicts it. The draft was saved as written and the cards say to check it before you publish. Sources: the paragraph Sources captured during generation lists 10 sources, of which the tester counted 8 from cdc.gov or stacks.cdc.gov and 3 from iris.who.int (these counts do not add up to 10 in the notes). All of them carry (n.d.) with no author or year. The WHO source is a report from 2004 on noise and sleep disturbance (WHO technical meeting on sleep and health: Bonn Germany, 22 to 24 January 2004), not an adult guideline, and the article text itself says that the report does not set that duration target. There were no inline source links in the running text, only the list under Sources at the bottom. The pictures were stock photos marked Photo via Pexels. One source was checked by hand: https://www.cdc.gov/sleep/about/index.html gives adult 18 to 60 years 7 or more hours, adult 61 to 64 years 7 to 9 hours and adult 65 years and older 7 to 8 hours. The article says seven or more hours for all adults and only that sleep needs change with age, so the age bands are missing. The core claim is right and the nuance is missing. The other sources were not checked one by one. Plans read on gixo.ai/products/content?upgrade=true#plans on 18 Nov 2026, in US dollars per seat per month, with the euro price under it: Lite $10 (EUR 9), Starter $59 (EUR 53, Recommended), Professional $79 (EUR 71, Minimum 3, 3 seats selected, Total $237/month), Business $99 (EUR 90, Minimum 5, Total $495/month) and Enterprise $129 (EUR 117, Minimum 10, sold through Azure Marketplace or private offer). The page says You pay in euros: the price under each US dollar price is what checkout charges, set at the European Central Bank reference rate for 13 November 2026. These dollar prices are the same as in the dossier, so the price is UNCHANGED; the euro charge is a detail the dossier does not mention. The plans page was read up to the Start paid checkout buttons and nothing was clicked past them. The billing menu showed No active plans and Manage billing, which was not opened. Cancelling: there is no paid plan, so there was nothing to cancel; the trial ends by itself and existing work stays visible according to the dossier. Not tested: download or export (PDF, Word), publishing, Share, checking all 10 sources one by one (only CDC About Sleep was read), Brand Voice and the other Gixo products. Clean up: the account and the trial stay; the test draft sits in Quill under Your drafts. The own tab was closed and Daan's tab was not touched. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/gixo-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/gixo-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Gixo",
+    "product_id": "gixo",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session started the 14 day Quill trial in the account that Daan made (no card) and had Quill write an article of about 800 words from who.int and cdc.gov. The draft was ready in about three and a half minutes after 8 clicks or inputs, but it came out longer than asked (1,159 words) and the panel To check (3) flagged 6 passages. The sources all carry (n.d.), the WHO source is a report from 2004 on noise and sleep disturbance, and the CDC age bands are missing from the text, although the main figure of seven or more hours is right. The Quill plans are the same as in the dossier (Lite $10, Starter $59, Professional $79, Business $99, Enterprise $129), and checkout charges in euros. Nothing was paid and checkout was not reached.",
+    "findings": [
+     "Text we checked: \"seven or more hours\". What we saw: The CDC page About Sleep gives adult 18 to 60 years 7 or more hours, 61 to 64 years 7 to 9 hours and 65 years and older 7 to 8 hours. In the article every adult gets seven or more hours, with only a remark that needs change with age, so the age bands are missing.",
+     "Text we checked: \"Start your Quill trial. 14 days, no card\". What we saw: Start my 14 days started the Quill trial without asking for a card; the banner then said 14 days left in your Gixo Quill trial. The page also says each product gets one trial per account, as the dossier FAQ says no card for 14 days.",
+     "Text we checked: \"$10/seat/month\". What we saw: The plans page shows Lite at $10/seat/month (EUR 9) for one person publishing now and then, with Minimum 1, as in the dossier.",
+     "Text we checked: \"$59/seat/month\". What we saw: The plans page shows Starter at $59/seat/month (EUR 53), marked Recommended, with Minimum 1, as in the dossier; the step up from Lite is from $10 to $59.",
+     "Text we checked: \"Minimum 3\". What we saw: Professional shows $79/seat/month (EUR 71) with Minimum 3, 3 seats selected and Total $237/month, as in the dossier."
+    ],
+    "not_tested": [
+     "Download or export (PDF, Word), publishing and Share.",
+     "Checking all 10 sources one by one; only CDC About Sleep was read.",
+     "Brand Voice and the other Gixo products.",
+     "Checkout, a paid plan and cancelling.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Content writers drafting long articles from sources",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "An article of about 800 words chosen was written from who.int and cdc.gov in about three and a half minutes (Start writing at about 16:03:30, draft ready at about 16:07), after 8 clicks or inputs from the trial button.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "One article on one topic and one day against a dossier audience line that gives no time or step count.",
+      "status": "not_comparable",
+      "buying_consequence": "A writer gets a full long draft in a few minutes, but it still has to be checked.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "It's longer than you asked for: about 800 words chosen, 1,159 written.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The length setting was Short (About 800 words) and the draft came out at 1,159 words; the panel says Quill kept every fact rather than cut it short.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "One draft against a length setting; the dossier makes no claim about how closely the length is kept.",
+      "status": "not_comparable",
+      "buying_consequence": "Expect to trim a draft yourself when the length matters.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Final source review flagged 6 passage(s) to check against the sources",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The final review flagged 6 passages, among them the source list itself, with the labels no supplied source backs it and a source contradicts it; Quill also said it could not finish checking every fact. The dossier quotes one public buyer review that says only minor manual edits were needed.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "One test draft against one buyer review; the amount of editing needed was not measured.",
+      "status": "not_comparable",
+      "buying_consequence": "Budget time to check the draft against the sources before you publish.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "seven or more hours",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The CDC page About Sleep gives adult 18 to 60 years 7 or more hours, 61 to 64 years 7 to 9 hours and 65 years and older 7 to 8 hours. The article says seven or more hours for all adults and only that sleep needs change with age, so the age bands are missing.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "One source of ten read by hand against the article; the other nine sources were not opened.",
+      "status": "confirmed",
+      "buying_consequence": "The main figure in the article is right, but a reader does not get the age nuance.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Sources captured during generation",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The article ends with a list of 10 sources, all marked (n.d.) with no author or year, and there are no inline source links in the running text. The tester counted 8 CDC pages and 3 WHO pages, which does not add up to 10.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "The list of one draft against the dossier line that the product works from your sources; the dossier says nothing about how sources are shown.",
+      "status": "not_comparable",
+      "buying_consequence": "A reader cannot tell who wrote a source or when from the list alone.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "WHO technical meeting on sleep and health: Bonn Germany",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The WHO source in the list is a report from 2004 on noise and sleep disturbance, not an adult guideline, and the article text says that it does not set the duration target.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "One source list against the two websites that were allowed; the choice of source is up to the tool and the tester did not compare other topics.",
+      "status": "not_comparable",
+      "buying_consequence": "Allowing only who.int and cdc.gov does not guarantee a current guideline from each site.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Start your Quill trial. 14 days, no card.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Start my 14 days started the Quill trial without asking for a card; the banner then said 14 days left in your Gixo Quill trial. The page also says each product gets one trial per account, as the dossier FAQ says no card for 14 days.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "The trial page and banner against the dossier FAQ line; the end of the trial was not waited for, so the lock after 14 days was not seen.",
+      "status": "confirmed",
+      "buying_consequence": "You can try Quill for 14 days without a card, once per account.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$10/seat/month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The plans page shows Lite at $10/seat/month (EUR 9) for one person publishing now and then, with Minimum 1, as in the dossier.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "The Lite card against the dossier Lite price; the annual view was not opened.",
+      "status": "confirmed",
+      "buying_consequence": "The cheapest Quill plan costs $10 a month for one seat.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$59/seat/month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The plans page shows Starter at $59/seat/month (EUR 53), marked Recommended, with Minimum 1, as in the dossier; the step up from Lite is from $10 to $59.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "The Starter card against the dossier Starter price and its remark about the jump from Lite; the annual view was not opened.",
+      "status": "confirmed",
+      "buying_consequence": "The first plan with Brand Voice costs almost six times Lite.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Room to publish every week, not now and then",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Starter card promises room to publish every week, not now and then, and gives no number of drafts or words.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "A Starter card line against a dossier that says the generation allowances are not quantified; no allowance was counted in this test.",
+      "status": "not_testable",
+      "buying_consequence": "You cannot see from the card how many articles a month Starter allows.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Minimum 3",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Professional shows $79/seat/month (EUR 71) with Minimum 3, 3 seats selected and Total $237/month, as in the dossier.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "The Professional card and its seat box against the dossier minimum of three seats; no checkout was opened.",
+      "status": "confirmed",
+      "buying_consequence": "A team that needs review and collaboration pays at least $237 a month.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Minimum 5",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Business shows $99/seat/month (EUR 90) with Minimum 5, 5 seats selected and Total $495/month, as in the dossier.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "The Business card and its seat box against the dossier minimum of five seats; no checkout was opened.",
+      "status": "confirmed",
+      "buying_consequence": "A content team at volume pays at least $495 a month.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Sold through Azure Marketplace or private offer.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Enterprise shows $129/seat/month (EUR 117) with Minimum 10 and the text Starts at 10 seats, sold through Azure Marketplace or private offer, as in the dossier.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "The Enterprise card against the dossier Azure Marketplace line; no private offer was asked for.",
+      "status": "confirmed",
+      "buying_consequence": "Enterprise is not bought on the page itself, so the smallest bill is arranged outside the plans page.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "You pay in euros",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Under each dollar price the page shows the euro price that checkout charges, set at the European Central Bank reference rate for 13 November 2026 (EUR 9 for $10, EUR 53 for $59, EUR 71 for $79, EUR 90 for $99, EUR 117 for $129). The dossier gives dollar prices only.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "The euro line on the plans page against a dossier that is in US dollars; the rate on the day of a real checkout was not seen.",
+      "status": "not_comparable",
+      "buying_consequence": "A buyer in Europe is charged in euros at a daily reference rate, so the amount can differ a little from the dollar price.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Start paid checkout",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Nothing was clicked past the Start paid checkout buttons, so no checkout screen, euro total, tax or card step was seen and the plan prices could not be set against a final amount.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/gixo-review/#claim-vs-measured"
+      },
+      "plan": "No plan was bought; the 14 day Quill trial was started without a card and the plans page was read up to the Start paid checkout buttons",
+      "comparability": "The plans page prices against a test that stopped before checkout; no total, tax or stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The final amount a buyer pays was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session started the 14 day Quill trial in the account that Daan made (no card) and had Quill write an article of about 800 words from who.int and cdc.gov. The draft was ready in about three and a half minutes after 8 clicks or inputs, but it came out longer than asked (1,159 words) and the panel To check (3) flagged 6 passages. The sources all carry (n.d.), the WHO source is a report from 2004 on noise and sleep disturbance, and the CDC age bands are missing from the text, although the main figure of seven or more hours is right. The Quill plans are the same as in the dossier (Lite $10, Starter $59, Professional $79, Business $99, Enterprise $129), and checkout charges in euros. Nothing was paid and checkout was not reached. Account and start: Daan made the Gixo account before the test and our AI assistant ran the test in a tab of Daan's Chrome at about 16:00 (Europe/Amsterdam) on gixo.ai/start-trial. The interface was in English; a cookie banner was answered with Reject all. The dashboard showed the products Accord and Keystone under Your products and Quill under More products with a lock. The dossier audience tested is Content writers drafting long articles from sources. Trial: Start your Quill trial. 14 days, no card. The clock starts when you click below, and each product gets one trial per account. The button Start my 14 days started it; no card was asked for. A banner then said 14 days left in your Gixo Quill trial with a Choose a plan link. The trial is now used for this account (one trial per product). Core action: through Choose the format, pictures and sources the topic was What adults need to know about sleep and health, based on guidance from WHO and CDC, with the format Blog Post, the length Short (About 800 words), the box Only these websites set to who.int and cdc.gov, and pictures on (the default). From the trial button to Start writing it took 8 clicks or inputs. Start writing was clicked at about 16:03:30 and the message Your draft is ready. came at about 16:07, so about three and a half minutes. The progress bar showed Generating text content 20% and Attaching cited sources 90%. Result: the article Sleep and Adult Health: What to Know. The panel To check (3) held three Review cards: It's longer than you asked for (about 800 words chosen, 1,159 written), Quill couldn't finish checking every fact against your sources, and Final source review flagged 6 passage(s) to check against the sources, among them the source list itself, with the labels no supplied source backs it and a source contradicts it. The draft was saved as written and the cards say to check it before you publish. Sources: the paragraph Sources captured during generation lists 10 sources, of which the tester counted 8 from cdc.gov or stacks.cdc.gov and 3 from iris.who.int (these counts do not add up to 10 in the notes). All of them carry (n.d.) with no author or year. The WHO source is a report from 2004 on noise and sleep disturbance (WHO technical meeting on sleep and health: Bonn Germany, 22 to 24 January 2004), not an adult guideline, and the article text itself says that the report does not set that duration target. There were no inline source links in the running text, only the list under Sources at the bottom. The pictures were stock photos marked Photo via Pexels. One source was checked by hand: https://www.cdc.gov/sleep/about/index.html gives adult 18 to 60 years 7 or more hours, adult 61 to 64 years 7 to 9 hours and adult 65 years and older 7 to 8 hours. The article says seven or more hours for all adults and only that sleep needs change with age, so the age bands are missing. The core claim is right and the nuance is missing. The other sources were not checked one by one. Plans read on gixo.ai/products/content?upgrade=true#plans on 18 Nov 2026, in US dollars per seat per month, with the euro price under it: Lite $10 (EUR 9), Starter $59 (EUR 53, Recommended), Professional $79 (EUR 71, Minimum 3, 3 seats selected, Total $237/month), Business $99 (EUR 90, Minimum 5, Total $495/month) and Enterprise $129 (EUR 117, Minimum 10, sold through Azure Marketplace or private offer). The page says You pay in euros: the price under each US dollar price is what checkout charges, set at the European Central Bank reference rate for 13 November 2026. These dollar prices are the same as in the dossier, so the price is UNCHANGED; the euro charge is a detail the dossier does not mention. The plans page was read up to the Start paid checkout buttons and nothing was clicked past them. The billing menu showed No active plans and Manage billing, which was not opened. Cancelling: there is no paid plan, so there was nothing to cancel; the trial ends by itself and existing work stays visible according to the dossier. Not tested: download or export (PDF, Word), publishing, Share, checking all 10 sources one by one (only CDC About Sleep was read), Brand Voice and the other Gixo products. Clean up: the account and the trial stay; the test draft sits in Quill under Your drafts. The own tab was closed and Daan's tab was not touched. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The article came out longer than the length that was chosen. The final review flagged 6 passages and Quill said it could not finish checking every fact, so the writer has to check the draft. The sources carry (n.d.) with no author or year, the one WHO source is a report from 2004 on noise and not an adult guideline, and the CDC age bands are missing from the text. There are no inline source links, only a list at the bottom. The Professional plan has a minimum of three seats, so the smallest bill is $237 a month.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Download or export (PDF, Word), publishing and Share.",
+      "Checking all 10 sources one by one; only CDC About Sleep was read.",
+      "Brand Voice and the other Gixo products.",
+      "Checkout, a paid plan and cancelling.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about about 16:00 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "gixo:cancellation_terms",

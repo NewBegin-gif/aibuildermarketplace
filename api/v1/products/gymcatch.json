@@ -66,16 +66,437 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "failed_evidence_check",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "GBP",
+   "unit": "team member",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "gymcatch",
+     "name": "Gymcatch",
+     "model": "flat",
+     "monthly": 10,
+     "annual_status": "not_offered",
+     "evidence": "It costs from £10 + VAT a month with the first month free"
+    }
+   ],
+   "notes": [
+    "\"From £10\" is a floor: the amount is before VAT, and the page lists no yearly price.",
+    "Team members are unlimited, so the price does not change with team size."
+   ],
+   "not_computable": [
+    "Bolt-ons cost £2 + VAT each a month; how many a business needs is not computable.",
+    "Payment processing fees for GymcatchPay or Stripe are not included and not published on the page."
+   ],
+   "rules_verified_at": "2026-11-16"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "gymcatch",
+    "currency": "GBP",
+    "axis": "users",
+    "unit": "team member",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": "not_offered_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Bolt-ons cost £2 + VAT each a month; how many a business needs is not computable.",
+     "Payment processing fees for GymcatchPay or Stripe are not included and not published on the page."
+    ],
+    "measured": [
+     {
+      "claim": "1 month free. No credit card required. Cancel anytime.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The pricing page says this under the Get started button. The registration form that the button leads to has a Card details field and a line that authorises Gymcatch to charge the card. We did not enter a card, so we do not know whether the form can be sent without one.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page and the registration form were only read",
+      "comparability": "A promise on the pricing page against the form of the registration page; one form read once, nothing entered or sent.",
+      "status": "contradicted",
+      "buying_consequence": "A card is asked at sign-up although the page says none is needed.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://officesoftwaremarketplace.com/gymcatch-review.html"
+     },
+     {
+      "claim": "Card details",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Under Billing information the form has the field Card details and then the button Get started. Nothing was entered.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page and the registration form were only read",
+      "comparability": "The field on the form against our own reading of the form; the field was not filled in.",
+      "status": "confirmed",
+      "buying_consequence": "The form has a card field.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/gymcatch-review.html"
+     },
+     {
+      "claim": "I authorise Gymcatch to send instructions to the financial institution that issued my card",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The form has a line that authorises Gymcatch to send instructions to the card issuer to take payments from the card account. It was not ticked or sent.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page and the registration form were only read",
+      "comparability": "A line on the form against our own reading of it; no authorisation was given.",
+      "status": "confirmed",
+      "buying_consequence": "Sending the form lets Gymcatch charge your card from the first payment date.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/gymcatch-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "gymcatch",
+    "currency": "GBP",
+    "axis": "users",
+    "unit": "team member",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "gymcatch",
+      "cheapest_plan_name": "Gymcatch",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": 10.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "gymcatch",
+      "cheapest_plan_name": "Gymcatch",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": 10.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "gymcatch",
+      "cheapest_plan_name": "Gymcatch",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": 10.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "gymcatch",
+      "cheapest_plan_name": "Gymcatch",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": 10.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "gymcatch",
+      "cheapest_plan_name": "Gymcatch",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": 10.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "gymcatch",
+      "cheapest_plan_name": "Gymcatch",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": 10.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "gymcatch",
+      "cheapest_plan_name": "Gymcatch",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": 10.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "gymcatch",
+      "cheapest_plan_name": "Gymcatch",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": 10.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "gymcatch",
+      "cheapest_plan_name": "Gymcatch",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": 10.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "gymcatch",
+      "cheapest_plan_name": "Gymcatch",
+      "total_month": 10.0,
+      "billed": {
+       "amount": 10.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "gymcatch": 10.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Bolt-ons cost £2 + VAT each a month; how many a business needs is not computable.",
+     "Payment processing fees for GymcatchPay or Stripe are not included and not published on the page."
+    ],
+    "measured": [
+     {
+      "claim": "1 month free. No credit card required. Cancel anytime.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The pricing page says this under the Get started button. The registration form that the button leads to has a Card details field and a line that authorises Gymcatch to charge the card. We did not enter a card, so we do not know whether the form can be sent without one.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page and the registration form were only read",
+      "comparability": "A promise on the pricing page against the form of the registration page; one form read once, nothing entered or sent.",
+      "status": "contradicted",
+      "buying_consequence": "A card is asked at sign-up although the page says none is needed.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://officesoftwaremarketplace.com/gymcatch-review.html"
+     },
+     {
+      "claim": "Card details",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Under Billing information the form has the field Card details and then the button Get started. Nothing was entered.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page and the registration form were only read",
+      "comparability": "The field on the form against our own reading of the form; the field was not filled in.",
+      "status": "confirmed",
+      "buying_consequence": "The form has a card field.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/gymcatch-review.html"
+     },
+     {
+      "claim": "I authorise Gymcatch to send instructions to the financial institution that issued my card",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The form has a line that authorises Gymcatch to send instructions to the card issuer to take payments from the card account. It was not ticked or sent.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/gymcatch-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page and the registration form were only read",
+      "comparability": "A line on the form against our own reading of it; no authorisation was given.",
+      "status": "confirmed",
+      "buying_consequence": "Sending the form lets Gymcatch charge your card from the first payment date.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/gymcatch-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
@@ -490,9 +911,15 @@
    "status": "open"
   },
   {
-   "question_id": "gymcatch:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "gymcatch:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Bolt-ons cost £2 + VAT each a month; how many a business needs is not computable. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "gymcatch:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Payment processing fees for GymcatchPay or Stripe are not included and not published on the page. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

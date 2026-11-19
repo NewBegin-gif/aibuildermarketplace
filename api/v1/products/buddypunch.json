@@ -20,7 +20,12 @@
   "notes": "Per user plus a base fee, re-verified on buddypunch.com/pricing on 24 September 2026 (amounts unchanged since 5 September) and again on 22 October and 19 November 2026: Starter $5.99 per user a month, Pro $7.99 and Advanced $13.99, each with a $19 base fee a month. Scheduling is $1 per user on Starter (included from Pro), real-time GPS $2 per user, onboarding and task checklists $4 per user, data retention for six years $24 per user a year (listed until September as $2 per user a month), advanced reporting $2 per user; the payroll add-on is $8 per user plus a $49 base fee a month. 14-day free trial, no card. On annual billing the per-user rates are $4.99, $6.99 and $12.99 and the base fee stays $19 a month. Administrators are free users; employees and managers count, and only active employees are billed. Advanced includes real-time GPS, advanced reporting and the onboarding/tasks add-on (listed as coming soon); the six-year data retention add-on can be bought on every plan, Advanced included.",
   "verified_at": "2026-11-19",
   "source_url": null,
-  "schema_offer": null,
+  "schema_offer": {
+   "price": 19.0,
+   "currency": "USD",
+   "description": "Starter, per month, billed month-to-month. From our pricing notes: “Starter $5.99 per user a month, Pro $7.99 and Advanced $13.99, each with a $19 base fee a month” Read on the vendor's own pricing page on 2026-11-19.",
+   "page": "https://aibuildermarketplace.com/b2b/buddypunch-review/"
+  },
   "source_quotes": [
    {
     "field": "price",
@@ -923,7 +928,7 @@
     "product_id": "buddypunch",
     "run_date": "2026-10-29",
     "session_type": "hands_on",
-    "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up employees by hand, logged two test shifts, exported the hours and looked at the plans without paying.",
+    "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up employees by hand, logged two test shifts, exported the hours and looked at the plans without paying. On 19 November 2026 we checked the findings again in the same account.",
     "findings": [
      "The trial runs on Pro, billed annually ('Free trial · 14 days left', next billing date 12 November). That is not the cheapest plan: Starter is $4.99 per employee a month plus a $19 base fee, billed yearly.",
      "'Send a welcome email to the employee' is ticked by default, in the setup wizard and on the new-employee form. We untick it; the list then shows the invite as 'Not sent'.",
@@ -931,13 +936,17 @@
      "Each punch shows the IP address of whoever entered it, here the manager.",
      "The standard export ('Export to Excel' on the payroll export) is actually a CSV, with employee ID, names and hours: 1.500 and 2.000, which match our test shifts. It has no notes, emails or start and end times. The employee profile export is part of a paid add-on ($2 per user a month).",
      "The employee import takes eight fixed columns (username, names, email and password required). It has no notes field and no update option, so you cannot change records by importing again.",
-     "Correction 12 November 2026: an earlier version of this review said API access is only in the Advanced plan. Buddy Punch told us, and its pricing page (read 12 November 2026) confirms, that API and MCP access are included from the Pro plan, which our trial runs on; Advanced adds higher API and MCP limits. The Change Plan screen we saw on 29 October lists API access in its Advanced summary, which we read as a gate and should not have."
+     "Correction 12 November 2026: an earlier version of this review said API access is only in the Advanced plan. Buddy Punch told us, and its pricing page (read 12 November 2026) confirms, that API and MCP access are included from the Pro plan, which our trial runs on; Advanced adds higher API and MCP limits. The Change Plan screen we saw on 29 October lists API access in its Advanced summary, which we read as a gate and should not have.",
+     "Retest 19 November 2026, after Buddy Punch extended our trial to 26 November: the plans, prices and add-ons, our hours of 1.500 and 2.000, the 'Not sent' invites, the eight import columns and the export route were unchanged. The onboarding and offboarding tasks add-on can now be added for $4 per employee; only new-hire paperwork and document storage are still marked coming soon.",
+     "Retest 19 November 2026: the Import Employees page lets an administrator upload up to 100 employees at once from a spreadsheet, with a CSV template of the same eight columns, and offers an onboarding call with a Buddy Punch expert for 100 or more. An admin can run a bulk import without waiting for support.",
+     "Retest 19 November 2026: the Change Plan screen in the app still says Advanced 'Includes all Pro features plus real-time GPS, SSO, API access, and more', while the pricing page puts API and MCP access in Pro and gives Advanced higher API and MCP limits. Buddy Punch's own pages disagree on this point; the pricing page is the one Buddy Punch confirmed to us."
     ],
     "not_tested": [
      "Punching in from an employee login or the mobile app",
      "Scheduling and time off",
      "Payroll",
-     "Support's answer (we emailed our three questions on 29 October)"
+     "Support's answer (we emailed our three questions on 29 October)",
+     "Punching in as an administrator: on 19 November Group Punch did not save a punch in two tries and showed no error message; not looked into further"
     ],
     "report": null,
     "disclosure": null,
@@ -1012,12 +1021,6 @@
   ]
  },
  "open_questions": [
-  {
-   "question_id": "buddypunch:buddypunch-q1",
-   "key": "buddypunch-q1",
-   "question": "Can an administrator bulk-import employees from a CSV file, or does support have to do it?",
-   "status": "open"
-  },
   {
    "question_id": "buddypunch:buddypunch-q2",
    "key": "buddypunch-q2",

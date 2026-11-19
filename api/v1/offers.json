@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "built_at": "2026-11-19T08:54:56Z",
+ "built_at": "2026-11-19T09:54:51Z",
  "about": "Reader offers and vendor offers on our deal pages, one record each. verification_status says whether the vendor confirmed it; checkout_tested_at stays null because we do not test offers at a checkout. expires_at is UTC; compare it with the current time yourself, time_status_at_build is only the state when this file was built. null means the vendor did not say, never 'no limit'. Opening handoff_url is not an activation or a purchase.",
  "offer_types": {
   "price_discount": "Price discount",
@@ -2094,14 +2094,14 @@
    "product": "SoftSync",
    "offer_type": "price_discount",
    "type_label": "Price discount",
-   "benefit": "30% off plus a 30-day trial instead of 14 days",
-   "duration": "Not stated whether the 30% is the first invoice, first year or every payment",
+   "benefit": "30% off every payment plus a 30-day trial instead of 14 days",
+   "duration": "Every payment, no end date",
    "code": "FOUNDER30SSX",
-   "claim_mechanism": "link",
-   "claim_steps": "Sign up through our link; there is no code.",
+   "claim_mechanism": "code",
+   "claim_steps": "Enter the code FOUNDER30SSX when you sign up.",
    "limits": [
-    "Not published on softsync.ai",
-    "Duration of the 30% not stated"
+    "Not published on softsync.ai; a vendor promise rather than a public term",
+    "We have not run the code through the checkout ourselves"
    ],
    "eligibility": {
     "customer": null,
@@ -2113,19 +2113,19 @@
     "kind": "percent",
     "percent": 30,
     "months": null,
-    "ongoing": false
+    "ongoing": true
    },
    "starts_at": null,
    "expires_at": null,
    "expires_as_stated": null,
    "evidence": {
-    "kind": "vendor_in_writing",
-    "by": "Celine Haaverstad, SoftSync",
+    "kind": "vendor_via_network",
+    "by": "Celine Haaverstad, SoftSync (COO)",
     "via": "PartnerStack",
-    "summary": "Confirmed in writing by Celine Haaverstad, SoftSync via PartnerStack, 25 Sep 2026"
+    "summary": "Supplied by Celine Haaverstad, SoftSync (COO) via PartnerStack, 19 Nov 2026"
    },
-   "confirmed_at": "2026-09-25",
-   "checked_at": "2026-09-26",
+   "confirmed_at": "2026-11-19",
+   "checked_at": "2026-11-19",
    "verification_status": "vendor_confirmed",
    "checkout_tested_at": null,
    "stacking": "unknown",
@@ -2136,7 +2136,7 @@
    "handoff_url": "https://affiliate.softsync.ai/axfyphmly1wj",
    "affiliate": true,
    "affiliate_disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site.",
-   "test_before_you_pay": "Ask SoftSync in writing whether the 30% covers the first invoice, the first year or every payment, and check the trial shows 30 days.",
+   "test_before_you_pay": "Check that the 30% shows at checkout and that the trial reads 30 days before you pay.",
    "trial_kit": null,
    "site_membership": [
     "aibm",
@@ -2146,7 +2146,7 @@
     "https://aibuildermarketplace.com/deals/#q=softsync",
     "https://marketingandsalessoftware.com/deals.html#q=softsync"
    ],
-   "version": "5545c81183",
+   "version": "f0dd606a64",
    "time_status_at_build": "no_deadline_known"
   },
   {

@@ -29032,7 +29032,7 @@
     "Signing up at track.toggl.com put us in the new Toggl Focus app. After three onboarding screens a dialog said 'The whole product is unlocked for 31 days' and 'No credit card needed'; the pricing page we read on 25 October says a 30-day trial. The upgrade screen gave the trial end as November 28.",
     "Our three entries (a 2m 18s timer, 15:00 and 1:30 by hand) added up to exactly 18m 48s in the report breakdown. The summary tiles rounded that to 19m, while the day header in the timer list showed 18m.",
     "A project with a $60 hourly rate turned the 15-minute entry into $15.00 and 79.79% billable, both correct. Billable rates are one of eight features the project view labels as unlocked by the Premium trial.",
-    "The Time logs CSV kept all three entries to the second, with project, client and amount on the right row. The Summary CSV put all 0:18:48 under the one project, although only 15 minutes belonged to it. Every export format (PDF, CSV, XLSX) carries a paid-feature star.",
+    "The Time logs CSV kept all three entries to the second, with project, client and amount on the right row. The Summary CSV matches the screen when the report uses Breakdown by Project: 3:48 without a project and 15:00 on the test project. Under the default Breakdown by Member it listed all 0:18:48 under the project of the first entry, a project the screen did not show in that view (retest 19 November 2026). Every export format (PDF, CSV, XLSX) carries a paid-feature star.",
     "Importing our own Time logs export again did not work as is: the importer asked for a duration column, could not use the combined start-and-stop column, and read the export's '-' placeholders as names, so all three entries would have been skipped. We stopped before importing; there is no ID column to update by.",
     "Monthly prices in the app were $12 for Starter and $24 for Premium per license ($9 and $16 a month billed yearly). Choosing Premium warned that 'your current trial will finish immediately', so we stopped there. After the trial the app says you can 'keep going free — no charge', and the Free plan allowed up to 5 members in the app; the pricing FAQ (read 22 October) says 3 users, so count on 3.",
     "The invite dialog offers Workspace admin, Manager, Member, Time tracker and Guest, with no role preselected. Billing lists 'Change plan' and 'Cancel trial' in the plan menu."
@@ -29108,7 +29108,7 @@
      "Time logs retains all three entries, exact durations, start/stop times, project, client, billable flag and amount."
     ],
     "lost": [
-     "The Summary CSV assigns all 0:18:48 to one project even though only 0:15:00 belongs to it."
+     "The Summary CSV is correct when the report is set to Breakdown by Project (3:48 without project, 15:00 on Testproject, together 0:18:48). In the default Breakdown by Member it puts all 0:18:48 on the project of the member's first entry (Testproject), while the screen leaves the project column empty. Our retest: 19 Nov 2026."
     ],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
    },
@@ -35855,7 +35855,7 @@
    "product_id": "buddypunch",
    "run_date": "2026-10-29",
    "session_type": "hands_on",
-   "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up employees by hand, logged two test shifts, exported the hours and looked at the plans without paying.",
+   "what": "Tested by our team on 29 October 2026 on the free trial: Daan created the account and our AI assistant ran the test in Daan's browser. We added two made-up employees by hand, logged two test shifts, exported the hours and looked at the plans without paying. On 19 November 2026 we checked the findings again in the same account.",
    "findings": [
     "The trial runs on Pro, billed annually ('Free trial · 14 days left', next billing date 12 November). That is not the cheapest plan: Starter is $4.99 per employee a month plus a $19 base fee, billed yearly.",
     "'Send a welcome email to the employee' is ticked by default, in the setup wizard and on the new-employee form. We untick it; the list then shows the invite as 'Not sent'.",
@@ -35863,13 +35863,17 @@
     "Each punch shows the IP address of whoever entered it, here the manager.",
     "The standard export ('Export to Excel' on the payroll export) is actually a CSV, with employee ID, names and hours: 1.500 and 2.000, which match our test shifts. It has no notes, emails or start and end times. The employee profile export is part of a paid add-on ($2 per user a month).",
     "The employee import takes eight fixed columns (username, names, email and password required). It has no notes field and no update option, so you cannot change records by importing again.",
-    "Correction 12 November 2026: an earlier version of this review said API access is only in the Advanced plan. Buddy Punch told us, and its pricing page (read 12 November 2026) confirms, that API and MCP access are included from the Pro plan, which our trial runs on; Advanced adds higher API and MCP limits. The Change Plan screen we saw on 29 October lists API access in its Advanced summary, which we read as a gate and should not have."
+    "Correction 12 November 2026: an earlier version of this review said API access is only in the Advanced plan. Buddy Punch told us, and its pricing page (read 12 November 2026) confirms, that API and MCP access are included from the Pro plan, which our trial runs on; Advanced adds higher API and MCP limits. The Change Plan screen we saw on 29 October lists API access in its Advanced summary, which we read as a gate and should not have.",
+    "Retest 19 November 2026, after Buddy Punch extended our trial to 26 November: the plans, prices and add-ons, our hours of 1.500 and 2.000, the 'Not sent' invites, the eight import columns and the export route were unchanged. The onboarding and offboarding tasks add-on can now be added for $4 per employee; only new-hire paperwork and document storage are still marked coming soon.",
+    "Retest 19 November 2026: the Import Employees page lets an administrator upload up to 100 employees at once from a spreadsheet, with a CSV template of the same eight columns, and offers an onboarding call with a Buddy Punch expert for 100 or more. An admin can run a bulk import without waiting for support.",
+    "Retest 19 November 2026: the Change Plan screen in the app still says Advanced 'Includes all Pro features plus real-time GPS, SSO, API access, and more', while the pricing page puts API and MCP access in Pro and gives Advanced higher API and MCP limits. Buddy Punch's own pages disagree on this point; the pricing page is the one Buddy Punch confirmed to us."
    ],
    "not_tested": [
     "Punching in from an employee login or the mobile app",
     "Scheduling and time off",
     "Payroll",
-    "Support's answer (we emailed our three questions on 29 October)"
+    "Support's answer (we emailed our three questions on 29 October)",
+    "Punching in as an administrator: on 19 November Group Punch did not save a punch in two tries and showed no error message; not looked into further"
    ],
    "report": null,
    "disclosure": null,
@@ -38042,7 +38046,8 @@
     "A new group immediately got the views All people and Pipeline. Create person (with 'Create more') added both test people in one go.",
     "Adding a Deals column created a Deals tab as well. Typing a new deal in each person's cell created both deals, linked to the right person; values of 100 and 200 were kept, shown as $100 and $200 although we never picked a currency.",
     "The deals pipeline showed both cards under 'No status'; switching the column calculation to Sum of Deal value gave $300, matching 100 + 200.",
-    "Adding a note to a deal failed twice: the first note was not saved (Notes 0), and the second attempt showed 'Whoops! An unexpected error occurred'. After Reload the note saved and the card showed a note icon."
+    "Adding a note to a deal failed twice: the first note was not saved (Notes 0), and the second attempt showed 'Whoops! An unexpected error occurred'. After Reload the note saved and the card showed a note icon.",
+    "After the 14-day trial ended, People and Deals no longer opened, including existing data, until a plan was chosen (checked 19 Nov 2026)."
    ],
    "not_tested": [
     "Connections with Google, Microsoft, WhatsApp or LinkedIn, and the Chrome extension",

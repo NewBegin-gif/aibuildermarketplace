@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "built_at": "2026-11-19T07:03:41Z",
+ "built_at": "2026-11-19T08:54:56Z",
  "about": "Reader offers and vendor offers on our deal pages, one record each. verification_status says whether the vendor confirmed it; checkout_tested_at stays null because we do not test offers at a checkout. expires_at is UTC; compare it with the current time yourself, time_status_at_build is only the state when this file was built. null means the vendor did not say, never 'no limit'. Opening handoff_url is not an activation or a purchase.",
  "offer_types": {
   "price_discount": "Price discount",
@@ -751,14 +751,15 @@
    "product": "Healthie",
    "offer_type": "price_discount",
    "type_label": "Price discount",
-   "benefit": "10% off the first six months when you upgrade during the free trial",
+   "benefit": "40% off the first six months for new solo providers and new group practices, plus free insurance payer enrollments and 3 months of free AI Scribe and charting",
    "duration": "First six months",
    "code": "READYTOGROW",
-   "claim_mechanism": "vendor_promotion",
-   "claim_steps": "Upgrade before your free trial ends; Healthie offers the discount in its trial emails.",
+   "claim_mechanism": "code",
+   "claim_steps": "Enter the code READYTOGROW when you sign up.",
    "limits": [
-    "Only before the trial ends",
-    "Offered to our own trial account; we cannot confirm every trial gets it"
+    "New customers only",
+    "Healthie asked partners to promote the offer until 31 December 2026; the mail gives no end date for the code itself",
+    "We have not run the code through the checkout ourselves"
    ],
    "eligibility": {
     "customer": "new",
@@ -768,7 +769,7 @@
    },
    "structure": {
     "kind": "percent",
-    "percent": 10,
+    "percent": 40,
     "months": 6,
     "ongoing": false
    },
@@ -776,12 +777,13 @@
    "expires_at": null,
    "expires_as_stated": null,
    "evidence": {
-    "kind": "vendor_email",
+    "kind": "vendor_via_network",
     "by": "Healthie",
-    "summary": "Received from Healthie by email, 11 Nov 2026"
+    "via": "PartnerStack",
+    "summary": "Supplied by Healthie via PartnerStack, 18 Nov 2026"
    },
-   "confirmed_at": "2026-11-11",
-   "checked_at": "2026-11-12",
+   "confirmed_at": "2026-11-18",
+   "checked_at": "2026-11-18",
    "verification_status": "vendor_confirmed",
    "checkout_tested_at": null,
    "stacking": "unknown",
@@ -792,7 +794,7 @@
    "handoff_url": "https://refer.gethealthie.com/fwvt80nnt1fq",
    "affiliate": true,
    "affiliate_disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site.",
-   "test_before_you_pay": "Check that the trial email offering 10% reached you before you upgrade.",
+   "test_before_you_pay": "Check that the 40% shows on the first six months before you pay; our own trial account was separately offered 10% on 10 and 11 November 2026.",
    "trial_kit": null,
    "site_membership": [
     "aibm",
@@ -802,7 +804,7 @@
     "https://aibuildermarketplace.com/deals/#q=healthie",
     "https://officesoftwaremarketplace.com/deals.html#q=healthie"
    ],
-   "version": "50e613c96e",
+   "version": "e1453aeccb",
    "time_status_at_build": "no_deadline_known"
   },
   {
@@ -2094,7 +2096,7 @@
    "type_label": "Price discount",
    "benefit": "30% off plus a 30-day trial instead of 14 days",
    "duration": "Not stated whether the 30% is the first invoice, first year or every payment",
-   "code": null,
+   "code": "FOUNDER30SSX",
    "claim_mechanism": "link",
    "claim_steps": "Sign up through our link; there is no code.",
    "limits": [
@@ -2130,7 +2132,7 @@
    "exclusive_to_our_readers": true,
    "published_by_vendor": false,
    "post_offer_price": null,
-   "terms": "30% off plus a 30-day trial instead of the standard 14 days, applied through our partner link — there is no code to type. SoftSync's COO, Celine Haaverstad, offered it to AI Builder Marketplace readers in writing through PartnerStack on 25 September 2026, with no end date given. Read the shape of it before you count on it. SoftSync did not say whether the 30% comes off the first invoice, the first year or every payment, so check your checkout total and ask if it is unclear. And the offer is not published on softsync.ai: the pricing page we read on 26 September 2026 names no discount and no trial length, and says the checkout page shows any trial terms, so it stays a vendor promise rather than a public term.",
+   "terms": "30% off every payment with the code FOUNDER30SSX, with no end date, plus a 30-day trial instead of the standard 14 days. SoftSync's COO, Celine Haaverstad, confirmed it to AI Builder Marketplace in writing through PartnerStack on 19 November 2026, after first offering the 30% and the 30-day trial on 25 September 2026. Read the shape of it before you count on it: the offer is not published on softsync.ai (the pricing page we read on 26 September 2026 names no discount and no trial length), so it stays a vendor promise rather than a public term, and we have not run the code through the checkout ourselves.",
    "handoff_url": "https://affiliate.softsync.ai/axfyphmly1wj",
    "affiliate": true,
    "affiliate_disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site.",
@@ -2144,7 +2146,7 @@
     "https://aibuildermarketplace.com/deals/#q=softsync",
     "https://marketingandsalessoftware.com/deals.html#q=softsync"
    ],
-   "version": "f5e409a8cf",
+   "version": "5545c81183",
    "time_status_at_build": "no_deadline_known"
   },
   {

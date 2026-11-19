@@ -31313,7 +31313,7 @@
    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Serpstat in the 7-day Individual trial that Daan started with his card and a $1 verification. Keyword, domain and audit results came within seconds, but the trial shows at most 2,000 backlinks per report and has no API or AI Visibility. Cancelling is one dialog, but it ends the trial and locks most tools at once.",
    "findings": [
     "Text we checked: \"API is unavailable for your plan\". What we saw: The trial account shows API credits 0/0 with this line, which matches the dossier: no API on the entry plan.",
-    "Text we checked: \"Once auto-payment is cancelled, most reports and tools will be locked\". What we saw: End my trial switched the plan to Registered user with Automatic renewal Off at once; no reason, offer or password. The dialog itself also says You still have 7 days of trial left."
+    "Text we checked: \"most reports and tools will be locked\". What we saw: End my trial switched the plan to Registered user with Automatic renewal Off at once; no reason, offer or password. The dialog itself also says You still have 7 days of trial left."
    ],
    "not_tested": [
     "Team use with more users.",
@@ -33700,7 +33700,7 @@
    "product_id": "grapeleads",
    "run_date": "2026-11-19",
    "session_type": "hands_on",
-   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested the free GrapeLeads preview, which gives 20 credits to an email address with no card. Of three searches, one found 0 leads, one used a credit and never sent results, and one gave 11 leads after about 20 minutes. By our count 6 of those 11 were usable, about 2 credits per usable lead. The confirm screen never shows what the results will cost, and the results arrive as a CSV link in an email. There is no subscription, so there was nothing to cancel.",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested the free GrapeLeads preview, which gives 20 credits to an email address with no card. Three searches ended in 0 leads, in a credit spent with no results email, and in 11 leads after about 20 minutes. By our count 6 of those 11 were usable, about 2 credits per usable lead. The confirm screen never shows what the results will cost, and the results arrive as a CSV link in an email. There is no subscription, so there was nothing to cancel.",
    "findings": [
     "Text we checked: \"It costs one credit to initiate a search, and one credit for each filtered lead in your results\". What we saw: Search 1 used 1 credit for 0 leads, search 3 used 12 credits for 11 leads; but search 2 used 1 credit and no results email ever came.",
     "Text we checked: \"Freelancer $28\". What we saw: Buy credits lists Freelancer $28 for 50, Startup $55 for 100 and Agency $127 for 250 credits, one-time, as in the dossier."
@@ -36815,6 +36815,129 @@
     ],
     "lost": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Tresorit",
+   "product_id": "tresorit",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Tresorit in the 14-day Professional trial that Daan started with his card. A share link with a password, an open limit, expiry and access logs took about 3 minutes. The price is EUR 36.00 plus 21% VAT, so EUR 43.56 a month in the Netherlands. Cancelling took 3 screens with no discount offer and drops the account to Basic.",
+   "findings": [
+    "Text we checked: \"This file can be viewed or downloaded 10 times for 30 days with the password\". What we saw: A share link with a password, an open limit of 10, expiry after 30 days and access logs was set up in about 3 minutes; the link was not opened by an outside recipient.",
+    "Text we checked: \"Your account will be downgraded to Basic\". What we saw: Cancelling ended the subscription after 3 screens and two Proceed to cancel clicks and drops the account to Basic, as the dossier says; no discount offer or password."
+   ],
+   "not_tested": [
+    "The desktop and mobile apps, sync and offline use.",
+    "Opening the share link as an outside recipient.",
+    "A real file request, eSign request or Engage room.",
+    "Co-editing a file.",
+    "Recovery of your own vault.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Professional, 1 user x EUR 36.00 / user / month, EUR 36.00 / month, 21% VAT (Netherlands) EUR 7.56, due on December 4, 2026, EUR 43.56",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Billing shows EUR 36.00 per user per month plus EUR 7.56 Dutch VAT, EUR 43.56 in total; the dossier gives Professional at EUR 36 a month on monthly billing without tax.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/tresorit-review.html#claim-vs-measured"
+     },
+     "plan": "Tresorit Professional, 14-day trial, EUR 36.00 a month plus 21% VAT after the trial",
+     "comparability": "A billing amount with VAT against a list price without VAT.",
+     "status": "not_comparable",
+     "buying_consequence": "A Dutch buyer pays EUR 43.56 a month on Professional, VAT included.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This file can be viewed or downloaded 10 times for 30 days with the password.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "A share link with a password, an open limit of 10, expiry after 30 days and access logs was set up in about 3 minutes; the link was not opened by an outside recipient.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/tresorit-review.html#claim-vs-measured"
+     },
+     "plan": "Tresorit Professional, 14-day trial, EUR 36.00 a month plus 21% VAT after the trial",
+     "comparability": "The share link settings in the session.",
+     "status": "confirmed",
+     "buying_consequence": "Link controls are in the trial; check the recipient side yourself.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your account will be downgraded to Basic.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Cancelling ended the subscription after 3 screens and two Proceed to cancel clicks and drops the account to Basic, as the dossier says; no discount offer or password.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/tresorit-review.html#claim-vs-measured"
+     },
+     "plan": "Tresorit Professional, 14-day trial, EUR 36.00 a month plus 21% VAT after the trial",
+     "comparability": "The cancellation in the session against the dossier cancel description.",
+     "status": "confirmed",
+     "buying_consequence": "Cancelling keeps a Basic account rather than closing it.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "due on December 4, 2026",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Billing gives the first charge on December 4, 2026, while the checkout, seen by Daan before the session, named Dec 3. The checkout itself was not observed here, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/tresorit-review.html#claim-vs-measured"
+     },
+     "plan": "Tresorit Professional, 14-day trial, EUR 36.00 a month plus 21% VAT after the trial",
+     "comparability": "The billing page against the checkout; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Check the charge date on the Billing page, not only at checkout.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Tresorit in the 14-day Professional trial that Daan started with his card. A share link with a password, an open limit, expiry and access logs took about 3 minutes. The price is EUR 36.00 plus 21% VAT, so EUR 43.56 a month in the Netherlands. Cancelling took 3 screens with no discount offer and drops the account to Basic. Account and start: Daan created the account and started the 14-day Professional trial with his own card. Our AI assistant ran the test in Daan's browser on 19 November 2026 from about 16:19 to 16:22 CET in Web Access and the Admin Center, on a second try after an expired login. The interface was in English. Nothing was installed, sent or paid. Core action, a folder, an upload and a share link: New folder, Test Folder, Return gave Test Folder created successfully. A CSV file with 5 made-up contacts uploaded at once. Share creates the link straight away; by default Anyone with the link can access and This file can be viewed or downloaded for 30 days. Basic settings: an open count limit (we set 10), expiration 30 days, and a password. Advanced settings: Detailed access logs, Require email address, Disable download and Email notification. After saving: This file can be viewed or downloaded 10 times for 30 days with the password. The link was not sent or opened. Version history showed one version and No more versions. Time to the first result was about 3 minutes in about 12 steps. Admin Center: Policies cover allowed devices, 2-step verification Optional, session control, IP filtering and sharing rules. Reports: detailed reporting (shared links, link activity, external users, devices) is locked behind a reports upgrade button; access logs per link, admin activity and folder activities are already available. Customization lets you add a logo and primary colours; nothing was saved. File Requests, eSign and Engage Rooms were opened but left empty; Engage said You've got 14 days to try it. Plans and trial: Billing shows Plan Professional trial, Billing period monthly, Cost EUR 43.56 / month. Next payment: Professional, 1 user x EUR 36.00 / user / month, 21% VAT (Netherlands) EUR 7.56, due on December 4, 2026, EUR 43.56. Billing history: You don't have invoices yet. Add-ons: Engage in trial mode (then EUR 35.00 / month), Email Encryption (14 days free) and Free Tresorit eSign. Users: You have 0 available seats. Checkout: the trial checkout was done by Daan before the session and was not seen; it showed a first payment on Dec 3, while Billing says due on December 4, 2026. Cancelling, done the same day: Admin Center, Billing, Modify plan, Cancel subscription. Screen 1, Sorry to see you go, lists what you lose: older file versions, security for files larger than 500MB, eSign access, and Your account will be downgraded to Basic, with Keep current package and Proceed to cancel. Screen 2 asks why, with 11 reasons; we chose I was testing the product. Then an optional feedback box and a second Proceed to cancel. Result: You have successfully cancelled your Professional subscription, a confirmation email has been sent to you. No discount offer, no password and no support contact. Not tested: the desktop and mobile apps, sync and offline use, opening the link as an outside recipient, a real file request, eSign request or Engage room, co-editing and vault recovery. Clean up: Test Folder with the test file and one password-protected share link stay; the subscription is cancelled and the account falls back to Basic. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The checkout named a first payment on Dec 3 while Billing says December 4, 2026. Detailed reports need an upgrade. Cancelling needs two Proceed to cancel clicks.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling takes 3 screens in the Admin Center: a list of what you lose, a reason, and an optional feedback box, with two Proceed to cancel clicks. No discount offer and no password. The account falls back to Basic instead of closing."
+    },
+    "not_tested": [
+     "The desktop and mobile apps, sync and offline use.",
+     "Opening the share link as an outside recipient.",
+     "A real file request, eSign request or Engage room.",
+     "Co-editing a file.",
+     "Recovery of your own vault.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 16:19 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },

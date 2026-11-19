@@ -265,7 +265,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/arbor-review.html
 
 ## AskNest (ecommercestorez.us)
-- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/asknest-ai-faq-product-bot, re-verified unchanged 2026-09-28 and 2026-10-09) Four tiers, priced by AI replies per month, and the cheapest ladder in this…
+- **Verified pricing:** (read 2026-08-19 on apps.shopify.com/asknest-ai-faq-product-bot, re-verified unchanged 2026-09-28, 2026-10-09 and 2026-11-19) Four tiers, priced by AI replies per month, and the cheapest la…
 - **Honest take:** One review. The app launched on 8 May 2026, and in three and a half months exactly one merchant has written about it.
 - **Best for:** small stores with repetitive product, shipping and returns questions who want a cheap multilingual FAQ widget and can test the answer quality on their own policy pages for free first
 - **Flags:** Usage-metered, Free tier
@@ -521,7 +521,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/bold-upsell-review.html
 
 ## Bolt Business (bolt.eu)
-- **Verified pricing:** No subscription and, in the words of Bolt's business page, no upfront fees (re-verified 2026-10-09; on 2026-08-20 the page also said no minimum commitment): you pay per ride or rental taken…
+- **Verified pricing:** No subscription and, in the words of Bolt's business page, no upfront fees (re-verified 2026-10-09 and 2026-11-19; on 2026-08-20 the page also said no minimum commitment): you pay per ride …
 - **Honest take:** The honest boundary is geography: Bolt's network is Europe/Africa-centric across 600+ cities.
 - **Best for:** companies with European/African travel footprints that want employee rides centrally billed, policy-controlled and expense-integrated: at zero platform cost
 - **Full review:** https://officesoftwaremarketplace.com/bolt-business-review.html
@@ -3294,7 +3294,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/roverlead-review.html
 
 ## Ruby (ruby.com)
-- **Verified pricing:** Read on their own plans-and-pricing page, 6 September 2026, and unchanged on 6 October 2026.
+- **Verified pricing:** Read on their own plans-and-pricing page, 6 September 2026, and unchanged on 6 October and 19 November 2026.
 - **Honest take:** You're paying premium rates for real human receptionists billed per minute.
 - **Best for:** client-driven service businesses (law, home services, clinics) where a live human answering every call directly wins business
 - **Flags:** Usage-metered
@@ -3823,9 +3823,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/sucuri-review.html
 
 ## Sunsama (sunsama.com)
-- **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit) The page gives two different numbers and it is worth knowing both.
-- **Honest take:** The pricing page contradicts itself: the plan card says $17 yearly and $22 monthly, the FAQ on the same page says $20 yearly and $25 monthly.
+- **Verified pricing:** (re-read 19 November 2026 on sunsama.com/pricing and sunsama.com/llms.txt) Pro costs $22 a month per person billed monthly, or $17 a month billed yearly ($204 a year), with unlimited usage …
+- **Honest take:** There is no free plan after the 14-day trial and no cheaper tier: Pro at $22 a month billed monthly, or $17 billed yearly, per person, is the only self-serve option.
 - **Best for:** people whose problem is deciding what to do today rather than tracking what exists: it pulls from your existing tools and forces a daily plan, which is the whole product
+- **Flags:** Annual commit
 - **Full review:** https://officesoftwaremarketplace.com/sunsama-review.html
 
 ## SupaEasy (supaeasy.com)

@@ -9,21 +9,21 @@
  "summary": "Daily planning that pulls tasks from your other tools into one deliberate schedule.",
  "best_for": "people whose problem is deciding what to do today rather than tracking what exists: it pulls from your existing tools and forces a daily plan, which is the whole product",
  "skip_if": "you already plan your day and just want a task list, because that is free everywhere; also skip it for a team, since there is no team pricing and the per-person cost multiplies straight through",
- "honest_knock": "The pricing page contradicts itself: the plan card says $17 yearly and $22 monthly, the FAQ on the same page says $20 yearly and $25 monthly. One of those is stale, and until you know which, treat $25 as the number you might actually be charged. That is an odd thing to have to say about a company that goes out of its way on that same page to explain why it refuses to use $24.99 pricing: the transparency is real and so is the inconsistency. The other thing to be clear about is that this is per person with no team discount mentioned: two people is two subscriptions, and their own example says $50.",
+ "honest_knock": "There is no free plan after the 14-day trial and no cheaper tier: Pro at $22 a month billed monthly, or $17 billed yearly, per person, is the only self-serve option. Until at least 19 September 2026 the pricing page also contradicted itself (its FAQ said $25 and $20); by 19 November the FAQ matched the plan card. The other thing to be clear about is that this is per person with no team discount mentioned: two people is two subscriptions, and their own example says $44 a month.",
  "pricing": {
   "status": "public",
   "entry_price": "$17",
-  "entry_price_terms": "per month billed yearly, $22 monthly on the plan card",
+  "entry_price_terms": "per month billed yearly ($204), $22 monthly, per person (plan card, FAQ and llms.txt agree on 19 Nov 2026)",
   "from_price_usd_month": 17.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(2026-08-30, re-read on their own pricing page from a US exit) The page gives two different numbers and it is worth knowing both. The plan card says $17 a month billed yearly, or $22 billed monthly, for the Pro plan, with unlimited usage and integrations; Enterprise is quote-only. The FAQ on the same page says Sunsama costs $25 a month per person, or $20 a month on yearly plans, and gives a worked example of $50 a month for two people. There is a free trial with no card required. The page also explains, unprompted, that they price at $25.00 rather than $24.99 because they consider the latter 'deceitful psychological trickery'. Their own llms.txt, read the same day, lists Pro at $17 per person a month billed yearly and $22 billed monthly, plus a 14-day trial at $0 with no card required — so the machine-readable file agrees with the plan card and not with the FAQ.",
-  "verified_at": "2026-09-19",
+  "notes": "(re-read 19 November 2026 on sunsama.com/pricing and sunsama.com/llms.txt) Pro costs $22 a month per person billed monthly, or $17 a month billed yearly ($204 a year), with unlimited usage and integrations; Enterprise is quote-only. There is a 14-day free trial with no card required and no free plan after it. On 30 August and still on 19 September 2026 the FAQ on the same page said $25 a month per person, or $20 on yearly plans, which contradicted the plan card. On 19 November the FAQ gives the same $22 and $17 as the plan card and llms.txt, with a worked example of $44 a month for two people ($34 billed annually). The manifesto on the page still calls annual billing '20% off'; $17 against $22 is about 23% off, or $60 a year per person ($204 against $264). It also still explains that they price at $25.00 rather than $24.99 because they consider the latter 'deceitful psychological trickery', a figure no current plan uses.",
+  "verified_at": "2026-11-19",
   "source_url": null,
   "schema_offer": {
    "price": 22.0,
    "currency": "USD",
-   "description": "Pro, billed monthly, $17 a month is the yearly rate. Read on the vendor's own pricing page on 2026-08-17.",
+   "description": "Pro, per person, billed monthly; $17 a month is the yearly rate ($204 a year). Read on the vendor's own pricing page on 2026-11-19.",
    "page": "https://officesoftwaremarketplace.com/sunsama-review.html"
   },
   "source_quotes": [
@@ -47,7 +47,15 @@
  },
  "free_plan": false,
  "free_plan_evidence": null,
- "cost_traps": [],
+ "cost_traps": [
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "The manifesto on the page still calls annual billing '20% off'; $17 against $22 is about 23% off, or $60 a year per person ($204 against $264).",
+   "verified_at": "2026-11-19",
+   "source_url": null
+  }
+ ],
  "compare_with": {
   "name": "Motion or Akiflow",
   "why": "the direct daily-planning peers: all three are per person, so compare on which one actually gets you to close the planning ritual each morning"
@@ -73,16 +81,464 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "monthly": 22,
+     "annual_month": 17,
+     "evidence": "Pro costs $22 a month per person billed monthly, or $17 a month billed yearly ($204 a year)"
+    }
+   ],
+   "notes": "Per person, no team discount; 14-day free trial with no card and no free plan after it. Read 19 November 2026 on sunsama.com/pricing and sunsama.com/llms.txt; the FAQ's $25/$20 of August and September no longer appears.",
+   "not_computable": [
+    {
+     "text": "Enterprise (SSO and SAML, SCIM, audit logs) is quote-only.",
+     "affects_cost": false
+    }
+   ],
+   "rules_verified_at": "2026-11-19"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "sunsama",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 17.0,
+      "billed": {
+       "amount": 204.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 17.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 34.0,
+      "billed": {
+       "amount": 408.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 34.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 51.0,
+      "billed": {
+       "amount": 612.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 51.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 85.0,
+      "billed": {
+       "amount": 1020.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 85.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 170.0,
+      "billed": {
+       "amount": 2040.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 170.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 255.0,
+      "billed": {
+       "amount": 3060.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 255.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 340.0,
+      "billed": {
+       "amount": 4080.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 340.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 425.0,
+      "billed": {
+       "amount": 5100.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 425.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 850.0,
+      "billed": {
+       "amount": 10200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 850.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1700.0,
+      "billed": {
+       "amount": 20400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 1700.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Enterprise (SSO and SAML, SCIM, audit logs) is quote-only."
+    ],
+    "measured": [
+     {
+      "claim": "My tasks sit in several tools and each morning I lose time deciding what to do first.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Half of this pain was tried. With no connection made, 10 tasks typed by hand and one prompt gave a day plan in about 1 minute and 45 seconds, of which the planning was about 25 seconds. Pulling tasks from several tools into one list was not tested, because every connection was skipped.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The pain of the audience group against a test with only hand typed tasks; no tool was connected.",
+      "status": "not_testable",
+      "buying_consequence": "The part about deciding what to do first got a plan in under two minutes; the part about tasks in several tools is open.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/sunsama-review.html"
+     },
+     {
+      "claim": "Plans are much better with your calendar and at least one task tool.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Setup complete said that no calendars and no task tools were connected and then led straight to the planning agent, which made a plan of 5 tasks. A plan with a calendar or a task tool was not made, so the difference was not seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The line of the setup screen against a test without any connection; no second plan was made to compare.",
+      "status": "not_testable",
+      "buying_consequence": "You can plan without connections, but the app itself says the result is better with them.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/sunsama-review.html"
+     },
+     {
+      "claim": "The planning agent deferred 6 tasks and adjusted 3 tasks.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "After the prompt to focus on three tasks and keep to about four hours, the agent moved 6 tasks from Today to tomorrow, changed three tasks from Normal to Priority and showed Work: 4:05. The plan began at 19:00, after the end of the work day of 17:00 that was set in the setup, and ran to about 23:00.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The message of the agent against the day view; one prompt on one set of 10 tasks.",
+      "status": "confirmed",
+      "buying_consequence": "The agent does what the prompt asks and lands close to four hours, but it plans from the clock of the moment you ask.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/sunsama-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "sunsama",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 22.0,
+      "billed": {
+       "amount": 22.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 22.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 44.0,
+      "billed": {
+       "amount": 44.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 44.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 66.0,
+      "billed": {
+       "amount": 66.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 66.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 110.0,
+      "billed": {
+       "amount": 110.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 110.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 220.0,
+      "billed": {
+       "amount": 220.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 220.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 330.0,
+      "billed": {
+       "amount": 330.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 330.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 440.0,
+      "billed": {
+       "amount": 440.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 440.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 550.0,
+      "billed": {
+       "amount": 550.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 550.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 1100.0,
+      "billed": {
+       "amount": 1100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 1100.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 2200.0,
+      "billed": {
+       "amount": 2200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 2200.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Enterprise (SSO and SAML, SCIM, audit logs) is quote-only."
+    ],
+    "measured": [
+     {
+      "claim": "My tasks sit in several tools and each morning I lose time deciding what to do first.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Half of this pain was tried. With no connection made, 10 tasks typed by hand and one prompt gave a day plan in about 1 minute and 45 seconds, of which the planning was about 25 seconds. Pulling tasks from several tools into one list was not tested, because every connection was skipped.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The pain of the audience group against a test with only hand typed tasks; no tool was connected.",
+      "status": "not_testable",
+      "buying_consequence": "The part about deciding what to do first got a plan in under two minutes; the part about tasks in several tools is open.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/sunsama-review.html"
+     },
+     {
+      "claim": "Plans are much better with your calendar and at least one task tool.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Setup complete said that no calendars and no task tools were connected and then led straight to the planning agent, which made a plan of 5 tasks. A plan with a calendar or a task tool was not made, so the difference was not seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The line of the setup screen against a test without any connection; no second plan was made to compare.",
+      "status": "not_testable",
+      "buying_consequence": "You can plan without connections, but the app itself says the result is better with them.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/sunsama-review.html"
+     },
+     {
+      "claim": "The planning agent deferred 6 tasks and adjusted 3 tasks.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "After the prompt to focus on three tasks and keep to about four hours, the agent moved 6 tasks from Today to tomorrow, changed three tasks from Normal to Priority and showed Work: 4:05. The plan began at 19:00, after the end of the work day of 17:00 that was set in the setup, and ran to about 23:00.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/sunsama-review.html#claim-vs-measured"
+      },
+      "plan": "Trial account; 10 tasks were entered by hand and the planning agent made a day plan without any connection; the plans were read in the app and on the public pricing page; nothing was bought",
+      "comparability": "The message of the agent against the day view; one prompt on one set of 10 tasks.",
+      "status": "confirmed",
+      "buying_consequence": "The agent does what the prompt asks and lands close to four hours, but it plans from the clock of the moment you ask.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/sunsama-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "quoted",
@@ -741,12 +1197,6 @@
    "question_id": "sunsama:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "sunsama:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

@@ -81,10 +81,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -92,7 +91,336 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-19",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/pricefy-review/",
+  "method": [
+   "Our AI assistant worked in its own tab of Daan's browser on the Free plan; the notes record what each screen showed and the screenshots have Daan's details masked"
+  ],
+  "claims": [
+   {
+    "claim": "No credit card required",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The account worked on the Free plan, Forever Free, without a card; Billing shows the Free plan and only lists the accepted payment methods. A card was only asked on the Stripe page after Select Plan.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pricefy-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of yearly Starter was seen and left",
+    "comparability": "The pricing page line against the Free account up to the plan button.",
+    "status": "confirmed",
+    "buying_consequence": "You can track up to 50 products on the Free plan without a card.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Live in 2 minutes",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The product was added a little over a minute after the start and the competitor URL at 10:07:28, but Monitored URLs still showed Missing Price and Missing Stock at 10:11, with This price will be scraped before next 9:07 pm and Fetch Updated Price disabled.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pricefy-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of yearly Starter was seen and left",
+    "comparability": "A setup time claim against one product and one competitor URL; the later scrape was not checked.",
+    "status": "not_comparable",
+    "buying_consequence": "Setup takes minutes, but on the Free plan the first competitor price comes with the daily scrape, hours later.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Price Change Notification",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The public page lists this from Starter. On the Free plan Alert Rules held six default rules, all off, with Last Email Sent Never, and Alert History said No alerts yet. Whether a rule can be switched on and fires on Free was not tried.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pricefy-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of yearly Starter was seen and left",
+    "comparability": "A plan feature line against default rules that were never switched on.",
+    "status": "not_testable",
+    "buying_consequence": "Expect price alerts by e-mail only on a paid plan; this was not tried on Free.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Pro $891",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "With Billing Yearly the plan table shows Pro at $891 a year, about $74 a month, as in the dossier; Starter $441, Business $1700 and Enterprise $4800 a year. The public page shows the same monthly amounts as the app.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pricefy-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of yearly Starter was seen and left",
+    "comparability": "The yearly plan table in the app against the dossier figure.",
+    "status": "confirmed",
+    "buying_consequence": "Yearly billing saves about a quarter on Pro, as the dossier says.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Starter $441",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "With Billing Yearly the app shows Starter at $49 a month and $441 a year. Select Plan opened a Stripe checkout in Dutch for a yearly Starter subscription at EUR 417.43, total due today EUR 417.43, with no trial. The plan table was in dollars and the checkout in euros; nothing was filled in.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pricefy-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of yearly Starter was seen and left",
+    "comparability": "A dollar plan table against a euro checkout; no stored cost rule was compared and the exchange rate is unknown.",
+    "status": "not_comparable",
+    "buying_consequence": "Yearly Starter was charged in euros at checkout; check the currency and any tax before you pay.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-19",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pricefy on the Free plan of an account Daan created. Adding one product and one competitor page took about a minute and no card was asked, but the competitor price did not come in: after 4 minutes the page still said Missing Price, with a note that it would be read before 9:07 pm. On the Free plan prices are read once a day, so the first comparison comes hours later, not in minutes. The six alert rules and four reports were all switched off. The plan table in the app matches the public page, and yearly Starter opened a Stripe checkout in euros at EUR 417.43, which was left with nothing filled in. Account and start: Daan created the account and confirmed the e-mail address; our AI assistant ran the test in Daan's browser, in its own tab, on 19 November 2026 from 10:06 CET. The interface was in English, with United States and US Dollar as country and currency. The dashboard was empty. A setup wizard (Step 1 of 6) and a Competitors Discovery offer came back at every full page load and were closed each time; Discovery was not started. The plan was Free, Active, Forever Free, with 1 / 50 products after the test. The dossier name is Pricefy and the review is on AIBM (b2b/pricefy-review). Core action, track one competitor price for one product: My Catalog, Add Product, Quick Add Product needs a product name, SKU and price. The product LEGO Classic Medium Creative Brick Box 10696, SKU TEST-001, price 34.99, gave Product Added Successfully a little over a minute after the start. Add New Competitor URL takes one competitor URL per product; a public target.com product page was added and Competitor URLs added successfully appeared at 10:07:28. Clicking the small plus next to the field leaves Save disabled; without it Save works. First price: Monitored URLs showed Missing Price and Missing Stock after 10:07 and still at 10:11. The tooltip said This price will be scraped before next 9:07 pm, and Fetch Updated Price was disabled. So no competitor price came in within 4 minutes; the first price comes with the daily scrape of the Free plan. Whether target.com later returned a price was not checked. Alerts and reports: Alert History said No alerts yet; Alert Rules held six default rules, all off, Last Email Sent Never. Reports held four weekly reports, all off, Last Run Never. The public page lists Price Change Notification and Excel/eMail Reports from Starter. Nothing was sent, no store was linked and Discovery was not run. Plans: In the app (Billing, Change Plan) and on pricefy.io/pricing, in USD, per month: Free $0, Starter $49, Pro $99 (Popular), Business $189 and Enterprise $499. Products 50, 100, 2,000, 15,000 and 25,000; competitors 5 on Free and unlimited on paid plans; monitored URLs 45, 500, 3,000, 15,000 and 85,000; channels 1, 3 and unlimited; price updates Daily (1) on Free and Daily (2) on paid plans. Yearly (Save up to 25%): Starter $441, Pro $891 (about $74 a month), Business $1700 and Enterprise $400 a month ($4800 a year). The public page lists Price Change Notification and Excel/eMail Reports from Starter and Dynamic Repricing from Pro, and says Free forever plan, No credit card required, Live in 2 minutes and Cancel anytime. The Monitored URLs add-on needs a paid plan; the AI Assistant add-on is for Professional, Business and Enterprise, with 50 free messages a month. Checkout: Select Plan on Starter with yearly billing opened a live Stripe checkout at once, in Dutch because of the browser language: a Starter subscription at EUR 417.43 a year, billed yearly, total due today EUR 417.43, with no trial on the page. Nothing was filled in and the page was left; no image was kept because the page was not in English. Cancelling: on the Free plan there is nothing to cancel. My Account, My Profile has a link to delete the account (GDPR compliant), which was not clicked. Cancelling a paid plan through Billing was not tested. Not tested: the first real competitor price and the comparison, a CSV import of 10 products (1 product was added by hand), Competitor Discovery, repricing, Buy Box cases and cancelling a paid plan. Clean up: the account and the test product with one target.com URL stay. The own tab and a help tab the app opened were closed; Daan's tab was not touched. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "On the Free plan the first competitor price comes with the next daily scrape, hours later, and Fetch Updated Price is disabled. The setup wizard and the Discovery offer return at every full page load. Clicking the plus next to the competitor URL field leaves Save disabled. The yearly checkout charged in euros while the plan table shows dollars.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "The first real competitor price and the comparison; it had not arrived after 4 minutes.",
+    "A CSV import of several products; one product was added by hand.",
+    "Competitor Discovery and AI automatch.",
+    "Switching on an alert rule or sending a report.",
+    "Repricing and Buy Box cases.",
+    "A card, tax and the final total; the Stripe checkout was left with nothing filled in.",
+    "Cancelling a paid plan; no plan was bought.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 10:06 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/pricefy-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pricefy-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pricefy-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pricefy on the Free plan of an account Daan created. Adding one product and one competitor page took about a minute and no card was asked, but the competitor price did not come in: after 4 minutes the page still said Missing Price, with a note that it would be read before 9:07 pm. On the Free plan prices are read once a day, so the first comparison comes hours later, not in minutes. The six alert rules and four reports were all switched off. The plan table in the app matches the public page, and yearly Starter opened a Stripe checkout in euros at EUR 417.43, which was left with nothing filled in. Account and start: Daan created the account and confirmed the e-mail address; our AI assistant ran the test in Daan's browser, in its own tab, on 19 November 2026 from 10:06 CET. The interface was in English, with United States and US Dollar as country and currency. The dashboard was empty. A setup wizard (Step 1 of 6) and a Competitors Discovery offer came back at every full page load and were closed each time; Discovery was not started. The plan was Free, Active, Forever Free, with 1 / 50 products after the test. The dossier name is Pricefy and the review is on AIBM (b2b/pricefy-review). Core action, track one competitor price for one product: My Catalog, Add Product, Quick Add Product needs a product name, SKU and price. The product LEGO Classic Medium Creative Brick Box 10696, SKU TEST-001, price 34.99, gave Product Added Successfully a little over a minute after the start. Add New Competitor URL takes one competitor URL per product; a public target.com product page was added and Competitor URLs added successfully appeared at 10:07:28. Clicking the small plus next to the field leaves Save disabled; without it Save works. First price: Monitored URLs showed Missing Price and Missing Stock after 10:07 and still at 10:11. The tooltip said This price will be scraped before next 9:07 pm, and Fetch Updated Price was disabled. So no competitor price came in within 4 minutes; the first price comes with the daily scrape of the Free plan. Whether target.com later returned a price was not checked. Alerts and reports: Alert History said No alerts yet; Alert Rules held six default rules, all off, Last Email Sent Never. Reports held four weekly reports, all off, Last Run Never. The public page lists Price Change Notification and Excel/eMail Reports from Starter. Nothing was sent, no store was linked and Discovery was not run. Plans: In the app (Billing, Change Plan) and on pricefy.io/pricing, in USD, per month: Free $0, Starter $49, Pro $99 (Popular), Business $189 and Enterprise $499. Products 50, 100, 2,000, 15,000 and 25,000; competitors 5 on Free and unlimited on paid plans; monitored URLs 45, 500, 3,000, 15,000 and 85,000; channels 1, 3 and unlimited; price updates Daily (1) on Free and Daily (2) on paid plans. Yearly (Save up to 25%): Starter $441, Pro $891 (about $74 a month), Business $1700 and Enterprise $400 a month ($4800 a year). The public page lists Price Change Notification and Excel/eMail Reports from Starter and Dynamic Repricing from Pro, and says Free forever plan, No credit card required, Live in 2 minutes and Cancel anytime. The Monitored URLs add-on needs a paid plan; the AI Assistant add-on is for Professional, Business and Enterprise, with 50 free messages a month. Checkout: Select Plan on Starter with yearly billing opened a live Stripe checkout at once, in Dutch because of the browser language: a Starter subscription at EUR 417.43 a year, billed yearly, total due today EUR 417.43, with no trial on the page. Nothing was filled in and the page was left; no image was kept because the page was not in English. Cancelling: on the Free plan there is nothing to cancel. My Account, My Profile has a link to delete the account (GDPR compliant), which was not clicked. Cancelling a paid plan through Billing was not tested. Not tested: the first real competitor price and the comparison, a CSV import of 10 products (1 product was added by hand), Competitor Discovery, repricing, Buy Box cases and cancelling a paid plan. Clean up: the account and the test product with one target.com URL stay. The own tab and a help tab the app opened were closed; Daan's tab was not touched. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pricefy-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pricefy on the Free plan of an account Daan created. Adding one product and one competitor page took about a minute and no card was asked, but the competitor price did not come in: after 4 minutes the page still said Missing Price, with a note that it would be read before 9:07 pm. On the Free plan prices are read once a day, so the first comparison comes hours later, not in minutes. The six alert rules and four reports were all switched off. The plan table in the app matches the public page, and yearly Starter opened a Stripe checkout in euros at EUR 417.43, which was left with nothing filled in. Account and start: Daan created the account and confirmed the e-mail address; our AI assistant ran the test in Daan's browser, in its own tab, on 19 November 2026 from 10:06 CET. The interface was in English, with United States and US Dollar as country and currency. The dashboard was empty. A setup wizard (Step 1 of 6) and a Competitors Discovery offer came back at every full page load and were closed each time; Discovery was not started. The plan was Free, Active, Forever Free, with 1 / 50 products after the test. The dossier name is Pricefy and the review is on AIBM (b2b/pricefy-review). Core action, track one competitor price for one product: My Catalog, Add Product, Quick Add Product needs a product name, SKU and price. The product LEGO Classic Medium Creative Brick Box 10696, SKU TEST-001, price 34.99, gave Product Added Successfully a little over a minute after the start. Add New Competitor URL takes one competitor URL per product; a public target.com product page was added and Competitor URLs added successfully appeared at 10:07:28. Clicking the small plus next to the field leaves Save disabled; without it Save works. First price: Monitored URLs showed Missing Price and Missing Stock after 10:07 and still at 10:11. The tooltip said This price will be scraped before next 9:07 pm, and Fetch Updated Price was disabled. So no competitor price came in within 4 minutes; the first price comes with the daily scrape of the Free plan. Whether target.com later returned a price was not checked. Alerts and reports: Alert History said No alerts yet; Alert Rules held six default rules, all off, Last Email Sent Never. Reports held four weekly reports, all off, Last Run Never. The public page lists Price Change Notification and Excel/eMail Reports from Starter. Nothing was sent, no store was linked and Discovery was not run. Plans: In the app (Billing, Change Plan) and on pricefy.io/pricing, in USD, per month: Free $0, Starter $49, Pro $99 (Popular), Business $189 and Enterprise $499. Products 50, 100, 2,000, 15,000 and 25,000; competitors 5 on Free and unlimited on paid plans; monitored URLs 45, 500, 3,000, 15,000 and 85,000; channels 1, 3 and unlimited; price updates Daily (1) on Free and Daily (2) on paid plans. Yearly (Save up to 25%): Starter $441, Pro $891 (about $74 a month), Business $1700 and Enterprise $400 a month ($4800 a year). The public page lists Price Change Notification and Excel/eMail Reports from Starter and Dynamic Repricing from Pro, and says Free forever plan, No credit card required, Live in 2 minutes and Cancel anytime. The Monitored URLs add-on needs a paid plan; the AI Assistant add-on is for Professional, Business and Enterprise, with 50 free messages a month. Checkout: Select Plan on Starter with yearly billing opened a live Stripe checkout at once, in Dutch because of the browser language: a Starter subscription at EUR 417.43 a year, billed yearly, total due today EUR 417.43, with no trial on the page. Nothing was filled in and the page was left; no image was kept because the page was not in English. Cancelling: on the Free plan there is nothing to cancel. My Account, My Profile has a link to delete the account (GDPR compliant), which was not clicked. Cancelling a paid plan through Billing was not tested. Not tested: the first real competitor price and the comparison, a CSV import of 10 products (1 product was added by hand), Competitor Discovery, repricing, Buy Box cases and cancelling a paid plan. Clean up: the account and the test product with one target.com URL stay. The own tab and a help tab the app opened were closed; Daan's tab was not touched. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pricefy-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pricefy-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-19",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Pricefy",
+    "product_id": "pricefy",
+    "run_date": "2026-11-19",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pricefy on the Free plan of an account Daan created. Adding one product and one competitor page took about a minute and no card was asked, but the competitor price did not come in: after 4 minutes the page still said Missing Price, with a note that it would be read before 9:07 pm. On the Free plan prices are read once a day, so the first comparison comes hours later, not in minutes. The six alert rules and four reports were all switched off. The plan table in the app matches the public page, and yearly Starter opened a Stripe checkout in euros at EUR 417.43, which was left with nothing filled in.",
+    "findings": [
+     "Text we checked: \"No credit card required\". What we saw: The account worked on the Free plan, Forever Free, without a card; Billing shows the Free plan and only lists the accepted payment methods. A card was only asked on the Stripe page after Select Plan.",
+     "Text we checked: \"Pro $891\". What we saw: With Billing Yearly the plan table shows Pro at $891 a year, about $74 a month, as in the dossier; Starter $441, Business $1700 and Enterprise $4800 a year. The public page shows the same monthly amounts as the app."
+    ],
+    "not_tested": [
+     "The first real competitor price and the comparison; it had not arrived after 4 minutes.",
+     "A CSV import of several products; one product was added by hand.",
+     "Competitor Discovery and AI automatch.",
+     "Switching on an alert rule or sending a report.",
+     "Repricing and Buy Box cases.",
+     "A card, tax and the final total; the Stripe checkout was left with nothing filled in.",
+     "Cancelling a paid plan; no plan was bought.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "No credit card required",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The account worked on the Free plan, Forever Free, without a card; Billing shows the Free plan and only lists the accepted payment methods. A card was only asked on the Stripe page after Select Plan.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pricefy-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of yearly Starter was seen and left",
+      "comparability": "The pricing page line against the Free account up to the plan button.",
+      "status": "confirmed",
+      "buying_consequence": "You can track up to 50 products on the Free plan without a card.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Live in 2 minutes",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The product was added a little over a minute after the start and the competitor URL at 10:07:28, but Monitored URLs still showed Missing Price and Missing Stock at 10:11, with This price will be scraped before next 9:07 pm and Fetch Updated Price disabled.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pricefy-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of yearly Starter was seen and left",
+      "comparability": "A setup time claim against one product and one competitor URL; the later scrape was not checked.",
+      "status": "not_comparable",
+      "buying_consequence": "Setup takes minutes, but on the Free plan the first competitor price comes with the daily scrape, hours later.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Price Change Notification",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The public page lists this from Starter. On the Free plan Alert Rules held six default rules, all off, with Last Email Sent Never, and Alert History said No alerts yet. Whether a rule can be switched on and fires on Free was not tried.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pricefy-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of yearly Starter was seen and left",
+      "comparability": "A plan feature line against default rules that were never switched on.",
+      "status": "not_testable",
+      "buying_consequence": "Expect price alerts by e-mail only on a paid plan; this was not tried on Free.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Pro $891",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "With Billing Yearly the plan table shows Pro at $891 a year, about $74 a month, as in the dossier; Starter $441, Business $1700 and Enterprise $4800 a year. The public page shows the same monthly amounts as the app.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pricefy-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of yearly Starter was seen and left",
+      "comparability": "The yearly plan table in the app against the dossier figure.",
+      "status": "confirmed",
+      "buying_consequence": "Yearly billing saves about a quarter on Pro, as the dossier says.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Starter $441",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "With Billing Yearly the app shows Starter at $49 a month and $441 a year. Select Plan opened a Stripe checkout in Dutch for a yearly Starter subscription at EUR 417.43, total due today EUR 417.43, with no trial. The plan table was in dollars and the checkout in euros; nothing was filled in.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pricefy-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of yearly Starter was seen and left",
+      "comparability": "A dollar plan table against a euro checkout; no stored cost rule was compared and the exchange rate is unknown.",
+      "status": "not_comparable",
+      "buying_consequence": "Yearly Starter was charged in euros at checkout; check the currency and any tax before you pay.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-19",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pricefy on the Free plan of an account Daan created. Adding one product and one competitor page took about a minute and no card was asked, but the competitor price did not come in: after 4 minutes the page still said Missing Price, with a note that it would be read before 9:07 pm. On the Free plan prices are read once a day, so the first comparison comes hours later, not in minutes. The six alert rules and four reports were all switched off. The plan table in the app matches the public page, and yearly Starter opened a Stripe checkout in euros at EUR 417.43, which was left with nothing filled in. Account and start: Daan created the account and confirmed the e-mail address; our AI assistant ran the test in Daan's browser, in its own tab, on 19 November 2026 from 10:06 CET. The interface was in English, with United States and US Dollar as country and currency. The dashboard was empty. A setup wizard (Step 1 of 6) and a Competitors Discovery offer came back at every full page load and were closed each time; Discovery was not started. The plan was Free, Active, Forever Free, with 1 / 50 products after the test. The dossier name is Pricefy and the review is on AIBM (b2b/pricefy-review). Core action, track one competitor price for one product: My Catalog, Add Product, Quick Add Product needs a product name, SKU and price. The product LEGO Classic Medium Creative Brick Box 10696, SKU TEST-001, price 34.99, gave Product Added Successfully a little over a minute after the start. Add New Competitor URL takes one competitor URL per product; a public target.com product page was added and Competitor URLs added successfully appeared at 10:07:28. Clicking the small plus next to the field leaves Save disabled; without it Save works. First price: Monitored URLs showed Missing Price and Missing Stock after 10:07 and still at 10:11. The tooltip said This price will be scraped before next 9:07 pm, and Fetch Updated Price was disabled. So no competitor price came in within 4 minutes; the first price comes with the daily scrape of the Free plan. Whether target.com later returned a price was not checked. Alerts and reports: Alert History said No alerts yet; Alert Rules held six default rules, all off, Last Email Sent Never. Reports held four weekly reports, all off, Last Run Never. The public page lists Price Change Notification and Excel/eMail Reports from Starter. Nothing was sent, no store was linked and Discovery was not run. Plans: In the app (Billing, Change Plan) and on pricefy.io/pricing, in USD, per month: Free $0, Starter $49, Pro $99 (Popular), Business $189 and Enterprise $499. Products 50, 100, 2,000, 15,000 and 25,000; competitors 5 on Free and unlimited on paid plans; monitored URLs 45, 500, 3,000, 15,000 and 85,000; channels 1, 3 and unlimited; price updates Daily (1) on Free and Daily (2) on paid plans. Yearly (Save up to 25%): Starter $441, Pro $891 (about $74 a month), Business $1700 and Enterprise $400 a month ($4800 a year). The public page lists Price Change Notification and Excel/eMail Reports from Starter and Dynamic Repricing from Pro, and says Free forever plan, No credit card required, Live in 2 minutes and Cancel anytime. The Monitored URLs add-on needs a paid plan; the AI Assistant add-on is for Professional, Business and Enterprise, with 50 free messages a month. Checkout: Select Plan on Starter with yearly billing opened a live Stripe checkout at once, in Dutch because of the browser language: a Starter subscription at EUR 417.43 a year, billed yearly, total due today EUR 417.43, with no trial on the page. Nothing was filled in and the page was left; no image was kept because the page was not in English. Cancelling: on the Free plan there is nothing to cancel. My Account, My Profile has a link to delete the account (GDPR compliant), which was not clicked. Cancelling a paid plan through Billing was not tested. Not tested: the first real competitor price and the comparison, a CSV import of 10 products (1 product was added by hand), Competitor Discovery, repricing, Buy Box cases and cancelling a paid plan. Clean up: the account and the test product with one target.com URL stay. The own tab and a help tab the app opened were closed; Daan's tab was not touched. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "On the Free plan the first competitor price comes with the next daily scrape, hours later, and Fetch Updated Price is disabled. The setup wizard and the Discovery offer return at every full page load. Clicking the plus next to the competitor URL field leaves Save disabled. The yearly checkout charged in euros while the plan table shows dollars.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "The first real competitor price and the comparison; it had not arrived after 4 minutes.",
+      "A CSV import of several products; one product was added by hand.",
+      "Competitor Discovery and AI automatch.",
+      "Switching on an alert rule or sending a report.",
+      "Repricing and Buy Box cases.",
+      "A card, tax and the final total; the Stripe checkout was left with nothing filled in.",
+      "Cancelling a paid plan; no plan was bought.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 10:06 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "pricefy:cancellation_terms",

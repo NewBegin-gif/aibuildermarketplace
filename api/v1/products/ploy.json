@@ -95,10 +95,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "quoted",
@@ -106,7 +105,410 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-19",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/ploy-review.html",
+  "method": [
+   "Our AI assistant worked in its own tab of Daan's browser and our notes record what each screen showed; evidence screenshots are shown with names and e-mail addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "proposes a rebuild that only goes ahead once you approve it",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "After the site was entered Ploy asked three design questions and then built the design system, two images and three pages and published them on a production and a staging address on a Ploy subdomain, without a separate plan, price or page list to approve. The only approval was the answers to the three choice questions. The real site was not touched.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+    "comparability": "The dossier line about approving a rebuild against the onboarding flow on the Free plan, without an own domain.",
+    "status": "contradicted",
+    "buying_consequence": "Expect Ploy to build and publish a draft on its own subdomain straight away; the publishing to your own site was not tested.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "500 credits / day (2,000 max)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The public pricing page gives the Free plan 500 credits a day with a 2,000 maximum; the Billing page in the app says Free, 700 AI credits a day and 700 credits / day (2,000 max), and Usage counted against 700.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+    "comparability": "The pricing page against the Billing and Usage pages of the app on the same day.",
+    "status": "contradicted",
+    "buying_consequence": "The free plan gave more daily credits in the app than the pricing page promises; the 2,000 maximum is the same.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Lifetime credits 89 / 2,000",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Usage showed Lifetime credits 89 / 2,000 right after the onboarding and 417 / 2,000 after the homepage; the chat Getting Started used 226 credits for the design system, two images, the homepage and one more page, and the SEO & AEO audit chat that started by itself used 194.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+    "comparability": "The Usage page before and after one build; the cost of later pages without a new design system was not measured.",
+    "status": "confirmed",
+    "buying_consequence": "On the Free plan the 2,000 credit cap is reached after a handful of pages like ours; one page with its design system cost about 226 credits.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Ploy can research and write your pages today, but it can't publish to a site it doesn't host, so you get drafts.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The onboarding showed this line under Site migration. Ploy published the redesign only on its own subdomain; the real site info.cern.ch was not changed and no own domain was connected.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+    "comparability": "The onboarding text against what was published during the test.",
+    "status": "confirmed",
+    "buying_consequence": "Without moving the site to Ploy you get pages on a Ploy address, not changes on your own site.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "No credit card required",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "No card was asked at sign-up, onboarding, building or publishing on the Ploy subdomain; Stripe Checkout with card fields only opened after Upgrade on Starter.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+    "comparability": "The pricing page line against the whole free session up to the upgrade button.",
+    "status": "confirmed",
+    "buying_consequence": "You can build and publish a test site on the Free plan without a card.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Monthly plans have no long-term commitment",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "This is an answer in the pricing FAQ. No plan was bought, so changing or cancelling a plan was not seen; Billing on the Free plan shows only Upgrade.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+    "comparability": "An FAQ answer against a session that bought nothing.",
+    "status": "not_testable",
+    "buying_consequence": "Changing or ending a paid plan is described but was not tried.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$50, now $40 per month, billed annually",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The app lists Starter at $50, now $40 per month, billed annually, and the pricing page at $480 a year. Upgrade on Starter opened Stripe Checkout for a yearly Starter subscription at EUR 454.53. The checkout was in euros and the plan list in dollars, and no tax line was recorded.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+    "comparability": "A dollar plan list against a euro checkout; no stored cost rule was compared and the exchange rate is unknown.",
+    "status": "not_comparable",
+    "buying_consequence": "The yearly Starter price was shown in euros at checkout; check the currency and any tax before you pay.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-19",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Ploy on the Free plan of an account Daan created, with the public site info.cern.ch as the source. About 6 minutes after the site was entered the first rebuilt page was visible (3 pages, a design system and two generated images) and about 2 minutes later Ploy published it on its own subdomain, after three design questions and without a separate step to approve the rebuild. One page with its design system cost about 226 of the 700 daily credits, and an audit chat that Ploy started by itself cost another 194. The pricing page gives the free plan 500 credits a day, the app 700. The Stripe checkout of Starter (EUR 454.53, billed annually) was seen and left with no card. Account and start: Daan created the account and our AI assistant ran the test in Daan's browser, in its own tab. The screen asked Verify your email (Check your inbox for a verification link); the verification mail from Ploy came in and the link was opened in that tab. No code or password was typed and no phone number was asked. The interface was already in English and the cookie banner was declined. The plan was Free. The dossier name is Ploy and the review is on MSS (mss/ploy-review.html). The source site for the test was info.cern.ch, a neutral public test site that is not ours. Core action, read a site and rebuild it: at 08:55 the site was entered (placeholder yourcompany.com) and Ploy said it would take a look at the website. The next screen, What do you want help with?, offered Site migration (marked Recommendation, with the line that Ploy can research and write pages today but cannot publish to a site it does not host, so you get drafts), Organic traffic (already on), Conversion rate optimization, Improve brand positioning, Ad campaigns and Find more qualified leads; only Organic traffic stayed on. What's the vision for your site?: Enhance my current design. Ploy then started two chats by itself, Getting Started and SEO & AEO audit, which spend credits in the background. Drive Ploy from Slack was set to Do this later and Google Analytics and Google Search Console were not connected. In the chat Getting Started Ploy summed up the site and asked three design questions (What should set the feeling at first sight?, What should the main images show?, What should carry over from today's page?); each got the first recommended answer. At 08:56 the first proposal came (Building your design system), at about 08:57 the design system was ready, and at 09:01:33 the first built page was visible: a new homepage http://info.cern.ch - home of the first website with the button Browse the first website, two generated images (an early-90s workstation and an accelerator tunnel), and the pages /who-invented-the-world-wide-web and /404, 3 pages in all. Ploy said I made your new homepage. It's publishing now; once it's live I'll share the links., and at 09:03 Publish finished on a production and a staging address on a Ploy subdomain. Time: about 6 minutes from entering the site to the first built page and about 8 minutes to published, with 11 clicks and 3 answers. Approval: there was no separate plan or quote of what a rebuild would cost and no list of pages to approve; the agent built the pages straight after the three choice questions and published them to the Ploy subdomain without asking. The real site info.cern.ch was not touched and no own domain was connected. Credits: Settings, Usage showed AI credits 89 / 700 (Resets Nov 20) and Lifetime credits 89 / 2,000 straight after the onboarding, then 395 / 700 and 417 / 700 after the homepage (Today 421). By chat: Getting Started 226 (design system, two images, homepage and one more page), SEO & AEO audit 194 (started by itself in the onboarding) and other activity 1. Building one page with its design system cost about 226 credits, about a third of the daily 700. Contact credits 0 / 25. Plans: In the app (Settings, Billing): Free, 700 AI credits a day, 700 credits / day (2,000 max), without custom domains or enriched traffic data. Starter $50, now $40 per month, billed annually (Save $120 per year), 4,000 credits / month, 1 custom domain, Google Ads, Meta Ads and LinkedIn Ads, 25 contact lookup credits, 50 visitor enrichment credits and CRM integrations, with A/B testing marked coming soon. Pro $300, now $240 per month, billed annually (Save $720 per year), 24,000 credits / month, 5 custom domains, 150 contact lookup credits and 1,000 visitor enrichment credits. Extra AI credits can be bought, and 100 contact credits cost $25. On the public pricing page ploy.ai/pricing: Free $0, No credit card required, 500 credits / day (2,000 max); Starter $50/mo, 4,000 credits / month, 1 custom domain; Pro $300/mo, 24,000 credits / month, 5 custom domains, CRM integrations (HubSpot, Attio); Enterprise Custom. Billed annually, Starter is $480 a year ($40 a month) and Pro $2,880 a year ($240 a month). The free allowance differs: the pricing page says 500 credits a day, the app says 700 credits a day, both with a 2,000 maximum. Checkout: Billing, Starter, Upgrade opened Stripe Checkout at once for a Starter subscription, billed annually, EUR 454.53, with fields for card number, expiry and security code, Apple Pay and Link. Nothing was filled in and the page was left at once. The Stripe page was in Dutch, so no image of it was kept. A card was not asked at sign-up, onboarding, building or publishing to the Ploy subdomain, only at the upgrade. Cancelling: on the Free plan there is nothing to cancel and Billing shows only Upgrade; cancelling or changing a paid plan was not seen. Settings, Personal has a profile and no delete button that we saw; Security has password, passkey and Log out. Workspace General has a Danger Zone with Delete Workspace, which was not clicked. Not tested: the HubSpot and Attio links (Pro), connecting an own domain (Starter), Slack, Google Analytics and Search Console, publishing to an own domain, the full result of the SEO & AEO audit, A/B testing (coming soon), entering a card and cancelling a paid plan. Clean up: the account and the workspace with the info.cern.ch test project stay, and so do the two published Ploy subdomain pages, which are public and hold a redesign of info.cern.ch. The own tab was closed and Daan's other tab was not touched. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Ploy starts two chats by itself in the onboarding and they spend credits in the background: the SEO & AEO audit used 194 credits before we asked for anything. There was no plan or price of the rebuild to approve; after three design questions the agent built the pages and published them on a public Ploy subdomain without asking. The free allowance is 700 credits a day in the app and 500 on the pricing page. The Stripe checkout followed the browser language rather than the English interface.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "The HubSpot and Attio links of Pro.",
+    "Connecting an own domain and publishing to it.",
+    "Slack, Google Analytics and Google Search Console.",
+    "The full result of the SEO & AEO audit.",
+    "A/B testing, which is marked coming soon.",
+    "A paid plan, a card, tax and the final total; only the Stripe checkout was seen and left.",
+    "Cancelling or changing a paid plan; the Free plan has nothing to cancel.",
+    "Deleting the workspace; the Danger Zone was not clicked.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 08:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/ploy-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": false,
+    "basis": "No card was asked at sign-up, onboarding, building or publishing on the Ploy subdomain; Stripe Checkout with card fields only opened after Upgrade on Starter.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://marketingandsalessoftware.com/ploy-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Ploy on the Free plan of an account Daan created, with the public site info.cern.ch as the source. About 6 minutes after the site was entered the first rebuilt page was visible (3 pages, a design system and two generated images) and about 2 minutes later Ploy published it on its own subdomain, after three design questions and without a separate step to approve the rebuild. One page with its design system cost about 226 of the 700 daily credits, and an audit chat that Ploy started by itself cost another 194. The pricing page gives the free plan 500 credits a day, the app 700. The Stripe checkout of Starter (EUR 454.53, billed annually) was seen and left with no card. Account and start: Daan created the account and our AI assistant ran the test in Daan's browser, in its own tab. The screen asked Verify your email (Check your inbox for a verification link); the verification mail from Ploy came in and the link was opened in that tab. No code or password was typed and no phone number was asked. The interface was already in English and the cookie banner was declined. The plan was Free. The dossier name is Ploy and the review is on MSS (mss/ploy-review.html). The source site for the test was info.cern.ch, a neutral public test site that is not ours. Core action, read a site and rebuild it: at 08:55 the site was entered (placeholder yourcompany.com) and Ploy said it would take a look at the website. The next screen, What do you want help with?, offered Site migration (marked Recommendation, with the line that Ploy can research and write pages today but cannot publish to a site it does not host, so you get drafts), Organic traffic (already on), Conversion rate optimization, Improve brand positioning, Ad campaigns and Find more qualified leads; only Organic traffic stayed on. What's the vision for your site?: Enhance my current design. Ploy then started two chats by itself, Getting Started and SEO & AEO audit, which spend credits in the background. Drive Ploy from Slack was set to Do this later and Google Analytics and Google Search Console were not connected. In the chat Getting Started Ploy summed up the site and asked three design questions (What should set the feeling at first sight?, What should the main images show?, What should carry over from today's page?); each got the first recommended answer. At 08:56 the first proposal came (Building your design system), at about 08:57 the design system was ready, and at 09:01:33 the first built page was visible: a new homepage http://info.cern.ch - home of the first website with the button Browse the first website, two generated images (an early-90s workstation and an accelerator tunnel), and the pages /who-invented-the-world-wide-web and /404, 3 pages in all. Ploy said I made your new homepage. It's publishing now; once it's live I'll share the links., and at 09:03 Publish finished on a production and a staging address on a Ploy subdomain. Time: about 6 minutes from entering the site to the first built page and about 8 minutes to published, with 11 clicks and 3 answers. Approval: there was no separate plan or quote of what a rebuild would cost and no list of pages to approve; the agent built the pages straight after the three choice questions and published them to the Ploy subdomain without asking. The real site info.cern.ch was not touched and no own domain was connected. Credits: Settings, Usage showed AI credits 89 / 700 (Resets Nov 20) and Lifetime credits 89 / 2,000 straight after the onboarding, then 395 / 700 and 417 / 700 after the homepage (Today 421). By chat: Getting Started 226 (design system, two images, homepage and one more page), SEO & AEO audit 194 (started by itself in the onboarding) and other activity 1. Building one page with its design system cost about 226 credits, about a third of the daily 700. Contact credits 0 / 25. Plans: In the app (Settings, Billing): Free, 700 AI credits a day, 700 credits / day (2,000 max), without custom domains or enriched traffic data. Starter $50, now $40 per month, billed annually (Save $120 per year), 4,000 credits / month, 1 custom domain, Google Ads, Meta Ads and LinkedIn Ads, 25 contact lookup credits, 50 visitor enrichment credits and CRM integrations, with A/B testing marked coming soon. Pro $300, now $240 per month, billed annually (Save $720 per year), 24,000 credits / month, 5 custom domains, 150 contact lookup credits and 1,000 visitor enrichment credits. Extra AI credits can be bought, and 100 contact credits cost $25. On the public pricing page ploy.ai/pricing: Free $0, No credit card required, 500 credits / day (2,000 max); Starter $50/mo, 4,000 credits / month, 1 custom domain; Pro $300/mo, 24,000 credits / month, 5 custom domains, CRM integrations (HubSpot, Attio); Enterprise Custom. Billed annually, Starter is $480 a year ($40 a month) and Pro $2,880 a year ($240 a month). The free allowance differs: the pricing page says 500 credits a day, the app says 700 credits a day, both with a 2,000 maximum. Checkout: Billing, Starter, Upgrade opened Stripe Checkout at once for a Starter subscription, billed annually, EUR 454.53, with fields for card number, expiry and security code, Apple Pay and Link. Nothing was filled in and the page was left at once. The Stripe page was in Dutch, so no image of it was kept. A card was not asked at sign-up, onboarding, building or publishing to the Ploy subdomain, only at the upgrade. Cancelling: on the Free plan there is nothing to cancel and Billing shows only Upgrade; cancelling or changing a paid plan was not seen. Settings, Personal has a profile and no delete button that we saw; Security has password, passkey and Log out. Workspace General has a Danger Zone with Delete Workspace, which was not clicked. Not tested: the HubSpot and Attio links (Pro), connecting an own domain (Starter), Slack, Google Analytics and Search Console, publishing to an own domain, the full result of the SEO & AEO audit, A/B testing (coming soon), entering a card and cancelling a paid plan. Clean up: the account and the workspace with the info.cern.ch test project stay, and so do the two published Ploy subdomain pages, which are public and hold a redesign of info.cern.ch. The own tab was closed and Daan's other tab was not touched. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://marketingandsalessoftware.com/ploy-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Ploy on the Free plan of an account Daan created, with the public site info.cern.ch as the source. About 6 minutes after the site was entered the first rebuilt page was visible (3 pages, a design system and two generated images) and about 2 minutes later Ploy published it on its own subdomain, after three design questions and without a separate step to approve the rebuild. One page with its design system cost about 226 of the 700 daily credits, and an audit chat that Ploy started by itself cost another 194. The pricing page gives the free plan 500 credits a day, the app 700. The Stripe checkout of Starter (EUR 454.53, billed annually) was seen and left with no card. Account and start: Daan created the account and our AI assistant ran the test in Daan's browser, in its own tab. The screen asked Verify your email (Check your inbox for a verification link); the verification mail from Ploy came in and the link was opened in that tab. No code or password was typed and no phone number was asked. The interface was already in English and the cookie banner was declined. The plan was Free. The dossier name is Ploy and the review is on MSS (mss/ploy-review.html). The source site for the test was info.cern.ch, a neutral public test site that is not ours. Core action, read a site and rebuild it: at 08:55 the site was entered (placeholder yourcompany.com) and Ploy said it would take a look at the website. The next screen, What do you want help with?, offered Site migration (marked Recommendation, with the line that Ploy can research and write pages today but cannot publish to a site it does not host, so you get drafts), Organic traffic (already on), Conversion rate optimization, Improve brand positioning, Ad campaigns and Find more qualified leads; only Organic traffic stayed on. What's the vision for your site?: Enhance my current design. Ploy then started two chats by itself, Getting Started and SEO & AEO audit, which spend credits in the background. Drive Ploy from Slack was set to Do this later and Google Analytics and Google Search Console were not connected. In the chat Getting Started Ploy summed up the site and asked three design questions (What should set the feeling at first sight?, What should the main images show?, What should carry over from today's page?); each got the first recommended answer. At 08:56 the first proposal came (Building your design system), at about 08:57 the design system was ready, and at 09:01:33 the first built page was visible: a new homepage http://info.cern.ch - home of the first website with the button Browse the first website, two generated images (an early-90s workstation and an accelerator tunnel), and the pages /who-invented-the-world-wide-web and /404, 3 pages in all. Ploy said I made your new homepage. It's publishing now; once it's live I'll share the links., and at 09:03 Publish finished on a production and a staging address on a Ploy subdomain. Time: about 6 minutes from entering the site to the first built page and about 8 minutes to published, with 11 clicks and 3 answers. Approval: there was no separate plan or quote of what a rebuild would cost and no list of pages to approve; the agent built the pages straight after the three choice questions and published them to the Ploy subdomain without asking. The real site info.cern.ch was not touched and no own domain was connected. Credits: Settings, Usage showed AI credits 89 / 700 (Resets Nov 20) and Lifetime credits 89 / 2,000 straight after the onboarding, then 395 / 700 and 417 / 700 after the homepage (Today 421). By chat: Getting Started 226 (design system, two images, homepage and one more page), SEO & AEO audit 194 (started by itself in the onboarding) and other activity 1. Building one page with its design system cost about 226 credits, about a third of the daily 700. Contact credits 0 / 25. Plans: In the app (Settings, Billing): Free, 700 AI credits a day, 700 credits / day (2,000 max), without custom domains or enriched traffic data. Starter $50, now $40 per month, billed annually (Save $120 per year), 4,000 credits / month, 1 custom domain, Google Ads, Meta Ads and LinkedIn Ads, 25 contact lookup credits, 50 visitor enrichment credits and CRM integrations, with A/B testing marked coming soon. Pro $300, now $240 per month, billed annually (Save $720 per year), 24,000 credits / month, 5 custom domains, 150 contact lookup credits and 1,000 visitor enrichment credits. Extra AI credits can be bought, and 100 contact credits cost $25. On the public pricing page ploy.ai/pricing: Free $0, No credit card required, 500 credits / day (2,000 max); Starter $50/mo, 4,000 credits / month, 1 custom domain; Pro $300/mo, 24,000 credits / month, 5 custom domains, CRM integrations (HubSpot, Attio); Enterprise Custom. Billed annually, Starter is $480 a year ($40 a month) and Pro $2,880 a year ($240 a month). The free allowance differs: the pricing page says 500 credits a day, the app says 700 credits a day, both with a 2,000 maximum. Checkout: Billing, Starter, Upgrade opened Stripe Checkout at once for a Starter subscription, billed annually, EUR 454.53, with fields for card number, expiry and security code, Apple Pay and Link. Nothing was filled in and the page was left at once. The Stripe page was in Dutch, so no image of it was kept. A card was not asked at sign-up, onboarding, building or publishing to the Ploy subdomain, only at the upgrade. Cancelling: on the Free plan there is nothing to cancel and Billing shows only Upgrade; cancelling or changing a paid plan was not seen. Settings, Personal has a profile and no delete button that we saw; Security has password, passkey and Log out. Workspace General has a Danger Zone with Delete Workspace, which was not clicked. Not tested: the HubSpot and Attio links (Pro), connecting an own domain (Starter), Slack, Google Analytics and Search Console, publishing to an own domain, the full result of the SEO & AEO audit, A/B testing (coming soon), entering a card and cancelling a paid plan. Clean up: the account and the workspace with the info.cern.ch test project stay, and so do the two published Ploy subdomain pages, which are public and hold a redesign of info.cern.ch. The own tab was closed and Daan's other tab was not touched. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://marketingandsalessoftware.com/ploy-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://marketingandsalessoftware.com/ploy-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-19",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Ploy",
+    "product_id": "ploy",
+    "run_date": "2026-11-19",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Ploy on the Free plan of an account Daan created, with the public site info.cern.ch as the source. About 6 minutes after the site was entered the first rebuilt page was visible (3 pages, a design system and two generated images) and about 2 minutes later Ploy published it on its own subdomain, after three design questions and without a separate step to approve the rebuild. One page with its design system cost about 226 of the 700 daily credits, and an audit chat that Ploy started by itself cost another 194. The pricing page gives the free plan 500 credits a day, the app 700. The Stripe checkout of Starter (EUR 454.53, billed annually) was seen and left with no card.",
+    "findings": [
+     "Text we checked: \"proposes a rebuild that only goes ahead once you approve it\". What we saw: After the site was entered Ploy asked three design questions and then built the design system, two images and three pages and published them on a production and a staging address on a Ploy subdomain, without a separate plan, price or page list to approve. The only approval was the answers to the three choice questions. The real site was not touched.",
+     "Text we checked: \"500 credits / day (2,000 max)\". What we saw: The public pricing page gives the Free plan 500 credits a day with a 2,000 maximum; the Billing page in the app says Free, 700 AI credits a day and 700 credits / day (2,000 max), and Usage counted against 700.",
+     "Text we checked: \"Lifetime credits 89 / 2,000\". What we saw: Usage showed Lifetime credits 89 / 2,000 right after the onboarding and 417 / 2,000 after the homepage; the chat Getting Started used 226 credits for the design system, two images, the homepage and one more page, and the SEO & AEO audit chat that started by itself used 194.",
+     "Text we checked: \"Ploy can research and write your pages today, but it can't publish to a site it doesn't host, so you get drafts\". What we saw: The onboarding showed this line under Site migration. Ploy published the redesign only on its own subdomain; the real site info.cern.ch was not changed and no own domain was connected.",
+     "Text we checked: \"No credit card required\". What we saw: No card was asked at sign-up, onboarding, building or publishing on the Ploy subdomain; Stripe Checkout with card fields only opened after Upgrade on Starter."
+    ],
+    "not_tested": [
+     "The HubSpot and Attio links of Pro.",
+     "Connecting an own domain and publishing to it.",
+     "Slack, Google Analytics and Google Search Console.",
+     "The full result of the SEO & AEO audit.",
+     "A/B testing, which is marked coming soon.",
+     "A paid plan, a card, tax and the final total; only the Stripe checkout was seen and left.",
+     "Cancelling or changing a paid plan; the Free plan has nothing to cancel.",
+     "Deleting the workspace; the Danger Zone was not clicked.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "proposes a rebuild that only goes ahead once you approve it",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "After the site was entered Ploy asked three design questions and then built the design system, two images and three pages and published them on a production and a staging address on a Ploy subdomain, without a separate plan, price or page list to approve. The only approval was the answers to the three choice questions. The real site was not touched.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+      "comparability": "The dossier line about approving a rebuild against the onboarding flow on the Free plan, without an own domain.",
+      "status": "contradicted",
+      "buying_consequence": "Expect Ploy to build and publish a draft on its own subdomain straight away; the publishing to your own site was not tested.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "500 credits / day (2,000 max)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The public pricing page gives the Free plan 500 credits a day with a 2,000 maximum; the Billing page in the app says Free, 700 AI credits a day and 700 credits / day (2,000 max), and Usage counted against 700.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+      "comparability": "The pricing page against the Billing and Usage pages of the app on the same day.",
+      "status": "contradicted",
+      "buying_consequence": "The free plan gave more daily credits in the app than the pricing page promises; the 2,000 maximum is the same.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Lifetime credits 89 / 2,000",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Usage showed Lifetime credits 89 / 2,000 right after the onboarding and 417 / 2,000 after the homepage; the chat Getting Started used 226 credits for the design system, two images, the homepage and one more page, and the SEO & AEO audit chat that started by itself used 194.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+      "comparability": "The Usage page before and after one build; the cost of later pages without a new design system was not measured.",
+      "status": "confirmed",
+      "buying_consequence": "On the Free plan the 2,000 credit cap is reached after a handful of pages like ours; one page with its design system cost about 226 credits.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Ploy can research and write your pages today, but it can't publish to a site it doesn't host, so you get drafts.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The onboarding showed this line under Site migration. Ploy published the redesign only on its own subdomain; the real site info.cern.ch was not changed and no own domain was connected.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+      "comparability": "The onboarding text against what was published during the test.",
+      "status": "confirmed",
+      "buying_consequence": "Without moving the site to Ploy you get pages on a Ploy address, not changes on your own site.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "No credit card required",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "No card was asked at sign-up, onboarding, building or publishing on the Ploy subdomain; Stripe Checkout with card fields only opened after Upgrade on Starter.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+      "comparability": "The pricing page line against the whole free session up to the upgrade button.",
+      "status": "confirmed",
+      "buying_consequence": "You can build and publish a test site on the Free plan without a card.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Monthly plans have no long-term commitment",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "This is an answer in the pricing FAQ. No plan was bought, so changing or cancelling a plan was not seen; Billing on the Free plan shows only Upgrade.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+      "comparability": "An FAQ answer against a session that bought nothing.",
+      "status": "not_testable",
+      "buying_consequence": "Changing or ending a paid plan is described but was not tried.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$50, now $40 per month, billed annually",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The app lists Starter at $50, now $40 per month, billed annually, and the pricing page at $480 a year. Upgrade on Starter opened Stripe Checkout for a yearly Starter subscription at EUR 454.53. The checkout was in euros and the plan list in dollars, and no tax line was recorded.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/ploy-review.html#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read in the app and on the pricing page; the Stripe checkout of Starter was seen and left",
+      "comparability": "A dollar plan list against a euro checkout; no stored cost rule was compared and the exchange rate is unknown.",
+      "status": "not_comparable",
+      "buying_consequence": "The yearly Starter price was shown in euros at checkout; check the currency and any tax before you pay.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-19",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Ploy on the Free plan of an account Daan created, with the public site info.cern.ch as the source. About 6 minutes after the site was entered the first rebuilt page was visible (3 pages, a design system and two generated images) and about 2 minutes later Ploy published it on its own subdomain, after three design questions and without a separate step to approve the rebuild. One page with its design system cost about 226 of the 700 daily credits, and an audit chat that Ploy started by itself cost another 194. The pricing page gives the free plan 500 credits a day, the app 700. The Stripe checkout of Starter (EUR 454.53, billed annually) was seen and left with no card. Account and start: Daan created the account and our AI assistant ran the test in Daan's browser, in its own tab. The screen asked Verify your email (Check your inbox for a verification link); the verification mail from Ploy came in and the link was opened in that tab. No code or password was typed and no phone number was asked. The interface was already in English and the cookie banner was declined. The plan was Free. The dossier name is Ploy and the review is on MSS (mss/ploy-review.html). The source site for the test was info.cern.ch, a neutral public test site that is not ours. Core action, read a site and rebuild it: at 08:55 the site was entered (placeholder yourcompany.com) and Ploy said it would take a look at the website. The next screen, What do you want help with?, offered Site migration (marked Recommendation, with the line that Ploy can research and write pages today but cannot publish to a site it does not host, so you get drafts), Organic traffic (already on), Conversion rate optimization, Improve brand positioning, Ad campaigns and Find more qualified leads; only Organic traffic stayed on. What's the vision for your site?: Enhance my current design. Ploy then started two chats by itself, Getting Started and SEO & AEO audit, which spend credits in the background. Drive Ploy from Slack was set to Do this later and Google Analytics and Google Search Console were not connected. In the chat Getting Started Ploy summed up the site and asked three design questions (What should set the feeling at first sight?, What should the main images show?, What should carry over from today's page?); each got the first recommended answer. At 08:56 the first proposal came (Building your design system), at about 08:57 the design system was ready, and at 09:01:33 the first built page was visible: a new homepage http://info.cern.ch - home of the first website with the button Browse the first website, two generated images (an early-90s workstation and an accelerator tunnel), and the pages /who-invented-the-world-wide-web and /404, 3 pages in all. Ploy said I made your new homepage. It's publishing now; once it's live I'll share the links., and at 09:03 Publish finished on a production and a staging address on a Ploy subdomain. Time: about 6 minutes from entering the site to the first built page and about 8 minutes to published, with 11 clicks and 3 answers. Approval: there was no separate plan or quote of what a rebuild would cost and no list of pages to approve; the agent built the pages straight after the three choice questions and published them to the Ploy subdomain without asking. The real site info.cern.ch was not touched and no own domain was connected. Credits: Settings, Usage showed AI credits 89 / 700 (Resets Nov 20) and Lifetime credits 89 / 2,000 straight after the onboarding, then 395 / 700 and 417 / 700 after the homepage (Today 421). By chat: Getting Started 226 (design system, two images, homepage and one more page), SEO & AEO audit 194 (started by itself in the onboarding) and other activity 1. Building one page with its design system cost about 226 credits, about a third of the daily 700. Contact credits 0 / 25. Plans: In the app (Settings, Billing): Free, 700 AI credits a day, 700 credits / day (2,000 max), without custom domains or enriched traffic data. Starter $50, now $40 per month, billed annually (Save $120 per year), 4,000 credits / month, 1 custom domain, Google Ads, Meta Ads and LinkedIn Ads, 25 contact lookup credits, 50 visitor enrichment credits and CRM integrations, with A/B testing marked coming soon. Pro $300, now $240 per month, billed annually (Save $720 per year), 24,000 credits / month, 5 custom domains, 150 contact lookup credits and 1,000 visitor enrichment credits. Extra AI credits can be bought, and 100 contact credits cost $25. On the public pricing page ploy.ai/pricing: Free $0, No credit card required, 500 credits / day (2,000 max); Starter $50/mo, 4,000 credits / month, 1 custom domain; Pro $300/mo, 24,000 credits / month, 5 custom domains, CRM integrations (HubSpot, Attio); Enterprise Custom. Billed annually, Starter is $480 a year ($40 a month) and Pro $2,880 a year ($240 a month). The free allowance differs: the pricing page says 500 credits a day, the app says 700 credits a day, both with a 2,000 maximum. Checkout: Billing, Starter, Upgrade opened Stripe Checkout at once for a Starter subscription, billed annually, EUR 454.53, with fields for card number, expiry and security code, Apple Pay and Link. Nothing was filled in and the page was left at once. The Stripe page was in Dutch, so no image of it was kept. A card was not asked at sign-up, onboarding, building or publishing to the Ploy subdomain, only at the upgrade. Cancelling: on the Free plan there is nothing to cancel and Billing shows only Upgrade; cancelling or changing a paid plan was not seen. Settings, Personal has a profile and no delete button that we saw; Security has password, passkey and Log out. Workspace General has a Danger Zone with Delete Workspace, which was not clicked. Not tested: the HubSpot and Attio links (Pro), connecting an own domain (Starter), Slack, Google Analytics and Search Console, publishing to an own domain, the full result of the SEO & AEO audit, A/B testing (coming soon), entering a card and cancelling a paid plan. Clean up: the account and the workspace with the info.cern.ch test project stay, and so do the two published Ploy subdomain pages, which are public and hold a redesign of info.cern.ch. The own tab was closed and Daan's other tab was not touched. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Ploy starts two chats by itself in the onboarding and they spend credits in the background: the SEO & AEO audit used 194 credits before we asked for anything. There was no plan or price of the rebuild to approve; after three design questions the agent built the pages and published them on a public Ploy subdomain without asking. The free allowance is 700 credits a day in the app and 500 on the pricing page. The Stripe checkout followed the browser language rather than the English interface.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "The HubSpot and Attio links of Pro.",
+      "Connecting an own domain and publishing to it.",
+      "Slack, Google Analytics and Google Search Console.",
+      "The full result of the SEO & AEO audit.",
+      "A/B testing, which is marked coming soon.",
+      "A paid plan, a card, tax and the final total; only the Stripe checkout was seen and left.",
+      "Cancelling or changing a paid plan; the Free plan has nothing to cancel.",
+      "Deleting the workspace; the Danger Zone was not clicked.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 08:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "ploy:cancellation_terms",

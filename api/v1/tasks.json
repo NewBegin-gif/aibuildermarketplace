@@ -3265,29 +3265,123 @@
    "source": "session",
    "product_name": "DocHub",
    "product_id": "dochub",
-   "run_date": "2026-11-18",
+   "run_date": "2026-11-19",
    "session_type": "hands_on",
-   "what": "Tested by our team on 18 November 2026 on the free plan: Daan created the account and our AI assistant ran the test in Daan's browser, with the interface in English. We uploaded a two-page test invoice, edited it and signed it ourselves. We sent nothing to another signer and did not start the Pro trial.",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested DocHub on the free plan, a day after our first test. Editing and self-signing a test PDF took about 1 min 35 s. The new free plan meter showed that only the self-signature counted against the 3 uses a month. The Pro trial checkout now preselects yearly billing at EUR144.00 and asks for a card first.",
    "findings": [
-    "Import a Document took our 2-page test PDF of 2.2 kB and opened it in the editor once its status read Ready. We skipped the welcome tour and answered Not now when DocHub offered to add fillable fields automatically.",
-    "We added a text field with a purchase-order number, a date field that the Fill button set to 11/18/2026, a line of free text and a signature field.",
-    "Sign, Create Signatures offered four ways to make a signature: Phone, Draw, Upload Image and Type. We typed a test name and saved it as the default, and it appeared in the signature field. The screen says signatures created with DocHub are legally valid.",
-    "From the upload at 18:01:06 to the signed document at 18:02:53 took about 1 minute 47 seconds and roughly 12 steps.",
-    "The free plan shows 'DocHub Core Features (3 uses/mo)' and says all features share a monthly limit of 3 uses. Nothing on screen told us whether our edits and signature used any of them.",
-    "The plans page in the app showed Basic at €8 and Pro at €12 a month billed yearly, and €11 and €16 billed monthly, with Send for Signature marked as a Pro feature.",
-    "Try for Free on Pro opened a Stripe card form. It said the plan is free for 30 days, after which the first payment of €16.00 is due on December 18, 2026 with taxes on top, and that cancelling before that date means no charge. We stopped there and entered nothing."
+    "Text we checked: \"1 of 3 DocHub core features used\". What we saw: The meter counted the self-signature as 1 use (Basic features) and 0 for Pro features; the added text, the upload and the comment did not count. The dossier says our first test could not show which actions counted.",
+    "Text we checked: \"This subscription is free for 30 days then your first payment of EUR144.00 will be due on December 19, 2026. Taxes will apply\". What we saw: The Pro checkout preselected yearly billing at EUR144.00, while the dossier knock says the trial becomes a EUR 16 monthly charge; monthly is still available at EUR16 a month.",
+    "Text we checked: \"Assign at least one field to this user or enable annotations\". What we saw: Send Request stays disabled until the signer has a field or annotations; several options such as signer locations are locked on Free. Nothing was sent.",
+    "First test, 18 November 2026: upload to signed document took about 1 minute 47 seconds on the free plan."
    ],
    "not_tested": [
-    "Sending a sign request to a second signer, and what the signer sees",
-    "The Pro trial itself, and cancelling it",
-    "Google Drive and Dropbox connections",
-    "How many of the 3 monthly uses our test used"
+    "Sending a sign request and what a signer sees.",
+    "Downloading the audit trail.",
+    "The Pro trial and its cancellation.",
+    "DOCX export and cloud exports.",
+    "Export of a file into a kit, and reimport."
    ],
    "report": null,
    "disclosure": null,
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "1 of 3 DocHub core features used",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The meter counted the self-signature as 1 use (Basic features) and 0 for Pro features; the added text, the upload and the comment did not count. The dossier says our first test could not show which actions counted.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/dochub-review.html#claim-vs-measured"
+     },
+     "plan": "DocHub Free; Pro trial seen at EUR144.00 a year after 30 days",
+     "comparability": "The free plan meter against the dossier knock.",
+     "status": "confirmed",
+     "buying_consequence": "Self-signing uses up the 3 free uses; adding text did not.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "This subscription is free for 30 days then your first payment of EUR144.00 will be due on December 19, 2026. Taxes will apply.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The Pro checkout preselected yearly billing at EUR144.00, while the dossier knock says the trial becomes a EUR 16 monthly charge; monthly is still available at EUR16 a month.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/dochub-review.html#claim-vs-measured"
+     },
+     "plan": "DocHub Free; Pro trial seen at EUR144.00 a year after 30 days",
+     "comparability": "The checkout page against the dossier knock.",
+     "status": "contradicted",
+     "buying_consequence": "Check the billing toggle before you start the trial.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Assign at least one field to this user or enable annotations",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Send Request stays disabled until the signer has a field or annotations; several options such as signer locations are locked on Free. Nothing was sent.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/dochub-review.html#claim-vs-measured"
+     },
+     "plan": "DocHub Free; Pro trial seen at EUR144.00 a year after 30 days",
+     "comparability": "The sign request dialog in the session; the dossier names no such step.",
+     "status": "confirmed",
+     "buying_consequence": "Plan a field per signer before sending.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Payment Method (Secured by Stripe)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The checkout asks for card number, expiry, security code and country before the trial starts, as the dossier says; nothing was filled in and no trial started, so no charged amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/dochub-review.html#claim-vs-measured"
+     },
+     "plan": "DocHub Free; Pro trial seen at EUR144.00 a year after 30 days",
+     "comparability": "The checkout page up to the card fields; no trial was started.",
+     "status": "not_testable",
+     "buying_consequence": "The Pro trial needs a card.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested DocHub on the free plan, a day after our first test. Editing and self-signing a test PDF took about 1 min 35 s. The new free plan meter showed that only the self-signature counted against the 3 uses a month. The Pro trial checkout now preselects yearly billing at EUR144.00 and asks for a card first. Account and start: Daan created the account on the free plan; our AI assistant ran this second test in its own tab on 19 November 2026 from 12:34 CET, with the interface in English. It follows the test of 18 November and adds the free plan meter, sharing and sign requests, export options, the cancel route and account deletion. Core action, edit and sign a PDF: a one-page test agreement with no personal data was uploaded and showed Ready. The A tool added text next to the amount as a new text box, not as an edit of the existing text, and saved automatically. A comment appeared as a note icon and a sidebar card. Sign, Create your signature offers Phone, Draw, Upload Image and Type, with the line Signatures you create with DocHub are legally valid. A typed test signature saved with Signature Saved! and was placed on the page. Upload to signed document took about 1 min 35 s and about 14 steps. Sharing: Share with others offers Send as Attachment, Send Sign Request and Get Shareable Link, and adding collaborators by email; nothing was filled in. Send Sign Request has automated reminders, expiry and webhook options, while signer sign-in, signer locations and document ID are locked. After Add Signer it says Assign at least one field to this user or enable annotations, so a field must be assigned first. Nothing was sent. Export: Download or export offers PDF, or DOCX behind a lock, the Document or its Audit Trail, and PDF options behind a lock. One plain PDF was downloaded; it held the added text, the typed signature and the comment icon, with no watermark seen, and was then deleted. Limits: after the download a Free Plan Limits meter showed 1 of 3 DocHub core features used, with 1 used on Basic features (Self Sign, Templates, Share via Link) and 0 used on Pro features (Edit Text, Send Sign Request, Envelopes). So the self-signature counted, and the added text, upload and comment did not. Plans: billed yearly, Free EUR 0, Basic EUR 8 and Pro EUR 12 a month, Site License on request; billed monthly, Basic 11 and Pro 16. The comparison table lists Audit Trail on every plan, Send for Signature only on Pro. Checkout, seen up to the card: Pro Try for Free opened a checkout with yearly billing preselected: This subscription is free for 30 days then your first payment of EUR144.00 will be due on December 19, 2026. Taxes will apply. It asks for card number, expiry, security code and country through Stripe before the trial starts. Nothing was filled in and the trial was not started. Billing shows Plan Free and No payment methods. Cancelling: no trial was started, so nothing was cancelled. The FAQ names Settings, Billing, Change Plan, Cancel Subscription. Account deletion sits under Settings, Account, Danger Zone, Delete Account; not clicked. Not tested: sending a sign request and what a signer sees, downloading the audit trail, the Pro trial and its cancellation, DOCX export and cloud exports. Clean up: the account with two test documents and a saved test signature stays; the downloaded file was deleted. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Adding text next to existing text makes a new text box that sits against the old text. A sign request cannot be sent until a field is assigned to the signer. The Pro checkout preselects yearly billing.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Sending a sign request and what a signer sees.",
+     "Downloading the audit trail.",
+     "The Pro trial and its cancellation.",
+     "DOCX export and cloud exports.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 12:34 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -7952,6 +8046,129 @@
      "Roles, API entitlement beyond the connect dialog, downgrade and passive follow up.",
      "The daily limits of Starter beyond one article.",
      "Session and source-reading date: 13 and 14 November 2026. Times are CET. The session started at about 08:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Pepys",
+   "product_id": "pepys",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pepys on the free account with 60 minutes and no card. A 53-second test recording came back in under 20 seconds with 2 word errors in 135 words, and the speaker pass fixed both for 1 extra credit. The app prices hour packs in US dollars while the pricing page shows euros.",
+   "findings": [
+    "Text we checked: \"Identify speakers · 1.5× credits · meetings, interviews & podcasts\". What we saw: The upload dialog and pricing page say 1.5x credits for speaker labels, and the pass on a 1-minute file used 1 extra credit; the dossier says 3 credits per minute.",
+    "Text we checked: \"10 hours $12.50 ($1.25/hr)\". What we saw: The app lists packs in US dollars, from 10 hours for $12.50, while the dossier and pricing page give 10 hours for EUR 11 billed in USD."
+   ],
+   "not_tested": [
+    "Several speakers.",
+    "Batch upload and Zoom, Drive or OneDrive imports.",
+    "The API.",
+    "A paid purchase.",
+    "Translation and long files.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Identify speakers · 1.5× credits · meetings, interviews & podcasts",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The upload dialog and pricing page say 1.5x credits for speaker labels, and the pass on a 1-minute file used 1 extra credit; the dossier says 3 credits per minute.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+     },
+     "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+     "comparability": "The app and credits page against the dossier price text.",
+     "status": "out_of_date",
+     "buying_consequence": "Speaker labels now cost half again, not three times.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "0:53 · 1 min billed · 135 words · 1 speaker · ENGLISH",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The first transcript had 2 errors in 135 words, about 1.5 per 100; the speaker pass returned 136 words with no word errors. One clear synthetic voice only.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+     },
+     "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+     "comparability": "Our own count against a reference text; the dossier has no accuracy figure.",
+     "status": "not_comparable",
+     "buying_consequence": "Clean audio transcribes well; real meetings were not tested.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "10 hours $12.50 ($1.25/hr)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The app lists packs in US dollars, from 10 hours for $12.50, while the dossier and pricing page give 10 hours for EUR 11 billed in USD.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+     },
+     "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+     "comparability": "The credits page against the dossier note that the page shows euros but bills in USD.",
+     "status": "confirmed",
+     "buying_consequence": "You pay in US dollars whatever the page shows.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pepys - Transcription Credits",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Buy on 10 hours opened a Polar checkout for US$ 12,50, matching the app price; nothing was paid, so no charged amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+     },
+     "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+     "comparability": "The checkout page up to paying; no purchase was made.",
+     "status": "not_testable",
+     "buying_consequence": "Credits are a one-time purchase, not a subscription.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pepys on the free account with 60 minutes and no card. A 53-second test recording came back in under 20 seconds with 2 word errors in 135 words, and the speaker pass fixed both for 1 extra credit. The app prices hour packs in US dollars while the pricing page shows euros. Account and start: Daan created the free account, which gives 60 minutes with no card. Our AI assistant ran the test in its own tab on 19 November 2026 from 12:40 CET; the interface was in English. The sidebar showed Credits 1 h. New transcription accepts uploads, Google Drive, OneDrive and Zoom, and pasted links; Free includes 3 connected-source imports, one recording at a time. Core action, a recording to a transcript: a 53-second English test recording with a reference text of 140 words. The first upload as .m4a was refused with Only audio or video files can be transcribed., because our upload tool sent no file type; the same recording as .wav went through. Upload to transcript took well under 20 seconds: 0:53 · 1 min billed · 135 words · 1 speaker · ENGLISH. The transcript had 2 word errors in 135 words (fogs for fox, wake for week), about 1.5 per 100 words. AI notes came with it at no extra cost, and one key point itself flagged second wake as a likely transcription error. Speakers: Detect speakers started a new pass at once, with no cost warning first, and finished in about 30 s: 136 words · 1 speaker, with both errors gone. The recording has one voice, so several speakers were not tested. Export: SRT, VTT, TXT, Markdown, DOCX, PDF, JSON and NVivo, with speaker labels and timestamps as options, and word-level cues. One TXT export was read; its last line was Transcribed with Pepys, the brand mark on free exports. The file was deleted afterwards. Credits: BALANCE 58 minutes · 58 credits · 1 credit = 1 minute · never expire, so the transcript used 1 credit and the speaker pass 1 more. Plans: in the app, in US dollars, 10 hours $12.50 ($1.25/hr), 20 hours $20, up to 200 hours $170 ($0.85/hr). The pricing page shows euros billed in USD, 10 h EUR 11 to 200 h EUR 149.6, and says Uploaded recordings are removed after about 30 days and All sales final. Team plans start From $19/month. Checkout, seen up to paying: Buy on 10 hours opened a Polar checkout for Pepys - Transcription Credits at US$ 12,50 with a saved payment method; nothing was clicked or filled in, and no screenshot was kept because it showed payment details. Cancelling: there is no subscription. Delete account sits under Settings, Account; it Permanently removes your recordings, transcripts, derived files, API access and account profile. Not clicked. Files are stored in the European Union. Not tested: several speakers, batch upload, Zoom or Drive imports, the API, a paid purchase, translation and long files. Clean up: the account and one transcript stay, with 58 minutes left; the TXT export was deleted. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Detect speakers starts at once with no cost warning. Free exports carry a Pepys line. The pricing page shows euros while the app and checkout show US dollars.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Several speakers.",
+     "Batch upload and Zoom, Drive or OneDrive imports.",
+     "The API.",
+     "A paid purchase.",
+     "Translation and long files.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 12:40 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -31089,6 +31306,129 @@
   },
   {
    "source": "session",
+   "product_name": "Serpstat",
+   "product_id": "serpstat",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Serpstat in the 7-day Individual trial that Daan started with his card and a $1 verification. Keyword, domain and audit results came within seconds, but the trial shows at most 2,000 backlinks per report and has no API or AI Visibility. Cancelling is one dialog, but it ends the trial and locks most tools at once.",
+   "findings": [
+    "Text we checked: \"API is unavailable for your plan\". What we saw: The trial account shows API credits 0/0 with this line, which matches the dossier: no API on the entry plan.",
+    "Text we checked: \"Once auto-payment is cancelled, most reports and tools will be locked\". What we saw: End my trial switched the plan to Registered user with Automatic renewal Off at once; no reason, offer or password. The dialog itself also says You still have 7 days of trial left."
+   ],
+   "not_tested": [
+    "Team use with more users.",
+    "Real rank positions in the rank tracker.",
+    "Export and branded reports.",
+    "The API and connecting the MCP.",
+    "AI Visibility: not in the plan.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "API is unavailable for your plan",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The trial account shows API credits 0/0 with this line, which matches the dossier: no API on the entry plan.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/serpstat-review.html#claim-vs-measured"
+     },
+     "plan": "Serpstat Individual, 7-day trial with a $1 verification, $69 a month after the trial",
+     "comparability": "The account limits against the dossier plan text.",
+     "status": "confirmed",
+     "buying_consequence": "Pick Team or higher if you need the API.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "of 2,000 (total: 212,514)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The trial lists at most 2,000 of 212,514 backlinks for one domain; the dossier gives 10,000 results per report for Team and above but no figure for Individual.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/serpstat-review.html#claim-vs-measured"
+     },
+     "plan": "Serpstat Individual, 7-day trial with a $1 verification, $69 a month after the trial",
+     "comparability": "A trial limit against a paid-plan limit.",
+     "status": "not_comparable",
+     "buying_consequence": "Expect a shallow backlink list in the trial.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Once auto-payment is cancelled, most reports and tools will be locked.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "End my trial switched the plan to Registered user with Automatic renewal Off at once; no reason, offer or password. The dialog itself also says You still have 7 days of trial left.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/serpstat-review.html#claim-vs-measured"
+     },
+     "plan": "Serpstat Individual, 7-day trial with a $1 verification, $69 a month after the trial",
+     "comparability": "The cancellation in the session against the dossier note that the plan bills after seven days unless you cancel.",
+     "status": "confirmed",
+     "buying_consequence": "Cancel on the last day if you want the full trial.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Individual Trial Global (Active until 2026-11-26)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The account shows the trial until 2026-11-26 with auto-renewal on, but no amount and no record of the $1 verification. The trial checkout itself was done by Daan before the session and was not seen, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/serpstat-review.html#claim-vs-measured"
+     },
+     "plan": "Serpstat Individual, 7-day trial with a $1 verification, $69 a month after the trial",
+     "comparability": "The account page against the dossier; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Note the $69 renewal yourself; the app does not show it.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Serpstat in the 7-day Individual trial that Daan started with his card and a $1 verification. Keyword, domain and audit results came within seconds, but the trial shows at most 2,000 backlinks per report and has no API or AI Visibility. Cancelling is one dialog, but it ends the trial and locks most tools at once. Account and start: Daan created the account and started the 7-day Individual trial, monthly, with his own card and a $1 verification. Our AI assistant ran the test in its own tab on 19 November 2026 from about 18:38 to 18:46 CET. The interface was in English. My account showed Individual Trial Global (Active until 2026-11-26) and Automatic renewal On. Core action, SEO research: keyword research for coffee grinder on google.com gave Volume 480, PPC competition 46, CPC 0.52 and KW. difficulty 25/100 within about 6 seconds; the search bar at the top did nothing, only the sidebar route Keyword research, Overview worked. Domain analysis of wikipedia.org gave Visibility score 93, Backlinks 24.4M and Referring domains 158.1K within about 8 seconds. Backlink analysis refused wikipedia.org: This information is currently unavailable for domains with a large backlink profile. For seranking.com the list read of 2,000 (total: 212,514), so the trial shows at most 2,000 backlinks. A site audit of example.org scanned 1 page in about 15 seconds: SDO score 84, High priority 4, Medium 2, Low 2. The rank tracker project stayed a draft without a search region. AI Visibility is not included in your plan. The MCP page offers 63 SEO tools for Claude, ChatGPT or Gemini through OAuth; nothing was connected. Trial limits: Credits for sites, keywords and links analysis 100/100, Export rows 1,000/1,000, Projects 5/5, Users 0/1, API credits 0/0 with API is unavailable for your plan. Plans and trial: no amount is shown in the app; the dossier gives Individual at $69 a month. Bills shows Recurring Billing on and a Payment history with no rows, so the $1 verification does not show in the app. The card expires 12/2026. Checkout: the trial checkout was done by Daan before the session and was not seen. Cancelling, done the same day: My account, Automatic renewal On, Change (or the Recurring Billing switch). The dialog: Are you sure you want to end your trial? Once auto-payment is cancelled, most reports and tools will be locked. You still have 7 days of trial left. You can cancel auto-payment any time before November 26. End my trial was clicked. After a reload My account showed Plan Registered user and Automatic renewal Off. No reason form, no retention offer, no password and no mail to support. There is no screenshot of the result because it shows the account e-mail. Not tested: team use with more users, real rank positions, export, branded reports, the API, connecting the MCP and AI Visibility. Clean up: the test project example.org with one audit and an empty rank tracker project stays; the trial has ended. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The search bar at the top did nothing; only the sidebar route worked. Backlink analysis refuses very large domains. The $1 verification and the renewal amount do not show anywhere in the app.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling is one dialog with no reason, offer or password. But ending auto-renewal ends the trial at once and locks most tools, so wait until the last day if you want the full 7 days."
+    },
+    "not_tested": [
+     "Team use with more users.",
+     "Real rank positions in the rank tracker.",
+     "Export and branded reports.",
+     "The API and connecting the MCP.",
+     "AI Visibility: not in the plan.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 18:38 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Retouch4me",
    "product_id": "retouch4me",
    "run_date": "2026-11-18",
@@ -33352,6 +33692,127 @@
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "GrapeLeads",
+   "product_id": "grapeleads",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested the free GrapeLeads preview, which gives 20 credits to an email address with no card. Of three searches, one found 0 leads, one used a credit and never sent results, and one gave 11 leads after about 20 minutes. By our count 6 of those 11 were usable, about 2 credits per usable lead. The confirm screen never shows what the results will cost, and the results arrive as a CSV link in an email. There is no subscription, so there was nothing to cancel.",
+   "findings": [
+    "Text we checked: \"It costs one credit to initiate a search, and one credit for each filtered lead in your results\". What we saw: Search 1 used 1 credit for 0 leads, search 3 used 12 credits for 11 leads; but search 2 used 1 credit and no results email ever came.",
+    "Text we checked: \"Freelancer $28\". What we saw: Buy credits lists Freelancer $28 for 50, Startup $55 for 100 and Agency $127 for 250 credits, one-time, as in the dossier."
+   ],
+   "not_tested": [
+    "Buying credits and the Stripe checkout.",
+    "Bulk pricing.",
+    "Claiming back the lost credit under the guarantee.",
+    "Other cities and business types outside the preview list.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "It costs one credit to initiate a search, and one credit for each filtered lead in your results.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Search 1 used 1 credit for 0 leads, search 3 used 12 credits for 11 leads; but search 2 used 1 credit and no results email ever came.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/grapeleads-review.html#claim-vs-measured"
+     },
+     "plan": "GrapeLeads free preview, 20 credits; packs from $28 for 50 credits",
+     "comparability": "Three searches on the preview against the dossier and the vendor text.",
+     "status": "confirmed",
+     "buying_consequence": "Each search costs a credit even when it returns nothing.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Freelancer $28",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Buy credits lists Freelancer $28 for 50, Startup $55 for 100 and Agency $127 for 250 credits, one-time, as in the dossier.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/grapeleads-review.html#claim-vs-measured"
+     },
+     "plan": "GrapeLeads free preview, 20 credits; packs from $28 for 50 credits",
+     "comparability": "The credits page against the dossier price list.",
+     "status": "confirmed",
+     "buying_consequence": "Credits cost $0.51 to $0.56 each in packs.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "11 Leads",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "By hand, 6 of the 11 landscaping leads were usable (phone, rating, really a landscaper) and 4 of 11 were in the searched city; that is about 2 credits per usable lead.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/grapeleads-review.html#claim-vs-measured"
+     },
+     "plan": "GrapeLeads free preview, 20 credits; packs from $28 for 50 credits",
+     "comparability": "Our own count; the dossier has no lead quality figure.",
+     "status": "not_comparable",
+     "buying_consequence": "Expect to pay for leads you cannot use.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Each lead costs one credit, which is the equivalent of $0.30 per credit in bulk.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The results email names $0.30 per credit in bulk, while the packs on the credits page cost $0.51 to $0.56 per credit; bulk pricing needs contact. No checkout was opened, so no amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/grapeleads-review.html#claim-vs-measured"
+     },
+     "plan": "GrapeLeads free preview, 20 credits; packs from $28 for 50 credits",
+     "comparability": "Vendor email text against the credits page; no checkout was observed.",
+     "status": "not_testable",
+     "buying_consequence": "Ask for the bulk price in writing.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested the free GrapeLeads preview, which gives 20 credits to an email address with no card. Of three searches one found 0 leads, one used a credit and never sent results, and one gave 11 leads after about 20 minutes. By our count 6 of those 11 were usable, about 2 credits per usable lead. Start: there is no app or account, only a search page with a map box, a business type and filters, an email pop-up and a results email. The free preview gave 20 credits to an email address; no card, password or phone number was asked. Our AI assistant ran the test in its own tab on 19 November 2026 from 12:02 to about 12:35 CET. The pop-up asks for the email address again for every search. Core action, three searches: Confirm Order says You have 20 credits remaining. Proceeding will use one credit for the search, and one credit for each result obtained. Search 1, Roofer in Dallas without websites: the email came after about 3 minutes with 0 Leads, 14 Raw Query Results, 1 Credits Used, so every roofer already had a website and the credit bought nothing. Search 2, Hair Salon in San Francisco without websites and with a phone number: no results email came within 25 minutes, not even in junk, yet the next confirm screen showed 18 credits. The search used 1 credit and returned nothing, with no error or status in the app. Search 3, Landscaping in Indianapolis without websites: the email came after about 20 minutes with 11 Leads, 121 Raw Query Results, 12 Credits Used, You have 6 credits remaining, and Errors: While processing the results, we had problems matching metadata for 19 establishments. In all 14 of 20 credits were used. The confirm screen never shows what the results will cost. Lead quality of the 11 landscaping leads, counted by hand (operational, phone, at least 1 rating, really a landscaper): 6 of 11 usable, 4 of 11 in the searched city itself; 2 sat about 55 and 70 miles away, one had no phone, one was not a business. A web check of 3 usable leads found no own website. At 12 credits for 6 usable leads that is 2 credits per usable lead, about $1.0 to $1.1 at pack prices. Limits: Business Type is a fixed list of 12 types, Categories are limited for this preview; the map box opens on a random city and moves only by dragging. Export is a CSV link in the email, valid 7 days, with company name, website, status, phone, address, rating and a Grape Lead Score. Plans: /pricing gives Page not found; Buy credits lists Freelancer $28 for 50 credits ($0.56 each), Startup $55 for 100 ($0.54) and Agency $127 for 250 ($0.51), all One-time, Secure checkout with Stripe. The results email says Each lead costs one credit, which is the equivalent of $0.30 per credit in bulk. Checkout: the card moment is Buy Now on the credits page; it was not clicked. Cancelling: there is no subscription and no account with a login, so there is nothing to cancel. Not tested: buying credits, the Stripe checkout, bulk pricing, asking for the lost credit back under the guarantee, and other cities. Clean up: the email address keeps 6 credits and an unconfirmed newsletter sign-up. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The confirm screen never says what the results will cost. A search can use a credit and send nothing, without an error. The map box opens on a random city. The pop-up asks for the email address on every search.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Buying credits and the Stripe checkout.",
+     "Bulk pricing.",
+     "Claiming back the lost credit under the guarantee.",
+     "Other cities and business types outside the preview list.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 12:02 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -46109,6 +46570,127 @@
     ],
     "lost": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Leadpages",
+   "product_id": "leadpages",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Leadpages in the 7-day Business trial that Daan started through Paddle. Piper built a draft landing page from one prompt in 61.4 seconds for 850 credits. The plans have changed: Business at EUR 49 replaces Pro, and the pricing page lists unlimited traffic only from Grow. Cancelling took 4 steps with a 50% offer whose exit is a text link.",
+   "findings": [
+    "Text we checked: \"Plans starting at $49/mo to build and publish. Testing & Optimization features starting at just $99/mo\". What we saw: The billing page offers Business EUR 49, Grow EUR 115, Optimize EUR 229 and Scale EUR 399 a month; the dossier still lists Pro at $29 and Grow at $99, and there is no Pro plan any more.",
+    "Text we checked: \"How about 50% off your subscription for 3 months?\". What we saw: The cancel flow has 4 steps; the 50% offer has Take offer as the main button and the exit as a text link. After Confirm cancellation Billing showed Subscription canceled."
+   ],
+   "not_tested": [
+    "Publishing a page and a custom domain.",
+    "A/B tests and any traffic limit.",
+    "Connecting apps or the MCP server.",
+    "Buying credits, upgrading and seats.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Plans starting at $49/mo to build and publish. Testing & Optimization features starting at just $99/mo.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The billing page offers Business EUR 49, Grow EUR 115, Optimize EUR 229 and Scale EUR 399 a month; the dossier still lists Pro at $29 and Grow at $99, and there is no Pro plan any more.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/leadpages-review.html#claim-vs-measured"
+     },
+     "plan": "Leadpages Business, 7-day trial, EUR 49.00 a month including VAT after the trial",
+     "comparability": "The billing and pricing pages against the dossier price list.",
+     "status": "out_of_date",
+     "buying_consequence": "The cheapest plan is now Business at about 49 a month.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Unlimited traffic",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The pricing page lists Unlimited traffic only under Grow and gives no traffic figure for Business, while the dossier says no Leadpages plan puts a cap on traffic. A traffic limit was not tested.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/leadpages-review.html#claim-vs-measured"
+     },
+     "plan": "Leadpages Business, 7-day trial, EUR 49.00 a month including VAT after the trial",
+     "comparability": "Pricing page wording against the dossier; no traffic was sent.",
+     "status": "not_comparable",
+     "buying_consequence": "Ask what traffic Business allows before you rely on it.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "How about 50% off your subscription for 3 months?",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The cancel flow has 4 steps; the 50% offer has Take offer as the main button and the exit as a text link. After Confirm cancellation Billing showed Subscription canceled.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/leadpages-review.html#claim-vs-measured"
+     },
+     "plan": "Leadpages Business, 7-day trial, EUR 49.00 a month including VAT after the trial",
+     "comparability": "The cancellation in the session; the dossier names no cancel route.",
+     "status": "confirmed",
+     "buying_consequence": "Look for the text link to leave the offer step.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "First payment of Business € 0,00 Paid",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The Paddle portal shows EUR 0.00 paid on Nov 19, 2026 and EUR 49.00 due on Nov 26, 2026. The trial checkout itself was done by Daan before the session and was not seen, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/leadpages-review.html#claim-vs-measured"
+     },
+     "plan": "Leadpages Business, 7-day trial, EUR 49.00 a month including VAT after the trial",
+     "comparability": "The Paddle portal against the dossier; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Nothing is charged during the 7-day trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Leadpages in the 7-day Business trial that Daan started through Paddle. Piper built a draft landing page from one prompt in 61.4 seconds for 850 credits. The plans have changed: Business at EUR 49 replaces Pro, and the pricing page lists unlimited traffic only from Grow. Cancelling took 4 steps with a 50% offer whose exit is a text link. Account and start: Daan created the account and started the 7-day Business trial through Paddle with his own card. Our AI assistant ran the test in its own tab on 19 November 2026 from 17:25 CET. The interface was in English; the left sidebar with the account name was cropped from the screenshots. Billing at the start: Business EUR 49 a month, Trial ends November 26, 2026. The AI credits read 10,000 while the same page says Includes 20,000 trial credits, so the page contradicts itself. Plans on the billing page, monthly: Business EUR 49 (50 pages, 2 custom domains, MCP connector, 20,000 AI credits a month), Grow EUR 115 (Unlimited pages, 5 active integrations), Optimize EUR 229 (A/B testing with Smart Traffic) and Scale EUR 399; annual saves 20%. Extra credits cost from $2.50 for 2,000 to $90 for 150,000; none bought. Core action, a landing page from a prompt: Create a page opened Piper, the page assistant. One prompt for a made-up local plumber with a hero, three benefits and a quote request form. Piper asked What should I use for images? (we skipped images) and offered three styles. The page was ready in about 2 minutes including 3 choice clicks: Built your page in 61.4s, 850 credits, with 7 sections and a quote form, as Draft, not published. Credits went from 10,000 to 9,150. The footer said 2024, a year the AI set itself. A template, Fitness Gym, copied unchanged in about 30 seconds and used 122 credits. Pages showed Business 2 / 50 pages. Form and leads: the form settings have a redirect URL, UTM capture, a CAPTCHA, appointment booking and No integrations connected to this form. Leads showed Form submissions 0; the rows shown are demo fill. A pop-up from one prompt became a draft, Free Quote Checklist Offer, with no extra credits seen. Analytics showed CONVERSIONS 0 and SESSIONS 0. Connectors list 26 apps, 2 connected by default; nothing else was connected. The MCP Server page lets AI agents create and manage pages; nothing was connected. Paddle portal: This subscription is currently trialing. This trial will end on Nov 26, 2026 after which you will be charged EUR 49.00 a month, which is EUR 40.50 plus 21% tax of EUR 8.50. First payment of Business EUR 0.00, Paid, on Nov 19, 2026. Checkout: the trial checkout was done by Daan before the session and was not seen. Cancelling, done the same day: Billing, Danger Zone, Cancel Subscription, with the warning Canceling your subscription will revert your account to the Free plan at the end of your billing period. Your pages will expire after 7 days. Step 1, What made you cancel?, five reasons with no option for just testing; we chose Not using it enough. Step 2, what worked well: Easy to build and publish. Step 3, Limited offer: How about 50% off your subscription for 3 months?, EUR 24.50 a month, with Take offer as the main button and Cancel subscription as a text link. Step 4, We will miss you, an optional feedback box and Confirm cancellation. After a reload Billing showed Subscription canceled with Reactivate Subscription. No password and no support contact. Not tested: publishing, a custom domain, A/B tests, traffic limits, connecting apps, buying credits, upgrading and seats. Clean up: two draft pages and one draft pop-up stay; the subscription is cancelled. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The billing page shows 10,000 credits and says it includes 20,000. The AI set the footer year to 2024. In the cancel flow the exit is a plain text link next to a Take offer button, and there is no just testing reason.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling takes 4 steps in Billing: two survey questions without a just testing option, a 50% offer for 3 months where the exit is a plain text link, and a feedback box. No password. After the period the account reverts to Free and pages expire after 7 days."
+    },
+    "not_tested": [
+     "Publishing a page and a custom domain.",
+     "A/B tests and any traffic limit.",
+     "Connecting apps or the MCP server.",
+     "Buying credits, upgrading and seats.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 17:25 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
    "in_catalog": true
   },

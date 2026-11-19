@@ -73,10 +73,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -84,7 +83,297 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-19",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/pepys-review/",
+  "method": [
+   "Daan created the account and our AI assistant ran the test in Daan's browser",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Identify speakers · 1.5× credits · meetings, interviews & podcasts",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The upload dialog and pricing page say 1.5x credits for speaker labels, and the pass on a 1-minute file used 1 extra credit; the dossier says 3 credits per minute.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+    },
+    "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+    "comparability": "The app and credits page against the dossier price text.",
+    "status": "out_of_date",
+    "buying_consequence": "Speaker labels now cost half again, not three times.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "0:53 · 1 min billed · 135 words · 1 speaker · ENGLISH",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The first transcript had 2 errors in 135 words, about 1.5 per 100; the speaker pass returned 136 words with no word errors. One clear synthetic voice only.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+    },
+    "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+    "comparability": "Our own count against a reference text; the dossier has no accuracy figure.",
+    "status": "not_comparable",
+    "buying_consequence": "Clean audio transcribes well; real meetings were not tested.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "10 hours $12.50 ($1.25/hr)",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The app lists packs in US dollars, from 10 hours for $12.50, while the dossier and pricing page give 10 hours for EUR 11 billed in USD.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+    },
+    "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+    "comparability": "The credits page against the dossier note that the page shows euros but bills in USD.",
+    "status": "confirmed",
+    "buying_consequence": "You pay in US dollars whatever the page shows.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Pepys - Transcription Credits",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Buy on 10 hours opened a Polar checkout for US$ 12,50, matching the app price; nothing was paid, so no charged amount was compared.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+    },
+    "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+    "comparability": "The checkout page up to paying; no purchase was made.",
+    "status": "not_testable",
+    "buying_consequence": "Credits are a one-time purchase, not a subscription.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-19",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pepys on the free account with 60 minutes and no card. A 53-second test recording came back in under 20 seconds with 2 word errors in 135 words, and the speaker pass fixed both for 1 extra credit. The app prices hour packs in US dollars while the pricing page shows euros. Account and start: Daan created the free account, which gives 60 minutes with no card. Our AI assistant ran the test in its own tab on 19 November 2026 from 12:40 CET; the interface was in English. The sidebar showed Credits 1 h. New transcription accepts uploads, Google Drive, OneDrive and Zoom, and pasted links; Free includes 3 connected-source imports, one recording at a time. Core action, a recording to a transcript: a 53-second English test recording with a reference text of 140 words. The first upload as .m4a was refused with Only audio or video files can be transcribed., because our upload tool sent no file type; the same recording as .wav went through. Upload to transcript took well under 20 seconds: 0:53 · 1 min billed · 135 words · 1 speaker · ENGLISH. The transcript had 2 word errors in 135 words (fogs for fox, wake for week), about 1.5 per 100 words. AI notes came with it at no extra cost, and one key point itself flagged second wake as a likely transcription error. Speakers: Detect speakers started a new pass at once, with no cost warning first, and finished in about 30 s: 136 words · 1 speaker, with both errors gone. The recording has one voice, so several speakers were not tested. Export: SRT, VTT, TXT, Markdown, DOCX, PDF, JSON and NVivo, with speaker labels and timestamps as options, and word-level cues. One TXT export was read; its last line was Transcribed with Pepys, the brand mark on free exports. The file was deleted afterwards. Credits: BALANCE 58 minutes · 58 credits · 1 credit = 1 minute · never expire, so the transcript used 1 credit and the speaker pass 1 more. Plans: in the app, in US dollars, 10 hours $12.50 ($1.25/hr), 20 hours $20, up to 200 hours $170 ($0.85/hr). The pricing page shows euros billed in USD, 10 h EUR 11 to 200 h EUR 149.6, and says Uploaded recordings are removed after about 30 days and All sales final. Team plans start From $19/month. Checkout, seen up to paying: Buy on 10 hours opened a Polar checkout for Pepys - Transcription Credits at US$ 12,50 with a saved payment method; nothing was clicked or filled in, and no screenshot was kept because it showed payment details. Cancelling: there is no subscription. Delete account sits under Settings, Account; it Permanently removes your recordings, transcripts, derived files, API access and account profile. Not clicked. Files are stored in the European Union. Not tested: several speakers, batch upload, Zoom or Drive imports, the API, a paid purchase, translation and long files. Clean up: the account and one transcript stay, with 58 minutes left; the TXT export was deleted. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "Detect speakers starts at once with no cost warning. Free exports carry a Pepys line. The pricing page shows euros while the app and checkout show US dollars.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Several speakers.",
+    "Batch upload and Zoom, Drive or OneDrive imports.",
+    "The API.",
+    "A paid purchase.",
+    "Translation and long files.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 12:40 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/pepys-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pepys-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pepys-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pepys on the free account with 60 minutes and no card. A 53-second test recording came back in under 20 seconds with 2 word errors in 135 words, and the speaker pass fixed both for 1 extra credit. The app prices hour packs in US dollars while the pricing page shows euros. Account and start: Daan created the free account, which gives 60 minutes with no card. Our AI assistant ran the test in its own tab on 19 November 2026 from 12:40 CET; the interface was in English. The sidebar showed Credits 1 h. New transcription accepts uploads, Google Drive, OneDrive and Zoom, and pasted links; Free includes 3 connected-source imports, one recording at a time. Core action, a recording to a transcript: a 53-second English test recording with a reference text of 140 words. The first upload as .m4a was refused with Only audio or video files can be transcribed., because our upload tool sent no file type; the same recording as .wav went through. Upload to transcript took well under 20 seconds: 0:53 · 1 min billed · 135 words · 1 speaker · ENGLISH. The transcript had 2 word errors in 135 words (fogs for fox, wake for week), about 1.5 per 100 words. AI notes came with it at no extra cost, and one key point itself flagged second wake as a likely transcription error. Speakers: Detect speakers started a new pass at once, with no cost warning first, and finished in about 30 s: 136 words · 1 speaker, with both errors gone. The recording has one voice, so several speakers were not tested. Export: SRT, VTT, TXT, Markdown, DOCX, PDF, JSON and NVivo, with speaker labels and timestamps as options, and word-level cues. One TXT export was read; its last line was Transcribed with Pepys, the brand mark on free exports. The file was deleted afterwards. Credits: BALANCE 58 minutes · 58 credits · 1 credit = 1 minute · never expire, so the transcript used 1 credit and the speaker pass 1 more. Plans: in the app, in US dollars, 10 hours $12.50 ($1.25/hr), 20 hours $20, up to 200 hours $170 ($0.85/hr). The pricing page shows euros billed in USD, 10 h EUR 11 to 200 h EUR 149.6, and says Uploaded recordings are removed after about 30 days and All sales final. Team plans start From $19/month. Checkout, seen up to paying: Buy on 10 hours opened a Polar checkout for Pepys - Transcription Credits at US$ 12,50 with a saved payment method; nothing was clicked or filled in, and no screenshot was kept because it showed payment details. Cancelling: there is no subscription. Delete account sits under Settings, Account; it Permanently removes your recordings, transcripts, derived files, API access and account profile. Not clicked. Files are stored in the European Union. Not tested: several speakers, batch upload, Zoom or Drive imports, the API, a paid purchase, translation and long files. Clean up: the account and one transcript stay, with 58 minutes left; the TXT export was deleted. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pepys-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pepys on the free account with 60 minutes and no card. A 53-second test recording came back in under 20 seconds with 2 word errors in 135 words, and the speaker pass fixed both for 1 extra credit. The app prices hour packs in US dollars while the pricing page shows euros. Account and start: Daan created the free account, which gives 60 minutes with no card. Our AI assistant ran the test in its own tab on 19 November 2026 from 12:40 CET; the interface was in English. The sidebar showed Credits 1 h. New transcription accepts uploads, Google Drive, OneDrive and Zoom, and pasted links; Free includes 3 connected-source imports, one recording at a time. Core action, a recording to a transcript: a 53-second English test recording with a reference text of 140 words. The first upload as .m4a was refused with Only audio or video files can be transcribed., because our upload tool sent no file type; the same recording as .wav went through. Upload to transcript took well under 20 seconds: 0:53 · 1 min billed · 135 words · 1 speaker · ENGLISH. The transcript had 2 word errors in 135 words (fogs for fox, wake for week), about 1.5 per 100 words. AI notes came with it at no extra cost, and one key point itself flagged second wake as a likely transcription error. Speakers: Detect speakers started a new pass at once, with no cost warning first, and finished in about 30 s: 136 words · 1 speaker, with both errors gone. The recording has one voice, so several speakers were not tested. Export: SRT, VTT, TXT, Markdown, DOCX, PDF, JSON and NVivo, with speaker labels and timestamps as options, and word-level cues. One TXT export was read; its last line was Transcribed with Pepys, the brand mark on free exports. The file was deleted afterwards. Credits: BALANCE 58 minutes · 58 credits · 1 credit = 1 minute · never expire, so the transcript used 1 credit and the speaker pass 1 more. Plans: in the app, in US dollars, 10 hours $12.50 ($1.25/hr), 20 hours $20, up to 200 hours $170 ($0.85/hr). The pricing page shows euros billed in USD, 10 h EUR 11 to 200 h EUR 149.6, and says Uploaded recordings are removed after about 30 days and All sales final. Team plans start From $19/month. Checkout, seen up to paying: Buy on 10 hours opened a Polar checkout for Pepys - Transcription Credits at US$ 12,50 with a saved payment method; nothing was clicked or filled in, and no screenshot was kept because it showed payment details. Cancelling: there is no subscription. Delete account sits under Settings, Account; it Permanently removes your recordings, transcripts, derived files, API access and account profile. Not clicked. Files are stored in the European Union. Not tested: several speakers, batch upload, Zoom or Drive imports, the API, a paid purchase, translation and long files. Clean up: the account and one transcript stay, with 58 minutes left; the TXT export was deleted. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pepys-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/pepys-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-19",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Pepys",
+    "product_id": "pepys",
+    "run_date": "2026-11-19",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pepys on the free account with 60 minutes and no card. A 53-second test recording came back in under 20 seconds with 2 word errors in 135 words, and the speaker pass fixed both for 1 extra credit. The app prices hour packs in US dollars while the pricing page shows euros.",
+    "findings": [
+     "Text we checked: \"Identify speakers · 1.5× credits · meetings, interviews & podcasts\". What we saw: The upload dialog and pricing page say 1.5x credits for speaker labels, and the pass on a 1-minute file used 1 extra credit; the dossier says 3 credits per minute.",
+     "Text we checked: \"10 hours $12.50 ($1.25/hr)\". What we saw: The app lists packs in US dollars, from 10 hours for $12.50, while the dossier and pricing page give 10 hours for EUR 11 billed in USD."
+    ],
+    "not_tested": [
+     "Several speakers.",
+     "Batch upload and Zoom, Drive or OneDrive imports.",
+     "The API.",
+     "A paid purchase.",
+     "Translation and long files.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Identify speakers · 1.5× credits · meetings, interviews & podcasts",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The upload dialog and pricing page say 1.5x credits for speaker labels, and the pass on a 1-minute file used 1 extra credit; the dossier says 3 credits per minute.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+      },
+      "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+      "comparability": "The app and credits page against the dossier price text.",
+      "status": "out_of_date",
+      "buying_consequence": "Speaker labels now cost half again, not three times.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "0:53 · 1 min billed · 135 words · 1 speaker · ENGLISH",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The first transcript had 2 errors in 135 words, about 1.5 per 100; the speaker pass returned 136 words with no word errors. One clear synthetic voice only.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+      },
+      "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+      "comparability": "Our own count against a reference text; the dossier has no accuracy figure.",
+      "status": "not_comparable",
+      "buying_consequence": "Clean audio transcribes well; real meetings were not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "10 hours $12.50 ($1.25/hr)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The app lists packs in US dollars, from 10 hours for $12.50, while the dossier and pricing page give 10 hours for EUR 11 billed in USD.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+      },
+      "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+      "comparability": "The credits page against the dossier note that the page shows euros but bills in USD.",
+      "status": "confirmed",
+      "buying_consequence": "You pay in US dollars whatever the page shows.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Pepys - Transcription Credits",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Buy on 10 hours opened a Polar checkout for US$ 12,50, matching the app price; nothing was paid, so no charged amount was compared.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/pepys-review/#claim-vs-measured"
+      },
+      "plan": "Pepys free account, 60 minutes; packs from $12.50 for 10 hours",
+      "comparability": "The checkout page up to paying; no purchase was made.",
+      "status": "not_testable",
+      "buying_consequence": "Credits are a one-time purchase, not a subscription.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-19",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Pepys on the free account with 60 minutes and no card. A 53-second test recording came back in under 20 seconds with 2 word errors in 135 words, and the speaker pass fixed both for 1 extra credit. The app prices hour packs in US dollars while the pricing page shows euros. Account and start: Daan created the free account, which gives 60 minutes with no card. Our AI assistant ran the test in its own tab on 19 November 2026 from 12:40 CET; the interface was in English. The sidebar showed Credits 1 h. New transcription accepts uploads, Google Drive, OneDrive and Zoom, and pasted links; Free includes 3 connected-source imports, one recording at a time. Core action, a recording to a transcript: a 53-second English test recording with a reference text of 140 words. The first upload as .m4a was refused with Only audio or video files can be transcribed., because our upload tool sent no file type; the same recording as .wav went through. Upload to transcript took well under 20 seconds: 0:53 · 1 min billed · 135 words · 1 speaker · ENGLISH. The transcript had 2 word errors in 135 words (fogs for fox, wake for week), about 1.5 per 100 words. AI notes came with it at no extra cost, and one key point itself flagged second wake as a likely transcription error. Speakers: Detect speakers started a new pass at once, with no cost warning first, and finished in about 30 s: 136 words · 1 speaker, with both errors gone. The recording has one voice, so several speakers were not tested. Export: SRT, VTT, TXT, Markdown, DOCX, PDF, JSON and NVivo, with speaker labels and timestamps as options, and word-level cues. One TXT export was read; its last line was Transcribed with Pepys, the brand mark on free exports. The file was deleted afterwards. Credits: BALANCE 58 minutes · 58 credits · 1 credit = 1 minute · never expire, so the transcript used 1 credit and the speaker pass 1 more. Plans: in the app, in US dollars, 10 hours $12.50 ($1.25/hr), 20 hours $20, up to 200 hours $170 ($0.85/hr). The pricing page shows euros billed in USD, 10 h EUR 11 to 200 h EUR 149.6, and says Uploaded recordings are removed after about 30 days and All sales final. Team plans start From $19/month. Checkout, seen up to paying: Buy on 10 hours opened a Polar checkout for Pepys - Transcription Credits at US$ 12,50 with a saved payment method; nothing was clicked or filled in, and no screenshot was kept because it showed payment details. Cancelling: there is no subscription. Delete account sits under Settings, Account; it Permanently removes your recordings, transcripts, derived files, API access and account profile. Not clicked. Files are stored in the European Union. Not tested: several speakers, batch upload, Zoom or Drive imports, the API, a paid purchase, translation and long files. Clean up: the account and one transcript stay, with 58 minutes left; the TXT export was deleted. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "Detect speakers starts at once with no cost warning. Free exports carry a Pepys line. The pricing page shows euros while the app and checkout show US dollars.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Several speakers.",
+      "Batch upload and Zoom, Drive or OneDrive imports.",
+      "The API.",
+      "A paid purchase.",
+      "Translation and long files.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 12:40 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "pepys:cancellation_terms",

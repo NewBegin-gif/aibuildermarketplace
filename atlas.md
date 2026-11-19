@@ -196,7 +196,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/alli-ai-review/
 
 ## Alohi (alohi.com)
-- **Verified pricing:** (read 2026-09-10 and re-read unchanged 2026-09-27 on fax.plus/pricing and sign.plus/pricing) Priced per product, in USD, with a currency switcher offering EUR, CHF and GBP.
+- **Verified pricing:** (read 2026-09-10 and re-read unchanged 2026-09-27 and 2026-11-19 on fax.plus/pricing and sign.plus/pricing) Priced per product, in USD, with a currency switcher offering EUR, CHF and GBP.
 - **Honest take:** The honest catch is that Alohi is a suite of separate products: Fax.Plus, Sign.Plus, Scan.Plus: each with its own subscription.
 - **Best for:** businesses that need secure online faxing, e-signatures or scanning: especially regulated ones needing HIPAA-compliant fax on the Enterprise tier
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit, Free tier
@@ -327,7 +327,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/audionotes-review/
 
 ## Audiorista (audiorista.com)
-- **Verified pricing:** (re-verified 2026-09-14 and re-read unchanged 2026-09-27 and 2026-10-23 on their own pricing page, USD) Demo is $29/mo and Lite $240/mo for iOS and Android apps.
+- **Verified pricing:** (re-verified 2026-09-14 and re-read unchanged 2026-09-27, 2026-10-23 and 2026-11-19 on their own pricing page, USD) Demo is $29/mo and Lite $240/mo for iOS and Android apps.
 - **Honest take:** The $29 Demo tier cannot actually publish to the App Store or Google Play: real branded apps start at $240 a month.
 - **Best for:** creators and media brands with a real audio catalog (podcasts, audiobooks, meditations, courses) ready to monetize subscriptions in their own branded apps
 - **Flags:** Usage-metered
@@ -599,7 +599,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-08-17 and re-read unchanged 2026-09-27) A genuinely permanent free Bootstrap plan: one open position, unlimited users.
 - **Honest take:** The jump from free (one position) to the first paid tier is steep if you only hire occasionally: the free plan is usable, so live in it until you're filling several roles at once.
 - **Best for:** small teams hiring for a few roles at once that want a visual, drag-and-drop pipeline without enterprise-ATS pricing
-- **Flags:** Usage-metered, Free tier
+- **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/breezy-hr-review/
 
 ## Brevo (brevo.com)
@@ -638,7 +638,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/browseract-review/
 
 ## BuddyPunch (buddypunch.com)
-- **Verified pricing:** Per user plus a base fee, re-verified on buddypunch.com/pricing on 24 September 2026 (amounts unchanged since 5 September) and again on 22 October 2026: Starter $5.99 per user a month, Pro …
+- **Verified pricing:** Per user plus a base fee, re-verified on buddypunch.com/pricing on 24 September 2026 (amounts unchanged since 5 September) and again on 22 October and 19 November 2026: Starter $5.99 per us…
 - **Honest take:** That flat $19 base fee makes it pricey for very small teams: at three or four users the base fee dominates the bill, so it's better value once you're past a handful of employees.
 - **Best for:** small-to-mid teams that need straightforward employee time tracking with GPS and payroll-ready exports
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit

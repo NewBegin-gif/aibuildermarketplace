@@ -878,8 +878,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/clutch-review.html
 
 ## CO2 Impact (co2impact.co.uk)
-- **Verified pricing:** (read 2026-11-19 in the pricing section of co2impact.co.uk's homepage, GBP; the vendor's own llms.txt lists the same three plans) Essentials is £369 a year (£30.75 a month) for 2 users and …
-- **Honest take:** 12-month commitment on every plan; no free trial shown on the page.
+- **Verified pricing:** (read 2026-11-19 in the pricing section of co2impact.co.uk's homepage, GBP, excluding VAT) Basic is £348 a year (£29.00 a month) for 1 user and 1 site.
+- **Honest take:** 12-month licence on every plan, monthly payment included; tokens meter data entry.
 - **Best for:** UK small and mid-sized businesses that need a first carbon footprint, Scope 1-3 reporting or a carbon reduction plan for customers and tenders, without hiring a consultant
 - **Full review:** https://officesoftwaremarketplace.com/co2-impact-review.html
 
@@ -1714,7 +1714,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify stores running more than one marketing channel that want attribution from customers rather than from cookies: post-purchase 'how did you hear about us', NPS and CSAT: with unlimited responses at a predictable flat price
 - **Full review:** https://marketingandsalessoftware.com/grapevine-review.html
 
-## Gravity Forms (gravity.com)
+## Gravity Forms (gravityforms.com)
 - **Verified pricing:** (price re-verified 2026-09-23 against the vendor's own pricing page) Annual WordPress licences, unchanged since 1 Sep 2026: Basic $59/yr (1 site, standard support), Pro $159/yr (3 sites, st…
 - **Honest take:** Two honest notes. It's a WordPress-only plugin (no WordPress, no Gravity Forms) and its real power often lives in paid add-ons and third-party extensions, so a advanced setup can cost more than the base license suggests.
 - **Best for:** WordPress site owners and developers who want powerful, self-hosted forms with conditional logic, payments and deep integrations they fully control

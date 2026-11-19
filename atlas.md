@@ -421,7 +421,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/besure-checkout-rules-review.html
 
 ## BidX (bidx.io)
-- **Verified pricing:** (re-verified 2026-10-13 on their own pricing page, EUR view; every figure unchanged since 6 Aug 2026) Amazon PPC is sold in three tiers, and every one of them is a monthly fee plus an unspe…
+- **Verified pricing:** (re-verified 2026-11-19 on their own pricing page, EUR view; every figure unchanged since 6 Aug 2026) Amazon PPC is sold in three tiers, and every one of them is a monthly fee plus an unspe…
 - **Honest take:** Every Amazon PPC and DSP tier adds a percentage of connected ad spend that appears nowhere on the page, so €495 is a floor, not a price, and the commitment is annual.
 - **Best for:** brands and agencies already spending well past €10,000 a month on Amazon ads, who want bid, budget and campaign automation
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
@@ -824,14 +824,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/clonable-review/
 
 ## Cloro (cloro.dev)
-- **Verified pricing:** (prices re-read 2026-11-09 on cloro.dev/pricing; plan prices unchanged since 2026-09-17, the credit table changed: Copilot and Perplexity are gone and Bing AI Mode is new) Credit-metered, a…
+- **Verified pricing:** (prices re-read 2026-11-19 on cloro.dev/pricing, identical to 2026-11-09; plan prices unchanged since 2026-09-17, while the 9 November credit table dropped Copilot and Perplexity and added …
 - **Honest take:** The free tier is a sampler, not a trial of the real thing: 500 credits is about 100 async ChatGPT answers at the 5-credit rate we were actually charged, and their table lists 7 for a full response.
 - **Best for:** SEO and marketing teams who need AI-search visibility as structured data: who gets cited for which query on ChatGPT, Gemini, Bing AI Mode and Google's AI Mode and AI Overview: rather than as a dashboard someone else designed
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/cloro-review.html
 
 ## Close (close.com)
-- **Verified pricing:** (re-verified 2026-10-19 on close.com/pricing and close.com/pricing.md, unchanged) Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $139 billed…
+- **Verified pricing:** (re-verified 2026-11-19 on close.com/pricing and close.com/pricing.md, amounts unchanged) Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $13…
 - **Honest take:** The built-in calling is the draw, but call and SMS credits stack on top of the seat price: a '$99' plan can effectively cost ~$160/user once a rep dials 50+ times a day.
 - **Best for:** inside-sales teams that live on the phone and want calling, SMS and CRM in one place
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
@@ -1802,7 +1802,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/helpcenter-review.html
 
 ## HiBob (hibob.com)
-- **Verified pricing:** Quote-only, and re-verified as such on 2026-08-17 and again on 2026-09-28: HiBob publishes no price list.
+- **Verified pricing:** Quote-only, and re-verified as such on 2026-08-17, 2026-09-28 and 2026-11-19: HiBob publishes no price list.
 - **Honest take:** Opaque pricing and an implementation fee mean the real cost only surfaces in a sales call, and it's built for scaling mid-size companies, so it's heavy and expensive for a small team.
 - **Best for:** growing mid-size companies (roughly 50-500 staff) that have outgrown spreadsheets and want a modern, culture-focused HRIS
 - **Flags:** Hidden pricing, Per-seat pricing, Annual commit

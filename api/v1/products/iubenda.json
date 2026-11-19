@@ -73,10 +73,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -84,7 +83,336 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-19",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/iubenda-review/",
+  "method": [
+   "Our AI assistant worked in its own tab of Daan's browser on the Free plan; the notes record what each screen showed and the screenshots have Daan's details masked"
+  ],
+  "claims": [
+   {
+    "claim": "Your current plan doesn't include Terms & Conditions, please upgrade to activate it",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The site console on the Free plan shows this under Activate Terms & Conditions, with Upgrade to Advanced; the plan window had already listed Terms and Conditions and Premium Features as missing on the Free plan (89%).",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/iubenda-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read on the public pricing page and in the plan window; no checkout was opened",
+    "comparability": "The console message against the plan window after the scan.",
+    "status": "confirmed",
+    "buying_consequence": "For Terms and Conditions you need a paid plan.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Created with iubenda",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The banner preview on the Free plan shows a black banner with Learn more and customize, Reject and Accept, and below it the label Created with iubenda. GDPR stood on Manual configuration with Not configured according to the requirements of Denmark, Greece.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/iubenda-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read on the public pricing page and in the plan window; no checkout was opened",
+    "comparability": "The banner preview of the Free plan; the banner was not embedded on a site.",
+    "status": "confirmed",
+    "buying_consequence": "The free banner shows iubenda branding, and the GDPR setup needs manual work before it covers every EU country.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Save up to 10% with annual billing",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The plan window for Advanced says this and shows no amounts. The dossier says yearly billing saves 16%, read on the pricing page; that page was read with yearly prices only, so the saving could not be worked out.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/iubenda-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read on the public pricing page and in the plan window; no checkout was opened",
+    "comparability": "A saving in the plan window against a dossier figure from a different page and date.",
+    "status": "not_comparable",
+    "buying_consequence": "Check the yearly saving on the pricing page itself; the app and the dossier give different figures.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "14 days money-back guarantee",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The plan window shows this under Upgrade to Advanced. Nothing was bought, so a refund was not tried.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/iubenda-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read on the public pricing page and in the plan window; no checkout was opened",
+    "comparability": "A plan window promise against a session that bought nothing.",
+    "status": "not_testable",
+    "buying_consequence": "A refund within 14 days is promised; this was not tried.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Advanced EUR 19,99",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The public pricing page, billed yearly, lists Essentials at EUR 4.99, Advanced at EUR 19.99 and Ultimate at EUR 79.99 per site per month. In the app Upgrade to Advanced was not clicked, so no payment page, tax or total was seen.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://aibuildermarketplace.com/b2b/iubenda-review/#claim-vs-measured"
+    },
+    "plan": "Free plan; the plans were read on the public pricing page and in the plan window; no checkout was opened",
+    "comparability": "Pricing page amounts without a payment page; no stored cost rule was compared.",
+    "status": "not_testable",
+    "buying_consequence": "The price at the end of the buying path is not known from this test.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-19",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested iubenda on the Free plan of an account Daan created, with a made-up site. After the site scan a plan window offered the Free plan or Advanced, and the Free plan went on without a card. A privacy policy was generated and a cookie banner previewed; the free banner shows the label Created with iubenda, and GDPR stood on manual configuration with a warning for Denmark and Greece. Terms and Conditions need the paid Advanced plan. Upgrade was not clicked, so no payment page was seen; the public page lists Advanced at EUR 19.99 per site a month on yearly billing. Account and start: Daan created the account and confirmed the e-mail address; our AI assistant ran the test in Daan's browser, in its own tab, on 19 November 2026; the start time was not recorded and the session ended at about 10:20 CET. The interface was in English. No phone number was asked anywhere. The dossier name is iubenda and the review is on AIBM (b2b/iubenda-review). Core action, a privacy policy and a cookie banner for one site: the made-up site test-shop-example.com was added. The scan gave 0%, Passed 0, Attention required 0, Needs your input 19 and Not applicable 3, with Proceed with assisted configuration. After the scan the window Choose a plan showed the Free plan at 89% (Limited configuration, missing Terms and Conditions and Premium Features) and the Advanced plan at 100% with Upgrade to Advanced and a 14 days money-back guarantee; Continue without recommended features kept the Free plan, and no card was asked. The site console showed FREE, an Upgrade button, Languages EN (US) and the checklist Step 1 Activate (0/3), Step 2 Configure and Step 3 Embed; Activate Terms & Conditions said the current plan does not include it. The privacy policy generator was run with a made-up owner and the services Contact form, Google Analytics 4 and Mailing list, and a policy was generated; it was not activated or embedded. The cookie solution was set up with GDPR, LGPD, Switzerland and US State Laws on. The preview on desktop, tablet and mobile showed a black banner with Learn more and customize, Reject and Accept and the label Created with iubenda. GDPR and LGPD stood on Manual configuration, and GDPR said Not configured according to the requirements of Denmark, Greece. Format and position, Text, Theme and the Privacy widget are options. The banner was not saved and not embedded anywhere. Plans: On iubenda.com/en/pricing, per site per month when billed yearly: Essentials EUR 4.99 (up to 25K pageviews, Standard Privacy & Cookie Policy, Mild branding capability), Advanced EUR 19.99 (Most popular, up to 50K pageviews, Complete legal documents, all available languages) and Ultimate EUR 79.99 (up to 150K pageviews, Advanced legal documents, Full branding capability, all available languages). In the app the plan window after the scan offers the Free plan (89%, Limited configuration, without Terms and Conditions and Premium Features) or the Advanced plan (100%, Monthly or Yearly, Save up to 10% with annual billing, 14 days money-back guarantee); no amounts are shown there. Checkout: no checkout was reached. Upgrade to Advanced was not clicked, so no payment page, card field, tax or total was seen; on the Free plan no card was asked at any point. Cancelling: Account, Account & Billing info, Subscription details offers payment information and cancellation options for each purchased plan; Manage opened Manage Subscriptions with only Payment Methods, so on the Free plan there is nothing to cancel. Account & Security has Delete your account, which was not clicked. Not tested: the consent database, the free pageview limit from the dossier, activating or embedding the policy or the banner, Terms and Conditions, other languages, a paid plan and cancelling it. Clean up: nothing was placed on a real site; the account and the made-up site stay on the Free plan. The own tab was closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The free banner carries the label Created with iubenda. GDPR stays on manual configuration and warns that the setup does not meet the rules of Denmark and Greece until you change it. Terms and Conditions and the remaining 11% of the checklist need Advanced. The plan window inside the app shows no amounts, only the saving on yearly billing.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Activating or embedding the privacy policy and the cookie banner on a site.",
+    "The consent database.",
+    "The free pageview limit named in the dossier.",
+    "Terms and Conditions and other languages, which need a paid plan.",
+    "A payment page, card, tax and total; Upgrade to Advanced was not clicked.",
+    "Cancelling a paid plan; no plan was bought.",
+    "Deleting the account.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 19 November 2026. Times are CET. The start time was not recorded; the session ended at about 10:20 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://aibuildermarketplace.com/b2b/iubenda-review/#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/iubenda-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/iubenda-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested iubenda on the Free plan of an account Daan created, with a made-up site. After the site scan a plan window offered the Free plan or Advanced, and the Free plan went on without a card. A privacy policy was generated and a cookie banner previewed; the free banner shows the label Created with iubenda, and GDPR stood on manual configuration with a warning for Denmark and Greece. Terms and Conditions need the paid Advanced plan. Upgrade was not clicked, so no payment page was seen; the public page lists Advanced at EUR 19.99 per site a month on yearly billing. Account and start: Daan created the account and confirmed the e-mail address; our AI assistant ran the test in Daan's browser, in its own tab, on 19 November 2026; the start time was not recorded and the session ended at about 10:20 CET. The interface was in English. No phone number was asked anywhere. The dossier name is iubenda and the review is on AIBM (b2b/iubenda-review). Core action, a privacy policy and a cookie banner for one site: the made-up site test-shop-example.com was added. The scan gave 0%, Passed 0, Attention required 0, Needs your input 19 and Not applicable 3, with Proceed with assisted configuration. After the scan the window Choose a plan showed the Free plan at 89% (Limited configuration, missing Terms and Conditions and Premium Features) and the Advanced plan at 100% with Upgrade to Advanced and a 14 days money-back guarantee; Continue without recommended features kept the Free plan, and no card was asked. The site console showed FREE, an Upgrade button, Languages EN (US) and the checklist Step 1 Activate (0/3), Step 2 Configure and Step 3 Embed; Activate Terms & Conditions said the current plan does not include it. The privacy policy generator was run with a made-up owner and the services Contact form, Google Analytics 4 and Mailing list, and a policy was generated; it was not activated or embedded. The cookie solution was set up with GDPR, LGPD, Switzerland and US State Laws on. The preview on desktop, tablet and mobile showed a black banner with Learn more and customize, Reject and Accept and the label Created with iubenda. GDPR and LGPD stood on Manual configuration, and GDPR said Not configured according to the requirements of Denmark, Greece. Format and position, Text, Theme and the Privacy widget are options. The banner was not saved and not embedded anywhere. Plans: On iubenda.com/en/pricing, per site per month when billed yearly: Essentials EUR 4.99 (up to 25K pageviews, Standard Privacy & Cookie Policy, Mild branding capability), Advanced EUR 19.99 (Most popular, up to 50K pageviews, Complete legal documents, all available languages) and Ultimate EUR 79.99 (up to 150K pageviews, Advanced legal documents, Full branding capability, all available languages). In the app the plan window after the scan offers the Free plan (89%, Limited configuration, without Terms and Conditions and Premium Features) or the Advanced plan (100%, Monthly or Yearly, Save up to 10% with annual billing, 14 days money-back guarantee); no amounts are shown there. Checkout: no checkout was reached. Upgrade to Advanced was not clicked, so no payment page, card field, tax or total was seen; on the Free plan no card was asked at any point. Cancelling: Account, Account & Billing info, Subscription details offers payment information and cancellation options for each purchased plan; Manage opened Manage Subscriptions with only Payment Methods, so on the Free plan there is nothing to cancel. Account & Security has Delete your account, which was not clicked. Not tested: the consent database, the free pageview limit from the dossier, activating or embedding the policy or the banner, Terms and Conditions, other languages, a paid plan and cancelling it. Clean up: nothing was placed on a real site; the account and the made-up site stay on the Free plan. The own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/iubenda-review/#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested iubenda on the Free plan of an account Daan created, with a made-up site. After the site scan a plan window offered the Free plan or Advanced, and the Free plan went on without a card. A privacy policy was generated and a cookie banner previewed; the free banner shows the label Created with iubenda, and GDPR stood on manual configuration with a warning for Denmark and Greece. Terms and Conditions need the paid Advanced plan. Upgrade was not clicked, so no payment page was seen; the public page lists Advanced at EUR 19.99 per site a month on yearly billing. Account and start: Daan created the account and confirmed the e-mail address; our AI assistant ran the test in Daan's browser, in its own tab, on 19 November 2026; the start time was not recorded and the session ended at about 10:20 CET. The interface was in English. No phone number was asked anywhere. The dossier name is iubenda and the review is on AIBM (b2b/iubenda-review). Core action, a privacy policy and a cookie banner for one site: the made-up site test-shop-example.com was added. The scan gave 0%, Passed 0, Attention required 0, Needs your input 19 and Not applicable 3, with Proceed with assisted configuration. After the scan the window Choose a plan showed the Free plan at 89% (Limited configuration, missing Terms and Conditions and Premium Features) and the Advanced plan at 100% with Upgrade to Advanced and a 14 days money-back guarantee; Continue without recommended features kept the Free plan, and no card was asked. The site console showed FREE, an Upgrade button, Languages EN (US) and the checklist Step 1 Activate (0/3), Step 2 Configure and Step 3 Embed; Activate Terms & Conditions said the current plan does not include it. The privacy policy generator was run with a made-up owner and the services Contact form, Google Analytics 4 and Mailing list, and a policy was generated; it was not activated or embedded. The cookie solution was set up with GDPR, LGPD, Switzerland and US State Laws on. The preview on desktop, tablet and mobile showed a black banner with Learn more and customize, Reject and Accept and the label Created with iubenda. GDPR and LGPD stood on Manual configuration, and GDPR said Not configured according to the requirements of Denmark, Greece. Format and position, Text, Theme and the Privacy widget are options. The banner was not saved and not embedded anywhere. Plans: On iubenda.com/en/pricing, per site per month when billed yearly: Essentials EUR 4.99 (up to 25K pageviews, Standard Privacy & Cookie Policy, Mild branding capability), Advanced EUR 19.99 (Most popular, up to 50K pageviews, Complete legal documents, all available languages) and Ultimate EUR 79.99 (up to 150K pageviews, Advanced legal documents, Full branding capability, all available languages). In the app the plan window after the scan offers the Free plan (89%, Limited configuration, without Terms and Conditions and Premium Features) or the Advanced plan (100%, Monthly or Yearly, Save up to 10% with annual billing, 14 days money-back guarantee); no amounts are shown there. Checkout: no checkout was reached. Upgrade to Advanced was not clicked, so no payment page, card field, tax or total was seen; on the Free plan no card was asked at any point. Cancelling: Account, Account & Billing info, Subscription details offers payment information and cancellation options for each purchased plan; Manage opened Manage Subscriptions with only Payment Methods, so on the Free plan there is nothing to cancel. Account & Security has Delete your account, which was not clicked. Not tested: the consent database, the free pageview limit from the dossier, activating or embedding the policy or the banner, Terms and Conditions, other languages, a paid plan and cancelling it. Clean up: nothing was placed on a real site; the account and the made-up site stay on the Free plan. The own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/iubenda-review/#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/iubenda-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-19",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "iubenda",
+    "product_id": "iubenda",
+    "run_date": "2026-11-19",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested iubenda on the Free plan of an account Daan created, with a made-up site. After the site scan a plan window offered the Free plan or Advanced, and the Free plan went on without a card. A privacy policy was generated and a cookie banner previewed; the free banner shows the label Created with iubenda, and GDPR stood on manual configuration with a warning for Denmark and Greece. Terms and Conditions need the paid Advanced plan. Upgrade was not clicked, so no payment page was seen; the public page lists Advanced at EUR 19.99 per site a month on yearly billing.",
+    "findings": [
+     "Text we checked: \"Your current plan doesn't include Terms & Conditions, please upgrade to activate it\". What we saw: The site console on the Free plan shows this under Activate Terms & Conditions, with Upgrade to Advanced; the plan window had already listed Terms and Conditions and Premium Features as missing on the Free plan (89%).",
+     "Text we checked: \"Created with iubenda\". What we saw: The banner preview on the Free plan shows a black banner with Learn more and customize, Reject and Accept, and below it the label Created with iubenda. GDPR stood on Manual configuration with Not configured according to the requirements of Denmark, Greece."
+    ],
+    "not_tested": [
+     "Activating or embedding the privacy policy and the cookie banner on a site.",
+     "The consent database.",
+     "The free pageview limit named in the dossier.",
+     "Terms and Conditions and other languages, which need a paid plan.",
+     "A payment page, card, tax and total; Upgrade to Advanced was not clicked.",
+     "Cancelling a paid plan; no plan was bought.",
+     "Deleting the account.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Your current plan doesn't include Terms & Conditions, please upgrade to activate it",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The site console on the Free plan shows this under Activate Terms & Conditions, with Upgrade to Advanced; the plan window had already listed Terms and Conditions and Premium Features as missing on the Free plan (89%).",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/iubenda-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read on the public pricing page and in the plan window; no checkout was opened",
+      "comparability": "The console message against the plan window after the scan.",
+      "status": "confirmed",
+      "buying_consequence": "For Terms and Conditions you need a paid plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Created with iubenda",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The banner preview on the Free plan shows a black banner with Learn more and customize, Reject and Accept, and below it the label Created with iubenda. GDPR stood on Manual configuration with Not configured according to the requirements of Denmark, Greece.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/iubenda-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read on the public pricing page and in the plan window; no checkout was opened",
+      "comparability": "The banner preview of the Free plan; the banner was not embedded on a site.",
+      "status": "confirmed",
+      "buying_consequence": "The free banner shows iubenda branding, and the GDPR setup needs manual work before it covers every EU country.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Save up to 10% with annual billing",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The plan window for Advanced says this and shows no amounts. The dossier says yearly billing saves 16%, read on the pricing page; that page was read with yearly prices only, so the saving could not be worked out.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/iubenda-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read on the public pricing page and in the plan window; no checkout was opened",
+      "comparability": "A saving in the plan window against a dossier figure from a different page and date.",
+      "status": "not_comparable",
+      "buying_consequence": "Check the yearly saving on the pricing page itself; the app and the dossier give different figures.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "14 days money-back guarantee",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The plan window shows this under Upgrade to Advanced. Nothing was bought, so a refund was not tried.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/iubenda-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read on the public pricing page and in the plan window; no checkout was opened",
+      "comparability": "A plan window promise against a session that bought nothing.",
+      "status": "not_testable",
+      "buying_consequence": "A refund within 14 days is promised; this was not tried.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Advanced EUR 19,99",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The public pricing page, billed yearly, lists Essentials at EUR 4.99, Advanced at EUR 19.99 and Ultimate at EUR 79.99 per site per month. In the app Upgrade to Advanced was not clicked, so no payment page, tax or total was seen.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/iubenda-review/#claim-vs-measured"
+      },
+      "plan": "Free plan; the plans were read on the public pricing page and in the plan window; no checkout was opened",
+      "comparability": "Pricing page amounts without a payment page; no stored cost rule was compared.",
+      "status": "not_testable",
+      "buying_consequence": "The price at the end of the buying path is not known from this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-19",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested iubenda on the Free plan of an account Daan created, with a made-up site. After the site scan a plan window offered the Free plan or Advanced, and the Free plan went on without a card. A privacy policy was generated and a cookie banner previewed; the free banner shows the label Created with iubenda, and GDPR stood on manual configuration with a warning for Denmark and Greece. Terms and Conditions need the paid Advanced plan. Upgrade was not clicked, so no payment page was seen; the public page lists Advanced at EUR 19.99 per site a month on yearly billing. Account and start: Daan created the account and confirmed the e-mail address; our AI assistant ran the test in Daan's browser, in its own tab, on 19 November 2026; the start time was not recorded and the session ended at about 10:20 CET. The interface was in English. No phone number was asked anywhere. The dossier name is iubenda and the review is on AIBM (b2b/iubenda-review). Core action, a privacy policy and a cookie banner for one site: the made-up site test-shop-example.com was added. The scan gave 0%, Passed 0, Attention required 0, Needs your input 19 and Not applicable 3, with Proceed with assisted configuration. After the scan the window Choose a plan showed the Free plan at 89% (Limited configuration, missing Terms and Conditions and Premium Features) and the Advanced plan at 100% with Upgrade to Advanced and a 14 days money-back guarantee; Continue without recommended features kept the Free plan, and no card was asked. The site console showed FREE, an Upgrade button, Languages EN (US) and the checklist Step 1 Activate (0/3), Step 2 Configure and Step 3 Embed; Activate Terms & Conditions said the current plan does not include it. The privacy policy generator was run with a made-up owner and the services Contact form, Google Analytics 4 and Mailing list, and a policy was generated; it was not activated or embedded. The cookie solution was set up with GDPR, LGPD, Switzerland and US State Laws on. The preview on desktop, tablet and mobile showed a black banner with Learn more and customize, Reject and Accept and the label Created with iubenda. GDPR and LGPD stood on Manual configuration, and GDPR said Not configured according to the requirements of Denmark, Greece. Format and position, Text, Theme and the Privacy widget are options. The banner was not saved and not embedded anywhere. Plans: On iubenda.com/en/pricing, per site per month when billed yearly: Essentials EUR 4.99 (up to 25K pageviews, Standard Privacy & Cookie Policy, Mild branding capability), Advanced EUR 19.99 (Most popular, up to 50K pageviews, Complete legal documents, all available languages) and Ultimate EUR 79.99 (up to 150K pageviews, Advanced legal documents, Full branding capability, all available languages). In the app the plan window after the scan offers the Free plan (89%, Limited configuration, without Terms and Conditions and Premium Features) or the Advanced plan (100%, Monthly or Yearly, Save up to 10% with annual billing, 14 days money-back guarantee); no amounts are shown there. Checkout: no checkout was reached. Upgrade to Advanced was not clicked, so no payment page, card field, tax or total was seen; on the Free plan no card was asked at any point. Cancelling: Account, Account & Billing info, Subscription details offers payment information and cancellation options for each purchased plan; Manage opened Manage Subscriptions with only Payment Methods, so on the Free plan there is nothing to cancel. Account & Security has Delete your account, which was not clicked. Not tested: the consent database, the free pageview limit from the dossier, activating or embedding the policy or the banner, Terms and Conditions, other languages, a paid plan and cancelling it. Clean up: nothing was placed on a real site; the account and the made-up site stay on the Free plan. The own tab was closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The free banner carries the label Created with iubenda. GDPR stays on manual configuration and warns that the setup does not meet the rules of Denmark and Greece until you change it. Terms and Conditions and the remaining 11% of the checklist need Advanced. The plan window inside the app shows no amounts, only the saving on yearly billing.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Activating or embedding the privacy policy and the cookie banner on a site.",
+      "The consent database.",
+      "The free pageview limit named in the dossier.",
+      "Terms and Conditions and other languages, which need a paid plan.",
+      "A payment page, card, tax and total; Upgrade to Advanced was not clicked.",
+      "Cancelling a paid plan; no plan was bought.",
+      "Deleting the account.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 19 November 2026. Times are CET. The start time was not recorded; the session ended at about 10:20 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "iubenda:iubenda-q1",

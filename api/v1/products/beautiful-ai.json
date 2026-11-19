@@ -73,7 +73,7 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
@@ -83,6 +83,168 @@
   "refund": "being_verified"
  },
  "status_page": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": 2,
+    "call_required": "not_tested",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#hands-on"
+   }
+  },
+  "tested_on": "2026-11-19",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html",
+  "method": [
+   "Daan created the account and our AI assistant ran the test in Daan's browser",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Billing shows annual billing by default; $174.00 is a year of Pro at the dossier price at $14.50 a month billed annually.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+    },
+    "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+    "comparability": "The billing page against the dossier price list.",
+    "status": "confirmed",
+    "buying_consequence": "Without cancelling, day 14 bills a full year.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Quarterly Performance Review: [Bakery Name]",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "One prompt gave a polished 8-slide deck in about 55 seconds, with placeholders instead of figures; switching the chart slide to a list layout dropped the chart and the 68% figure.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+    },
+    "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+    "comparability": "The generated deck against the dossier note that the template engine looks polished but constrains layouts.",
+    "status": "confirmed",
+    "buying_consequence": "Fast first drafts; expect to fill in every figure yourself.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Your trial will be canceled immediately.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "After Cancel plan, Billing said Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026, so access stays until the end of the trial.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+    },
+    "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+    "comparability": "The cancel dialog against the billing page after the cancellation.",
+    "status": "contradicted",
+    "buying_consequence": "You keep the trial after cancelling, despite the warning.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Billing Period: Annual",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The trial ran on annual billing. The trial checkout itself was done by Daan before the session and was not seen, so no checkout amount was compared.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+    },
+    "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+    "comparability": "The billing page against the dossier; the checkout screen was not observed in this session.",
+    "status": "not_testable",
+    "buying_consequence": "Nothing is charged during the 14-day trial.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-19",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Beautiful.ai in the 14-day Pro trial that Daan started with his card. The trial runs on annual billing, so the first bill is $174.00. One prompt gave a polished 8-slide deck in about 55 seconds, but with placeholders instead of figures, and a layout switch dropped the chart. Cancelling took 2 screens with no offer. Account and start: Daan created the account and started the 14-day Pro trial with his own card; the trial checkout defaults to annual billing. Our AI assistant ran the test in its own tab on 19 November 2026 from 17:46 CET. The account was in Dutch; we set the language to English in the preferences before the first screenshot. Billing at the start: Current Plan: Pro - You have 14 days remaining in your free trial, Billing Period: Annual, Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026, Seats: 1 total. Payment history has one line of $0. Core action, a deck from a prompt: Create with AI, the prompt Quarterly update for a small bakery, a few quick questions with the defaults kept, then an outline of 8 slides and the deck about 30 seconds after Generate presentation: about 55 seconds and 5 steps in all. The deck uses placeholders instead of figures, such as Quarterly Performance Review: [Bakery Name], $[Placeholder] and [X]%, with generated bakery photos and a chart slide. Smart Slides: switching the Revenue Drivers chart slide to a list layout took one click, but the chart and the 68% figure did not carry over; Undo brought them back. A template, Corporate Presentation Template, opened in the editor after about 10 seconds. The Brand Kit screen covers colours, typography, decoration, footer and import from PowerPoint; nothing was changed. Share and export, only viewed: Share Securely offers Password Protection and Viewer Authentication; export offers a view link, Offline Player, PDF, PowerPoint and Google Slides, with the note Exported presentations do not support animations or video at this time. Nothing was shared or downloaded. Plans: Pro $14.50 /mo billed annually, Team $40 /mo with 3 seats included billed annually, Enterprise custom. Checkout: the trial checkout was done by Daan before the session and was not seen; it defaulted to annual billing at $174 a year. Cancelling, done the same day: Billing, Manage plan, Cancel plan. Screen 1, Already working in ChatGPT?, with Continue to cancellation. Screen 2: Are you sure you want to cancel your plan? You will no longer be able to create or edit presentations. Your trial will be canceled immediately. Then Cancel plan. No reason form, no discount offer, no password and no support contact. After a reload Billing showed Your trial has been canceled, Pro - Trial Canceled, and Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026. Not tested: Generate Ideas, the Offline Player, a real export to PowerPoint or PDF, public sharing, editing chart figures, the Team plan and PowerPoint import. Clean up: two presentations stay; the trial is cancelled and the account language is now English. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The trial defaults to annual billing. Switching a chart slide to another layout drops the chart data. The cancel dialog says the trial ends immediately, while Billing keeps access until Dec 03, 2026.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "Cancelling takes 2 screens in Billing with no reason, offer or password; the first screen points to the ChatGPT app. The dialog says the trial ends immediately, but Billing then shows access until Dec 03, 2026."
+   },
+   "not_tested": [
+    "A real export to PowerPoint or PDF and the Offline Player.",
+    "Public sharing and inviting people.",
+    "Editing chart figures.",
+    "The Team plan and PowerPoint import.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 17:46 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Beautiful.ai in the 14-day Pro trial that Daan started with his card. The trial runs on annual billing, so the first bill is $174.00. One prompt gave a polished 8-slide deck in about 55 seconds, but with placeholders instead of figures, and a layout switch dropped the chart. Cancelling took 2 screens with no offer. Account and start: Daan created the account and started the 14-day Pro trial with his own card; the trial checkout defaults to annual billing. Our AI assistant ran the test in its own tab on 19 November 2026 from 17:46 CET. The account was in Dutch; we set the language to English in the preferences before the first screenshot. Billing at the start: Current Plan: Pro - You have 14 days remaining in your free trial, Billing Period: Annual, Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026, Seats: 1 total. Payment history has one line of $0. Core action, a deck from a prompt: Create with AI, the prompt Quarterly update for a small bakery, a few quick questions with the defaults kept, then an outline of 8 slides and the deck about 30 seconds after Generate presentation: about 55 seconds and 5 steps in all. The deck uses placeholders instead of figures, such as Quarterly Performance Review: [Bakery Name], $[Placeholder] and [X]%, with generated bakery photos and a chart slide. Smart Slides: switching the Revenue Drivers chart slide to a list layout took one click, but the chart and the 68% figure did not carry over; Undo brought them back. A template, Corporate Presentation Template, opened in the editor after about 10 seconds. The Brand Kit screen covers colours, typography, decoration, footer and import from PowerPoint; nothing was changed. Share and export, only viewed: Share Securely offers Password Protection and Viewer Authentication; export offers a view link, Offline Player, PDF, PowerPoint and Google Slides, with the note Exported presentations do not support animations or video at this time. Nothing was shared or downloaded. Plans: Pro $14.50 /mo billed annually, Team $40 /mo with 3 seats included billed annually, Enterprise custom. Checkout: the trial checkout was done by Daan before the session and was not seen; it defaulted to annual billing at $174 a year. Cancelling, done the same day: Billing, Manage plan, Cancel plan. Screen 1, Already working in ChatGPT?, with Continue to cancellation. Screen 2: Are you sure you want to cancel your plan? You will no longer be able to create or edit presentations. Your trial will be canceled immediately. Then Cancel plan. No reason form, no discount offer, no password and no support contact. After a reload Billing showed Your trial has been canceled, Pro - Trial Canceled, and Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026. Not tested: Generate Ideas, the Offline Player, a real export to PowerPoint or PDF, public sharing, editing chart figures, the Team plan and PowerPoint import. Clean up: two presentations stay; the trial is cancelled and the account language is now English. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Beautiful.ai in the 14-day Pro trial that Daan started with his card. The trial runs on annual billing, so the first bill is $174.00. One prompt gave a polished 8-slide deck in about 55 seconds, but with placeholders instead of figures, and a layout switch dropped the chart. Cancelling took 2 screens with no offer. Account and start: Daan created the account and started the 14-day Pro trial with his own card; the trial checkout defaults to annual billing. Our AI assistant ran the test in its own tab on 19 November 2026 from 17:46 CET. The account was in Dutch; we set the language to English in the preferences before the first screenshot. Billing at the start: Current Plan: Pro - You have 14 days remaining in your free trial, Billing Period: Annual, Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026, Seats: 1 total. Payment history has one line of $0. Core action, a deck from a prompt: Create with AI, the prompt Quarterly update for a small bakery, a few quick questions with the defaults kept, then an outline of 8 slides and the deck about 30 seconds after Generate presentation: about 55 seconds and 5 steps in all. The deck uses placeholders instead of figures, such as Quarterly Performance Review: [Bakery Name], $[Placeholder] and [X]%, with generated bakery photos and a chart slide. Smart Slides: switching the Revenue Drivers chart slide to a list layout took one click, but the chart and the 68% figure did not carry over; Undo brought them back. A template, Corporate Presentation Template, opened in the editor after about 10 seconds. The Brand Kit screen covers colours, typography, decoration, footer and import from PowerPoint; nothing was changed. Share and export, only viewed: Share Securely offers Password Protection and Viewer Authentication; export offers a view link, Offline Player, PDF, PowerPoint and Google Slides, with the note Exported presentations do not support animations or video at this time. Nothing was shared or downloaded. Plans: Pro $14.50 /mo billed annually, Team $40 /mo with 3 seats included billed annually, Enterprise custom. Checkout: the trial checkout was done by Daan before the session and was not seen; it defaulted to annual billing at $174 a year. Cancelling, done the same day: Billing, Manage plan, Cancel plan. Screen 1, Already working in ChatGPT?, with Continue to cancellation. Screen 2: Are you sure you want to cancel your plan? You will no longer be able to create or edit presentations. Your trial will be canceled immediately. Then Cancel plan. No reason form, no discount offer, no password and no support contact. After a reload Billing showed Your trial has been canceled, Pro - Trial Canceled, and Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026. Not tested: Generate Ideas, the Offline Player, a real export to PowerPoint or PDF, public sharing, editing chart figures, the Team plan and PowerPoint import. Clean up: two presentations stay; the trial is cancelled and the account language is now English. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-19",
+    "evidence_url": null
+   }
+  }
+ },
  "task_evidence": {
   "structured_checks": [
    {
@@ -477,21 +639,123 @@
     "source": "session",
     "product_name": "Beautiful.ai",
     "product_id": "beautiful-ai",
-    "run_date": "2026-09-28",
+    "run_date": "2026-11-19",
     "session_type": "hands_on",
-    "what": "On 28 September 2026 we gave Gamma, Beautiful.ai, Prezi and Canva the same brief for a ten-slide investor deck: eleven facts about a made-up bakery chain and the rule to add no other numbers. We checked every deck against 15 tests written down before the first one was generated. Beautiful.ai offered us only its 14-day Pro trial, which asks for a payment card and bills a year of Pro on day 14; we cancelled it the same morning.",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Beautiful.ai in the 14-day Pro trial that Daan started with his card. The trial runs on annual billing, so the first bill is $174.00. One prompt gave a polished 8-slide deck in about 55 seconds, but with placeholders instead of figures, and a layout switch dropped the chart. Cancelling took 2 screens with no offer.",
     "findings": [
-     "It showed an outline within seconds and a finished deck about two and a half minutes after the prompt, with no numbers of its own.",
-     "The outline had a [MARKET SIZE] placeholder, but the finished market slide dropped it (without inventing a figure) and added Amsterdam as a target city.",
-     "Both charts carry the right data but read oddly: the revenue line's axis labels are rounded to 0 and 1, and use of funds is shown in euros (280,000, 80,000, 40,000) instead of the 70/20/10 we gave.",
-     "There is no AI that changes the deck as a whole: moving the ask to €450,000 meant two text edits and three chart values by hand. PowerPoint export defaults to flat images; the editable option keeps the text editable but turns the charts into pictures. Its public player shows the account's email address."
+     "Text we checked: \"Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026\". What we saw: Billing shows annual billing by default; $174.00 is a year of Pro at the dossier price at $14.50 a month billed annually.",
+     "Text we checked: \"Quarterly Performance Review: [Bakery Name]\". What we saw: One prompt gave a polished 8-slide deck in about 55 seconds, with placeholders instead of figures; switching the chart slide to a list layout dropped the chart and the 68% figure.",
+     "Text we checked: \"Your trial will be canceled immediately\". What we saw: After Cancel plan, Billing said Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026, so access stays until the end of the trial.",
+     "In our head-to-head test of four deck tools on 28 September 2026, Beautiful.ai showed an outline within seconds and a finished deck about two and a half minutes after the prompt, with no numbers of its own."
     ],
-    "not_tested": "One run on one day, on the Pro trial rather than a paid plan. We did not judge design quality.",
+    "not_tested": [
+     "A real export to PowerPoint or PDF and the Offline Player.",
+     "Public sharing and inviting people.",
+     "Editing chart figures.",
+     "The Team plan and PowerPoint import.",
+     "Export of a file into a kit, and reimport."
+    ],
     "report": "/research/one-pitch-deck-four-ai-presentation-tools/",
     "disclosure": null,
     "evidence_status": null,
     "result": "reported",
     "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Billing shows annual billing by default; $174.00 is a year of Pro at the dossier price at $14.50 a month billed annually.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+      "comparability": "The billing page against the dossier price list.",
+      "status": "confirmed",
+      "buying_consequence": "Without cancelling, day 14 bills a full year.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Quarterly Performance Review: [Bakery Name]",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "One prompt gave a polished 8-slide deck in about 55 seconds, with placeholders instead of figures; switching the chart slide to a list layout dropped the chart and the 68% figure.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+      "comparability": "The generated deck against the dossier note that the template engine looks polished but constrains layouts.",
+      "status": "confirmed",
+      "buying_consequence": "Fast first drafts; expect to fill in every figure yourself.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Your trial will be canceled immediately.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "After Cancel plan, Billing said Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026, so access stays until the end of the trial.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+      "comparability": "The cancel dialog against the billing page after the cancellation.",
+      "status": "contradicted",
+      "buying_consequence": "You keep the trial after cancelling, despite the warning.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Billing Period: Annual",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The trial ran on annual billing. The trial checkout itself was done by Daan before the session and was not seen, so no checkout amount was compared.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+      "comparability": "The billing page against the dossier; the checkout screen was not observed in this session.",
+      "status": "not_testable",
+      "buying_consequence": "Nothing is charged during the 14-day trial.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-19",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Beautiful.ai in the 14-day Pro trial that Daan started with his card. The trial runs on annual billing, so the first bill is $174.00. One prompt gave a polished 8-slide deck in about 55 seconds, but with placeholders instead of figures, and a layout switch dropped the chart. Cancelling took 2 screens with no offer. Account and start: Daan created the account and started the 14-day Pro trial with his own card; the trial checkout defaults to annual billing. Our AI assistant ran the test in its own tab on 19 November 2026 from 17:46 CET. The account was in Dutch; we set the language to English in the preferences before the first screenshot. Billing at the start: Current Plan: Pro - You have 14 days remaining in your free trial, Billing Period: Annual, Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026, Seats: 1 total. Payment history has one line of $0. Core action, a deck from a prompt: Create with AI, the prompt Quarterly update for a small bakery, a few quick questions with the defaults kept, then an outline of 8 slides and the deck about 30 seconds after Generate presentation: about 55 seconds and 5 steps in all. The deck uses placeholders instead of figures, such as Quarterly Performance Review: [Bakery Name], $[Placeholder] and [X]%, with generated bakery photos and a chart slide. Smart Slides: switching the Revenue Drivers chart slide to a list layout took one click, but the chart and the 68% figure did not carry over; Undo brought them back. A template, Corporate Presentation Template, opened in the editor after about 10 seconds. The Brand Kit screen covers colours, typography, decoration, footer and import from PowerPoint; nothing was changed. Share and export, only viewed: Share Securely offers Password Protection and Viewer Authentication; export offers a view link, Offline Player, PDF, PowerPoint and Google Slides, with the note Exported presentations do not support animations or video at this time. Nothing was shared or downloaded. Plans: Pro $14.50 /mo billed annually, Team $40 /mo with 3 seats included billed annually, Enterprise custom. Checkout: the trial checkout was done by Daan before the session and was not seen; it defaulted to annual billing at $174 a year. Cancelling, done the same day: Billing, Manage plan, Cancel plan. Screen 1, Already working in ChatGPT?, with Continue to cancellation. Screen 2: Are you sure you want to cancel your plan? You will no longer be able to create or edit presentations. Your trial will be canceled immediately. Then Cancel plan. No reason form, no discount offer, no password and no support contact. After a reload Billing showed Your trial has been canceled, Pro - Trial Canceled, and Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026. Not tested: Generate Ideas, the Offline Player, a real export to PowerPoint or PDF, public sharing, editing chart figures, the Team plan and PowerPoint import. Clean up: two presentations stay; the trial is cancelled and the account language is now English. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The trial defaults to annual billing. Switching a chart slide to another layout drops the chart data. The cancel dialog says the trial ends immediately, while Billing keeps access until Dec 03, 2026.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "Cancelling takes 2 screens in Billing with no reason, offer or password; the first screen points to the ChatGPT app. The dialog says the trial ends immediately, but Billing then shows access until Dec 03, 2026."
+     },
+     "not_tested": [
+      "A real export to PowerPoint or PDF and the Offline Player.",
+      "Public sharing and inviting people.",
+      "Editing chart figures.",
+      "The Team plan and PowerPoint import.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 17:46 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
     "in_catalog": true
    }
   ]

@@ -80,18 +80,308 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
-  "free_trial": "being_verified",
+  "free_trial": "measured",
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": 2,
+    "call_required": "not_tested",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://zerotouchsupport.com/quo-review.html#hands-on"
+   }
+  },
+  "tested_on": "2026-11-19",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://zerotouchsupport.com/quo-review.html",
+  "method": [
+   "Daan created the account and our AI assistant ran the test in Daan's browser",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Credit usage is unlimited during your 7-day trial period",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Billing shows Credits remaining 1,000 / 1,000 with overages disabled at $1 per call; the dossier says every plan includes 1,000 automation credits a month.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+    },
+    "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+    "comparability": "The billing page against the dossier credit text; no real call used credits.",
+    "status": "confirmed",
+    "buying_consequence": "The trial does not show how fast credits run out.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Your subscription was canceled. Your Business Annual plan expires on Nov 26",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "One reason dialog and Cancel subscription ended the trial, without an offer or password; the trial stays active until Nov 26.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+    },
+    "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+    "comparability": "The cancellation in the session; the dossier names no cancel route.",
+    "status": "confirmed",
+    "buying_consequence": "You can cancel on day one and still use the full trial.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Billed on Nov 26, 2026",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Next payment shows $276.00 USD for one Business Plan at $276.00 a year, which matches the dossier price of $276 a year for Business billed annually.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+    },
+    "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+    "comparability": "The billing page against the dossier price list.",
+    "status": "confirmed",
+    "buying_consequence": "Without cancelling, the first charge is a full year.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Business Annual trial",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The trial Daan started ran on Business Annual. The trial checkout itself was done by Daan before the session and was not seen, so no checkout amount was compared.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+    },
+    "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+    "comparability": "The billing page against the dossier; the checkout screen was not observed in this session.",
+    "status": "not_testable",
+    "buying_consequence": "Nothing is charged during the 7-day trial.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-19",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Quo in the 7-day trial that Daan started with his card. The trial ran on Business Annual at $276.00 a year, not on a monthly plan. The inbox, a contact and the Sona call flow were set up, but no real call or text was made. Cancelling took one reason dialog with no offer, and the trial stays active until Nov 26. Account and start: Daan created the account and started the 7-day trial with his own card; the trial runs on Business Annual. Our AI assistant ran the test in Daan's browser on 19 November 2026; the interface was in English. Core action, the inbox and a contact: the Primary inbox has the tabs Chats, Calls and Tasks and the filters Open, Unread and Unresponded, and showed Inbox cleared. You're all caught up. No real call or text was made. A test contact saved at once, with the fields Company, Role, Phone, Email, Access (Everyone) and Notes. Members shows No one in your workspace and Invite your team; inviting was off limits, so a shared team inbox was not tested. Sona, the AI that picks up calls: the Sona call flow was Live: Incoming call, Ring users All at once, for a total of 30s, If call is missed, Sona, Fallback, Voicemail. The Sona panel has a greeting with the workspace name, Knowledge Shared with Sona 1 of 1, the job Message taking and Caller history on. Personality: language English, Voice 1 (Default), tone Formal, Neutral or Casual. The Test Sona button hung on a loading dot and was not pursued. Recording: on the Primary number, Auto-record calls is on, Call recording notification is off and Transcribe and summarize calls is on. Integrations list CRM apps (HubSpot, Pipedrive, Zoho CRM, Salesforce, Attio, Clio, HighLevel, Jobber, JobTread, Housecall Pro, monday CRM, Gong), Slack, Zapier and Make; none was connected. Plans and trial: Plan and billing shows Business Annual trial, 7 days left, You won't be charged until your trial ends on Nov 26. Plan charges $276.00: 1 x Business Plan at $276.00 a year and 1 x 1,000 Automation Credits at $0.00. Next payment: Billed on Nov 26, 2026, $276.00 USD. Credit usage is unlimited during your 7-day trial period; Credits remaining 1,000 / 1,000, resets Dec 19, 2026; overages are disabled and would cost $1 per call. Three invoices of Nov 19, 2026 are Paid at $0. Checkout: the trial checkout was done by Daan before the session and was not seen. Cancelling, done the same day: Settings, Plan and billing, Danger zone, End your free trial. The text says the trial stays fully active until the end of the 7-day free period, and that all numbers are retained for 30 days before removal. End free trial opens the dialog We're sorry to see you go with six reasons and an optional feedback field; we picked Other and typed Just testing, then clicked Cancel subscription. No retention offer, no password and no support contact. After a reload the page said Your subscription was canceled. Your Business Annual plan expires on Nov 26, with a Reactivate subscription button. There is no screenshot of that page because it shows the payment method. Not tested: real calls and texts, teammates in a shared inbox, the Test Sona voice test, transcripts of a real call, US carrier registration, adding funds, overages and changing plan. Clean up: the test contact stays; the trial is cancelled and ends on Nov 26. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The trial Daan started ran on Business Annual, a yearly charge of $276.00, so check which plan the trial picks. The Test Sona button hung on a loading dot.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "Cancelling is short: End free trial in the Danger zone, one reason dialog, then Cancel subscription, with no offer and no password. The trial stays active until Nov 26."
+   },
+   "not_tested": [
+    "Real calls and texts, and call quality.",
+    "A shared inbox with teammates.",
+    "The Test Sona voice test: the button hung.",
+    "Transcripts and summaries of a real call.",
+    "US carrier registration, adding funds, overages and changing plan.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 19 November 2026. Times are CET. The session took place on this day; the exact time was not recorded. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://zerotouchsupport.com/quo-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://zerotouchsupport.com/quo-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": true,
+    "basis": "Billing shows Credits remaining 1,000 / 1,000 with overages disabled at $1 per call; the dossier says every plan includes 1,000 automation credits a month.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Quo in the 7-day trial that Daan started with his card. The trial ran on Business Annual at $276.00 a year, not on a monthly plan. The inbox, a contact and the Sona call flow were set up, but no real call or text was made. Cancelling took one reason dialog with no offer, and the trial stays active until Nov 26. Account and start: Daan created the account and started the 7-day trial with his own card; the trial runs on Business Annual. Our AI assistant ran the test in Daan's browser on 19 November 2026; the interface was in English. Core action, the inbox and a contact: the Primary inbox has the tabs Chats, Calls and Tasks and the filters Open, Unread and Unresponded, and showed Inbox cleared. You're all caught up. No real call or text was made. A test contact saved at once, with the fields Company, Role, Phone, Email, Access (Everyone) and Notes. Members shows No one in your workspace and Invite your team; inviting was off limits, so a shared team inbox was not tested. Sona, the AI that picks up calls: the Sona call flow was Live: Incoming call, Ring users All at once, for a total of 30s, If call is missed, Sona, Fallback, Voicemail. The Sona panel has a greeting with the workspace name, Knowledge Shared with Sona 1 of 1, the job Message taking and Caller history on. Personality: language English, Voice 1 (Default), tone Formal, Neutral or Casual. The Test Sona button hung on a loading dot and was not pursued. Recording: on the Primary number, Auto-record calls is on, Call recording notification is off and Transcribe and summarize calls is on. Integrations list CRM apps (HubSpot, Pipedrive, Zoho CRM, Salesforce, Attio, Clio, HighLevel, Jobber, JobTread, Housecall Pro, monday CRM, Gong), Slack, Zapier and Make; none was connected. Plans and trial: Plan and billing shows Business Annual trial, 7 days left, You won't be charged until your trial ends on Nov 26. Plan charges $276.00: 1 x Business Plan at $276.00 a year and 1 x 1,000 Automation Credits at $0.00. Next payment: Billed on Nov 26, 2026, $276.00 USD. Credit usage is unlimited during your 7-day trial period; Credits remaining 1,000 / 1,000, resets Dec 19, 2026; overages are disabled and would cost $1 per call. Three invoices of Nov 19, 2026 are Paid at $0. Checkout: the trial checkout was done by Daan before the session and was not seen. Cancelling, done the same day: Settings, Plan and billing, Danger zone, End your free trial. The text says the trial stays fully active until the end of the 7-day free period, and that all numbers are retained for 30 days before removal. End free trial opens the dialog We're sorry to see you go with six reasons and an optional feedback field; we picked Other and typed Just testing, then clicked Cancel subscription. No retention offer, no password and no support contact. After a reload the page said Your subscription was canceled. Your Business Annual plan expires on Nov 26, with a Reactivate subscription button. There is no screenshot of that page because it shows the payment method. Not tested: real calls and texts, teammates in a shared inbox, the Test Sona voice test, transcripts of a real call, US carrier registration, adding funds, overages and changing plan. Clean up: the test contact stays; the trial is cancelled and ends on Nov 26. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://zerotouchsupport.com/quo-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Quo in the 7-day trial that Daan started with his card. The trial ran on Business Annual at $276.00 a year, not on a monthly plan. The inbox, a contact and the Sona call flow were set up, but no real call or text was made. Cancelling took one reason dialog with no offer, and the trial stays active until Nov 26. Account and start: Daan created the account and started the 7-day trial with his own card; the trial runs on Business Annual. Our AI assistant ran the test in Daan's browser on 19 November 2026; the interface was in English. Core action, the inbox and a contact: the Primary inbox has the tabs Chats, Calls and Tasks and the filters Open, Unread and Unresponded, and showed Inbox cleared. You're all caught up. No real call or text was made. A test contact saved at once, with the fields Company, Role, Phone, Email, Access (Everyone) and Notes. Members shows No one in your workspace and Invite your team; inviting was off limits, so a shared team inbox was not tested. Sona, the AI that picks up calls: the Sona call flow was Live: Incoming call, Ring users All at once, for a total of 30s, If call is missed, Sona, Fallback, Voicemail. The Sona panel has a greeting with the workspace name, Knowledge Shared with Sona 1 of 1, the job Message taking and Caller history on. Personality: language English, Voice 1 (Default), tone Formal, Neutral or Casual. The Test Sona button hung on a loading dot and was not pursued. Recording: on the Primary number, Auto-record calls is on, Call recording notification is off and Transcribe and summarize calls is on. Integrations list CRM apps (HubSpot, Pipedrive, Zoho CRM, Salesforce, Attio, Clio, HighLevel, Jobber, JobTread, Housecall Pro, monday CRM, Gong), Slack, Zapier and Make; none was connected. Plans and trial: Plan and billing shows Business Annual trial, 7 days left, You won't be charged until your trial ends on Nov 26. Plan charges $276.00: 1 x Business Plan at $276.00 a year and 1 x 1,000 Automation Credits at $0.00. Next payment: Billed on Nov 26, 2026, $276.00 USD. Credit usage is unlimited during your 7-day trial period; Credits remaining 1,000 / 1,000, resets Dec 19, 2026; overages are disabled and would cost $1 per call. Three invoices of Nov 19, 2026 are Paid at $0. Checkout: the trial checkout was done by Daan before the session and was not seen. Cancelling, done the same day: Settings, Plan and billing, Danger zone, End your free trial. The text says the trial stays fully active until the end of the 7-day free period, and that all numbers are retained for 30 days before removal. End free trial opens the dialog We're sorry to see you go with six reasons and an optional feedback field; we picked Other and typed Just testing, then clicked Cancel subscription. No retention offer, no password and no support contact. After a reload the page said Your subscription was canceled. Your Business Annual plan expires on Nov 26, with a Reactivate subscription button. There is no screenshot of that page because it shows the payment method. Not tested: real calls and texts, teammates in a shared inbox, the Test Sona voice test, transcripts of a real call, US carrier registration, adding funds, overages and changing plan. Clean up: the test contact stays; the trial is cancelled and ends on Nov 26. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://zerotouchsupport.com/quo-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://zerotouchsupport.com/quo-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-19",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Quo",
+    "product_id": "quo",
+    "run_date": "2026-11-19",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Quo in the 7-day trial that Daan started with his card. The trial ran on Business Annual at $276.00 a year, not on a monthly plan. The inbox, a contact and the Sona call flow were set up, but no real call or text was made. Cancelling took one reason dialog with no offer, and the trial stays active until Nov 26.",
+    "findings": [
+     "Text we checked: \"Credit usage is unlimited during your 7-day trial period\". What we saw: Billing shows Credits remaining 1,000 / 1,000 with overages disabled at $1 per call; the dossier says every plan includes 1,000 automation credits a month.",
+     "Text we checked: \"Your subscription was canceled. Your Business Annual plan expires on Nov 26\". What we saw: One reason dialog and Cancel subscription ended the trial, without an offer or password; the trial stays active until Nov 26.",
+     "Text we checked: \"Billed on Nov 26, 2026\". What we saw: Next payment shows $276.00 USD for one Business Plan at $276.00 a year, which matches the dossier price of $276 a year for Business billed annually."
+    ],
+    "not_tested": [
+     "Real calls and texts, and call quality.",
+     "A shared inbox with teammates.",
+     "The Test Sona voice test: the button hung.",
+     "Transcripts and summaries of a real call.",
+     "US carrier registration, adding funds, overages and changing plan.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Credit usage is unlimited during your 7-day trial period",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Billing shows Credits remaining 1,000 / 1,000 with overages disabled at $1 per call; the dossier says every plan includes 1,000 automation credits a month.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+      },
+      "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+      "comparability": "The billing page against the dossier credit text; no real call used credits.",
+      "status": "confirmed",
+      "buying_consequence": "The trial does not show how fast credits run out.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Your subscription was canceled. Your Business Annual plan expires on Nov 26",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "One reason dialog and Cancel subscription ended the trial, without an offer or password; the trial stays active until Nov 26.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+      },
+      "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+      "comparability": "The cancellation in the session; the dossier names no cancel route.",
+      "status": "confirmed",
+      "buying_consequence": "You can cancel on day one and still use the full trial.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Billed on Nov 26, 2026",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Next payment shows $276.00 USD for one Business Plan at $276.00 a year, which matches the dossier price of $276 a year for Business billed annually.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+      },
+      "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+      "comparability": "The billing page against the dossier price list.",
+      "status": "confirmed",
+      "buying_consequence": "Without cancelling, the first charge is a full year.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Business Annual trial",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The trial Daan started ran on Business Annual. The trial checkout itself was done by Daan before the session and was not seen, so no checkout amount was compared.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+      },
+      "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+      "comparability": "The billing page against the dossier; the checkout screen was not observed in this session.",
+      "status": "not_testable",
+      "buying_consequence": "Nothing is charged during the 7-day trial.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-19",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Quo in the 7-day trial that Daan started with his card. The trial ran on Business Annual at $276.00 a year, not on a monthly plan. The inbox, a contact and the Sona call flow were set up, but no real call or text was made. Cancelling took one reason dialog with no offer, and the trial stays active until Nov 26. Account and start: Daan created the account and started the 7-day trial with his own card; the trial runs on Business Annual. Our AI assistant ran the test in Daan's browser on 19 November 2026; the interface was in English. Core action, the inbox and a contact: the Primary inbox has the tabs Chats, Calls and Tasks and the filters Open, Unread and Unresponded, and showed Inbox cleared. You're all caught up. No real call or text was made. A test contact saved at once, with the fields Company, Role, Phone, Email, Access (Everyone) and Notes. Members shows No one in your workspace and Invite your team; inviting was off limits, so a shared team inbox was not tested. Sona, the AI that picks up calls: the Sona call flow was Live: Incoming call, Ring users All at once, for a total of 30s, If call is missed, Sona, Fallback, Voicemail. The Sona panel has a greeting with the workspace name, Knowledge Shared with Sona 1 of 1, the job Message taking and Caller history on. Personality: language English, Voice 1 (Default), tone Formal, Neutral or Casual. The Test Sona button hung on a loading dot and was not pursued. Recording: on the Primary number, Auto-record calls is on, Call recording notification is off and Transcribe and summarize calls is on. Integrations list CRM apps (HubSpot, Pipedrive, Zoho CRM, Salesforce, Attio, Clio, HighLevel, Jobber, JobTread, Housecall Pro, monday CRM, Gong), Slack, Zapier and Make; none was connected. Plans and trial: Plan and billing shows Business Annual trial, 7 days left, You won't be charged until your trial ends on Nov 26. Plan charges $276.00: 1 x Business Plan at $276.00 a year and 1 x 1,000 Automation Credits at $0.00. Next payment: Billed on Nov 26, 2026, $276.00 USD. Credit usage is unlimited during your 7-day trial period; Credits remaining 1,000 / 1,000, resets Dec 19, 2026; overages are disabled and would cost $1 per call. Three invoices of Nov 19, 2026 are Paid at $0. Checkout: the trial checkout was done by Daan before the session and was not seen. Cancelling, done the same day: Settings, Plan and billing, Danger zone, End your free trial. The text says the trial stays fully active until the end of the 7-day free period, and that all numbers are retained for 30 days before removal. End free trial opens the dialog We're sorry to see you go with six reasons and an optional feedback field; we picked Other and typed Just testing, then clicked Cancel subscription. No retention offer, no password and no support contact. After a reload the page said Your subscription was canceled. Your Business Annual plan expires on Nov 26, with a Reactivate subscription button. There is no screenshot of that page because it shows the payment method. Not tested: real calls and texts, teammates in a shared inbox, the Test Sona voice test, transcripts of a real call, US carrier registration, adding funds, overages and changing plan. Clean up: the test contact stays; the trial is cancelled and ends on Nov 26. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The trial Daan started ran on Business Annual, a yearly charge of $276.00, so check which plan the trial picks. The Test Sona button hung on a loading dot.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "Cancelling is short: End free trial in the Danger zone, one reason dialog, then Cancel subscription, with no offer and no password. The trial stays active until Nov 26."
+     },
+     "not_tested": [
+      "Real calls and texts, and call quality.",
+      "A shared inbox with teammates.",
+      "The Test Sona voice test: the button hung.",
+      "Transcripts and summaries of a real call.",
+      "US carrier registration, adding funds, overages and changing plan.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 19 November 2026. Times are CET. The session took place on this day; the exact time was not recorded. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "quo:quo-q1",

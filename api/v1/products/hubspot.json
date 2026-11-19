@@ -94,10 +94,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -105,7 +104,674 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/hubspot-review.html",
+  "method": [
+   "The test used an account Daan made, and our AI assistant ran it in Daan's browser; the free HubSpot CRM and the Starter checkout; nothing was bought",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Small teams with fewer than 1,000 contacts",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Three test contacts were imported through a quick import and a pipeline, a deal and a form were made. The free plan shows Up to 2 users; the dossier limit of 1,000 contacts was not seen and not tested, and nothing with a real list of contacts was done.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The dossier audience against a test with 3 test contacts; no contact limit was reached or shown.",
+    "status": "not_testable",
+    "buying_consequence": "The test shows that a small team can start on the free plan; whether 1,000 contacts is the limit was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Teams about to outgrow the free plan",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The free plan says Up to 2 users, and the locks that were seen are Upgrade to Data Hub, Prospecting Agent and Workflows with an upgrade icon. The Starter offer card says Save up to 65% on Starter with 1 seat at $7 a month.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The upgrade icons and the offer card against the dossier audience; no plan was bought.",
+    "status": "confirmed",
+    "buying_consequence": "You hit the limits of the free plan quickly in the places where it locks features, and the app pushes Starter at once.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Save up to 65% on Starter",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The offer card in Account and Billing says Save up to 65% on Starter and the plans page says Limited-time, 65% off at 7 euro a month per seat billed annually. The promotion is confirmed, but no list price for Starter is shown on that page.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The offer card and the annual view of the plans page against the dossier promotion; no checkout total was seen.",
+    "status": "confirmed",
+    "buying_consequence": "The Starter promotion exists and is described as limited-time; what the seat costs afterwards is not shown in the app.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "€10/mo/seat",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "With the switch on Billed monthly the plans page shows Starter with Limited-time, 50% off at 10 euro a month per seat. A list price for Starter appears nowhere on the page, while the dossier says $20 per seat a month at list.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The monthly view of the plans page against the dossier list price; the currency differs and no list price is shown.",
+    "status": "not_testable",
+    "buying_consequence": "The monthly price after the promotion cannot be read in the app view, so check the list price before you rely on the offer.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "€90/mo/seat",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The plans page shows Professional at 90 euro a month per seat billed annually, 100 euro billed monthly, and Enterprise at 175 euro per seat. The dossier gives $800 a month paid annually or $890 a month for 3 seats and $3,600 for Enterprise, in US dollars.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The euro per-seat view of the plans page against the dossier prices in dollars for a seat bundle.",
+    "status": "not_comparable",
+    "buying_consequence": "The app view counts per seat in euro and the dossier counts a bundle of seats in dollars, so the two cannot be set side by side without a conversion.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Starter plans are not required to purchase onboarding.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The FAQ says that Professional or Enterprise plans are required to purchase onboarding and that Starter plans are not. The amount of the onboarding is not shown, while the dossier names a required fee of $3,000 for Professional.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The FAQ text against the dossier fee; no amount was visible to compare.",
+    "status": "not_testable",
+    "buying_consequence": "The mandatory onboarding fee of Professional is mentioned but its amount is not shown in the app view, so ask for it in writing.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Starter 5,000, Professional 10,000, Enterprise 15,000",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The plans page lists credits a month: Starter 5,000, Professional 10,000 and Enterprise 15,000. The dossier names a lower number of credits for each paid plan.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The credits row of the plans page against the dossier credit numbers.",
+    "status": "contradicted",
+    "buying_consequence": "The paid plans show more credits a month in the app than the dossier says.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Up to 10 users",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Starter allows Up to 10 users and the free plan Up to 2 users, with extra seats at the Professional and Enterprise prices per seat. The dossier gives 2 users for the free plan, which matches.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The user limits on the plans page and the account card against the dossier limit of 2 users.",
+    "status": "confirmed",
+    "buying_consequence": "The free plan stops at 2 users and Starter at 10.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Create your own free forms to generate leads from your website.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The free form editor shows this line with the HubSpot logo under the form, and the plans table says that e-mails, the blog and live chat carry HubSpot branding on the free plan. The form was not published.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The form editor and the plans table of the app; the dossier does not describe branding.",
+    "status": "confirmed",
+    "buying_consequence": "Forms and e-mails from the free plan carry the HubSpot name, and removing it needs a paid plan.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Upgrade to Data Hub",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "On the Data integration page the card Make sense of intent data has a lock and the button Upgrade to Data Hub, and the left menu shows an upgrade icon at Prospecting Agent and Workflows.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The Data integration page and the menu of the app; no locked feature was opened.",
+    "status": "confirmed",
+    "buying_consequence": "Several parts of the free account are visible but locked behind a paid plan.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Select the legal basis for processing a contact's data",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Step 3 of the quick import asked for a legal basis before Finish import, and Legitimate interest - Lead was chosen. The 3 test contacts were in the list after a reload, together with 2 sample contacts of HubSpot.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "Our own import of a file with 3 test contacts; the dossier does not describe the import.",
+    "status": "confirmed",
+    "buying_consequence": "A contact import takes 3 steps and forces a legal choice that you must be able to answer for your own contacts.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Use this pipeline",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The wizard offered a deal pipeline with 8 deal stages and gave AI Tool Sales Pipeline about 4 minutes after the start, about 2 minutes in the wizard itself; the test deal then took 3 steps.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "Our own clock times (15:12 start, wizard done around 15:16) against a dossier that gives no set-up time.",
+    "status": "not_comparable",
+    "buying_consequence": "A usable pipeline is there within a few minutes, but the time includes the language switch and our own wizard choices.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "added tools like Gmail and Google Calendar",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The closing sentence of the setup wizard says that it added tools like Gmail and Google Calendar, but all five tools were unticked and nothing was connected; the banner to connect the inbox was still there.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The closing sentence of the wizard against the connection banner and the unticked tools.",
+    "status": "contradicted",
+    "buying_consequence": "The wizard overstates what it did, so do not trust the closing message and check which tools are really connected.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "This action will not automatically delete any associated HubSpot user profiles.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Account and Billing has a Delete account section for the whole hub with this note. The red button was not clicked, and there was no paid plan to downgrade; the free plan stays.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The text of the Delete account page against a test that deleted and paid nothing.",
+    "status": "not_testable",
+    "buying_consequence": "The way out of a free account is a delete step for the whole hub; cancelling a paid plan was never seen, because none was bought.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Est. monthly billing €10/mo",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Buy now on Starter opened Configure Your Plan with GTM Seats at 10 euro a month and Est. monthly billing 10 euro a month, and Continue to checkout asked for company details to calculate tax. The tax and the total never appeared, because the details were not filled in; the checkout was left and nothing was bought.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+    },
+    "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+    "comparability": "The estimate on the configure screen against a checkout that stopped before the tax; no stored cost rule or fee line could be compared.",
+    "status": "not_testable",
+    "buying_consequence": "The price you pay at checkout including tax was not seen, so only the estimate before tax is known.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session set up the free HubSpot CRM, imported 3 test contacts, made a test deal and an empty form, and read the plans up to the Starter checkout. The interface had to be switched from Dutch to English first (about 3 minutes); after that the wizard gave a usable pipeline of 8 stages in about 4 minutes from the start and the test deal took 3 steps. The import asked for a legal basis. The free plan shows Up to 2 users, HubSpot branding on the form and on e-mails, and upgrade locks on Data Hub, Prospecting Agent and Workflows. The wizard says that it added Gmail and Google Calendar although nothing was connected. The public dollar page still shows the dossier prices (Starter $7 against a list price of $20, Professional $800 or $890 with a $3,000 onboarding), but the euro per-seat view inside the app shows Starter at 7 euro (65% off) or 10 euro (50% off) without a list price and Professional at 90 or 100 euro per seat. Tax and the total were not seen and nothing was bought or deleted. Account and start: the account (the free CRM, region eu1) was created by Daan and was signed in in his Chrome; our AI assistant ran the test from 15:12 (Amsterdam). The dossier name is HubSpot and the review is on MSS (mss/hubspot-review.html). The audiences from the dossier: Small teams with fewer than 1,000 contacts, Teams about to outgrow the free plan, and Sales teams that only need a lead pipeline (the dossier names noCRM as the alternative). Language: the interface was in Dutch and the address trick with lang=en did not help. The language was changed under the user preferences, General, Language, from Dutch to English and saved; the app said that it takes a few minutes. After about 3 minutes the wizard was in English, but the sidebar and the names of the standard views sometimes jumped back to Dutch and the feature lists on the plans page stay partly Dutch. Screenshots were only made of English screens or cropped. Wizard: the AI assistant Set up CRM started again at Step 1 of 6: company details Yes, looks good; goal Track software deals; tools: five tools (an e-mail inbox, a calendar, Outlook, a WordPress plug-in and a sales navigator) were switched on by default and all five were unticked before I'm done selecting my tools. Deviation: the closing sentence of the wizard still says that it added tools like Gmail and Google Calendar, but nothing was connected (the banner to connect the inbox was still there). The dashboard step was skipped (Skip this). The wizard was done at about 15:16. Core action: wizard step 5, Track your deal progress, offered a Deal pipeline with 8 deal stages (Lead Identified, Initial Outreach, Needs Assessment, Demo Scheduled, Proposal Sent, Negotiation and more) with the button Use this pipeline. The result is the pipeline AI Tool Sales Pipeline with a sample deal HubSpot - New Deal (Sample Deal). Time to the first usable pipeline: about 4 minutes from the start, about 2 minutes in the wizard itself. Test deal: Deals, Add deals, Create new, name Test Deal Acme, amount 500, stage Lead Identified, Create: 3 steps, about 15:16 to 15:17. The deal record shows the name of Daan as owner (not used on the screenshots; masked on the board screenshot). Import: Data integration, Import data, Quick import (Contacts only), a test file test-contacten-3.csv of 210 bytes added through the file field. Step 2 Match your data to our contact properties: First Name, Last Name and Email all Mapped. Step 3 requires Select the legal basis for processing a contact's data; Legitimate interest - Lead was chosen. Finish import at 15:17. Result: 3 contacts (Test Lead01 to 03, test01 to 03 at example.com, primary company example.com); the page first showed dashes and after a reload 5 contacts (with 2 sample contacts of HubSpot). Form: Forms, Create form, Start from blank. The editor says Saved with unpublished changes and has the text We'd love to hear from you!, the fields First Name, Last Name and Email and the button Submit; under the form: Create your own free forms to generate leads from your website. (HubSpot branding on the free form). Not published and not embedded. Limits of the free plan: Data integration shows Upgrade to Data Hub with a lock at Make sense of intent data; the account says Free, Up to 2 users; the plans table lists Up to 2 users, 2000 sent e-mails per calendar month with HubSpot branding, 100 active and 100 static segments, 1 blog with HubSpot branding, live chat with HubSpot branding, a maximum of 1 personal meeting link and 3 connected ad accounts. The left navigation has the buttons Upgrade to Starter and Prospecting Agent and Workflows with an upgrade icon. Plans up to the payment: Read by the tester on 18 Nov 2026 in the app and on the public plans page, in the euro view (Billed annually and Billed monthly). Free: 0 euro a month, No credit card required, Up to 2 users, 2000 sent e-mails per calendar month with HubSpot branding, 100 active and 100 static segments, 1 blog with HubSpot branding. Starter: Limited-time 65% off, 7 euro a month per seat when billed annually; Limited-time 50% off, 10 euro a month per seat when billed monthly; no list price is shown; Up to 10 users; 5,000 credits a month. Inside the app the offer card says Save up to 65% on Starter, GTM Seat (Starter), 1 seat - $7/mo. Professional: 90 euro a month per seat billed annually or 100 euro billed monthly, 10,000 credits a month. Enterprise: 175 euro a month per seat, 15,000 credits a month. The FAQ says that Professional or Enterprise plans are required to purchase onboarding and that Starter plans are not; the amount of the onboarding is not shown. Buy now on Starter opened Configure Your Plan (Buy Starter, GTM Seats 10 euro a month, 5,000 credits a month, Est. monthly billing 10 euro a month) and Continue to checkout, which asked for the company details that are used to calculate tax; the tax and the total only appear after those are filled in, which was not done, so they were not seen. The checkout was left through the address bar and nothing was bought. The public US dollar pricing pages hubspot.com/pricing and hubspot.com/pricing/crm were read again just before this delivery on the same day: Starter $7 a month per seat against a struck through $20 a month per seat with 500 HubSpot Credits and 1,000 marketing contacts, Professional starts at $800 a month paid annually or $890 a month billed monthly with 3 Core Seats and a required one-time onboarding of $3,000, Enterprise starts at $3,600 a month with a required onboarding of $7,000, and Free is $0 for up to 2 users. The dossier prices are therefore UNCHANGED on the public page. Deviations: (1) the euro per-seat view inside the app and on the plans page that the tester saw shows Professional at 90 or 100 euro per seat and Enterprise at 175 euro per seat and no list price for Starter, while the dossier and the public dollar page show $800 or $890 for 3 seats, $3,600 and a $20 list price for Starter; the two views differ in currency and in how the seats are counted, so they are not comparable one to one. (2) The onboarding amount ($3,000) is not shown in the app view, only the rule that Professional and Enterprise must buy it. (3) Starter credits are 5,000 a month in the app against 500 in the dossier and on the public dollar page. (4) The dossier says the Free plan holds 1,000 marketing contacts; the plans page of the app mentions Up to 2 users and an e-mail limit of 2000 a month, and no contact limit was seen. Cancelling: Account and Billing, Delete account, Delete Your HubSpot Account: the hub and all content associated with it will be deleted, and the note says that this will not automatically delete the associated user profiles. The red button Delete account was not clicked. There is no paid plan to downgrade; the free plan stays. Not tested: connecting a mailbox or calendar and the e-mail history on a contact, publishing or embedding the form, inviting a second user, a Starter trial or payment, the tax amount in the checkout, the onboarding amount of Professional, workflows and sequences. Clean up: the account stays; the language of Daan is now English (not set back); the test data stays (contacts Test Lead01 to 03, the deal Test Deal Acme, an empty draft form, the import name, the pipeline and the sample contacts and deal of HubSpot); no mailbox, calendar or integration was connected; our tab was closed, an older wizard tab of Daan was outside our tab group and could not be closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The interface starts in the language of the browser or region and the switch to English takes about 3 minutes, with some parts jumping back to Dutch. The setup wizard switches five tools on by default and its closing sentence says that it added Gmail and Google Calendar although nothing was connected. The import forces a legal basis choice. The free form and the free e-mails carry HubSpot branding, and Data Hub, Prospecting Agent and Workflows are locked. The app shows per-seat prices in euro without a Starter list price and without the onboarding amount, while the public dollar page shows a list price of $20 and an onboarding of $3,000.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Connecting a mailbox or calendar and the e-mail history on a contact.",
+    "Publishing or embedding the form, and inviting a second user.",
+    "A Starter trial or payment, and the tax amount and the total in the checkout.",
+    "The onboarding amount of Professional, workflows and sequences.",
+    "Deleting the account; the button was not clicked.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 15:12 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/hubspot-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/hubspot-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/hubspot-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session set up the free HubSpot CRM, imported 3 test contacts, made a test deal and an empty form, and read the plans up to the Starter checkout. The interface had to be switched from Dutch to English first (about 3 minutes); after that the wizard gave a usable pipeline of 8 stages in about 4 minutes from the start and the test deal took 3 steps. The import asked for a legal basis. The free plan shows Up to 2 users, HubSpot branding on the form and on e-mails, and upgrade locks on Data Hub, Prospecting Agent and Workflows. The wizard says that it added Gmail and Google Calendar although nothing was connected. The public dollar page still shows the dossier prices (Starter $7 against a list price of $20, Professional $800 or $890 with a $3,000 onboarding), but the euro per-seat view inside the app shows Starter at 7 euro (65% off) or 10 euro (50% off) without a list price and Professional at 90 or 100 euro per seat. Tax and the total were not seen and nothing was bought or deleted. Account and start: the account (the free CRM, region eu1) was created by Daan and was signed in in his Chrome; our AI assistant ran the test from 15:12 (Amsterdam). The dossier name is HubSpot and the review is on MSS (mss/hubspot-review.html). The audiences from the dossier: Small teams with fewer than 1,000 contacts, Teams about to outgrow the free plan, and Sales teams that only need a lead pipeline (the dossier names noCRM as the alternative). Language: the interface was in Dutch and the address trick with lang=en did not help. The language was changed under the user preferences, General, Language, from Dutch to English and saved; the app said that it takes a few minutes. After about 3 minutes the wizard was in English, but the sidebar and the names of the standard views sometimes jumped back to Dutch and the feature lists on the plans page stay partly Dutch. Screenshots were only made of English screens or cropped. Wizard: the AI assistant Set up CRM started again at Step 1 of 6: company details Yes, looks good; goal Track software deals; tools: five tools (an e-mail inbox, a calendar, Outlook, a WordPress plug-in and a sales navigator) were switched on by default and all five were unticked before I'm done selecting my tools. Deviation: the closing sentence of the wizard still says that it added tools like Gmail and Google Calendar, but nothing was connected (the banner to connect the inbox was still there). The dashboard step was skipped (Skip this). The wizard was done at about 15:16. Core action: wizard step 5, Track your deal progress, offered a Deal pipeline with 8 deal stages (Lead Identified, Initial Outreach, Needs Assessment, Demo Scheduled, Proposal Sent, Negotiation and more) with the button Use this pipeline. The result is the pipeline AI Tool Sales Pipeline with a sample deal HubSpot - New Deal (Sample Deal). Time to the first usable pipeline: about 4 minutes from the start, about 2 minutes in the wizard itself. Test deal: Deals, Add deals, Create new, name Test Deal Acme, amount 500, stage Lead Identified, Create: 3 steps, about 15:16 to 15:17. The deal record shows the name of Daan as owner (not used on the screenshots; masked on the board screenshot). Import: Data integration, Import data, Quick import (Contacts only), a test file test-contacten-3.csv of 210 bytes added through the file field. Step 2 Match your data to our contact properties: First Name, Last Name and Email all Mapped. Step 3 requires Select the legal basis for processing a contact's data; Legitimate interest - Lead was chosen. Finish import at 15:17. Result: 3 contacts (Test Lead01 to 03, test01 to 03 at example.com, primary company example.com); the page first showed dashes and after a reload 5 contacts (with 2 sample contacts of HubSpot). Form: Forms, Create form, Start from blank. The editor says Saved with unpublished changes and has the text We'd love to hear from you!, the fields First Name, Last Name and Email and the button Submit; under the form: Create your own free forms to generate leads from your website. (HubSpot branding on the free form). Not published and not embedded. Limits of the free plan: Data integration shows Upgrade to Data Hub with a lock at Make sense of intent data; the account says Free, Up to 2 users; the plans table lists Up to 2 users, 2000 sent e-mails per calendar month with HubSpot branding, 100 active and 100 static segments, 1 blog with HubSpot branding, live chat with HubSpot branding, a maximum of 1 personal meeting link and 3 connected ad accounts. The left navigation has the buttons Upgrade to Starter and Prospecting Agent and Workflows with an upgrade icon. Plans up to the payment: Read by the tester on 18 Nov 2026 in the app and on the public plans page, in the euro view (Billed annually and Billed monthly). Free: 0 euro a month, No credit card required, Up to 2 users, 2000 sent e-mails per calendar month with HubSpot branding, 100 active and 100 static segments, 1 blog with HubSpot branding. Starter: Limited-time 65% off, 7 euro a month per seat when billed annually; Limited-time 50% off, 10 euro a month per seat when billed monthly; no list price is shown; Up to 10 users; 5,000 credits a month. Inside the app the offer card says Save up to 65% on Starter, GTM Seat (Starter), 1 seat - $7/mo. Professional: 90 euro a month per seat billed annually or 100 euro billed monthly, 10,000 credits a month. Enterprise: 175 euro a month per seat, 15,000 credits a month. The FAQ says that Professional or Enterprise plans are required to purchase onboarding and that Starter plans are not; the amount of the onboarding is not shown. Buy now on Starter opened Configure Your Plan (Buy Starter, GTM Seats 10 euro a month, 5,000 credits a month, Est. monthly billing 10 euro a month) and Continue to checkout, which asked for the company details that are used to calculate tax; the tax and the total only appear after those are filled in, which was not done, so they were not seen. The checkout was left through the address bar and nothing was bought. The public US dollar pricing pages hubspot.com/pricing and hubspot.com/pricing/crm were read again just before this delivery on the same day: Starter $7 a month per seat against a struck through $20 a month per seat with 500 HubSpot Credits and 1,000 marketing contacts, Professional starts at $800 a month paid annually or $890 a month billed monthly with 3 Core Seats and a required one-time onboarding of $3,000, Enterprise starts at $3,600 a month with a required onboarding of $7,000, and Free is $0 for up to 2 users. The dossier prices are therefore UNCHANGED on the public page. Deviations: (1) the euro per-seat view inside the app and on the plans page that the tester saw shows Professional at 90 or 100 euro per seat and Enterprise at 175 euro per seat and no list price for Starter, while the dossier and the public dollar page show $800 or $890 for 3 seats, $3,600 and a $20 list price for Starter; the two views differ in currency and in how the seats are counted, so they are not comparable one to one. (2) The onboarding amount ($3,000) is not shown in the app view, only the rule that Professional and Enterprise must buy it. (3) Starter credits are 5,000 a month in the app against 500 in the dossier and on the public dollar page. (4) The dossier says the Free plan holds 1,000 marketing contacts; the plans page of the app mentions Up to 2 users and an e-mail limit of 2000 a month, and no contact limit was seen. Cancelling: Account and Billing, Delete account, Delete Your HubSpot Account: the hub and all content associated with it will be deleted, and the note says that this will not automatically delete the associated user profiles. The red button Delete account was not clicked. There is no paid plan to downgrade; the free plan stays. Not tested: connecting a mailbox or calendar and the e-mail history on a contact, publishing or embedding the form, inviting a second user, a Starter trial or payment, the tax amount in the checkout, the onboarding amount of Professional, workflows and sequences. Clean up: the account stays; the language of Daan is now English (not set back); the test data stays (contacts Test Lead01 to 03, the deal Test Deal Acme, an empty draft form, the import name, the pipeline and the sample contacts and deal of HubSpot); no mailbox, calendar or integration was connected; our tab was closed, an older wizard tab of Daan was outside our tab group and could not be closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/hubspot-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session set up the free HubSpot CRM, imported 3 test contacts, made a test deal and an empty form, and read the plans up to the Starter checkout. The interface had to be switched from Dutch to English first (about 3 minutes); after that the wizard gave a usable pipeline of 8 stages in about 4 minutes from the start and the test deal took 3 steps. The import asked for a legal basis. The free plan shows Up to 2 users, HubSpot branding on the form and on e-mails, and upgrade locks on Data Hub, Prospecting Agent and Workflows. The wizard says that it added Gmail and Google Calendar although nothing was connected. The public dollar page still shows the dossier prices (Starter $7 against a list price of $20, Professional $800 or $890 with a $3,000 onboarding), but the euro per-seat view inside the app shows Starter at 7 euro (65% off) or 10 euro (50% off) without a list price and Professional at 90 or 100 euro per seat. Tax and the total were not seen and nothing was bought or deleted. Account and start: the account (the free CRM, region eu1) was created by Daan and was signed in in his Chrome; our AI assistant ran the test from 15:12 (Amsterdam). The dossier name is HubSpot and the review is on MSS (mss/hubspot-review.html). The audiences from the dossier: Small teams with fewer than 1,000 contacts, Teams about to outgrow the free plan, and Sales teams that only need a lead pipeline (the dossier names noCRM as the alternative). Language: the interface was in Dutch and the address trick with lang=en did not help. The language was changed under the user preferences, General, Language, from Dutch to English and saved; the app said that it takes a few minutes. After about 3 minutes the wizard was in English, but the sidebar and the names of the standard views sometimes jumped back to Dutch and the feature lists on the plans page stay partly Dutch. Screenshots were only made of English screens or cropped. Wizard: the AI assistant Set up CRM started again at Step 1 of 6: company details Yes, looks good; goal Track software deals; tools: five tools (an e-mail inbox, a calendar, Outlook, a WordPress plug-in and a sales navigator) were switched on by default and all five were unticked before I'm done selecting my tools. Deviation: the closing sentence of the wizard still says that it added tools like Gmail and Google Calendar, but nothing was connected (the banner to connect the inbox was still there). The dashboard step was skipped (Skip this). The wizard was done at about 15:16. Core action: wizard step 5, Track your deal progress, offered a Deal pipeline with 8 deal stages (Lead Identified, Initial Outreach, Needs Assessment, Demo Scheduled, Proposal Sent, Negotiation and more) with the button Use this pipeline. The result is the pipeline AI Tool Sales Pipeline with a sample deal HubSpot - New Deal (Sample Deal). Time to the first usable pipeline: about 4 minutes from the start, about 2 minutes in the wizard itself. Test deal: Deals, Add deals, Create new, name Test Deal Acme, amount 500, stage Lead Identified, Create: 3 steps, about 15:16 to 15:17. The deal record shows the name of Daan as owner (not used on the screenshots; masked on the board screenshot). Import: Data integration, Import data, Quick import (Contacts only), a test file test-contacten-3.csv of 210 bytes added through the file field. Step 2 Match your data to our contact properties: First Name, Last Name and Email all Mapped. Step 3 requires Select the legal basis for processing a contact's data; Legitimate interest - Lead was chosen. Finish import at 15:17. Result: 3 contacts (Test Lead01 to 03, test01 to 03 at example.com, primary company example.com); the page first showed dashes and after a reload 5 contacts (with 2 sample contacts of HubSpot). Form: Forms, Create form, Start from blank. The editor says Saved with unpublished changes and has the text We'd love to hear from you!, the fields First Name, Last Name and Email and the button Submit; under the form: Create your own free forms to generate leads from your website. (HubSpot branding on the free form). Not published and not embedded. Limits of the free plan: Data integration shows Upgrade to Data Hub with a lock at Make sense of intent data; the account says Free, Up to 2 users; the plans table lists Up to 2 users, 2000 sent e-mails per calendar month with HubSpot branding, 100 active and 100 static segments, 1 blog with HubSpot branding, live chat with HubSpot branding, a maximum of 1 personal meeting link and 3 connected ad accounts. The left navigation has the buttons Upgrade to Starter and Prospecting Agent and Workflows with an upgrade icon. Plans up to the payment: Read by the tester on 18 Nov 2026 in the app and on the public plans page, in the euro view (Billed annually and Billed monthly). Free: 0 euro a month, No credit card required, Up to 2 users, 2000 sent e-mails per calendar month with HubSpot branding, 100 active and 100 static segments, 1 blog with HubSpot branding. Starter: Limited-time 65% off, 7 euro a month per seat when billed annually; Limited-time 50% off, 10 euro a month per seat when billed monthly; no list price is shown; Up to 10 users; 5,000 credits a month. Inside the app the offer card says Save up to 65% on Starter, GTM Seat (Starter), 1 seat - $7/mo. Professional: 90 euro a month per seat billed annually or 100 euro billed monthly, 10,000 credits a month. Enterprise: 175 euro a month per seat, 15,000 credits a month. The FAQ says that Professional or Enterprise plans are required to purchase onboarding and that Starter plans are not; the amount of the onboarding is not shown. Buy now on Starter opened Configure Your Plan (Buy Starter, GTM Seats 10 euro a month, 5,000 credits a month, Est. monthly billing 10 euro a month) and Continue to checkout, which asked for the company details that are used to calculate tax; the tax and the total only appear after those are filled in, which was not done, so they were not seen. The checkout was left through the address bar and nothing was bought. The public US dollar pricing pages hubspot.com/pricing and hubspot.com/pricing/crm were read again just before this delivery on the same day: Starter $7 a month per seat against a struck through $20 a month per seat with 500 HubSpot Credits and 1,000 marketing contacts, Professional starts at $800 a month paid annually or $890 a month billed monthly with 3 Core Seats and a required one-time onboarding of $3,000, Enterprise starts at $3,600 a month with a required onboarding of $7,000, and Free is $0 for up to 2 users. The dossier prices are therefore UNCHANGED on the public page. Deviations: (1) the euro per-seat view inside the app and on the plans page that the tester saw shows Professional at 90 or 100 euro per seat and Enterprise at 175 euro per seat and no list price for Starter, while the dossier and the public dollar page show $800 or $890 for 3 seats, $3,600 and a $20 list price for Starter; the two views differ in currency and in how the seats are counted, so they are not comparable one to one. (2) The onboarding amount ($3,000) is not shown in the app view, only the rule that Professional and Enterprise must buy it. (3) Starter credits are 5,000 a month in the app against 500 in the dossier and on the public dollar page. (4) The dossier says the Free plan holds 1,000 marketing contacts; the plans page of the app mentions Up to 2 users and an e-mail limit of 2000 a month, and no contact limit was seen. Cancelling: Account and Billing, Delete account, Delete Your HubSpot Account: the hub and all content associated with it will be deleted, and the note says that this will not automatically delete the associated user profiles. The red button Delete account was not clicked. There is no paid plan to downgrade; the free plan stays. Not tested: connecting a mailbox or calendar and the e-mail history on a contact, publishing or embedding the form, inviting a second user, a Starter trial or payment, the tax amount in the checkout, the onboarding amount of Professional, workflows and sequences. Clean up: the account stays; the language of Daan is now English (not set back); the test data stays (contacts Test Lead01 to 03, the deal Test Deal Acme, an empty draft form, the import name, the pipeline and the sample contacts and deal of HubSpot); no mailbox, calendar or integration was connected; our tab was closed, an older wizard tab of Daan was outside our tab group and could not be closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/hubspot-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/hubspot-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "HubSpot",
+    "product_id": "hubspot",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session set up the free HubSpot CRM, imported 3 test contacts, made a test deal and an empty form, and read the plans up to the Starter checkout. The interface had to be switched from Dutch to English first (about 3 minutes); after that the wizard gave a usable pipeline of 8 stages in about 4 minutes from the start and the test deal took 3 steps. The import asked for a legal basis. The free plan shows Up to 2 users, HubSpot branding on the form and on e-mails, and upgrade locks on Data Hub, Prospecting Agent and Workflows. The wizard says that it added Gmail and Google Calendar although nothing was connected. The public dollar page still shows the dossier prices (Starter $7 against a list price of $20, Professional $800 or $890 with a $3,000 onboarding), but the euro per-seat view inside the app shows Starter at 7 euro (65% off) or 10 euro (50% off) without a list price and Professional at 90 or 100 euro per seat. Tax and the total were not seen and nothing was bought or deleted.",
+    "findings": [
+     "Text we checked: \"Teams about to outgrow the free plan\". What we saw: The free plan says Up to 2 users, and the locks that were seen are Upgrade to Data Hub, Prospecting Agent and Workflows with an upgrade icon. The Starter offer card says Save up to 65% on Starter with 1 seat at $7 a month.",
+     "Text we checked: \"Save up to 65% on Starter\". What we saw: The offer card in Account and Billing says Save up to 65% on Starter and the plans page says Limited-time, 65% off at 7 euro a month per seat billed annually. The promotion is confirmed, but no list price for Starter is shown on that page.",
+     "Text we checked: \"Starter 5,000, Professional 10,000, Enterprise 15,000\". What we saw: The plans page lists credits a month: Starter 5,000, Professional 10,000 and Enterprise 15,000. The dossier names a lower number of credits for each paid plan.",
+     "Text we checked: \"Up to 10 users\". What we saw: Starter allows Up to 10 users and the free plan Up to 2 users, with extra seats at the Professional and Enterprise prices per seat. The dossier gives 2 users for the free plan, which matches.",
+     "Text we checked: \"Create your own free forms to generate leads from your website\". What we saw: The free form editor shows this line with the HubSpot logo under the form, and the plans table says that e-mails, the blog and live chat carry HubSpot branding on the free plan. The form was not published."
+    ],
+    "not_tested": [
+     "Connecting a mailbox or calendar and the e-mail history on a contact.",
+     "Publishing or embedding the form, and inviting a second user.",
+     "A Starter trial or payment, and the tax amount and the total in the checkout.",
+     "The onboarding amount of Professional, workflows and sequences.",
+     "Deleting the account; the button was not clicked.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Small teams with fewer than 1,000 contacts",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Three test contacts were imported through a quick import and a pipeline, a deal and a form were made. The free plan shows Up to 2 users; the dossier limit of 1,000 contacts was not seen and not tested, and nothing with a real list of contacts was done.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The dossier audience against a test with 3 test contacts; no contact limit was reached or shown.",
+      "status": "not_testable",
+      "buying_consequence": "The test shows that a small team can start on the free plan; whether 1,000 contacts is the limit was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Teams about to outgrow the free plan",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The free plan says Up to 2 users, and the locks that were seen are Upgrade to Data Hub, Prospecting Agent and Workflows with an upgrade icon. The Starter offer card says Save up to 65% on Starter with 1 seat at $7 a month.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The upgrade icons and the offer card against the dossier audience; no plan was bought.",
+      "status": "confirmed",
+      "buying_consequence": "You hit the limits of the free plan quickly in the places where it locks features, and the app pushes Starter at once.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Save up to 65% on Starter",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The offer card in Account and Billing says Save up to 65% on Starter and the plans page says Limited-time, 65% off at 7 euro a month per seat billed annually. The promotion is confirmed, but no list price for Starter is shown on that page.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The offer card and the annual view of the plans page against the dossier promotion; no checkout total was seen.",
+      "status": "confirmed",
+      "buying_consequence": "The Starter promotion exists and is described as limited-time; what the seat costs afterwards is not shown in the app.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "€10/mo/seat",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "With the switch on Billed monthly the plans page shows Starter with Limited-time, 50% off at 10 euro a month per seat. A list price for Starter appears nowhere on the page, while the dossier says $20 per seat a month at list.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The monthly view of the plans page against the dossier list price; the currency differs and no list price is shown.",
+      "status": "not_testable",
+      "buying_consequence": "The monthly price after the promotion cannot be read in the app view, so check the list price before you rely on the offer.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "€90/mo/seat",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The plans page shows Professional at 90 euro a month per seat billed annually, 100 euro billed monthly, and Enterprise at 175 euro per seat. The dossier gives $800 a month paid annually or $890 a month for 3 seats and $3,600 for Enterprise, in US dollars.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The euro per-seat view of the plans page against the dossier prices in dollars for a seat bundle.",
+      "status": "not_comparable",
+      "buying_consequence": "The app view counts per seat in euro and the dossier counts a bundle of seats in dollars, so the two cannot be set side by side without a conversion.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Starter plans are not required to purchase onboarding.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The FAQ says that Professional or Enterprise plans are required to purchase onboarding and that Starter plans are not. The amount of the onboarding is not shown, while the dossier names a required fee of $3,000 for Professional.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The FAQ text against the dossier fee; no amount was visible to compare.",
+      "status": "not_testable",
+      "buying_consequence": "The mandatory onboarding fee of Professional is mentioned but its amount is not shown in the app view, so ask for it in writing.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Starter 5,000, Professional 10,000, Enterprise 15,000",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The plans page lists credits a month: Starter 5,000, Professional 10,000 and Enterprise 15,000. The dossier names a lower number of credits for each paid plan.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The credits row of the plans page against the dossier credit numbers.",
+      "status": "contradicted",
+      "buying_consequence": "The paid plans show more credits a month in the app than the dossier says.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Up to 10 users",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Starter allows Up to 10 users and the free plan Up to 2 users, with extra seats at the Professional and Enterprise prices per seat. The dossier gives 2 users for the free plan, which matches.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The user limits on the plans page and the account card against the dossier limit of 2 users.",
+      "status": "confirmed",
+      "buying_consequence": "The free plan stops at 2 users and Starter at 10.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Create your own free forms to generate leads from your website.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The free form editor shows this line with the HubSpot logo under the form, and the plans table says that e-mails, the blog and live chat carry HubSpot branding on the free plan. The form was not published.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The form editor and the plans table of the app; the dossier does not describe branding.",
+      "status": "confirmed",
+      "buying_consequence": "Forms and e-mails from the free plan carry the HubSpot name, and removing it needs a paid plan.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Upgrade to Data Hub",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "On the Data integration page the card Make sense of intent data has a lock and the button Upgrade to Data Hub, and the left menu shows an upgrade icon at Prospecting Agent and Workflows.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The Data integration page and the menu of the app; no locked feature was opened.",
+      "status": "confirmed",
+      "buying_consequence": "Several parts of the free account are visible but locked behind a paid plan.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Select the legal basis for processing a contact's data",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Step 3 of the quick import asked for a legal basis before Finish import, and Legitimate interest - Lead was chosen. The 3 test contacts were in the list after a reload, together with 2 sample contacts of HubSpot.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "Our own import of a file with 3 test contacts; the dossier does not describe the import.",
+      "status": "confirmed",
+      "buying_consequence": "A contact import takes 3 steps and forces a legal choice that you must be able to answer for your own contacts.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Use this pipeline",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The wizard offered a deal pipeline with 8 deal stages and gave AI Tool Sales Pipeline about 4 minutes after the start, about 2 minutes in the wizard itself; the test deal then took 3 steps.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "Our own clock times (15:12 start, wizard done around 15:16) against a dossier that gives no set-up time.",
+      "status": "not_comparable",
+      "buying_consequence": "A usable pipeline is there within a few minutes, but the time includes the language switch and our own wizard choices.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "added tools like Gmail and Google Calendar",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The closing sentence of the setup wizard says that it added tools like Gmail and Google Calendar, but all five tools were unticked and nothing was connected; the banner to connect the inbox was still there.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The closing sentence of the wizard against the connection banner and the unticked tools.",
+      "status": "contradicted",
+      "buying_consequence": "The wizard overstates what it did, so do not trust the closing message and check which tools are really connected.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "This action will not automatically delete any associated HubSpot user profiles.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Account and Billing has a Delete account section for the whole hub with this note. The red button was not clicked, and there was no paid plan to downgrade; the free plan stays.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The text of the Delete account page against a test that deleted and paid nothing.",
+      "status": "not_testable",
+      "buying_consequence": "The way out of a free account is a delete step for the whole hub; cancelling a paid plan was never seen, because none was bought.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Est. monthly billing €10/mo",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Buy now on Starter opened Configure Your Plan with GTM Seats at 10 euro a month and Est. monthly billing 10 euro a month, and Continue to checkout asked for company details to calculate tax. The tax and the total never appeared, because the details were not filled in; the checkout was left and nothing was bought.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/hubspot-review.html#claim-vs-measured"
+      },
+      "plan": "Free CRM account; a contact import, a deal pipeline, a test deal and an empty form were made and the plans were read up to the company details of the Starter checkout, nothing was bought",
+      "comparability": "The estimate on the configure screen against a checkout that stopped before the tax; no stored cost rule or fee line could be compared.",
+      "status": "not_testable",
+      "buying_consequence": "The price you pay at checkout including tax was not seen, so only the estimate before tax is known.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session set up the free HubSpot CRM, imported 3 test contacts, made a test deal and an empty form, and read the plans up to the Starter checkout. The interface had to be switched from Dutch to English first (about 3 minutes); after that the wizard gave a usable pipeline of 8 stages in about 4 minutes from the start and the test deal took 3 steps. The import asked for a legal basis. The free plan shows Up to 2 users, HubSpot branding on the form and on e-mails, and upgrade locks on Data Hub, Prospecting Agent and Workflows. The wizard says that it added Gmail and Google Calendar although nothing was connected. The public dollar page still shows the dossier prices (Starter $7 against a list price of $20, Professional $800 or $890 with a $3,000 onboarding), but the euro per-seat view inside the app shows Starter at 7 euro (65% off) or 10 euro (50% off) without a list price and Professional at 90 or 100 euro per seat. Tax and the total were not seen and nothing was bought or deleted. Account and start: the account (the free CRM, region eu1) was created by Daan and was signed in in his Chrome; our AI assistant ran the test from 15:12 (Amsterdam). The dossier name is HubSpot and the review is on MSS (mss/hubspot-review.html). The audiences from the dossier: Small teams with fewer than 1,000 contacts, Teams about to outgrow the free plan, and Sales teams that only need a lead pipeline (the dossier names noCRM as the alternative). Language: the interface was in Dutch and the address trick with lang=en did not help. The language was changed under the user preferences, General, Language, from Dutch to English and saved; the app said that it takes a few minutes. After about 3 minutes the wizard was in English, but the sidebar and the names of the standard views sometimes jumped back to Dutch and the feature lists on the plans page stay partly Dutch. Screenshots were only made of English screens or cropped. Wizard: the AI assistant Set up CRM started again at Step 1 of 6: company details Yes, looks good; goal Track software deals; tools: five tools (an e-mail inbox, a calendar, Outlook, a WordPress plug-in and a sales navigator) were switched on by default and all five were unticked before I'm done selecting my tools. Deviation: the closing sentence of the wizard still says that it added tools like Gmail and Google Calendar, but nothing was connected (the banner to connect the inbox was still there). The dashboard step was skipped (Skip this). The wizard was done at about 15:16. Core action: wizard step 5, Track your deal progress, offered a Deal pipeline with 8 deal stages (Lead Identified, Initial Outreach, Needs Assessment, Demo Scheduled, Proposal Sent, Negotiation and more) with the button Use this pipeline. The result is the pipeline AI Tool Sales Pipeline with a sample deal HubSpot - New Deal (Sample Deal). Time to the first usable pipeline: about 4 minutes from the start, about 2 minutes in the wizard itself. Test deal: Deals, Add deals, Create new, name Test Deal Acme, amount 500, stage Lead Identified, Create: 3 steps, about 15:16 to 15:17. The deal record shows the name of Daan as owner (not used on the screenshots; masked on the board screenshot). Import: Data integration, Import data, Quick import (Contacts only), a test file test-contacten-3.csv of 210 bytes added through the file field. Step 2 Match your data to our contact properties: First Name, Last Name and Email all Mapped. Step 3 requires Select the legal basis for processing a contact's data; Legitimate interest - Lead was chosen. Finish import at 15:17. Result: 3 contacts (Test Lead01 to 03, test01 to 03 at example.com, primary company example.com); the page first showed dashes and after a reload 5 contacts (with 2 sample contacts of HubSpot). Form: Forms, Create form, Start from blank. The editor says Saved with unpublished changes and has the text We'd love to hear from you!, the fields First Name, Last Name and Email and the button Submit; under the form: Create your own free forms to generate leads from your website. (HubSpot branding on the free form). Not published and not embedded. Limits of the free plan: Data integration shows Upgrade to Data Hub with a lock at Make sense of intent data; the account says Free, Up to 2 users; the plans table lists Up to 2 users, 2000 sent e-mails per calendar month with HubSpot branding, 100 active and 100 static segments, 1 blog with HubSpot branding, live chat with HubSpot branding, a maximum of 1 personal meeting link and 3 connected ad accounts. The left navigation has the buttons Upgrade to Starter and Prospecting Agent and Workflows with an upgrade icon. Plans up to the payment: Read by the tester on 18 Nov 2026 in the app and on the public plans page, in the euro view (Billed annually and Billed monthly). Free: 0 euro a month, No credit card required, Up to 2 users, 2000 sent e-mails per calendar month with HubSpot branding, 100 active and 100 static segments, 1 blog with HubSpot branding. Starter: Limited-time 65% off, 7 euro a month per seat when billed annually; Limited-time 50% off, 10 euro a month per seat when billed monthly; no list price is shown; Up to 10 users; 5,000 credits a month. Inside the app the offer card says Save up to 65% on Starter, GTM Seat (Starter), 1 seat - $7/mo. Professional: 90 euro a month per seat billed annually or 100 euro billed monthly, 10,000 credits a month. Enterprise: 175 euro a month per seat, 15,000 credits a month. The FAQ says that Professional or Enterprise plans are required to purchase onboarding and that Starter plans are not; the amount of the onboarding is not shown. Buy now on Starter opened Configure Your Plan (Buy Starter, GTM Seats 10 euro a month, 5,000 credits a month, Est. monthly billing 10 euro a month) and Continue to checkout, which asked for the company details that are used to calculate tax; the tax and the total only appear after those are filled in, which was not done, so they were not seen. The checkout was left through the address bar and nothing was bought. The public US dollar pricing pages hubspot.com/pricing and hubspot.com/pricing/crm were read again just before this delivery on the same day: Starter $7 a month per seat against a struck through $20 a month per seat with 500 HubSpot Credits and 1,000 marketing contacts, Professional starts at $800 a month paid annually or $890 a month billed monthly with 3 Core Seats and a required one-time onboarding of $3,000, Enterprise starts at $3,600 a month with a required onboarding of $7,000, and Free is $0 for up to 2 users. The dossier prices are therefore UNCHANGED on the public page. Deviations: (1) the euro per-seat view inside the app and on the plans page that the tester saw shows Professional at 90 or 100 euro per seat and Enterprise at 175 euro per seat and no list price for Starter, while the dossier and the public dollar page show $800 or $890 for 3 seats, $3,600 and a $20 list price for Starter; the two views differ in currency and in how the seats are counted, so they are not comparable one to one. (2) The onboarding amount ($3,000) is not shown in the app view, only the rule that Professional and Enterprise must buy it. (3) Starter credits are 5,000 a month in the app against 500 in the dossier and on the public dollar page. (4) The dossier says the Free plan holds 1,000 marketing contacts; the plans page of the app mentions Up to 2 users and an e-mail limit of 2000 a month, and no contact limit was seen. Cancelling: Account and Billing, Delete account, Delete Your HubSpot Account: the hub and all content associated with it will be deleted, and the note says that this will not automatically delete the associated user profiles. The red button Delete account was not clicked. There is no paid plan to downgrade; the free plan stays. Not tested: connecting a mailbox or calendar and the e-mail history on a contact, publishing or embedding the form, inviting a second user, a Starter trial or payment, the tax amount in the checkout, the onboarding amount of Professional, workflows and sequences. Clean up: the account stays; the language of Daan is now English (not set back); the test data stays (contacts Test Lead01 to 03, the deal Test Deal Acme, an empty draft form, the import name, the pipeline and the sample contacts and deal of HubSpot); no mailbox, calendar or integration was connected; our tab was closed, an older wizard tab of Daan was outside our tab group and could not be closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The interface starts in the language of the browser or region and the switch to English takes about 3 minutes, with some parts jumping back to Dutch. The setup wizard switches five tools on by default and its closing sentence says that it added Gmail and Google Calendar although nothing was connected. The import forces a legal basis choice. The free form and the free e-mails carry HubSpot branding, and Data Hub, Prospecting Agent and Workflows are locked. The app shows per-seat prices in euro without a Starter list price and without the onboarding amount, while the public dollar page shows a list price of $20 and an onboarding of $3,000.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Connecting a mailbox or calendar and the e-mail history on a contact.",
+      "Publishing or embedding the form, and inviting a second user.",
+      "A Starter trial or payment, and the tax amount and the total in the checkout.",
+      "The onboarding amount of Professional, workflows and sequences.",
+      "Deleting the account; the button was not clicked.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 15:12 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "hubspot:cancellation_terms",

@@ -88,10 +88,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -99,7 +98,538 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/shippo-review.html",
+  "method": [
+   "The test used an account Daan made, and our AI assistant ran it in Daan's browser; the free Starter plan and rates for one test parcel; nothing was bought",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "I don't have a store",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The start screen offered Connect my store and I don't have a store; the second choice went on to Buy your first label without a store connection.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "The start screen against the dossier audience of small shops; no store was connected.",
+    "status": "confirmed",
+    "buying_consequence": "You can try Shippo without connecting a shop.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Compare carrier rates and purchase your first label in minutes",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Check rates asked only for the zip codes 80202 and 78701 and a package of 10 x 8 x 4 in and 1 lb. The first rate overview came after about 3 minutes and 12 steps; the units were cm and kg by default and had to be changed. No address, name or card was asked.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "Our own timing for the first rate overview against a dossier that gives no set-up time.",
+    "status": "not_comparable",
+    "buying_consequence": "A first price comparison takes a few minutes and needs no personal details, but part of the time goes to the unit pickers.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "UPS Ground $7.42, 2 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "For one parcel the list showed UPS Ground $7.42 (2 days) and UPS Ground Saver $7.42 (3 days), USPS Ground Advantage $7.43 (5 days), USPS Priority Mail $11.50, UPS 3 Day Select $12.70, UPS 2nd Day Air $12.75, UPS Next Day Air Saver $43.60, USPS Priority Mail Express $47.39 and UPS Next Day Air $51.22. UPS Ground and USPS Ground Advantage are 1 cent apart.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "The rate list for one test parcel against the dossier suspicion of overpaying; no own current rate was available to compare.",
+    "status": "not_testable",
+    "buying_consequence": "The rates are a clear list, but whether they are lower than your own rate could not be judged with a test parcel.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Shippo: Your account is restricted from using this carrier.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Only USPS and UPS rates appeared. The carrier messages said that the account is restricted from using this carrier, and no FedEx or DHL Express rate was shown, while the dossier promises USPS, UPS, FedEx and DHL Express rates on Starter.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "The rate list and the carrier message of the app against the dossier list of carriers on the free plan.",
+    "status": "contradicted",
+    "buying_consequence": "You may not get FedEx or DHL Express rates on a new free account, so check which carriers you really get before you count on them.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Shippo Total Protection Insurance",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Buy label summary for the cheapest rate listed UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66, already switched on (Auto on) with a Remove link, so the total was higher than the rate that was picked.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "The Buy label summary of the app; the dossier does not describe a default insurance.",
+    "status": "confirmed",
+    "buying_consequence": "An insurance of $1.66 is added by default to the label cost, so remove it if you do not want it.",
+    "buyer_direction": "unfavourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Starter plan - Free - 30 labels/month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Settings shows the Starter plan as Free with 30 labels/month, and the buttons Start Pro free and Manage plan. The dossier names the same free plan with up to 30 labels a month.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "The Plan page of the app against the dossier plan row.",
+    "status": "confirmed",
+    "buying_consequence": "The free plan stops at 30 labels a month.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Try Pro free for 30 days",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Manage plan offers Pro free for 30 days with a slider at 200 labels/month and Up to 5 users at $19 / Month, and Premier as Contact Us. The dossier lists $19 a month for the first band of 200 labels. The other bands were not clicked through.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "The Manage plan screen against the dossier first band; no other band and no yearly price was opened.",
+    "status": "confirmed",
+    "buying_consequence": "Pro starts at $19 a month for 200 labels after a free month; the higher bands were not checked.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Add payment method",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "A card was not asked when viewing rates or when opening Buy label. Start Pro free opened a dialog Add payment method (card or Google Pay) at once; it was cancelled and nothing was entered.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "The order of the screens in our own test; paying at Buy label itself was not tested.",
+    "status": "confirmed",
+    "buying_consequence": "You can compare rates without a card, but starting the Pro trial asks for one up front.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Free for 30 days, then billed based on your selected plan.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The trial text says Free for 30 days, then billed based on your selected plan, with Cancel anytime. The trial was not started, so the first bill and the cancel step were not seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "The text of the Manage plan screen against a test that started no trial.",
+    "status": "not_testable",
+    "buying_consequence": "What happens after the 30 days could not be seen, because the trial was not started.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "When you close your account, you lose access to your historical shipping data and settings.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Plan page has a red Close account link with this warning. It was not clicked, and there was no paid plan to cancel.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "The warning on the Plan page against a test that closed and paid nothing.",
+    "status": "not_testable",
+    "buying_consequence": "The way out of the free account is a close step that deletes your shipping history.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Total $9.08",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Buy label summary read UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66, Total $9.08, which is the rate plus the insurance. No tax line was seen, no payment method was asked and the button Buy label was not used.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+    },
+    "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+    "comparability": "The Summary of the Buy label screen against the rate list; no tax line, fee or stored cost rule could be compared.",
+    "status": "confirmed",
+    "buying_consequence": "The label you picked costs the rate plus a $1.66 insurance that is on by default, so $9.08 in total before any tax.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session compared carrier rates for one test parcel in Shippo on the free Starter plan. After I don't have a store and Buy your first label, only two zip codes and a package were needed, and the first rate overview came after about 3 minutes and 12 steps (the units were cm and kg by default). UPS Ground and UPS Ground Saver were $7.42 and USPS Ground Advantage $7.43, up to $81.22 for UPS Next Day Air Early. No FedEx or DHL Express rate appeared: the app said that the account is restricted from using this carrier, while the dossier promises USPS, UPS, FedEx and DHL Express on Starter. The Buy label summary added Shippo Total Protection Insurance of $1.66, switched on automatically, to the $7.42 for a total of $9.08. A card was asked only at Start Pro free. The prices are unchanged against the dossier (Starter free with 30 labels, Pro $19 a month for 200 labels). Nothing was bought and the account was not closed. Account and start: the account was created by Daan and was signed in in his Chrome (the interface is in English); our AI assistant ran the test from 15:22 (Amsterdam). The dossier name is Shippo and the review is on OSM (osm/shippo-review.html). The audiences from the dossier: small online shops that ship a few parcels a month and suspect they overpay on postage, growing shops with 200 to 1,000 labels a month, and European stores that ship with DPD or PostNL (the dossier names Sendcloud as the alternative). Start: apps.goshippo.com/get-started asked What would you like to do first? with Connect my store and I don't have a store. I don't have a store was chosen, then Buy your first label (Compare carrier rates and purchase your first label in minutes). No store was connected. Core action: the screen Check rates asks only for zip codes (U.S. only): Ship from 80202, Ship to 78701, package Box 10 x 8 x 4 in, weight 1 lb. The units were cm and kg by default and had to be changed to in and lb. Time to the first rate overview: about 3 minutes and 12 steps, partly lost on the unit pickers. No address, name or card was needed. Rates (Shippo rates, Starter): UPS Ground $7.42, 2 days (Best and Cheapest); UPS Ground Saver $7.42, 3 days; USPS Ground Advantage $7.43, 5 days; USPS Priority Mail $11.50, 2 days; UPS 3 Day Select $12.70; UPS 2nd Day Air $12.75; UPS 2nd Day Air A.M. $19.49; UPS Next Day Air Saver $43.60 (Fastest); USPS Priority Mail Express $47.39; UPS Next Day Air $51.22; UPS Next Day Air Early $81.22. UPS Ground and USPS Ground Advantage are one cent apart. Carrier messages: Shippo: Your account is restricted from using this carrier. (no FedEx or DHL Express rates) and UPS: RatedShipmentAlert: Modifier is applied on Package(s);. Buy label: a click on the cheapest rate opens Buy label with a Sender and Recipient form (name, phone and e-mail of the sender, street and so on are required) and a Summary of UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66 (Auto on, with Remove), Total $9.08. The button Buy label was not used and nothing was filled in. A comparison with our own current rate was not possible with a test parcel, so whether you overpay was not tested. Payment method: not asked when viewing rates and not when opening Buy label. It was asked at once at Start Pro free on Settings, Account, Plan: a dialog Add payment method (card or Google Pay), which was not filled in and was cancelled. Paying at Buy label itself was not tested. Plans: Settings, Account, Plan on 18 Nov 2026 in US dollars: Starter plan, Free, 30 labels/month, with the buttons Start Pro free and Manage plan. Manage plan: Try Pro free for 30 days, Free for 30 days, then billed based on your selected plan, Cancel anytime; slider 200 labels/month, Up to 5 users, $19 / Month (a switch for Month or Year); Premier is Contact Us. The other label bands and the yearly prices were not clicked through (the dossier lists $19 for 1-200 labels, $29, $54, $79, $139 and $199 by volume, monthly billing, and $205 a year for the first band). The Buy label screen for the cheapest rate showed Summary: UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66 (Auto on, with a Remove link), Total $9.08; no tax line was seen; the button Buy label was not used and nothing was filled in. The public page goshippo.com/pricing was read again just before this delivery on the same day: Starter Free with up to 30 labels per month, 1 user login and the best USPS, UPS, FedEx and DHL Express discounts; Pro 1-200 labels per month at $19/mo on the Monthly view and $17/mo with the Annual view (10% savings, $205 a year), up to 5 user logins and your own carrier account free; Premier Contact us; $0.08 per label beyond 10,000 labels a month. The prices are therefore UNCHANGED against the dossier. Deviation: the public page and the dossier promise discounted USPS, UPS, FedEx and DHL Express rates on Starter, but in the test only USPS and UPS rates were shown; the app said Shippo: Your account is restricted from using this carrier. and no FedEx or DHL Express rate appeared. A second message was UPS: RatedShipmentAlert: Modifier is applied on Package(s);. Cancelling: Settings, Account, Plan has a red link Close account with the text When you close your account, you lose access to your historical shipping data and settings. It was not clicked. Cancelling Pro is under Manage plan (Cancel anytime) and was not tested, because there is no Pro. Not tested: buying or printing a label, the test API, connecting a store, FedEx and DHL Express rates (blocked for this account), the yearly price and tax, higher bands, Premier, the cancel flow of Pro and international rates. Clean up: nothing was created or bought, no payment method was added, the account stays on Starter and the tab was closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The units start on cm and kg and cost steps. FedEx and DHL Express rates did not appear for this account, although the dossier promises them on Starter. The Buy label summary has an insurance of $1.66 already switched on, so the total is higher than the rate you picked unless you press Remove. A card is not asked when you look at rates, but the Pro trial asks for one at once. Closing the account loses your historical shipping data and settings.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Buying or printing a label, and the test API.",
+    "Connecting a store, and international rates.",
+    "FedEx and DHL Express rates, which were blocked for this account.",
+    "The yearly price, the tax, the higher label bands and Premier.",
+    "Cancelling Pro, because there is no Pro; closing the account was not clicked.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 15:22 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/shippo-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/shippo-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/shippo-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session compared carrier rates for one test parcel in Shippo on the free Starter plan. After I don't have a store and Buy your first label, only two zip codes and a package were needed, and the first rate overview came after about 3 minutes and 12 steps (the units were cm and kg by default). UPS Ground and UPS Ground Saver were $7.42 and USPS Ground Advantage $7.43, up to $81.22 for UPS Next Day Air Early. No FedEx or DHL Express rate appeared: the app said that the account is restricted from using this carrier, while the dossier promises USPS, UPS, FedEx and DHL Express on Starter. The Buy label summary added Shippo Total Protection Insurance of $1.66, switched on automatically, to the $7.42 for a total of $9.08. A card was asked only at Start Pro free. The prices are unchanged against the dossier (Starter free with 30 labels, Pro $19 a month for 200 labels). Nothing was bought and the account was not closed. Account and start: the account was created by Daan and was signed in in his Chrome (the interface is in English); our AI assistant ran the test from 15:22 (Amsterdam). The dossier name is Shippo and the review is on OSM (osm/shippo-review.html). The audiences from the dossier: small online shops that ship a few parcels a month and suspect they overpay on postage, growing shops with 200 to 1,000 labels a month, and European stores that ship with DPD or PostNL (the dossier names Sendcloud as the alternative). Start: apps.goshippo.com/get-started asked What would you like to do first? with Connect my store and I don't have a store. I don't have a store was chosen, then Buy your first label (Compare carrier rates and purchase your first label in minutes). No store was connected. Core action: the screen Check rates asks only for zip codes (U.S. only): Ship from 80202, Ship to 78701, package Box 10 x 8 x 4 in, weight 1 lb. The units were cm and kg by default and had to be changed to in and lb. Time to the first rate overview: about 3 minutes and 12 steps, partly lost on the unit pickers. No address, name or card was needed. Rates (Shippo rates, Starter): UPS Ground $7.42, 2 days (Best and Cheapest); UPS Ground Saver $7.42, 3 days; USPS Ground Advantage $7.43, 5 days; USPS Priority Mail $11.50, 2 days; UPS 3 Day Select $12.70; UPS 2nd Day Air $12.75; UPS 2nd Day Air A.M. $19.49; UPS Next Day Air Saver $43.60 (Fastest); USPS Priority Mail Express $47.39; UPS Next Day Air $51.22; UPS Next Day Air Early $81.22. UPS Ground and USPS Ground Advantage are one cent apart. Carrier messages: Shippo: Your account is restricted from using this carrier. (no FedEx or DHL Express rates) and UPS: RatedShipmentAlert: Modifier is applied on Package(s);. Buy label: a click on the cheapest rate opens Buy label with a Sender and Recipient form (name, phone and e-mail of the sender, street and so on are required) and a Summary of UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66 (Auto on, with Remove), Total $9.08. The button Buy label was not used and nothing was filled in. A comparison with our own current rate was not possible with a test parcel, so whether you overpay was not tested. Payment method: not asked when viewing rates and not when opening Buy label. It was asked at once at Start Pro free on Settings, Account, Plan: a dialog Add payment method (card or Google Pay), which was not filled in and was cancelled. Paying at Buy label itself was not tested. Plans: Settings, Account, Plan on 18 Nov 2026 in US dollars: Starter plan, Free, 30 labels/month, with the buttons Start Pro free and Manage plan. Manage plan: Try Pro free for 30 days, Free for 30 days, then billed based on your selected plan, Cancel anytime; slider 200 labels/month, Up to 5 users, $19 / Month (a switch for Month or Year); Premier is Contact Us. The other label bands and the yearly prices were not clicked through (the dossier lists $19 for 1-200 labels, $29, $54, $79, $139 and $199 by volume, monthly billing, and $205 a year for the first band). The Buy label screen for the cheapest rate showed Summary: UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66 (Auto on, with a Remove link), Total $9.08; no tax line was seen; the button Buy label was not used and nothing was filled in. The public page goshippo.com/pricing was read again just before this delivery on the same day: Starter Free with up to 30 labels per month, 1 user login and the best USPS, UPS, FedEx and DHL Express discounts; Pro 1-200 labels per month at $19/mo on the Monthly view and $17/mo with the Annual view (10% savings, $205 a year), up to 5 user logins and your own carrier account free; Premier Contact us; $0.08 per label beyond 10,000 labels a month. The prices are therefore UNCHANGED against the dossier. Deviation: the public page and the dossier promise discounted USPS, UPS, FedEx and DHL Express rates on Starter, but in the test only USPS and UPS rates were shown; the app said Shippo: Your account is restricted from using this carrier. and no FedEx or DHL Express rate appeared. A second message was UPS: RatedShipmentAlert: Modifier is applied on Package(s);. Cancelling: Settings, Account, Plan has a red link Close account with the text When you close your account, you lose access to your historical shipping data and settings. It was not clicked. Cancelling Pro is under Manage plan (Cancel anytime) and was not tested, because there is no Pro. Not tested: buying or printing a label, the test API, connecting a store, FedEx and DHL Express rates (blocked for this account), the yearly price and tax, higher bands, Premier, the cancel flow of Pro and international rates. Clean up: nothing was created or bought, no payment method was added, the account stays on Starter and the tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/shippo-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session compared carrier rates for one test parcel in Shippo on the free Starter plan. After I don't have a store and Buy your first label, only two zip codes and a package were needed, and the first rate overview came after about 3 minutes and 12 steps (the units were cm and kg by default). UPS Ground and UPS Ground Saver were $7.42 and USPS Ground Advantage $7.43, up to $81.22 for UPS Next Day Air Early. No FedEx or DHL Express rate appeared: the app said that the account is restricted from using this carrier, while the dossier promises USPS, UPS, FedEx and DHL Express on Starter. The Buy label summary added Shippo Total Protection Insurance of $1.66, switched on automatically, to the $7.42 for a total of $9.08. A card was asked only at Start Pro free. The prices are unchanged against the dossier (Starter free with 30 labels, Pro $19 a month for 200 labels). Nothing was bought and the account was not closed. Account and start: the account was created by Daan and was signed in in his Chrome (the interface is in English); our AI assistant ran the test from 15:22 (Amsterdam). The dossier name is Shippo and the review is on OSM (osm/shippo-review.html). The audiences from the dossier: small online shops that ship a few parcels a month and suspect they overpay on postage, growing shops with 200 to 1,000 labels a month, and European stores that ship with DPD or PostNL (the dossier names Sendcloud as the alternative). Start: apps.goshippo.com/get-started asked What would you like to do first? with Connect my store and I don't have a store. I don't have a store was chosen, then Buy your first label (Compare carrier rates and purchase your first label in minutes). No store was connected. Core action: the screen Check rates asks only for zip codes (U.S. only): Ship from 80202, Ship to 78701, package Box 10 x 8 x 4 in, weight 1 lb. The units were cm and kg by default and had to be changed to in and lb. Time to the first rate overview: about 3 minutes and 12 steps, partly lost on the unit pickers. No address, name or card was needed. Rates (Shippo rates, Starter): UPS Ground $7.42, 2 days (Best and Cheapest); UPS Ground Saver $7.42, 3 days; USPS Ground Advantage $7.43, 5 days; USPS Priority Mail $11.50, 2 days; UPS 3 Day Select $12.70; UPS 2nd Day Air $12.75; UPS 2nd Day Air A.M. $19.49; UPS Next Day Air Saver $43.60 (Fastest); USPS Priority Mail Express $47.39; UPS Next Day Air $51.22; UPS Next Day Air Early $81.22. UPS Ground and USPS Ground Advantage are one cent apart. Carrier messages: Shippo: Your account is restricted from using this carrier. (no FedEx or DHL Express rates) and UPS: RatedShipmentAlert: Modifier is applied on Package(s);. Buy label: a click on the cheapest rate opens Buy label with a Sender and Recipient form (name, phone and e-mail of the sender, street and so on are required) and a Summary of UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66 (Auto on, with Remove), Total $9.08. The button Buy label was not used and nothing was filled in. A comparison with our own current rate was not possible with a test parcel, so whether you overpay was not tested. Payment method: not asked when viewing rates and not when opening Buy label. It was asked at once at Start Pro free on Settings, Account, Plan: a dialog Add payment method (card or Google Pay), which was not filled in and was cancelled. Paying at Buy label itself was not tested. Plans: Settings, Account, Plan on 18 Nov 2026 in US dollars: Starter plan, Free, 30 labels/month, with the buttons Start Pro free and Manage plan. Manage plan: Try Pro free for 30 days, Free for 30 days, then billed based on your selected plan, Cancel anytime; slider 200 labels/month, Up to 5 users, $19 / Month (a switch for Month or Year); Premier is Contact Us. The other label bands and the yearly prices were not clicked through (the dossier lists $19 for 1-200 labels, $29, $54, $79, $139 and $199 by volume, monthly billing, and $205 a year for the first band). The Buy label screen for the cheapest rate showed Summary: UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66 (Auto on, with a Remove link), Total $9.08; no tax line was seen; the button Buy label was not used and nothing was filled in. The public page goshippo.com/pricing was read again just before this delivery on the same day: Starter Free with up to 30 labels per month, 1 user login and the best USPS, UPS, FedEx and DHL Express discounts; Pro 1-200 labels per month at $19/mo on the Monthly view and $17/mo with the Annual view (10% savings, $205 a year), up to 5 user logins and your own carrier account free; Premier Contact us; $0.08 per label beyond 10,000 labels a month. The prices are therefore UNCHANGED against the dossier. Deviation: the public page and the dossier promise discounted USPS, UPS, FedEx and DHL Express rates on Starter, but in the test only USPS and UPS rates were shown; the app said Shippo: Your account is restricted from using this carrier. and no FedEx or DHL Express rate appeared. A second message was UPS: RatedShipmentAlert: Modifier is applied on Package(s);. Cancelling: Settings, Account, Plan has a red link Close account with the text When you close your account, you lose access to your historical shipping data and settings. It was not clicked. Cancelling Pro is under Manage plan (Cancel anytime) and was not tested, because there is no Pro. Not tested: buying or printing a label, the test API, connecting a store, FedEx and DHL Express rates (blocked for this account), the yearly price and tax, higher bands, Premier, the cancel flow of Pro and international rates. Clean up: nothing was created or bought, no payment method was added, the account stays on Starter and the tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/shippo-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://officesoftwaremarketplace.com/shippo-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Shippo",
+    "product_id": "shippo",
+    "run_date": "2026-11-18",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session compared carrier rates for one test parcel in Shippo on the free Starter plan. After I don't have a store and Buy your first label, only two zip codes and a package were needed, and the first rate overview came after about 3 minutes and 12 steps (the units were cm and kg by default). UPS Ground and UPS Ground Saver were $7.42 and USPS Ground Advantage $7.43, up to $81.22 for UPS Next Day Air Early. No FedEx or DHL Express rate appeared: the app said that the account is restricted from using this carrier, while the dossier promises USPS, UPS, FedEx and DHL Express on Starter. The Buy label summary added Shippo Total Protection Insurance of $1.66, switched on automatically, to the $7.42 for a total of $9.08. A card was asked only at Start Pro free. The prices are unchanged against the dossier (Starter free with 30 labels, Pro $19 a month for 200 labels). Nothing was bought and the account was not closed.",
+    "findings": [
+     "Text we checked: \"I don't have a store\". What we saw: The start screen offered Connect my store and I don't have a store; the second choice went on to Buy your first label without a store connection.",
+     "Text we checked: \"Shippo: Your account is restricted from using this carrier\". What we saw: Only USPS and UPS rates appeared. The carrier messages said that the account is restricted from using this carrier, and no FedEx or DHL Express rate was shown, while the dossier promises USPS, UPS, FedEx and DHL Express rates on Starter.",
+     "Text we checked: \"Shippo Total Protection Insurance\". What we saw: The Buy label summary for the cheapest rate listed UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66, already switched on (Auto on) with a Remove link, so the total was higher than the rate that was picked.",
+     "Text we checked: \"Starter plan - Free - 30 labels/month\". What we saw: Settings shows the Starter plan as Free with 30 labels/month, and the buttons Start Pro free and Manage plan. The dossier names the same free plan with up to 30 labels a month.",
+     "Text we checked: \"Try Pro free for 30 days\". What we saw: Manage plan offers Pro free for 30 days with a slider at 200 labels/month and Up to 5 users at $19 / Month, and Premier as Contact Us. The dossier lists $19 a month for the first band of 200 labels. The other bands were not clicked through."
+    ],
+    "not_tested": [
+     "Buying or printing a label, and the test API.",
+     "Connecting a store, and international rates.",
+     "FedEx and DHL Express rates, which were blocked for this account.",
+     "The yearly price, the tax, the higher label bands and Premier.",
+     "Cancelling Pro, because there is no Pro; closing the account was not clicked.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "I don't have a store",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The start screen offered Connect my store and I don't have a store; the second choice went on to Buy your first label without a store connection.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "The start screen against the dossier audience of small shops; no store was connected.",
+      "status": "confirmed",
+      "buying_consequence": "You can try Shippo without connecting a shop.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Compare carrier rates and purchase your first label in minutes",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Check rates asked only for the zip codes 80202 and 78701 and a package of 10 x 8 x 4 in and 1 lb. The first rate overview came after about 3 minutes and 12 steps; the units were cm and kg by default and had to be changed. No address, name or card was asked.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "Our own timing for the first rate overview against a dossier that gives no set-up time.",
+      "status": "not_comparable",
+      "buying_consequence": "A first price comparison takes a few minutes and needs no personal details, but part of the time goes to the unit pickers.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "UPS Ground $7.42, 2 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "For one parcel the list showed UPS Ground $7.42 (2 days) and UPS Ground Saver $7.42 (3 days), USPS Ground Advantage $7.43 (5 days), USPS Priority Mail $11.50, UPS 3 Day Select $12.70, UPS 2nd Day Air $12.75, UPS Next Day Air Saver $43.60, USPS Priority Mail Express $47.39 and UPS Next Day Air $51.22. UPS Ground and USPS Ground Advantage are 1 cent apart.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "The rate list for one test parcel against the dossier suspicion of overpaying; no own current rate was available to compare.",
+      "status": "not_testable",
+      "buying_consequence": "The rates are a clear list, but whether they are lower than your own rate could not be judged with a test parcel.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Shippo: Your account is restricted from using this carrier.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Only USPS and UPS rates appeared. The carrier messages said that the account is restricted from using this carrier, and no FedEx or DHL Express rate was shown, while the dossier promises USPS, UPS, FedEx and DHL Express rates on Starter.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "The rate list and the carrier message of the app against the dossier list of carriers on the free plan.",
+      "status": "contradicted",
+      "buying_consequence": "You may not get FedEx or DHL Express rates on a new free account, so check which carriers you really get before you count on them.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Shippo Total Protection Insurance",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Buy label summary for the cheapest rate listed UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66, already switched on (Auto on) with a Remove link, so the total was higher than the rate that was picked.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "The Buy label summary of the app; the dossier does not describe a default insurance.",
+      "status": "confirmed",
+      "buying_consequence": "An insurance of $1.66 is added by default to the label cost, so remove it if you do not want it.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Starter plan - Free - 30 labels/month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Settings shows the Starter plan as Free with 30 labels/month, and the buttons Start Pro free and Manage plan. The dossier names the same free plan with up to 30 labels a month.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "The Plan page of the app against the dossier plan row.",
+      "status": "confirmed",
+      "buying_consequence": "The free plan stops at 30 labels a month.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Try Pro free for 30 days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Manage plan offers Pro free for 30 days with a slider at 200 labels/month and Up to 5 users at $19 / Month, and Premier as Contact Us. The dossier lists $19 a month for the first band of 200 labels. The other bands were not clicked through.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "The Manage plan screen against the dossier first band; no other band and no yearly price was opened.",
+      "status": "confirmed",
+      "buying_consequence": "Pro starts at $19 a month for 200 labels after a free month; the higher bands were not checked.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Add payment method",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "A card was not asked when viewing rates or when opening Buy label. Start Pro free opened a dialog Add payment method (card or Google Pay) at once; it was cancelled and nothing was entered.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "The order of the screens in our own test; paying at Buy label itself was not tested.",
+      "status": "confirmed",
+      "buying_consequence": "You can compare rates without a card, but starting the Pro trial asks for one up front.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Free for 30 days, then billed based on your selected plan.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The trial text says Free for 30 days, then billed based on your selected plan, with Cancel anytime. The trial was not started, so the first bill and the cancel step were not seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "The text of the Manage plan screen against a test that started no trial.",
+      "status": "not_testable",
+      "buying_consequence": "What happens after the 30 days could not be seen, because the trial was not started.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "When you close your account, you lose access to your historical shipping data and settings.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Plan page has a red Close account link with this warning. It was not clicked, and there was no paid plan to cancel.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "The warning on the Plan page against a test that closed and paid nothing.",
+      "status": "not_testable",
+      "buying_consequence": "The way out of the free account is a close step that deletes your shipping history.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Total $9.08",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Buy label summary read UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66, Total $9.08, which is the rate plus the insurance. No tax line was seen, no payment method was asked and the button Buy label was not used.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/shippo-review.html#claim-vs-measured"
+      },
+      "plan": "Free Starter account; rates for one test parcel, the Buy label summary and the plans were read up to the Add payment method dialog, nothing was bought",
+      "comparability": "The Summary of the Buy label screen against the rate list; no tax line, fee or stored cost rule could be compared.",
+      "status": "confirmed",
+      "buying_consequence": "The label you picked costs the rate plus a $1.66 insurance that is on by default, so $9.08 in total before any tax.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session compared carrier rates for one test parcel in Shippo on the free Starter plan. After I don't have a store and Buy your first label, only two zip codes and a package were needed, and the first rate overview came after about 3 minutes and 12 steps (the units were cm and kg by default). UPS Ground and UPS Ground Saver were $7.42 and USPS Ground Advantage $7.43, up to $81.22 for UPS Next Day Air Early. No FedEx or DHL Express rate appeared: the app said that the account is restricted from using this carrier, while the dossier promises USPS, UPS, FedEx and DHL Express on Starter. The Buy label summary added Shippo Total Protection Insurance of $1.66, switched on automatically, to the $7.42 for a total of $9.08. A card was asked only at Start Pro free. The prices are unchanged against the dossier (Starter free with 30 labels, Pro $19 a month for 200 labels). Nothing was bought and the account was not closed. Account and start: the account was created by Daan and was signed in in his Chrome (the interface is in English); our AI assistant ran the test from 15:22 (Amsterdam). The dossier name is Shippo and the review is on OSM (osm/shippo-review.html). The audiences from the dossier: small online shops that ship a few parcels a month and suspect they overpay on postage, growing shops with 200 to 1,000 labels a month, and European stores that ship with DPD or PostNL (the dossier names Sendcloud as the alternative). Start: apps.goshippo.com/get-started asked What would you like to do first? with Connect my store and I don't have a store. I don't have a store was chosen, then Buy your first label (Compare carrier rates and purchase your first label in minutes). No store was connected. Core action: the screen Check rates asks only for zip codes (U.S. only): Ship from 80202, Ship to 78701, package Box 10 x 8 x 4 in, weight 1 lb. The units were cm and kg by default and had to be changed to in and lb. Time to the first rate overview: about 3 minutes and 12 steps, partly lost on the unit pickers. No address, name or card was needed. Rates (Shippo rates, Starter): UPS Ground $7.42, 2 days (Best and Cheapest); UPS Ground Saver $7.42, 3 days; USPS Ground Advantage $7.43, 5 days; USPS Priority Mail $11.50, 2 days; UPS 3 Day Select $12.70; UPS 2nd Day Air $12.75; UPS 2nd Day Air A.M. $19.49; UPS Next Day Air Saver $43.60 (Fastest); USPS Priority Mail Express $47.39; UPS Next Day Air $51.22; UPS Next Day Air Early $81.22. UPS Ground and USPS Ground Advantage are one cent apart. Carrier messages: Shippo: Your account is restricted from using this carrier. (no FedEx or DHL Express rates) and UPS: RatedShipmentAlert: Modifier is applied on Package(s);. Buy label: a click on the cheapest rate opens Buy label with a Sender and Recipient form (name, phone and e-mail of the sender, street and so on are required) and a Summary of UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66 (Auto on, with Remove), Total $9.08. The button Buy label was not used and nothing was filled in. A comparison with our own current rate was not possible with a test parcel, so whether you overpay was not tested. Payment method: not asked when viewing rates and not when opening Buy label. It was asked at once at Start Pro free on Settings, Account, Plan: a dialog Add payment method (card or Google Pay), which was not filled in and was cancelled. Paying at Buy label itself was not tested. Plans: Settings, Account, Plan on 18 Nov 2026 in US dollars: Starter plan, Free, 30 labels/month, with the buttons Start Pro free and Manage plan. Manage plan: Try Pro free for 30 days, Free for 30 days, then billed based on your selected plan, Cancel anytime; slider 200 labels/month, Up to 5 users, $19 / Month (a switch for Month or Year); Premier is Contact Us. The other label bands and the yearly prices were not clicked through (the dossier lists $19 for 1-200 labels, $29, $54, $79, $139 and $199 by volume, monthly billing, and $205 a year for the first band). The Buy label screen for the cheapest rate showed Summary: UPS Ground $7.42 plus Shippo Total Protection Insurance $1.66 (Auto on, with a Remove link), Total $9.08; no tax line was seen; the button Buy label was not used and nothing was filled in. The public page goshippo.com/pricing was read again just before this delivery on the same day: Starter Free with up to 30 labels per month, 1 user login and the best USPS, UPS, FedEx and DHL Express discounts; Pro 1-200 labels per month at $19/mo on the Monthly view and $17/mo with the Annual view (10% savings, $205 a year), up to 5 user logins and your own carrier account free; Premier Contact us; $0.08 per label beyond 10,000 labels a month. The prices are therefore UNCHANGED against the dossier. Deviation: the public page and the dossier promise discounted USPS, UPS, FedEx and DHL Express rates on Starter, but in the test only USPS and UPS rates were shown; the app said Shippo: Your account is restricted from using this carrier. and no FedEx or DHL Express rate appeared. A second message was UPS: RatedShipmentAlert: Modifier is applied on Package(s);. Cancelling: Settings, Account, Plan has a red link Close account with the text When you close your account, you lose access to your historical shipping data and settings. It was not clicked. Cancelling Pro is under Manage plan (Cancel anytime) and was not tested, because there is no Pro. Not tested: buying or printing a label, the test API, connecting a store, FedEx and DHL Express rates (blocked for this account), the yearly price and tax, higher bands, Premier, the cancel flow of Pro and international rates. Clean up: nothing was created or bought, no payment method was added, the account stays on Starter and the tab was closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The units start on cm and kg and cost steps. FedEx and DHL Express rates did not appear for this account, although the dossier promises them on Starter. The Buy label summary has an insurance of $1.66 already switched on, so the total is higher than the rate you picked unless you press Remove. A card is not asked when you look at rates, but the Pro trial asks for one at once. Closing the account loses your historical shipping data and settings.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Buying or printing a label, and the test API.",
+      "Connecting a store, and international rates.",
+      "FedEx and DHL Express rates, which were blocked for this account.",
+      "The yearly price, the tax, the higher label bands and Premier.",
+      "Cancelling Pro, because there is no Pro; closing the account was not clicked.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 15:22 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "shippo:cancellation_terms",

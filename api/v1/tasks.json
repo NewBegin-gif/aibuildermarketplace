@@ -8764,6 +8764,132 @@
   },
   {
    "source": "session",
+   "product_name": "LocalTry",
+   "product_id": "localtry",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested LocalTry in the 3-day trial that Daan started with his card, which runs on Operator at $99 a month. A customer and a draft estimate worked, a job needed three attempts, and the AI assistant could not finish a simple draft. The in-app cancel button failed three times with a server error; cancelling worked in the Stripe portal, where the merchant has another name.",
+   "findings": [
+    "Text we checked: \"OPERATOR $99 / month, 3 days free. $0 charged today. 5 users and 15 workspaces\". What we saw: The pricing page shows Operator at $99 a month with 5 users and 15 workspaces and a 3-day trial, the same as the dossier; the Stripe portal later showed US$ 99.00 per month.",
+    "Text we checked: \"$999 setup FREE for the next 7 days: customization, integrations, and data transfer\". What we saw: The same offer for the next 7 days was still shown on 19 November, nine days after the dossier reading.",
+    "Text we checked: \"Cancel before your trial ends to prevent the monthly membership from starting. Your remaining trial access stays available\". What we saw: The in-app Cancel trial button failed three times with HTTP 500 and the status stayed Free trial; cancelling worked only in the Stripe portal."
+   ],
+   "not_tested": [
+    "Review requests and texts to customers.",
+    "E-mail campaigns and social posts.",
+    "The Stripe, Twilio and Google connections, a domain and MCP.",
+    "Sending the estimate or an invoice.",
+    "Deleting the account.",
+    "The Core and Scale plans (not shown on the page we read).",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "OPERATOR $99 / month, 3 days free. $0 charged today. 5 users and 15 workspaces",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The pricing page shows Operator at $99 a month with 5 users and 15 workspaces and a 3-day trial, the same as the dossier; the Stripe portal later showed US$ 99.00 per month.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/localtry-review.html#claim-vs-measured"
+     },
+     "plan": "LocalTry Operator, 3-day trial, US$ 99.00 a month after the trial",
+     "comparability": "The public pricing page and the Stripe portal against the dossier.",
+     "status": "confirmed",
+     "buying_consequence": "Operator costs $99 a month after the 3-day trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "$999 setup FREE for the next 7 days: customization, integrations, and data transfer.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The same offer for the next 7 days was still shown on 19 November, nine days after the dossier reading.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/localtry-review.html#claim-vs-measured"
+     },
+     "plan": "LocalTry Operator, 3-day trial, US$ 99.00 a month after the trial",
+     "comparability": "The public pricing page on two dates.",
+     "status": "confirmed",
+     "buying_consequence": "Treat the free setup offer as a standing offer and ask what setup costs.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Cancel before your trial ends to prevent the monthly membership from starting. Your remaining trial access stays available.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The in-app Cancel trial button failed three times with HTTP 500 and the status stayed Free trial; cancelling worked only in the Stripe portal.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/localtry-review.html#claim-vs-measured"
+     },
+     "plan": "LocalTry Operator, 3-day trial, US$ 99.00 a month after the trial",
+     "comparability": "The billing page text against three failed attempts on one account.",
+     "status": "contradicted",
+     "buying_consequence": "Do not rely on the in-app button; cancel in the Stripe portal and keep the confirmation.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Membership billed through Stripe",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Billing names Stripe; the Stripe portal names the merchant Market Nest - VL and shows a US$ 0.00 trial invoice. The trial checkout was done by Daan before the session and was not seen, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/localtry-review.html#claim-vs-measured"
+     },
+     "plan": "LocalTry Operator, 3-day trial, US$ 99.00 a month after the trial",
+     "comparability": "The billing page and Stripe portal against the dossier; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Expect a charge from Market Nest - VL, not LocalTry.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested LocalTry in the 3-day trial that Daan started with his card, which runs on Operator at $99 a month. A customer and a draft estimate worked, a job needed three attempts, and the AI assistant could not finish a simple draft. The in-app cancel button failed three times with a server error; cancelling worked in the Stripe portal, where the merchant has another name. Account and start: Daan created the account and started the 3-day trial with his own card; the trial runs on LocalTry Operator. No phone number was asked. Our AI assistant ran the test in Daan's browser on 19 November 2026 from 15:08. The interface was in English, but dates in the app were in Dutch, so images with such a date are not in the evidence. The workspace asked for a business type (Service business) and offered six connections, of which 2 of 6 were done; the other four were skipped with Enter workspace. Pages loaded slowly, 5 to 15 seconds of Loading workspace each. Core action, a customer, a job, a draft estimate and the AI assistant, from 15:09 to 15:25, about 16 minutes: a test customer with an example address was saved in about 5 seconds. Creating a job failed twice: Create job stayed grey and no job appeared; the third attempt made Boiler check visit (test), scheduled, not linked to the customer. On the way, which messages the customer, was not clicked. A draft estimate with one custom item of 1 x $120 was created (EST-2026-A5642E created, status draft, $120.00); it was not e-mailed, signed or turned into an invoice. Command, the AI assistant, got a request to draft a follow-up message without sending anything. It first replied that it would draft it, then after about 70 seconds: I could not finish that command. The hosted Command model could not finish this turn. No draft came back. The reviews page was empty and was not used. Settings lists many connections (texting, social, WordPress, Shopify, Stripe, QuickBooks and more); none was touched. Plans: Settings, Membership & billing shows LocalTry Operator, Membership billed through Stripe, Status Free trial, a trial end on 22 November 2026 at 15:01 CET, and Cancel before your trial ends to prevent the monthly membership from starting. Your remaining trial access stays available. No amount is shown there. The public pricing page shows OPERATOR $99 / month, 3 days free. $0 charged today. 5 users and 15 workspaces, the $999 setup FREE for the next 7 days, and an invitation code route that needs no card; Core ($59) and Scale ($199) were not in the text we read. Checkout: the trial checkout was done by Daan before the session and was not seen. Cancelling, done the same day: in the app, Membership & billing, Cancel trial opens a dialog that says the trial will end without starting the monthly membership and that the workspace is not deleted; no reason, no offer, no password. But the final Cancel trial did not work: three attempts, the dialog stayed open, the request returned HTTP 500 and the status stayed Free trial. The working route was Invoices & payment method, which opens the Stripe customer portal of the merchant Market Nest - VL, not LocalTry: Cancel subscription, an optional reason, Cancel subscription again. The portal then marked the plan to be cancelled on 22 Nov, with the service ending after the trial on 22 November 2026; the invoice history shows only a US$ 0.00 trial invoice, and the plan is US$ 99.00 per month. Not tested: review requests or texts, e-mail campaigns, social posts, the Stripe, Twilio and Google connections, a domain, MCP, deleting the account and sending an invoice. Clean up: the test customer, the job and the draft estimate stay. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Pages took 5 to 15 seconds to load, creating a job failed twice, and the AI assistant failed on a simple draft. The in-app cancel button failed, and the Stripe portal shows the merchant as Market Nest - VL, which a buyer may not recognise on a statement.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "The in-app Cancel trial button failed three times with a server error. Cancelling worked in the Stripe customer portal behind Invoices & payment method, where the merchant is called Market Nest - VL; keep the confirmation."
+    },
+    "not_tested": [
+     "Review requests and texts to customers.",
+     "E-mail campaigns and social posts.",
+     "The Stripe, Twilio and Google connections, a domain and MCP.",
+     "Sending the estimate or an invoice.",
+     "Deleting the account.",
+     "The Core and Scale plans (not shown on the page we read).",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 15:08 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "AML Watcher",
    "product_id": "aml-watcher",
    "run_date": "18 November 2026",
@@ -10666,6 +10792,149 @@
      "Tax on the checkout, which showed no amount before an address was entered.",
      "Export of a file into a kit, and reimport.",
      "Session and source-reading date: 18 November 2026. Times are CET. The session started at about 13:54 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Teachable",
+   "product_id": "teachable",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Teachable in the Builder trial that Daan started with his card. The AI outline built a course with lessons in about 25 seconds, but you cannot set a price until Teachable Payments with identity checks is set up. The plan page now shows an Advanced plan and imported student limits that the dossier does not list. Cancelling ended the trial at once and dropped the school to Free.",
+   "findings": [
+    "Text we checked: \"Advanced $309/mo ($3,708)\". What we saw: The plan page lists a fourth self-serve plan, Advanced at $309 a month billed annually, where the dossier names a Custom plan through sales.",
+    "Text we checked: \"Setup Teachable Payments to start selling\". What we saw: Add Pricing Plan stays greyed out until Teachable Payments with Stripe is set up, so no price or checkout could be tried.",
+    "Text we checked: \"Your Teachable subscription expired on Nov 19, 2026\". What we saw: Cancelling in the trial ended it the same day and moved the school to Free with publishing paused, instead of keeping the trial until 26 November."
+   ],
+   "not_tested": [
+    "Setting a price, a checkout preview and a test purchase (needs Teachable Payments).",
+    "Payments and payouts.",
+    "Publishing and enrolling students.",
+    "A digital download or coaching product.",
+    "The subtitle and translation generator.",
+    "The monthly prices on the plan page.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Advanced $309/mo ($3,708)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The plan page lists a fourth self-serve plan, Advanced at $309 a month billed annually, where the dossier names a Custom plan through sales.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/teachable-review.html#claim-vs-measured"
+     },
+     "plan": "Builder plan, trial until 26 November, $89 a month after the trial",
+     "comparability": "The plan page in the app against the dossier plan list.",
+     "status": "out_of_date",
+     "buying_consequence": "There is now a published top plan instead of a sales-only one.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "5 imported students",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The plan page sets imported student limits per plan, 5 on Starter, 50 on Builder, 1000 on Growth and 2000 on Advanced, while the dossier says 100 students added outside checkout are free per school.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/teachable-review.html#claim-vs-measured"
+     },
+     "plan": "Builder plan, trial until 26 November, $89 a month after the trial",
+     "comparability": "A plan limit against a free allowance in the usage policy; they may measure different things.",
+     "status": "not_comparable",
+     "buying_consequence": "Check the imported student limit of your plan before you move a list.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Setup Teachable Payments to start selling.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Add Pricing Plan stays greyed out until Teachable Payments with Stripe is set up, so no price or checkout could be tried.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/teachable-review.html#claim-vs-measured"
+     },
+     "plan": "Builder plan, trial until 26 November, $89 a month after the trial",
+     "comparability": "The pricing step in the app; the dossier advises a test purchase first.",
+     "status": "confirmed",
+     "buying_consequence": "Plan time for the payments set-up and identity checks before your first sale.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your Teachable subscription expired on Nov 19, 2026",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Cancelling in the trial ended it the same day and moved the school to Free with publishing paused, instead of keeping the trial until 26 November.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/teachable-review.html#claim-vs-measured"
+     },
+     "plan": "Builder plan, trial until 26 November, $89 a month after the trial",
+     "comparability": "The billing banner after cancelling against the trial end shown before.",
+     "status": "confirmed",
+     "buying_consequence": "Cancel only when you are done testing: the trial stops at once.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Builder $89 /per month",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Billing shows Builder at $89 a month, the same as the dossier monthly Builder price. The trial checkout was done by Daan before the session and was not seen, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/teachable-review.html#claim-vs-measured"
+     },
+     "plan": "Builder plan, trial until 26 November, $89 a month after the trial",
+     "comparability": "The billing page against the dossier; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Expect $89 a month after the trial unless you cancel.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Teachable in the Builder trial that Daan started with his card. The AI outline built a course with lessons in about 25 seconds, but you cannot set a price until Teachable Payments with identity checks is set up. The plan page now shows an Advanced plan and imported student limits that the dossier does not list. Cancelling ended the trial at once and dropped the school to Free. Account and start: Daan created the account through a sign-up link for a Builder trial billed monthly, with his own card; no phone number was asked. Our AI assistant ran the test in Daan's browser on 19 November 2026; the onboarding survey was answered neutrally and the school was renamed to a neutral test name. The interface was in English. Core action, a course from the AI outline: at about 15:30 Generate your outline got a title, Test Course: E-invoicing Basics, and one sentence. Within about 10 seconds the setup screen showed 3 sections with draft lessons, and after about 25 seconds every lesson had text and images, with Your AI-generated content is ready! Don't forget to review your curriculum, lesson content, and sales page. A lesson held three paragraphs of AI text; adding an own section worked. A sales page was generated with a stock photo and Enroll in course; everything stayed unpublished. Setting a price was not possible: Pricing says Setup Teachable Payments to start selling and the Add Pricing Plan button is greyed out until Teachable Payments (Stripe, with identity checks) is set up, which was outside our limits. So no price, checkout preview or test purchase. Digital downloads and coaching were only opened. Plans: the plan page, annual by default (3 months free) with a 30-day money-back guarantee, shows Starter $29/mo ($348 billed annually) with a 7.5% transaction fee, 5 products and 5 imported students; Builder $69/mo ($828), 0% fee, 10 products, 50 imported students; Growth $139/mo ($1,668), 50 products, 1000 imported students; and Advanced $309/mo ($3,708), 100 products, 2000 imported students. Billing showed Builder $89 per month, TRIAL - ENDS 11/26, monthly, subscription start Nov 26, 2026, base rate $89.00, taxes $0.00, total $89.00, a saved card, and a $0.00 invoice for the free trial. Checkout: the trial checkout was done by Daan before the session and was not seen. Cancelling, done the same day: Settings, Billing, Manage Plan, Cancel plan. Step 1 asks the main reason (Reason Not Listed) and whether Teachable may contact you (No); step 2 offers Extend trial 7 days, declined; step 3, Confirm plan cancellation, says the Builder plan will end on a date that was left empty and warns You will lose admin access. No password. After Cancel plan (about 15:10 UTC) and a reload, the banner said Your Teachable subscription expired on Nov 19, 2026, the current plan was Free with publishing paused and a limit of 10 students, and the next payment was $0.00. The trial ended at once; the $89 charge on 26 November will not happen. Not tested: setting a price, a checkout preview, payments and payouts, publishing, students, a digital download or coaching product, and the subtitle generator. Clean up: the account, the test school and the unpublished course stay. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "No price can be set, not even as a draft, until Teachable Payments with Stripe identity checks is connected. The cancellation confirmation left the end date empty, and cancelling in the trial drops the school to Free at once.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling takes three steps with a reason, a 7-day trial extension offer and a confirmation whose end date was empty, but no password. It ends the trial at once and drops the school to Free, with publishing paused."
+    },
+    "not_tested": [
+     "Setting a price, a checkout preview and a test purchase (needs Teachable Payments).",
+     "Payments and payouts.",
+     "Publishing and enrolling students.",
+     "A digital download or coaching product.",
+     "The subtitle and translation generator.",
+     "The monthly prices on the plan page.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 15:30 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -12696,21 +12965,20 @@
    "product_id": "doba",
    "run_date": "2026-11-19",
    "session_type": "hands_on",
-   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Doba on a retailer account Daan created, with no plan and the free Doba Pilot credits. Without a plan the catalogue shows stock and processing time but hides every price, and Add to Inventory List opens a $0.99 trial that renews at US$170.99 a quarter after 7 days. The free Pilot, asked for yoga mats with supplier price, shipping and delivery time, returned three products with prices, shipping rates, stock and landed costs for 1 credit in under 2 minutes. Pilot could not put a product on the inventory list and said such a list does not exist, while the catalogue does have one behind the trial.",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Doba twice on a retailer account Daan created. Without a plan the catalogue hides every price, and the free Doba Pilot gave prices and shipping for three yoga mats for 1 credit. In the Basic trial for US$ 0.99 the prices, the processing time filter and the inventory list worked, and AI Pickr took about 8 seconds and 2 credits. The first charge of US$ 59.99 was set for 27 November, a day after the 7 trial days end. Cancelling took four screens with two retention offers, and the US$ 0.99 was not refunded.",
    "findings": [
     "Text we checked: \"only available to retailers with plans\". What we saw: Without a plan a search for yoga mat gave 144 results with stock and processing time, but every card and the product page said Subscribe to See Price, and inventory and warehouse were hidden too; the research filters were greyed.",
-    "Text we checked: \"Your credits are ready for product research and market insights\". What we saw: Doba Pilot on the free credits, with no card, answered a request for yoga mats with supplier price, shipping and delivery time in about 1 minute 45 seconds: three products from US$ 14.72 to US$ 33.67 with stock, UPS and USPS rates, 3 to 5 days delivery and landed costs.",
     "Text we checked: \"1 credit / message\". What we saw: Pilot showed 30 credits left before the questions and 28 after two questions.",
-    "Text we checked: \"Doba doesn't have a standalone inventory list or wishlist feature that I can write to\". What we saw: Pilot gave this answer when asked to add a mat to the inventory list. The catalogue does have an Add to Inventory List button; it opened the $0.99 trial window, and the pricing page lists an inventory list capacity of 20 to 600 per plan."
+    "Text we checked: \"Doba doesn't have a standalone inventory list or wishlist feature that I can write to\". What we saw: Pilot gave this answer when asked to add a mat to the inventory list. The catalogue does have an Add to Inventory List button; it opened the $0.99 trial window, and the pricing page lists an inventory list capacity of 20 to 600 per plan.",
+    "Text we checked: \"Next Billing Date: Nov 27, 2026 12:00:00 AM (PST)\". What we saw: In the Basic trial the service cycle ran from Nov 19 to Nov 26, 2026 7:39:04 AM (PST), and the next billing of US$ 59.99 was set for Nov 27, 2026, about a day after the 7 trial days end.",
+    "Text we checked: \"The US$ 0.99 trial fee is not refunded\". What we saw: Cancelling took four screens with a retention screen and a Free for 30 days (worth $90) coupon; the dialog said Refund: US$ 0, and the US$ 0.99 was kept, as the fees policy says for trial subscriptions."
    ],
    "not_tested": [
-    "Linking a store, pushing products and ordering.",
-    "Add to Inventory List; it opened the $0.99 trial window, which was closed.",
-    "One-click listing, product downloads and the AI Store Builder.",
-    "Market Scout and Pilot tasks for a store or listings.",
-    "The refund terms of the trial.",
-    "A card, tax and the final total; the trial window was closed with nothing filled in.",
-    "Cancelling a paid plan; no plan was bought.",
+    "Linking a store, listing to a store and ordering.",
+    "The AI Listing Optimizer and a store build with the AI Store Builder; both need a linked store.",
+    "The wallet and paid add-ons.",
+    "Product downloads; they are not included in the trial.",
+    "Pay Now, Change Payment Method and the invoice link.",
     "Export of a file into a kit, and reimport."
    ],
    "report": null,
@@ -12729,27 +12997,10 @@
       "label": "Our test observations",
       "url": "https://marketingandsalessoftware.com/doba-review.html#claim-vs-measured"
      },
-     "plan": "No plan plus the free Doba Pilot with 30 credits; the plans were read on the pricing page; the $0.99 trial window for Basic was seen and closed",
+     "plan": "Doba Basic, 7-day trial for US$ 0.99, then US$ 59.99 a month; cancelled the same day",
      "comparability": "The catalogue banner against a search and a product page without a plan.",
      "status": "confirmed",
      "buying_consequence": "Without a plan you cannot see supplier prices or stock levels in the catalogue.",
-     "buyer_direction": "neutral",
-     "claim_changed_on": null
-    },
-    {
-     "claim": "Your credits are ready for product research and market insights.",
-     "claim_source": "our test notes",
-     "claim_read_on": "2026-11-19",
-     "observed": "Doba Pilot on the free credits, with no card, answered a request for yoga mats with supplier price, shipping and delivery time in about 1 minute 45 seconds: three products from US$ 14.72 to US$ 33.67 with stock, UPS and USPS rates, 3 to 5 days delivery and landed costs.",
-     "observed_on": "2026-11-19",
-     "evidence": {
-      "label": "Our test observations",
-      "url": "https://marketingandsalessoftware.com/doba-review.html#claim-vs-measured"
-     },
-     "plan": "No plan plus the free Doba Pilot with 30 credits; the plans were read on the pricing page; the $0.99 trial window for Basic was seen and closed",
-     "comparability": "The Pilot banner against one product question on the free credits.",
-     "status": "confirmed",
-     "buying_consequence": "The free Pilot credits show the prices and shipping that the catalogue hides, so you can price a product before paying.",
      "buyer_direction": "neutral",
      "claim_changed_on": null
     },
@@ -12763,7 +13014,7 @@
       "label": "Our test observations",
       "url": "https://marketingandsalessoftware.com/doba-review.html#claim-vs-measured"
      },
-     "plan": "No plan plus the free Doba Pilot with 30 credits; the plans were read on the pricing page; the $0.99 trial window for Basic was seen and closed",
+     "plan": "Doba Basic, 7-day trial for US$ 0.99, then US$ 59.99 a month; cancelled the same day",
      "comparability": "The input field label against the credit counter before and after two questions.",
      "status": "confirmed",
      "buying_consequence": "The 30 free Pilot credits are 30 questions.",
@@ -12780,11 +13031,45 @@
       "label": "Our test observations",
       "url": "https://marketingandsalessoftware.com/doba-review.html#claim-vs-measured"
      },
-     "plan": "No plan plus the free Doba Pilot with 30 credits; the plans were read on the pricing page; the $0.99 trial window for Basic was seen and closed",
+     "plan": "Doba Basic, 7-day trial for US$ 0.99, then US$ 59.99 a month; cancelled the same day",
      "comparability": "The Pilot answer against the catalogue button and the plan list.",
      "status": "contradicted",
      "buying_consequence": "Pilot cannot fill the inventory list and wrongly says it does not exist; you need the trial or a plan for it.",
      "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Next Billing Date: Nov 27, 2026 12:00:00 AM (PST)",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "In the Basic trial the service cycle ran from Nov 19 to Nov 26, 2026 7:39:04 AM (PST), and the next billing of US$ 59.99 was set for Nov 27, 2026, about a day after the 7 trial days end.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/doba-review.html#claim-vs-measured"
+     },
+     "plan": "Doba Basic, 7-day trial for US$ 0.99, then US$ 59.99 a month; cancelled the same day",
+     "comparability": "The billing card in the trial against the fees policy on the end of the trial.",
+     "status": "confirmed",
+     "buying_consequence": "The full fee follows the trial automatically; cancel before 27 November to avoid it.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "The US$ 0.99 trial fee is not refunded.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Cancelling took four screens with a retention screen and a Free for 30 days (worth $90) coupon; the dialog said Refund: US$ 0, and the US$ 0.99 was kept, as the fees policy says for trial subscriptions.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/doba-review.html#claim-vs-measured"
+     },
+     "plan": "Doba Basic, 7-day trial for US$ 0.99, then US$ 59.99 a month; cancelled the same day",
+     "comparability": "The cancellation in the session against the refund lines in the dossier.",
+     "status": "confirmed",
+     "buying_consequence": "The trial fee is gone once paid, even if you cancel on day one.",
+     "buyer_direction": "neutral",
      "claim_changed_on": null
     },
     {
@@ -12797,10 +13082,10 @@
       "label": "Our test observations",
       "url": "https://marketingandsalessoftware.com/doba-review.html#claim-vs-measured"
      },
-     "plan": "No plan plus the free Doba Pilot with 30 credits; the plans were read on the pricing page; the $0.99 trial window for Basic was seen and closed",
+     "plan": "Doba Basic, 7-day trial for US$ 0.99, then US$ 59.99 a month; cancelled the same day",
      "comparability": "The pricing page against the trial window; no stored cost rule or tax line was compared.",
      "status": "confirmed",
-     "buying_consequence": "Basic starts at $0.99 for 7 days and then charges about $171 a quarter unless you cancel in time.",
+     "buying_consequence": "Basic starts at $0.99 for 7 days and then charges the full fee unless you cancel in time.",
      "buyer_direction": "neutral",
      "claim_changed_on": null
     }
@@ -12808,25 +13093,23 @@
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
     "run_date": "2026-11-19",
-    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Doba on a retailer account Daan created, with no plan and the free Doba Pilot credits. Without a plan the catalogue shows stock and processing time but hides every price, and Add to Inventory List opens a $0.99 trial that renews at US$170.99 a quarter after 7 days. The free Pilot, asked for yoga mats with supplier price, shipping and delivery time, returned three products with prices, shipping rates, stock and landed costs for 1 credit in under 2 minutes. Pilot could not put a product on the inventory list and said such a list does not exist, while the catalogue does have one behind the trial. Account and start: Daan created a retailer account with No Plan and the free Doba Pilot (30 credits, US$ 0, no automatic renewal); our AI assistant ran the test in Daan's browser, in its own tabs, on 19 November 2026 from about 09:45 to 09:59 CET. The interface was in English. The cookie banner was answered with Reject Sharing. The address /retailer/dashboard gave a 404 page, but the header showed the signed-in account and the catalogue opened normally. The dossier name is Doba and the review is on MSS (mss/doba-review.html). Core action, find a product with supplier price, shipping, delivery time and stock: in the web catalogue without a plan, a search for yoga mat gave 144 results with ** in Stock and 2 Business Day(s), but every price read Subscribe to See Price. The product page of Jute Premium Eco Yoga Mat (Sport Pulse) said Subscribe to See Price, Subscribe to See Inventory and Subscribe to See Warehouse, Shipping N/A to Netherlands (US shipping only) and Processing Time 2 business days estimated, 1.2 average. Add to Inventory List opened the window Start Your $0.99 Trial Now at once. Doba Pilot (ai.doba.com), without a card, showed 30 credits left at 1 credit per message. The first question at about 09:50, find yoga mats with supplier price, shipping cost and delivery time, was answered in about 1 minute 45 seconds for 1 credit, with the prices the catalogue hid: Printed PVC Yoga Mat US$ 14.72 (stock 600, total landed cost $40.72 at 3 lb), 2 Tone TPE Premium Yoga Mat US$ 29.46 (stock 475, landed $44.46, MAP $48.96) and Jute Premium Eco Yoga Mat US$ 33.67 (stock 126, landed $70.67), UPS from US$ 13.00 and USPS from US$ 4.00, delivery in 3 to 5 days, shipping not free, and the supplier figures Open 4.4 years, Fulfillment Rate 88.89% and Refund Rate 11.11%. The text named the supplier Maji Sports while the cards showed Sport Pulse. The result panel also showed Please reactivate your plan to access your remaining credits, yet the answer came through. The second question at about 09:55 asked Pilot to add the 2 Tone TPE mat to the inventory list without pushing it to a store. Pilot answered that Doba has no standalone inventory list it can write to and offered a bookmark or its own memory, although the catalogue does have Add to Inventory List behind the trial. The counter then read 28 credits left. Time: about 5 minutes from the start to a first list with supplier prices, shipping and stock through Pilot (09:45 to about 09:52); the web catalogue alone never showed a price. Plans: On doba.com/pricing, in USD, with Monthly, Quarterly (5% off) and Annually (15% off) tabs; with Quarterly selected the prices per month are: Limited $28.67 (Save $3.96), 1 store, 30 one-click listings, an inventory list of 20 and 100 AI Tool Hub credits, Subscribe Now with no trial; Basic $57.00 (Save $8.97), 2 stores, 250 listings, an inventory list of 600, 450 product downloads a month (not included in the trial), 30 auto-listings and 300 AI Tool Hub credits, with a 7-day Trial for US$ 0.99; Standard $142.67 (Save $21.96, Best Choice) with a 5-day Trial for US$ 0.99; Enterprise only monthly or annual. The fees page says that when the trial ends Doba charges the full subscription fee of the chosen plan. Prices, stock and warehouses in the catalogue, the research filters, Add to Inventory List, one-click listing, downloads and the store link all sit behind a paid plan or trial. Checkout: Add to Inventory List opened Start Your $0.99 Trial Now for Basic, billed quarterly, with a 7-day trial; payment by Paypal, Google Pay or card; Basic-Quarterly: Auto-renews at US$170.99/quarter after trial, Auto-renews via saved payment, Cancel anytime to stop future charges, and a box to agree to the Fees and Cancellation Policy. Nothing was filled in and the window was closed. Three months at $57.00 is $171.00, one cent more than the window. Cancelling: no paid plan was active and the Pilot is US$ 0 without renewal, so there was nothing to cancel. The cancel route of a paid plan was not seen; the trial window says Cancel anytime. Not tested: linking a store, pushing products, ordering, Add to Inventory List (behind the $0.99 trial), the refund terms, My Doba, the AI Store Builder, Market Scout and Pilot tasks for a store or listings. Clean up: the account and the Pilot chat stay, with 2 credits used and 28 left. The own tabs were closed and Daan's tab was not touched. No kit records were entered.",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Doba twice on a retailer account Daan created. Without a plan the catalogue hides every price, and the free Doba Pilot gave prices and shipping for three yoga mats for 1 credit. In the Basic trial for US$ 0.99 the prices, the processing time filter and the inventory list worked, and AI Pickr took about 8 seconds and 2 credits. The first charge of US$ 59.99 was set for 27 November, a day after the 7 trial days end. Cancelling took four screens with two retention offers, and the US$ 0.99 was not refunded. Account and start: Daan created a retailer account. In the morning of 19 November 2026, from about 09:45 to 09:59 CET, our AI assistant tested it in Daan's browser with No Plan and the free Doba Pilot (30 credits). In the afternoon Daan started the Basic trial himself, monthly, US$ 0.99 that day (7:39 AM PST, 16:39 CET), and our assistant tested it from about 16:46 to 16:52 CET in its own tabs. The interface was in English. Promotion popups came up on almost every page and were closed. The review is on MSS (mss/doba-review.html). Round 1, no plan: a search for yoga mat gave 144 results with stock and processing time, but every price read Subscribe to See Price, and Add to Inventory List opened Start Your $0.99 Trial Now. Doba Pilot, at 1 credit a message, answered a request for yoga mats with supplier price, shipping and delivery time in about 1 minute 45 seconds with three products from US$ 14.72 to US$ 33.67, stock, UPS and USPS rates and landed costs. Asked to add a mat to the inventory list, Pilot said Doba has no inventory list it can write to; the counter went from 30 to 28 credits. Round 4, Basic trial: the same search now showed prices (US$ 33.67, 29.46, 29.46, 14.72) with stock and 2 Business Day(s). The filter Max. Avg. Processing Time 2 business days gave 11 results for yoga mat. Add to Inventory List now worked: Add to inventory list successfully, and the Inventory List showed Jute Premium Eco Yoga Mat with 7 variants at US$ 33.67 and shipping US$ 13.69. AI Tool Hub had 300 credits; one AI Pickr run on Sports, Exercise took about 8 seconds and 2 credits (298 / 300 left), with mixed relevance (sunglasses among fitness products). The AI Listing Optimizer needs a product listed to a linked store, and the AI Store Builder starts by linking Shopify; neither was run. Stores: 0/2 stores, nothing linked. The Retailer API needs a Standard or Enterprise plan. Plans and billing: On doba.com/pricing, in USD, with Monthly, Quarterly (5% off) and Annually (15% off) tabs; with Quarterly selected the prices per month are: Limited $28.67, Basic $57.00 with a 7-day Trial for US$ 0.99, Standard $142.67 with a 5-day Trial for US$ 0.99, and Enterprise only monthly or annual. In the trial the plan card lists Storefront Integrations 0/2, Inventory List 0/600, Storefront Products Listings Count 0/250, AI Auto Lister 0/30 and AI Tool Hub Credits 0/300. Pricing Plan shows Basic Trial, Monthly, 7 trial days left, Next Billing Date: Nov 27, 2026 12:00:00 AM (PST) and Next Billing Amount: US$ 59.99; Billing Details show the service cycle from Nov 19 to Nov 26, 2026 7:39:04 AM (PST) and US$ 0.99. The first charge falls about a day after the 7 trial days end. Checkout: in round 1 the trial window was seen and closed with nothing filled in; in round 4 Daan started the trial himself and the checkout was not seen by our assistant. Cancelling, done the same day: Pricing Plan, Actions, Cancel Subscription. A retention screen with Let me think about it and a grey Continue Cancellation link; then a dialog with Cancel immediately (preselected) or Cancel at the end of the current billing cycle and Refund: US$ 0; then One Last Thing Before You Go... with an optional concerns field and a Free for 30 days (worth $90) coupon, declined with Still Leave; then Subscription cancelled successfully! No password and no support contact. The US$ 0.99 trial fee is not refunded. Not tested: linking a store, listing to a store, ordering, the wallet and paid add-ons, the AI Listing Optimizer and a store build, Pay Now, Change Payment Method and the invoice link, and product downloads, which are not included in the trial. Clean up: the account, the inventory list item and the used credits stay; the subscription is cancelled. No kit records were entered.",
     "first_import": null,
     "file_inspected": false,
     "reimport_tested": false,
-    "awkward": "Without a plan the catalogue hides every supplier price, so you cannot judge a product before paying unless you use the Pilot credits. Pilot said Doba has no inventory list it can write to, which contradicts the Add to Inventory List button in the catalogue. Pilot named the supplier Maji Sports while the cards show Sport Pulse. The $0.99 trial turns into US$170.99 a quarter after 7 days unless you cancel.",
+    "awkward": "Without a plan the catalogue hides every supplier price. Pilot said Doba has no inventory list it can write to, while the trial has one. The first charge falls a day after the 7 trial days end. Cancelling takes four screens with two retention offers, and the exit links are grey text.",
     "friction": {
      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
      "format": "No downloaded bytes examined.",
      "reimport": "No reimport performed.",
-     "cancellation": "No cancellation or downgrade performed."
+     "cancellation": "Cancelling takes four screens with two retention offers: a retention screen and a Free for 30 days (worth $90) coupon. The real exit links are grey text, Continue Cancellation and Still Leave. No password and no support contact. The US$ 0.99 trial fee is not refunded."
     },
     "not_tested": [
-     "Linking a store, pushing products and ordering.",
-     "Add to Inventory List; it opened the $0.99 trial window, which was closed.",
-     "One-click listing, product downloads and the AI Store Builder.",
-     "Market Scout and Pilot tasks for a store or listings.",
-     "The refund terms of the trial.",
-     "A card, tax and the final total; the trial window was closed with nothing filled in.",
-     "Cancelling a paid plan; no plan was bought.",
+     "Linking a store, listing to a store and ordering.",
+     "The AI Listing Optimizer and a store build with the AI Store Builder; both need a linked store.",
+     "The wallet and paid add-ons.",
+     "Product downloads; they are not included in the trial.",
+     "Pay Now, Change Payment Method and the invoice link.",
      "Export of a file into a kit, and reimport.",
      "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 09:45 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
@@ -15214,6 +15497,131 @@
      "Support, invitations, cancellation and passive follow-up.",
      "Downloaded product exports and native-ID roundtrip.",
      "Full original signup screen count."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Kopage",
+   "product_id": "kopage",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Kopage Studio in the 7-day trial that Daan started through Paddle. The AI generator made an English plumbing site in about 20 seconds, but the editor menus stay in the browser language. The Paddle receipt shows EUR 59.29 after the trial, which is the 49 EUR Solo price plus 21 percent VAT. Cancelling took one click on Paddle, but the link sits in the receipt, not in the Kopage account.",
+   "findings": [
+    "Text we checked: \"Kopage Studio is a white-label website builder for agencies and professional. Each new website you create is white-label by default\". What we saw: The White Label page says this and lists custom branding, interface colours and system domain; the dossier says every plan is white-label.",
+    "Text we checked: \"Your subscription has been canceled\". What we saw: One click on the Paddle page cancelled the trial, without a reason form, offer or password; the page is reached only through the receipt link."
+   ],
+   "not_tested": [
+    "Publishing a site, the free subdomain and a client domain.",
+    "Inviting a client and custom admin branding.",
+    "The shop, blog, members area and newsletter.",
+    "The template route.",
+    "AI token use: no counter was shown.",
+    "Whether the trial stays usable after cancelling.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Kopage Studio is a white-label website builder for agencies and professional. Each new website you create is white-label by default.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The White Label page says this and lists custom branding, interface colours and system domain; the dossier says every plan is white-label.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/kopage-review/#claim-vs-measured"
+     },
+     "plan": "Kopage Studio, 7-day trial, EUR 59.29 including VAT after the trial",
+     "comparability": "The White Label page against the dossier plan text; publishing on a client domain was not tested.",
+     "status": "confirmed",
+     "buying_consequence": "Sites are white-label from the start.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "We won't charge you in the free trial. Once it ends, your subscription will renew at EUR 59.29 unless you cancel, by 25 Nov 2026.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The receipt shows a trial from 19 to 25 November, which matches the 7 days in the dossier, and EUR 59.29 after it. That is 49 EUR plus 21 percent Dutch VAT, while the dossier gives 49 EUR without tax.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/kopage-review/#claim-vs-measured"
+     },
+     "plan": "Kopage Studio, 7-day trial, EUR 59.29 including VAT after the trial",
+     "comparability": "A receipt amount with VAT against a list price without VAT.",
+     "status": "not_comparable",
+     "buying_consequence": "A Dutch buyer pays EUR 59.29 a month on Solo, VAT included.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your subscription has been canceled",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "One click on the Paddle page cancelled the trial, without a reason form, offer or password; the page is reached only through the receipt link.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/kopage-review/#claim-vs-measured"
+     },
+     "plan": "Kopage Studio, 7-day trial, EUR 59.29 including VAT after the trial",
+     "comparability": "The cancellation route in the session; the dossier names Paddle as merchant but no route.",
+     "status": "confirmed",
+     "buying_consequence": "Keep the Paddle receipt: it holds the only cancel link.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "2026/11/19 - Kopage Studio",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The Kopage billing page lists only this line; the Paddle receipt behind it shows EUR 0.00 today. The trial checkout itself was done by Daan before the session and was not seen, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://aibuildermarketplace.com/b2b/kopage-review/#claim-vs-measured"
+     },
+     "plan": "Kopage Studio, 7-day trial, EUR 59.29 including VAT after the trial",
+     "comparability": "The receipt against the dossier; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Nothing is charged during the 7-day trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Kopage Studio in the 7-day trial that Daan started through Paddle. The AI generator made an English plumbing site in about 20 seconds, but the editor menus stay in the browser language. The Paddle receipt shows EUR 59.29 after the trial, which is the 49 EUR Solo price plus 21 percent VAT. Cancelling took one click on Paddle, but the link sits in the receipt, not in the Kopage account. Account and start: Daan created the account and started the 7-day Kopage Studio trial through Paddle with his own card. Our AI assistant ran the test in Daan's browser, in its own tab, on 19 November 2026 from 15:01 to 15:06. The account pages were in English; the website editor follows the browser language and showed its menus in Dutch even with an English language parameter, and it has no language setting, so no editor menus are in the evidence. Core action, a website from the AI generator: Create a new website, Generate with AI, one sentence. The first attempt, a plumbing company in Rotterdam, gave a Dutch site with some English headings left in. The second, an English-language site for a plumbing company in Boston, was ready in about 20 seconds in 3 steps: Reliant Plumbing, Reliable Plumbing Solutions, Get a Free Estimate, sections on services, 500+ Happy Clients, a testimonial and a FAQ. Both sites stay as Draft; nothing was published. The headline was edited inline to Plumbing You Can Trust and saved with the tick. The block library and modules (forms, map, shop, blog, newsletter, translations, members area) were only looked at. The logo setting is a file plus a style editor, not a logo maker. No AI token counter was visible. White label: Kopage Studio is a white-label website builder for agencies and professional. Each new website you create is white-label by default. Client domains connect through CNAME records, hosting is in Europe or Texas, and clients log in by adding /admin to the site address. No separate client screen or invite flow was found. Plans and trial: Billing & invoices has one line, 2026/11/19 - Kopage Studio, linking to the Paddle receipt: Payment method: Free, trial 19 Nov 2026 - 25 Nov 2026, EUR 0.00, VAT (0%) EUR 0.00, and We won't charge you in the free trial. Once it ends, your subscription will renew at EUR 59.29 unless you cancel, by 25 Nov 2026. The receipt does not name the tier; EUR 59.29 equals 49 EUR plus 21 percent Dutch VAT, so it fits the Solo plan of 49 EUR. Checkout: the Paddle trial checkout was done by Daan before the session and was not seen; only the receipt was read. Cancelling, done the same day: there is no cancel button in the Kopage account. The route is Billing, the invoice line, the Paddle receipt, the link review your subscription, and Paddle's page Manage your subscription for Kopage Studio, with Update card details and Cancel subscription. One click on Cancel subscription showed Your subscription has been canceled. No reason form, no retention offer and no password. Done on 19 November 2026 at about 14:20 UTC. Whether the trial stays usable until 25 November was not checked. Not tested: publishing, a domain, inviting a client, custom admin branding, the shop, blog, members area and newsletter, and the template route. Clean up: the account and two draft sites stay; nothing was published. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The editor menus follow the browser language and cannot be switched to English. A prompt about a Dutch city gave a Dutch site. There is no cancel button in the Kopage account; the cancel link is in the Paddle receipt.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling takes one click on Paddle's page with no reason, offer or password, but the way there is hidden: there is no cancel button in the Kopage account, only a link in the Paddle receipt behind the invoice line."
+    },
+    "not_tested": [
+     "Publishing a site, the free subdomain and a client domain.",
+     "Inviting a client and custom admin branding.",
+     "The shop, blog, members area and newsletter.",
+     "The template route.",
+     "AI token use: no counter was shown.",
+     "Whether the trial stays usable after cancelling.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 15:01 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],
@@ -35010,6 +35418,132 @@
   },
   {
    "source": "session",
+   "product_name": "Navan",
+   "product_id": "navan",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Navan on a free Business account that Daan created without a card. A business flight search took about 3 minutes and marked fares above the policy cap as out of policy. The account pricing page confirms the dossier: no cost for travel for companies of up to 300 employees, on a monthly term. No card was asked and nothing was booked.",
+   "findings": [
+    "Text we checked: \"Navan Business, For companies up to 300 employees, Free\". What we saw: The public pricing page and the account Pricing page both say travel costs nothing for companies with 300 or fewer employees, as the dossier says.",
+    "Text we checked: \"Free for the first 5 users\". What we saw: The public page lists expense features as free for the first 5 users, the same threshold as the dossier; the expense module was not visible in this account.",
+    "Text we checked: \"€654 and up is out of policy\". What we saw: The search marked fares from €654 as out of policy and flagged Club Plus at €450 because the cabin cap is Economy; a filter shows only in-policy fares."
+   ],
+   "not_tested": [
+    "Booking or holding a flight.",
+    "Changing the travel policy (the edit page stayed blank).",
+    "Hotels, trains and cars.",
+    "The expense module and the Navan card.",
+    "Inviting the team, a legal entity and a payment method.",
+    "Ending the account: no cancel or delete button was found.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Navan Business, For companies up to 300 employees, Free",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The public pricing page and the account Pricing page both say travel costs nothing for companies with 300 or fewer employees, as the dossier says.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+     },
+     "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+     "comparability": "The pricing pages against the dossier plan text.",
+     "status": "confirmed",
+     "buying_consequence": "Travel booking is free for companies of up to 300 employees.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Free for the first 5 users",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The public page lists expense features as free for the first 5 users, the same threshold as the dossier; the expense module was not visible in this account.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+     },
+     "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+     "comparability": "The public pricing page against the dossier; the expense module itself was not tested.",
+     "status": "confirmed",
+     "buying_consequence": "Expenses are free for 5 users; more cost extra.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "€654 and up is out of policy",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The search marked fares from €654 as out of policy and flagged Club Plus at €450 because the cabin cap is Economy; a filter shows only in-policy fares.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+     },
+     "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+     "comparability": "One search on a fresh account with the default policy.",
+     "status": "confirmed",
+     "buying_consequence": "Travellers see the policy limits while they search.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Plan: Unlimited trips every month with $0 trip fees. There's no cost to use Navan Travel.",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The account Pricing page says this, on a monthly term from Nov 19, 2026. There is no checkout for the free plan and no card was asked, so no checkout amount could be compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+     },
+     "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+     "comparability": "The in-app pricing page against the dossier; no checkout exists for this plan.",
+     "status": "not_testable",
+     "buying_consequence": "No card is needed to start using travel booking.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Navan on a free Business account that Daan created without a card. A business flight search took about 3 minutes and marked fares above the policy cap as out of policy. The account pricing page confirms the dossier: no cost for travel for companies of up to 300 employees, on a monthly term. No card was asked and nothing was booked. Account and start: a first attempt at 12:48 found no account yet and recorded the sign-up screens: an e-mail to verify, a choice of solution, and Create your company account with name, company, location, annual travel budget in USD, role and a password, with no card field, no phone field and no call wall. Daan then created the account without a card. Our AI assistant ran the second session in Daan's browser, in its own tab, on 19 November 2026 from about 14:35 to 14:54. The traveller side was in English (UK); the admin side was switched from Dutch to English (United States) before the screenshots. Core action, a business flight search with the policy check, nothing booked: Business travel, Flights, Amsterdam to London return, Thursday 10 to Friday 11 December, 1 traveller. After Search a window suggested the train (Choosing train travel over air); we chose Continue with flights. Results came after about 8 seconds: 305 of 441 results with the 1 stop max filter, Nonstop only (17) from €160, and a line €654 and up is out of policy. The cheapest was British Airways BA 431, nonstop 1h 20m, Basic €160, Plus €180, Club Plus €450 with an out-of-policy icon; a filter shows In-policy fares only (187). The first results took about 3 minutes and 6 steps. Book was not clicked. The travel policy assigned by the admin: Maximum price for this search is €654, cabin max Economy, refundable and non-changeable fares allowed, cabin upgrades not allowed, and Your manager or travel approver will review, and may cancel, out-of-policy bookings. The policy edit page stayed blank after two reloads, so the policy was only read, not changed. An onboarding guide lists a 4-step plan (legal entity, team, travel policy, payment method) and $500 in Navan Rewards for 3+ employees, 3+ trips and $1,000+ spend within 30 days. Plans: Admin, Settings, Pricing says Plan: Unlimited trips every month with $0 trip fees. There's no cost to use Navan Travel., Monthly, renews on the 1st of every month, effective Nov 19, 2026, available only to companies with 300 or fewer employees and only on a monthly term. The public pricing page shows Navan Business, For companies up to 300 employees, Free, with expense features Free for the first 5 users, and Navan Enterprise behind Let's talk. Checkout: there is no checkout for the free plan. No card was asked at any point; Settings, Payments and the payment method step were not opened, and the expense module and the Navan card were not visible in this account. Cancelling: not done. Admin, Settings, Overview has no button to cancel or delete the account; the term is monthly and renews on the 1st, and how to end it was not established. Not tested: changing the policy (page stayed blank), hotels, the expense module, the card, a legal entity, inviting the team, a payment method and booking. Clean up: the account and the search stay; nothing was booked. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The policy edit page stayed blank in our session. The admin side opened in Dutch and had to be switched to English. There is no button to cancel or delete the account in the admin settings.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "No cancellation or downgrade performed."
+    },
+    "not_tested": [
+     "Booking or holding a flight.",
+     "Changing the travel policy (the edit page stayed blank).",
+     "Hotels, trains and cars.",
+     "The expense module and the Navan card.",
+     "Inviting the team, a legal entity and a payment method.",
+     "Ending the account: no cancel or delete button was found.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 14:35 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Toggl",
    "product_id": "toggl",
    "run_date": "2026-10-28",
@@ -48172,6 +48706,130 @@
   },
   {
    "source": "session",
+   "product_name": "Quo",
+   "product_id": "quo",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Quo in the 7-day trial that Daan started with his card. The trial ran on Business Annual at $276.00 a year, not on a monthly plan. The inbox, a contact and the Sona call flow were set up, but no real call or text was made. Cancelling took one reason dialog with no offer, and the trial stays active until Nov 26.",
+   "findings": [
+    "Text we checked: \"Credit usage is unlimited during your 7-day trial period\". What we saw: Billing shows Credits remaining 1,000 / 1,000 with overages disabled at $1 per call; the dossier says every plan includes 1,000 automation credits a month.",
+    "Text we checked: \"Your subscription was canceled. Your Business Annual plan expires on Nov 26\". What we saw: One reason dialog and Cancel subscription ended the trial, without an offer or password; the trial stays active until Nov 26.",
+    "Text we checked: \"Billed on Nov 26, 2026\". What we saw: Next payment shows $276.00 USD for one Business Plan at $276.00 a year, which matches the dossier price of $276 a year for Business billed annually."
+   ],
+   "not_tested": [
+    "Real calls and texts, and call quality.",
+    "A shared inbox with teammates.",
+    "The Test Sona voice test: the button hung.",
+    "Transcripts and summaries of a real call.",
+    "US carrier registration, adding funds, overages and changing plan.",
+    "Export of a file into a kit, and reimport."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Credit usage is unlimited during your 7-day trial period",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Billing shows Credits remaining 1,000 / 1,000 with overages disabled at $1 per call; the dossier says every plan includes 1,000 automation credits a month.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+     },
+     "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+     "comparability": "The billing page against the dossier credit text; no real call used credits.",
+     "status": "confirmed",
+     "buying_consequence": "The trial does not show how fast credits run out.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Your subscription was canceled. Your Business Annual plan expires on Nov 26",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "One reason dialog and Cancel subscription ended the trial, without an offer or password; the trial stays active until Nov 26.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+     },
+     "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+     "comparability": "The cancellation in the session; the dossier names no cancel route.",
+     "status": "confirmed",
+     "buying_consequence": "You can cancel on day one and still use the full trial.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Billed on Nov 26, 2026",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "Next payment shows $276.00 USD for one Business Plan at $276.00 a year, which matches the dossier price of $276 a year for Business billed annually.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+     },
+     "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+     "comparability": "The billing page against the dossier price list.",
+     "status": "confirmed",
+     "buying_consequence": "Without cancelling, the first charge is a full year.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Business Annual trial",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "The trial Daan started ran on Business Annual. The trial checkout itself was done by Daan before the session and was not seen, so no checkout amount was compared.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+     },
+     "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+     "comparability": "The billing page against the dossier; the checkout screen was not observed in this session.",
+     "status": "not_testable",
+     "buying_consequence": "Nothing is charged during the 7-day trial.",
+     "buyer_direction": "neutral",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-19",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Quo in the 7-day trial that Daan started with his card. The trial ran on Business Annual at $276.00 a year, not on a monthly plan. The inbox, a contact and the Sona call flow were set up, but no real call or text was made. Cancelling took one reason dialog with no offer, and the trial stays active until Nov 26. Account and start: Daan created the account and started the 7-day trial with his own card; the trial runs on Business Annual. Our AI assistant ran the test in Daan's browser on 19 November 2026; the interface was in English. Core action, the inbox and a contact: the Primary inbox has the tabs Chats, Calls and Tasks and the filters Open, Unread and Unresponded, and showed Inbox cleared. You're all caught up. No real call or text was made. A test contact saved at once, with the fields Company, Role, Phone, Email, Access (Everyone) and Notes. Members shows No one in your workspace and Invite your team; inviting was off limits, so a shared team inbox was not tested. Sona, the AI that picks up calls: the Sona call flow was Live: Incoming call, Ring users All at once, for a total of 30s, If call is missed, Sona, Fallback, Voicemail. The Sona panel has a greeting with the workspace name, Knowledge Shared with Sona 1 of 1, the job Message taking and Caller history on. Personality: language English, Voice 1 (Default), tone Formal, Neutral or Casual. The Test Sona button hung on a loading dot and was not pursued. Recording: on the Primary number, Auto-record calls is on, Call recording notification is off and Transcribe and summarize calls is on. Integrations list CRM apps (HubSpot, Pipedrive, Zoho CRM, Salesforce, Attio, Clio, HighLevel, Jobber, JobTread, Housecall Pro, monday CRM, Gong), Slack, Zapier and Make; none was connected. Plans and trial: Plan and billing shows Business Annual trial, 7 days left, You won't be charged until your trial ends on Nov 26. Plan charges $276.00: 1 x Business Plan at $276.00 a year and 1 x 1,000 Automation Credits at $0.00. Next payment: Billed on Nov 26, 2026, $276.00 USD. Credit usage is unlimited during your 7-day trial period; Credits remaining 1,000 / 1,000, resets Dec 19, 2026; overages are disabled and would cost $1 per call. Three invoices of Nov 19, 2026 are Paid at $0. Checkout: the trial checkout was done by Daan before the session and was not seen. Cancelling, done the same day: Settings, Plan and billing, Danger zone, End your free trial. The text says the trial stays fully active until the end of the 7-day free period, and that all numbers are retained for 30 days before removal. End free trial opens the dialog We're sorry to see you go with six reasons and an optional feedback field; we picked Other and typed Just testing, then clicked Cancel subscription. No retention offer, no password and no support contact. After a reload the page said Your subscription was canceled. Your Business Annual plan expires on Nov 26, with a Reactivate subscription button. There is no screenshot of that page because it shows the payment method. Not tested: real calls and texts, teammates in a shared inbox, the Test Sona voice test, transcripts of a real call, US carrier registration, adding funds, overages and changing plan. Clean up: the test contact stays; the trial is cancelled and ends on Nov 26. No kit records were entered.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The trial Daan started ran on Business Annual, a yearly charge of $276.00, so check which plan the trial picks. The Test Sona button hung on a loading dot.",
+    "friction": {
+     "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+     "format": "No downloaded bytes examined.",
+     "reimport": "No reimport performed.",
+     "cancellation": "Cancelling is short: End free trial in the Danger zone, one reason dialog, then Cancel subscription, with no offer and no password. The trial stays active until Nov 26."
+    },
+    "not_tested": [
+     "Real calls and texts, and call quality.",
+     "A shared inbox with teammates.",
+     "The Test Sona voice test: the button hung.",
+     "Transcripts and summaries of a real call.",
+     "US carrier registration, adding funds, overages and changing plan.",
+     "Export of a file into a kit, and reimport.",
+     "Session and source-reading date: 19 November 2026. Times are CET. The session took place on this day; the exact time was not recorded. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Scrolly",
    "product_id": "scrolly",
    "run_date": "2026-11-17",
@@ -49043,18 +49701,22 @@
    "source": "session",
    "product_name": "Modge",
    "product_id": "modge",
-   "run_date": "19 November 2026",
-   "session_type": "signup_attempt",
-   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the sign-up of Modge stopped at step 5 of 5: after the organisation (a phone number is required), the company size and the plan (Pro at $7.00 per seat a month was preselected), an embedded Stripe screen asked for a card for the 14 day trial, with Due today $0.00 and US$ 7,00 a month from 3 December 2026. Our dossier had a 14 day trial with no card. We entered no card, so the trial did not start, and opening the app sent us back to \"Preparing your checkout\". The product was not tested.",
+   "run_date": "2026-11-19",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Modge in the 14-day Basic trial that Daan started with his card at the last sign-up step. A project, 8 hours of manual time and a report took about 10 minutes, once the owner was added as a member of the project. Screenshots were on by default. Cancelling took two clicks in the app and keeps access until December 3, 2026.",
    "findings": [
-    "Step 4 of 5 says \"Start a full-feature free trial. Cancel anytime.\" and a plan must be chosen; monthly prices per seat were Basic $5.00, Pro $7.00 and Premium $9.00, with the add-on More Screenshots at +$2.00 per seat a month.",
-    "Step 5 of 5 shows Due today $0.00, 14 days free and then US$ 7,00 a month from 3 December 2026, and asks for card information before the trial starts. The public pricing page did not say \"no credit card\".",
-    "The organisation step requires a phone number (left empty, the app said \"Phone number is required\"); with a number filled in, no SMS code came.",
-    "Opening the app address in the same tab went back to \"Preparing your checkout\", so without a card the app could not be reached."
+    "Text we checked: \"Screenshots are captured automatically during tracked time at the interval below\". What we saw: On a new account Monitoring showed Screenshot Capture Enabled, Blur Screenshots Clear and an interval of 300 seconds; the dossier says screenshots stay off until you switch them on.",
+    "Text we checked: \"$3.00 /month/user, $36.00 billed annually\". What we saw: Edit Plan offered Basic on an Annual cycle at $3.00 a user a month, $36.00 a year; the public pricing page and the dossier give $4 on annual billing.",
+    "Text we checked: \"Time added successfully\". What we saw: A manual entry of 8 hours on Test Project showed in Reports, Tracked Hours after about 10 minutes and about 14 steps; the first try failed with Please select a project until the owner was added as a member of the project.",
+    "Text we checked: \"Your subscription is scheduled to cancel on December 3, 2026\". What we saw: Cancelling took two clicks inside the app, Cancel Subscription and Yes, Cancel, with no reason form, no retention offer and no password; the trial stays usable until December 3, 2026."
    ],
    "not_tested": [
-    "Not tested: team members, a project, manual hours, the timesheet, a report, an export and the time to the first line of hours; the app was never reached.",
-    "The trial counter, the plans and cancelling inside the app, and whether another route opens the app without a card."
+    "The desktop tracker and everything it fills: app and URL tracking, screenshots, the productivity score, Real-Time and Timeline.",
+    "Inviting team members.",
+    "An hours-based invoice, and finalising or sending an invoice.",
+    "Client payments through Stripe.",
+    "Shifts, leave and a mobile app.",
+    "Export of a file into a kit, and reimport."
    ],
    "report": null,
    "disclosure": null,
@@ -49063,121 +49725,87 @@
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "claim_checks": [
     {
-     "claim": "Start a full-feature free trial. Cancel anytime.",
+     "claim": "Screenshots are captured automatically during tracked time at the interval below.",
      "claim_source": "our test notes",
      "claim_read_on": "2026-11-19",
-     "observed": "Step 4/5 says this above the plans, and the Start Free Trial button leads to a Stripe screen that asks for card information. The dossier has the trial as no card; the public pricing page did not say no credit card. We did not enter a card.",
+     "observed": "On a new account Monitoring showed Screenshot Capture Enabled, Blur Screenshots Clear and an interval of 300 seconds; the dossier says screenshots stay off until you switch them on.",
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
       "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
      },
-     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
-     "comparability": "The plan step and the Stripe screen against the dossier line of a 14 day trial with no card; one sign-up, one plan chosen, nothing entered.",
+     "plan": "Modge Basic, 14-day trial, $5.00 per user a month after the trial",
+     "comparability": "The monitoring defaults on a new account against the dossier text.",
      "status": "contradicted",
-     "buying_consequence": "The trial is not card free: a card is asked before the app opens.",
+     "buying_consequence": "Turn screenshots off or blur them before the desktop tracker runs on anyone's machine.",
      "buyer_direction": "unfavourable",
      "claim_changed_on": null
     },
     {
-     "claim": "Due today $0.00",
+     "claim": "$3.00 /month/user, $36.00 billed annually",
      "claim_source": "our test notes",
      "claim_read_on": "2026-11-19",
-     "observed": "Step 5/5 shows Selected plan Pro plan $7.00/seat/month and Due today $0.00, and the card fields are still required to start the trial. The Stripe screen says 14 days free and then US$ 7,00 per month from 3 December 2026.",
+     "observed": "Edit Plan offered Basic on an Annual cycle at $3.00 a user a month, $36.00 a year; the public pricing page and the dossier give $4 on annual billing.",
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
       "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
      },
-     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
-     "comparability": "The summary and the Stripe text against each other; 14 days from 19 November runs to 3 December, which was not run.",
+     "plan": "Modge Basic, 14-day trial, $5.00 per user a month after the trial",
+     "comparability": "The annual price in Edit Plan against the dossier price.",
+     "status": "contradicted",
+     "buying_consequence": "Check the annual price inside the app before paying; it was lower than on the pricing page.",
+     "buyer_direction": "favourable",
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Time added successfully",
+     "claim_source": "our test notes",
+     "claim_read_on": "2026-11-19",
+     "observed": "A manual entry of 8 hours on Test Project showed in Reports, Tracked Hours after about 10 minutes and about 14 steps; the first try failed with Please select a project until the owner was added as a member of the project.",
+     "observed_on": "2026-11-19",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
+     },
+     "plan": "Modge Basic, 14-day trial, $5.00 per user a month after the trial",
+     "comparability": "The manual time entry and the report in the session.",
      "status": "confirmed",
-     "buying_consequence": "You pay nothing today, but a card is stored and $7.00 a month is taken from 3 December unless you cancel.",
+     "buying_consequence": "Timesheets and reports work in the Basic trial without the desktop tracker; add yourself to a project first.",
      "buyer_direction": "neutral",
      "claim_changed_on": null
     },
     {
-     "claim": "Basic $5.00",
+     "claim": "Your subscription is scheduled to cancel on December 3, 2026",
      "claim_source": "our test notes",
      "claim_read_on": "2026-11-19",
-     "observed": "Step 4/5, monthly, per seat: Basic $5.00, Pro $7.00 (Popular) and Premium $9.00. The dossier has Basic at $5 monthly and $4 billed annually, and the public pricing page read in the first attempt had Basic $4, Pro $5.50 and Premium $7 billed annually.",
+     "observed": "Cancelling took two clicks inside the app, Cancel Subscription and Yes, Cancel, with no reason form, no retention offer and no password; the trial stays usable until December 3, 2026.",
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
       "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
      },
-     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
-     "comparability": "The monthly amounts in the app against the dossier and the annual amounts of the public page; tax is not part of the printed amounts.",
+     "plan": "Modge Basic, 14-day trial, $5.00 per user a month after the trial",
+     "comparability": "The cancellation in the session against the pricing FAQ on cancelling from settings.",
      "status": "confirmed",
-     "buying_consequence": "The monthly price of Basic is $5 per seat; Pro is $7 and Premium $9.",
-     "buyer_direction": "neutral",
+     "buying_consequence": "You can cancel the trial yourself in the app and keep it until the trial ends.",
+     "buyer_direction": "favourable",
      "claim_changed_on": null
     },
     {
-     "claim": "-29%",
+     "claim": "Next payment date: Dec 3, 2026",
      "claim_source": "our test notes",
      "claim_read_on": "2026-11-19",
-     "observed": "The Yearly switch in step 4/5 is marked -29%. The yearly amounts were not opened, and the public page has Basic at $4 against $5 monthly, which is about 20%, so the saving could not be worked out.",
+     "observed": "Billing shows Basic at $5.00 per user a month for 1 user, the next payment on Dec 3, 2026 and a first invoice of $0.00, Paid. The card step itself was done by Daan before the session, so no checkout amount was compared.",
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
       "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
      },
-     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
-     "comparability": "A switch label against a plan step that was only read with monthly billing; the dossier already says the numbers on the pages do not agree.",
+     "plan": "Modge Basic, 14-day trial, $5.00 per user a month after the trial",
+     "comparability": "The billing page; the checkout screen was not observed in this session.",
      "status": "not_testable",
-     "buying_consequence": "The yearly saving was not checked against an amount.",
-     "buyer_direction": "neutral",
-     "claim_changed_on": null
-    },
-    {
-     "claim": "Phone Number *",
-     "claim_source": "our test notes",
-     "claim_read_on": "2026-11-19",
-     "observed": "The organisation step has a required field Phone Number. In the first attempt, left empty, the app said Phone number is required; in the second attempt a number was filled in and Next was accepted with no SMS code.",
-     "observed_on": "2026-11-19",
-     "evidence": {
-      "label": "Our test observations",
-      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
-     },
-     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
-     "comparability": "The required field in two attempts, one with and one without a number; the second one went on.",
-     "status": "confirmed",
-     "buying_consequence": "You need a phone number to make an organisation; no code was asked.",
-     "buyer_direction": "neutral",
-     "claim_changed_on": null
-    },
-    {
-     "claim": "Preparing your checkout...",
-     "claim_source": "our test notes",
-     "claim_read_on": "2026-11-19",
-     "observed": "Opening https://app.modge.com/ in the same tab sent us back to Step 5/5 Preparing your checkout. Without a card the app was not reached and the organisation could not be used.",
-     "observed_on": "2026-11-19",
-     "evidence": {
-      "label": "Our test observations",
-      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
-     },
-     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
-     "comparability": "Our own attempt to open the app after the card step against the claim of a trial; one tab, one attempt.",
-     "status": "confirmed",
-     "buying_consequence": "You cannot use or look at the product before a card is given.",
-     "buyer_direction": "neutral",
-     "claim_changed_on": null
-    },
-    {
-     "claim": "Vervolgens US$ 7,00 per maand vanaf 3 december 2026",
-     "claim_source": "our test notes",
-     "claim_read_on": "2026-11-19",
-     "observed": "The Stripe screen says, in Dutch, 14 days free and then US$ 7,00 per month from 3 December 2026. No card was entered and no payment screen with tax or a total of a paid month was seen, so the plan price could not be compared with a checkout.",
-     "observed_on": "2026-11-19",
-     "evidence": {
-      "label": "Our test observations",
-      "url": "https://officesoftwaremarketplace.com/modge-review.html#claim-vs-measured"
-     },
-     "plan": "Pro was preselected for a 14 day trial; the card step was seen and nothing was entered",
-     "comparability": "The printed plan price against a checkout that was never completed; no stored cost rule or fee line could be compared.",
-     "status": "not_testable",
-     "buying_consequence": "The amount at checkout including tax was not seen.",
+     "buying_consequence": "The trial ends and the first charge falls on the same day, 14 days after the start.",
      "buyer_direction": "neutral",
      "claim_changed_on": null
     }
@@ -49185,24 +49813,25 @@
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
     "run_date": "2026-11-19",
-    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session went through the sign-up of Modge in the account that Daan created and stopped at step 5 of 5: after the organisation (a phone number is required), the company size and the plan (Pro $7.00 per seat per month was preselected), an embedded Stripe screen asks for a card for the 14 day trial, with Due today $0.00 and US$ 7,00 per month from 3 December 2026. Our dossier says a 14 day trial with no card. Nothing was entered, so the trial did not start and the app could not be used: opening the app sent us back to Preparing your checkout. The product itself was not tested. Account and start: Daan created the account (the e-mail was confirmed and he was logged in) and our AI assistant worked in its own tab of Daan's browser; the second attempt started at 08:45 on 19 November 2026 at https://app.modge.com/setup-organization. The dossier name is Modge (modge.com) and the review is on OSM (osm/modge-review.html). The app was in English; only the Stripe payment screen was in Dutch. The second session leads; the first session (08:35) is only used where it adds a fact that the second does not repeat, and is named as such. First screen: Welcome to Modge! with the button Create Organization. It leads to Step 2/5, Let's Create Organization, with the fields Organization Name, Phone Number (with a separate country field) and Organization Timezone (Europe/Amsterdam (GMT+1)). We filled in a made-up organisation name, the country Netherlands (+31) and a mobile number, which Daan has given standing permission for; no box for marketing or for contact by sales was present. Next was accepted and no SMS code came. In the first attempt the same step was tried without a phone number and the app said Phone number is required, so the phone number is required to make the organisation. Step 3/5, How big is your company?: we chose 2-19. Step 4/5, Choose The Plan That Fits Your Team: Start a full-feature free trial. Cancel anytime. Monthly: Basic $5.00, Pro $7.00 (Popular) and Premium $9.00 per seat per month; Yearly is marked -29%. Pro stood preselected (1 seat, 1 seat x $7.00/mo) and the add-on More Screenshots at +$2.00 per seat per month was unticked. Choosing a plan is required in the sign-up; there is no button without a plan. Plans as the app shows them (step 4/5, monthly, per seat): Basic $5.00 with manual and automatic time tracking, screenshots (18 an hour), timesheets and approvals, projects, clients and payroll exports, Tracked Hours and App Usage reports and an API. Pro $7.00 (Popular) adds on-demand screenshots, Stripe client billing, shifts and scheduling with a Schedule Adherence report, leave, teams, a Manual Time Edits report and Priority support. Premium $9.00 adds the Unusual Activity report, Burnout-risk insights, the Profitability report and contract signing. The add-on More Screenshots is +$2.00 per seat per month (60 an hour). The public pricing page https://modge.com/pricing (first session, 19 November 2026): Start a full-feature 14-day free trial. Cancel anytime. Basic $4 per seat per month, billed annually, Pro $5.50 and Premium $7 (annual), Enterprise Custom, add-ons More Screenshots and Extended Data Retention at $2 per seat per month. No sentence about no credit card was found on that page. A seat is anyone whose time the desktop agent tracks; after the trial you convert to a paid plan or the account stays read-only for 30 days for export and is then removed; cancelling is from settings and runs to the end of the billing period (the cancelling route was read on the page, not seen in the app). Card step: Start Free Trial led to Step 5/5 with Selected plan Pro plan $7.00/seat/month and Due today $0.00, and an embedded Stripe screen in Dutch with 14 dagen gratis, then Vervolgens US$ 7,00 per maand vanaf 3 december 2026, a secure payment line with Link, an e-mail field and card information fields (card number, MM / JJ, CVC, name of the card holder). We stopped here and entered nothing. Opening https://app.modge.com/ in the same tab went back to Step 5/5 Preparing your checkout..., so without a card the app is not reachable and the organisation cannot be used. The trial counter was not seen in the app, because the app was not reached; Stripe says 14 days free from 19 November, so it runs to 3 December. Not tested: team members without an invitation mail, a project, 3 manual hours, the timesheet and a report, an export (CSV and PDF), the time to the first line of hours, the plans and the cancelling route inside the app. Screenshots: none are in the repo; the images of step 5/5 show Daan's e-mail address and a Dutch Stripe text and were not used. Clean up: the account exists; the organisation was filled in at step 2 but the sign-up was not finished, no trial started and no card was entered; the phone number was entered under standing permission and no SMS code was asked; the own tab was closed and Daan's own Modge tab was not touched. No kit records were entered.",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Modge in the 14-day Basic trial that Daan started with his card at the last sign-up step. A project, 8 hours of manual time and a report took about 10 minutes, once the owner was added as a member of the project. Screenshots were on by default. Cancelling took two clicks in the app and keeps access until December 3, 2026. Account and start: Daan created the account and started the 14-day trial with his own card at step 5 of the sign-up; the earlier attempts of the same day stopped at that card step. Our AI assistant ran the test in Daan's browser on 19 November 2026 from about 15:05 to 15:26 CET, in its own tab. The interface was in English. After the card the sign-up goes on with Step 1/3 Create Your First Project, Step 2/3 Working Hours and Step 3/3 Bring Your Team; nobody was invited. Core action, hours from a project to a report: the project Test Project was created in step 1/3. Timesheets, Add Time first gave Please select a project, because the project had 0 members; after adding the owner as a member, Time added successfully, a row of 8 hours (09:00 to 17:00) on Test Project. Reports, Tracked Hours showed Test Project 8:00 on 19 November and Total Hours 8:00. Time to the first line of hours in a report: about 10 minutes in about 14 steps, 4 of them for the missing project member. The timesheet banner said This member has no pay period configured. Time entries are recorded but will not be grouped into timesheets. Settings: Monitoring, Screenshots showed Screenshot Capture Enabled, Blur Screenshots Clear and an interval of 300 seconds on a new account. Classification had no apps, because the desktop tracker was not installed. The Download Client button was not clicked. Clients and invoices: a client Test Client BV with a test e-mail address was added. A one-time draft invoice, Test consulting, 3 hours at $50.00 an hour, $150.00, was saved as INV-000001 with status Draft; it was not finalised, sent or downloaded. Before the first invoice the client needed Set up billing, with Stripe card and Stripe ACH ticked by default. Plans and trial: Plan and Billing shows Basic, 14 days trial left, Next payment date: Dec 3, 2026, $5.00 per user a month, 1 user, and a first invoice of $0.00, Paid. Edit Plan shows Basic $5.00, Pro $7.00 and Premium $9.00 a month, an Annual cycle at $3.00 a user a month ($36.00 billed annually), and the More Screenshots add-on at $2.00 a seat a month. In step 3/3 the sign-up said Modge Pro, while billing says Basic. Checkout: the card step was done by Daan before the session and was not seen in this session. Cancelling, done the same day: Organization, Manage plan, bottom of the page, Cancel Subscription, then a dialog Are you sure you want to cancel your subscription? Your plan will remain active until December 3, 2026, and Yes, Cancel. No reason form, no retention offer and no password. After reload: Your subscription is scheduled to cancel on December 3, 2026, with Undo Cancellation. Not tested: inviting team members, the desktop tracker and everything it fills (app and URL tracking, screenshots, the productivity score, Real-Time and Timeline), an hours-based invoice, finalising or sending an invoice, client payments through Stripe, shifts, leave, export and a mobile app. Clean up: the account, Test Project, the client Test Client BV, 8 hours of manual time and the draft invoice stay; the subscription is cancelled and stays usable until December 3, 2026. No kit records were entered.",
     "first_import": null,
     "file_inspected": false,
     "reimport_tested": false,
-    "awkward": "The trial needs a card at step 5 of 5, before the app opens, although Due today is $0.00 and the plan page says Cancel anytime. A plan must be chosen in the sign-up, and a phone number is required for the organisation. The app sends you back to the checkout until a card is given, so you cannot look at the product first.",
+    "awkward": "Manual time could not be added until the owner was made a member of the project; the error only said Please select a project. Screenshots are on by default with no blur. The sign-up said Modge Pro while billing says Basic.",
     "friction": {
      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
      "format": "No downloaded bytes examined.",
      "reimport": "No reimport performed.",
-     "cancellation": "No cancellation or downgrade performed."
+     "cancellation": "Cancelling takes two clicks inside the app: Cancel Subscription at the bottom of Edit Plan and Yes, Cancel in a dialog. No reason form, no retention offer and no password. Access stays until the trial ends on December 3, 2026."
     },
     "not_tested": [
-     "Everything after the card screen: team members, a project, 3 manual hours, the timesheet, a report and an export.",
-     "The time to the first line of hours.",
-     "The trial counter, the plans and cancelling inside the app.",
-     "Whether the app can be reached without a card by another route; only opening the app address was tried.",
+     "The desktop tracker and everything it fills: app and URL tracking, screenshots, the productivity score, Real-Time and Timeline.",
+     "Inviting team members.",
+     "An hours-based invoice, and finalising or sending an invoice.",
+     "Client payments through Stripe.",
+     "Shifts, leave and a mobile app.",
      "Export of a file into a kit, and reimport.",
-     "Session and source-reading date: 19 November 2026. Times are CET. The second attempt started at about 08:45 CET; the first one at about 08:35. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 15:05 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
     ],
     "available_fields": [],
     "not_offered": [],

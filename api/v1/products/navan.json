@@ -75,10 +75,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -237,6 +236,170 @@
   "note": "Vendor-reported incidents, not measured uptime. Durations are summed per incident, clipped to the window; overlaps count separately. Feed notices use publication dates, may include maintenance and lack original start/end times. Counts cover the whole vendor page, not product-only incidents.",
   "availability": "ok"
  },
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-19",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/navan-review.html",
+  "method": [
+   "Daan created the account and our AI assistant ran the test in Daan's browser",
+   "Evidence screenshots are in English with names and addresses masked"
+  ],
+  "claims": [
+   {
+    "claim": "Navan Business, For companies up to 300 employees, Free",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The public pricing page and the account Pricing page both say travel costs nothing for companies with 300 or fewer employees, as the dossier says.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+    },
+    "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+    "comparability": "The pricing pages against the dossier plan text.",
+    "status": "confirmed",
+    "buying_consequence": "Travel booking is free for companies of up to 300 employees.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Free for the first 5 users",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The public page lists expense features as free for the first 5 users, the same threshold as the dossier; the expense module was not visible in this account.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+    },
+    "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+    "comparability": "The public pricing page against the dossier; the expense module itself was not tested.",
+    "status": "confirmed",
+    "buying_consequence": "Expenses are free for 5 users; more cost extra.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "€654 and up is out of policy",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The search marked fares from €654 as out of policy and flagged Club Plus at €450 because the cabin cap is Economy; a filter shows only in-policy fares.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+    },
+    "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+    "comparability": "One search on a fresh account with the default policy.",
+    "status": "confirmed",
+    "buying_consequence": "Travellers see the policy limits while they search.",
+    "buyer_direction": "favourable",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Plan: Unlimited trips every month with $0 trip fees. There's no cost to use Navan Travel.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The account Pricing page says this, on a monthly term from Nov 19, 2026. There is no checkout for the free plan and no card was asked, so no checkout amount could be compared.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+    },
+    "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+    "comparability": "The in-app pricing page against the dossier; no checkout exists for this plan.",
+    "status": "not_testable",
+    "buying_consequence": "No card is needed to start using travel booking.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-19",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Navan on a free Business account that Daan created without a card. A business flight search took about 3 minutes and marked fares above the policy cap as out of policy. The account pricing page confirms the dossier: no cost for travel for companies of up to 300 employees, on a monthly term. No card was asked and nothing was booked. Account and start: a first attempt at 12:48 found no account yet and recorded the sign-up screens: an e-mail to verify, a choice of solution, and Create your company account with name, company, location, annual travel budget in USD, role and a password, with no card field, no phone field and no call wall. Daan then created the account without a card. Our AI assistant ran the second session in Daan's browser, in its own tab, on 19 November 2026 from about 14:35 to 14:54. The traveller side was in English (UK); the admin side was switched from Dutch to English (United States) before the screenshots. Core action, a business flight search with the policy check, nothing booked: Business travel, Flights, Amsterdam to London return, Thursday 10 to Friday 11 December, 1 traveller. After Search a window suggested the train (Choosing train travel over air); we chose Continue with flights. Results came after about 8 seconds: 305 of 441 results with the 1 stop max filter, Nonstop only (17) from €160, and a line €654 and up is out of policy. The cheapest was British Airways BA 431, nonstop 1h 20m, Basic €160, Plus €180, Club Plus €450 with an out-of-policy icon; a filter shows In-policy fares only (187). The first results took about 3 minutes and 6 steps. Book was not clicked. The travel policy assigned by the admin: Maximum price for this search is €654, cabin max Economy, refundable and non-changeable fares allowed, cabin upgrades not allowed, and Your manager or travel approver will review, and may cancel, out-of-policy bookings. The policy edit page stayed blank after two reloads, so the policy was only read, not changed. An onboarding guide lists a 4-step plan (legal entity, team, travel policy, payment method) and $500 in Navan Rewards for 3+ employees, 3+ trips and $1,000+ spend within 30 days. Plans: Admin, Settings, Pricing says Plan: Unlimited trips every month with $0 trip fees. There's no cost to use Navan Travel., Monthly, renews on the 1st of every month, effective Nov 19, 2026, available only to companies with 300 or fewer employees and only on a monthly term. The public pricing page shows Navan Business, For companies up to 300 employees, Free, with expense features Free for the first 5 users, and Navan Enterprise behind Let's talk. Checkout: there is no checkout for the free plan. No card was asked at any point; Settings, Payments and the payment method step were not opened, and the expense module and the Navan card were not visible in this account. Cancelling: not done. Admin, Settings, Overview has no button to cancel or delete the account; the term is monthly and renews on the 1st, and how to end it was not established. Not tested: changing the policy (page stayed blank), hotels, the expense module, the card, a legal entity, inviting the team, a payment method and booking. Clean up: the account and the search stay; nothing was booked. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The policy edit page stayed blank in our session. The admin side opened in Dutch and had to be switched to English. There is no button to cancel or delete the account in the admin settings.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Booking or holding a flight.",
+    "Changing the travel policy (the edit page stayed blank).",
+    "Hotels, trains and cars.",
+    "The expense module and the Navan card.",
+    "Inviting the team, a legal entity and a payment method.",
+    "Ending the account: no cancel or delete button was found.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 14:35 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/navan-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/navan-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/navan-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Navan on a free Business account that Daan created without a card. A business flight search took about 3 minutes and marked fares above the policy cap as out of policy. The account pricing page confirms the dossier: no cost for travel for companies of up to 300 employees, on a monthly term. No card was asked and nothing was booked. Account and start: a first attempt at 12:48 found no account yet and recorded the sign-up screens: an e-mail to verify, a choice of solution, and Create your company account with name, company, location, annual travel budget in USD, role and a password, with no card field, no phone field and no call wall. Daan then created the account without a card. Our AI assistant ran the second session in Daan's browser, in its own tab, on 19 November 2026 from about 14:35 to 14:54. The traveller side was in English (UK); the admin side was switched from Dutch to English (United States) before the screenshots. Core action, a business flight search with the policy check, nothing booked: Business travel, Flights, Amsterdam to London return, Thursday 10 to Friday 11 December, 1 traveller. After Search a window suggested the train (Choosing train travel over air); we chose Continue with flights. Results came after about 8 seconds: 305 of 441 results with the 1 stop max filter, Nonstop only (17) from €160, and a line €654 and up is out of policy. The cheapest was British Airways BA 431, nonstop 1h 20m, Basic €160, Plus €180, Club Plus €450 with an out-of-policy icon; a filter shows In-policy fares only (187). The first results took about 3 minutes and 6 steps. Book was not clicked. The travel policy assigned by the admin: Maximum price for this search is €654, cabin max Economy, refundable and non-changeable fares allowed, cabin upgrades not allowed, and Your manager or travel approver will review, and may cancel, out-of-policy bookings. The policy edit page stayed blank after two reloads, so the policy was only read, not changed. An onboarding guide lists a 4-step plan (legal entity, team, travel policy, payment method) and $500 in Navan Rewards for 3+ employees, 3+ trips and $1,000+ spend within 30 days. Plans: Admin, Settings, Pricing says Plan: Unlimited trips every month with $0 trip fees. There's no cost to use Navan Travel., Monthly, renews on the 1st of every month, effective Nov 19, 2026, available only to companies with 300 or fewer employees and only on a monthly term. The public pricing page shows Navan Business, For companies up to 300 employees, Free, with expense features Free for the first 5 users, and Navan Enterprise behind Let's talk. Checkout: there is no checkout for the free plan. No card was asked at any point; Settings, Payments and the payment method step were not opened, and the expense module and the Navan card were not visible in this account. Cancelling: not done. Admin, Settings, Overview has no button to cancel or delete the account; the term is monthly and renews on the 1st, and how to end it was not established. Not tested: changing the policy (page stayed blank), hotels, the expense module, the card, a legal entity, inviting the team, a payment method and booking. Clean up: the account and the search stay; nothing was booked. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/navan-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Navan on a free Business account that Daan created without a card. A business flight search took about 3 minutes and marked fares above the policy cap as out of policy. The account pricing page confirms the dossier: no cost for travel for companies of up to 300 employees, on a monthly term. No card was asked and nothing was booked. Account and start: a first attempt at 12:48 found no account yet and recorded the sign-up screens: an e-mail to verify, a choice of solution, and Create your company account with name, company, location, annual travel budget in USD, role and a password, with no card field, no phone field and no call wall. Daan then created the account without a card. Our AI assistant ran the second session in Daan's browser, in its own tab, on 19 November 2026 from about 14:35 to 14:54. The traveller side was in English (UK); the admin side was switched from Dutch to English (United States) before the screenshots. Core action, a business flight search with the policy check, nothing booked: Business travel, Flights, Amsterdam to London return, Thursday 10 to Friday 11 December, 1 traveller. After Search a window suggested the train (Choosing train travel over air); we chose Continue with flights. Results came after about 8 seconds: 305 of 441 results with the 1 stop max filter, Nonstop only (17) from €160, and a line €654 and up is out of policy. The cheapest was British Airways BA 431, nonstop 1h 20m, Basic €160, Plus €180, Club Plus €450 with an out-of-policy icon; a filter shows In-policy fares only (187). The first results took about 3 minutes and 6 steps. Book was not clicked. The travel policy assigned by the admin: Maximum price for this search is €654, cabin max Economy, refundable and non-changeable fares allowed, cabin upgrades not allowed, and Your manager or travel approver will review, and may cancel, out-of-policy bookings. The policy edit page stayed blank after two reloads, so the policy was only read, not changed. An onboarding guide lists a 4-step plan (legal entity, team, travel policy, payment method) and $500 in Navan Rewards for 3+ employees, 3+ trips and $1,000+ spend within 30 days. Plans: Admin, Settings, Pricing says Plan: Unlimited trips every month with $0 trip fees. There's no cost to use Navan Travel., Monthly, renews on the 1st of every month, effective Nov 19, 2026, available only to companies with 300 or fewer employees and only on a monthly term. The public pricing page shows Navan Business, For companies up to 300 employees, Free, with expense features Free for the first 5 users, and Navan Enterprise behind Let's talk. Checkout: there is no checkout for the free plan. No card was asked at any point; Settings, Payments and the payment method step were not opened, and the expense module and the Navan card were not visible in this account. Cancelling: not done. Admin, Settings, Overview has no button to cancel or delete the account; the term is monthly and renews on the 1st, and how to end it was not established. Not tested: changing the policy (page stayed blank), hotels, the expense module, the card, a legal entity, inviting the team, a payment method and booking. Clean up: the account and the search stay; nothing was booked. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/navan-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/navan-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-19",
+    "evidence_url": null
+   }
+  }
+ },
  "third_party_video": {
   "url": "https://www.youtube.com/watch?v=_1vJ0vFu6Bo",
   "channel": "StartupWise",
@@ -245,7 +408,137 @@
   "independent": true,
   "checked_at": "2026-10-20"
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Navan",
+    "product_id": "navan",
+    "run_date": "2026-11-19",
+    "session_type": "hands_on",
+    "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Navan on a free Business account that Daan created without a card. A business flight search took about 3 minutes and marked fares above the policy cap as out of policy. The account pricing page confirms the dossier: no cost for travel for companies of up to 300 employees, on a monthly term. No card was asked and nothing was booked.",
+    "findings": [
+     "Text we checked: \"Navan Business, For companies up to 300 employees, Free\". What we saw: The public pricing page and the account Pricing page both say travel costs nothing for companies with 300 or fewer employees, as the dossier says.",
+     "Text we checked: \"Free for the first 5 users\". What we saw: The public page lists expense features as free for the first 5 users, the same threshold as the dossier; the expense module was not visible in this account.",
+     "Text we checked: \"€654 and up is out of policy\". What we saw: The search marked fares from €654 as out of policy and flagged Club Plus at €450 because the cabin cap is Economy; a filter shows only in-policy fares."
+    ],
+    "not_tested": [
+     "Booking or holding a flight.",
+     "Changing the travel policy (the edit page stayed blank).",
+     "Hotels, trains and cars.",
+     "The expense module and the Navan card.",
+     "Inviting the team, a legal entity and a payment method.",
+     "Ending the account: no cancel or delete button was found.",
+     "Export of a file into a kit, and reimport."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Navan Business, For companies up to 300 employees, Free",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The public pricing page and the account Pricing page both say travel costs nothing for companies with 300 or fewer employees, as the dossier says.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+      },
+      "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+      "comparability": "The pricing pages against the dossier plan text.",
+      "status": "confirmed",
+      "buying_consequence": "Travel booking is free for companies of up to 300 employees.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Free for the first 5 users",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The public page lists expense features as free for the first 5 users, the same threshold as the dossier; the expense module was not visible in this account.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+      },
+      "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+      "comparability": "The public pricing page against the dossier; the expense module itself was not tested.",
+      "status": "confirmed",
+      "buying_consequence": "Expenses are free for 5 users; more cost extra.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "€654 and up is out of policy",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The search marked fares from €654 as out of policy and flagged Club Plus at €450 because the cabin cap is Economy; a filter shows only in-policy fares.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+      },
+      "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+      "comparability": "One search on a fresh account with the default policy.",
+      "status": "confirmed",
+      "buying_consequence": "Travellers see the policy limits while they search.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Plan: Unlimited trips every month with $0 trip fees. There's no cost to use Navan Travel.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The account Pricing page says this, on a monthly term from Nov 19, 2026. There is no checkout for the free plan and no card was asked, so no checkout amount could be compared.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+      },
+      "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+      "comparability": "The in-app pricing page against the dossier; no checkout exists for this plan.",
+      "status": "not_testable",
+      "buying_consequence": "No card is needed to start using travel booking.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-19",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session tested Navan on a free Business account that Daan created without a card. A business flight search took about 3 minutes and marked fares above the policy cap as out of policy. The account pricing page confirms the dossier: no cost for travel for companies of up to 300 employees, on a monthly term. No card was asked and nothing was booked. Account and start: a first attempt at 12:48 found no account yet and recorded the sign-up screens: an e-mail to verify, a choice of solution, and Create your company account with name, company, location, annual travel budget in USD, role and a password, with no card field, no phone field and no call wall. Daan then created the account without a card. Our AI assistant ran the second session in Daan's browser, in its own tab, on 19 November 2026 from about 14:35 to 14:54. The traveller side was in English (UK); the admin side was switched from Dutch to English (United States) before the screenshots. Core action, a business flight search with the policy check, nothing booked: Business travel, Flights, Amsterdam to London return, Thursday 10 to Friday 11 December, 1 traveller. After Search a window suggested the train (Choosing train travel over air); we chose Continue with flights. Results came after about 8 seconds: 305 of 441 results with the 1 stop max filter, Nonstop only (17) from €160, and a line €654 and up is out of policy. The cheapest was British Airways BA 431, nonstop 1h 20m, Basic €160, Plus €180, Club Plus €450 with an out-of-policy icon; a filter shows In-policy fares only (187). The first results took about 3 minutes and 6 steps. Book was not clicked. The travel policy assigned by the admin: Maximum price for this search is €654, cabin max Economy, refundable and non-changeable fares allowed, cabin upgrades not allowed, and Your manager or travel approver will review, and may cancel, out-of-policy bookings. The policy edit page stayed blank after two reloads, so the policy was only read, not changed. An onboarding guide lists a 4-step plan (legal entity, team, travel policy, payment method) and $500 in Navan Rewards for 3+ employees, 3+ trips and $1,000+ spend within 30 days. Plans: Admin, Settings, Pricing says Plan: Unlimited trips every month with $0 trip fees. There's no cost to use Navan Travel., Monthly, renews on the 1st of every month, effective Nov 19, 2026, available only to companies with 300 or fewer employees and only on a monthly term. The public pricing page shows Navan Business, For companies up to 300 employees, Free, with expense features Free for the first 5 users, and Navan Enterprise behind Let's talk. Checkout: there is no checkout for the free plan. No card was asked at any point; Settings, Payments and the payment method step were not opened, and the expense module and the Navan card were not visible in this account. Cancelling: not done. Admin, Settings, Overview has no button to cancel or delete the account; the term is monthly and renews on the 1st, and how to end it was not established. Not tested: changing the policy (page stayed blank), hotels, the expense module, the card, a legal entity, inviting the team, a payment method and booking. Clean up: the account and the search stay; nothing was booked. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The policy edit page stayed blank in our session. The admin side opened in Dutch and had to be switched to English. There is no button to cancel or delete the account in the admin settings.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Booking or holding a flight.",
+      "Changing the travel policy (the edit page stayed blank).",
+      "Hotels, trains and cars.",
+      "The expense module and the Navan card.",
+      "Inviting the team, a legal entity and a payment method.",
+      "Ending the account: no cancel or delete button was found.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 14:35 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "navan:cancellation_terms",

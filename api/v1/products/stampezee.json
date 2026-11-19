@@ -78,10 +78,9 @@
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-18; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -89,7 +88,357 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-18",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/stampezee-review.html",
+  "method": [
+   "Our AI assistant looked at the app in Daan's browser and our notes record what it showed; no plan was chosen, nothing was entered or paid, and no screenshot was kept because the header of every page showed Daan's name and avatar."
+  ],
+  "claims": [
+   {
+    "claim": "Subscription Details",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The account menu offers Dashboard, Subscription Details and Logout. Both links, also when the addresses were opened directly, sent the browser back to /en/pricing, so the app is only reachable after a plan is chosen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+    "comparability": "The menu links against our own attempts, including a direct address; only one account was used.",
+    "status": "confirmed",
+    "buying_consequence": "You cannot look around the dashboard or the billing page before you choose a plan.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "14 DAYS FREE TRIAL",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "Every paid plan on the pricing page carries this label, with the button Get Started. No plan was chosen and the button was not touched, so the trial was not started and no card question was seen.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+    "comparability": "A label on the pricing page against a test that stopped before the plan choice.",
+    "status": "not_testable",
+    "buying_consequence": "Whether the 14 days start without a card was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Stamp Lite EUR 19.99/month, Stamp Pro EUR 39.99/month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The pricing page of 18 Nov 2026 (region Netherlands, euro) shows Stamp Lite EUR 19.99/month, Stamp Pro EUR 39.99/month (MOST POPULAR) and Stamp Elite EUR 69.99/month. These match the dossier, which also names the same limits and no free plan.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+    "comparability": "The public page against the dossier price field; the amounts were read on the pricing page and not at a checkout.",
+    "status": "confirmed",
+    "buying_consequence": "The three monthly prices in euro are the ones the review gives.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Save 17% Annually",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The switch Monthly / Save 17% Annually is on the pricing page. It was not used and the annual amounts were not read.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+    "comparability": "A switch label against a test that read only the monthly prices.",
+    "status": "not_testable",
+    "buying_consequence": "The annual saving was not worked out from the page.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Custom Pricing",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "The Enterprise Plan shows Custom Pricing with a Contact Sales button. The button was not used and no price is shown.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+    "comparability": "A page block against a test that did not contact the vendor.",
+    "status": "not_testable",
+    "buying_consequence": "Enterprise has no public price.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Stamp Elite EUR 69.99/month",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-18",
+    "observed": "No plan was chosen and no card step or payment screen was reached, so no total with tax was seen and the public prices could not be compared with a checkout.",
+    "observed_on": "2026-11-18",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+    },
+    "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+    "comparability": "The printed prices of the public page against a checkout that was never reached; no stored cost rule or fee line could be compared.",
+    "status": "not_testable",
+    "buying_consequence": "The amount at checkout including tax was not seen.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-18",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session reached the account menu of Stampezee and stopped at the plan choice: the dashboard and Subscription Details sent the browser back to the pricing page, so the app is usable only after a plan is chosen. No plan was chosen and nothing was entered, so whether a card is asked was not seen and the product itself was not tested. The pricing page showed Stamp Lite EUR 19.99, Stamp Pro EUR 39.99 and Stamp Elite EUR 69.99 per month with 14 DAYS FREE TRIAL each and no free plan. Account and start: Daan created the account and our AI assistant looked at the app in Daan's browser on the evening of 18 November 2026; the interface was in English (page stampezee.com/en/pricing). The dossier name is Stampezee and the review is on MSS (mss/stampezee-review.html); the app and the review are the same product. What the app showed: the account menu offers Dashboard, Subscription Details and Logout. The links lead to /en/retailer/dashboard and /en/retailer/billing-sub/payment-method-details. Both addresses, also when opened directly, sent the browser back to /en/pricing, so the dashboard can only be reached after a plan is chosen. Stop: no plan was chosen, nothing was entered and nothing was started. Whether a card is asked was not seen, because the step before it (the button Get Started) was not touched. The core function, building a stamp card, a test customer, a completed card and the time to a first completed card, was therefore not tested. Plans on the pricing page, read on 18 Nov 2026 (region Netherlands, euro): Stamp Lite EUR 19.99/month, Stamp Pro EUR 39.99/month (MOST POPULAR) and Stamp Elite EUR 69.99/month, each with 14 DAYS FREE TRIAL; an Enterprise Plan with Custom Pricing (Contact Sales). Every plan has the button Get Started. A switch reads Monthly / Save 17% Annually. There is no free plan. Limits per plan from the comparison table (Lite, Pro, Elite): active stamp cards 1, 4 and 12; branches 1, 3 and 10; push notifications per month 0, 5 and 10; unlimited customers and stamps on all three. These match the dossier (price field of 13 Nov), which names the same plans, limits and regional euro prices and no free plan; no deviation. Prices were not changed by this delivery. Screenshots: none were kept, because the header of every page showed Daan's name and avatar; there is no image to check or mask. Cancelling: not applicable, because no plan or trial was started. Not tested: everything after the plan choice, which means the card step, the dashboard, building a stamp card, a test customer, the trial itself, checkout, tax and cancelling. Clean up: no plan, no trial and no test data; nothing was entered, sent or bought; the own tab was closed. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The dashboard and Subscription Details cannot be opened before a plan is chosen, also not by address, so you cannot look around the app before you pick one of the paid plans. There is no free plan.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Everything after the plan choice: whether a card is asked, the dashboard, building a stamp card and a test customer.",
+    "The trial itself, a paid plan, checkout, tax and the final price.",
+    "The annual price: the switch Save 17% Annually was seen, not used.",
+    "Export of a file into a kit, and reimport.",
+    "Session and source-reading date: 18 November 2026. Times are CET. The session took place in the evening of this day; the exact time was not recorded. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://marketingandsalessoftware.com/stampezee-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/stampezee-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/stampezee-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session reached the account menu of Stampezee and stopped at the plan choice: the dashboard and Subscription Details sent the browser back to the pricing page, so the app is usable only after a plan is chosen. No plan was chosen and nothing was entered, so whether a card is asked was not seen and the product itself was not tested. The pricing page showed Stamp Lite EUR 19.99, Stamp Pro EUR 39.99 and Stamp Elite EUR 69.99 per month with 14 DAYS FREE TRIAL each and no free plan. Account and start: Daan created the account and our AI assistant looked at the app in Daan's browser on the evening of 18 November 2026; the interface was in English (page stampezee.com/en/pricing). The dossier name is Stampezee and the review is on MSS (mss/stampezee-review.html); the app and the review are the same product. What the app showed: the account menu offers Dashboard, Subscription Details and Logout. The links lead to /en/retailer/dashboard and /en/retailer/billing-sub/payment-method-details. Both addresses, also when opened directly, sent the browser back to /en/pricing, so the dashboard can only be reached after a plan is chosen. Stop: no plan was chosen, nothing was entered and nothing was started. Whether a card is asked was not seen, because the step before it (the button Get Started) was not touched. The core function, building a stamp card, a test customer, a completed card and the time to a first completed card, was therefore not tested. Plans on the pricing page, read on 18 Nov 2026 (region Netherlands, euro): Stamp Lite EUR 19.99/month, Stamp Pro EUR 39.99/month (MOST POPULAR) and Stamp Elite EUR 69.99/month, each with 14 DAYS FREE TRIAL; an Enterprise Plan with Custom Pricing (Contact Sales). Every plan has the button Get Started. A switch reads Monthly / Save 17% Annually. There is no free plan. Limits per plan from the comparison table (Lite, Pro, Elite): active stamp cards 1, 4 and 12; branches 1, 3 and 10; push notifications per month 0, 5 and 10; unlimited customers and stamps on all three. These match the dossier (price field of 13 Nov), which names the same plans, limits and regional euro prices and no free plan; no deviation. Prices were not changed by this delivery. Screenshots: none were kept, because the header of every page showed Daan's name and avatar; there is no image to check or mask. Cancelling: not applicable, because no plan or trial was started. Not tested: everything after the plan choice, which means the card step, the dashboard, building a stamp card, a test customer, the trial itself, checkout, tax and cancelling. Clean up: no plan, no trial and no test data; nothing was entered, sent or bought; the own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/stampezee-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session reached the account menu of Stampezee and stopped at the plan choice: the dashboard and Subscription Details sent the browser back to the pricing page, so the app is usable only after a plan is chosen. No plan was chosen and nothing was entered, so whether a card is asked was not seen and the product itself was not tested. The pricing page showed Stamp Lite EUR 19.99, Stamp Pro EUR 39.99 and Stamp Elite EUR 69.99 per month with 14 DAYS FREE TRIAL each and no free plan. Account and start: Daan created the account and our AI assistant looked at the app in Daan's browser on the evening of 18 November 2026; the interface was in English (page stampezee.com/en/pricing). The dossier name is Stampezee and the review is on MSS (mss/stampezee-review.html); the app and the review are the same product. What the app showed: the account menu offers Dashboard, Subscription Details and Logout. The links lead to /en/retailer/dashboard and /en/retailer/billing-sub/payment-method-details. Both addresses, also when opened directly, sent the browser back to /en/pricing, so the dashboard can only be reached after a plan is chosen. Stop: no plan was chosen, nothing was entered and nothing was started. Whether a card is asked was not seen, because the step before it (the button Get Started) was not touched. The core function, building a stamp card, a test customer, a completed card and the time to a first completed card, was therefore not tested. Plans on the pricing page, read on 18 Nov 2026 (region Netherlands, euro): Stamp Lite EUR 19.99/month, Stamp Pro EUR 39.99/month (MOST POPULAR) and Stamp Elite EUR 69.99/month, each with 14 DAYS FREE TRIAL; an Enterprise Plan with Custom Pricing (Contact Sales). Every plan has the button Get Started. A switch reads Monthly / Save 17% Annually. There is no free plan. Limits per plan from the comparison table (Lite, Pro, Elite): active stamp cards 1, 4 and 12; branches 1, 3 and 10; push notifications per month 0, 5 and 10; unlimited customers and stamps on all three. These match the dossier (price field of 13 Nov), which names the same plans, limits and regional euro prices and no free plan; no deviation. Prices were not changed by this delivery. Screenshots: none were kept, because the header of every page showed Daan's name and avatar; there is no image to check or mask. Cancelling: not applicable, because no plan or trial was started. Not tested: everything after the plan choice, which means the card step, the dashboard, building a stamp card, a test customer, the trial itself, checkout, tax and cancelling. Clean up: no plan, no trial and no test data; nothing was entered, sent or bought; the own tab was closed. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/stampezee-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-18",
+    "evidence_url": "https://marketingandsalessoftware.com/stampezee-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-18",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Stampezee",
+    "product_id": "stampezee",
+    "run_date": "18 November 2026",
+    "session_type": "signup_attempt",
+    "what": "We tried to use Stampezee on 18 November 2026; the dashboard and Subscription Details sent us back to the pricing page until a plan is chosen, so we could not use the product. Daan created the account and our AI assistant ran the test in Daan's browser. We never choose a plan or enter a card in a test.",
+    "findings": [
+     "The account menu offers Dashboard, Subscription Details and Logout, and the links of both sent the browser back to /en/pricing, also when the addresses were opened directly.",
+     "The pricing page showed Stamp Lite EUR 19.99/month, Stamp Pro EUR 39.99/month and Stamp Elite EUR 69.99/month, each with \"14 DAYS FREE TRIAL\", and no free plan; annual billing saves 17%.",
+     "We chose no plan and entered nothing, so whether a card is asked was not seen."
+    ],
+    "not_tested": [
+     "Not tested: building a stamp card, a test customer and a completed card. The dashboard stayed closed, so the product itself was not used.",
+     "Whether a card is asked, the trial itself, checkout, tax and cancelling."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Subscription Details",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The account menu offers Dashboard, Subscription Details and Logout. Both links, also when the addresses were opened directly, sent the browser back to /en/pricing, so the app is only reachable after a plan is chosen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+      "comparability": "The menu links against our own attempts, including a direct address; only one account was used.",
+      "status": "confirmed",
+      "buying_consequence": "You cannot look around the dashboard or the billing page before you choose a plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "14 DAYS FREE TRIAL",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "Every paid plan on the pricing page carries this label, with the button Get Started. No plan was chosen and the button was not touched, so the trial was not started and no card question was seen.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+      "comparability": "A label on the pricing page against a test that stopped before the plan choice.",
+      "status": "not_testable",
+      "buying_consequence": "Whether the 14 days start without a card was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Stamp Lite EUR 19.99/month, Stamp Pro EUR 39.99/month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The pricing page of 18 Nov 2026 (region Netherlands, euro) shows Stamp Lite EUR 19.99/month, Stamp Pro EUR 39.99/month (MOST POPULAR) and Stamp Elite EUR 69.99/month. These match the dossier, which also names the same limits and no free plan.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+      "comparability": "The public page against the dossier price field; the amounts were read on the pricing page and not at a checkout.",
+      "status": "confirmed",
+      "buying_consequence": "The three monthly prices in euro are the ones the review gives.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Save 17% Annually",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The switch Monthly / Save 17% Annually is on the pricing page. It was not used and the annual amounts were not read.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+      "comparability": "A switch label against a test that read only the monthly prices.",
+      "status": "not_testable",
+      "buying_consequence": "The annual saving was not worked out from the page.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Custom Pricing",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "The Enterprise Plan shows Custom Pricing with a Contact Sales button. The button was not used and no price is shown.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+      "comparability": "A page block against a test that did not contact the vendor.",
+      "status": "not_testable",
+      "buying_consequence": "Enterprise has no public price.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Stamp Elite EUR 69.99/month",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-18",
+      "observed": "No plan was chosen and no card step or payment screen was reached, so no total with tax was seen and the public prices could not be compared with a checkout.",
+      "observed_on": "2026-11-18",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/stampezee-review.html#claim-vs-measured"
+      },
+      "plan": "No plan was chosen; the pricing page was read and the dashboard stayed closed until a plan is chosen",
+      "comparability": "The printed prices of the public page against a checkout that was never reached; no stored cost rule or fee line could be compared.",
+      "status": "not_testable",
+      "buying_consequence": "The amount at checkout including tax was not seen.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-18",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 18 November 2026 the session reached the account menu of Stampezee and stopped at the plan choice: the dashboard and Subscription Details sent the browser back to the pricing page, so the app is usable only after a plan is chosen. No plan was chosen and nothing was entered, so whether a card is asked was not seen and the product itself was not tested. The pricing page showed Stamp Lite EUR 19.99, Stamp Pro EUR 39.99 and Stamp Elite EUR 69.99 per month with 14 DAYS FREE TRIAL each and no free plan. Account and start: Daan created the account and our AI assistant looked at the app in Daan's browser on the evening of 18 November 2026; the interface was in English (page stampezee.com/en/pricing). The dossier name is Stampezee and the review is on MSS (mss/stampezee-review.html); the app and the review are the same product. What the app showed: the account menu offers Dashboard, Subscription Details and Logout. The links lead to /en/retailer/dashboard and /en/retailer/billing-sub/payment-method-details. Both addresses, also when opened directly, sent the browser back to /en/pricing, so the dashboard can only be reached after a plan is chosen. Stop: no plan was chosen, nothing was entered and nothing was started. Whether a card is asked was not seen, because the step before it (the button Get Started) was not touched. The core function, building a stamp card, a test customer, a completed card and the time to a first completed card, was therefore not tested. Plans on the pricing page, read on 18 Nov 2026 (region Netherlands, euro): Stamp Lite EUR 19.99/month, Stamp Pro EUR 39.99/month (MOST POPULAR) and Stamp Elite EUR 69.99/month, each with 14 DAYS FREE TRIAL; an Enterprise Plan with Custom Pricing (Contact Sales). Every plan has the button Get Started. A switch reads Monthly / Save 17% Annually. There is no free plan. Limits per plan from the comparison table (Lite, Pro, Elite): active stamp cards 1, 4 and 12; branches 1, 3 and 10; push notifications per month 0, 5 and 10; unlimited customers and stamps on all three. These match the dossier (price field of 13 Nov), which names the same plans, limits and regional euro prices and no free plan; no deviation. Prices were not changed by this delivery. Screenshots: none were kept, because the header of every page showed Daan's name and avatar; there is no image to check or mask. Cancelling: not applicable, because no plan or trial was started. Not tested: everything after the plan choice, which means the card step, the dashboard, building a stamp card, a test customer, the trial itself, checkout, tax and cancelling. Clean up: no plan, no trial and no test data; nothing was entered, sent or bought; the own tab was closed. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The dashboard and Subscription Details cannot be opened before a plan is chosen, also not by address, so you cannot look around the app before you pick one of the paid plans. There is no free plan.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Everything after the plan choice: whether a card is asked, the dashboard, building a stamp card and a test customer.",
+      "The trial itself, a paid plan, checkout, tax and the final price.",
+      "The annual price: the switch Save 17% Annually was seen, not used.",
+      "Export of a file into a kit, and reimport.",
+      "Session and source-reading date: 18 November 2026. Times are CET. The session took place in the evening of this day; the exact time was not recorded. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "stampezee:cancellation_terms",

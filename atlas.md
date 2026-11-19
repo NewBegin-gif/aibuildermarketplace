@@ -878,10 +878,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/clutch-review.html
 
 ## CO2 Impact (co2impact.co.uk)
-- **Verified pricing:** (read 2026-10-09 in a browser render of the pricing table on co2impact.co.uk's homepage; re-verified 2026-10-22 on the redesigned table, GBP, all prices exclude VAT) Every licence runs for …
-- **Honest take:** 12-month commitment on every plan; automated meter data costs extra per meter.
+- **Verified pricing:** (read 2026-11-19 in the pricing section of co2impact.co.uk's homepage, GBP; the vendor's own llms.txt lists the same three plans) Essentials is £369 a year (£30.75 a month) for 2 users and …
+- **Honest take:** 12-month commitment on every plan; no free trial shown on the page.
 - **Best for:** UK small and mid-sized businesses that need a first carbon footprint, Scope 1-3 reporting or a carbon reduction plan for customers and tenders, without hiring a consultant
-- **Flags:** Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/co2-impact-review.html
 
 ## Code Bulk Discounts (discountkit.app)
@@ -2428,7 +2427,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/modelize-review/
 
 ## Modge (modge.com)
-- **Verified pricing:** (read 2026-09-03 and re-verified 2026-10-16 on modge.com/pricing, both billing toggles and the comparison table; every amount unchanged) Per-seat plans with a full-feature 14-day trial and …
+- **Verified pricing:** (read 2026-09-03 and re-verified 2026-10-16 on modge.com/pricing, both billing toggles and the comparison table; every amount unchanged) Per-seat plans with a full-feature 14-day trial.
 - **Honest take:** The numbers on Modge's own pages do not agree with each other.
 - **Best for:** desk-bound remote or hybrid teams of a few to a few hundred people who want time tracking, app classification, shift adherence, leave and payroll-ready timesheets in one seat priced between $4 and $7 a month
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit

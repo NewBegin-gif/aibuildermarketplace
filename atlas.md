@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 682 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-18.
+All 683 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-19.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1131,6 +1131,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** online sellers on Shopify, eBay, Amazon, TikTok Shop and similar channels who want to dropship from one wholesale catalogue and push listings into several stores, starting from the Basic tier
 - **Flags:** Add-ons extra, Annual commit
 - **Full review:** https://marketingandsalessoftware.com/doba-review.html
+
+## DocHub (dochub.com)
+- **Verified pricing:** (read 2026-11-18 on dochub.com/pricing in a browser and in our own test the same day; from our European connection the page showed euros, and prices are before tax) DocHub has four plans.
+- **Honest take:** PDF editing and e-signing; the free plan has 3 uses a month.
+- **Best for:** freelancers and small teams who fill in and sign their own PDFs in the browser, and who will pay for Pro once they send many documents for other people to sign
+- **Flags:** Free tier
+- **Full review:** https://officesoftwaremarketplace.com/dochub-review.html
 
 ## DocSend (docsend.com)
 - **Verified pricing:** (read 2026-09-25 on docsend.com/pricing, both billing toggles) Personal is $10 per user a month billed yearly or $15 billed monthly, one user, basic link controls (email to view, passcode, …
@@ -2320,7 +2327,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-18 on mailveri.com and its pricing page and in our own test that day; earlier: read 2026-11-13 on mailveri.com/pricing, US dollars) MailVeri sells pay-as-you-go credit packs w…
 - **Honest take:** Bulk email verification with credits that never expire; from $9 for 10,000.
 - **Best for:** marketers and developers who verify email lists in bursts and want to buy credits once instead of paying a monthly subscription
-- **Flags:** Usage-metered
+- **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/mailveri-review.html
 
 ## Make (make.com)
@@ -2714,7 +2721,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-17 on pagefly.io/pages/pricing and apps.shopify.com/pagefly, US dollars, billed monthly unless stated) Free: $0, 1 published page or section, 10 AI credits a month, 320+ templ…
 - **Honest take:** Shopify page builder with AI page generation and A/B testing: free plan, paid from $24 a month.
 - **Best for:** Shopify merchants who want drag-and-drop landing, product and home pages plus A/B testing and heatmaps in one app, with a free plan to try first
-- **Flags:** Usage-metered, Free tier
+- **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/pagefly-review.html
 
 ## Pagely (pagely.com)
@@ -2943,7 +2950,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## Positive User (user.com)
 - **Verified pricing:** (read 2026-10-07 on user.com/pricing in a browser render, prices in EUR as the page prints them, billed annually; re-verified 2026-11-13 with a plain fetch) Positive User, the platform form…
-- **Honest take:** Every Marketing Suite plan caps email at 60,000 a year, only annual prices are printed, and auto-renewal needs 30 days notice to stop.
+- **Honest take:** Every Marketing Suite plan caps email at 60,000 a year, monthly prices (€89 to €599) appeared only on 18 November 2026, and auto-renewal needs 30 days notice to stop.
 - **Best for:** European small and mid-sized businesses that want email, SMS, WhatsApp and website behaviour tracking in one EU-hosted platform, with a modest sending volume and a small marketing team
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/positive-user-review.html
@@ -3155,7 +3162,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The magic only works on a calendar it can write to.
 - **Best for:** Google Calendar teams that want AI to auto-schedule tasks, habits and meetings around their priorities
 - **Flags:** Per-seat pricing, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/reclaim-ai-review/
+- **Full review:** https://officesoftwaremarketplace.com/reclaim-ai-review.html
 
 ## Recruit CRM (recruitcrm.io)
 - **Verified pricing:** (read 2026-10-25 on recruitcrm.io/pricing/ with both the Annually and the Monthly toggle clicked, from the Netherlands, where the page shows euros; and in the Recruit CRM help centre) Pro i…
@@ -3544,7 +3551,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Price only via G2 listing; no buyer reviews yet.
 - **Best for:** HR and people teams at employers of any size that want a giving or social-impact perk without payroll deductions, employee donations or a company-funded donation budget
 - **Flags:** Per-seat pricing, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/shopraise-workplace-giving-review/
+- **Full review:** https://officesoftwaremarketplace.com/shopraise-workplace-giving-review.html
 
 ## ShopTrueProfit (shoptrueprofit.com)
 - **Verified pricing:** (read 2026-11-13 on shoptrueprofit.com, dollar amounts as shown) ShopTrueProfit has three options.
@@ -3839,7 +3846,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The price is no longer hidden, and it is high.
 - **Best for:** e-commerce brands turning customers and creators into affiliates with branded co-branded storefronts, if the volume justifies a demo-quoted platform fee
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/superfiliate-review/
+- **Full review:** https://marketingandsalessoftware.com/superfiliate-review.html
 
 ## Superlines (superlines.io)
 - **Verified pricing:** (read 2026-10-16 in a browser on superlines.io/pricing, For brands tab, monthly and yearly view, prices shown in euros; the terms say VAT is added where required.
@@ -3866,7 +3873,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Every tier quotes its monthly rate on annual billing, so the number you see is a year's commitment rather than a monthly one.
 - **Best for:** content marketers, SEO specialists and agencies that need on-page optimization against live SERP data and want to start tracking how often they are cited in AI answers
 - **Flags:** Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/surfer-surferseo-review/
+- **Full review:** https://marketingandsalessoftware.com/surfer-surferseo-review.html
 
 ## SurFox AI (getsurfox.com)
 - **Verified pricing:** (re-verified 2026-10-16 on getsurfox.com/pricing and the terms of service, still dated 22 September 2026, after SurFox aligned the two pages; first read 2026-10-15 in a live browser with th…
@@ -4618,7 +4625,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The honest scrutiny of 'free': the tip prompt is shown to YOUR donors, with suggested percentages.
 - **Best for:** small and mid-size nonprofits that want donations, ticketing, memberships and payments without any fee eating the mission's money
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/zeffy-review/
+- **Full review:** https://officesoftwaremarketplace.com/zeffy-review.html
 
 ## ZenBusiness (zenbusiness.com)
 - **Verified pricing:** (re-verified 2026-09-22 on zenbusiness.com/pricing-products/, where /pricing/ now redirects; every one of the sixteen published amounts unchanged since 25 Jul 2026) Formation itself is $0 p…

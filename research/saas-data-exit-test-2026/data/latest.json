@@ -46,7 +46,7 @@
   {
    "id": "data_missing_or_changed",
    "label": "obtained files where some test data was missing or changed",
-   "numerator": 39,
+   "numerator": 38,
    "denominator": 57
   },
   {
@@ -85,8 +85,8 @@
   {
    "name": "exit_tests.csv",
    "url": "/research/saas-data-exit-test-2026/data/2026-11-17/exit_tests.csv",
-   "bytes": 51331,
-   "sha256": "1bce04421d124f97b6001bdf19f924bbe98ad7f31fa5a8285baa823d1758b46d"
+   "bytes": 51332,
+   "sha256": "5a4df2466b4c2bc1630721f542bd62bf0bd9e3bd7872f80b5d00913cc1ad1f90"
   }
  ],
  "author": {
@@ -102,8 +102,16 @@
   "scope": "Our own data, analysis, tables and charts. Quoted vendor text and screenshots of vendor pages remain the vendor's; we reproduce them as evidence."
  },
  "contact": "daniel@aibuildermarketplace.com",
- "corrections": [],
- "fingerprint": "9f59966127a304c0",
+ "corrections": [
+  {
+   "date": "2026-11-19",
+   "what": "Toggl was counted among the exports that lost or changed test data. Our retest on 19 November 2026 showed that Toggl's Summary CSV is correct when the report uses Breakdown by Project; the wrong project only appears in the default Breakdown by Member. Toggl is now coded as no data lost; its file quirk (combined start/stop fields need manual editing before a reimport) stays.",
+   "previous_fingerprint": "9f59966127a304c0",
+   "previous_version": "/research/saas-data-exit-test-2026/data/2026-11-17/previous-2026-11-19/manifest.json"
+  }
+ ],
+ "fingerprint": "b436e88ad3ac90d7",
  "edition_published": "2026-11-19",
+ "status_note": "Corrected 2026-11-19",
  "status": "current"
 }

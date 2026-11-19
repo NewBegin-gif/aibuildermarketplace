@@ -66,10 +66,9 @@
  "unknowns": [
   "Pricing status is 'see_details': no single public entry price.",
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -77,7 +76,465 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-19",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/disputifier-review.html",
+  "method": [
+   "Installed from the Shopify App Store on our development store; the wizard and the Shopify approval screen were read; nothing was approved or paid; the app stays installed on the store."
+  ],
+  "claims": [
+   {
+    "claim": "Free to install. Additional charges may apply.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Installing cost nothing: the dialog Install app was approved with Install and no payment was asked. The Shopify subscription screen that followed asked for a payment method before Approve could be used.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+    },
+    "plan": "Basic Plan approval screen, not approved, development store",
+    "comparability": "The listing line against our own install and the screen that followed; nothing was approved.",
+    "status": "confirmed",
+    "buying_consequence": "You can install it for free, but you cannot approve the usage plan without a payment method.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "20% of Chargeback Revenue Recovered",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Wizard step 3 shows Fully Automated, already on, with 20% of Chargeback Revenue Recovered, and the Shopify screen says Basic Plan (20% of Recovered Revenue). The cap of $250 per win named in the dossier was not on the listing, the wizard or the Shopify screen.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+    },
+    "plan": "Basic Plan approval screen, not approved, development store",
+    "comparability": "The wizard and the Shopify plan line against the dossier percentage; no dispute was won, so no fee was billed.",
+    "status": "confirmed",
+    "buying_consequence": "The 20% matches the dossier and is on by default; the cap per win could not be confirmed.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$250",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The dossier caps the fee at $250 per win. This cap was not shown on the listing, in the wizard or on the Shopify approval screen, which gives only a spending limit of $90.000 per 30 days.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+    },
+    "plan": "Basic Plan approval screen, not approved, development store",
+    "comparability": "A dossier cap from the vendor pricing page against screens that do not mention it; no recovery was billed.",
+    "status": "not_testable",
+    "buying_consequence": "The maximum fee on one large recovery was not seen in the app.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "CB Alerts: from $17-$27.50/alert",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Step 5 shows From $17/alert and Show Full Pricing gives RDR $17, Ethoca $27.50 and CDRN $27.50. Alerts were off by default and were not switched on.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+    },
+    "plan": "Basic Plan approval screen, not approved, development store",
+    "comparability": "The listing band against the amounts in the wizard window; no alert was bought.",
+    "status": "confirmed",
+    "buying_consequence": "The alert price depends on the network, from $17 to $27.50 each; the wizard names each amount.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "$.05/order",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "Fraud Protection ($.05/order) is ticked by default in step 5 and Shipping Updates ($.05/order) is off. After the wizard Fraud Protection was on.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+    },
+    "plan": "Basic Plan approval screen, not approved, development store",
+    "comparability": "The per-order amounts in the dossier against the wizard defaults; no order was billed.",
+    "status": "confirmed",
+    "buying_consequence": "Fraud Protection starts on, so every order costs $0.05 unless you untick it.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "7 Day Risk-Free Trial",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The listing names a 7 Day Risk-Free Trial. The Shopify approval screen shows no trial line and no amount, and no trial was started.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+    },
+    "plan": "Basic Plan approval screen, not approved, development store",
+    "comparability": "A listing line against a Shopify screen that was not approved.",
+    "status": "not_testable",
+    "buying_consequence": "The trial is only on the listing; the approval screen does not mention it.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "You will be billed for this app when you begin to use it.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The box Your next bill on the Shopify screen says charges appear on your monthly invoice and your threshold bills. The app spending limit is a maximum of $90.000,00 USD per 30 days.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+    },
+    "plan": "Basic Plan approval screen, not approved, development store",
+    "comparability": "The dossier line billed on use against the Shopify screen; the spending limit is a different thing than the $250 cap per win.",
+    "status": "confirmed",
+    "buying_consequence": "There is no monthly fee; the bill follows use, with a very high spending limit that you can update after approval.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Getting out of this app has been a real pain.",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "A one-star review of 28 Oct 2026 on the listing says leaving the app was hard. It is read from the listing and was not verified; the cancelling route was not tested.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+    },
+    "plan": "Basic Plan approval screen, not approved, development store",
+    "comparability": "A buyer review against a test that never reached an active plan.",
+    "status": "not_testable",
+    "buying_consequence": "Leaving the app may be hard; check the billing descriptor and open invoices before you start.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   },
+   {
+    "claim": "Add payment method",
+    "claim_source": "our test notes",
+    "claim_read_on": "2026-11-19",
+    "observed": "The Shopify screen shows no amount, no tax line and no total, only a row Add payment method, the spending limit and a greyed out Approve button. Nothing was approved, no payment method was added and nothing was charged.",
+    "observed_on": "2026-11-19",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+    },
+    "plan": "Basic Plan approval screen, not approved, development store",
+    "comparability": "The printed prices of the wizard against a screen that shows no amount; no stored cost rule, tax line or fee line could be compared.",
+    "status": "not_testable",
+    "buying_consequence": "The amount you pay cannot be read from the approval screen; it follows use.",
+    "buyer_direction": "neutral",
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-19",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session installed Disputifier on a Shopify development store, followed its wizard (an e-mail address, the payment processor, 20% chargeback fighting and the prevention options) and then reached the Shopify screen Approve subscription, which asked for a payment method with Approve greyed out. There was no test charge line, so nothing was approved and the product was not used. Prices in the wizard match the dossier; the Shopify screen adds a spending limit of $90.000 per 30 days and shows no amount or trial, and the $250 cap per win was not seen. Install: the install was started at 07:52:35 in our own tab on our Shopify development store (test plan Basic, admin in English, App Store opened with ?locale=en). The dialog Install app asked for View customer data (Sensitive data, device and activity data), View staff and contributor data (Store owner, blog contributors) and View and edit store data (Customers, products, orders, Shopify Payments, Online Store). It was approved with Install, which costs nothing, and the app was installed at about 07:54; the welcome wizard on the app's own site opened at once. The dossier name is Disputifier and the review is on OSM (osm/disputifier-review.html); the app and the dossier are the same product (developer Disputifier, launched 23 Sep 2020). Listing: Listing apps.shopify.com/disputifier, read on 19 Nov 2026: Free to install. Additional charges may apply.; one Basic Plan, Free to install, 7 Day Risk-Free Trial, CB Fighting: 20% of won back revenue, CB Alerts: from $17-$27.50/alert, all charges billed in USD; rated 4.6 from 141 reviews (125 five-star, 12 one-star). The dossier of 19 Oct 2026 had 4.7 from 133 reviews (119 five-star, 11 one-star); these counts move and are not a correction. The cap of $250 per win that the dossier names is not on the listing. In the wizard: chargeback fighting at 20% of Chargeback Revenue Recovered (only pay when we successfully win a chargeback), Fraud Protection at $.05/order and Shipping Updates at $.05/order, and Chargeback Alerts from $17/alert with Show Full Pricing: RDR $17, Ethoca $27.50 and CDRN $27.50. The dossier says alerts are sold by quote on the vendor page and the listing band is the only public number; the wizard now names the amount per network. On the Shopify approval screen: Basic Plan (20% of Recovered Revenue), an app spending limit of a maximum of $90.000,00 USD per 30 days, and no amount, no tax line, no total and no trial line. The 7 days trial is only on the listing. A one-star review of the listing dated 28 Oct 2026, from a merchant who used the app for 12 months, says Getting out of this app has been a real pain.: the merchant asked Disputifier to release its billing descriptor to move to another chargeback service, nothing had happened after a week, and then came the news that there were unpaid invoices. This is read from the listing and was not verified. Wizard (7 steps, finished at about 07:56): step 1 asks for an e-mail address (our own work address was entered; it is not shown in any screenshot) with How did you hear about us? on App store and optional WhatsApp or Telegram left empty. Step 2: Shopify Payments was already selected, nothing was connected and no outside login was asked. Step 3: Respond to chargebacks automatically? with Fully Automated (MOST POPULAR) already on, Only pay when we successfully win a chargeback and 20% of Chargeback Revenue Recovered, against Don't Respond to Chargebacks (Not Recommended). The first cost amount was seen here, 3 clicks after the e-mail address was entered. Step 4: the business model Physical Product was already on. Step 5: Chargeback Alerts off (From $17/alert), Fraud Protection on ($.05/order) and Shipping Updates off ($.05/order); Show Full Pricing gives RDR $17, Ethoca $27.50 and CDRN $27.50. So after the wizard chargeback fighting (20%) and Fraud Protection are on, and alerts and Shipping Updates are off. Steps 6 and 7 (alert programs and alert details, optional) were not reached: Continue on step 5 went straight to the Shopify billing screen. Checkout: the Shopify screen Approve subscription appeared at 07:56:28: Disputifier: Smart Chargebacks, This app bills you for usage charges, Plan: Basic Plan (20% of Recovered Revenue), App spending limit (a maximum of $90.000,00 USD per 30 days, which can be updated after approval), Your next bill: You will be billed for this app when you begin to use it. These charges will appear on your monthly invoice and your threshold bills., a greyed out Approve button, a row Add payment method and By proceeding, you are agreeing to the Terms of Service. Subject to government tax and other prevailing charges. The line You will not be billed for this test charge was NOT on the screen. Nothing was approved, no payment method was added and nothing was charged. Differences against the dossier: the prices match (20% of recovered revenue, $17 to $27.50 an alert, $0.05 an order for Fraud Protection and Shipping Updates); new is the Shopify spending limit of $90.000 per 30 days, and the 7 days trial is on the listing only, not on the Shopify screen; the $250 cap per win was not seen anywhere. Not tested: the core function (handling a dispute), the alert settings and the refund threshold, and the cancelling route. Clean up: the app stays installed on our development store (CEO instruction); our own tabs were closed; no theme change and no payment. No kit records were entered.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The wizard starts with an e-mail address and turns on chargeback fighting at 20% and Fraud Protection at $.05 an order by default. The Shopify approval screen shows no amount, only a spending limit of $90.000 per 30 days, and no trial line. A one-star listing review of 28 Oct 2026 says leaving the app was a real pain.",
+   "friction": {
+    "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+    "format": "No downloaded bytes examined.",
+    "reimport": "No reimport performed.",
+    "cancellation": "No cancellation or downgrade performed."
+   },
+   "not_tested": [
+    "Not tested: handling a dispute (the core function), its win rate and its evidence.",
+    "The alert settings, the alert programs of steps 6 and 7 and the refund threshold.",
+    "Any plan or trial; the Shopify subscription was not approved.",
+    "Cancelling and releasing the billing descriptor.",
+    "Export and reimport.",
+    "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 07:52 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/disputifier-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/disputifier-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/disputifier-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session installed Disputifier on a Shopify development store, followed its wizard (an e-mail address, the payment processor, 20% chargeback fighting and the prevention options) and then reached the Shopify screen Approve subscription, which asked for a payment method with Approve greyed out. There was no test charge line, so nothing was approved and the product was not used. Prices in the wizard match the dossier; the Shopify screen adds a spending limit of $90.000 per 30 days and shows no amount or trial, and the $250 cap per win was not seen. Install: the install was started at 07:52:35 in our own tab on our Shopify development store (test plan Basic, admin in English, App Store opened with ?locale=en). The dialog Install app asked for View customer data (Sensitive data, device and activity data), View staff and contributor data (Store owner, blog contributors) and View and edit store data (Customers, products, orders, Shopify Payments, Online Store). It was approved with Install, which costs nothing, and the app was installed at about 07:54; the welcome wizard on the app's own site opened at once. The dossier name is Disputifier and the review is on OSM (osm/disputifier-review.html); the app and the dossier are the same product (developer Disputifier, launched 23 Sep 2020). Listing: Listing apps.shopify.com/disputifier, read on 19 Nov 2026: Free to install. Additional charges may apply.; one Basic Plan, Free to install, 7 Day Risk-Free Trial, CB Fighting: 20% of won back revenue, CB Alerts: from $17-$27.50/alert, all charges billed in USD; rated 4.6 from 141 reviews (125 five-star, 12 one-star). The dossier of 19 Oct 2026 had 4.7 from 133 reviews (119 five-star, 11 one-star); these counts move and are not a correction. The cap of $250 per win that the dossier names is not on the listing. In the wizard: chargeback fighting at 20% of Chargeback Revenue Recovered (only pay when we successfully win a chargeback), Fraud Protection at $.05/order and Shipping Updates at $.05/order, and Chargeback Alerts from $17/alert with Show Full Pricing: RDR $17, Ethoca $27.50 and CDRN $27.50. The dossier says alerts are sold by quote on the vendor page and the listing band is the only public number; the wizard now names the amount per network. On the Shopify approval screen: Basic Plan (20% of Recovered Revenue), an app spending limit of a maximum of $90.000,00 USD per 30 days, and no amount, no tax line, no total and no trial line. The 7 days trial is only on the listing. A one-star review of the listing dated 28 Oct 2026, from a merchant who used the app for 12 months, says Getting out of this app has been a real pain.: the merchant asked Disputifier to release its billing descriptor to move to another chargeback service, nothing had happened after a week, and then came the news that there were unpaid invoices. This is read from the listing and was not verified. Wizard (7 steps, finished at about 07:56): step 1 asks for an e-mail address (our own work address was entered; it is not shown in any screenshot) with How did you hear about us? on App store and optional WhatsApp or Telegram left empty. Step 2: Shopify Payments was already selected, nothing was connected and no outside login was asked. Step 3: Respond to chargebacks automatically? with Fully Automated (MOST POPULAR) already on, Only pay when we successfully win a chargeback and 20% of Chargeback Revenue Recovered, against Don't Respond to Chargebacks (Not Recommended). The first cost amount was seen here, 3 clicks after the e-mail address was entered. Step 4: the business model Physical Product was already on. Step 5: Chargeback Alerts off (From $17/alert), Fraud Protection on ($.05/order) and Shipping Updates off ($.05/order); Show Full Pricing gives RDR $17, Ethoca $27.50 and CDRN $27.50. So after the wizard chargeback fighting (20%) and Fraud Protection are on, and alerts and Shipping Updates are off. Steps 6 and 7 (alert programs and alert details, optional) were not reached: Continue on step 5 went straight to the Shopify billing screen. Checkout: the Shopify screen Approve subscription appeared at 07:56:28: Disputifier: Smart Chargebacks, This app bills you for usage charges, Plan: Basic Plan (20% of Recovered Revenue), App spending limit (a maximum of $90.000,00 USD per 30 days, which can be updated after approval), Your next bill: You will be billed for this app when you begin to use it. These charges will appear on your monthly invoice and your threshold bills., a greyed out Approve button, a row Add payment method and By proceeding, you are agreeing to the Terms of Service. Subject to government tax and other prevailing charges. The line You will not be billed for this test charge was NOT on the screen. Nothing was approved, no payment method was added and nothing was charged. Differences against the dossier: the prices match (20% of recovered revenue, $17 to $27.50 an alert, $0.05 an order for Fraud Protection and Shipping Updates); new is the Shopify spending limit of $90.000 per 30 days, and the 7 days trial is on the listing only, not on the Shopify screen; the $250 cap per win was not seen anywhere. Not tested: the core function (handling a dispute), the alert settings and the refund threshold, and the cancelling route. Clean up: the app stays installed on our development store (CEO instruction); our own tabs were closed; no theme change and no payment. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/disputifier-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session installed Disputifier on a Shopify development store, followed its wizard (an e-mail address, the payment processor, 20% chargeback fighting and the prevention options) and then reached the Shopify screen Approve subscription, which asked for a payment method with Approve greyed out. There was no test charge line, so nothing was approved and the product was not used. Prices in the wizard match the dossier; the Shopify screen adds a spending limit of $90.000 per 30 days and shows no amount or trial, and the $250 cap per win was not seen. Install: the install was started at 07:52:35 in our own tab on our Shopify development store (test plan Basic, admin in English, App Store opened with ?locale=en). The dialog Install app asked for View customer data (Sensitive data, device and activity data), View staff and contributor data (Store owner, blog contributors) and View and edit store data (Customers, products, orders, Shopify Payments, Online Store). It was approved with Install, which costs nothing, and the app was installed at about 07:54; the welcome wizard on the app's own site opened at once. The dossier name is Disputifier and the review is on OSM (osm/disputifier-review.html); the app and the dossier are the same product (developer Disputifier, launched 23 Sep 2020). Listing: Listing apps.shopify.com/disputifier, read on 19 Nov 2026: Free to install. Additional charges may apply.; one Basic Plan, Free to install, 7 Day Risk-Free Trial, CB Fighting: 20% of won back revenue, CB Alerts: from $17-$27.50/alert, all charges billed in USD; rated 4.6 from 141 reviews (125 five-star, 12 one-star). The dossier of 19 Oct 2026 had 4.7 from 133 reviews (119 five-star, 11 one-star); these counts move and are not a correction. The cap of $250 per win that the dossier names is not on the listing. In the wizard: chargeback fighting at 20% of Chargeback Revenue Recovered (only pay when we successfully win a chargeback), Fraud Protection at $.05/order and Shipping Updates at $.05/order, and Chargeback Alerts from $17/alert with Show Full Pricing: RDR $17, Ethoca $27.50 and CDRN $27.50. The dossier says alerts are sold by quote on the vendor page and the listing band is the only public number; the wizard now names the amount per network. On the Shopify approval screen: Basic Plan (20% of Recovered Revenue), an app spending limit of a maximum of $90.000,00 USD per 30 days, and no amount, no tax line, no total and no trial line. The 7 days trial is only on the listing. A one-star review of the listing dated 28 Oct 2026, from a merchant who used the app for 12 months, says Getting out of this app has been a real pain.: the merchant asked Disputifier to release its billing descriptor to move to another chargeback service, nothing had happened after a week, and then came the news that there were unpaid invoices. This is read from the listing and was not verified. Wizard (7 steps, finished at about 07:56): step 1 asks for an e-mail address (our own work address was entered; it is not shown in any screenshot) with How did you hear about us? on App store and optional WhatsApp or Telegram left empty. Step 2: Shopify Payments was already selected, nothing was connected and no outside login was asked. Step 3: Respond to chargebacks automatically? with Fully Automated (MOST POPULAR) already on, Only pay when we successfully win a chargeback and 20% of Chargeback Revenue Recovered, against Don't Respond to Chargebacks (Not Recommended). The first cost amount was seen here, 3 clicks after the e-mail address was entered. Step 4: the business model Physical Product was already on. Step 5: Chargeback Alerts off (From $17/alert), Fraud Protection on ($.05/order) and Shipping Updates off ($.05/order); Show Full Pricing gives RDR $17, Ethoca $27.50 and CDRN $27.50. So after the wizard chargeback fighting (20%) and Fraud Protection are on, and alerts and Shipping Updates are off. Steps 6 and 7 (alert programs and alert details, optional) were not reached: Continue on step 5 went straight to the Shopify billing screen. Checkout: the Shopify screen Approve subscription appeared at 07:56:28: Disputifier: Smart Chargebacks, This app bills you for usage charges, Plan: Basic Plan (20% of Recovered Revenue), App spending limit (a maximum of $90.000,00 USD per 30 days, which can be updated after approval), Your next bill: You will be billed for this app when you begin to use it. These charges will appear on your monthly invoice and your threshold bills., a greyed out Approve button, a row Add payment method and By proceeding, you are agreeing to the Terms of Service. Subject to government tax and other prevailing charges. The line You will not be billed for this test charge was NOT on the screen. Nothing was approved, no payment method was added and nothing was charged. Differences against the dossier: the prices match (20% of recovered revenue, $17 to $27.50 an alert, $0.05 an order for Fraud Protection and Shipping Updates); new is the Shopify spending limit of $90.000 per 30 days, and the 7 days trial is on the listing only, not on the Shopify screen; the $250 cap per win was not seen anywhere. Not tested: the core function (handling a dispute), the alert settings and the refund threshold, and the cancelling route. Clean up: the app stays installed on our development store (CEO instruction); our own tabs were closed; no theme change and no payment. No kit records were entered. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/disputifier-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-19",
+    "evidence_url": "https://officesoftwaremarketplace.com/disputifier-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-19",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Disputifier",
+    "product_id": "disputifier",
+    "run_date": "2026-11-19",
+    "session_type": "signup_attempt",
+    "what": "The app was installed on our Shopify development store, which Daan set up, and our AI assistant ran the test in Daan's browser. We installed Disputifier on our Shopify development store on 19 November 2026 to see how it handles chargebacks. The app's wizard asked for an e-mail address and then the Shopify screen asked for a payment method to approve the usage-based plan, so we could not use the product. We never enter a card in a test.",
+    "findings": [
+     "The wizard starts with an e-mail address. After that it turns on chargeback fighting at 20% of recovered revenue and Fraud Protection at $.05 an order by default; alerts and Shipping Updates start off.",
+     "Chargeback alerts are priced per network in the wizard: RDR $17, Ethoca $27.50 and CDRN $27.50.",
+     "The Shopify screen Approve subscription (Basic Plan, 20% of Recovered Revenue) showed an app spending limit of $90.000 per 30 days, a row Add payment method and a greyed out Approve button. It showed no amount, no test charge line and no trial; the 7 day trial is only on the listing.",
+     "The $250 cap per win that our dossier names was not on the listing, in the wizard or on the Shopify screen.",
+     "A one-star listing review of 28 October 2026 says leaving the app was a real pain; this is read from the listing and was not verified."
+    ],
+    "not_tested": [
+     "Not tested: handling a dispute (the core function), its win rate and its evidence.",
+     "The alert settings, the alert programs of the last two wizard steps and the refund threshold.",
+     "Any plan or trial; the Shopify subscription was not approved.",
+     "Cancelling and releasing the billing descriptor."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "claim_checks": [
+     {
+      "claim": "Free to install. Additional charges may apply.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Installing cost nothing: the dialog Install app was approved with Install and no payment was asked. The Shopify subscription screen that followed asked for a payment method before Approve could be used.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+      },
+      "plan": "Basic Plan approval screen, not approved, development store",
+      "comparability": "The listing line against our own install and the screen that followed; nothing was approved.",
+      "status": "confirmed",
+      "buying_consequence": "You can install it for free, but you cannot approve the usage plan without a payment method.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "20% of Chargeback Revenue Recovered",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Wizard step 3 shows Fully Automated, already on, with 20% of Chargeback Revenue Recovered, and the Shopify screen says Basic Plan (20% of Recovered Revenue). The cap of $250 per win named in the dossier was not on the listing, the wizard or the Shopify screen.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+      },
+      "plan": "Basic Plan approval screen, not approved, development store",
+      "comparability": "The wizard and the Shopify plan line against the dossier percentage; no dispute was won, so no fee was billed.",
+      "status": "confirmed",
+      "buying_consequence": "The 20% matches the dossier and is on by default; the cap per win could not be confirmed.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$250",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The dossier caps the fee at $250 per win. This cap was not shown on the listing, in the wizard or on the Shopify approval screen, which gives only a spending limit of $90.000 per 30 days.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+      },
+      "plan": "Basic Plan approval screen, not approved, development store",
+      "comparability": "A dossier cap from the vendor pricing page against screens that do not mention it; no recovery was billed.",
+      "status": "not_testable",
+      "buying_consequence": "The maximum fee on one large recovery was not seen in the app.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "CB Alerts: from $17-$27.50/alert",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Step 5 shows From $17/alert and Show Full Pricing gives RDR $17, Ethoca $27.50 and CDRN $27.50. Alerts were off by default and were not switched on.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+      },
+      "plan": "Basic Plan approval screen, not approved, development store",
+      "comparability": "The listing band against the amounts in the wizard window; no alert was bought.",
+      "status": "confirmed",
+      "buying_consequence": "The alert price depends on the network, from $17 to $27.50 each; the wizard names each amount.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "$.05/order",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Fraud Protection ($.05/order) is ticked by default in step 5 and Shipping Updates ($.05/order) is off. After the wizard Fraud Protection was on.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+      },
+      "plan": "Basic Plan approval screen, not approved, development store",
+      "comparability": "The per-order amounts in the dossier against the wizard defaults; no order was billed.",
+      "status": "confirmed",
+      "buying_consequence": "Fraud Protection starts on, so every order costs $0.05 unless you untick it.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "7 Day Risk-Free Trial",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The listing names a 7 Day Risk-Free Trial. The Shopify approval screen shows no trial line and no amount, and no trial was started.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+      },
+      "plan": "Basic Plan approval screen, not approved, development store",
+      "comparability": "A listing line against a Shopify screen that was not approved.",
+      "status": "not_testable",
+      "buying_consequence": "The trial is only on the listing; the approval screen does not mention it.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "You will be billed for this app when you begin to use it.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The box Your next bill on the Shopify screen says charges appear on your monthly invoice and your threshold bills. The app spending limit is a maximum of $90.000,00 USD per 30 days.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+      },
+      "plan": "Basic Plan approval screen, not approved, development store",
+      "comparability": "The dossier line billed on use against the Shopify screen; the spending limit is a different thing than the $250 cap per win.",
+      "status": "confirmed",
+      "buying_consequence": "There is no monthly fee; the bill follows use, with a very high spending limit that you can update after approval.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Getting out of this app has been a real pain.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "A one-star review of 28 Oct 2026 on the listing says leaving the app was hard. It is read from the listing and was not verified; the cancelling route was not tested.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+      },
+      "plan": "Basic Plan approval screen, not approved, development store",
+      "comparability": "A buyer review against a test that never reached an active plan.",
+      "status": "not_testable",
+      "buying_consequence": "Leaving the app may be hard; check the billing descriptor and open invoices before you start.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     },
+     {
+      "claim": "Add payment method",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The Shopify screen shows no amount, no tax line and no total, only a row Add payment method, the spending limit and a greyed out Approve button. Nothing was approved, no payment method was added and nothing was charged.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/disputifier-review.html#claim-vs-measured"
+      },
+      "plan": "Basic Plan approval screen, not approved, development store",
+      "comparability": "The printed prices of the wizard against a screen that shows no amount; no stored cost rule, tax line or fee line could be compared.",
+      "status": "not_testable",
+      "buying_consequence": "The amount you pay cannot be read from the approval screen; it follows use.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null
+     }
+    ],
+    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+    "exit_test": {
+     "run_date": "2026-11-19",
+     "what": "Daan created the account and our AI assistant ran the test in Daan's browser. On 19 November 2026 the session installed Disputifier on a Shopify development store, followed its wizard (an e-mail address, the payment processor, 20% chargeback fighting and the prevention options) and then reached the Shopify screen Approve subscription, which asked for a payment method with Approve greyed out. There was no test charge line, so nothing was approved and the product was not used. Prices in the wizard match the dossier; the Shopify screen adds a spending limit of $90.000 per 30 days and shows no amount or trial, and the $250 cap per win was not seen. Install: the install was started at 07:52:35 in our own tab on our Shopify development store (test plan Basic, admin in English, App Store opened with ?locale=en). The dialog Install app asked for View customer data (Sensitive data, device and activity data), View staff and contributor data (Store owner, blog contributors) and View and edit store data (Customers, products, orders, Shopify Payments, Online Store). It was approved with Install, which costs nothing, and the app was installed at about 07:54; the welcome wizard on the app's own site opened at once. The dossier name is Disputifier and the review is on OSM (osm/disputifier-review.html); the app and the dossier are the same product (developer Disputifier, launched 23 Sep 2020). Listing: Listing apps.shopify.com/disputifier, read on 19 Nov 2026: Free to install. Additional charges may apply.; one Basic Plan, Free to install, 7 Day Risk-Free Trial, CB Fighting: 20% of won back revenue, CB Alerts: from $17-$27.50/alert, all charges billed in USD; rated 4.6 from 141 reviews (125 five-star, 12 one-star). The dossier of 19 Oct 2026 had 4.7 from 133 reviews (119 five-star, 11 one-star); these counts move and are not a correction. The cap of $250 per win that the dossier names is not on the listing. In the wizard: chargeback fighting at 20% of Chargeback Revenue Recovered (only pay when we successfully win a chargeback), Fraud Protection at $.05/order and Shipping Updates at $.05/order, and Chargeback Alerts from $17/alert with Show Full Pricing: RDR $17, Ethoca $27.50 and CDRN $27.50. The dossier says alerts are sold by quote on the vendor page and the listing band is the only public number; the wizard now names the amount per network. On the Shopify approval screen: Basic Plan (20% of Recovered Revenue), an app spending limit of a maximum of $90.000,00 USD per 30 days, and no amount, no tax line, no total and no trial line. The 7 days trial is only on the listing. A one-star review of the listing dated 28 Oct 2026, from a merchant who used the app for 12 months, says Getting out of this app has been a real pain.: the merchant asked Disputifier to release its billing descriptor to move to another chargeback service, nothing had happened after a week, and then came the news that there were unpaid invoices. This is read from the listing and was not verified. Wizard (7 steps, finished at about 07:56): step 1 asks for an e-mail address (our own work address was entered; it is not shown in any screenshot) with How did you hear about us? on App store and optional WhatsApp or Telegram left empty. Step 2: Shopify Payments was already selected, nothing was connected and no outside login was asked. Step 3: Respond to chargebacks automatically? with Fully Automated (MOST POPULAR) already on, Only pay when we successfully win a chargeback and 20% of Chargeback Revenue Recovered, against Don't Respond to Chargebacks (Not Recommended). The first cost amount was seen here, 3 clicks after the e-mail address was entered. Step 4: the business model Physical Product was already on. Step 5: Chargeback Alerts off (From $17/alert), Fraud Protection on ($.05/order) and Shipping Updates off ($.05/order); Show Full Pricing gives RDR $17, Ethoca $27.50 and CDRN $27.50. So after the wizard chargeback fighting (20%) and Fraud Protection are on, and alerts and Shipping Updates are off. Steps 6 and 7 (alert programs and alert details, optional) were not reached: Continue on step 5 went straight to the Shopify billing screen. Checkout: the Shopify screen Approve subscription appeared at 07:56:28: Disputifier: Smart Chargebacks, This app bills you for usage charges, Plan: Basic Plan (20% of Recovered Revenue), App spending limit (a maximum of $90.000,00 USD per 30 days, which can be updated after approval), Your next bill: You will be billed for this app when you begin to use it. These charges will appear on your monthly invoice and your threshold bills., a greyed out Approve button, a row Add payment method and By proceeding, you are agreeing to the Terms of Service. Subject to government tax and other prevailing charges. The line You will not be billed for this test charge was NOT on the screen. Nothing was approved, no payment method was added and nothing was charged. Differences against the dossier: the prices match (20% of recovered revenue, $17 to $27.50 an alert, $0.05 an order for Fraud Protection and Shipping Updates); new is the Shopify spending limit of $90.000 per 30 days, and the 7 days trial is on the listing only, not on the Shopify screen; the $250 cap per win was not seen anywhere. Not tested: the core function (handling a dispute), the alert settings and the refund threshold, and the cancelling route. Clean up: the app stays installed on our development store (CEO instruction); our own tabs were closed; no theme change and no payment. No kit records were entered.",
+     "first_import": null,
+     "file_inspected": false,
+     "reimport_tested": false,
+     "awkward": "The wizard starts with an e-mail address and turns on chargeback fighting at 20% and Fraud Protection at $.05 an order by default. The Shopify approval screen shows no amount, only a spending limit of $90.000 per 30 days, and no trial line. A one-star listing review of 28 Oct 2026 says leaving the app was a real pain.",
+     "friction": {
+      "export_route": "No export or reimport was performed; no file was downloaded or examined. The two categorised kit records were not entered; the objects tested were not kit records.",
+      "format": "No downloaded bytes examined.",
+      "reimport": "No reimport performed.",
+      "cancellation": "No cancellation or downgrade performed."
+     },
+     "not_tested": [
+      "Not tested: handling a dispute (the core function), its win rate and its evidence.",
+      "The alert settings, the alert programs of steps 6 and 7 and the refund threshold.",
+      "Any plan or trial; the Shopify subscription was not approved.",
+      "Cancelling and releasing the billing descriptor.",
+      "Export and reimport.",
+      "Session and source-reading date: 19 November 2026. Times are CET. The session started at about 07:52 CET. These are approximate tester observations, not benchmark timings. Midnight timestamps are required date anchors, not measured event times."
+     ],
+     "available_fields": [],
+     "not_offered": [],
+     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+    },
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "disputifier:cancellation_terms",

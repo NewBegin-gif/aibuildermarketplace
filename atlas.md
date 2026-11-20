@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 683 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-19.
+All 683 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-20.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -405,7 +405,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Read the seat row before the price row. Professional and Business both cap at two full editing seats, so a "mid-sized team" plan at $134/mo annual still buys two people who can actually build.
 - **Best for:** agencies and in-house teams shipping email at volume across brands or ESPs: a dedicated builder with approvals, brand controls and one-click push to Salesforce Marketing Cloud, Pardot and HubSpot
 - **Flags:** Free tier
-- **Full review:** https://marketingandsalessoftware.com/beefree-review.html
+- **Full review:** https://aibuildermarketplace.com/b2b/beefree-review/
 
 ## Beehiiv (beehiiv.com)
 - **Verified pricing:** (re-verified 2026-10-05 on beehiiv.com/pricing, prices in USD) Subscriber-based, and you keep 100% of paid subscriptions — beehiiv shows a 0% take rate, against Substack's 10%, leaving only…

@@ -3263,6 +3263,31 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "KudosCRM",
+   "product_id": "kudoscrm",
+   "run_date": "19 November 2026",
+   "session_type": "hands_on",
+   "what": "Daan created the account and our AI assistant ran the test in Daan's browser on 19 November 2026, on the 14 day Professional trial that every new KudosCRM workspace gets without a card. We imported a CSV of 10 made up contacts, made a pipeline with three open stages, created one deal and moved it to the next stage, then opened the Insights page and the plan and billing screens. About 3 minutes passed between the start of onboarding and the deal sitting on the board. We stopped at the Stripe payment page and paid nothing. We invited nobody, connected no mailbox and sent nothing.",
+   "findings": [
+    "CSV import: a file of 10 contacts mapped 5 of 5 columns automatically and the report read \"IMPORTED 10, SKIPPED 0, FAILED 0\". It took one upload and one click on the import button, and the screen offers \"Revert import\".",
+    "Pipeline and deal: a new pipeline came with 4 open stages plus fixed Closed Won and Closed Lost. We archived one stage to leave three. A deal of 5,000 EUR moved from Qualified to Proposal Sent in one click, and the board showed a weighted value of about 3,000 EUR.",
+    "Insights: the home page showed \"OPEN PIPELINE\" at 5,000 EUR from 1 deal straight away. Win rate and revenue won stayed empty because we closed no deal.",
+    "Trial and card: the pricing page says \"14-day free trial, no credit card required\". We were not asked for a card at signup or during the trial. The app says Professional runs until 3 December 2026 and then falls back to Free with nothing charged. The first card request came when we chose Basic, which opened a Stripe checkout page.",
+    "Limit shown in the app: on the Free plan the pipelines meter read 1 of 1 with \"Limit reached\", although the trial had let us create two. The plan table lists 0 automation runs and 0 campaign emails for Free while the usage screen shows 100 runs and 200 emails, so the two screens disagree."
+   ],
+   "not_tested": [
+    "Not tested: inviting a teammate, connecting Gmail or Outlook, sending email, the Stripe payment, the BF40 code, exporting data, winning or losing a deal, and deleting the account.",
+    "We did not check whether CSV import still works on the Free plan after the trial, because the import ran during the Professional trial. We found no button to delete the workspace or account."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "DocHub",
    "product_id": "dochub",
    "run_date": "2026-11-19",

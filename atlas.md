@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 683 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-20.
+All 684 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-20.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -214,7 +214,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Implementation runs to weeks, the vendor's own pricing FAQ says most operations are live in under two to four weeks, and real-time support is the top tier's.
 - **Best for:** FTL trucking carriers and asset-based (hybrid) brokers with roughly 5–300 trucks (especially compliance-heavy freight like hazmat, reefer and cross-border) plus shippers running private fleets
 - **Flags:** Hidden pricing, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/alvys-review/
+- **Full review:** https://officesoftwaremarketplace.com/alvys-review.html
 
 ## AML Watcher (amlwatcher.com)
 - **Verified pricing:** (read 2026-11-07 on amlwatcher.com/pricing) AML Watcher sells anti-money-laundering screening in three plans: Basic for quick checks, Premium for in-depth risk analysis and enhanced due dil…
@@ -405,7 +405,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Read the seat row before the price row. Professional and Business both cap at two full editing seats, so a "mid-sized team" plan at $134/mo annual still buys two people who can actually build.
 - **Best for:** agencies and in-house teams shipping email at volume across brands or ESPs: a dedicated builder with approvals, brand controls and one-click push to Salesforce Marketing Cloud, Pardot and HubSpot
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/beefree-review/
+- **Full review:** https://marketingandsalessoftware.com/beefree-review.html
 
 ## Beehiiv (beehiiv.com)
 - **Verified pricing:** (re-verified 2026-10-05 on beehiiv.com/pricing, prices in USD) Subscriber-based, and you keep 100% of paid subscriptions — beehiiv shows a 0% take rate, against Substack's 10%, leaving only…
@@ -2156,6 +2156,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** UK small businesses, freelancers and agencies that want cPanel or managed WordPress hosting with UK-based phone and chat support, one price per billing period without a teaser rate
 - **Flags:** Annual commit
 - **Full review:** https://officesoftwaremarketplace.com/krystal-review.html
+
+## KudosCRM (kudoscrm.com)
+- **Verified pricing:** (read 2026-11-20 on kudoscrm.com/pricing, US dollars per seat a month) KudosCRM is a CRM with helpdesk, invoicing and projects in one subscription.
+- **Honest take:** CRM with pipelines, helpdesk, invoicing and projects in one subscription; free plan, paid from $9 per seat a month.
+- **Best for:** Small sales teams and growing businesses that want a CRM with pipelines, plus helpdesk and invoicing, at a per seat price and a free plan to start
+- **Flags:** Per-seat pricing, Add-ons extra, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/kudoscrm-review/
 
 ## Kumo (cloudlift.app)
 - **Verified pricing:** (read 2026-09-16 on apps.shopify.com/b2b-wholesale-tools; re-verified 2026-10-19, unchanged) Two plans and no free tier: B2B at $15 a month and PLUS at $30, both with a 7-day free trial, bi…
@@ -3950,7 +3957,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Publishing volume is the trap this tool makes cheap.
 - **Best for:** Shopify stores that want structured, product-linked blog drafts and a publishing schedule, and that will edit what comes out before it goes live
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/tapita-ai-seo-blog-builder-review/
+- **Full review:** https://marketingandsalessoftware.com/tapita-ai-seo-blog-builder-review.html
 
 ## Tapita SEO Optimizer (tapita.io)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/google-seo-schema-meta-data, English listing now titled “Tapita AI SEO Optimizer, Speed”, after reads on 2026-10-09 and 2026-10-12, and in our own test …
@@ -4088,7 +4095,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-11-02 on apps.shopify.com/tixel) One paid plan and no ladder to climb, and the amounts are unchanged since 22 August 2026.
 - **Honest take:** The free trial is now one day, and the one-star reviews describe a pixel that installs cleanly and then records nothing, so test events the day you install.
 - **Best for:** Shopify merchants running Meta and TikTok ads who need more than the free channel apps give them: several pixels on one store, pixels scoped to individual products
-- **Full review:** https://aibuildermarketplace.com/b2b/tixel-review/
+- **Full review:** https://marketingandsalessoftware.com/tixel-review.html
 
 ## TnC (effectify.io)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/terms-and-conditions-checkbox and in our own test session on 17 November 2026) Basic is $4.99 a month ($47.90 a year), Advanced $9.99 ($83.92) and Pro $…
@@ -4631,7 +4638,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-22 on zenbusiness.com/pricing-products/, where /pricing/ now redirects; every one of the sixteen published amounts unchanged since 25 Jul 2026) Formation itself is $0 p…
 - **Honest take:** The $0 is real for the filing service and it is also the whole commercial idea: what you sign up for at zero has an annual carry that is not shown next to it.
 - **Best for:** first-time founders who want the paperwork handled and are willing to pay a yearly fee to keep it handled: the a-la-carte pricing means you can start at the state fee plus a registered agent and add only what you actually need
-- **Full review:** https://aibuildermarketplace.com/b2b/zenbusiness-review/
+- **Full review:** https://officesoftwaremarketplace.com/zenbusiness-review.html
 
 ## Zendesk (zendesk.com)
 - **Verified pricing:** (re-verified 2026-08-12, read on their own pricing page from two countries) Per agent per month on annual billing, US storefront: Support Team $19, Suite Team $55, Suite Professional $115.

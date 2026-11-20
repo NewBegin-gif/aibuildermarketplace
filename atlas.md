@@ -953,7 +953,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/content-raptor-review.html
 
 ## Contractor Foreman (contractorforeman.com)
-- **Verified pricing:** (re-verified 11 Oct 2026 on their own pricing page: annual prices unchanged since 1 Aug 2026; the quarterly option recorded on 28 Aug 2026 has been replaced by monthly billing) Priced for t…
+- **Verified pricing:** (re-verified 20 Nov 2026 on their own pricing page: annual and monthly prices unchanged since 11 Oct 2026, annual prices unchanged since 1 Aug 2026; the quarterly option recorded on 28 Aug …
 - **Honest take:** Credit where it is due first: this is company pricing with unlimited projects and no per-user overage inside your tier, which is rare in construction software and cheaper than per-seat rivals for a crew.
 - **Best for:** small and mid-size contractors who want estimating, scheduling and daily logs in one place and can commit to a year: the company-wide fee makes it cheap per head once you have a crew
 - **Flags:** Annual commit
@@ -2162,7 +2162,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** CRM with pipelines, helpdesk, invoicing and projects in one subscription; free plan, paid from $9 per seat a month.
 - **Best for:** Small sales teams and growing businesses that want a CRM with pipelines, plus helpdesk and invoicing, at a per seat price and a free plan to start
 - **Flags:** Per-seat pricing, Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/kudoscrm-review/
+- **Full review:** https://marketingandsalessoftware.com/kudoscrm-review.html
 
 ## Kumo (cloudlift.app)
 - **Verified pricing:** (read 2026-09-16 on apps.shopify.com/b2b-wholesale-tools; re-verified 2026-10-19, unchanged) Two plans and no free tier: B2B at $15 a month and PLUS at $30, both with a 7-day free trial, bi…
@@ -4078,9 +4078,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/tickettailor-review/
 
 ## Tidio (tidio.com)
-- **Verified pricing:** (read 2026-08-24 on www.tidio.com/pricing/ with both billing columns clicked, and on www.tidio.com) The plan table opens on the annual column, so the first figures on the page are not what …
+- **Verified pricing:** (read 20 November 2026 on www.tidio.com/pricing/, including its FAQ; this replaces the plan table we read on 24 August and 10 October 2026, which Tidio has since restructured) Every paid pl…
 - **Honest take:** The AI number on the homepage and the AI number on the pricing page do not agree, and the pricing page is the lower of the two.
-- **Best for:** support teams that want an AI agent and a help desk from the same vendor and can size all three meters (billable conversations, Lyro AI conversations and Flows visitors) against their own volume before they commit, and Shopify
+- **Best for:** support teams that want an AI agent and a help desk from the same vendor and can size the shared conversation quota and the separate Flows meter against their own volume before they commit, and Shopify
 - **Flags:** Add-ons extra, Annual commit, Free tier
 - **Full review:** https://zerotouchsupport.com/tidio-review.html
 

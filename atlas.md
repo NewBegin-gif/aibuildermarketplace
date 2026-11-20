@@ -714,7 +714,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/capsule-review.html
 
 ## Carbon6 (carbon6.io)
-- **Verified pricing:** What we can verify on the vendor’s own pages today (re-checked 10 Oct 2026; unchanged since 26 Aug 2026): carbon6.io/pricing now redirects to the tool list, so there is no suite-level price…
+- **Verified pricing:** What we can verify on the vendor’s own pages today (re-checked 10 Oct and 20 Nov 2026; unchanged since 26 Aug 2026): carbon6.io/pricing now redirects to the tool list, so there is no suite-…
 - **Honest take:** Ownership has moved twice: SPS Commerce bought Carbon6 in February 2025, then on 30 June 2026 sold the 3P revenue-recovery business, which now runs under the Carbon6 name again.
 - **Best for:** Amazon sellers who want reimbursements, advertising, inventory and sourcing tools from one vendor and are content to buy them tool by tool: the suite trades under the Carbon6 brand again since 30 Jun 2026
 - **Full review:** https://officesoftwaremarketplace.com/carbon6-review.html
@@ -851,7 +851,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/cloudtask-review.html
 
 ## Cloudways (cloudways.com)
-- **Verified pricing:** (read 2026-08-26 on cloudways.com/en/pricing.php, DigitalOcean tab) No free tier, but a 3-day free trial with no credit card required.
+- **Verified pricing:** (read 2026-08-26 on cloudways.com/en/pricing.php, DigitalOcean tab) No free tier, but a free trial with no credit card required: 5 days on Flexible, the managed-server product this price li…
 - **Honest take:** "Fully managed" here means the server, not your site, and that distinction is where the money is.
 - **Best for:** agencies and PHP shops running many sites who want servers managed but not metered. One server holds as many sites as it can carry with no visit caps, billing is hourly and post-paid with no annual term
 - **Flags:** Add-ons extra
@@ -1001,7 +1001,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/crossloop-review/
 
 ## CrowdStrike (crowdstrike.com)
-- **Verified pricing:** (re-verified 2026-09-22 on crowdstrike.com/en-us/pricing/falcon-go/ from a Netherlands exit; all six amounts unchanged since 1 Aug 2026 and the page states 'All prices listed are in US Doll…
+- **Verified pricing:** (re-verified 2026-09-22 and 2026-11-20 on crowdstrike.com/en-us/pricing/falcon-go/; all six amounts unchanged since 1 Aug 2026 and the page states 'All prices listed are in US Dollars' with…
 - **Honest take:** Two numbers decide whether this is for you, and neither is the headline. The first is the 100-device ceiling on Falcon Go: it is not a soft limit you grow through, it is the point where you change product.
 - **Best for:** small and mid-size companies that want a serious endpoint agent without running a security team: Falcon Go is priced for businesses under 100 devices
 - **Full review:** https://aibuildermarketplace.com/b2b/crowdstrike-review/
@@ -1318,7 +1318,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/emergent-review.html
 
 ## Employment Hero (employmenthero.com)
-- **Verified pricing:** (2026-08-28, read on their own pricing page at employmenthero.com/pricing/; re-verified 2026-10-06) EVERY PRICE ON THAT PAGE IS AUD EXCLUDING GST — the page states it in its own disclaimer.
+- **Verified pricing:** (read 20 November 2026 on employmenthero.com/pricing/, the Australian page (hreflang en-au); first read 28 August 2026, re-verified 6 October 2026) The page's disclaimer reads 'All prices A…
 - **Honest take:** Every figure on the pricing page is AUD excluding GST with no US page, and HR, recruitment, chat and payroll are separate subscriptions with a minimum of ten users.
 - **Best for:** Australian and New Zealand employers who want HR and payroll from one vendor and will use both, where the per-employee rate beats separate systems
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
@@ -1971,7 +1971,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/invideo-review.html
 
 ## involve.me (involve.me)
-- **Verified pricing:** (re-verified 19 September 2026 on the public pricing page; the free plan's feature set was measured inside the product, because the plan cards still do not state it) There is a free plan, a…
+- **Verified pricing:** (re-verified 20 November 2026 on the public pricing page, amounts unchanged since 19 September; the free plan's feature set was measured inside the product, because the plan cards still do …
 - **Honest take:** The tier pages sell live funnels, but the meter that empties first is contacts.
 - **Best for:** marketers building interactive lead-gen (quizzes, calculators, assessments and payment funnels with built-in email sequences) who want a free tier to validate the concept first
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -3501,7 +3501,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026-07-24, read on their own pricing page) Four plans, and the page opens on the annual view — so the first number you see is not the month-to-month price.
 - **Honest take:** The thing you are actually buying is data coverage, and that is the one thing you cannot verify: Serpstat's own published figures do not agree with each other.
 - **Best for:** solo SEOs and small in-house teams who want the whole workflow (keywords, rankings, audit, competitors) under one subscription at roughly a third of what the incumbents charge
-- **Flags:** Usage-metered, Annual commit
+- **Flags:** Usage-metered, Renewal jump, Annual commit
 - **Full review:** https://marketingandsalessoftware.com/serpstat-review.html
 
 ## ServiceM8 (servicem8.com)

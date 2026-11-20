@@ -81,16 +81,423 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "basic",
+     "name": "Basic",
+     "model": "per_unit",
+     "annual_month": 9,
+     "monthly": 12,
+     "evidence": "Free is $0. Basic costs $9 per seat a month billed yearly or $12 monthly. Professional costs $24 per seat a month billed yearly or $29 monthly. Enterprise costs $49 per seat a month billed yearly or $59 monthly."
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "per_unit",
+     "annual_month": 24,
+     "monthly": 29,
+     "evidence": "Free is $0. Basic costs $9 per seat a month billed yearly or $12 monthly. Professional costs $24 per seat a month billed yearly or $29 monthly. Enterprise costs $49 per seat a month billed yearly or $59 monthly."
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "per_unit",
+     "annual_month": 49,
+     "monthly": 59,
+     "evidence": "Free is $0. Basic costs $9 per seat a month billed yearly or $12 monthly. Professional costs $24 per seat a month billed yearly or $29 monthly. Enterprise costs $49 per seat a month billed yearly or $59 monthly."
+    }
+   ],
+   "addons": [
+    {
+     "id": "ai-boost",
+     "label": "Kudos AI Boost",
+     "per": "unit",
+     "price_month": 10,
+     "billing": "unspecified",
+     "evidence": "Add-ons include Kudos AI Boost at $10 per seat a month and Calling at $15 per seat a month."
+    },
+    {
+     "id": "calling",
+     "label": "Calling",
+     "per": "unit",
+     "price_month": 15,
+     "billing": "unspecified",
+     "evidence": "Add-ons include Kudos AI Boost at $10 per seat a month and Calling at $15 per seat a month."
+    }
+   ],
+   "notes": [
+    "Prices exclude tax.",
+    "Every workspace starts with 14 days of Professional with no credit card required."
+   ],
+   "not_computable": [
+    "A Free plan at $0 exists, but its seat and contact limits are not in the price notes, so it is left out of these totals.",
+    "The BF40 Black Friday code (40% off the first year of Professional, ending 1 December 2026) is not applied."
+   ],
+   "rules_verified_at": "2026-11-20"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "kudoscrm",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 9.0,
+      "billed": {
+       "amount": 108.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 9.0,
+       "professional": 24.0,
+       "enterprise": 49.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 18.0,
+      "billed": {
+       "amount": 216.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 18.0,
+       "professional": 48.0,
+       "enterprise": 98.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 27.0,
+      "billed": {
+       "amount": 324.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 27.0,
+       "professional": 72.0,
+       "enterprise": 147.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 45.0,
+      "billed": {
+       "amount": 540.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 45.0,
+       "professional": 120.0,
+       "enterprise": 245.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 1080.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 90.0,
+       "professional": 240.0,
+       "enterprise": 490.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 135.0,
+      "billed": {
+       "amount": 1620.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 135.0,
+       "professional": 360.0,
+       "enterprise": 735.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 180.0,
+      "billed": {
+       "amount": 2160.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 180.0,
+       "professional": 480.0,
+       "enterprise": 980.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 225.0,
+      "billed": {
+       "amount": 2700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 225.0,
+       "professional": 600.0,
+       "enterprise": 1225.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 450.0,
+      "billed": {
+       "amount": 5400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 450.0,
+       "professional": 1200.0,
+       "enterprise": 2450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 900.0,
+      "billed": {
+       "amount": 10800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 900.0,
+       "professional": 2400.0,
+       "enterprise": 4900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "A Free plan at $0 exists, but its seat and contact limits are not in the price notes, so it is left out of these totals.",
+     "The BF40 Black Friday code (40% off the first year of Professional, ending 1 December 2026) is not applied."
+    ]
+   },
+   "monthly": {
+    "product_id": "kudoscrm",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 12.0,
+      "billed": {
+       "amount": 12.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 12.0,
+       "professional": 29.0,
+       "enterprise": 59.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 24.0,
+      "billed": {
+       "amount": 24.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 24.0,
+       "professional": 58.0,
+       "enterprise": 118.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 36.0,
+      "billed": {
+       "amount": 36.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 36.0,
+       "professional": 87.0,
+       "enterprise": 177.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 60.0,
+       "professional": 145.0,
+       "enterprise": 295.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 120.0,
+      "billed": {
+       "amount": 120.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 120.0,
+       "professional": 290.0,
+       "enterprise": 590.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 180.0,
+      "billed": {
+       "amount": 180.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 180.0,
+       "professional": 435.0,
+       "enterprise": 885.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 240.0,
+      "billed": {
+       "amount": 240.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 240.0,
+       "professional": 580.0,
+       "enterprise": 1180.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 300.0,
+       "professional": 725.0,
+       "enterprise": 1475.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 600.0,
+      "billed": {
+       "amount": 600.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 600.0,
+       "professional": 1450.0,
+       "enterprise": 2950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "basic",
+      "cheapest_plan_name": "Basic",
+      "total_month": 1200.0,
+      "billed": {
+       "amount": 1200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "basic": 1200.0,
+       "professional": 2900.0,
+       "enterprise": 5900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "A Free plan at $0 exists, but its seat and contact limits are not in the price notes, so it is left out of these totals.",
+     "The BF40 Black Friday code (40% off the first year of Professional, ending 1 December 2026) is not applied."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -148,9 +555,15 @@
    "status": "open"
   },
   {
-   "question_id": "kudoscrm:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "kudoscrm:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: A Free plan at $0 exists, but its seat and contact limits are not in the price notes, so it is left out of these totals. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "kudoscrm:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: The BF40 Black Friday code (40% off the first year of Professional, ending 1 December 2026) is not applied. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

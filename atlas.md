@@ -3119,7 +3119,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (price re-verified 2026-08-31 against the vendor's own pricing page; all prices are quoted on the page in USD) (2026) Three tiers: Starter $15/user/mo annual (billed $180/yr) or $19 monthly…
 - **Honest take:** Call reliability is the recurring complaint: G2 logs hundreds of connection and disconnection reports, and calls get shaky the moment you're off Wi-Fi.
 - **Best for:** micro-teams of 2–5 people working mostly on Wi-Fi who want a clean, modern phone app built around a shared inbox, with AI call summaries (Sona)
-- **Flags:** Per-seat pricing, Usage-metered
+- **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://zerotouchsupport.com/quo-review.html
 
 ## Rank Math (rankmath.com)
@@ -4479,7 +4479,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/weblium-review/
 
 ## Wegic (wegic.ai)
-- **Verified pricing:** (re-verified 19 October 2026 against the plan table in Wegic's help centre, help.wegic.ai/welcome-to-wegic/plan-and-credits, which prints all four figures as text — 39.9 and 69.9 USD a mont…
+- **Verified pricing:** (re-verified 19 October and 20 November 2026 against the plan table in Wegic's help centre, help.wegic.ai/welcome-to-wegic/plan-and-credits, which prints all four figures as text — 39.9 and…
 - **Honest take:** Everything is credits, and generating a site burns them fast: Wegic's own page notes a single generation can cost over $10 in credits, while the free plan gives 100 credits once.
 - **Best for:** non-technical founders who want an AI to build and host a simple site fast, and are comfortable with usage-based credit pricing
 - **Flags:** Usage-metered, Free tier

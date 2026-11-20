@@ -3067,10 +3067,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/pushowl-review/
 
 ## Pylon (usepylon.com)
-- **Verified pricing:** (checked 2026-09-01) Pylon no longer publishes rates.
-- **Honest take:** The per-seat sticker is the entry ticket; the AI that makes the platform sing is metered separately.
+- **Verified pricing:** (re-read 2026-11-20 on usepylon.com/pricing, usepylon.com/pylon-facts and usepylon.com/llms.txt) Pylon publishes rates again.
+- **Honest take:** The seat price is only part of the bill: AI agents run on credits that sales prices, phone adds $35 a seat and SSO on Advanced adds $125 a month, so model the full basket before you compare.
 - **Best for:** B2B SaaS teams supporting customers in shared Slack/Teams channels who want tickets, accounts and AI in one B2B-native platform
-- **Flags:** Hidden pricing, Per-seat pricing, Usage-metered
+- **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit
 - **Full review:** https://zerotouchsupport.com/pylon-review.html
 
 ## Pythago (pythago.io)

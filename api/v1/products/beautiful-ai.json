@@ -66,16 +66,505 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "max_units": 1,
+     "annual_month": 14.5,
+     "monthly_status": "unknown",
+     "evidence": "Pro $14.50 a month billed annually"
+    },
+    {
+     "id": "team",
+     "name": "Team",
+     "model": "flat",
+     "included_units": 3,
+     "max_units": 3,
+     "annual_month": 40,
+     "monthly_status": "unknown",
+     "evidence": "'$40 /MO (INCLUDES 3 USERS)' and 'Fixed pricing for up to three users'"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise custom for 20+ seats"
+    }
+   ],
+   "conflicts": [
+    {
+     "about": "Team per user or flat for three users",
+     "evidence": "the same page's summary and FAQ still say $40 per user per month for 2 to 20 seats, so confirm the seat price at checkout"
+    }
+   ],
+   "not_computable": [
+    "Team above three users: the plan card prices three users at a fixed $40 a month, while the summary and FAQ quote $40 per user for 2 to 20 seats; no rate for a fourth seat is printed on the card.",
+    "Month-to-month prices: the notes give $45 for a one-off month of Pro and a struck-through $50 on the Team card, neither stated as the monthly-billing rate."
+   ],
+   "notes": [
+    "Rule from the 19 November 2026 re-read of beautiful.ai/pricing. A single one-off presentation (~$45) is not modelled."
+   ],
+   "rules_verified_at": "2026-11-20"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "beautiful-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 14.5,
+      "billed": {
+       "amount": 174.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 14.5,
+       "team": 40.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": 40.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 480.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": 40.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "pro",
+      "to_plan": "team",
+      "from_plan_name": "Pro",
+      "to_plan_name": "Team"
+     },
+     {
+      "from_units": 3,
+      "to_units": 5,
+      "from_plan": "team",
+      "to_plan": null,
+      "from_plan_name": "Team",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [
+     {
+      "about": "Team per user or flat for three users",
+      "evidence": "the same page's summary and FAQ still say $40 per user per month for 2 to 20 seats, so confirm the seat price at checkout"
+     }
+    ],
+    "unknowns": [
+     "Team above three users: the plan card prices three users at a fixed $40 a month, while the summary and FAQ quote $40 per user for 2 to 20 seats; no rate for a fourth seat is printed on the card.",
+     "Month-to-month prices: the notes give $45 for a one-off month of Pro and a struck-through $50 on the Team card, neither stated as the monthly-billing rate."
+    ],
+    "measured": [
+     {
+      "claim": "Your trial will be canceled immediately.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "After Cancel plan, Billing said Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026, so access stays until the end of the trial.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+      "comparability": "The cancel dialog against the billing page after the cancellation.",
+      "status": "contradicted",
+      "buying_consequence": "You keep the trial after cancelling, despite the warning.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html"
+     },
+     {
+      "claim": "Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Billing shows annual billing by default; $174.00 is a year of Pro at the dossier price at $14.50 a month billed annually.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+      "comparability": "The billing page against the dossier price list.",
+      "status": "confirmed",
+      "buying_consequence": "Without cancelling, day 14 bills a full year.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html"
+     },
+     {
+      "claim": "Quarterly Performance Review: [Bakery Name]",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "One prompt gave a polished 8-slide deck in about 55 seconds, with placeholders instead of figures; switching the chart slide to a list layout dropped the chart and the 68% figure.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+      "comparability": "The generated deck against the dossier note that the template engine looks polished but constrains layouts.",
+      "status": "confirmed",
+      "buying_consequence": "Fast first drafts; expect to fill in every figure yourself.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "beautiful-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "price_unknown_on_billing",
+       "team": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pro": "not_eligible",
+       "team": "not_eligible",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [
+     {
+      "about": "Team per user or flat for three users",
+      "evidence": "the same page's summary and FAQ still say $40 per user per month for 2 to 20 seats, so confirm the seat price at checkout"
+     }
+    ],
+    "unknowns": [
+     "Team above three users: the plan card prices three users at a fixed $40 a month, while the summary and FAQ quote $40 per user for 2 to 20 seats; no rate for a fourth seat is printed on the card.",
+     "Month-to-month prices: the notes give $45 for a one-off month of Pro and a struck-through $50 on the Team card, neither stated as the monthly-billing rate."
+    ],
+    "measured": [
+     {
+      "claim": "Your trial will be canceled immediately.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "After Cancel plan, Billing said Your workspace will be downgraded at the end of the current billing cycle, Dec 03, 2026, so access stays until the end of the trial.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+      "comparability": "The cancel dialog against the billing page after the cancellation.",
+      "status": "contradicted",
+      "buying_consequence": "You keep the trial after cancelling, despite the warning.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html"
+     },
+     {
+      "claim": "Your next bill of $174.00 will be due when your free trial ends on Dec 03, 2026.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Billing shows annual billing by default; $174.00 is a year of Pro at the dossier price at $14.50 a month billed annually.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+      "comparability": "The billing page against the dossier price list.",
+      "status": "confirmed",
+      "buying_consequence": "Without cancelling, day 14 bills a full year.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html"
+     },
+     {
+      "claim": "Quarterly Performance Review: [Bakery Name]",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "One prompt gave a polished 8-slide deck in about 55 seconds, with placeholders instead of figures; switching the chart slide to a list layout dropped the chart and the 68% figure.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html#claim-vs-measured"
+      },
+      "plan": "Beautiful.ai Pro, 14-day trial on annual billing, $174.00 a year after the trial",
+      "comparability": "The generated deck against the dossier note that the template engine looks polished but constrains layouts.",
+      "status": "confirmed",
+      "buying_consequence": "Fast first drafts; expect to fill in every figure yourself.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/beautiful-ai-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -780,9 +1269,21 @@
    "status": "open"
   },
   {
-   "question_id": "beautiful-ai:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "beautiful-ai:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "beautiful-ai:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Team above three users: the plan card prices three users at a fixed $40 a month, while the summary and FAQ quote $40 per user for 2 to 20 seats; no rate for a fourth seat is printed on the card. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "beautiful-ai:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Month-to-month prices: the notes give $45 for a one-off month of Pro and a struck-through $50 on the Team card, neither stated as the monthly-billing rate. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

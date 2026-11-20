@@ -17,13 +17,13 @@
   "from_price_usd_month": 37.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(2026-08-28, checked line by line against their own pricing page; every figure below is the same as on 1 Aug 2026) Flat per account, not per seat, with unlimited listings on every tier. Starter $37/month ($451 a year), Essential $77 ($931), Plus $157 ($1,891), Pro $237 ($2,851) — annual saves 20%. The ladder is set by monthly sales volume, not by features: Starter up to $15K, Essential up to $50K, Plus up to $250K, Pro up to $1M. Marketplaces included: 2, 3, 4 and 6. Aura AI covers 250, 500, 1,000 and unlimited listings; Hyperdrive 10, 25, 50 and 100 allocations; user seats 1, 2, 5 and unlimited. Their table adds three things the earlier reading did not record: monthly sales are calculated on a trailing two months, workflows run 5, 10, unlimited and unlimited, and there is a 14-day free trial. Re-verified 11 October 2026 on goaura.com/pricing: all four prices, annual totals, sales bands, marketplace counts, allowances and the 14-day trial unchanged. The billing toggle still reads 'Annually (save 20%)', while the FAQ on the same page says annual gives 'two months free on every tier' and 'up to 17% off compared to monthly'; the monthly rates are not printed in the page source we read, so we cannot recompute which figure is right.",
-  "verified_at": "2026-10-11",
+  "notes": "(2026-08-28, checked line by line against their own pricing page; every figure below is the same as on 1 Aug 2026) Flat per account, not per seat, with unlimited listings on every tier. Starter $37/month ($451 a year), Essential $77 ($931), Plus $157 ($1,891), Pro $237 ($2,851) — annual saves 20%. The ladder is set by monthly sales volume, not by features: Starter up to $15K, Essential up to $50K, Plus up to $250K, Pro up to $1M. Marketplaces included: 2, 3, 4 and 6. Aura AI covers 250, 500, 1,000 and unlimited listings; Hyperdrive 10, 25, 50 and 100 allocations; user seats 1, 2, 5 and unlimited. Their table adds three things the earlier reading did not record: monthly sales are calculated on a trailing two months, workflows run 5, 10, unlimited and unlimited, and there is a 14-day free trial. Re-verified 11 October 2026 on goaura.com/pricing: all four prices, annual totals, sales bands, marketplace counts, allowances and the 14-day trial unchanged. The billing toggle still reads 'Annually (save 20%)', while the FAQ on the same page says annual gives 'two months free on every tier' and 'up to 17% off compared to monthly'; the monthly rates are not printed in the page source we read, so we cannot recompute which figure is right. Re-verified 20 November 2026 on goaura.com/pricing: the four prices, annual totals, sales bands, marketplace counts, allowances and the 14-day trial (no credit card, per the FAQ) are unchanged, and the toggle and FAQ still disagree on 20% against 'up to 17%'. The FAQ now also says sellers doing $1M+ in monthly sales qualify for custom Scale pricing.",
+  "verified_at": "2026-11-20",
   "source_url": null,
   "schema_offer": {
    "price": 37.0,
    "currency": "USD",
-   "description": "Starter, per month flat per account, but the tier is set by your monthly sales volume rather than by features. Read on the vendor's own pricing page on 2026-08-28.",
+   "description": "Starter, per month flat per account, but the tier is set by your monthly sales volume rather than by features. Read on the vendor's own pricing page on 2026-11-20.",
    "page": "https://marketingandsalessoftware.com/aura-review.html"
   },
   "source_quotes": null,
@@ -71,16 +71,428 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "annual_year": 451,
+     "monthly_status": "unknown",
+     "evidence": "Starter $37/month ($451 a year), Essential $77 ($931), Plus $157 ($1,891), Pro $237 ($2,851)",
+     "max_units": 1
+    },
+    {
+     "id": "essential",
+     "name": "Essential",
+     "model": "flat",
+     "annual_year": 931,
+     "monthly_status": "unknown",
+     "evidence": "Starter $37/month ($451 a year), Essential $77 ($931), Plus $157 ($1,891), Pro $237 ($2,851)",
+     "max_units": 2
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "flat",
+     "annual_year": 1891,
+     "monthly_status": "unknown",
+     "evidence": "Starter $37/month ($451 a year), Essential $77 ($931), Plus $157 ($1,891), Pro $237 ($2,851)",
+     "max_units": 5
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "annual_year": 2851,
+     "monthly_status": "unknown",
+     "evidence": "Starter $37/month ($451 a year), Essential $77 ($931), Plus $157 ($1,891), Pro $237 ($2,851)"
+    }
+   ],
+   "notes": [
+    "Flat per account; the user-seat caps are 1, 2, 5 and unlimited ('user seats 1, 2, 5 and unlimited').",
+    "The page prints the monthly figures as $37, $77, $157 and $237 next to the annual totals; the monthly-billing rates are not in our notes, and the page says both 'save 20%' and 'up to 17%' for annual billing."
+   ],
+   "not_computable": [
+    "The tier is set by monthly sales volume (up to $15K, $50K, $250K and $1M, on a trailing two months), not by users; a seller above a band must move up whatever the seat count. Sellers above $1M a month get custom Scale pricing."
+   ],
+   "rules_verified_at": "2026-11-20"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "aura",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 37.58,
+      "billed": {
+       "amount": 451.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 37.58,
+       "essential": 77.58,
+       "plus": 157.58,
+       "pro": 237.58
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essential",
+      "cheapest_plan_name": "Essential",
+      "total_month": 77.58,
+      "billed": {
+       "amount": 931.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": 77.58,
+       "plus": 157.58,
+       "pro": 237.58
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 157.58,
+      "billed": {
+       "amount": 1891.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": 157.58,
+       "pro": 237.58
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "plus",
+      "cheapest_plan_name": "Plus",
+      "total_month": 157.58,
+      "billed": {
+       "amount": 1891.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": 157.58,
+       "pro": 237.58
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 237.58,
+      "billed": {
+       "amount": 2851.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": 237.58
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 237.58,
+      "billed": {
+       "amount": 2851.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": 237.58
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 237.58,
+      "billed": {
+       "amount": 2851.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": 237.58
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 237.58,
+      "billed": {
+       "amount": 2851.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": 237.58
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 237.58,
+      "billed": {
+       "amount": 2851.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": 237.58
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Pro",
+      "total_month": 237.58,
+      "billed": {
+       "amount": 2851.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": 237.58
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "essential",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Essential"
+     },
+     {
+      "from_units": 2,
+      "to_units": 3,
+      "from_plan": "essential",
+      "to_plan": "plus",
+      "from_plan_name": "Essential",
+      "to_plan_name": "Plus"
+     },
+     {
+      "from_units": 5,
+      "to_units": 10,
+      "from_plan": "plus",
+      "to_plan": "pro",
+      "from_plan_name": "Plus",
+      "to_plan_name": "Pro"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "The tier is set by monthly sales volume (up to $15K, $50K, $250K and $1M, on a trailing two months), not by users; a seller above a band must move up whatever the seat count. Sellers above $1M a month get custom Scale pricing."
+    ]
+   },
+   "monthly": {
+    "product_id": "aura",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "essential": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "price_unknown_on_billing",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "price_unknown_on_billing",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "essential": "not_eligible",
+       "plus": "not_eligible",
+       "pro": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "The tier is set by monthly sales volume (up to $15K, $50K, $250K and $1M, on a trailing two months), not by users; a seller above a band must move up whatever the seat count. Sellers above $1M a month get custom Scale pricing."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -116,9 +528,15 @@
    "status": "open"
   },
   {
-   "question_id": "aura:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "aura:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "aura:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: The tier is set by monthly sales volume (up to $15K, $50K, $250K and $1M, on a trailing two months), not by users; a seller above a band must move up whatever the seat count. Sellers above $1M a month get custom Scale pricing. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -3263,6 +3263,31 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "TrueMargin",
+   "product_id": "truemargin",
+   "run_date": "20 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 20 November 2026 on a Shopify development store with the Basic plan and two test orders. We installed the app from its Shopify App Store page, filled in a cost per item on the two ordered products and looked at the Orders and Reports screens. About 3 minutes 20 seconds passed between pressing Install and the first margin figure. The app asked for no plan and no card, and we paid nothing. We removed the app afterwards.",
+   "findings": [
+    "Install: the Shopify dialog asked for read access to products, orders, customer data and store owner data. There was no plan screen and no approval step. The app opened on a \"Profitability overview\" after about 10 seconds.",
+    "Before costs: the overview showed 2 orders and US$1,449.90 in sales, with \"COGS COVERAGE 0/2\" and both orders marked \"INCOMPLETE\" because the cost was unknown.",
+    "Cost per item: the app reads the cost from the \"Cost per item\" field of the Shopify variant, not from its own form. After we entered US$310 and US$395 in Shopify and reloaded the app, coverage read 2/2 and both orders were \"COMPLETE\".",
+    "Margin: the Orders screen showed 55.7% and 47.3% per order, with known contribution of US$744.90. The Reports screen showed a margin of 51.4%. The overview screen itself shows no margin percentage.",
+    "Plan: Shopify showed \"No plan selected\" under Billing for the app and the App Store page says Free. Payment fees, VAT and shipping showed US$0.00 and \"Cost rules 0\" until cost rules are set up."
+   ],
+   "not_tested": [
+    "Not tested: cost rules for payment fees, shipping, ads and returns and their effect on margin, the price calculator, the diagnostics screen, Export CSV, comparing periods and markets, and more than two orders.",
+    "Not tested: whether payment fees and VAT are deducted per order as the App Store page says, because we set up no cost rules and the screens showed US$0.00 for other costs."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "KudosCRM",
    "product_id": "kudoscrm",
    "run_date": "19 November 2026",
@@ -43496,7 +43521,7 @@
      "observed_on": "2026-10-31",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/apollo-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/apollo-review.html#claim-vs-measured"
      },
      "plan": "Professional current plan (trial context)",
      "comparability": "Apollo free-forever signup wording describes a different plan from the current Professional trial context.",
@@ -43513,7 +43538,7 @@
      "observed_on": "2026-10-31",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/apollo-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/apollo-review.html#claim-vs-measured"
      },
      "plan": "Professional current plan (trial context)",
      "comparability": "Apollo card-free wording is checked against its recorded post-registration session without payment entry, while full signup screen counting remains unknown.",
@@ -43530,7 +43555,7 @@
      "observed_on": "2026-10-31",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/apollo-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/apollo-review.html#claim-vs-measured"
      },
      "plan": "Professional current plan (trial context)",
      "comparability": "Apollo price comparison uses Basic, one seat in USD with month pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
@@ -44981,7 +45006,7 @@
      "observed_on": "2026-10-31",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/lindy-ai-review.html#claim-vs-measured"
      },
      "plan": "Trial not started: payment gate",
      "comparability": "Lindy starting-credit wording cannot be checked without reaching the assistant after its payment gate.",
@@ -44998,7 +45023,7 @@
      "observed_on": "2026-10-31",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/lindy-ai-review.html#claim-vs-measured"
      },
      "plan": "Trial not started: payment gate",
      "comparability": "Lindy no-card wording is compared with its mandatory payment block after skipping Google and Outlook connection on the email signup route.",
@@ -45015,7 +45040,7 @@
      "observed_on": "2026-10-31",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/lindy-ai-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/lindy-ai-review.html#claim-vs-measured"
      },
      "plan": "Trial not started: payment gate",
      "comparability": "Lindy.ai price comparison uses 7-day trial then monthly in USD with month pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
@@ -47614,7 +47639,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/getscreen-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/getscreen-review.html#claim-vs-measured"
      },
      "plan": "14-day trial; the plans were read in the Buy a Subscription window and on the public pricing page; no checkout was opened",
      "comparability": "The invitation window and client page against the dossier line on browser links.",
@@ -47631,7 +47656,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/getscreen-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/getscreen-review.html#claim-vs-measured"
      },
      "plan": "14-day trial; the plans were read in the Buy a Subscription window and on the public pricing page; no checkout was opened",
      "comparability": "The trial banner and Rate Plan against the dossier trial line.",
@@ -47648,7 +47673,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/getscreen-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/getscreen-review.html#claim-vs-measured"
      },
      "plan": "14-day trial; the plans were read in the Buy a Subscription window and on the public pricing page; no checkout was opened",
      "comparability": "The welcome message against the limits on the Rate Plan page.",
@@ -47665,7 +47690,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/getscreen-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/getscreen-review.html#claim-vs-measured"
      },
      "plan": "14-day trial; the plans were read in the Buy a Subscription window and on the public pricing page; no checkout was opened",
      "comparability": "The trial warning on the client page against the dossier line that the trial covers every feature.",
@@ -47682,7 +47707,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/getscreen-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/getscreen-review.html#claim-vs-measured"
      },
      "plan": "14-day trial; the plans were read in the Buy a Subscription window and on the public pricing page; no checkout was opened",
      "comparability": "Purchase window amounts without a payment page; no stored cost rule was compared.",
@@ -50928,7 +50953,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/upsell-com-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/upsell-com-review.html#claim-vs-measured"
      },
      "plan": "Usage approval screen, not approved, development store",
      "comparability": "The free plan on the listing against the first screen after the install.",
@@ -50945,7 +50970,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/upsell-com-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/upsell-com-review.html#claim-vs-measured"
      },
      "plan": "Usage approval screen, not approved, development store",
      "comparability": "The dossier name against the listing title, the developer name and the approval screen.",
@@ -50962,7 +50987,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/upsell-com-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/upsell-com-review.html#claim-vs-measured"
      },
      "plan": "Usage approval screen, not approved, development store",
      "comparability": "The tiered prices on the listing against a usage limit on the approval screen; no amount per tier was shown and no stored cost rule was compared.",

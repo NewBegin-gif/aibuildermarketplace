@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 684 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-20.
+All 685 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-21.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -140,7 +140,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/aircall-review.html
 
 ## Airia (airia.com)
-- **Verified pricing:** (re-verified 2026-10-10) Quote-only.
+- **Verified pricing:** (re-verified 2026-11-21) Quote-only.
 - **Honest take:** Airia no longer publishes a price: since 20 August 2026 the pricing page redirects into developer documentation, so you cannot budget before a sales conversation.
 - **Best for:** enterprises that need to find the AI already running across their organisation, enforce policy on it at runtime, and build and govern their own agents, with auditability and compliance evidence built in
 - **Flags:** Hidden pricing
@@ -256,7 +256,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The credit and export caps are the catch: real usage on enrichment and dialing often runs well above the sticker, and data accuracy is hit-or-miss, so verify before you outreach at scale.
 - **Best for:** sales teams that want prospecting data, enrichment and sequencing in one affordable platform
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/apollo-review/
+- **Full review:** https://marketingandsalessoftware.com/apollo-review.html
 
 ## Arbor (joinarbor.com)
 - **Verified pricing:** Free for households, and re-verified as such on 2026-08-17, on 2026-10-06 and again on 2026-10-09.
@@ -1249,7 +1249,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/ebillity-review.html
 
 ## EcomXray (ecomxray.io)
-- **Verified pricing:** (re-verified 17 October 2026 on apps.shopify.com/ecomxray; unchanged since 21 August 2026) Two tiers.
+- **Verified pricing:** (re-verified 21 November 2026 on apps.shopify.com/ecomxray; unchanged since 21 August 2026) Two tiers.
 - **Honest take:** The split between the two tiers is unusually clean, and worth seeing clearly: everything this app is described as doing, the margins, the net units, the restock advice, is free.
 - **Best for:** small and mid-size Shopify merchants who want cost price, gross margin, clean net unit sales and restock advice inside the admin instead of exporting to a spreadsheet
 - **Flags:** Free tier
@@ -2565,7 +2565,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/nexis-cro-review/
 
 ## Nextify.ai (nextify.ai)
-- **Verified pricing:** (read 7 September 2026 on nextify.ai/pricing, signed in and signed out, in both billing modes; re-read 17 October 2026 signed out, where the annual figures, the $29, $79 and $189 monthly ra…
+- **Verified pricing:** (read 7 September 2026 on nextify.ai/pricing, signed in and signed out, in both billing modes; re-read 17 October and again 21 November 2026 signed out, where the annual figures, the $29, $…
 - **Honest take:** The plans are sold in videos and images; the meter runs in credits per second, and the two do not reconcile.
 - **Best for:** advertisers who need a steady stream of short product clips and will deliberately choose the cheap model for drafts, and teams who would rather have video, avatars
 - **Flags:** Usage-metered, Add-ons extra, Free tier
@@ -2832,7 +2832,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/pdware-review.html
 
 ## Pecan AI (pecan.ai)
-- **Verified pricing:** (read 2026-08-27 on pecan.ai/pricing, and unchanged on 2026-09-29: the same three quote-only tiers, batch and row meters, SSO split and FAQ) No public price at any tier.
+- **Verified pricing:** (Update 21 November 2026: pecan.ai/pricing now redirects to the demo-booking page and no pricing page is left in the sitemap, so the tier details below can no longer be checked on Pecan's s…
 - **Honest take:** The pricing page argues instead of quoting.
 - **Best for:** data and marketing teams that want churn, LTV or demand predictions running against their own warehouse without hiring data scientists, and can work with an annual commitment quoted on a call
 - **Flags:** Hidden pricing
@@ -4179,6 +4179,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** businesses and professionals with confidentiality obligations (legal, health, finance) that need end-to-end-encrypted storage, granular sharing controls and compliance features
 - **Flags:** Per-seat pricing, Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/tresorit-review.html
+
+## TrueMargin (fleeta.co.uk)
+- **Verified pricing:** (read 2026-11-20 on apps.shopify.com/truemargin-eu) TrueMargin by Fleeta Limited is listed as Free on the Shopify App Store, with the text "free right now".
+- **Honest take:** Shopify app that shows profit per order from the cost per item on your products; free on its App Store page.
+- **Best for:** Small Shopify stores that want a margin per order from the cost per item they already keep in Shopify, at no cost for now
+- **Full review:** https://aibuildermarketplace.com/b2b/truemargin-review/
 
 ## TrueReview (truereview.co)
 - **Verified pricing:** (read 2026-10-15 on truereview.co/pricing with the Monthly and Yearly toggles, and on its help-centre price list for request add-ons) TrueReview has three plans.

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 689 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-21.
+All 690 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-21.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -133,7 +133,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/aira-review.html
 
 ## Aircall (aircall.io)
-- **Verified pricing:** (read 2026-10-10 on aircall.io/pricing in a live browser, with Aircall's own country selector on United States) Essentials is $30 per license a month and Professional $50, both on annual bi…
+- **Verified pricing:** (read 2026-10-10 and re-verified 2026-11-21 on aircall.io/pricing in a live browser, with Aircall's own country selector on United States) Essentials is $30 per license a month and Professi…
 - **Honest take:** Two structural catches: the 3-seat minimum makes the real starting price triple the sticker, and the annual-vs-monthly gap is steep (Professional: $50 vs $70).
 - **Best for:** sales and support teams (3+ seats) that want a polished cloud phone system embedded in their CRM/helpdesk, with call routing, analytics and 250+ integrations
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
@@ -475,10 +475,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/bizee-review.html
 
 ## Blinq (blinq.me)
-- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07) Free forever for individuals (2 cards, unlimited QR sharing).
+- **Verified pricing:** (corrected 2026-11-21, read on blinq.me/pricing and in two Blinq help-centre articles updated 20 November 2026) Free forever for individuals: two cards, unlimited sharing, unlimited lead ca…
 - **Honest take:** A truth about all digital cards: the wow factor works precisely because adoption is still low; the durable value is the CRM sync (contacts flowing automatically into your pipeline).
 - **Best for:** teams and field-sales orgs that want consistent, branded digital cards with contacts syncing straight into the CRM, and events teams via the capture add-on
-- **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier
+- **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/blinq-review.html
 
 ## Blocky (effectify.io)
@@ -636,6 +636,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, proxies and CAPTCHA handling managed for them, and can commit to yearly billing
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/browseract-review/
+
+## BSS B2B Solution (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-21 on apps.shopify.com/b2b-solution-custom-pricing) Free plan: basic B2B price, basic B2B registration management, 1 custom pricing rule and 1 registration form on live stores…
+- **Honest take:** Wholesale pricing app for Shopify with price rules by customer tag and B2B signup forms; free plan, paid plans from $29 a month.
+- **Best for:** Shopify stores that sell wholesale to tagged customers and want price rules and a signup form without building a second store
+- **Flags:** Add-ons extra, Free tier
+- **Full review:** https://marketingandsalessoftware.com/bss-b2b-solution-review.html
 
 ## BuddyPunch (buddypunch.com)
 - **Verified pricing:** Per user plus a base fee, re-verified on buddypunch.com/pricing on 24 September 2026 (amounts unchanged since 5 September) and again on 22 October and 19 November 2026: Starter $5.99 per us…
@@ -3232,7 +3239,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/replit-review.html
 
 ## Reply.io (reply.io)
-- **Verified pricing:** (re-verified 2026-10-09 in a browser on reply.io/pricing/ and in Reply's own machine-readable pricing file) Three separate tracks, and the one you pick changes the arithmetic completely.
+- **Verified pricing:** (re-verified 2026-10-09 in a browser on reply.io/pricing/ and in Reply's own machine-readable pricing file; starting prices re-read 2026-11-21 in a rendered browser) Three separate tracks, …
 - **Honest take:** The $89 is the Multichannel track on annual billing, and it does include LinkedIn, calls, SMS and WhatsApp: $99 month to month.
 - **Best for:** sales teams running structured multichannel outbound (email + LinkedIn + calls) who want sequences, warmup and a B2B database in one platform
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit

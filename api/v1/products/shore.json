@@ -87,8 +87,7 @@
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -96,7 +95,104 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-20",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/shore-review.html",
+  "method": [
+   "Our AI assistant ran the test in a browser tab on a trial account the account owner opened, with the interface in English; nothing was paid",
+   "The notes record screens, times and wording; the screenshots shown here were kept"
+  ],
+  "claims": [],
+  "exit_test": null,
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-20",
+    "evidence_url": "https://officesoftwaremarketplace.com/shore-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-20",
+    "evidence_url": "https://officesoftwaremarketplace.com/shore-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-20",
+    "evidence_url": "https://officesoftwaremarketplace.com/shore-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-20",
+    "evidence_url": "https://officesoftwaremarketplace.com/shore-review.html#hands-on"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-20",
+    "evidence_url": "https://officesoftwaremarketplace.com/shore-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-20",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Shore",
+    "product_id": "shore",
+    "run_date": "20 November 2026",
+    "session_type": "hands_on",
+    "what": "We used a free All in One trial to set up two services, publish the online booking page and put a test appointment in the calendar, then went through the plan choice up to the checkout button. No card was asked for the trial and we paid nothing.",
+    "findings": [
+     "There is no setup wizard: a progress panel with five tasks sends you to Services, where one sample service waits. We renamed it Test Haircut at 30 EUR and added Test Colour at 60 EUR.",
+     "About 1 minute 16 seconds after we started, both services showed on the public booking page, which clients can open without a login and in 12 languages.",
+     "A test appointment took about 2 minutes. The client notification switch is on by default, so we turned it off before saving.",
+     "Plans read 59.90, 79.90 and 129.90 EUR a month, or 49.90, 69.90 and 119.90 EUR a month yearly. Booking yearly came to an order of 598.80 EUR, and SMS features are charged separately.",
+     "We found no button to end the trial or delete the account in the app. The trial ends by itself after 15 days; ending it early is done by email."
+    ],
+    "not_tested": [
+     "paying for a plan, the iPad POS till, SMS, online payments at booking and Google or Instagram booking links",
+     "booking as a client on the public page, staff management and how reminders cut no shows"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "shore:cancellation_terms",

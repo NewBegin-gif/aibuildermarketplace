@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 685 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-21.
+All 689 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-21.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -596,10 +596,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/bread-butter-review/
 
 ## Breezy HR (breezy.hr)
-- **Verified pricing:** (re-verified 2026-08-17 and re-read unchanged 2026-09-27) A genuinely permanent free Bootstrap plan: one open position, unlimited users.
-- **Honest take:** The jump from free (one position) to the first paid tier is steep if you only hire occasionally: the free plan is usable, so live in it until you're filling several roles at once.
+- **Verified pricing:** (plan status re-read 21 November 2026) The Breezy pricing page now says there is no free plan: new accounts can try every feature free for 14 days with no credit card.
+- **Honest take:** The jump from free (one position) to the first paid tier is steep if you only hire occasionally: there is no free plan for new accounts to stay on, so time the 14-day trial to a real hiring round.
 - **Best for:** small teams hiring for a few roles at once that want a visual, drag-and-drop pipeline without enterprise-ATS pricing
-- **Flags:** Usage-metered, Add-ons extra, Free tier
+- **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/breezy-hr-review/
 
 ## Brevo (brevo.com)
@@ -631,7 +631,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/browse-ai-review.html
 
 ## BrowserAct (browseract.com)
-- **Verified pricing:** (prices re-verified 2026-10-24 on browseract.com/pricing, every plan amount quoted from the page; last read in a live browser with both billing tabs open and cross-read against browseract.c…
+- **Verified pricing:** (prices re-verified 2026-11-21 on browseract.com/pricing, every plan amount quoted from the page; the yearly tab read in a live browser on 2026-11-21 and the monthly Basic, Essential and Ad…
 - **Honest take:** The free tier is the catch: its card reads 200 signup credits where it read 1,500 on 2 September, about 66 workflow steps at 3 credits a step, while the vendor's own llms.txt still advertises 2,000.
 - **Best for:** teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, proxies and CAPTCHA handling managed for them, and can commit to yearly billing
 - **Flags:** Usage-metered, Add-ons extra, Free tier
@@ -725,6 +725,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** solo creators, consultants and small marketing teams who post LinkedIn and Instagram carousels every week and want to turn articles and ideas into branded slides without designing them by hand
 - **Flags:** Annual commit
 - **Full review:** https://marketingandsalessoftware.com/carouselbot-review.html
+
+## Cartly (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-21 in the Cartly app and on apps.shopify.com/cartly-cart-drawer-upsell) Free for the first 20 lifetime orders.
+- **Honest take:** Slide cart drawer app for Shopify with upsells under the cart; free for the first 20 orders, then from $16.99 a month by order volume.
+- **Best for:** Shopify stores that want a slide cart with an upsell under it and are fine with a fee that steps up with order volume
+- **Full review:** https://marketingandsalessoftware.com/cartly-review.html
 
 ## Castmagic (castmagic.io)
 - **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05 on castmagic.io/pricing, every figure and both sets of data attributes unchanged) Three published tiers plus an enterprise band.
@@ -1593,7 +1599,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/freshchat-review.html
 
 ## Freshservice (freshservice.com)
-- **Verified pricing:** (price re-verified 2026-09-29 against the vendor's own pricing page) Per agent, read 29 Sep 2026 on freshworks.com/freshservice/pricing/: Starter $19/agent/mo billed annually or $29 monthly…
+- **Verified pricing:** (price re-verified 2026-11-21 against freshworks.com/freshservice/pricing/: Starter $19/$29, Growth $49/$59, Pro $99/$119 per agent and Enterprise 'Custom' unchanged) (price re-verified 202…
 - **Honest take:** The ITSM features most IT teams buy for (change/problem management, deeper analytics) live at Pro, and so does Freddy AI Copilot, a $29-an-agent add-on.
 - **Best for:** IT teams that want proper ITSM (incidents, assets, changes, service catalog) running in weeks, without enterprise-suite implementation pain
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
@@ -2040,7 +2046,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/katana-mrp-review/
 
 ## Keap (keap.com)
-- **Verified pricing:** Starting at $299/mo billed monthly for the whole platform, with no feature-based tiers and no free plan (re-verified 2026-09-24 on their own pricing page; amounts unchanged since 5 Septembe…
+- **Verified pricing:** Starting at $320 a month billed monthly for the whole platform, with no feature-based tiers and no free plan (re-read 21 November 2026 from the plan data behind the calculator on keap.com/p…
 - **Honest take:** Cost is the big one (56% of reviewers flag it), the interface feels dated, and there's a real 2–4 week learning curve on the automation builder.
 - **Best for:** service-based small businesses, coaches and solopreneurs who want CRM, email, payments and automation in one tool, and will invest the time to learn it
 - **Flags:** Usage-metered, Annual commit
@@ -2584,6 +2590,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** local and service businesses that want reputation marketing on offense (automatically asking happy customers for reviews and displaying them) rather than only managing damage when a bad review lands
 - **Flags:** Add-ons extra
 - **Full review:** https://marketingandsalessoftware.com/nicejob-review.html
+
+## Nifty (niftypm.com)
+- **Verified pricing:** (read 2026-11-21 in the Nifty app and on niftypm.com/pricing) Free is $0 forever with unlimited members, 2 active projects, 500 tasks and 100 MB of files.
+- **Honest take:** Project management with a free plan for 2 active projects and unlimited members; paid plans per member or one flat price for the team.
+- **Best for:** Small teams and agencies that want projects, tasks, docs and discussions in one place and can live with 2 active projects on the free plan
+- **Flags:** Per-seat pricing, Add-ons extra, Free tier
+- **Full review:** https://officesoftwaremarketplace.com/nifty-review.html
 
 ## Niural AI (niural.com)
 - **Verified pricing:** (read 18 September 2026 in a live browser on niural.com/pricing) Eight products, each priced separately, and unusually for this category every one of them carries a published figure.
@@ -3178,9 +3191,9 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/recruit-crm-review.html
 
 ## Redeemly (redeemly.ai)
-- **Verified pricing:** (read 2026-10-15 on Redeemly's pricing article in its help centre, the Shopify App Store listing apps.shopify.com/cashback-redeemly and redeemly.ai; prices in USD) Redeemly has one product …
-- **Honest take:** Priced by total store orders; fees are non-refundable.
-- **Best for:** Shopify stores that want to give cashback as Shopify's own store credit to bring customers back, starting free under 50 orders a month and paying a small flat fee as order volume grows
+- **Verified pricing:** (read 2026-11-21 on the Shopify App Store listing apps.shopify.com/cashback-redeemly and on the Plans and billing article in Redeemly's help centre; prices in USD) Redeemly changed its plan…
+- **Honest take:** Every store order counts towards the plan allowance; extra orders cost $0.20 each.
+- **Best for:** Shopify stores that want to give cashback as Shopify's own store credit to bring customers back, starting free with up to 50 orders every 30 days
 - **Flags:** Free tier
 - **Full review:** https://marketingandsalessoftware.com/redeemly-review.html
 
@@ -3349,8 +3362,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/samsara-review.html
 
 ## SaneBox (sanebox.com)
-- **Verified pricing:** (amounts unchanged since 18 Aug 2026; re-verified 24 September 2026 against the plan data that sanebox.com/pricing embeds for its client-side price cards) Three plans, and the advertised pr…
-- **Honest take:** You pay monthly to filter mail that modern clients increasingly sort for free, and the headline rate is a two-year commitment: month to month the Snack plan is $9.49, not $4.54.
+- **Verified pricing:** (re-read 21 November 2026 from the plan data that sanebox.com/pricing embeds for its client-side price cards) Three plans, billed yearly or month to month.
+- **Honest take:** You pay monthly to filter mail that modern clients increasingly sort for free, and the headline rate is billed yearly: month to month the Snack plan is $9.49, not $5.42.
 - **Best for:** heavy-email professionals drowning in a cluttered inbox who want AI triage that works across any mail client
 - **Full review:** https://aibuildermarketplace.com/b2b/sanebox-review/
 
@@ -3414,6 +3427,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Shopify fashion and apparel brands with real ad spend that want profit per SKU and per campaign in one place, and can carry the $299 tier where those features actually live
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/selixer-review.html
+
+## Selleasy (logbase.io)
+- **Verified pricing:** (prices read 2026-10-30 on apps.shopify.com/upsell-cross-sell-kit-1 and on logbase.io/selleasy/pricing; the order-based ladder read on 19 September and 20 October 2026 has been replaced) Bi…
+- **Honest take:** The pricing changed under this review in October 2026, and the vendor's own page has not caught up.
+- **Best for:** shopify stores that want bundles, add-ons, cart funnels and post-purchase offers out of one app on a flat fee that never takes a share of upsell revenue: small stores can test on the free plan
+- **Flags:** Free tier
+- **Full review:** https://marketingandsalessoftware.com/selleasy-review.html
 
 ## Seller Investigators (sellerinvestigators.com)
 - **Verified pricing:** (2026-08-15, read on their own site) One number, and it is the whole model: a 25% commission, charged only after Amazon has deposited recovered funds in your account.
@@ -3810,7 +3830,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/storylane-review.html
 
 ## Streak (streak.com)
-- **Verified pricing:** (price re-verified 2026-09-22 against the vendor's own pricing page; every plan figure identical to the 31 Aug 2026 reading) (2026) Pro $49/user/mo annual or $59 monthly; Pro+ $69 annual or…
+- **Verified pricing:** (price re-verified 2026-11-21 against streak.com/pricing: Pro $49/$59, Pro+ $69/$89, Enterprise $129/$159 per user, 20/150/500 AI credits and the $100-$1,000 top-up ladder all unchanged) (p…
 - **Honest take:** The pitch, CRM living inside Gmail, is also the ceiling: everything happens in the inbox, which power users love and growing teams outgrow (reporting, permissions, cross-team process).
 - **Best for:** solo founders and small Gmail-native teams whose pipeline lives in email threads and who want zero context-switching
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier
@@ -3944,6 +3964,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** solo creators, coaches and small online businesses that want funnels, email, courses and an affiliate program under one login, and are happy to start free and move up as the contact list grows
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/systeme-io-review.html
+
+## Tally (tally.so)
+- **Verified pricing:** (read 2026-11-21 on tally.so/pricing and in the Tally app) The free plan lists unlimited forms and submissions as long as you stay within the fair usage guidelines.
+- **Honest take:** Form builder that works like a doc, with unlimited forms and submissions on the free plan under fair use.
+- **Best for:** Small businesses and solo owners who want free forms with conditional logic, payments and file uploads, and accept the Made with Tally badge
+- **Flags:** Free tier
+- **Full review:** https://officesoftwaremarketplace.com/tally-review.html
 
 ## Tapform (tapform.com)
 - **Verified pricing:** (read 2026-10-18 in a browser on tapform.com/pricing in the monthly and yearly view; the page shows $ without naming a currency) Two plans.
@@ -4200,10 +4227,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/try-you-review.html
 
 ## Turbotic (turbotic.com)
-- **Verified pricing:** (re-verified 2026-10-02, read on their own product page) The Turbotic AI Assistant is $25 per seat per month and includes 1,500 credits a month, with additional credits bought as needed.
-- **Honest take:** It's a newer, enterprise-leaning automation platform, so it's less proven with a smaller community than the big names, and the credit-per-execution model means heavy volume needs cost-checking.
+- **Verified pricing:** (Read 21 November 2026 on Turbotic's product pages) Automation AI has a Free plan with up to 100 executions and up to 100 AI chats a month, and up to 3 automations.
+- **Honest take:** It's a newer, enterprise-leaning automation platform, so it's less proven with a smaller community than the big names, and execution and AI chat allowances make heavy volume worth costing out.
 - **Best for:** teams that want an AI-assisted way to discover, document and run automations without deep RPA expertise
-- **Flags:** Per-seat pricing, Usage-metered
+- **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/turbotic-review/
 
 ## Typewise (typewise.app)
@@ -4513,7 +4540,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wholesale-gorilla-review/
 
 ## Wing Assistant (wingassistant.com)
-- **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28 against Wing's homepage plan cards and its machine-readable llms.txt; wingassistant.com/pricing/ itself now redirects to a call-booking page)…
+- **Verified pricing:** (re-verified 2026-11-21 against the homepage plan cards and wingassistant.com/llms.txt: $699 part-time and $999 full-time unchanged) (re-verified 2026-08-17 and again on 2026-09-28 against …
 - **Honest take:** You're renting a person, not automating a task: a good VA is real leverage, but only if you already have documented, delegatable work.
 - **Best for:** founders drowning in delegatable admin who have processes to hand off and want a managed VA without recruiting one themselves
 - **Full review:** https://officesoftwaremarketplace.com/wing-assistant-review.html

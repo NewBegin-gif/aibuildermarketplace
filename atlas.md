@@ -778,7 +778,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (2026) Professional about $89/mo billed annually ($129 monthly), Business $199/mo annual, Scale $419/mo annual, plus a custom Circle Plus tier for fully branded apps.
 - **Honest take:** The sticker is only the entry: Circle keeps a commission on every sale on top of Stripe's processing fees, and email marketing is a separate add-on.
 - **Best for:** creators and brands running a paid community: courses, memberships, events and discussions in one branded home, with a built-in payments stack and even branded mobile apps
-- **Flags:** Usage-metered, Add-ons extra
+- **Flags:** Usage-metered, Add-ons extra, Annual commit
 - **Full review:** https://marketingandsalessoftware.com/circle-review.html
 
 ## CiteRoute (citeroute.com)
@@ -3035,7 +3035,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-08-26 on proton.me/pricing over a US connection, on the Mail tab with yearly billing) Free is $0.00 a month for 1 GB and one address.
 - **Honest take:** Storage is the axis, and the jump from Drive Plus to Unlimited is not really about storage at all.
 - **Best for:** teams and individuals for whom encryption is an actual requirement rather than a preference: handling client material, legal or medical files, or anything where a provider being able to read your data is itself the problem
-- **Flags:** Per-seat pricing, Free tier
+- **Flags:** Per-seat pricing, Renewal jump, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/proton-review.html
 
 ## Proton Drive (proton.me)

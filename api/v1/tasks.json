@@ -3263,6 +3263,84 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "Cartly",
+   "product_id": "cartly",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 21 November 2026 on a Shopify development store with the Basic plan, in the real admin with the interface in English. We installed Cartly Cart Drawer from its Shopify App Store page, chose the Growth plan, switched Cart status on and opened the cart drawer in the theme editor preview. About 3 minutes 30 seconds passed between pressing Install and the drawer showing a You might also like upsell. Shopify marked the plan as a test charge that is not billed, so we paid nothing. We removed nothing from the store besides Cartly itself at the end of our first attempt.",
+   "findings": [
+    "Install: the Shopify dialog asked for view access to customer device and activity data and staff data, and to view and edit customers, products, orders, discounts, store analytics, Shopify Functions and the Online Store. It also warned that the app does not support market-driven shipping and that you can switch back to legacy shipping profiles until 1 July 2027.",
+    "Plan: the app asked us to choose a plan and offered Growth at $16.99 a month plus usage fees by order volume with a 14 day free trial, and Enterprise at $199.99 a month. Shopify showed \"You will not be billed for this test charge\", Growth at $16.99 every 30 days, a trial ending on 5 December and a spending limit of $199.99 per 30 days. No card was asked for.",
+    "Pricing table: the app lists Free for the first 20 lifetime orders, then Growth tiers of $16.99 (up to 100 orders), $24.99 (101 to 300), $49.99 (301 to 750), $84.99 (751 to 1,500), $114.99 (1,501 to 3,000) and $144.99 (3,001 to 5,000), then $199.99 above that. The note says all plans are totally free for development stores.",
+    "Cart status: the Custom cart page showed Cart status Off. Its side preview already showed a You might also like upsell, but that is a preview inside the admin. After we switched Cart status on, saved and chose to activate in all markets, the app reported \"Settings saved\".",
+    "Drawer: in the theme editor preview the Cartly drawer opened with 5 items and a checkout total of $2,378.35, and a You might also like block offered a snowboard at $749.95. Pressing Add made it 6 items and $3,128.30.",
+    "Not on a live storefront: the store is password protected, so we saw the drawer only in the editor preview. On product pages another app on our store blocked Add to cart, so we opened the drawer from the cart icon."
+   ],
+   "not_tested": [
+    "Not tested: the drawer on a public storefront, the reward bar, timers and sticky add to cart, building our own upsell rules, the Enterprise plan, and a real checkout.",
+    "Not tested: paying. Shopify showed a test charge on our development store, so we cannot say how the trial converts or how usage fees show on a real invoice."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Tally",
+   "product_id": "tally",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "We created the account and our AI assistant ran the test in our browser on 21 November 2026 on the free plan. We built a form with three questions and one conditional rule, published it, sent in one test answer and downloaded the answers as a CSV file. About 3 minutes 30 seconds passed from the empty dashboard to the first answer in the Submissions tab, including a detour with the conditional rule. The account asked for no card and no phone number, and we paid nothing. We did not delete the account.",
+   "findings": [
+    "Start: the dashboard went straight to a new form with a blank page that works like a document: type a slash and pick a block. We added Short answer, Multiple choice with Yes and No, and a second Short answer.",
+    "Conditional logic: our first rule, When \"Will you attend?\" Is Yes, Then Show blocks \"Dietary needs\", did not hide the field beforehand. The published form showed it right away. The rule that worked was When the answer Is not Yes, Then Hide blocks. Until a choice is made the field stays visible.",
+    "Editor: the logic block landed at the bottom of the form and dragging it up did not work with our mouse actions, which may be down to our tool. We inserted a new logic block right under the question instead.",
+    "Publish and answers: Publish was one click, and the share page opened with Insights, Submissions, Share, Integrations and Settings. The Submissions tab listed our answer, and Download CSV gave a 160 byte file with Submission ID, Respondent ID, Submitted at (in UTC) and one column per question.",
+    "Free plan limits: the free form showed a \"Made with Tally\" badge. File upload was available on the free plan, with the note \"Size limit: 10 MB. For unlimited file uploads upgrade to Tally Pro\". The pricing page lists unlimited forms and submissions \"as long as you stay within our fair usage guidelines\".",
+    "Prices: the in-app upgrade screen showed Pro at EUR 25 a month and Business at EUR 79 monthly, and EUR 20 and EUR 65 a month when billed yearly (EUR 250 and EUR 790 a year). We went no further than that screen."
+   ],
+   "not_tested": [
+    "Not tested: email notifications, integrations such as Google Sheets and webhooks, the AI form builder, templates, custom domains, version history, and paying for Pro or Business.",
+    "Not tested: what happens when usage goes past the fair usage guidelines, and more than one submission."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Nifty",
+   "product_id": "nifty",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "We created the account and our AI assistant ran the test in our browser on 21 November 2026, with the interface set to English. We made a project with two dated lists on the Roadmap, five tasks, a doc and a post in Discussions. About 3 minutes passed between the start and the finished project with its tasks, and about 25 clicks. A new account starts on a 14 day Business trial without a card, so we stayed on that trial and paid nothing. We did not delete the account.",
+   "findings": [
+    "Start: onboarding offered Start fresh, Bring your work and Build with Nifty AI. Start fresh asked only for a project name and a colour. Right after that the app showed \"14 days left on trial\", ending on 5 December 2026.",
+    "Milestones: the Roadmap tab has no milestone type. The only match we found was a list with \"Show in roadmap\" ticked, which draws a dated bar such as \"0 of 3 tasks\". We used two lists, Design and Launch, and they showed on the Roadmap as bars.",
+    "Tasks: Nifty set an end date on every new task by itself (23 November). We set one deadline ourselves and assigned one task to ourselves. The add task row under a list overlapped at times, and the plus button in the list header worked every time.",
+    "Discussions: the Discussions tab was hidden by default. We switched it on under Add view, then Project views, and posted a message. The chat panel showed only ourselves, since nobody else was invited.",
+    "Free limit: the trial hid it. We opened a third project and Nifty gave no warning. The plan screen read \"Projects 3 Included in your plan\". Under Free the page says \"Up to 2 active projects, 500 tasks and 100 MB of files\", and the Free limits link adds that you pick the 2 projects that stay active and the rest turn read only.",
+    "Plans: the upgrade screen listed Free at $0 forever with unlimited members. The per-member yearly rates on that screen were $10 (Pro) and $16 (Business) a month. Monthly it was $16 and $25. A flat price for the whole team was $79 (Pro) and $124 (Business) billed yearly, and $99 and $149 monthly. We opened the payment screen for Pro (\"Due today $99.00\") and closed it without entering anything."
+   ],
+   "not_tested": [
+    "Not tested: moving down to Free and what it does to a third project, the 100 MB file limit (the app showed 1 TB during the trial), inviting colleagues, integrations, AI features, client portals and agents.",
+    "Not tested: paying. We opened the payment screen and closed it, so we cannot say how billing or cancelling a paid plan works."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "TrueMargin",
    "product_id": "truemargin",
    "run_date": "20 November 2026",
@@ -3315,18 +3393,22 @@
    "source": "session",
    "product_name": "DocHub",
    "product_id": "dochub",
-   "run_date": "2026-11-19",
+   "run_date": "2026-11-21",
    "session_type": "hands_on",
-   "what": "We created the account and our AI assistant ran the test in our browser. On 19 November 2026 the session tested DocHub on the free plan, a day after our first test. Editing and self-signing a test PDF took about 1 min 35 s. The new free plan meter showed that only the self-signature counted against the 3 uses a month. The Pro trial checkout now preselects yearly billing at EUR144.00 and asks for a card first.",
+   "what": "We created the accounts and our AI assistant ran the tests in our browser. On 21 November 2026 we ran a third session on a fresh free account: we imported our own one page test PDF, added fields, made a template, sent a real sign request to a second inbox of ours and signed it there without a DocHub account. From Send Request to Finalized took about 3 minutes. Our sessions of 18 and 19 November covered editing, self-signing and the Pro checkout.",
    "findings": [
-    "Text we checked: \"1 of 3 DocHub core features used\". What we saw: The meter counted the self-signature as 1 use (Basic features) and 0 for Pro features; the added text, the upload and the comment did not count. The dossier says our first test could not show which actions counted.",
-    "Text we checked: \"This subscription is free for 30 days then your first payment of EUR144.00 will be due on December 19, 2026. Taxes will apply\". What we saw: The Pro checkout preselected yearly billing at EUR144.00, while the dossier knock says the trial becomes a EUR 16 monthly charge; monthly is still available at EUR16 a month.",
-    "Text we checked: \"Assign at least one field to this user or enable annotations\". What we saw: Send Request stays disabled until the signer has a field or annotations; several options such as signer locations are locked on Free. Nothing was sent.",
-    "First test, 18 November 2026: upload to signed document took about 1 minute 47 seconds on the free plan."
+    "Text we checked: \"1 of 3 DocHub core features used\". What we saw (19 Nov 2026): The meter counted the self-signature as 1 use (Basic features) and 0 for Pro features; the added text, the upload and the comment did not count. The dossier says our first test could not show which actions counted.",
+    "Text we checked: \"This subscription is free for 30 days then your first payment of EUR144.00 will be due on December 19, 2026. Taxes will apply\". What we saw (19 Nov 2026): The Pro checkout preselected yearly billing at EUR144.00, while the dossier knock says the trial becomes a EUR 16 monthly charge; monthly is still available at EUR16 a month.",
+    "Text we checked: \"Assign at least one field to this user or enable annotations\". What we saw (19 Nov 2026): Send Request stays disabled until the signer has a field or annotations; several options such as signer locations are locked on Free. Nothing was sent.",
+    "First test, 18 November 2026: upload to signed document took about 1 minute 47 seconds on the free plan.",
+    "Text we checked: \"1 of 3 DocHub core features used\". What we saw (21 Nov 2026): on a fresh free account the meter counted 1 use under Pro features (Edit Text, Send Sign Request, Envelopes) after we edited text and sent one sign request; turning a copy into a template counted 0.",
+    "Text we checked: \"DocHub Core Features (3 uses/mo)\" on dochub.com/pricing. What we saw (21 Nov 2026): the pricing page does not say which actions use up the 3; the app meter does, and splits them into Basic features and Pro features.",
+    "Text we checked: \"EUR 450\" in our own PDF. What we saw (21 Nov 2026): typing 500 over it with the text tool made a new text box and left the original figure visible; replacing it cleanly needs the whiteout tool first.",
+    "Text we checked: \"ACTION NEEDED: test-agreement.pdf\". What we saw (21 Nov 2026): the sign request reached our second inbox within seconds, and the signer could sign with a typed name without creating an account; Send Request to Finalized took about 3 minutes. Opening the signer link in the same browser signed us out of the sender account.",
+    "Text we checked: \"Radio Button, Dropdown, Image, Attachment\". What we saw (21 Nov 2026): these field types carry a Pro lock on the free plan; text, date, checkbox, initials and signature fields are free."
    ],
    "not_tested": [
-    "Sending a sign request and what a signer sees.",
-    "Downloading the audit trail.",
+    "The audit trail: after signing in the same browser the sender account was signed out, so we could not open it; the exported PDF of our signed test had no audit page.",
     "The Pro trial and its cancellation.",
     "DOCX export and cloud exports.",
     "Export of a file into a kit, and reimport."
@@ -5668,6 +5750,31 @@
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Langwill",
+   "product_id": "langwill",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 21 November 2026 on a Shopify development store with the interface in English. We installed the app, added German, enabled the app embed in the theme and opened a translated product page in the theme preview. About 3.5 minutes passed between pressing Install and the German page. We stayed on the free plan and paid nothing. LangShop was installed in the same store for a separate test and later overwrote these German product translations.",
+   "findings": [
+    "Install: the Shopify dialog asked for staff and contributor data and for view and edit access to products, the Online Store and the Shopify admin.",
+    "Setup: the app opens on a three step wizard: choose languages, set a currency format and enable the app embed. We skipped the currency step because it asks you to paste HTML into the store settings.",
+    "Translation: German sat on \"Homepage SEO Waiting...\" for about 1.5 minutes, then read \"Translated\" after a reload. The publish switch was off until we turned it on.",
+    "Result: the theme preview of a product page showed it in German, with \"In den Warenkorb legen\" and a language switcher set to Deutsch. Clicking Deutsch in the switcher inside the editor did nothing at first.",
+    "Plans: the app lists Starter $9.99, Growth $19.99 and Premium $49.99 a month in credits, while the App Store listing counts words and puts multilingual SEO in the free plan. After one language our free plan read \"1 languages limit Reached.\""
+   ],
+   "not_tested": [
+    "Not tested: the paid plans. The Starter approval screen showed a real $9.99 charge after a 3 day trial and no test charge note, so we did not approve it.",
+    "Not tested: currency formats, redirect by location, translated SEO fields and URLs, a second language, GPT 4 or DeepL translation, image translation and the public storefront."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true
   },
   {
@@ -18295,6 +18402,31 @@
   },
   {
    "source": "session",
+   "product_name": "Vendoo",
+   "product_id": "vendoo",
+   "run_date": "20 November 2026",
+   "session_type": "hands_on",
+   "what": "We used a 14 day Starter trial to create one draft item, check which features Starter locks and cancel the subscription. The account owner entered a card for the trial; nothing was charged.",
+   "findings": [
+    "Creating a draft item took about 3 minutes and eight required fields, with one click on Save. A photo is not required.",
+    "Starter at $14.99 a month leaves out AI descriptions, bulk actions, background removal, sending offers, Poshmark, Depop and Grailed sharing and listing videos.",
+    "Send Offers shows a lock on Starter that asks you to upgrade, while Analytics and CSV export are open.",
+    "Connecting a marketplace first asks you to install the Vendoo browser extension.",
+    "Cancelling is self service in three screens: a retention screen with average user stats, then a required reason and feedback form, then a note that the plan stays active until 4 December and nothing more is charged."
+   ],
+   "not_tested": [
+    "crosslisting to marketplaces, because it needs the Vendoo browser extension and connected marketplace accounts",
+    "sale detection, auto delist, import, AI descriptions, bulk actions, offers and marketplace sharing"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Weblium",
    "product_id": "weblium",
    "run_date": "2026-10-30",
@@ -20345,7 +20477,7 @@
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
-   "in_catalog": false
+   "in_catalog": true
   },
   {
    "source": "session",
@@ -20611,6 +20743,31 @@
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "PhotoGenerator",
+   "product_id": "photogenerator",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "We used the free account to make one product photo with the cheapest image model, read the credit balance before and after, and checked what the video models would cost from the same balance. We made no video and bought nothing.",
+   "findings": [
+    "The free account started with 10 credits. Image models cost 2 to 8 credits per picture: Nano Banana 2, GPT Image 2 3, Nano Banana 2 (the newer version) 4 and Nano Banana Pro 8.",
+    "One Nano Banana image of a red mug was ready about 20 seconds after we pressed Create, and the balance dropped from 10 to 8, exactly the price shown on the button.",
+    "The video generator showed the same balance of 8, so images and videos really draw on one credit pool.",
+    "The cheapest video clips we saw cost 12 credits (Seedance 2.0 Fast), 15 (Kling 3.0 Omni) and 16 (Seedance 2.0), so the free credits are not enough for a single clip.",
+    "On the yearly tab, Starter was $120 for 4,320 credits, Pro $468 for 24,000 and Max $1,068 for 63,600; monthly prices shown were $12, $49 and $119."
+   ],
+   "not_tested": [
+    "video generation, because the free balance of 8 credits is below the cheapest clip at 12",
+    "paid plans, Pay Once credits, audio and character tools"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true
   },
   {
@@ -22751,6 +22908,31 @@
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "LangShop",
+   "product_id": "langshop",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 21 November 2026 on a Shopify development store with the interface in English. We chose the free plan, machine translated the store's products into German and opened a translated product page in the theme preview. About 2 minutes 50 seconds passed between pressing Install and the finished translation. We paid nothing. German had already been added to the store by Langwill, which we tested just before in the same store.",
+   "findings": [
+    "Install: the Shopify dialog asked for customer device and activity data, staff data and edit access to products, orders, the Online Store, custom data and the Shopify admin.",
+    "Development store: a banner said LangShop does not charge until the store moves to a paid plan, and that up to 50 products can be translated free before that.",
+    "Free plan: only products (up to 50), payment gateways and navigation could be machine translated. Collections, pages, blogs, legal pages, email templates and theme text showed under \"Available on paid plan\".",
+    "Translation: about 30 seconds after we pressed Translate the dashboard read \"125 items translated. 0 items left.\" The theme preview then showed \"Das komplette Snowboard\" with German option names.",
+    "Switching tip: we ticked \"Overwrite existing translations\" and LangShop warned there is no undo. It replaced the German product translations that Langwill had made earlier in the same store."
+   ],
+   "not_tested": [
+    "Not tested: paid plans. Basic at $100 a year showed as a test charge that would not be billed, but the free plan was enough for our test, so we cancelled that screen.",
+    "Not tested: the language and currency switcher, glossary, DeepL or OpenAI engines, paid content such as pages and theme text, professional translation and the public storefront."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true
   },
   {
@@ -41265,6 +41447,31 @@
   },
   {
    "source": "session",
+   "product_name": "AISDR",
+   "product_id": "aisdr",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "We used a free account the account owner opened with Google to see how far AiSDR gets without a demo, a call or a connected mailbox. We let it read our website, picked a suggested campaign and read the email sequence it wrote. We created no campaign, sent nothing and paid nothing.",
+   "findings": [
+    "Onboarding asks you to connect your own Gmail or Outlook mailboxes or order new ones, but a Skip onboarding button lets you go on without either.",
+    "Deep Search read our website in about 30 seconds and proposed three campaigns, each with an audience, a buying signal and an outreach angle.",
+    "About 3.5 minutes after we started, the Ami assistant had written a four email sequence for days 0, 2, 4 and 6 that stops on a reply.",
+    "The emails are templates with merge fields such as first name and a job posting the AI would look up per contact, so we saw no email written for a real person.",
+    "On 21 November 2026 our free account showed 0 message credits, 50 lead search credits and Pay as you go not activated, with free access until 28 November. Billing listed $1.50 per extra researched contact, done for you campaigns at $149, an extra GTM session at $99, sending infrastructure at $33 and Ami credit top ups from $1."
+   ],
+   "not_tested": [
+    "sending any email or reaching real prospects, which needs payment plus a mailbox",
+    "LinkedIn and CRM integrations, team plans and the paid add ons"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Atria",
    "product_id": "atria",
    "run_date": "2026-10-23",
@@ -43484,6 +43691,31 @@
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Shore",
+   "product_id": "shore",
+   "run_date": "20 November 2026",
+   "session_type": "hands_on",
+   "what": "We used a free All in One trial to set up two services, publish the online booking page and put a test appointment in the calendar, then went through the plan choice up to the checkout button. No card was asked for the trial and we paid nothing.",
+   "findings": [
+    "There is no setup wizard: a progress panel with five tasks sends you to Services, where one sample service waits. We renamed it Test Haircut at 30 EUR and added Test Colour at 60 EUR.",
+    "About 1 minute 16 seconds after we started, both services showed on the public booking page, which clients can open without a login and in 12 languages.",
+    "A test appointment took about 2 minutes. The client notification switch is on by default, so we turned it off before saving.",
+    "Plans read 59.90, 79.90 and 129.90 EUR a month, or 49.90, 69.90 and 119.90 EUR a month yearly. Booking yearly came to an order of 598.80 EUR, and SMS features are charged separately.",
+    "We found no button to end the trial or delete the account in the app. The trial ends by itself after 15 days; ending it early is done by email."
+   ],
+   "not_tested": [
+    "paying for a plan, the iPad POS till, SMS, online payments at booking and Google or Instagram booking links",
+    "booking as a client on the public page, staff management and how reminders cut no shows"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true
   },
   {
@@ -46111,7 +46343,8 @@
     "Text we checked: \"Crafting the video, it usually takes 30-90 seconds\". What we saw: In this one run the video was still pending after more than 12 minutes and after 2 retries, and still at 14:47, 21 minutes after the start; the retries were refused while the render counted as in progress. The cause is not known.",
     "Text we checked: \"50% off all plans for life-time\". What we saw: The billing page had the banner Limited-time launch offer, 50% off all plans for life-time, with struck through prices of $24, $46 and $82 in the annual view and $38, $78 and $138 in the monthly view. The dossier names only the annual struck through prices.",
     "Text we checked: \"Starter $12/mo (strike $24), billed $144, 180 credits/yr\". What we saw: Annual: Starter $12 a month, billed $144, 180 credits a year; Pro $23, $276, 480 a year; Business $41, $492, 1200 a year. The same amounts are in the dossier and were seen again on the public page.",
-    "Text we checked: \"Starter $19 (strike $38), 15 credits/mo\". What we saw: Monthly: Starter $19 (struck through $38) with 15 credits a month, Pro $39 ($78) with 40 a month, Business $69 ($138) with 100 a month. The same as in the dossier and on the public page."
+    "Text we checked: \"Starter $19 (strike $38), 15 credits/mo\". What we saw: Monthly: Starter $19 (struck through $38) with 15 credits a month, Pro $39 ($78) with 40 a month, Business $69 ($138) with 100 a month. The same as in the dossier and on the public page.",
+    "Text we checked: \"Generate Short Video (1 cr)\". What we saw in a retest on 21 November 2026, after VidPal told us the 18 November outage was fixed: the same prompt and settings gave a script in about 20 seconds and a playable 26 second Short about 55 seconds after we pressed Generate. The captions ran word by word in sync, and the in app preview showed no watermark (we did not export). The three stock clips showed people in snow, not a board being waxed, so the video was not postable without changing clips. The credit counter went from 1 / 4 to 2 / 4 when the script was generated, although the confirm button says the quota is used at confirm. The Short from 18 November still showed GENERATING MEDIA."
    ],
    "not_tested": [
     "A finished video: the render did not complete, so the preview, the export, the watermark, the resolution, the length and the quality were not seen.",
@@ -53430,6 +53663,31 @@
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "FBtrack",
+   "product_id": "fbtrack",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "We installed the app on our Shopify development store with the interface in English, started the Unlimited plan as a test charge that is not billed, and added two pixels by typing test IDs. We did not switch on the app embed or the checkout script, so we did not see events reach Meta.",
+   "findings": [
+    "The install dialog asked only for store owner staff data and view and edit access to products and the Online Store.",
+    "The app opens on its plans: Basic $10 a month for 1 active pixel, Standard $15 for 5 and Unlimited $30, all with a 14 day trial. A banner said development stores are not charged until they move to a paid plan.",
+    "Adding a pixel needs a type, a name and the pixel ID, plus an optional Conversions API switch. No Facebook login was asked, and the app did not check whether the ID was real.",
+    "Each pixel can be limited to chosen collections. Our second pixel saved for the Hydrogen collection only, next to a main pixel for all products, both marked Activate.",
+    "Tracking still needs two manual steps the app lists: switching on its app embed in the theme editor, and pasting a script into Customer Events for thank you page events."
+   ],
+   "not_tested": [
+    "pixel events firing on the storefront and at checkout",
+    "Conversions API, TikTok, Snapchat and Pinterest pixels"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true
   },
   {

@@ -1,0 +1,561 @@
+{
+ "schema_version": "1.0",
+ "id": "cartly",
+ "name": "Cartly",
+ "research_status": "researched",
+ "vendor_domain": "apps.shopify.com",
+ "category": "E-commerce",
+ "task": "E-commerce growth",
+ "summary": "Shopify slide cart drawer app with upsells under the cart, free for the first 20 orders and then priced by order volume.",
+ "best_for": "Shopify stores that want a slide cart with an upsell under it and are fine with a fee that steps up with order volume",
+ "skip_if": "you run market-driven shipping, want a flat price that does not grow with orders, or need proof on a live storefront before you install",
+ "honest_knock": "The price follows your orders: $16.99 a month up to 100 orders, $49.99 for 301 to 750 and $199.99 above 5,000. The app says it does not support market-driven shipping. In our test Cart status was off after install, and the plan screen offered no Free button although the table lists Free for 20 orders.",
+ "pricing": {
+  "status": "public",
+  "entry_price": "$16.99",
+  "entry_price_terms": "Growth · Growth for up to 100 orders a month, as the in-app pricing table and the Shopify approval screen showed on 21 November 2026",
+  "from_price_usd_month": 16.99,
+  "plans": null,
+  "plans_source": null,
+  "notes": "(read 2026-11-21 in the Cartly app and on apps.shopify.com/cartly-cart-drawer-upsell) Free for the first 20 lifetime orders. Growth is $16.99 a month for up to 100 orders, $24.99 for 101 to 300, $49.99 for 301 to 750, $84.99 for 751 to 1,500, $114.99 for 1,501 to 3,000 and $144.99 for 3,001 to 5,000, then $199.99 above 5,000 orders, with a 14 day free trial. Enterprise is a fixed $199.99 a month with no usage fees. All plans are free on development stores. On our development store Shopify showed Growth as a test charge of $16.99 every 30 days with a spending limit of $199.99 per 30 days, and we paid nothing.",
+  "verified_at": "2026-11-21",
+  "source_url": null,
+  "schema_offer": {
+   "price": 16.99,
+   "currency": "USD",
+   "description": "Growth, Growth for up to 100 orders a month, as the in-app pricing table and the Shopify approval screen showed on 21 November 2026; usage tiers rise to $199.99. Read on the vendor's own pricing page on 2026-11-21.",
+   "page": "https://marketingandsalessoftware.com/cartly-review.html"
+  },
+  "source_quotes": null,
+  "recent_change": null,
+  "price_history": null
+ },
+ "free_plan": false,
+ "free_plan_evidence": null,
+ "cost_traps": [],
+ "compare_with": {
+  "name": "Shopify's own cart page",
+  "why": "The standard Shopify cart is a plain page with no upsell block. Cartly puts a drawer with a You might also like upsell on top of it, for a monthly fee that rises with orders."
+ },
+ "links": {
+  "record": "https://aibuildermarketplace.com/api/v1/products/cartly.json",
+  "review": "https://marketingandsalessoftware.com/cartly-review.html",
+  "marketplace": null,
+  "vendor_site": "https://apps.shopify.com"
+ },
+ "purchase": {
+  "seller": "the vendor",
+  "how": "AIBuilder Marketplace does not sell this software. Sign up, start a trial or buy on the vendor's site.",
+  "handoff_url": "https://platform.shoffi.app/r/rl_UU5jZETB",
+  "affiliate": true,
+  "disclosure": "Where purchase.affiliate is true, purchase.handoff_url is an affiliate link: AIBuilder Marketplace may earn a commission at no extra cost to the buyer. Commission never changes what a record says, and products are not ranked by commission. Where it is false the link is the vendor's plain site."
+ },
+ "provenance": {
+  "research": "hand-researched dossier, read on the vendor's own pages",
+  "researched_since": "2026-07",
+  "method": "https://aibuildermarketplace.com/how-we-review/",
+  "license": "CC BY 4.0. Credit 'AIBuilder Marketplace' with a link to https://aibuildermarketplace.com/atlas/.",
+  "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
+ },
+ "cost": {
+  "status": "available",
+  "engine": "https://aibuildermarketplace.com/agents/#cost",
+  "rules": {
+   "currency": "USD",
+   "unit": "order a month",
+   "axis": "orders_per_month",
+   "plans": [
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "ladder",
+     "rungs": [
+      {
+       "units": 100,
+       "monthly": 16.99
+      },
+      {
+       "units": 300,
+       "monthly": 24.99
+      },
+      {
+       "units": 750,
+       "monthly": 49.99
+      },
+      {
+       "units": 1500,
+       "monthly": 84.99
+      },
+      {
+       "units": 3000,
+       "monthly": 114.99
+      },
+      {
+       "units": 5000,
+       "monthly": 144.99
+      }
+     ],
+     "evidence": "Growth is $16.99 a month for up to 100 orders, $24.99 for 101 to 300, $49.99 for 301 to 750, $84.99 for 751 to 1,500, $114.99 for 1,501 to 3,000 and $144.99 for 3,001 to 5,000"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "flat",
+     "monthly": 199.99,
+     "annual_status": "unknown",
+     "evidence": "Enterprise is a fixed $199.99 a month with no usage fees"
+    }
+   ],
+   "notes": [
+    "Free for the first 20 lifetime orders; that is a one-time allowance, not a monthly tier, so it is not a plan here.",
+    "Above 5,000 orders Growth is $199.99 a month, the same as Enterprise; all plans are free on development stores; Growth has a 14 day free trial."
+   ],
+   "rules_verified_at": "2026-11-21"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "cartly",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "growth": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "growth": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "growth": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "growth": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "growth": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "growth": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "growth": "price_unknown_on_billing",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "growth": "not_eligible",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "growth": "not_eligible",
+       "enterprise": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "growth": "not_eligible",
+       "enterprise": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": []
+   },
+   "monthly": {
+    "product_id": "cartly",
+    "currency": "USD",
+    "axis": "orders_per_month",
+    "unit": "order a month",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 0,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 16.99,
+      "billed": {
+       "amount": 16.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "growth": 16.99,
+       "enterprise": 199.99
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 16.99,
+      "billed": {
+       "amount": 16.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "growth": 16.99,
+       "enterprise": 199.99
+      }
+     },
+     {
+      "units": 300,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 24.99,
+      "billed": {
+       "amount": 24.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "growth": 24.99,
+       "enterprise": 199.99
+      }
+     },
+     {
+      "units": 700,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 49.99,
+      "billed": {
+       "amount": 49.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "growth": 49.99,
+       "enterprise": 199.99
+      }
+     },
+     {
+      "units": 1000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 84.99,
+      "billed": {
+       "amount": 84.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "growth": 84.99,
+       "enterprise": 199.99
+      }
+     },
+     {
+      "units": 2000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 114.99,
+      "billed": {
+       "amount": 114.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "growth": 114.99,
+       "enterprise": 199.99
+      }
+     },
+     {
+      "units": 5000,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 144.99,
+      "billed": {
+       "amount": 144.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "growth": 144.99,
+       "enterprise": 199.99
+      }
+     },
+     {
+      "units": 10000,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 199.99,
+      "billed": {
+       "amount": 199.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "growth": "not_eligible",
+       "enterprise": 199.99
+      }
+     },
+     {
+      "units": 20000,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 199.99,
+      "billed": {
+       "amount": 199.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "growth": "not_eligible",
+       "enterprise": 199.99
+      }
+     },
+     {
+      "units": 50000,
+      "cheapest_plan": "enterprise",
+      "cheapest_plan_name": "Enterprise",
+      "total_month": 199.99,
+      "billed": {
+       "amount": 199.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "growth": "not_eligible",
+       "enterprise": 199.99
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 5000,
+      "to_units": 10000,
+      "from_plan": "growth",
+      "to_plan": "enterprise",
+      "from_plan_name": "Growth",
+      "to_plan_name": "Enterprise"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": []
+   }
+  }
+ },
+ "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
+  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
+ ],
+ "verification": {
+  "price": "read",
+  "free_trial": "being_verified",
+  "refund": "being_verified"
+ },
+ "status_page": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-21",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://marketingandsalessoftware.com/cartly-review.html",
+  "method": [
+   "Our AI assistant ran the test in the real Shopify admin and theme editor with the interface set to English; nothing was paid",
+   "The notes record screens, times and wording; five screenshots were kept"
+  ],
+  "claims": [],
+  "exit_test": null,
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-21",
+    "evidence_url": "https://marketingandsalessoftware.com/cartly-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-21",
+    "evidence_url": "https://marketingandsalessoftware.com/cartly-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-21",
+    "evidence_url": "https://marketingandsalessoftware.com/cartly-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-21",
+    "evidence_url": "https://marketingandsalessoftware.com/cartly-review.html#hands-on"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-21",
+    "evidence_url": "https://marketingandsalessoftware.com/cartly-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-21",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Cartly",
+    "product_id": "cartly",
+    "run_date": "21 November 2026",
+    "session_type": "hands_on",
+    "what": "Our AI assistant ran the test on 21 November 2026 on a Shopify development store with the Basic plan, in the real admin with the interface in English. We installed Cartly Cart Drawer from its Shopify App Store page, chose the Growth plan, switched Cart status on and opened the cart drawer in the theme editor preview. About 3 minutes 30 seconds passed between pressing Install and the drawer showing a You might also like upsell. Shopify marked the plan as a test charge that is not billed, so we paid nothing. We removed nothing from the store besides Cartly itself at the end of our first attempt.",
+    "findings": [
+     "Install: the Shopify dialog asked for view access to customer device and activity data and staff data, and to view and edit customers, products, orders, discounts, store analytics, Shopify Functions and the Online Store. It also warned that the app does not support market-driven shipping and that you can switch back to legacy shipping profiles until 1 July 2027.",
+     "Plan: the app asked us to choose a plan and offered Growth at $16.99 a month plus usage fees by order volume with a 14 day free trial, and Enterprise at $199.99 a month. Shopify showed \"You will not be billed for this test charge\", Growth at $16.99 every 30 days, a trial ending on 5 December and a spending limit of $199.99 per 30 days. No card was asked for.",
+     "Pricing table: the app lists Free for the first 20 lifetime orders, then Growth tiers of $16.99 (up to 100 orders), $24.99 (101 to 300), $49.99 (301 to 750), $84.99 (751 to 1,500), $114.99 (1,501 to 3,000) and $144.99 (3,001 to 5,000), then $199.99 above that. The note says all plans are totally free for development stores.",
+     "Cart status: the Custom cart page showed Cart status Off. Its side preview already showed a You might also like upsell, but that is a preview inside the admin. After we switched Cart status on, saved and chose to activate in all markets, the app reported \"Settings saved\".",
+     "Drawer: in the theme editor preview the Cartly drawer opened with 5 items and a checkout total of $2,378.35, and a You might also like block offered a snowboard at $749.95. Pressing Add made it 6 items and $3,128.30.",
+     "Not on a live storefront: the store is password protected, so we saw the drawer only in the editor preview. On product pages another app on our store blocked Add to cart, so we opened the drawer from the cart icon."
+    ],
+    "not_tested": [
+     "Not tested: the drawer on a public storefront, the reward bar, timers and sticky add to cart, building our own upsell rules, the Enterprise plan, and a real checkout.",
+     "Not tested: paying. Shopify showed a test charge on our development store, so we cannot say how the trial converts or how usage fees show on a real invoice."
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
+ "open_questions": [
+  {
+   "question_id": "cartly:cancellation_terms",
+   "key": "cancellation_terms",
+   "question": "Can a customer cancel at any time, and what happens to an annual plan that is cancelled mid-term?",
+   "status": "open"
+  },
+  {
+   "question_id": "cartly:data_export",
+   "key": "data_export",
+   "question": "Which data can a customer export, in which formats, on which plans?",
+   "status": "open"
+  },
+  {
+   "question_id": "cartly:data_location",
+   "key": "data_location",
+   "question": "Where is customer data stored, and can a customer choose the region?",
+   "status": "open"
+  }
+ ],
+ "vendor_answers": [],
+ "agent_channels": {
+  "vendor_mcp": null,
+  "agent_checkout": {
+   "status": "not_checked",
+   "detail": "We could not read the vendor's pages as plain HTML.",
+   "checked_at": "2026-10-07",
+   "method": "homepage, /pricing and the pricing page we cite, read as plain HTML (no JavaScript) and searched for explicit support of purchases by AI agents: Agentic Commerce Protocol, Instant Checkout, Agent Payments Protocol, buy in ChatGPT, agentic checkout"
+  }
+ }
+}

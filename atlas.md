@@ -816,10 +816,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/clay-review.html
 
 ## ClickUp (clickup.com)
-- **Verified pricing:** (re-verified 2026-08-13, read on their own pricing page with both billing tabs open; every amount unchanged on 2026-09-30) A Free Forever plan with unlimited tasks but 60MB of storage; Unli…
+- **Verified pricing:** (corrected 2026-11-21, read on clickup.com/pricing in a rendered browser) ClickUp has rebuilt its plan ladder since our 30 September reading.
 - **Honest take:** The everything-app breadth is also the downside: it's feature-dense with a real learning curve, and teams can drown in options.
 - **Best for:** teams that want one highly customizable app for tasks, docs, goals and reporting and will invest in setting it up
-- **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier
+- **Flags:** Per-seat pricing, Usage-metered, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/clickup-review.html
 
 ## Clonable (clonable.net)
@@ -1876,7 +1876,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/hubstaff-review.html
 
 ## Iconosquare (iconosquare.com)
-- **Verified pricing:** (price re-verified 2026-10-03) Read on iconosquare.com/pricing (now served at /plans-and-pricing) from a Netherlands connection, with both billing toggles.
+- **Verified pricing:** (price re-verified 2026-10-03 and 2026-11-21) Read on iconosquare.com/pricing (now served at /plans-and-pricing) from a Netherlands connection, with both billing toggles.
 - **Honest take:** Its depth is strongest on Instagram and the core networks; if your priority platform sits outside its best-supported set, coverage thins.
 - **Best for:** agencies and brands that want deep social analytics, reporting and competitor benchmarking alongside scheduling, especially Instagram-first teams
 - **Flags:** Per-seat pricing, Free tier
@@ -2420,7 +2420,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/miro-review.html
 
 ## MK Website Assistant (mksparkinteractive.com)
-- **Verified pricing:** (read 2026-11-03 on mksparkinteractive.com, in pounds sterling) MK Website Assistant is a done-for-you service from MK Spark Interactive, a small UK studio, not a self-serve app.
+- **Verified pricing:** (re-read 2026-11-21 on mksparkinteractive.com, in pounds sterling) MK Website Assistant is a done-for-you service from MK Spark Interactive, a small UK studio, not a self-serve app.
 - **Honest take:** Done-for-you service; "from" prices, set-up fee on top.
 - **Best for:** small UK service businesses such as dental and physio practices, vets, opticians and letting agents that want an AI assistant set up for them on their website to answer enquiries and capture leads after hours
 - **Full review:** https://zerotouchsupport.com/mk-website-assistant-review.html
@@ -3449,7 +3449,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/seller-snap-review.html
 
 ## Sellfy (sellfy.com)
-- **Verified pricing:** (re-verified 2026-09-07 and again 2026-09-30) Starter is $29/mo billed monthly or $22/mo billed yearly, for up to $10k of sales a year; Business $79 or $59, up to $50k; Premium $159 or $119…
+- **Verified pricing:** (re-verified 2026-09-07, 2026-09-30 and 2026-11-21) Starter is $29/mo billed monthly or $22/mo billed yearly, for up to $10k of sales a year; Business $79 or $59, up to $50k; Premium $159 o…
 - **Honest take:** The honest mechanic is the revenue ladder: plans cap by your ANNUAL SALES, so success moves you up.
 - **Best for:** creators selling digital products, subscriptions and print-on-demand who want a simple store with zero platform commission
 - **Flags:** Usage-metered

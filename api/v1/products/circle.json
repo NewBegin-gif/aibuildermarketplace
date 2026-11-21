@@ -15,31 +15,10 @@
   "entry_price": "$89",
   "entry_price_terms": "Professional · per month billed annually ($129 billed monthly)",
   "from_price_usd_month": 89.0,
-  "plans": [
-   {
-    "name": "Professional",
-    "price": "$89/mo billed annually",
-    "includes": "2% transaction fee; 2,500 AI credits/mo"
-   },
-   {
-    "name": "Business",
-    "price": "$199/mo annual",
-    "includes": "1% transaction fee; 2,500 AI credits/mo; 5,000 Admin API requests/mo"
-   },
-   {
-    "name": "Scale",
-    "price": "$419/mo annual",
-    "includes": "1% transaction fee; 5,000 AI credits/mo; 30,000 Admin API requests/mo"
-   },
-   {
-    "name": "Circle Plus",
-    "price": "no published price",
-    "includes": "0.5% transaction fee; custom pricing; fully branded apps"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(2026) Professional about $89/mo billed annually ($129 monthly), Business $199/mo annual, Scale $419/mo annual, plus a custom Circle Plus tier for fully branded apps. On top of the subscription Circle takes a commission on every sale you make through the platform (roughly 2% on Professional, 1% on Business, 0.5% on Plus) plus standard Stripe/PayPal processing, and the Email Hub is a paid add-on around $99/mo for 10,000 contacts. 14-day free trial, but no always-free option. Re-verified 12 October 2026 on circle.so/pricing and its pricing.md: Professional $89, Business $199 and Scale $419 a month, all marked as annual-billing USD prices excluding tax, Circle Plus on custom pricing; transaction fees 2%, 1%, 1% and 0.5%; Circle AI credits 2,500, 2,500 and 5,000 a month, extra credits $10 per 1,000; Business includes 5,000 Admin API requests a month ($.005 per extra request), Scale 30,000 ($.002). The $129 monthly figure is not printed on the page we read.",
-  "verified_at": "2026-10-12",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(2026) Professional about $89/mo billed annually ($129 monthly), Business $199/mo annual, Scale $419/mo annual, plus a custom Circle Plus tier for fully branded apps. On top of the subscription Circle takes a commission on every sale you make through the platform (roughly 2% on Professional, 1% on Business, 0.5% on Plus) plus standard Stripe/PayPal processing, and the Email Hub is a paid add-on around $99/mo for 10,000 contacts. 14-day free trial, but no always-free option. Re-verified 12 October 2026 on circle.so/pricing and its pricing.md: Professional $89, Business $199 and Scale $419 a month, all marked as annual-billing USD prices excluding tax, Circle Plus on custom pricing; transaction fees 2%, 1%, 1% and 0.5%; Circle AI credits 2,500, 2,500 and 5,000 a month, extra credits $10 per 1,000; Business includes 5,000 Admin API requests a month ($.005 per extra request), Scale 30,000 ($.002). The $129 monthly figure is not printed on the page we read. Re-read 21 November 2026 on circle.so/pricing.md: Professional $89, Business $199 and Scale $419 a month, still marked as USD on annual billing excluding tax, Circle Plus custom; transaction fees 2%, 1%, 1% and 0.5%; AI credits 2,500, 2,500 and 5,000 a month with extra credits at $10 per 1,000; unchanged. The monthly-billing price is still not printed on the page.",
+  "verified_at": "2026-11-21",
   "source_url": null,
   "schema_offer": {
    "price": 89.0,
@@ -71,14 +50,21 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "On top of the subscription Circle takes a commission on every sale you make through the platform (roughly 2% on Professional, 1% on Business, 0.5% on Plus) plus standard Stripe/PayPal processing, and the Email Hub is a paid add-on around $99/mo for 10,000 contacts.",
-   "verified_at": "2026-10-12",
+   "verified_at": "2026-11-21",
    "source_url": null
   },
   {
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
    "evidence": "On top of the subscription Circle takes a commission on every sale you make through the platform (roughly 2% on Professional, 1% on Business, 0.5% on Plus) plus standard Stripe/PayPal processing, and the Email Hub is a paid add-on around $99/mo for 10,000 contacts.",
-   "verified_at": "2026-10-12",
+   "verified_at": "2026-11-21",
+   "source_url": null
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "Re-read 21 November 2026 on circle.so/pricing.md: Professional $89, Business $199 and Scale $419 a month, still marked as USD on annual billing excluding tax, Circle Plus custom; transaction fees 2%, 1%, 1% and 0.5%; AI credits 2,500, 2,500 and 5,000 a month with extra credits at $10 per 1,000; unchanged.",
+   "verified_at": "2026-11-21",
    "source_url": null
   }
  ],
@@ -107,15 +93,521 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "member",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "annual_month": 89,
+     "monthly_status": "unknown",
+     "evidence": "Professional $89, Business $199 and Scale $419 a month, still marked as USD on annual billing excluding tax"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "annual_month": 199,
+     "monthly_status": "unknown",
+     "evidence": "Professional $89, Business $199 and Scale $419 a month, still marked as USD on annual billing excluding tax"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "flat",
+     "annual_month": 419,
+     "monthly_status": "unknown",
+     "evidence": "Professional $89, Business $199 and Scale $419 a month, still marked as USD on annual billing excluding tax"
+    },
+    {
+     "id": "plus",
+     "name": "Circle Plus",
+     "model": "quote",
+     "evidence": "Circle Plus custom"
+    }
+   ],
+   "not_computable": [
+    "Transaction fees on sales made through Circle (2%, 1%, 1% and 0.5% by plan) plus Stripe/PayPal processing depend on your sales volume.",
+    "Extra Circle AI credits ($10 per 1,000) and extra Admin API requests depend on usage.",
+    "The monthly-billing price is not printed on the pricing page; an older note mentions $129 a month for Professional."
+   ],
+   "notes": [
+    "Prices are a flat fee per community, not per member, on annual billing and exclude tax (circle.so/pricing.md, re-read 21 November 2026). The Email Hub add-on is not modelled."
+   ],
+   "rules_verified_at": "2026-11-21"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "circle",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "member",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 89.0,
+      "billed": {
+       "amount": 1068.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 89.0,
+       "business": 199.0,
+       "scale": 419.0,
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 89.0,
+      "billed": {
+       "amount": 1068.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 89.0,
+       "business": 199.0,
+       "scale": 419.0,
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 89.0,
+      "billed": {
+       "amount": 1068.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 89.0,
+       "business": 199.0,
+       "scale": 419.0,
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 89.0,
+      "billed": {
+       "amount": 1068.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 89.0,
+       "business": 199.0,
+       "scale": 419.0,
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 89.0,
+      "billed": {
+       "amount": 1068.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 89.0,
+       "business": 199.0,
+       "scale": 419.0,
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 89.0,
+      "billed": {
+       "amount": 1068.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 89.0,
+       "business": 199.0,
+       "scale": 419.0,
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 89.0,
+      "billed": {
+       "amount": 1068.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 89.0,
+       "business": 199.0,
+       "scale": 419.0,
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 89.0,
+      "billed": {
+       "amount": 1068.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 89.0,
+       "business": 199.0,
+       "scale": 419.0,
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 89.0,
+      "billed": {
+       "amount": 1068.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 89.0,
+       "business": 199.0,
+       "scale": 419.0,
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 89.0,
+      "billed": {
+       "amount": 1068.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "professional": 89.0,
+       "business": 199.0,
+       "scale": 419.0,
+       "plus": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Transaction fees on sales made through Circle (2%, 1%, 1% and 0.5% by plan) plus Stripe/PayPal processing depend on your sales volume.",
+     "Extra Circle AI credits ($10 per 1,000) and extra Admin API requests depend on usage.",
+     "The monthly-billing price is not printed on the pricing page; an older note mentions $129 a month for Professional."
+    ],
+    "measured": [
+     {
+      "claim": "free 14-day trial",
+      "claim_source": "https://circle.so/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The welcome banner warned of losing access on November 14 and showed nearly fourteen days remaining.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/circle-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Circle trial length is checked against its access-expiry banner in the new community.",
+      "status": "confirmed",
+      "buying_consequence": "Access expiry is visible even though the test could not operate the embedded uploader.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/circle-review.html"
+     },
+     {
+      "claim": "No credit card required",
+      "claim_source": "https://circle.so/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/circle-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Circle card-free wording is checked against its recorded post-registration session without payment entry, while full signup screen counting remains unknown.",
+      "status": "confirmed",
+      "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/circle-review.html"
+     },
+     {
+      "claim": "$89/mo",
+      "claim_source": "https://circle.so/",
+      "claim_read_on": "2026-10-31",
+      "observed": "Professional annual shows $89 per month and $1,068 due today; monthly is $129. Annual billing was preselected and no tax line was visible.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/circle-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Circle price comparison uses Professional in USD with year pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Use the displayed amount only within the observed selection; a matching cost-rule total has not been verified.",
+      "buyer_direction": null,
+      "claim_changed_on": "2026-10-31",
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/circle-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "circle",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "member",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing",
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing",
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing",
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing",
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing",
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing",
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing",
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing",
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing",
+       "plus": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "professional": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "scale": "price_unknown_on_billing",
+       "plus": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Transaction fees on sales made through Circle (2%, 1%, 1% and 0.5% by plan) plus Stripe/PayPal processing depend on your sales volume.",
+     "Extra Circle AI credits ($10 per 1,000) and extra Admin API requests depend on usage.",
+     "The monthly-billing price is not printed on the pricing page; an older note mentions $129 a month for Professional."
+    ],
+    "measured": [
+     {
+      "claim": "free 14-day trial",
+      "claim_source": "https://circle.so/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The welcome banner warned of losing access on November 14 and showed nearly fourteen days remaining.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/circle-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Circle trial length is checked against its access-expiry banner in the new community.",
+      "status": "confirmed",
+      "buying_consequence": "Access expiry is visible even though the test could not operate the embedded uploader.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/circle-review.html"
+     },
+     {
+      "claim": "No credit card required",
+      "claim_source": "https://circle.so/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The recorded session proceeded without payment details; complete registration screens were not counted.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/circle-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Circle card-free wording is checked against its recorded post-registration session without payment entry, while full signup screen counting remains unknown.",
+      "status": "confirmed",
+      "buying_consequence": "The observed work required no card; paid features may have separate requirements.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/circle-review.html"
+     },
+     {
+      "claim": "$89/mo",
+      "claim_source": "https://circle.so/",
+      "claim_read_on": "2026-10-31",
+      "observed": "Professional annual shows $89 per month and $1,068 due today; monthly is $129. Annual billing was preselected and no tax line was visible.",
+      "observed_on": "2026-10-31",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/circle-review.html#claim-vs-measured"
+      },
+      "plan": "Trial",
+      "comparability": "Circle price comparison uses Professional in USD with year pricing; missing final tax or an unopened checkout and an unverified matching cost rule prevent an all-in comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Use the displayed amount only within the observed selection; a matching cost-rule total has not been verified.",
+      "buyer_direction": null,
+      "claim_changed_on": "2026-10-31",
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/circle-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-10-31; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -485,9 +977,27 @@
    "status": "open"
   },
   {
-   "question_id": "circle:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "circle:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "circle:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Transaction fees on sales made through Circle (2%, 1%, 1% and 0.5% by plan) plus Stripe/PayPal processing depend on your sales volume. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "circle:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Extra Circle AI credits ($10 per 1,000) and extra Admin API requests depend on usage. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "circle:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: The monthly-billing price is not printed on the pricing page; an older note mentions $129 a month for Professional. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

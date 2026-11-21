@@ -67,6 +67,44 @@ summary{cursor:pointer;color:var(--text2)}
 q.cap-l{display:block;border-left:2px solid var(--border);padding-left:.5rem}
 q.cap-l::before,q.cap-l::after{content:none}q.cap-l span{display:block}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "SaaS price changes: November 2026",
+  "description": "We compared 459 pricing pages that we could read in both months. We flagged 114 candidate pages and verified 11 price changes.",
+  "creator": {
+    "@type": "Organization",
+    "name": "AIBuilder Marketplace"
+  },
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "temporalCoverage": "2026-10-01/2026-11-02",
+  "measurementTechnique": "We take monthly snapshots of public pricing pages. A change belongs here when the snapshots show a different amount for the same plan, currency and billing basis and the vendor’s live page confirms the new amount. We use regular prices and exclude introductory offers.",
+  "variableMeasured": [
+    "tool",
+    "plan",
+    "basis",
+    "currency",
+    "old_amount",
+    "new_amount",
+    "change_pct",
+    "old_captured_utc",
+    "new_captured_utc",
+    "pricing_url",
+    "old_quote",
+    "new_quote",
+    "live_checked_utc",
+    "second_evidence"
+  ],
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "contentUrl": "https://aibuildermarketplace.com/pricewatch/changes-2026-11/price-changes-2026-11.csv",
+      "encodingFormat": "text/csv"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <nav class="snav" id="nav" aria-label="Main"><style>

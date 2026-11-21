@@ -1671,7 +1671,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** AnyDesk tends to feel faster and lower-latency, and TeamViewer carries the heavier security/compliance certifications (HIPAA, SOC 2).
 - **Best for:** IT and support people who want browser-based remote access without installing software on the other person's machine: at a fair price or a one-time fee
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/getscreen-review/
+- **Full review:** https://officesoftwaremarketplace.com/getscreen-review.html
 
 ## Gixo (gixo.ai)
 - **Verified pricing:** (re-read 2026-10-21 on gixo.ai/pricing in served HTML; the floors are unchanged, but the billing unit changed after our 4 October reading: five of the seven products are now priced per seat…
@@ -1940,7 +1940,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** This is employee-monitoring software, so weigh the culture cost, not just the price.
 - **Best for:** COOs, CFOs and operations leaders who want a work intelligence platform rather than a time clock: workforce analytics plus AI process capture (where the hours go, and how the work actually flows) across in-office and remote teams
 - **Flags:** Per-seat pricing, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/insightful-review/
+- **Full review:** https://officesoftwaremarketplace.com/insightful-review.html
 
 ## Instapage (instapage.com)
 - **Verified pricing:** (re-verified 24 Sep 2026; amounts unchanged since 4 Sep) Instapage does publish plan prices; they are not on the URL we had recorded.
@@ -2272,7 +2272,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Cost tracks headcount as well as output: every colleague who so much as @mentions Lindy in Slack takes a seat, and a seat you remove runs to the end of the cycle with no mid-cycle proration.
 - **Best for:** teams that live in Slack and want one shared teammate that sits in their meetings, runs scheduled routines and drafts replies inside the tools they already use
 - **Flags:** Per-seat pricing, Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/lindy-ai-review/
+- **Full review:** https://officesoftwaremarketplace.com/lindy-ai-review.html
 
 ## LinkShortener.io (linkshortener.io)
 - **Verified pricing:** (read 2026-11-18 on linkshortener.io/pricing, US dollars, and in our own test that day; earlier: read 2026-11-12) LinkShortener.io has a Free plan and three paid plans, each with a shared m…
@@ -4080,7 +4080,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Tidio (tidio.com)
 - **Verified pricing:** (read 20 November 2026 on www.tidio.com/pricing/, including its FAQ; this replaces the plan table we read on 24 August and 10 October 2026, which Tidio has since restructured) Every paid pl…
 - **Honest take:** The AI number on the homepage and the AI number on the pricing page do not agree, and the pricing page is the lower of the two.
-- **Best for:** support teams that want an AI agent and a help desk from the same vendor and can size the shared conversation quota and the separate Flows meter against their own volume before they commit, and Shopify
+- **Best for:** support teams that want an AI agent and a help desk from one vendor and can size the shared conversation quota against their own volume, and Shopify
 - **Flags:** Add-ons extra, Annual commit, Free tier
 - **Full review:** https://zerotouchsupport.com/tidio-review.html
 
@@ -4217,7 +4217,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-11-18 on ueni.com/en-us/pricing and ueni.com/llms.txt; the separate Ecommerce tier recorded on 2026-09-09 and 2026-09-26 is no longer offered) A done-for-you website, now …
 - **Honest take:** DIY editing and customisation are limited, e-commerce and integrations are basic, and the most common complaint is slow design turnaround against the 7-day promise.
 - **Best for:** small-business owners with no time or tech skills who want a professional site built for them, not another tool to learn
-- **Full review:** https://aibuildermarketplace.com/b2b/ueni-review/
+- **Full review:** https://marketingandsalessoftware.com/ueni-review.html
 
 ## UltaHost (ultahost.com)
 - **Verified pricing:** (re-verified 2026-10-01 on ultahost.com/shared-hosting, all four term tabs rendered) The term ladder is Monthly, Yearly -30%, 2 Years -40% and 3 Years -50%, and the page opens on the two-ye…
@@ -4271,7 +4271,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Growth is banded and cheap up to 500 orders, but the step after Growth is steep.
 - **Best for:** Shopify merchants who want one funnel covering product page, cart, post-purchase and thank-you offers with AI recommendations and A/B testing, and who sit under 500 orders a month
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/upsell-com-review/
+- **Full review:** https://marketingandsalessoftware.com/upsell-com-review.html
 
 ## UpsellPlus (upsellplus.com)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/upsellpluscheckout and in our own test that day; earlier: listing and vendor pricing page re-verified 2026-09-19 on apps.shopify.com/upsellpluscheckout,…

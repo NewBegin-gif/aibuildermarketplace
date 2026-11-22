@@ -617,7 +617,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/bright-data-review.html
 
 ## Brizy (brizy.io)
-- **Verified pricing:** (read 2026-10-09 in a browser render of brizy.io/pricing-cloud, USD, both billing toggles; taxes not included) Brizy Cloud is the hosted version.
+- **Verified pricing:** (re-read 2026-11-22 with a plain fetch of brizy.io/pricing-cloud: Personal, Agency and White Label prices, site allowances and per-site extras unchanged, and the 30-day money-back guarantee…
 - **Honest take:** One site on Personal; each extra site is $17 a month.
 - **Best for:** freelancers and agencies that build several client websites and want hosting included, with a white-label option to resell the builder under their own brand
 - **Flags:** Add-ons extra
@@ -905,7 +905,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/clutch-review.html
 
 ## CO2 Impact (co2impact.co.uk)
-- **Verified pricing:** (read 2026-11-19 in the pricing section of co2impact.co.uk's homepage, GBP, excluding VAT) Basic is £348 a year (£29.00 a month) for 1 user and 1 site.
+- **Verified pricing:** (read 2026-11-22 in a headless browser on co2impact.co.uk's homepage pricing section, and in the vendor's llms.txt the same day; excluding VAT) The table has changed again.
 - **Honest take:** 12-month licence on every plan, monthly payment included; tokens meter data entry.
 - **Best for:** UK small and mid-sized businesses that need a first carbon footprint, Scope 1-3 reporting or a carbon reduction plan for customers and tenders, without hiring a consultant
 - **Full review:** https://officesoftwaremarketplace.com/co2-impact-review.html
@@ -1373,7 +1373,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/ereleases-review.html
 
 ## Essent Preorder Back in Stock (essential-apps.com)
-- **Verified pricing:** (read 2026-11-17 on apps.shopify.com/essential-preorder and in our own test that day; earlier: read 2026-10-04 on apps.shopify.com/essential-pre-order, pricing table and data-access section…
+- **Verified pricing:** (re-read 2026-11-22 with a plain fetch of apps.shopify.com/essential-pre-order, which now carries the listing; the essential-preorder address gave a 404 that day: Free and the three paid pl…
 - **Honest take:** Each paid plan charges per pre-order past its allowance, so a launch that sells 300 on the $4.95 plan adds $50 in overage.
 - **Best for:** Shopify stores running pre-orders, presales or made-to-order drops that also want a Notify me waitlist with restock emails in the same app, at a few hundred pre-orders a month or fewer
 - **Flags:** Usage-metered, Free tier
@@ -1422,7 +1422,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/essential-trust-badges-review.html
 
 ## Essential Upsell & Cross Sell (essential-apps.com)
-- **Verified pricing:** (read 2 Oct 2026 on the Shopify listing and on the vendor's own page; the listing was read again on 16 Nov 2026 and the plan screen in the app was checked the same day) Plans are priced not…
+- **Verified pricing:** (read 2 Oct 2026 on the Shopify listing and the vendor's own page; read again on 16 Nov 2026 together with the plan screen in the app, and on 22 Nov 2026 on the listing and on the vendor's …
 - **Honest take:** The plans are metered on revenue the app says it generated, and the free plan's $100 a month is a small allowance.
 - **Best for:** Shopify stores that want product-page, cart and post-purchase upsells, frequently-bought-together blocks and add-ons in one app, with a monthly plan that rises in steps as the offers sell
 - **Flags:** Usage-metered, Free tier
@@ -2012,7 +2012,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/inworld-ai-review/
 
 ## iubenda (iubenda.com)
-- **Verified pricing:** (read 2026-10-09 on iubenda.com/en/pricing, browser render plus the page source for the monthly and USD figures; prices exclude VAT) All plans are priced per site per month; yearly billing …
+- **Verified pricing:** (re-read 2026-11-22 with a plain fetch of iubenda.com/en/pricing: Essentials, Advanced and Ultimate prices in euros and dollars, the 25K, 50K and 150K pageview quotas and the €0.05 per 1,00…
 - **Honest take:** Per-site pricing with a pageview quota; one language on Essentials.
 - **Best for:** website owners and small businesses in the EU and elsewhere that want a cookie banner, consent records and generated privacy and cookie policies in one subscription
 - **Flags:** Usage-metered, Free tier
@@ -3889,7 +3889,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** There is no free plan after the 14-day trial and no cheaper tier: Pro at $22 a month billed monthly, or $17 billed yearly, per person, is the only self-serve option.
 - **Best for:** people whose problem is deciding what to do today rather than tracking what exists: it pulls from your existing tools and forces a daily plan, which is the whole product
 - **Flags:** Annual commit
-- **Full review:** https://officesoftwaremarketplace.com/sunsama-review.html
+- **Full review:** https://aibuildermarketplace.com/b2b/sunsama-review/
 
 ## SupaEasy (supaeasy.com)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/supaeasy and in our own test that day; earlier: verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing; re-verified 2026-10-22 on bot…
@@ -3908,13 +3908,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The price is no longer hidden, and it is high.
 - **Best for:** e-commerce brands turning customers and creators into affiliates with branded co-branded storefronts, if the volume justifies a demo-quoted platform fee
 - **Flags:** Usage-metered
-- **Full review:** https://marketingandsalessoftware.com/superfiliate-review.html
+- **Full review:** https://aibuildermarketplace.com/b2b/superfiliate-review/
 
 ## Superlines (superlines.io)
 - **Verified pricing:** (read 2026-10-16 in a browser on superlines.io/pricing, For brands tab, monthly and yearly view, prices shown in euros; the terms say VAT is added where required.
 - **Honest take:** Starter has no exports and 1 month of history; 30 days' notice to stop renewal.
 - **Best for:** marketing teams and agencies in Europe that want to track how ChatGPT, Gemini, Perplexity and other AI engines mention and cite their brands, with unlimited seats
-- **Full review:** https://marketingandsalessoftware.com/superlines-review.html
+- **Full review:** https://aibuildermarketplace.com/b2b/superlines-review/
 
 ## SupportBee (supportbee.com)
 - **Verified pricing:** (read 2026-08-27 on supportbee.com/pricing) Two plans, both priced per seat, and no free tier.

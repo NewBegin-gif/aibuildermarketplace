@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 692 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-22.
+All 695 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-22.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -485,7 +485,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/blocky-simple-country-blocker and in our own test that day; earlier: re-verified 2026-11-13 on apps.shopify.com/blocky-simple-country-blocker, where the…
 - **Honest take:** Read the plan text before you pick a tier. The listing now has a real Free plan, but it stops at 2 country and IP rules (4 on 13 November 2026), so treat it as a trial of the idea rather than a working fraud filter.
 - **Best for:** Shopify stores below Plus that are losing time to bot traffic, repeat fraudsters or orders from regions they do not ship to, and want blocking rules they control rather than a full security suite
-- **Flags:** Add-ons extra, Free tier
+- **Flags:** Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/blocky-review/
 
 ## Bokun (bokun.io)
@@ -684,6 +684,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Derivatives are the draw and the danger: leverage cuts both ways, and funding rates on perpetuals are a real recurring cost the fee table doesn't show.
 - **Best for:** active traders who want deep liquidity, low derivatives fees and a broad product range (spot, perps, options) with volume-tiered discounts
 - **Full review:** https://officesoftwaremarketplace.com/bybit-review.html
+
+## Cal.com (cal.com)
+- **Verified pricing:** (read 2026-11-22 on cal.com/pricing, USD) Individuals: free forever.
+- **Honest take:** Scheduling with a free plan for one person; teams from $12 per user a month billed yearly.
+- **Best for:** freelancers, consultants and small teams that want a shareable booking page with video calls and email confirmations, starting on a free plan
+- **Flags:** Per-seat pricing, Usage-metered, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/cal-com-review/
 
 ## Calilio (calilio.com)
 - **Verified pricing:** (re-verified 2026-08-17; plan prices unchanged on 2026-10-06, included allowance changed) Standard $15 per user/mo, or $12 billed annually ($144 a year); Premium $35 per user/mo, or $28 ann…
@@ -2701,7 +2708,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Shopify app that adds text fields, swatches, file uploads and price add-ons to product pages; free plan, paid plans from $9.99 a month.
 - **Best for:** Shopify stores that sell personalised or made-to-order products and need customers to enter text, upload files or pick extras before checkout
 - **Flags:** Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/optis-product-options-review/
+- **Full review:** https://marketingandsalessoftware.com/optis-product-options-review.html
 
 ## Optizen (optizenapp.com)
 - **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell; re-read 2026-09-17 and 2026-10-05, every amount unchanged) Three tiers, billed in USD.
@@ -3633,6 +3640,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/shortlistiq-review.html
 
+## Shutterstock (shutterstock.com)
+- **Verified pricing:** (read 2026-11-22 in a browser on the site's own plan and stock photo screens, EUR as shown on a Netherlands connection) GenAI: EUR 9 a month billed yearly (EUR 108) or EUR 19 a month with n…
+- **Honest take:** Stock photo library with an AI image generator; two free generations, downloads need a plan from EUR 9 a month billed yearly.
+- **Best for:** marketers and creators who want AI images with exact on-image text next to a licensed stock photo library, and are happy to subscribe to download
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/shutterstock-review/
+
 ## Signable (signable.com)
 - **Verified pricing:** (read 2026-10-20 on signable.com/plans, prices in pounds plus VAT; the EU page signable.com/plans-eu was read on 2026-10-15) Signable prices by the envelope, not by the user: every plan has…
 - **Honest take:** Unused envelopes expire; the overage fee is not published.
@@ -4382,6 +4396,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** resellers listing on several marketplaces such as eBay, Poshmark, Mercari and Depop who want one inventory with automatic delisting when an item sells
 - **Flags:** Free tier
 - **Full review:** https://marketingandsalessoftware.com/vendoo-review.html
+
+## Vibe (vibe.co)
+- **Verified pricing:** (read 2026-11-22 on vibe.co/pricing, USD) No subscription: you pay for the ads you run.
+- **Honest take:** Self-serve streaming and connected TV ads, no subscription; CPM from $15 to $40 with a $50 a day minimum.
+- **Best for:** small and mid-size brands that want to run streaming TV ads themselves, with a generated video ad and no contract
+- **Flags:** Usage-metered
+- **Full review:** https://aibuildermarketplace.com/b2b/vibe-review/
 
 ## Vida AI (vida.io)
 - **Verified pricing:** (re-verified 2026-10-17 in a browser on vida.io/pricing with its FAQ and on vida.io/rate-card; the page has changed since our reading of 13 October 2026, when it published no plans and only…

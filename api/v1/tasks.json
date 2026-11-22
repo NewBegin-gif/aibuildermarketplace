@@ -3263,6 +3263,116 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "Shutterstock",
+   "product_id": "shutterstock",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 on shutterstock.com with an existing free account and the site switched to English. We used both free AI image generations with a prompt that asked for exact text on a card, opened a result to download it, tried a third generation, and read the prices on a stock photo page. We paid nothing.",
+   "findings": [
+    "Language: the account opened on the Dutch site; the globe menu switched it to English.",
+    "Free AI generations: the generator page offered two free generations. Each one returned four images in under 20 seconds on the Automatic model.",
+    "Text in images: we asked for a coffee mug next to a card that reads exactly SPRING SALE 20% OFF. All eight images spelled the card text right. Some changed the scene: one mug had a flower print and several held coffee.",
+    "Download: a generated image showed a Shutterstock AI-Generated Image watermark. Download as JPEG opened a licence panel that required a GenAI subscription and a tick box saying the image has not been reviewed and must not be used if it contains the likeness of a brand or public person.",
+    "Free limit: a third generation opened a plan screen instead of generating.",
+    "Prices on 22 November 2026 in euros: GenAI EUR 9 a month billed yearly (EUR 108) or EUR 19 with no contract, for 100 generation credits a month; Unlimited Plus EUR 49 a month billed yearly; on a stock photo page Unlimited Images at EUR 29 a month, or packs from EUR 18 for one image to EUR 169 for 25."
+   ],
+   "not_tested": [
+    "downloading or licensing anything: we paid nothing, so we did not see an unwatermarked file or the licence certificate",
+    "the paid AI plans: we used only the two free generations on the default Automatic model and did not pick a model ourselves",
+    "the AI image editor, video generation and Image reference",
+    "the stock search beyond one search and one photo page, and video, music and editorial content",
+    "team plans, the Enhanced license and cancelling a subscription"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Vibe",
+   "product_id": "vibe",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in the Vibe web app with the interface in English. We signed up with email and a verification code, built an Awareness campaign for our own site up to the budget step, let Vibe Studio generate the video ad, and stopped at the payment step. No card was entered and no campaign went live.",
+   "findings": [
+    "Sign up: no card was asked to create the account. After the email code the dashboard opened with our site already set up as the advertiser.",
+    "Campaign types: a Traffic campaign needed a Vibe Page View event on the advertiser's website before we could continue; an Awareness campaign did not.",
+    "Budget step: a $100 daily budget and all 569 apps and channels across the US were filled in by default. The estimate showed 23K to 47K impressions and 1.56K to 3.11K households a week.",
+    "Creative: Generate a creative built a 30 second video from screenshots of our site, with music, a QR code and an AI voice reading a script written from our site text, in about a minute. The end card kept a [phone number here] placeholder until edited, and some slides showed other brands that appear on our pages.",
+    "Payment: Publish Campaign required a card on the summary step, with consent to charge it for future payments. The pricing page lists a $50 a day minimum and CPM from $15 to $40 on 22 November 2026."
+   ],
+   "not_tested": [
+    "a live campaign: publishing needs a card and we did not publish, so we saw no delivery, reporting or results",
+    "the Vibe pixel and Traffic, Leads, Sales and Retargeting campaigns, which need tracking on the advertiser's site",
+    "Walmart audience segments and uploaded customer lists",
+    "Create with agent and the Ask Agent assistant",
+    "support and the Call an expert option"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Cal.com",
+   "product_id": "cal-com",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 21 November 2026 in the Cal.com web app on the free Individual plan, with the interface switched to English. We went through onboarding, made a 30 minute event type with Cal Video, booked a slot on its public page as a visitor, read the confirmation email and then cancelled the booking. We also opened the plans screen, the workflows page and the Stripe app page and stopped before any payment. From the first onboarding screen to a confirmed booking took about 3 minutes.",
+   "findings": [
+    "Onboarding: four screens (plan choice, booking link, calendar connection, video). We chose the free personal plan, skipped the calendar connection and kept Cal Video as the default. No card and no phone number were asked.",
+    "Event type: a 30 minute event type with the default Cal Video location took three steps. Its public page showed open slots from 9:00 to 16:30 on weekdays without any availability setup.",
+    "Booking: choosing a slot and confirming took about one minute. The confirmation page said \"This meeting is scheduled\" and the confirmation email reached the inbox within seconds. Cancelling took two clicks and an optional reason, and the cancellation email arrived about three seconds later.",
+    "Language: the app stayed in Dutch although the language setting already said English, and so did the default links it created. It switched only after we changed the language to another one and back.",
+    "Free plan: Workflows with email and SMS reminder templates and the Stripe app were available without an upgrade prompt. SMS and AI calls are paid with credits, one credit is worth 1 cent, and the price per text message was not shown. Stripe charges its own fees.",
+    "Plans: the plans screen listed Team at $16 and Organization at $37 per user a month on monthly billing ($12 and $28 billed yearly), and Enterprise on request. Upgrade to Business opened a Create a new team wizard rather than a payment screen, and we stopped there."
+   ],
+   "not_tested": [
+    "Not tested: calendar sync. We connected no calendar, so we cannot say how well it prevents double bookings.",
+    "Not tested: a real Cal Video call, paid bookings through Stripe, SMS reminders and teams or round-robin events.",
+    "Not tested: paying for a plan. We did not complete the team wizard that follows Upgrade to Business, so we have not seen a payment screen."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "OPTIS Product Options",
+   "product_id": "optis-product-options",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 21 November 2026 on a Shopify development store with the Basic plan, in the real admin. We installed OPTIS Product Options from its Shopify App Store page, stayed on the free plan, saved one option set with an Engraving text field and opened the Advanced plan approval screen. The option was saved about 2.5 minutes after pressing Install and showed in the store preview about 3 minutes after install, once we switched on the app embed. Shopify marked the plan as a test charge that is not billed, so we paid nothing.",
+   "findings": [
+    "Install: the Shopify dialog asked for view access to customer data, device and activity data, and staff and contributor data, and to view and edit customers, products, orders, discounts, Shopify Functions, the Online Store and custom data.",
+    "Option set: we created an option set with a text field labelled Engraving text on a snowboard. The preview of our store showed the field on the product page after we switched on the app embed and saved the theme change.",
+    "Badge: the field showed a \"Powered by OPTIS Product Options\" line under it while we were on the free plan. The Shopify App Store listing lists \"Watermark removed\" under the free plan, so the listing and what we saw differ; we did not find out why.",
+    "Plan: the approval screen showed the Advanced Plan at $9.99 every 30 days with a 14 day free trial ending on 5 December, and the line \"You will not be billed for this test charge\". We cancelled the screen and stayed on the free plan.",
+    "Language: the app editor showed in Dutch because of our browser language, and adding ?locale=en did not change it. The store preview was in English. The listing says the app supports 22 languages."
+   ],
+   "not_tested": [
+    "Not tested: price add-ons, variant options, file uploads, other option types, conditional logic and a real order with an option.",
+    "Not tested: paying. Shopify showed a test charge on our development store, so we cannot say how the trial converts or what a real invoice looks like.",
+    "Not tested: uninstalling. The app stayed on our development store on the free plan."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "BSS B2B Lock",
    "product_id": "bss-b2b-lock",
    "run_date": "21 November 2026",
@@ -8261,6 +8371,37 @@
   },
   {
    "source": "session",
+   "product_name": "All in One SEO",
+   "product_id": "all-in-one-seo",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in WordPress Playground, a temporary WordPress site that runs in the browser, with the free AIOSEO Lite plugin (version 5.0.5.1) from WordPress.org and the interface in English. We went through the seven step setup wizard, set a custom SEO title and meta description on a post with unique test codes, and checked the page head WordPress produced for that post. We paid nothing and opened the Basic checkout only to read the price.",
+   "findings": [
+    "Setup: no AIOSEO account or licence key is needed for Lite. The last wizard step said you are using AIOSEO Lite and no licence is needed.",
+    "Extra installs: step 3 of the wizard had Broken Link Checker, MonsterInsights, OptinMonster and Universally ticked by default, plus the Pro addons Image SEO and Author SEO. We unticked each one, and afterwards only AIOSEO was installed.",
+    "Data sharing: step 4 had email reports set to Yes, and step 5 filled in the site admin email to connect the site to the AIOSEO SEO API with usage sharing switched on. We turned reports off and skipped step 5.",
+    "Titles and descriptions: the AIOSEO panel under the post editor updated its search preview as we typed. After saving, the page head carried our title, our meta description, a canonical link and matching Open Graph and Twitter titles.",
+    "Schema: without any setting from us, the post page carried BlogPosting, BreadcrumbList, Organization, Person, WebPage and WebSite markup.",
+    "Free and Pro: Search Console statistics, Link Assistant, Local SEO, Index Now and video and news sitemaps were marked Pro in the wizard. The general XML sitemap was switched on by default in Lite.",
+    "Checkout: on 22 November 2026, shown in euros from the Netherlands, Basic was €49.50 for the first year for one site (normally €99). The checkout added 21% VAT for a total of €59.90 and asked for an email, name and password for a new AIOSEO account. AIOSEO's terms say discount codes apply to the first term only. We did not pay."
+   ],
+   "not_tested": [
+    "the paid plans and Pro features such as Search Console statistics, Link Assistant, Local SEO and video or news sitemaps",
+    "the XML sitemap output itself: the sandbox could not serve sitemap.xml, so we only saw that the sitemap was switched on",
+    "the AI Copilot, redirects and the SEO analysis scores",
+    "managing many client sites: we used one temporary site",
+    "the Basic checkout beyond reading the price; we did not pay",
+    "a live public site: the test ran in a temporary WordPress Playground site in our browser"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Pepys",
    "product_id": "pepys",
    "run_date": "2026-11-19",
@@ -9894,6 +10035,35 @@
   },
   {
    "source": "session",
+   "product_name": "SeedProd",
+   "product_id": "seedprod",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in WordPress Playground, a temporary WordPress site that runs in the browser, with the free SeedProd Lite plugin (version 6.20.13) from WordPress.org and the interface in English. We skipped the setup wizard, created a landing page from the blank template, added a headline, a button and a paragraph of text by drag and drop, published it and opened it on the front end. We paid nothing and opened the Basic checkout only to read the price.",
+   "findings": [
+    "Setup: no SeedProd account is needed for Lite. The welcome screen offers a setup wizard that sends you to SeedProd.com; we skipped it. The dashboard lists Coming Soon, Maintenance and Landing Pages as free, and Website Builder, Login Page and 404 Page as PRO.",
+    "Templates: the picker mixes free and PRO templates. A banner offers 10 more free templates in exchange for an email address.",
+    "Builder: dragging blocks onto the page worked, though two of our drops landed in the wrong place, once as the word Button inside the text block. Headline, Text, List, Button, Image, Video and Custom HTML were open; Optin Form, Countdown, Tabs, Social Sharing and Animated Headline were locked.",
+    "Connections: in the Connect tab all 13 email marketing services, Zapier and reCAPTCHA were marked PRO. Only Google Analytics was open, so in Lite a landing page cannot send signups to a mailing list.",
+    "Publishing: the Publish button showed Your page has been published!, but the front end said the content was empty or had not been saved. After we clicked Save once more, the page appeared with our headline, button and text.",
+    "Checkout: on 22 November 2026 Basic was $39.50 for the first year (normally $79) for one site with 50 PRO templates; Plus was $99.50 for three sites and is the first plan whose card lists email marketing integrations. Renewals are at full price. The checkout asked for an email, first and last name and a card or PayPal, offered a $19 stock photo add on, and mentioned a 14 day money back guarantee. We did not pay."
+   ],
+   "not_tested": [
+    "the theme builder and full website kits, which need Plus or higher",
+    "optin forms and email marketing connections, which are locked in Lite",
+    "the AI features and the 10 extra templates offered for an email address",
+    "a live public site: the test ran in a temporary WordPress Playground site in our browser",
+    "a paid plan; we opened the Basic checkout to read the price and did not pay"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "EazyChat",
    "product_id": "eazychat",
    "run_date": "2026-11-19",
@@ -10458,6 +10628,35 @@
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "WPForms",
+   "product_id": "wpforms",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in WordPress Playground, a temporary WordPress site that runs in the browser, with the free WPForms Lite plugin from WordPress.org and the interface in English. We skipped the guided setup, built a contact form from the Simple Contact Form template, added it to a new page, submitted a test entry with a made up name and a unique code, and checked where the entry ended up. We paid nothing and opened the Basic checkout only to read the price.",
+   "findings": [
+    "Setup: no WPForms account is needed for Lite. The welcome screen offers a guided setup that sends you to WPForms.com, with a Skip Guided Setup link.",
+    "Templates and fields: the template library counted 2,195 templates, 72 of them available in Lite. Standard fields such as Dropdown were added with one click; Phone under Fancy Fields opened a Pro upgrade notice.",
+    "Publishing: the Embed button created a new page with the form in it. Our test entry showed Thanks for contacting us! and a notification email with every field reached the site admin.",
+    "Entries: Lite did not keep the entry. The Entries screen said Form entries are not stored in WPForms Lite, and a database search found no copy of our unique test code. The email is the only record unless you turn on Lite Connect backups or upgrade.",
+    "Payments: Stripe, PayPal Commerce and Square could be connected in Lite; the Stripe panel said there are no extra WPForms transaction fees on Pro.",
+    "Checkout: on 22 November 2026, in the Black Friday sale, Basic was $49.50 for the first year for one site (normally $99) and lists entry management. The checkout added 21% tax for a total of $59.90, asked for an email, name and a password for a new WPForms account, and said plans renew yearly at the regular price. We did not pay."
+   ],
+   "not_tested": [
+    "taking a real payment: connecting Stripe, PayPal or Square needs an account with them",
+    "Lite Connect entry backups, which send entries to WPForms",
+    "the paid plans; we opened the Basic checkout to read the price and did not pay",
+    "email delivery to a real inbox: the sandbox caught the notification email itself",
+    "a live public site: the test ran in a temporary WordPress Playground site in our browser"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true
   },
   {
@@ -18441,6 +18640,36 @@
     "A real email connection (no mailbox was connected)",
     "AI Answers",
     "The Docs site"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "LifterLMS",
+   "product_id": "lifterlms",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in WordPress Playground, a temporary WordPress site that runs in the browser, with the free LifterLMS core plugin from WordPress.org and the interface in English. We went through the setup wizard, built a course with a lesson in the Course Builder, added a free access plan, enrolled through the course page and marked the lesson complete. We paid nothing and opened the Earth checkout only to read the price.",
+   "findings": [
+    "Setup: no LifterLMS account is needed. The wizard created the course catalog, checkout and student dashboard pages, and its payments step said you need to install a payment gateway to accept online payments. A later step offered a coupon in exchange for sharing usage data; we said no.",
+    "Course Builder: our new course opened with one section and three empty lessons. We renamed one, added text and saved; a quiz could be added from the same panel.",
+    "Access plans: the free plugin offered free, monthly, annual, one time, lifetime, paid trial, hidden and pre-sale plans. Gift purchases, group access and name your price were marked as add ons.",
+    "Enrolling: even for the free plan, the default checkout asked for first and last name, address, city, state and ZIP code. After we filled in made up values it showed Course enrollment success!",
+    "Progress: Mark Complete on the lesson showed You Completed a Lesson and course progress of 33.33%.",
+    "Checkout: on 22 November 2026, in the November sale with code BLACKFRIDAY26, Earth was $159.20 for the first year for one site (normally $398) with the Stripe, PayPal and WooCommerce add ons; Universe was $239.20 for five sites. Renewals are at full price. The checkout asked for an email, name, country and ZIP code, a card or PayPal, and agreement to the terms. We did not pay."
+   ],
+   "not_tested": [
+    "taking a real payment: online payments need a payment gateway add on from a paid bundle",
+    "email marketing and CRM add ons, which come with Universe",
+    "quizzes, certificates and the Quickstart Course import",
+    "a second user account: we enrolled as the site admin",
+    "the paid bundles; we opened the Earth checkout to read the price and did not pay",
+    "a live public site: the test ran in a temporary WordPress Playground site in our browser"
    ],
    "report": null,
    "disclosure": null,
@@ -45358,6 +45587,33 @@
   },
   {
    "source": "session",
+   "product_name": "Rank Math",
+   "product_id": "rank-math",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in WordPress Playground, a temporary WordPress site that runs in the browser, with the free Rank Math plugin from WordPress.org and the interface in English. We went through the setup wizard without a Rank Math account, wrote a short test post, set a focus keyword, SEO title and meta description, looked at the schema options and read the page head the plugin produced. The post was published less than 4 minutes after we started. We paid nothing and opened the Pro checkout only to read the price.",
+   "findings": [
+    "Setup: the wizard has six steps. The first asks you to connect a free Rank Math account and has a Skip Step button. The Analytics step, which covers Search Console, Google Analytics and keyword rank tracking, also needs that account, so we skipped it. Usage tracking was off by default.",
+    "On-page checks: the score went from 4 to 54 out of 100 when we entered the focus keyword cold brew coffee, and to 58 after we set our own title and description. The free version listed Basic SEO, Additional, Title Readability and Content Readability checks; the Fix with AI buttons lead to Content AI.",
+    "Schema: Article was applied by default. The free Schema Generator offered 13 types, including Product, Recipe, Event and Video. FAQ, HowTo, Dataset, Fact Check, Movie and Podcast Episode were marked PRO, and the panel said more than one schema per post needs Pro.",
+    "Output: after we switched on Headless CMS Support in the settings, the plugin's getHead endpoint returned our meta description, robots, canonical, Open Graph and Twitter tags, and BlogPosting schema with our title as headline.",
+    "Checkout: on 22 November 2026, in the Black Friday sale, Pro was EUR 4.99 a month billed yearly, renewing at EUR 8.99, for unlimited personal websites, and Business was EUR 14.99 for client websites. The FastSpring checkout for Pro showed EUR 72.45 for the year including 21% Dutch VAT, asked for an email and a card or PayPal, and needed no account. We did not pay."
+   ],
+   "not_tested": [
+    "keyword rank tracking and Search Console data: the Analytics step needs a connected Rank Math account and a Google login",
+    "Content AI and the Fix with AI suggestions, which need a Rank Math account",
+    "Pro features and client site licences; we opened the Pro checkout to read the price and did not pay",
+    "a live public site: the test ran in a temporary WordPress Playground site in our browser"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "SmartSuite",
    "product_id": "smartsuite",
    "run_date": "2026-10-21",
@@ -46548,14 +46804,14 @@
      "claim": "Account, Billing, Change picture, Sign out",
      "claim_source": "our test notes",
      "claim_read_on": "2026-11-18",
-     "observed": "The app has no button to cancel a plan or delete the account: the avatar menu has Account, Billing, Change picture and Sign out, and the Account page has only connections, a name and a password reset by e-mail. The dossier names an e-mail route, which was not used.",
+     "observed": "The app has no button to cancel a plan or delete the account: the avatar menu has Account, Billing, Change picture and Sign out, and the Account page has only connections, a name and a password reset by e-mail. Our research found an e-mail route, which was not used.",
      "observed_on": "2026-11-18",
      "evidence": {
       "label": "Our test observations",
       "url": "https://marketingandsalessoftware.com/vidpal-review.html#claim-vs-measured"
      },
      "plan": "Free plan; the Starter monthly checkout was viewed, nothing was paid",
-     "comparability": "The dossier cancellation route against the menus of an account on the Free plan; no cancel step was run.",
+     "comparability": "The cancellation route from our research against the menus of an account on the Free plan; no cancel step was run.",
      "status": "not_testable",
      "buying_consequence": "How to stop a paid plan could not be seen in the app, and no paid plan was bought.",
      "buyer_direction": "neutral",
@@ -46582,7 +46838,7 @@
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
     "run_date": "2026-11-18",
-    "what": "Account and start: the account was created by us and was signed in; our AI assistant ran the test in our Chrome from 14:24 (Amsterdam). The interface was in English. The onboarding asked How did you hear about us? and Google search was chosen. The dossier name is VidPal and the review is on AIBM (b2b/vidpal-review). The audience that was tested: Newcomers unsure the output is postable. Core action: Studio, Create New, Short 9:16, From Prompt with the text 3 tips to wax a snowboard (Sample Snowboards), 30s, Stock Footage, Hook Intro None and no avatar. At 14:26:00 Generate Short Video (1 cr) was clicked and the script was ready after about 25 seconds: 3 Pro Tips for Perfect Snowboard Waxing, 3 sections, about 80 words. At about 14:26:50 Confirm script & generate voice was clicked and the credit counter went at once to 1 / 4 (3 credits left). That is the moment the video counts, with or without a result. After that the page stayed on Generating voice & captions and Generating media for each section. After about 3 minutes it said Taking longer than usual and offered Try again; Try again was pressed 2 times and the answer was Voice or render is in progress. Wait for it to finish before retrying auto-assign. At 14:39 the Studio list still said GENERATING MEDIA (more than 12 minutes). At 14:47, 21 minutes after the start, the same concept (no new credits, no new attempt) still showed the badge GENERATING MEDIA, 30s and Short, the credits 1 / 4 used, a black preview with Generating voice & captions, and per section only Assign and AI image with no clip assigned. The Edit Script & Voice tab said Script is locked. Result in this one run: not reached after 12+ min, 2 retries, 1 of 4 credits used. No preview and no export were seen, so the watermark, the resolution, the length and the quality of a finished video were not measured. Nothing is said here about the cause. Plans: Billing page of the app, read by the tester on 18 Nov 2026, with the banner Limited-time launch offer, 50% off all plans for life-time. Free: $0, 4 lifetime credits, a Made with Vidpal.ai watermark on exports, AI Avatar and long-form locked. Annual: Starter $12 a month (struck through $24), billed $144, 180 credits a year; Pro $23 (struck through $46), $276, 480 a year, with auto-publish and 2K; Business $41 (struck through $82), $492, 1200 a year, with 4K. Monthly: Starter $19 (struck through $38), 15 credits a month; Pro $39 (struck through $78), 40 a month; Business $69 (struck through $138), 100 a month. The public page vidpal.ai/pricing was read again just before this delivery the same day with the same prices in both views (annual $12, $23 and $41 with $24, $46 and $82 struck through, billed $144, $276 and $492; monthly $19, $39 and $69 with $38, $78 and $138 struck through) and the same banner. So the prices are unchanged against the dossier. The deviation is that the dossier names only the struck through annual prices; the monthly view also has struck through prices. The credit card in the app said 3 from this month's plan; the free credits are 4 lifetime credits. Checkout: for Starter monthly the checkout of Dodo Payments (shown for the Netherlands) said EUR 17.33 a month plus VAT EUR 3.64, total EUR 20.97, against $19 on the plan card; nothing was filled in and the tester went back. No screenshot was kept because the page showed a name and Dutch text. Cancelling: the app has no button to cancel a plan or to delete the account. The Account page has only connections, a name and a password reset by e-mail; the avatar menu has Account, Billing, Change picture and Sign out; Help & feedback is a form to the founder (cancelled before sending). The dossier names an e-mail route for cancelling and refunds, which was not used. Not tested: export, watermark, resolution, video quality, publishing, the connections (deliberately not linked), a paid plan and the payment. Clean up: the account and one Studio concept (3 Pro Tips for Perfect Snowboard Waxing, still GENERATING MEDIA) stay; the own tab of the retry was closed; nothing was bought. No kit records were entered.",
+    "what": "Account and start: the account was created by us and was signed in; our AI assistant ran the test in our Chrome from 14:24 (Amsterdam). The interface was in English. The onboarding asked How did you hear about us? and Google search was chosen. Core action: Studio, Create New, Short 9:16, From Prompt with the text 3 tips to wax a snowboard (Sample Snowboards), 30s, Stock Footage, Hook Intro None and no avatar. At 14:26:00 Generate Short Video (1 cr) was clicked and the script was ready after about 25 seconds: 3 Pro Tips for Perfect Snowboard Waxing, 3 sections, about 80 words. At about 14:26:50 Confirm script & generate voice was clicked and the credit counter went at once to 1 / 4 (3 credits left). That is the moment the video counts, with or without a result. After that the page stayed on Generating voice & captions and Generating media for each section. After about 3 minutes it said Taking longer than usual and offered Try again; Try again was pressed 2 times and the answer was Voice or render is in progress. Wait for it to finish before retrying auto-assign. At 14:39 the Studio list still said GENERATING MEDIA (more than 12 minutes). At 14:47, 21 minutes after the start, the same concept (no new credits, no new attempt) still showed the badge GENERATING MEDIA, 30s and Short, the credits 1 / 4 used, a black preview with Generating voice & captions, and per section only Assign and AI image with no clip assigned. The Edit Script & Voice tab said Script is locked. Result in this one run: not reached after 12+ min, 2 retries, 1 of 4 credits used. No preview and no export were seen, so the watermark, the resolution, the length and the quality of a finished video were not measured. Nothing is said here about the cause. Plans: Billing page of the app, read by the tester on 18 Nov 2026, with the banner Limited-time launch offer, 50% off all plans for life-time. Free: $0, 4 lifetime credits, a Made with Vidpal.ai watermark on exports, AI Avatar and long-form locked. Annual: Starter $12 a month (struck through $24), billed $144, 180 credits a year; Pro $23 (struck through $46), $276, 480 a year, with auto-publish and 2K; Business $41 (struck through $82), $492, 1200 a year, with 4K. Monthly: Starter $19 (struck through $38), 15 credits a month; Pro $39 (struck through $78), 40 a month; Business $69 (struck through $138), 100 a month. The public page vidpal.ai/pricing was read again just before this delivery the same day with the same prices in both views (annual $12, $23 and $41 with $24, $46 and $82 struck through, billed $144, $276 and $492; monthly $19, $39 and $69 with $38, $78 and $138 struck through) and the same banner. So the prices are unchanged against the dossier. The deviation is that the dossier names only the struck through annual prices; the monthly view also has struck through prices. The credit card in the app said 3 from this month's plan; the free credits are 4 lifetime credits. Checkout: for Starter monthly the checkout of Dodo Payments (shown for the Netherlands) said EUR 17.33 a month plus VAT EUR 3.64, total EUR 20.97, against $19 on the plan card; nothing was filled in and the tester went back. No screenshot was kept because the page showed a name and Dutch text. Cancelling: the app has no button to cancel a plan or to delete the account. The Account page has only connections, a name and a password reset by e-mail; the avatar menu has Account, Billing, Change picture and Sign out; Help & feedback is a form to the founder (cancelled before sending). The dossier names an e-mail route for cancelling and refunds, which was not used. Not tested: export, watermark, resolution, video quality, publishing, the connections (deliberately not linked), a paid plan and the payment. Clean up: the account and one Studio concept (3 Pro Tips for Perfect Snowboard Waxing, still GENERATING MEDIA) stay; the own tab of the retry was closed; nothing was bought. No kit records were entered.",
     "first_import": null,
     "file_inspected": false,
     "reimport_tested": false,
@@ -46950,7 +47206,7 @@
     "The CSV import recognised all six of our columns: email, first and last name, company name, and our test ID and amount as 'Campaign variable', each with a 'Don't overwrite' option. Both leads were imported with status 'To launch'.",
     "The last import step offers enrichment that costs credits per lead (5 for a verified email, 20 for a phone number, 1 for a LinkedIn profile or an email check) and showed 200 remaining credits; we left it all off. AI columns can be previewed on the first 3 rows for free, and duplicates are skipped within the campaign by default.",
     "'Export as .CSV' downloaded straight away with 19 columns, and both leads came back complete with our test ID and amount, status and lemlist's internal lead ID. The message text of the sequence is not in the export.",
-    "In the email step, {{firstName}} was mapped to the contact field automatically, while our own variables stayed marked red until leads with those columns existed. Without a connected email account the step said 'Connect an email account to start sending.'",
+    "In the email step, lemlist's first-name variable was mapped to the contact field automatically, while our own variables stayed marked red until leads with those columns existed. Without a connected email account the step said 'Connect an email account to start sending.'",
     "The home screen showed '15 days of free trial left' on sign-up day, against '14-day free trial' on lemlist's help page. No card was asked. lemlist's chat window once covered the Continue button during the import."
    ],
    "not_tested": [

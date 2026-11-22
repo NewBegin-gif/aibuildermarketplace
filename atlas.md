@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 691 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-22.
+All 692 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-22.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2695,6 +2695,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** small sites and shops that want popups, slide-ins and signup forms with ready templates, and who accept yearly billing
 - **Flags:** Usage-metered, Renewal jump
 - **Full review:** https://marketingandsalessoftware.com/optinmonster-review.html
+
+## OPTIS Product Options (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-22 on apps.shopify.com/product-options-by-bss) Free plan: 10 variant option sets, 10+ product option types, analytics, email and live support, watermark removed.
+- **Honest take:** Shopify app that adds text fields, swatches, file uploads and price add-ons to product pages; free plan, paid plans from $9.99 a month.
+- **Best for:** Shopify stores that sell personalised or made-to-order products and need customers to enter text, upload files or pick extras before checkout
+- **Flags:** Add-ons extra, Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/optis-product-options-review/
 
 ## Optizen (optizenapp.com)
 - **Verified pricing:** (prices read 2026-08-31 on apps.shopify.com/optizen-video-upsell; re-read 2026-09-17 and 2026-10-05, every amount unchanged) Three tiers, billed in USD.

@@ -690,7 +690,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Scheduling with a free plan for one person; teams from $12 per user a month billed yearly.
 - **Best for:** freelancers, consultants and small teams that want a shareable booking page with video calls and email confirmations, starting on a free plan
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/cal-com-review/
+- **Full review:** https://officesoftwaremarketplace.com/cal-com-review.html
 
 ## Calilio (calilio.com)
 - **Verified pricing:** (re-verified 2026-08-17; plan prices unchanged on 2026-10-06, included allowance changed) Standard $15 per user/mo, or $12 billed annually ($144 a year); Premium $35 per user/mo, or $28 ann…
@@ -1124,7 +1124,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/diginius-review.html
 
 ## DigiParser (digiparser.com)
-- **Verified pricing:** (read 2026-10-13 in a live browser on digiparser.com/pricing in both the monthly and the yearly view, with the FAQ opened, and on the home page) Three self-serve plans, priced by pages proc…
+- **Verified pricing:** (re-read 2026-11-22 in a headless browser in both billing views: every plan price below is unchanged.
 - **Honest take:** Billed per page, not per document; unused pages expire monthly even on yearly plans, and a charged subscription is not refunded.
 - **Best for:** manufacturers and distributors that retype customer purchase orders or supplier invoices and want the fields and line items extracted for review, then sent to Sheets, Xero, an ERP via Zapier or Make
 - **Flags:** Usage-metered
@@ -1283,7 +1283,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/ecomxray-review.html
 
 ## eDesk (edesk.com)
-- **Verified pricing:** (re-verified 2026-11-10) No free plan: 'Start for free' opens a 14-day full-feature trial with no credit card.
+- **Verified pricing:** (re-verified 2026-11-10 and 2026-11-22, seat prices unchanged) No free plan: 'Start for free' opens a 14-day full-feature trial with no credit card.
 - **Honest take:** The per-agent price is the entry ticket, but the AI Agent charges $0.99 for every automated resolution on top, a variable line that scales with your ticket volume.
 - **Best for:** e-commerce and marketplace sellers who want one unified inbox across Amazon, eBay, Shopify and email: with order data and AI-assisted replies where support and revenue overlap
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
@@ -1788,10 +1788,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/harbor-compliance-review.html
 
 ## Healthie (gethealthie.com)
-- **Verified pricing:** (re-verified 2026-11-15 by plain fetch of gethealthie.com/healthie-pricing; yearly billing saves 10%) The public ladder now starts at Essentials: $49.99 a month billed monthly or $45 billed…
+- **Verified pricing:** (re-verified 2026-11-15 and again 2026-11-22 by plain fetch of gethealthie.com/healthie-pricing, tier prices unchanged; yearly billing saves 10%) The public ladder now starts at Essentials:…
 - **Honest take:** Two honest limits: it's pricier than alternatives with thin mid-tier options, and several users report slow customer service (sometimes a week or more to reply).
 - **Best for:** growing group practices (10+ clinicians) in health, wellness and nutrition that need multi-provider scheduling, telehealth and a real API to automate operations
-- **Flags:** Add-ons extra
+- **Flags:** Usage-metered, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/healthie-review/
 
 ## Heard (joinheard.com)
@@ -1870,7 +1870,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/hostinger-review.html
 
 ## HostPapa (hostpapa.com)
-- **Verified pricing:** (read 2026-10-12 in a live browser on hostpapa.com/web-hosting-plan and hostpapa.com/renewal-pricing; US site, prices in US dollars excluding taxes) Shared web hosting comes in four cPanel …
+- **Verified pricing:** (re-read 2026-11-22 in a headless browser: the renewal rates below are unchanged.
 - **Honest take:** $2.95 is a 3-year first-term price for one site; it renews at $8.99 a month on 3 years or $12.99 month to month, and backups are free for the first year only.
 - **Best for:** small businesses and first-time site owners in North America who want cPanel shared or WordPress hosting with phone, chat and email support, free migration, and a host that publishes its renewal prices in a table
 - **Flags:** Renewal jump
@@ -2282,7 +2282,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/lettrlabs-review.html
 
 ## LifterLMS (lifterlms.com)
-- **Verified pricing:** (read 2026-10-10 on lifterlms.com/pricing, USD) The LifterLMS core plugin for WordPress is free and open source, with unlimited courses, memberships, students and teachers.
+- **Verified pricing:** (re-read 2026-11-22 on lifterlms.com/pricing: the normal prices of $398, $598 and $1,598 a year are unchanged.
 - **Honest take:** Checkout add-ons need a paid bundle, and renewals cost double the first year.
 - **Best for:** course creators and training businesses already on WordPress who want to own their course site and pay a yearly licence instead of a monthly platform fee
 - **Flags:** Renewal jump, Add-ons extra
@@ -3239,7 +3239,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/remote-coworker-review.html
 
 ## Remote People (remotepeople.com)
-- **Verified pricing:** (read 2026-11-12 on their own pricing page.
+- **Verified pricing:** (read 2026-11-12 and re-read unchanged 2026-11-22 on their own pricing page.
 - **Honest take:** Every rate is a 'from' price with no country-level figure, and recruitment fees charged as a share of salary can dwarf the subscription.
 - **Best for:** small and mid-size teams hiring a handful of people abroad, above all in the countries and salary ranges that EOR Select covers. Read on 12 November 2026, EOR Select starts at $199 per employee a month
 - **Flags:** Per-seat pricing, Annual commit
@@ -3959,7 +3959,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/surveysparrow-review.html
 
 ## Survicate (survicate.com)
-- **Verified pricing:** (read 2026-09-08 and re-read unchanged 2026-09-26 and 2026-11-11 (Growth from $56, Pro $349, Enterprise $569) in the plan data embedded in survicate.com/pricing; from an EU exit the cards s…
+- **Verified pricing:** (read 2026-09-08 and re-read unchanged 2026-09-26, 2026-11-11 and 2026-11-22 (Growth from $56, Pro $349, Enterprise $569) in the plan data embedded in survicate.com/pricing; from an EU exit…
 - **Honest take:** The plan is metered by response volume, not by surveys: a viral NPS month can push you a tier up, and the free plan's 30-day retention quietly deletes your history.
 - **Best for:** product and CX teams running always-on feedback (NPS, CSAT and in-app surveys) piped into the CRM and analytics stack they already use
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -3987,7 +3987,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/switchstation-review/
 
 ## Synthesia (synthesia.io)
-- **Verified pricing:** (re-read 12 and 13 November 2026, unchanged) The public pricing page is geo-priced, and the dollar view has changed since 1 October.
+- **Verified pricing:** (re-read 22 November 2026: the dollar Starter and Pro prices below are unchanged.) The page now also has a 'For business' tab we had not recorded before: Business at $99 a month billed mont…
 - **Honest take:** The minute caps are tight: Starter's 1,250 credits a month is roughly 10 to 12 minutes of finished video, and the meter counts seconds.
 - **Best for:** teams making talking-head training, explainer and onboarding videos without cameras, actors or editing
 - **Flags:** Usage-metered, Add-ons extra, Free tier
@@ -4236,7 +4236,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/trainual-review/
 
 ## Tresorit (tresorit.com)
-- **Verified pricing:** (re-verified 2026-11-05 on tresorit.com/pricing/business, /personal, /tresorit-engage and /file-sharing in a browser, both billing toggles; Tresorit announced a price increase to partners o…
+- **Verified pricing:** (re-verified 2026-11-22 on tresorit.com/pricing/business with both billing toggles: the business prices below are unchanged, €36, €24 and €30 monthly and €28.80, €19.20 and €24 yearly, and …
 - **Honest take:** You pay the Swiss-E2EE premium (noticeably above mainstream clouds and above Proton Drive per GB) and the encryption trade-offs are inherent.
 - **Best for:** businesses and professionals with confidentiality obligations (legal, health, finance) that need end-to-end-encrypted storage, granular sharing controls and compliance features
 - **Flags:** Per-seat pricing, Add-ons extra
@@ -4402,7 +4402,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Self-serve streaming and connected TV ads, no subscription; CPM from $15 to $40 with a $50 a day minimum.
 - **Best for:** small and mid-size brands that want to run streaming TV ads themselves, with a generated video ad and no contract
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/vibe-review/
+- **Full review:** https://marketingandsalessoftware.com/vibe-review.html
 
 ## Vida AI (vida.io)
 - **Verified pricing:** (re-verified 2026-10-17 in a browser on vida.io/pricing with its FAQ and on vida.io/rate-card; the page has changed since our reading of 13 October 2026, when it published no plans and only…
@@ -4661,7 +4661,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/xero-review.html
 
 ## xTiles (xtiles.app)
-- **Verified pricing:** (read 2026-10-13 in a live browser on xtiles.app/en/pricing, prices in US dollars, with the comparison table and FAQ) Four plans, priced per user.
+- **Verified pricing:** (re-read 2026-11-22 in a headless browser in both billing views: Plus at $19 or $12.42 and Pro at $35 or $24.92 per user are unchanged.
 - **Honest take:** Free shows only this week's and last week's planner history; monthly plans are refundable for only 72 hours, and several of Pro's AI permissions are still marked soon.
 - **Best for:** individuals, coaches and small teams who want notes, tasks and a daily planner in one visual workspace, and who want to connect ChatGPT or Claude to their projects
 - **Flags:** Per-seat pricing, Usage-metered, Free tier

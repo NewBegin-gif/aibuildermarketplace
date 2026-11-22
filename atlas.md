@@ -238,7 +238,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/amplitude-review/
 
 ## Answering Service Care (answeringservicecare.com)
-- **Verified pricing:** (2026-09-10, re-verified 13 October 2026 on their own pricing page, both billing toggles; the monthly live-answering cards re-read on 22 November 2026 and unchanged) Four plans, priced on i…
+- **Verified pricing:** (2026-09-10, re-verified 13 October 2026 on their own pricing page, both billing toggles) Four plans, priced on included minutes.
 - **Honest take:** Starter buys the line and nothing else: at $40 plus $1.75 a minute it stays the cheapest option only up to roughly 79 minutes a month, and there is a $50 start-up fee on top.
 - **Best for:** a small business that loses money when a call goes to voicemail (trades, clinics
 - **Flags:** Usage-metered

@@ -66,16 +66,255 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free plan: basic B2B price, basic B2B registration management, 1 custom pricing rule and 1 registration form on live stores"
+    },
+    {
+     "id": "essential",
+     "name": "Essential",
+     "model": "per_unit",
+     "monthly": 29,
+     "annual_year": 313.2,
+     "evidence": "Essential is $29 a month or $313.20 a year"
+    },
+    {
+     "id": "advanced",
+     "name": "Advanced",
+     "model": "per_unit",
+     "monthly": 49,
+     "annual_year": 529.2,
+     "evidence": "Advanced is $49 a month or $529.20 a year"
+    },
+    {
+     "id": "platinum",
+     "name": "Platinum",
+     "model": "per_unit",
+     "monthly": 99,
+     "annual_year": 1069.2,
+     "evidence": "Platinum is $99 a month or $1,069.20 a year"
+    }
+   ],
+   "notes": "Shopify app billed through Shopify, one charge per store; each paid plan has a 14 day free trial. The free plan is limited to 1 custom pricing rule and 1 registration form on live stores.",
+   "not_computable": [
+    "Add-ons per month: Invoice PDF $12, Recurring orders $99, Quick Order $9, Credit limit $39 and Sales rep $29 with 3 reps plus $9 per extra rep; which ones you need depends on your B2B setup."
+   ],
+   "rules_verified_at": "2026-11-22"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "bss-b2b-solution",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 26.1,
+       "advanced": 44.1,
+       "platinum": 89.1
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 52.2,
+       "advanced": 88.2,
+       "platinum": 178.2
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 78.3,
+       "advanced": 132.3,
+       "platinum": 267.3
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 130.5,
+       "advanced": 220.5,
+       "platinum": 445.5
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 261.0,
+       "advanced": 441.0,
+       "platinum": 891.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Add-ons per month: Invoice PDF $12, Recurring orders $99, Quick Order $9, Credit limit $39 and Sales rep $29 with 3 reps plus $9 per extra rep; which ones you need depends on your B2B setup."
+    ]
+   },
+   "monthly": {
+    "product_id": "bss-b2b-solution",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 29.0,
+       "advanced": 49.0,
+       "platinum": 99.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 58.0,
+       "advanced": 98.0,
+       "platinum": 198.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 87.0,
+       "advanced": 147.0,
+       "platinum": 297.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 145.0,
+       "advanced": 245.0,
+       "platinum": 495.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "essential": 290.0,
+       "advanced": 490.0,
+       "platinum": 990.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Add-ons per month: Invoice PDF $12, Recurring orders $99, Quick Order $9, Credit limit $39 and Sales rep $29 with 3 reps plus $9 per extra rep; which ones you need depends on your B2B setup."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -236,9 +475,9 @@
    "status": "open"
   },
   {
-   "question_id": "bss-b2b-solution:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "bss-b2b-solution:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Add-ons per month: Invoice PDF $12, Recurring orders $99, Quick Order $9, Credit limit $39 and Sales rep $29 with 3 reps plus $9 per extra rep; which ones you need depends on your B2B setup. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

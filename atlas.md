@@ -238,7 +238,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/amplitude-review/
 
 ## Answering Service Care (answeringservicecare.com)
-- **Verified pricing:** (2026-09-10, re-verified 13 October 2026 on their own pricing page, both billing toggles) Four plans, priced on included minutes.
+- **Verified pricing:** (2026-09-10, re-verified 13 October 2026 on their own pricing page, both billing toggles; the monthly live-answering cards re-read on 22 November 2026 and unchanged) Four plans, priced on i…
 - **Honest take:** Starter buys the line and nothing else: at $40 plus $1.75 a minute it stays the cheapest option only up to roughly 79 minutes a month, and there is a $50 start-up fee on top.
 - **Best for:** a small business that loses money when a call goes to voicemail (trades, clinics
 - **Flags:** Usage-metered
@@ -462,7 +462,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/bitscale-review.html
 
 ## Bitvavo (bitvavo.com)
-- **Verified pricing:** (re-verified 2026-10-08, read on their own fees page) No subscription — you pay per trade.
+- **Verified pricing:** (re-verified 2026-11-22, read on their own fees page; every figure below matches the 8 October 2026 reading) No subscription — you pay per trade.
 - **Honest take:** The honest caveats are crypto-wide, not Bitvavo-specific: fees are only part of the cost (spread matters on small orders), and no exchange removes market risk.
 - **Best for:** EU-based traders and builders who want a MiCA-regulated, euro-native exchange with low tiered fees, deep EUR pairs and a solid API for automation
 - **Full review:** https://officesoftwaremarketplace.com/bitvavo-review.html
@@ -642,7 +642,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Shopify app that hides prices, products and pages from visitors until they log in or match a rule; free plan, paid plans from $9.99 a month.
 - **Best for:** Wholesale or private-sale Shopify stores that want to hide prices and Add to cart from everyone except tagged or logged-in buyers
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/bss-b2b-lock-review/
+- **Full review:** https://marketingandsalessoftware.com/bss-b2b-lock-review.html
 
 ## BSS B2B Solution (apps.shopify.com)
 - **Verified pricing:** (read 2026-11-21 on apps.shopify.com/b2b-solution-custom-pricing) Free plan: basic B2B price, basic B2B registration management, 1 custom pricing rule and 1 registration form on live stores…
@@ -823,7 +823,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/claude-review.html
 
 ## Clay (clay.com)
-- **Verified pricing:** (re-verified 2026-10-19 on clay.com/pricing; both billing terms read from the page markup, no figure has moved since our August reading, and our reading of the headline prices was corrected…
+- **Verified pricing:** (re-verified 2026-11-22 on clay.com/pricing and its markdown version, clay.com/pricing.md; every figure below matches the 19 October 2026 reading, when our reading of the headline prices wa…
 - **Honest take:** Two honest catches: a steep learning curve (expect 2–4 weeks, many teams need a dedicated Clay expert), and credits that are hard to forecast at scale.
 - **Best for:** modern GTM and ops teams who want waterfall enrichment and custom research workflows, and have someone to own it
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -1124,7 +1124,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/digiparser-review.html
 
 ## Digit (heysutton.com)
-- **Verified pricing:** (re-read 2026-09-17 in a rendered browser on heysutton.com/pricing, the rebranded site; unchanged from the 5 September reading on digit-software.com) Four tiers with three published: Starte…
+- **Verified pricing:** (re-read 2026-11-22 on heysutton.com/pricing, rendered and in the raw HTML; the tier prices have not moved since the 5 September 2026 reading on digit-software.com) Four tiers with three pu…
 - **Honest take:** The tier price is a floor, not a ceiling, and the add-ons are where an inventory system quietly doubles.
 - **Best for:** manufacturers and distributors outgrowing spreadsheets who need inventory, production, purchasing and sales in one system, and who need lot tracking and traceability rather than just wanting them
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit
@@ -1788,7 +1788,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/healthie-review/
 
 ## Heard (joinheard.com)
-- **Verified pricing:** (re-verified 2026-10-27 in a browser on joinheard.com/pricing and in joinheard.com/llms.txt, which says its prices are for new members starting October 26, 2026; earlier readings on 5 Septe…
+- **Verified pricing:** (re-verified 2026-11-22 on joinheard.com/pricing, rendered, and in joinheard.com/llms.txt; the Lite and Essential prices match the 27 October 2026 reading, when Heard said they apply to new…
 - **Honest take:** Price the tier that actually includes filing.
 - **Best for:** therapists and health-and-wellness practice owners (SLPs, dieticians, chiropractors, audiologists, coaches, massage and physical therapists) who want books
 - **Flags:** Add-ons extra

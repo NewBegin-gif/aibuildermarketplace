@@ -3263,6 +3263,31 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "BSS B2B Lock",
+   "product_id": "bss-b2b-lock",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 21 November 2026 on a Shopify development store with the Basic plan, in the real admin with the interface in English. We installed BSS B2B Lock from its Shopify App Store page, saved one lock rule that hides prices from customers without a VIP tag and opened the plan approval screen. The rule was saved about 3.5 minutes after pressing Install. Shopify marked the plan as a test charge that is not billed, so we paid nothing.",
+   "findings": [
+    "Install: the Shopify dialog asked for view access to customer data, device and activity data, and staff and contributor data, and to view and edit customers, products, orders, Shopify Functions, the Online Store and custom data.",
+    "Lock rule: we created \"My first lock\" in three steps. The lock target was all products with the option \"Price hidden - Add to cart visible but disabled\", the rule was \"Customer tag\" with the tag VIP, and we excluded no pages. The app showed \"Lock created successfully!\" and listed the lock as on, with the target \"Price\".",
+    "Theme: the app told us \"Code is added to your theme for store protection\", so it changed the theme itself. We did not look at the storefront to see the hidden price.",
+    "Plan: the approval screen showed \"Advanced Version (Monthly)\" at $9.99 every 30 days with a 7 day free trial ending on 28 November, and the line \"You will not be billed for this test charge\". No card was asked for. The Shopify App Store listing calls the $9.99 plan \"Basic Shopify\", so the names differ between listing and app.",
+    "Removal: the app warns that you must switch off all rules on its Theme Cleanup page to remove the lock code from every theme. We did not uninstall."
+   ],
+   "not_tested": [
+    "Not tested: whether the lock works for a VIP customer, the storefront view, passcodes, age checks and the higher plans.",
+    "Not tested: paying. Shopify showed a test charge on our development store, so we cannot say how the trial converts or what a real invoice looks like."
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "BSS B2B Solution",
    "product_id": "bss-b2b-solution",
    "run_date": "21 November 2026",

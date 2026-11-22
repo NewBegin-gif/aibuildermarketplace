@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 690 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-21.
+All 691 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-22.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -636,6 +636,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** teams that need a reusable web scraper or browser bot without writing selectors, want the browsers, proxies and CAPTCHA handling managed for them, and can commit to yearly billing
 - **Flags:** Usage-metered, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/browseract-review/
+
+## BSS B2B Lock (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-22 on apps.shopify.com/login-to-access-pages) Free plan: lock the entire website by condition, free setup help from BSS support; upgrade to hide products and prices.
+- **Honest take:** Shopify app that hides prices, products and pages from visitors until they log in or match a rule; free plan, paid plans from $9.99 a month.
+- **Best for:** Wholesale or private-sale Shopify stores that want to hide prices and Add to cart from everyone except tagged or logged-in buyers
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/bss-b2b-lock-review/
 
 ## BSS B2B Solution (apps.shopify.com)
 - **Verified pricing:** (read 2026-11-21 on apps.shopify.com/b2b-solution-custom-pricing) Free plan: basic B2B price, basic B2B registration management, 1 custom pricing rule and 1 registration form on live stores…
@@ -4033,7 +4040,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The tiers gate on TWO axes at once (member count and project/pipeline count) so you can hit a wall on either.
 - **Best for:** solo operators and small teams who want projects, tasks, chat AND a lightweight CRM pipeline with AI in one simple tool, and value the real free tier to start
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/team-pulse-review/
+- **Full review:** https://officesoftwaremarketplace.com/team-pulse-review.html
 
 ## Teikametrics (teikametrics.com)
 - **Verified pricing:** (2026-08-30, re-read on their own pricing page from a US exit; unchanged on 2026-10-13) Essentials, for up to $10K a month in ad spend: $149 a month billed annually, or $179 billed monthly.
@@ -4054,7 +4061,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** This is enterprise-grade security tooling with an enterprise price and a learning curve: you need someone who can act on the findings, or you're paying for reports nobody reads.
 - **Best for:** security teams and IT-mature companies that need continuous, authoritative vulnerability scanning and can remediate what it finds
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/tenable-review/
+- **Full review:** https://officesoftwaremarketplace.com/tenable-review.html
 
 ## TestDriver.ai (testdriver.ai)
 - **Verified pricing:** (re-verified 2026-11-11 on testdriver.ai/pricing; amounts unchanged since 2026-11-02) Two tiers, and Pro has been repriced since our September reading.
@@ -4312,7 +4319,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The plans are capped by the revenue they are allowed to earn you, and the first paid step does not raise that cap: Free and the $49 Launch plan both stop at $500 of upsell revenue a month.
 - **Best for:** shopify merchants who want one app covering product page, cart, checkout, post-purchase, customer accounts and POS offers rather than three, especially Shopify Plus stores, where the checkout half of the product actually works
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/upsellplus-review/
+- **Full review:** https://marketingandsalessoftware.com/upsellplus-review.html
 
 ## UptimeRobot (uptimerobot.com)
 - **Verified pricing:** (read 2026-08-26 on uptimerobot.com/pricing over a US connection; re-read 2026-09-29 from a Dutch connection, where the page and its machine-readable pricing.md serve euro amounts identical…
@@ -4395,7 +4402,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Credits don't carry over month to month, and a few users report slow support/account responses, so run the free plan through a full create-and-publish loop before you pay.
 - **Best for:** creators and small brands running faceless or topic-based channels that want the trend-find, generate and auto-publish loop handled in one tool across TikTok, Instagram and YouTube
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/vidpal-review/
+- **Full review:** https://marketingandsalessoftware.com/vidpal-review.html
 
 ## Vify Order Printer (vify.io)
 - **Verified pricing:** (read 2026-10-11 on the Shopify App Store listing apps.shopify.com/vify-order-printer, USD; the listing says recurring charges are billed every 30 days) Four plans.

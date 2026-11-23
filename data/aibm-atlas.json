@@ -19,7 +19,7 @@
   },
   "notes": "Prices are the entry prices we found at research time; always check live pricing. Every flag carries the evidence sentence from our hand-researched dossier.",
   "tool_count": 697,
-  "flag_count": 1112
+  "flag_count": 1114
  },
  "tools": [
   {
@@ -831,28 +831,36 @@
    "from_price_usd_mo": null,
    "entry_price": null,
    "entry_price_terms": null,
-   "pricing_status": "quote_only",
-   "price_note": "(re-verified 20 Sep 2026) The pricing page is public again, and it has tiers now. On 26 August 2026 alvys.com/pricing answered an ordinary request with HTTP 401 and sat behind a password; read on 20 September 2026 it returns 200 and shows three plans — Foundations, Growth and Scale — none of which carries an amount. All three read \"Quoted based on volume of loads\", under the page's own summary line: simple per-load pricing, free implementation, cancel anytime. Foundations now has a 14-day free trial behind a Try for free button; Growth and Scale route to sales. The FAQ states there are no setup fees, no per-user or per-seat charge, no contracts and month-to-month cancellation. Two extras are priced in the open: EDI includes 2 trading partners on Growth and 5 on Scale with per-partner pricing above the cap, and the developer sandbox is a $100/month add-on on Foundations and Growth, included on Scale. Custom reports, scheduled reports, Insights AI analytics, Sage and Samsara Premium are add-ons on every tier. The last published load-based rates (2026) were Carrier from ~$150/mo and Broker from ~$300/mo; those tier names no longer exist on the page and the figures are history, not a quote.",
+   "pricing_status": "see_details",
+   "price_note": "(re-verified 23 Nov 2026; first read with tiers 20 Sep 2026) The pricing page is public again, and it has tiers now. On 26 August 2026 alvys.com/pricing answered an ordinary request with HTTP 401 and sat behind a password; read on 20 September 2026 it returns 200 and shows three plans — Foundations, Growth and Scale — none of which carries an amount. All three read \"Quoted based on volume of loads\", under the page's own summary line: simple per-load pricing, free implementation, cancel anytime. Foundations now has a 14-day free trial behind a Try for free button; Growth and Scale route to sales. The FAQ states there are no setup fees, no per-user or per-seat charge, no contracts and month-to-month cancellation. Two extras are priced in the open: EDI includes 2 trading partners on Growth and 5 on Scale with per-partner pricing above the cap, and (on 20 September) the developer sandbox was a $100/month add-on on Foundations and Growth, included on Scale. Custom reports, scheduled reports, Insights AI analytics, Sage and Samsara Premium are add-ons on every tier. Read again on 23 November 2026: all three plans still say \"Quoted based on volume of loads\" and the FAQ still rules out setup fees and per-seat charges, but the $100/month developer-sandbox figure is no longer printed anywhere on the page, so treat it as a September reading. New in the comparison table: an AI chat allowance of 250K, 5M and 20M credits a month on Foundations, Growth and Scale with overage at $10.00 per 1M, marked Coming Soon; subsidiaries and offices are capped at 1, 3 and unlimited. The last published load-based rates (2026) were Carrier from ~$150/mo and Broker from ~$300/mo; those tier names no longer exist on the page and the figures are history, not a quote.",
    "flags": [
     {
-     "flag": "quote_only",
-     "evidence": "No amount is published: all three plans read 'Quoted based on volume of loads'; the $100 on the page is a developer-sandbox add-on and the older ~$150/~$300 load rates are history",
-     "evidence_excerpt": null,
+     "flag": "per_seat",
+     "evidence": "Read again on 23 November 2026: all three plans still say \"Quoted based on volume of loads\" and the FAQ still rules out setup fees and per-seat charges, but the $100/month developer-sandbox figure is no longer printed anywhere on the page, so treat it as a September reading.",
+     "evidence_excerpt": "Read again on 23 November 2026: all three plans still say \"Quoted based on volume of loads\" and the FAQ still rules out setup fees and per-seat charges, but the $100/month developer-sandbox figure is…",
      "source_url": "https://alvys.com/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-20"
+     "verified_at": "2026-11-23"
+    },
+    {
+     "flag": "usage_metered",
+     "evidence": "New in the comparison table: an AI chat allowance of 250K, 5M and 20M credits a month on Foundations, Growth and Scale with overage at $10.00 per 1M, marked Coming Soon; subsidiaries and offices are capped at 1, 3 and unlimited.",
+     "evidence_excerpt": "New in the comparison table: an AI chat allowance of 250K, 5M and 20M credits a month on Foundations, Growth and Scale with overage at $10.00 per 1M, marked Coming Soon; subsidiaries and offices are …",
+     "source_url": "https://alvys.com/pricing",
+     "evidence_field": "dossier pricing notes and honest knock",
+     "verified_at": "2026-11-23"
     },
     {
      "flag": "addons_extra",
-     "evidence": "Two extras are priced in the open: EDI includes 2 trading partners on Growth and 5 on Scale with per-partner pricing above the cap, and the developer sandbox is a $100/month add-on on Foundations and Growth, included on Scale.",
-     "evidence_excerpt": "Two extras are priced in the open: EDI includes 2 trading partners on Growth and 5 on Scale with per-partner pricing above the cap, and the developer sandbox is a $100/month add-on on Foundations and…",
+     "evidence": "Two extras are priced in the open: EDI includes 2 trading partners on Growth and 5 on Scale with per-partner pricing above the cap, and (on 20 September) the developer sandbox was a $100/month add-on on Foundations and Growth, included on Scale.",
+     "evidence_excerpt": "Two extras are priced in the open: EDI includes 2 trading partners on Growth and 5 on Scale with per-partner pricing above the cap, and (on 20 September) the developer sandbox was a $100/month add-on…",
      "source_url": "https://alvys.com/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-20"
+     "verified_at": "2026-11-23"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-20",
+   "price_verified_at": "2026-11-23",
    "first_observed_at": null
   },
   {
@@ -6648,19 +6656,27 @@
    "entry_price": "$30",
    "entry_price_terms": "Standard, per member · billed monthly",
    "pricing_status": "public",
-   "price_note": "$30/member/month on Standard, $60 on Premium and from $100 on Enterprise when billed monthly; billed yearly those drop to $24, $48 and from $80 per member per month — 20% off — for $288, $576 and $960 per member per year (re-verified 2026-09-03; every figure held). The same page publishes euro rates: 27€, 54€ and from 83€ monthly, 22€, 43€ and from 67€ yearly, for 259€, 518€ and 804€ a year. The free trial is two weeks and needs no credit card; folk's own FAQ says an account that does not upgrade is blocked rather than deleted at the end, and that the trial can be extended by a week on request. The published caps: email enrichment 500 a month on Standard, 1,000 on Premium and custom on Enterprise; AI magic fields 2,000 and 5,000; account sync one per member and five per member.",
+   "price_note": "$30/member/month on Standard and $60 on Premium when billed monthly; billed yearly those drop to $24 and $48 per member per month (20% off), for $288 and $576 per member per year (re-verified 2026-11-23). Enterprise changed since our September reading: the card now reads $80 per user/month as a \"Starting price, annual billing only\", so there is no monthly Enterprise rate any more and no yearly total is printed. On 3 Sep 2026 the same card showed from $100 monthly and from $80 yearly. The euro side: 27€ and 54€ monthly, 22€ and 43€ yearly, for 259€ and 518€ a year, with Enterprise from 67€ a month on annual billing. The free trial is two weeks and needs no credit card; folk's own FAQ says an account that does not upgrade is blocked rather than deleted at the end, and that the trial can be extended by a week on request. The published caps (23 Nov 2026): email enrichment 500 a month on Standard, 1,000 on Premium and custom on Enterprise; AI fields 2,000 and 5,000 a month; Workflow Assistant 1,500 and 10,000 a month; messages 2,000 and 5,000 per member a month; synced email, calendar and WhatsApp accounts one per member and five per member. Sequences and API access are not included on Standard.",
    "flags": [
     {
      "flag": "per_seat",
-     "evidence": "$30/member/month on Standard, $60 on Premium and from $100 on Enterprise when billed monthly; billed yearly those drop to $24, $48 and from $80 per member per month — 20% off — for $288, $576 and $960 per member per year (re-verified 2026-09-03; every figure held).",
-     "evidence_excerpt": "$30/member/month on Standard, $60 on Premium and from $100 on Enterprise when billed monthly; billed yearly those drop to $24, $48 and from $80 per member per month — 20% off — for $288, $576 and $96…",
+     "evidence": "$30/member/month on Standard and $60 on Premium when billed monthly; billed yearly those drop to $24 and $48 per member per month (20% off), for $288 and $576 per member per year (re-verified 2026-11-23).",
+     "evidence_excerpt": "$30/member/month on Standard and $60 on Premium when billed monthly; billed yearly those drop to $24 and $48 per member per month (20% off), for $288 and $576 per member per year (re-verified 2026-11…",
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-19"
+     "verified_at": "2026-11-23"
+    },
+    {
+     "flag": "annual_lock",
+     "evidence": "Enterprise changed since our September reading: the card now reads $80 per user/month as a \"Starting price, annual billing only\", so there is no monthly Enterprise rate any more and no yearly total is printed.",
+     "evidence_excerpt": "Enterprise changed since our September reading: the card now reads $80 per user/month as a \"Starting price, annual billing only\", so there is no monthly Enterprise rate any more and no yearly total i…",
+     "source_url": null,
+     "evidence_field": "dossier pricing notes and honest knock",
+     "verified_at": "2026-11-23"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-19",
+   "price_verified_at": "2026-11-23",
    "first_observed_at": null
   },
   {
@@ -8346,7 +8362,7 @@
    "entry_price": "$20",
    "entry_price_terms": "per seat per month (400 credits/seat/mo, up to 5 seats)",
    "pricing_status": "public",
-   "price_note": "Three plans priced per seat, re-verified on invideo.io/pricing on 24 September 2026; the page was rebuilt after 5 September, when it listed Plus, Max, Generative and Elite. Starter is $20 a seat a month on either billing (400 credits a seat a month, up to 5 seats), Plus $50 a seat annually or $60 monthly (2,000 credits, up to 10 seats) and Max $100 a seat annually or $150 monthly (5,000 credits, up to 20 seats; 10,000- and 15,000-credit sizes are offered but not priced in the served page). Storage is 200 GB, 600 GB and 2,000 GB; Seedance 2.5 and Seedance 2.0 at 4K start on Plus. Credits are the meter: AI generations draw them down, timeline editing and downloads do not, the allowance resets each billing cycle without rollover, and extra credit packs are sold separately. No free tier is published, although a cancelled plan drops to a Free plan.",
+   "price_note": "Three plans priced per seat, re-verified on invideo.io/pricing on 24 September 2026; the page was rebuilt after 5 September, when it listed Plus, Max, Generative and Elite. Starter is $20 a seat a month on either billing (400 credits a seat a month, up to 5 seats), Plus $50 a seat annually or $60 monthly (2,000 credits, up to 10 seats) and Max $100 a seat annually or $150 monthly (5,000 credits, up to 20 seats; 10,000- and 15,000-credit sizes are offered but not priced in the served page). Storage is 200 GB, 600 GB and 2,000 GB; Seedance 2.5 and Seedance 2.0 at 4K start on Plus. Credits are the meter: AI generations draw them down, timeline editing and downloads do not, the allowance resets each billing cycle without rollover, and extra credit packs are sold separately. No free tier is published on the pricing page, although a new account opened on a Free plan with 50 credits on 22 November 2026 and a cancelled plan drops to it.",
    "flags": [
     {
      "flag": "per_seat",
@@ -14680,7 +14696,7 @@
    "entry_price": "€28",
    "entry_price_terms": "Lite · billed monthly",
    "pricing_status": "public",
-   "price_note": "(price re-verified 2026-11-17 against the vendor's own pricing page, read from our EU server, after 2026-09-22 from a Dutch exit; subscriptions, label fees, caps, users and integrations identical to the 31 Aug and 22 Sep 2026 readings; three carrier rates moved, see below) Free plan €0/mo: up to 20 parcels a month, no courier contract, no subscription; on 22 Sep 2026 the comparison table gave €0.50 a label beyond that, but on 17 Nov 2026 it no longer printed a free-plan label fee and the FAQ says only that free users are billed for each label they generate. Paid tiers at the monthly rate: Lite €28/mo + €0.10 per label, Growth €87/mo + €0.09, Premium €175/mo + €0.08, Pro €639/mo + €0.07. Every tier also has a MONTHLY label cap (Lite 400, Growth 1,000, Premium 10,000, Pro 30,000) and past it each extra label costs €0.15 on top of the plan rate; the same caps appear as yearly maxima on the plan cards (4,800 / 12,000 / 120,000 / 360,000 labels a year). Users: 1 free, 3 Lite, 5 Growth, 10 Premium, unlimited Pro. Integrations: max 2 free, 3 Lite, 5 Growth, unlimited on Premium and Pro. Carriers: 70+ on free, 170+ on every paid tier. 14-day free trial, no card. The page advertises a yearly option at -20% but the discounted figures are not in the served HTML. You can only ship FROM eight European countries (Austria, Belgium, France, Germany, Italy, the Netherlands, Spain, the UK). THE CARRIER RATE TABLE, first recorded 22 Sep 2026 and the part that actually moves the bill: the plans buy a carrier discount the feature table grades '- / + / ++ / +++ / ++++', and the starting rates are published per plan. PostNL Standaard €7.20 free, €6.95 Lite, €6.75 Growth, €6.60 Premium, 'On request' on Pro. DHLForYou Drop off €6.12 / 5.82 / 5.56 / 5.45 / On request (read 17 Nov 2026; €5.80 / 5.50 / 5.25 / 5.14 on 22 Sep). DPD Home €6.09 / 5.88 / 5.75 / 5.62 / On request (17 Nov; €5.82 / 5.61 / 5.48 / 5.35 on 22 Sep). PostNL did not move. So the per-parcel discount steps (€0.20 and €0.15 between the paid tiers on PostNL) are fifteen to twenty times the one-cent steps in the label fee. The three UK carriers are priced on the FREE column only - Royal Mail Tracked 48 £2.62 (17 Nov 2026; £2.38 on 22 Sep), Evri Standard Two Day £3.37, FedEx Priority £5.15 - with 'On request' across Lite, Growth, Premium and Pro. Pro publishes no rate for any carrier at all, so the €639 tier cannot be modelled from this page. The table is footnoted 'Prices shown are starting rates. Actual costs may vary. Create a free account to view all rates', and its row-label column header is still literally 'Placeholder'. (2026)",
+   "price_note": "(price re-verified 2026-11-23 against the vendor's own pricing page, read from our EU server; every figure below matched the 2026-11-17 reading, including the carrier rates; earlier readings 2026-09-22 from a Dutch exit and 31 Aug 2026; subscriptions, label fees, caps, users and integrations identical across all of them; three carrier rates moved between September and November, see below) Free plan €0/mo: up to 20 parcels a month, no courier contract, no subscription; on 22 Sep 2026 the comparison table gave €0.50 a label beyond that, but on 17 Nov 2026 it no longer printed a free-plan label fee and the FAQ says only that free users are billed for each label they generate. Paid tiers at the monthly rate: Lite €28/mo + €0.10 per label, Growth €87/mo + €0.09, Premium €175/mo + €0.08, Pro €639/mo + €0.07. Every tier also has a MONTHLY label cap (Lite 400, Growth 1,000, Premium 10,000, Pro 30,000) and past it each extra label costs €0.15 on top of the plan rate; the same caps appear as yearly maxima on the plan cards (4,800 / 12,000 / 120,000 / 360,000 labels a year). Users: 1 free, 3 Lite, 5 Growth, 10 Premium, unlimited Pro. Integrations: max 2 free, 3 Lite, 5 Growth, unlimited on Premium and Pro. Carriers: 70+ on free, 170+ on every paid tier. 14-day free trial, no card. The page advertises a yearly option at -20% but the discounted figures are not in the served HTML. You can only ship FROM eight European countries (Austria, Belgium, France, Germany, Italy, the Netherlands, Spain, the UK). THE CARRIER RATE TABLE, first recorded 22 Sep 2026 and the part that actually moves the bill: the plans buy a carrier discount the feature table grades '- / + / ++ / +++ / ++++', and the starting rates are published per plan. PostNL Standaard €7.20 free, €6.95 Lite, €6.75 Growth, €6.60 Premium, 'On request' on Pro. DHLForYou Drop off €6.12 / 5.82 / 5.56 / 5.45 / On request (read 17 Nov 2026; €5.80 / 5.50 / 5.25 / 5.14 on 22 Sep). DPD Home €6.09 / 5.88 / 5.75 / 5.62 / On request (17 Nov; €5.82 / 5.61 / 5.48 / 5.35 on 22 Sep). PostNL did not move. So the per-parcel discount steps (€0.20 and €0.15 between the paid tiers on PostNL) are fifteen to twenty times the one-cent steps in the label fee. The three UK carriers are priced on the FREE column only - Royal Mail Tracked 48 £2.62 (17 Nov 2026; £2.38 on 22 Sep), Evri Standard Two Day £3.37, FedEx Priority £5.15 - with 'On request' across Lite, Growth, Premium and Pro. Pro publishes no rate for any carrier at all, so the €639 tier cannot be modelled from this page. The table is footnoted 'Prices shown are starting rates. Actual costs may vary. Create a free account to view all rates', and its row-label column header is still literally 'Placeholder'. (2026)",
    "flags": [
     {
      "flag": "usage_metered",
@@ -14688,20 +14704,20 @@
      "evidence_excerpt": null,
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-11-17"
+     "verified_at": "2026-11-23"
     },
     {
      "flag": "free_tier",
-     "evidence": "(price re-verified 2026-11-17 against the vendor's own pricing page, read from our EU server, after 2026-09-22 from a Dutch exit; subscriptions, label fees, caps, users and integrations identical to the 31 Aug and 22 Sep 2026 readings; three carrier rates moved, see below) Free plan €0/mo: up to 20 parcels a month, no courier contract, no subscription; on 22 Sep 2026 the comparison table gave €0.50 a label beyond that, but on 17 Nov 2026 it no longer printed a free-plan label fee and the FAQ says only that free users are billed for each label they generate.",
-     "evidence_excerpt": "(price re-verified 2026-11-17 against the vendor's own pricing page, read from our EU server, after 2026-09-22 from a Dutch exit; subscriptions, label fees, caps, users and integrations identical to …",
+     "evidence": "(price re-verified 2026-11-23 against the vendor's own pricing page, read from our EU server; every figure below matched the 2026-11-17 reading, including the carrier rates; earlier readings 2026-09-22 from a Dutch exit and 31 Aug 2026; subscriptions, label fees, caps, users and integrations identical across all of them; three carrier rates moved between September and November, see below) Free plan €0/mo: up to 20 parcels a month, no courier contract, no subscription; on 22 Sep 2026 the comparison table gave €0.50 a label beyond that, but on 17 Nov 2026 it no longer printed a free-plan label fee and the FAQ says only that free users are billed for each label they generate.",
+     "evidence_excerpt": "(price re-verified 2026-11-23 against the vendor's own pricing page, read from our EU server; every figure below matched the 2026-11-17 reading, including the carrier rates; earlier readings 2026-09-…",
      "source_url": null,
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-11-17"
+     "verified_at": "2026-11-23"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-11-17",
-   "first_observed_at": "2026-11-17"
+   "price_verified_at": "2026-11-23",
+   "first_observed_at": "2026-11-23"
   },
   {
    "name": "Sender",
@@ -16513,7 +16529,7 @@
    "entry_price": "$49",
    "entry_price_terms": "Discovery · per month, billed yearly",
    "pricing_status": "public",
-   "price_note": "(re-read 2026-11-04 from the Netherlands: surferseo.com/pricing now redirects to surfer.ai/pricing; earlier reads 2026-08-25 and 2026-09-19 from the Netherlands and 2026-08-26 over a US connection) Billed yearly, as quoted to a European visitor: Discovery €49/mo, Standard €99/mo, Pro €182/mo and Peace of Mind €299/mo, with AI Search Analytics sold on its own from €82/mo. The cards state the annual saving themselves: €120, €240, €444 and €720 a year on the four plans and €156 on AI Search Analytics. Enterprise no longer carries a price: since this read its card says Custom, tailored packages, with a Talk to Surfer Expert button, where it showed $999/mo in September.\n\nAI Search Analytics is capped by prompts, which is the part that catches people out. The card opens on 50 prompts refreshed daily; the plans include their own prompt allowance (25 refreshed weekly on Standard, 50 daily on Pro, 100 daily on Peace of Mind, none on Discovery). In September the card carried a prompt dropdown with 100- and 200-prompt rungs at higher prices; we did not re-confirm those rungs on this read, so check which rung your checkout page is on before you compare it with anything.\n\nWorth knowing if you are outside the US: in August we read this page from both sides and the numbers did not convert. A European was quoted €49 to €299 where an American was quoted $49 to $299, which makes the same subscription materially more expensive in Europe.",
+   "price_note": "(re-read 2026-11-23 from our EU server, unchanged from 2026-11-04: surferseo.com/pricing redirects to surfer.ai/pricing; earlier reads 2026-08-25 and 2026-09-19 from the Netherlands and 2026-08-26 over a US connection) Billed yearly, as quoted to a European visitor: Discovery €49/mo, Standard €99/mo, Pro €182/mo and Peace of Mind €299/mo, with AI Search Analytics sold on its own from €82/mo. The cards state the annual saving themselves: €120, €240, €444 and €720 a year on the four plans and €156 on AI Search Analytics. Surfer's own surfer.ai/llms.txt, read 23 November 2026, lists the dollar side: Discovery $49, Standard $99, Pro $182, Peace of Mind $299 per month billed yearly, AI Search Analytics alone $82, Enterprise custom. Enterprise no longer carries a price: since this read its card says Custom, tailored packages, with a Talk to Surfer Expert button, where it showed $999/mo in September.\n\nAI Search Analytics is capped by prompts, which is the part that catches people out. The card opens on 50 prompts refreshed daily; the plans include their own prompt allowance (25 refreshed weekly on Standard, 50 daily on Pro, 100 daily on Peace of Mind, none on Discovery). In September the card carried a prompt dropdown with 100- and 200-prompt rungs at higher prices; we did not re-confirm those rungs on this read, so check which rung your checkout page is on before you compare it with anything.\n\nWorth knowing if you are outside the US: in August we read this page from both sides and the numbers did not convert. A European was quoted €49 to €299 where an American was quoted $49 to $299, which makes the same subscription materially more expensive in Europe.",
    "flags": [
     {
      "flag": "annual_lock",
@@ -16521,12 +16537,12 @@
      "evidence_excerpt": null,
      "source_url": "https://surferseo.com/pricing/",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-11-04"
+     "verified_at": "2026-11-23"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-11-04",
-   "first_observed_at": "2026-11-04"
+   "price_verified_at": "2026-11-23",
+   "first_observed_at": "2026-11-23"
   },
   {
    "name": "SurFox AI",
@@ -17341,23 +17357,23 @@
    "category": "IT & Productivity",
    "domain": "thetop.com",
    "review_url": "https://aibuildermarketplace.com/b2b/thetop-review/",
-   "from_price_usd_mo": null,
-   "entry_price": null,
-   "entry_price_terms": null,
-   "pricing_status": "quote_only",
-   "price_note": "(read 19 September 2026) TheTop publishes no price. The navigation carries no pricing link, every button is Book a demo, and the page this review's figures came from is gone: thetop.com/pricing returns a hard 404, as do /pricing/ and /plans.\n\nThe $8 a month and $80 a year this review used to quote were withdrawn along with the product they belonged to, and cannot be bought today. Until September this was a personal assistant on a single tier, built around a morning brief from Gmail and a calendar. TheTop is now enterprise software sold through a sales call.\n\nRead the figures on their site carefully, because it is full of dollar amounts that are not prices: the dashboard mock-ups show an AI invoice of $196,090, a month billed at $137,644 against a $176,920 baseline, and $39,276 saved. Those illustrate what the product reports, not what it costs. Nothing on the public site says what you would pay for TheTop itself.\n\nWhat the site does commit to about commercial shape: deployment is single-tenant, one dedicated instance per customer; onboarding runs in three steps that start read-only (connect analytics, watch for about a month to establish your number, then point traffic at the Engine); and no traffic migration is needed on day one. Expect a contract quoted against your own AI spend rather than a list price — ask for the pricing basis in writing before the demo, because a layer that bills against measured savings and one that bills a flat platform fee are very different deals.",
+   "from_price_usd_mo": 175.0,
+   "entry_price": "$175",
+   "entry_price_terms": "Transparency +… · per month, billed monthly, for the first 12 months, then $350 a month",
+   "pricing_status": "public",
+   "price_note": "(read 23 November 2026 on thetop.com/pricing) TheTop publishes prices again. On 19 September 2026 that URL returned a 404 and every button said Book a demo; it now carries a full rate card, priced on your AI spend and on the tokens that pass through TheTop.\n\nThe one self-serve product is a launch offer: Transparency plus Governance in one package for $175 a month for your first 12 months, then $350 a month. Billed monthly, cancel anytime, prices in USD excluding taxes. There is no free trial; the page says you connect a read-only key and see your last 30 days of AI spend before you pay.\n\nThe full card, as published: Transparency costs $150 to $500 a month depending on your AI spend (measured on the keys you connect over the trailing 30 days), with up to 5 logins per organization at every band. Governance is $0.50 per million tokens checked on the first billion a month, falling to $0.15 above 200 billion, and never more than 10% of your AI spend; Transparency is included once the Governance fee reaches $150 a month. Optimization takes a share of the AI spend routed through TheEngine, in marginal brackets: 7% on the first $50K a month, 5% from $50K to $100K, 2.5% from $100K to $500K, 2.25% from $500K to $2M and 1.5% above $2M. That fee is capped at the savings TheEngine measures that month. The Complete Package (Governance plus Optimization) takes 15% off and includes Transparency; annual agreements are available only there. Optimization and the Complete Package are set up with their team.\n\nThe page's own worked examples: at $200K a month of Sonnet-led spend, about 32B tokens, Governance comes to $9,150 and Optimization to $8,500. The savings percentage in their estimator is your own assumption; the page says so itself.\n\nThe $8 a month and $80 a year an older version of this review quoted belonged to the previous product, a personal assistant, and cannot be bought today. The large dollar figures on the home page ($34,800.25 spent, $30,667.06 saved) sit inside a dashboard mock-up and are not prices.",
    "flags": [
     {
-     "flag": "quote_only",
-     "evidence": "No published price of any kind on 19 September 2026: thetop.com/pricing returns 404 and the site sells through Book a demo only. The dollar figures on the site ($196,090 of API usage, $137,644 paid, $39,276 saved) are illustrations inside dashboard mock-ups, not tariffs",
+     "flag": "usage_metered",
+     "evidence": "Transparency moves between $150 and $500 a month with your AI spend, Governance is metered per million tokens, and Optimization is a percentage of routed spend in brackets.",
      "evidence_excerpt": null,
-     "source_url": null,
+     "source_url": "https://thetop.com/pricing",
      "evidence_field": "dossier pricing notes and honest knock",
-     "verified_at": "2026-09-19"
+     "verified_at": "2026-11-23"
     }
    ],
    "researched": "2026-07",
-   "price_verified_at": "2026-09-19",
+   "price_verified_at": "2026-11-23",
    "first_observed_at": null
   },
   {

@@ -17,13 +17,13 @@
   "from_price_usd_month": 30.0,
   "plans": null,
   "plans_source": null,
-  "notes": "$30/member/month on Standard, $60 on Premium and from $100 on Enterprise when billed monthly; billed yearly those drop to $24, $48 and from $80 per member per month — 20% off — for $288, $576 and $960 per member per year (re-verified 2026-09-03; every figure held). The same page publishes euro rates: 27€, 54€ and from 83€ monthly, 22€, 43€ and from 67€ yearly, for 259€, 518€ and 804€ a year. The free trial is two weeks and needs no credit card; folk's own FAQ says an account that does not upgrade is blocked rather than deleted at the end, and that the trial can be extended by a week on request. The published caps: email enrichment 500 a month on Standard, 1,000 on Premium and custom on Enterprise; AI magic fields 2,000 and 5,000; account sync one per member and five per member.",
-  "verified_at": "2026-09-19",
+  "notes": "$30/member/month on Standard and $60 on Premium when billed monthly; billed yearly those drop to $24 and $48 per member per month (20% off), for $288 and $576 per member per year (re-verified 2026-11-23). Enterprise changed since our September reading: the card now reads $80 per user/month as a \"Starting price, annual billing only\", so there is no monthly Enterprise rate any more and no yearly total is printed. On 3 Sep 2026 the same card showed from $100 monthly and from $80 yearly. The euro side: 27€ and 54€ monthly, 22€ and 43€ yearly, for 259€ and 518€ a year, with Enterprise from 67€ a month on annual billing. The free trial is two weeks and needs no credit card; folk's own FAQ says an account that does not upgrade is blocked rather than deleted at the end, and that the trial can be extended by a week on request. The published caps (23 Nov 2026): email enrichment 500 a month on Standard, 1,000 on Premium and custom on Enterprise; AI fields 2,000 and 5,000 a month; Workflow Assistant 1,500 and 10,000 a month; messages 2,000 and 5,000 per member a month; synced email, calendar and WhatsApp accounts one per member and five per member. Sequences and API access are not included on Standard.",
+  "verified_at": "2026-11-23",
   "source_url": null,
   "schema_offer": {
    "price": 30.0,
    "currency": "USD",
-   "description": "Standard, per member, billed monthly, $24 per member is the yearly rate. Read on the vendor's own pricing page on 2026-09-03.",
+   "description": "Standard, per member, billed monthly, $24 per member is the yearly rate. Read on the vendor's own pricing page on 2026-11-23.",
    "page": "https://marketingandsalessoftware.com/folk-review.html"
   },
   "source_quotes": [
@@ -51,8 +51,15 @@
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
-   "evidence": "$30/member/month on Standard, $60 on Premium and from $100 on Enterprise when billed monthly; billed yearly those drop to $24, $48 and from $80 per member per month — 20% off — for $288, $576 and $960 per member per year (re-verified 2026-09-03; every figure held).",
-   "verified_at": "2026-09-19",
+   "evidence": "$30/member/month on Standard and $60 on Premium when billed monthly; billed yearly those drop to $24 and $48 per member per month (20% off), for $288 and $576 per member per year (re-verified 2026-11-23).",
+   "verified_at": "2026-11-23",
+   "source_url": null
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "Enterprise changed since our September reading: the card now reads $80 per user/month as a \"Starting price, annual billing only\", so there is no monthly Enterprise rate any more and no yearly total is printed.",
+   "verified_at": "2026-11-23",
    "source_url": null
   }
  ],
@@ -93,29 +100,37 @@
      "name": "Standard",
      "model": "per_unit",
      "monthly": 30,
+     "annual_month": 24,
      "annual_year": 288,
-     "evidence": "$30/member/month on Standard, $60 on Premium and from $100 on Enterprise when billed monthly; billed yearly those drop to $24, $48 and from $80 per member per month — 20% off — for $288, $576 and $960 per member per year (re-verified 2026-09-03; every figure held)."
+     "evidence": "$30/member/month on Standard and $60 on Premium when billed monthly; billed yearly those drop to $24 and $48 per member per month (20% off), for $288 and $576 per member per year (re-verified 2026-11-23)."
     },
     {
      "id": "premium",
      "name": "Premium",
      "model": "per_unit",
      "monthly": 60,
+     "annual_month": 48,
      "annual_year": 576,
-     "evidence": "$30/member/month on Standard, $60 on Premium and from $100 on Enterprise when billed monthly; billed yearly those drop to $24, $48 and from $80 per member per month — 20% off — for $288, $576 and $960 per member per year (re-verified 2026-09-03; every figure held)."
+     "evidence": "$30/member/month on Standard and $60 on Premium when billed monthly; billed yearly those drop to $24 and $48 per member per month (20% off), for $288 and $576 per member per year (re-verified 2026-11-23)."
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "the card now reads $80 per user/month as a \"Starting price, annual billing only\", so there is no monthly Enterprise rate any more and no yearly total is printed."
     }
    ],
    "notes": [
-    "USD regular Standard and Premium subscriptions. Enterprise is a starting-from price, not a guaranteed per-seat tariff; omitted rather than returning its minimum as an exact estimate.",
-    "Live pricing source: https://www.folk.app/pricing (read 2026-10-24)."
+    "Enterprise is a starting price on annual billing only ($80 per user/month); treated as a quote rather than an exact per-seat tariff.",
+    "Live pricing source: https://www.folk.app/pricing (read 2026-11-23)."
    ],
-   "rules_verified_at": "2026-10-24",
    "not_computable": [
     {
-     "text": "Enterprise starting prices and custom enrichment/message/AI limits are not calculated.",
+     "text": "Enterprise starting price and its custom enrichment, message and AI-field limits are not calculated.",
      "affects_cost": true
     }
-   ]
+   ],
+   "rules_verified_at": "2026-11-23"
   },
   "growth": {
    "annual": {
@@ -137,7 +152,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 24.0,
-       "premium": 48.0
+       "premium": 48.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -152,7 +168,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 48.0,
-       "premium": 96.0
+       "premium": 96.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -167,7 +184,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 72.0,
-       "premium": 144.0
+       "premium": 144.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -182,7 +200,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 120.0,
-       "premium": 240.0
+       "premium": 240.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -197,7 +216,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 240.0,
-       "premium": 480.0
+       "premium": 480.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -212,7 +232,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 360.0,
-       "premium": 720.0
+       "premium": 720.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -227,7 +248,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 480.0,
-       "premium": 960.0
+       "premium": 960.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -242,7 +264,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 600.0,
-       "premium": 1200.0
+       "premium": 1200.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -257,7 +280,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 1200.0,
-       "premium": 2400.0
+       "premium": 2400.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -272,14 +296,15 @@
       "ranges": [],
       "per_plan": {
        "standard": 2400.0,
-       "premium": 4800.0
+       "premium": 4800.0,
+       "enterprise": "quote"
       }
      }
     ],
     "switch_points": [],
     "conflicts": [],
     "unknowns": [
-     "Enterprise starting prices and custom enrichment/message/AI limits are not calculated."
+     "Enterprise starting price and its custom enrichment, message and AI-field limits are not calculated."
     ],
     "measured": [
      {
@@ -322,7 +347,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 30.0,
-       "premium": 60.0
+       "premium": 60.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -337,7 +363,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 60.0,
-       "premium": 120.0
+       "premium": 120.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -352,7 +379,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 90.0,
-       "premium": 180.0
+       "premium": 180.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -367,7 +395,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 150.0,
-       "premium": 300.0
+       "premium": 300.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -382,7 +411,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 300.0,
-       "premium": 600.0
+       "premium": 600.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -397,7 +427,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 450.0,
-       "premium": 900.0
+       "premium": 900.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -412,7 +443,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 600.0,
-       "premium": 1200.0
+       "premium": 1200.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -427,7 +459,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 750.0,
-       "premium": 1500.0
+       "premium": 1500.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -442,7 +475,8 @@
       "ranges": [],
       "per_plan": {
        "standard": 1500.0,
-       "premium": 3000.0
+       "premium": 3000.0,
+       "enterprise": "quote"
       }
      },
      {
@@ -457,14 +491,15 @@
       "ranges": [],
       "per_plan": {
        "standard": 3000.0,
-       "premium": 6000.0
+       "premium": 6000.0,
+       "enterprise": "quote"
       }
      }
     ],
     "switch_points": [],
     "conflicts": [],
     "unknowns": [
-     "Enterprise starting prices and custom enrichment/message/AI limits are not calculated."
+     "Enterprise starting price and its custom enrichment, message and AI-field limits are not calculated."
     ],
     "measured": [
      {
@@ -774,7 +809,7 @@
   {
    "question_id": "folk:pricing_gap_1",
    "key": "pricing_gap_1",
-   "question": "Our price check could not put a number on this part of the cost: Enterprise starting prices and custom enrichment/message/AI limits are not calculated. Can you publish the price or the rule?",
+   "question": "Our price check could not put a number on this part of the cost: Enterprise starting price and its custom enrichment, message and AI-field limits are not calculated. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

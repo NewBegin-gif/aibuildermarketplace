@@ -210,10 +210,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/alttext-ai-review.html
 
 ## Alvys (alvys.com)
-- **Verified pricing:** (re-verified 20 Sep 2026) The pricing page is public again, and it has tiers now.
+- **Verified pricing:** (re-verified 23 Nov 2026; first read with tiers 20 Sep 2026) The pricing page is public again, and it has tiers now.
 - **Honest take:** Implementation runs to weeks, the vendor's own pricing FAQ says most operations are live in under two to four weeks, and real-time support is the top tier's.
 - **Best for:** FTL trucking carriers and asset-based (hybrid) brokers with roughly 5–300 trucks (especially compliance-heavy freight like hazmat, reefer and cross-border) plus shippers running private fleets
-- **Flags:** Hidden pricing, Add-ons extra
+- **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/alvys-review.html
 
 ## AML Watcher (amlwatcher.com)
@@ -1578,10 +1578,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/flocksy-review.html
 
 ## folk (folk.app)
-- **Verified pricing:** $30/member/month on Standard, $60 on Premium and from $100 on Enterprise when billed monthly; billed yearly those drop to $24, $48 and from $80 per member per month — 20% off — for $288, $5…
+- **Verified pricing:** $30/member/month on Standard and $60 on Premium when billed monthly; billed yearly those drop to $24 and $48 per member per month (20% off), for $288 and $576 per member per year (re-verifi…
 - **Honest take:** Zapier, Make and the REST API stay on Premium and Enterprise, enrichment is capped at 500 a month on Standard, and email sequences need at least Premium.
 - **Best for:** small sales teams, agencies and VC/partnership teams who want a clean, fast-to-set-up CRM with a great LinkedIn enrichment extension
-- **Flags:** Per-seat pricing
+- **Flags:** Per-seat pricing, Annual commit
 - **Full review:** https://marketingandsalessoftware.com/folk-review.html
 
 ## Forwardly (forwardly.com)
@@ -1677,7 +1677,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Shopify page and funnel builder with a free plan (1 published page); paid plans from $29 a month.
 - **Best for:** Shopify merchants who want a drag-and-drop page and funnel builder with upsells and A/B offer testing
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/gempages-review/
+- **Full review:** https://marketingandsalessoftware.com/gempages-review.html
 
 ## GeoStock (jtcinteractive.com)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/product-inventory-information, and in our own test session on 17 November 2026; first read 2026-08-18) Three plans: Free, Base Plan at $9.99 a month and…
@@ -2368,7 +2368,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Email marketing for small senders with a free plan (250 subscribers); paid plans from $12 a month at 500 subscribers.
 - **Best for:** small senders and creators who want a simple newsletter tool with a free plan and a template editor
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/mailerlite-review/
+- **Full review:** https://marketingandsalessoftware.com/mailerlite-review.html
 
 ## MailVeri (mailveri.com)
 - **Verified pricing:** (read 2026-11-18 on mailveri.com and its pricing page and in our own test that day; earlier: read 2026-11-13 on mailveri.com/pricing, US dollars) MailVeri sells pay-as-you-go credit packs w…
@@ -3498,7 +3498,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/sellfy-review.html
 
 ## Sendcloud (sendcloud.com)
-- **Verified pricing:** (price re-verified 2026-11-17 against the vendor's own pricing page, read from our EU server, after 2026-09-22 from a Dutch exit; subscriptions, label fees, caps, users and integrations ide…
+- **Verified pricing:** (price re-verified 2026-11-23 against the vendor's own pricing page, read from our EU server; every figure below matched the 2026-11-17 reading, including the carrier rates; earlier reading…
 - **Honest take:** The pricing has layers: a per-label fee on top of the subscription, plus carrier surcharges that can land on invoices weeks later.
 - **Best for:** European e-commerce stores that want easy multi-carrier shipping (DHL, PostNL, Colissimo, GLS, DPD), branded tracking and a returns portal live in under 30 minutes
 - **Flags:** Usage-metered, Free tier
@@ -3945,7 +3945,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/supportyourapp-review.html
 
 ## Surfer (SurferSEO) (surferseo.com)
-- **Verified pricing:** (re-read 2026-11-04 from the Netherlands: surferseo.com/pricing now redirects to surfer.ai/pricing; earlier reads 2026-08-25 and 2026-09-19 from the Netherlands and 2026-08-26 over a US con…
+- **Verified pricing:** (re-read 2026-11-23 from our EU server, unchanged from 2026-11-04: surferseo.com/pricing redirects to surfer.ai/pricing; earlier reads 2026-08-25 and 2026-09-19 from the Netherlands and 202…
 - **Honest take:** Every tier quotes its monthly rate on annual billing, so the number you see is a year's commitment rather than a monthly one.
 - **Best for:** content marketers, SEO specialists and agencies that need on-page optimization against live SERP data and want to start tracking how often they are cited in AI answers
 - **Flags:** Annual commit
@@ -4127,10 +4127,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/textline-review.html
 
 ## TheTop (thetop.com)
-- **Verified pricing:** (read 19 September 2026) TheTop publishes no price.
-- **Honest take:** The price is the knock, because there isn't one.
+- **Verified pricing:** (read 23 November 2026 on thetop.com/pricing) TheTop publishes prices again.
+- **Honest take:** The price is public now, but the bill is hard to predict past the launch package.
 - **Best for:** enterprises running AI across several departments, models and applications that cannot answer what the bill bought: organisations with a real AI invoice to explain, a CFO asking for return per team
-- **Flags:** Hidden pricing
+- **Flags:** Usage-metered
 - **Full review:** https://officesoftwaremarketplace.com/thetop-review.html
 
 ## Thordata (thordata.com)

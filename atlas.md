@@ -1304,7 +1304,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/elevateforward-review/
 
 ## ElevenLabs (elevenlabs.io)
-- **Verified pricing:** (re-verified 30 Oct 2026 on elevenlabs.io/pricing) Every plan rate held again, unchanged since August.
+- **Verified pricing:** (re-verified 23 Nov 2026 on elevenlabs.io/pricing) Every plan rate held again, unchanged since August.
 - **Honest take:** Credits are the meter and retakes are the tax: you are charged per generation request, and a regeneration is only free while the content and settings are unchanged.
 - **Best for:** creators, developers and product teams that want the most realistic AI voices available: voiceovers, audiobooks, dubbing, conversational agents and a well-documented API
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -1722,7 +1722,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/glide-review.html
 
 ## Goflow (goflow.com)
-- **Verified pricing:** (re-verified 23 Sep 2026 on goflow.com/pricing; the plan ladder was restructured since 3 Sep) Goflow Core is free forever at $0/mo with no credit card, capped at 500 orders a month (new ord…
+- **Verified pricing:** (re-verified 23 Sep 2026 on goflow.com/pricing, the plan ladder having been restructured since 3 Sep; read again 23 Nov 2026 with every amount unchanged) Goflow Core is free forever at $0/m…
 - **Honest take:** Free Core stops importing at 500 orders a month and connects only five channels; the next step is $499/mo for 750 orders, and you cannot move back down once you go paid.
 - **Best for:** multichannel e-commerce operations with serious order volume that want orders, inventory, purchasing, listings and shipping unified: including EDI retail
 - **Flags:** Usage-metered, Free tier
@@ -1864,7 +1864,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/hol-guard-review/
 
 ## Hopp (gethopp.com)
-- **Verified pricing:** (price re-verified 2026-09-23 on gethopp.com/en/business/) Hopp Business publishes no subscription price because it does not charge one: the page states there are no activation costs and no…
+- **Verified pricing:** (price re-verified 2026-11-23 on gethopp.com/en/business/; earlier 2026-09-23) Hopp Business publishes no subscription price because it does not charge one: the page states there are no act…
 - **Honest take:** The honest note is that the platform is free and the rides are not.
 - **Best for:** teams that already travel by ride-hailing and want the spend on one invoice with per-person limits instead of expense claims
 - **Full review:** https://officesoftwaremarketplace.com/hopp-review.html
@@ -2496,7 +2496,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/monday-com-review/
 
 ## Moosend (moosend.com)
-- **Verified pricing:** (re-verified 2026-09-06 and again 2026-09-30) A 30-day free trial with no credit card.
+- **Verified pricing:** (re-verified 2026-09-06, 2026-09-30 and 2026-11-23) A 30-day free trial with no credit card.
 - **Honest take:** The friendly $7-9 headline is the entry rate at the smallest list size (500 contacts), and the ladder above it does not fall smoothly: paid annually, 8,000 contacts costs $51 a month while 10,000 costs $70.
 - **Best for:** small businesses and marketers who want affordable email marketing and automation with a low entry price, a real free trial and a clean drag-and-drop builder
 - **Flags:** Usage-metered, Add-ons extra
@@ -4194,7 +4194,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/toggl-review/
 
 ## Top Echelon (topechelon.com)
-- **Verified pricing:** (2026-09-10, read on their own pricing page, both billing toggles; re-verified unchanged on 2026-10-06) TE Recruit (the ATS and CRM) runs $79 per seat per month billed annually or $95 month…
+- **Verified pricing:** (2026-09-10, read on their own pricing page, both billing toggles; re-verified unchanged on 2026-10-06 and again on 2026-11-23) TE Recruit (the ATS and CRM) runs $79 per seat per month bill…
 - **Honest take:** Almost everything people shop for sits in Professional, not Standard: Smart-TE AI, automations, sequences, inbound email sync and API access are all one tier up, so Standard is a competent but plain ATS.
 - **Best for:** recruiting agencies and SMB staffing firms that want an applicant tracking system and CRM in one place, especially ones that would actually work split placements with other recruiters
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit

@@ -858,7 +858,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/cloro-review.html
 
 ## Close (close.com)
-- **Verified pricing:** (re-verified 2026-11-19 on close.com/pricing and close.com/pricing.md, amounts unchanged) Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $35, $99 and $13…
+- **Verified pricing:** (re-verified 2026-11-19 and 2026-11-23 on close.com/pricing and close.com/pricing.md, amounts unchanged) Per-seat: Solo $19, Essentials $49, Growth $109 and Scale $149 per user/mo, or $9, $…
 - **Honest take:** The built-in calling is the draw, but call and SMS credits stack on top of the seat price: a '$99' plan can effectively cost ~$160/user once a rep dials 50+ times a day.
 - **Best for:** inside-sales teams that live on the phone and want calling, SMS and CRM in one place
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
@@ -1442,10 +1442,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/evolve-review.html
 
 ## Expandi (expandi.io)
-- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07) 7-day free trial, no free plan.
+- **Verified pricing:** (re-verified 2026-08-17 and 2026-10-07; re-read 2026-11-23, when the page had moved to published volume tiers) 7-day free trial, no free plan; the FAQ says you are charged only once you dec…
 - **Honest take:** There is no free tier and no cheap entry: Expandi starts at $99 a month per seat, and the friendlier $79 assumes annual commitment.
 - **Best for:** sales teams and agencies running LinkedIn (and email) outreach at scale who want smart sending limits, warm-up and multi-account management
-- **Flags:** Per-seat pricing, Annual commit
+- **Flags:** Per-seat pricing, Add-ons extra, Annual commit
 - **Full review:** https://marketingandsalessoftware.com/expandi-review.html
 
 ## ExpertEx (expertex.ai)
@@ -1729,7 +1729,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/goflow-review.html
 
 ## Gorgias (gorgias.com)
-- **Verified pricing:** (read 2026-11-17 on gorgias.com/pricing and on the App Store listing apps.shopify.com/helpdesk, and in our own test session on 17 November 2026; first read 2026-09-08) Four plans with the A…
+- **Verified pricing:** (read 2026-11-17 on gorgias.com/pricing and on the App Store listing apps.shopify.com/helpdesk, and in our own test session on 17 November 2026; first read 2026-09-08; gorgias.com/pricing r…
 - **Honest take:** Never priced per agent is a real advantage, but it starts one tier up: the comparison table caps Starter at 3 user seats, and only Basic and above open the inbox to 500.
 - **Best for:** ecommerce support teams with seasonal or spiky volume, where per-agent pricing punishes you for having enough people on a busy week
 - **Flags:** Usage-metered, Add-ons extra
@@ -3383,10 +3383,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/salesflow-review.html
 
 ## Salesmessage (salesmessage.com)
-- **Verified pricing:** (2026-08-08, re-verified 10 September, 13 October and 13 November 2026 on www.salesmessage.com/pricing in both billing modes) Repackaged since our last check into two named plans plus Enter…
-- **Honest take:** Two things changed here and both cost money. First, calling now runs on the same meter as texting (1 credit a minute, 2 a minute when forwarding) so voice minutes eat the allowance you budgeted for messages.
+- **Verified pricing:** (read 2026-11-23 on www.salesmessage.com/pricing, both billing modes, from the page's own tier data; earlier reads 8 August, 10 September, 13 October and 13 November 2026) Repriced since ou…
+- **Honest take:** Two things cost money here. First, calling runs on the same meter as texting (1 credit a minute, 2 a minute when forwarding), so voice minutes eat the allowance you budgeted for messages.
 - **Best for:** sales and service teams that want two-way texting and calling in one CRM-linked inbox, and can estimate their monthly credit burn, messages plus call minutes, before they sign
-- **Flags:** Usage-metered, Add-ons extra, Annual commit
+- **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://zerotouchsupport.com/salesmessage-review.html
 
 ## SalesTarget.ai (salestarget.ai)
@@ -3744,7 +3744,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/smartli-review/
 
 ## SmartSuite (smartsuite.com)
-- **Verified pricing:** (re-verified 2026-11-16 on their own pricing page and FAQ, USD; seat prices unchanged since our August reading) No free plan: a 14-day trial of Professional with no credit card, and the pag…
+- **Verified pricing:** (re-verified 2026-11-16 and 2026-11-23 on their own pricing page and FAQ, USD; seat prices unchanged since our August reading) No free plan: a 14-day trial of Professional with no credit ca…
 - **Honest take:** It's a broad, do-everything work-management platform.
 - **Best for:** teams consolidating projects, CRM and operations into one flexible, database-driven work-management platform
 - **Flags:** Per-seat pricing

@@ -13,13 +13,13 @@
  "pricing": {
   "status": "public",
   "entry_price": "$99",
-  "entry_price_terms": "Business · per month, month-to-month",
+  "entry_price_terms": "Solo (1 LinkedIn account) · per month, month-to-month per account",
   "from_price_usd_month": 99.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-08-17 and 2026-10-07) 7-day free trial, no free plan. Business is $99 per month month-to-month; paying a year up front takes 20% off, $79 a month equivalent. The same page also calls this two months free; on its own figures it is $948 a year against $1,188, a saving of $240, which is closer to two and a half months of the $99 fee than two. Pricing is per seat and Expandi states that the discount grows with the number of seats you buy, so a multi-seat agency quote is not simply the seat price multiplied. Higher tiers add role and permission management and centralised billing. Taxes vary by country and are added on top.",
-  "verified_at": "2026-10-07",
-  "source_url": null,
+  "notes": "(re-verified 2026-08-17 and 2026-10-07; re-read 2026-11-23, when the page had moved to published volume tiers) 7-day free trial, no free plan; the FAQ says you are charged only once you decide to use Expandi after the trial. Pricing is per LinkedIn account, one seat each, on two tabs. For teams: Solo, 1 account, $99 a month month-to-month or $79 a month billed annually; Studio, 2 to 10 accounts, $89 or $69 per account a month; above 10 accounts the team tab sends you to sales. For agencies: Launch, 11 to 24 accounts, $79 or $59 per account a month; Growth, 25 to 50 accounts, $69 or $49; Agency+, 50+ accounts, quote only. The billing toggle says \"Save 20%\", which holds exactly only on Solo: $948 a year against $1,188, a $240 saving that the FAQ also calls two months free, closer to two and a half. Checked tier by tier, the annual discount is 22% on Studio, 25% on Launch and 29% on Growth. The page lists the same features in every seat; image and GIF personalisation and video personalisation through Sendspark are paid add-ons. Taxes vary by country and are added on top.",
+  "verified_at": "2026-11-23",
+  "source_url": "https://expandi.io/pricing/",
   "schema_offer": {
    "price": 99.0,
    "currency": "USD",
@@ -37,15 +37,22 @@
    "id": "per_seat",
    "label": "Per-seat pricing",
    "evidence": "There is no free tier and no cheap entry: Expandi starts at $99 a month per seat, and the friendlier $79 assumes annual commitment.",
-   "verified_at": "2026-10-07",
-   "source_url": null
+   "verified_at": "2026-11-23",
+   "source_url": "https://expandi.io/pricing/"
+  },
+  {
+   "id": "addons_extra",
+   "label": "Key features are paid add-ons",
+   "evidence": "The page lists the same features in every seat; image and GIF personalisation and video personalisation through Sendspark are paid add-ons.",
+   "verified_at": "2026-11-23",
+   "source_url": "https://expandi.io/pricing/"
   },
   {
    "id": "annual_lock",
    "label": "Annual commitment",
    "evidence": "There is no free tier and no cheap entry: Expandi starts at $99 a month per seat, and the friendlier $79 assumes annual commitment.",
-   "verified_at": "2026-10-07",
-   "source_url": null
+   "verified_at": "2026-11-23",
+   "source_url": "https://expandi.io/pricing/"
   }
  ],
  "compare_with": {
@@ -81,21 +88,60 @@
    "axis": "users",
    "plans": [
     {
-     "id": "business",
-     "name": "Business",
+     "id": "solo",
+     "name": "Solo",
      "model": "per_unit",
      "monthly": 99,
      "annual_month": 79,
-     "annual_year": 948,
-     "evidence": "Business is $99 per month month-to-month; paying a year up front takes 20% off, $79 a month equivalent. The same page also calls this two months free; on its own figures it is $948 a year against $1,188"
+     "max_units": 1,
+     "evidence": "Solo, 1 account, $99 a month month-to-month or $79 a month billed annually"
+    },
+    {
+     "id": "studio",
+     "name": "Studio",
+     "model": "per_unit",
+     "monthly": 89,
+     "annual_month": 69,
+     "eligible_from": 2,
+     "max_units": 10,
+     "evidence": "Studio, 2 to 10 accounts, $89 or $69 per account a month"
+    },
+    {
+     "id": "launch",
+     "name": "Launch",
+     "model": "per_unit",
+     "monthly": 79,
+     "annual_month": 59,
+     "eligible_from": 11,
+     "max_units": 24,
+     "evidence": "Launch, 11 to 24 accounts, $79 or $59 per account a month"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "monthly": 69,
+     "annual_month": 49,
+     "eligible_from": 25,
+     "max_units": 50,
+     "evidence": "Growth, 25 to 50 accounts, $69 or $49"
+    },
+    {
+     "id": "agency-plus",
+     "name": "Agency+",
+     "model": "quote",
+     "evidence": "Agency+, 50+ accounts, quote only"
     }
    ],
+   "notes": [
+    "One seat is one LinkedIn account. Launch, Growth and Agency+ sit on the agency tab; on the team tab anything above 10 accounts goes to sales.",
+    "The toggle says Save 20%; that holds exactly on Solo only (22% on Studio, 25% on Launch, 29% on Growth)."
+   ],
    "not_computable": [
-    "Expandi states that the per-seat discount grows with the number of seats you buy, so a multi-seat quote is lower than seats times the list price by an unpublished amount.",
-    "Higher tiers (role and permission management, centralised billing) carry no published price.",
+    "Image, GIF and video personalisation are paid add-ons without a price in our notes.",
     "Taxes vary by country and are added on top."
    ],
-   "rules_verified_at": "2026-10-30"
+   "rules_verified_at": "2026-11-23"
   },
   "growth": {
    "annual": {
@@ -107,8 +153,8 @@
     "rows": [
      {
       "units": 1,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
+      "cheapest_plan": "solo",
+      "cheapest_plan_name": "Solo",
       "total_month": 79.0,
       "billed": {
        "amount": 948.0,
@@ -116,141 +162,210 @@
       },
       "ranges": [],
       "per_plan": {
-       "business": 79.0
+       "solo": 79.0,
+       "studio": "not_eligible",
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 2,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 158.0,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 138.0,
       "billed": {
-       "amount": 1896.0,
+       "amount": 1656.0,
        "every": "year"
       },
       "ranges": [],
       "per_plan": {
-       "business": 158.0
+       "solo": "not_eligible",
+       "studio": 138.0,
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 3,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 237.0,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 207.0,
       "billed": {
-       "amount": 2844.0,
+       "amount": 2484.0,
        "every": "year"
       },
       "ranges": [],
       "per_plan": {
-       "business": 237.0
+       "solo": "not_eligible",
+       "studio": 207.0,
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 5,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 395.0,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 345.0,
       "billed": {
-       "amount": 4740.0,
+       "amount": 4140.0,
        "every": "year"
       },
       "ranges": [],
       "per_plan": {
-       "business": 395.0
+       "solo": "not_eligible",
+       "studio": 345.0,
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 10,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 790.0,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 690.0,
       "billed": {
-       "amount": 9480.0,
+       "amount": 8280.0,
        "every": "year"
       },
       "ranges": [],
       "per_plan": {
-       "business": 790.0
+       "solo": "not_eligible",
+       "studio": 690.0,
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 15,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 1185.0,
+      "cheapest_plan": "launch",
+      "cheapest_plan_name": "Launch",
+      "total_month": 885.0,
       "billed": {
-       "amount": 14220.0,
+       "amount": 10620.0,
        "every": "year"
       },
       "ranges": [],
       "per_plan": {
-       "business": 1185.0
+       "solo": "not_eligible",
+       "studio": "not_eligible",
+       "launch": 885.0,
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 20,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 1580.0,
+      "cheapest_plan": "launch",
+      "cheapest_plan_name": "Launch",
+      "total_month": 1180.0,
       "billed": {
-       "amount": 18960.0,
+       "amount": 14160.0,
        "every": "year"
       },
       "ranges": [],
       "per_plan": {
-       "business": 1580.0
+       "solo": "not_eligible",
+       "studio": "not_eligible",
+       "launch": 1180.0,
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 25,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 1975.0,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 1225.0,
       "billed": {
-       "amount": 23700.0,
+       "amount": 14700.0,
        "every": "year"
       },
       "ranges": [],
       "per_plan": {
-       "business": 1975.0
+       "solo": "not_eligible",
+       "studio": "not_eligible",
+       "launch": "not_eligible",
+       "growth": 1225.0,
+       "agency-plus": "quote"
       }
      },
      {
       "units": 50,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 3950.0,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 2450.0,
       "billed": {
-       "amount": 47400.0,
+       "amount": 29400.0,
        "every": "year"
       },
       "ranges": [],
       "per_plan": {
-       "business": 3950.0
+       "solo": "not_eligible",
+       "studio": "not_eligible",
+       "launch": "not_eligible",
+       "growth": 2450.0,
+       "agency-plus": "quote"
       }
      },
      {
       "units": 100,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 7900.0,
-      "billed": {
-       "amount": 94800.0,
-       "every": "year"
-      },
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
       "ranges": [],
       "per_plan": {
-       "business": 7900.0
+       "solo": "not_eligible",
+       "studio": "not_eligible",
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      }
     ],
-    "switch_points": [],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "solo",
+      "to_plan": "studio",
+      "from_plan_name": "Solo",
+      "to_plan_name": "Studio"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "studio",
+      "to_plan": "launch",
+      "from_plan_name": "Studio",
+      "to_plan_name": "Launch"
+     },
+     {
+      "from_units": 20,
+      "to_units": 25,
+      "from_plan": "launch",
+      "to_plan": "growth",
+      "from_plan_name": "Launch",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 50,
+      "to_units": 100,
+      "from_plan": "growth",
+      "to_plan": null,
+      "from_plan_name": "Growth",
+      "to_plan_name": null
+     }
+    ],
     "conflicts": [],
     "unknowns": [
-     "Expandi states that the per-seat discount grows with the number of seats you buy, so a multi-seat quote is lower than seats times the list price by an unpublished amount.",
-     "Higher tiers (role and permission management, centralised billing) carry no published price.",
+     "Image, GIF and video personalisation are paid add-ons without a price in our notes.",
      "Taxes vary by country and are added on top."
     ]
    },
@@ -263,8 +378,8 @@
     "rows": [
      {
       "units": 1,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
+      "cheapest_plan": "solo",
+      "cheapest_plan_name": "Solo",
       "total_month": 99.0,
       "billed": {
        "amount": 99.0,
@@ -272,141 +387,210 @@
       },
       "ranges": [],
       "per_plan": {
-       "business": 99.0
+       "solo": 99.0,
+       "studio": "not_eligible",
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 2,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 198.0,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 178.0,
       "billed": {
-       "amount": 198.0,
+       "amount": 178.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "business": 198.0
+       "solo": "not_eligible",
+       "studio": 178.0,
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 3,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 297.0,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 267.0,
       "billed": {
-       "amount": 297.0,
+       "amount": 267.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "business": 297.0
+       "solo": "not_eligible",
+       "studio": 267.0,
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 5,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 495.0,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 445.0,
       "billed": {
-       "amount": 495.0,
+       "amount": 445.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "business": 495.0
+       "solo": "not_eligible",
+       "studio": 445.0,
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 10,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 990.0,
+      "cheapest_plan": "studio",
+      "cheapest_plan_name": "Studio",
+      "total_month": 890.0,
       "billed": {
-       "amount": 990.0,
+       "amount": 890.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "business": 990.0
+       "solo": "not_eligible",
+       "studio": 890.0,
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 15,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 1485.0,
+      "cheapest_plan": "launch",
+      "cheapest_plan_name": "Launch",
+      "total_month": 1185.0,
       "billed": {
-       "amount": 1485.0,
+       "amount": 1185.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "business": 1485.0
+       "solo": "not_eligible",
+       "studio": "not_eligible",
+       "launch": 1185.0,
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 20,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 1980.0,
+      "cheapest_plan": "launch",
+      "cheapest_plan_name": "Launch",
+      "total_month": 1580.0,
       "billed": {
-       "amount": 1980.0,
+       "amount": 1580.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "business": 1980.0
+       "solo": "not_eligible",
+       "studio": "not_eligible",
+       "launch": 1580.0,
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      },
      {
       "units": 25,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 2475.0,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 1725.0,
       "billed": {
-       "amount": 2475.0,
+       "amount": 1725.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "business": 2475.0
+       "solo": "not_eligible",
+       "studio": "not_eligible",
+       "launch": "not_eligible",
+       "growth": 1725.0,
+       "agency-plus": "quote"
       }
      },
      {
       "units": 50,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 4950.0,
+      "cheapest_plan": "growth",
+      "cheapest_plan_name": "Growth",
+      "total_month": 3450.0,
       "billed": {
-       "amount": 4950.0,
+       "amount": 3450.0,
        "every": "month"
       },
       "ranges": [],
       "per_plan": {
-       "business": 4950.0
+       "solo": "not_eligible",
+       "studio": "not_eligible",
+       "launch": "not_eligible",
+       "growth": 3450.0,
+       "agency-plus": "quote"
       }
      },
      {
       "units": 100,
-      "cheapest_plan": "business",
-      "cheapest_plan_name": "Business",
-      "total_month": 9900.0,
-      "billed": {
-       "amount": 9900.0,
-       "every": "month"
-      },
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
       "ranges": [],
       "per_plan": {
-       "business": 9900.0
+       "solo": "not_eligible",
+       "studio": "not_eligible",
+       "launch": "not_eligible",
+       "growth": "not_eligible",
+       "agency-plus": "quote"
       }
      }
     ],
-    "switch_points": [],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "solo",
+      "to_plan": "studio",
+      "from_plan_name": "Solo",
+      "to_plan_name": "Studio"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "studio",
+      "to_plan": "launch",
+      "from_plan_name": "Studio",
+      "to_plan_name": "Launch"
+     },
+     {
+      "from_units": 20,
+      "to_units": 25,
+      "from_plan": "launch",
+      "to_plan": "growth",
+      "from_plan_name": "Launch",
+      "to_plan_name": "Growth"
+     },
+     {
+      "from_units": 50,
+      "to_units": 100,
+      "from_plan": "growth",
+      "to_plan": null,
+      "from_plan_name": "Growth",
+      "to_plan_name": null
+     }
+    ],
     "conflicts": [],
     "unknowns": [
-     "Expandi states that the per-seat discount grows with the number of seats you buy, so a multi-seat quote is lower than seats times the list price by an unpublished amount.",
-     "Higher tiers (role and permission management, centralised billing) carry no published price.",
+     "Image, GIF and video personalisation are paid add-ons without a price in our notes.",
      "Taxes vary by country and are added on top."
     ]
    }
@@ -455,18 +639,12 @@
   {
    "question_id": "expandi:pricing_gap_1",
    "key": "pricing_gap_1",
-   "question": "Our price check could not put a number on this part of the cost: Expandi states that the per-seat discount grows with the number of seats you buy, so a multi-seat quote is lower than seats times the list price by an unpublished amount. Can you publish the price or the rule?",
+   "question": "Our price check could not put a number on this part of the cost: Image, GIF and video personalisation are paid add-ons without a price in our notes. Can you publish the price or the rule?",
    "status": "open"
   },
   {
    "question_id": "expandi:pricing_gap_2",
    "key": "pricing_gap_2",
-   "question": "Our price check could not put a number on this part of the cost: Higher tiers (role and permission management, centralised billing) carry no published price. Can you publish the price or the rule?",
-   "status": "open"
-  },
-  {
-   "question_id": "expandi:pricing_gap_3",
-   "key": "pricing_gap_3",
    "question": "Our price check could not put a number on this part of the cost: Taxes vary by country and are added on top. Can you publish the price or the rule?",
    "status": "open"
   }

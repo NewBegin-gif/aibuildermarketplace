@@ -75,8 +75,7 @@
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
  ],
  "verification": {
   "price": "read",
@@ -84,7 +83,108 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-22",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/killerplayer-review/",
+  "method": [
+   "Our AI assistant ran the test in the KillerPlayer web app in the browser, with the interface in English; nothing was paid",
+   "The test video was a public YouTube video; five screenshots were kept"
+  ],
+  "claims": [],
+  "exit_test": null,
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/killerplayer-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/killerplayer-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/killerplayer-review/#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/killerplayer-review/#hands-on"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/killerplayer-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-22",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "KillerPlayer",
+    "product_id": "killerplayer",
+    "run_date": "22 November 2026",
+    "session_type": "hands_on",
+    "what": "Our AI assistant ran the test on 22 November 2026 in the KillerPlayer web app on the free plan, with the interface in English. We turned a public YouTube video into a KillerPlayer video, played it to the end on its share page, read the usage meter, and tried to set up Domain lock. We paid nothing.",
+    "findings": [
+     "Setup: Create takes three steps on one screen: paste a YouTube link, keep the Default preset or pick a folder, then press Hook & Convert. The result was a direct video URL and an iframe embed code.",
+     "Player: the video played in KillerPlayer's own green control bar with no YouTube title, logo or channel name.",
+     "End of video: when the 19 second video finished, the player went back to its first frame with its own play button. No suggested YouTube videos appeared.",
+     "Usage meter: the Video Library showed 1 of 5 videos and 1 of 500 monthly views after our single play.",
+     "Domain lock: under Settings, General settings, the Domain lock and custom domain (CNAME) fields were disabled on the free plan and marked Premium feature, with Buy Addon and Upgrade plan buttons. In video CTAs and the email marketing integrations were locked the same way.",
+     "Prices on 22 November 2026, billed yearly: Starter $24, Plus $48, Premium $72 and Enterprise $96 for the first year, renewing at $48, $96, $180 and $360. The free plan is 5 videos and 500 views a month with no card."
+    ],
+    "not_tested": [
+     "the paid plans and the Domain Lock addon: we did not pay, so we could not check that a locked video refuses to play on another site",
+     "embedding the player on a real website; we played it on KillerPlayer's own video page",
+     "the 500 views a month cap: our test used 1 view",
+     "SnackView, the watermark, password protection, CTAs and the email marketing integrations",
+     "YouTube Live and captions"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "killerplayer:cancellation_terms",

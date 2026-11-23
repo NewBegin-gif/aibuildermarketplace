@@ -499,8 +499,7 @@
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -508,7 +507,108 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-22",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/invideo-review.html",
+  "method": [
+   "Our AI assistant ran the test in the InVideo web app in the browser, with the interface in English; nothing was paid",
+   "Five screenshots were kept; the account initials are hidden"
+  ],
+  "claims": [],
+  "exit_test": null,
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://officesoftwaremarketplace.com/invideo-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://officesoftwaremarketplace.com/invideo-review.html#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://officesoftwaremarketplace.com/invideo-review.html#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://officesoftwaremarketplace.com/invideo-review.html#hands-on"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://officesoftwaremarketplace.com/invideo-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-22",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "InVideo",
+    "product_id": "invideo",
+    "run_date": "22 November 2026",
+    "session_type": "hands_on",
+    "what": "Our AI assistant ran the test on 22 November 2026 in the InVideo web app on the Free plan, with the interface in English. We gave the agent one prompt for a 30 second vertical video with stock footage, an English voiceover and captions, read the credit meter before and after, and stopped at the upgrade screen. We paid nothing.",
+    "findings": [
+     "Free plan: a new account opened on a Free plan with 50 credits, no iStock allowance and 10 GB of storage. The usage page said the allowance resets on 23 November; we did not check how often it resets after that.",
+     "Script: from one prompt the agent (Agent Two Lite) wrote a short script with three numbered tips, on screen text beats and a shot plan in about a minute.",
+     "Stock: it picked 12 vertical stock clips and a music bed. Premium iStock clips were not available on the Free plan, so it switched to free stock.",
+     "Voiceover: the English voiceover did not run. The agent reported a plan limit and showed an upgrade card, so no video was cut or exported.",
+     "Credits: that single attempt took the meter from 0 to 26.4 of 50 credits, although nothing was rendered. Check the usage page before you retry.",
+     "Prices on 22 November 2026 from a Netherlands connection, during a Black Friday sale: Starter €10 a seat a month billed yearly (€20 normally), Plus €30 (€60 normally), and Max €62.50 a seat a month on a two year deal."
+    ],
+    "not_tested": [
+     "exporting a video, and whether a Free plan export carries a watermark: our attempt never reached the export step",
+     "the paid plans and the AI models and avatars they unlock",
+     "the timeline editor and manual edits",
+     "team seats and guest seats",
+     "cancelling and downgrading"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "invideo:cancellation_terms",

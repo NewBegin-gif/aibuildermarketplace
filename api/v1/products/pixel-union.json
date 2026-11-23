@@ -124,7 +124,10 @@
   "tested_on": "2026-11-22",
   "tested_by": "Our team; actor, account and scope are documented in the review.",
   "review_url": "https://marketingandsalessoftware.com/pixel-union-review.html",
-  "method": [],
+  "method": [
+   "Our AI assistant ran the test in the Shopify theme editor of our development store; nothing was bought or published",
+   "The trial theme was removed afterwards without saving changes; seven screenshots were kept"
+  ],
   "claims": [],
   "exit_test": null,
   "facts": {
@@ -166,7 +169,39 @@
    }
   }
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Pixel Union",
+    "product_id": "pixel-union",
+    "run_date": "22 November 2026",
+    "session_type": "hands_on",
+    "what": "Our AI assistant ran the test on 22 November 2026 with Empire, Pixel Union's Shopify theme, added to our Shopify development store through Try theme. We ran Empire on our own catalogue in the theme editor, tried live search and the collection filters, and checked the counts against our admin. We bought nothing and published nothing.",
+    "findings": [
+     "Trial: Try theme added Empire to our store in about 20 seconds as a Trial theme. The theme library showed Buy and Edit theme, but no Publish.",
+     "Add-on: while Empire was being added, a pop-up advertised Theme Updater & Backups, an app add-on from the same developer.",
+     "Live search: in the editor Empire ran on our own catalogue at once. Typing snowboard listed our own snowboards with price and In stock, such as The Complete Snowboard at $699.95.",
+     "Filters: the collection page counted In stock (16) and Out of stock (2), and the Out of stock filter returned exactly 2 products. That matched our admin: 18 products in the online store, 2 of them out of stock.",
+     "Header: the search bar comes with an All categories picker, refined search by product type, live search and a sticky header.",
+     "Publishing: the theme menu says Buy theme to publish (Empire version 14.0.0). You can set the theme up for free, but going live costs $360 once."
+    ],
+    "not_tested": [
+     "a large catalogue: our store has 18 products in the online store",
+     "speed on a live store, because a trial theme cannot be published without buying it",
+     "support from Pixel Union and the optional support plan",
+     "Pixel Union's other themes"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "pixel-union:cancellation_terms",

@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 695 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-22.
+All 697 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-23.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1672,6 +1672,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Free tier
 - **Full review:** https://marketingandsalessoftware.com/gelato-review.html
 
+## GemPages (gempages.net)
+- **Verified pricing:** (read 2026-11-19 on gempages.net/pricing and in the app, USD) Free plan: 1 published page (limit seen in our test).
+- **Honest take:** Shopify page and funnel builder with a free plan (1 published page); paid plans from $29 a month.
+- **Best for:** Shopify merchants who want a drag-and-drop page and funnel builder with upsells and A/B offer testing
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/gempages-review/
+
 ## GeoStock (jtcinteractive.com)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/product-inventory-information, and in our own test session on 17 November 2026; first read 2026-08-18) Three plans: Free, Base Plan at $9.99 a month and…
 - **Honest take:** Know what this is before you buy it: despite the name it is a storefront widget, not an inventory system.
@@ -2355,6 +2362,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** sales reps and small B2B teams who want verified emails and direct dials from a Chrome extension on LinkedIn and company sites, paid by the credit
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://marketingandsalessoftware.com/lusha-review.html
+
+## MailerLite (mailerlite.com)
+- **Verified pricing:** (read 2026-11-22 in the MailerLite app, USD unless stated) Free: up to 250 subscribers and 2,500 emails, 0 a month.
+- **Honest take:** Email marketing for small senders with a free plan (250 subscribers); paid plans from $12 a month at 500 subscribers.
+- **Best for:** small senders and creators who want a simple newsletter tool with a free plan and a template editor
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/mailerlite-review/
 
 ## MailVeri (mailveri.com)
 - **Verified pricing:** (read 2026-11-18 on mailveri.com and its pricing page and in our own test that day; earlier: read 2026-11-13 on mailveri.com/pricing, US dollars) MailVeri sells pay-as-you-go credit packs w…
@@ -3359,7 +3373,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's deliberately lean: no built-in dialer, no quoting or invoicing, and reporting feels basic unless you export.
 - **Best for:** small B2B teams whose reps hate data entry: Salesflare auto-logs emails, meetings and contact details from your inbox and calendar
 - **Flags:** Per-seat pricing, Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/salesflare-review/
+- **Full review:** https://marketingandsalessoftware.com/salesflare-review.html
 
 ## Salesflow (salesflow.io)
 - **Verified pricing:** (read 2026-09-09, re-read 2026-10-01) Read on Salesflow's own pricing page.
@@ -3393,7 +3407,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-read 21 November 2026 from the plan data that sanebox.com/pricing embeds for its client-side price cards) Three plans, billed yearly or month to month.
 - **Honest take:** You pay monthly to filter mail that modern clients increasingly sort for free, and the headline rate is billed yearly: month to month the Snack plan is $9.49, not $5.42.
 - **Best for:** heavy-email professionals drowning in a cluttered inbox who want AI triage that works across any mail client
-- **Full review:** https://aibuildermarketplace.com/b2b/sanebox-review/
+- **Full review:** https://officesoftwaremarketplace.com/sanebox-review.html
 
 ## Scarcity.AI (effectify.io)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com, across all three listings, and the low stock counter also in our own test session on 17 November 2026) The Low Stock Counter is $4.99 a month, the Coun…
@@ -3889,7 +3903,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** There is no free plan after the 14-day trial and no cheaper tier: Pro at $22 a month billed monthly, or $17 billed yearly, per person, is the only self-serve option.
 - **Best for:** people whose problem is deciding what to do today rather than tracking what exists: it pulls from your existing tools and forces a daily plan, which is the whole product
 - **Flags:** Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/sunsama-review/
+- **Full review:** https://officesoftwaremarketplace.com/sunsama-review.html
 
 ## SupaEasy (supaeasy.com)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/supaeasy and in our own test that day; earlier: verified 2026-08-28 on apps.shopify.com/supaeasy and supaeasy.com/pricing; re-verified 2026-10-22 on bot…
@@ -3908,13 +3922,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The price is no longer hidden, and it is high.
 - **Best for:** e-commerce brands turning customers and creators into affiliates with branded co-branded storefronts, if the volume justifies a demo-quoted platform fee
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/superfiliate-review/
+- **Full review:** https://marketingandsalessoftware.com/superfiliate-review.html
 
 ## Superlines (superlines.io)
 - **Verified pricing:** (read 2026-10-16 in a browser on superlines.io/pricing, For brands tab, monthly and yearly view, prices shown in euros; the terms say VAT is added where required.
 - **Honest take:** Starter has no exports and 1 month of history; 30 days' notice to stop renewal.
 - **Best for:** marketing teams and agencies in Europe that want to track how ChatGPT, Gemini, Perplexity and other AI engines mention and cite their brands, with unlimited seats
-- **Full review:** https://aibuildermarketplace.com/b2b/superlines-review/
+- **Full review:** https://marketingandsalessoftware.com/superlines-review.html
 
 ## SupportBee (supportbee.com)
 - **Verified pricing:** (read 2026-08-27 on supportbee.com/pricing) Two plans, both priced per seat, and no free tier.
@@ -3963,7 +3977,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The plan is metered by response volume, not by surveys: a viral NPS month can push you a tier up, and the free plan's 30-day retention quietly deletes your history.
 - **Best for:** product and CX teams running always-on feedback (NPS, CSAT and in-app surveys) piped into the CRM and analytics stack they already use
 - **Flags:** Usage-metered, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/survicate-review/
+- **Full review:** https://officesoftwaremarketplace.com/survicate-review.html
 
 ## SurvIQ (surviqapp.com)
 - **Verified pricing:** (read 2026-11-18 on surviqapp.com/en, US dollars, and in our own test that day; earlier: read 2026-11-10) SurvIQ has a Free plan with 50 responses a month, 1 user and up to 3 active surveys.
@@ -4266,7 +4280,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It's a newer, enterprise-leaning automation platform, so it's less proven with a smaller community than the big names, and execution and AI chat allowances make heavy volume worth costing out.
 - **Best for:** teams that want an AI-assisted way to discover, document and run automations without deep RPA expertise
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/turbotic-review/
+- **Full review:** https://officesoftwaremarketplace.com/turbotic-review.html
 
 ## Typewise (typewise.app)
 - **Verified pricing:** (re-read 2026-09-23 and again, unchanged, 2026-09-27 on typewise.app/pricing) A base plan plus a per-resolution rate.
@@ -4450,7 +4464,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Platform APIs change constantly, so verify the networks and features your clients need inside the trial, and white-labeling sits on the Scale tier above Professional.
 - **Best for:** agencies and multi-brand teams that want scheduling, listening, reviews and reporting across many profiles at a notably lower price than legacy suites
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/vista-social-review/
+- **Full review:** https://marketingandsalessoftware.com/vista-social-review.html
 
 ## VoiceDrop (voicedrop.ai)
 - **Verified pricing:** (read 2026-11-15 on voicedrop.ai/pricing and the home page FAQ, US dollars a month) VoiceDrop sells ringless voicemail by usage units.
@@ -4497,7 +4511,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-read 25 September 2026 on warmupinbox.com/pricing/, plan cards plus the page's schema.org price list) Three tiers, priced per inbox.
 - **Honest take:** The pricing is published and readable: three tiers, per inbox, with both billing toggles printing a rate: $19, $59 and $99 monthly, or $15, $49 and $79 on the yearly plan.
 - **Best for:** outbound teams warming new sending domains and inboxes before campaigns, with integrations across Google, Outlook, Zoho and SendGrid
-- **Full review:** https://aibuildermarketplace.com/b2b/warmup-inbox-review/
+- **Full review:** https://marketingandsalessoftware.com/warmup-inbox-review.html
 
 ## Warn (effectify.io)
 - **Verified pricing:** (prices read 2026-09-20 on apps.shopify.com/product-notes) Billed in USD, every 30 days, and the ladder has three steps rather than the two the app's own summary suggests.
@@ -4751,8 +4765,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/zoominfo-review.html
 
 ## Zoviz (zoviz.com)
-- **Verified pricing:** (read 2026-10-06 on zoviz.com/pricing from a Netherlands connection; the page says prices are shown in EUR based on your location) Three plans, monthly or yearly, with yearly marked -43%.
+- **Verified pricing:** (read 2026-10-06 on zoviz.com/pricing from a Netherlands connection; the page says prices are shown in EUR based on your location) Three paid plans, monthly or yearly (on 22 Nov 2026 a new …
 - **Honest take:** Designing is free but downloading is paid, and once you download you lose the refund; there is no one-off logo price.
 - **Best for:** small businesses, solo founders and agencies that want a logo, a matching brand kit and on-brand social posts, bio pages and a simple website from one tool, and want to try the design before paying
-- **Flags:** Usage-metered
+- **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/zoviz-review/

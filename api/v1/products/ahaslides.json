@@ -511,8 +511,7 @@
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -520,7 +519,108 @@
   "refund": "being_verified"
  },
  "status_page": null,
- "task_evidence": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-22",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://aibuildermarketplace.com/b2b/ahaslides-review/",
+  "method": [
+   "Our AI assistant ran the test in the AhaSlides web app in the browser, with the interface in English; nothing was paid",
+   "The notes record screens and wording; six screenshots were kept, with our account name covered"
+  ],
+  "claims": [],
+  "exit_test": null,
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/ahaslides-review/#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/ahaslides-review/#hands-on"
+   },
+   "export_file_inspected": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/ahaslides-review/#hands-on"
+   },
+   "export_reimport_tested": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/ahaslides-review/#hands-on"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-22",
+    "evidence_url": "https://aibuildermarketplace.com/b2b/ahaslides-review/#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-22",
+    "evidence_url": null
+   }
+  }
+ },
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "AhaSlides",
+    "product_id": "ahaslides",
+    "run_date": "22 November 2026",
+    "session_type": "hands_on",
+    "what": "Our AI assistant ran the test on 22 November 2026 in the AhaSlides web app on a free account, with the interface in English. We let it build a starter quiz, added slides until the free plan stopped us, presented the quiz, joined it as a participant from a second browser tab and answered, then read the session report and the upgrade options. We paid nothing.",
+    "findings": [
+     "Start: after two questions about how we would use it, choosing Quiz built a sample physics quiz with three Pick Answer questions and a leaderboard.",
+     "Free limit: when we added a True or False slide and two Open Ended slides, crowns appeared on the slides and the tooltip read Free plan: 2 question types per presentation. Present then showed Too many question types for Free and asked us to remove one type or upgrade.",
+     "Live session: after we removed the Open Ended slides, Present showed a join link and QR code. Joining from a second tab needed only a name and an emoji, with no app or account, and took about 17 seconds. The join page had filled in the first name of the logged in presenter, because both tabs ran in the same browser; we changed it.",
+     "Answering: after Start the question appeared on the participant screen; our answer was marked Correct with 69 points, and the presenter chart showed 1 vote and 1 of 50 participants.",
+     "Report: the session report showed 1 participant, 1 submission and 100% accuracy. Export to Excel, PDF or images was marked as a paid feature.",
+     "Prices on 22 November 2026: the pricing page listed Free with 50 participants and 2 question types per presentation, Essential at EUR 7.25 and Pro at EUR 10.65 a month billed yearly. The upgrade dialog in the app showed Pro at EUR 46.75 billed monthly."
+    ],
+    "not_tested": [
+     "a real class: we joined as one participant from a second browser tab, so the 50 participant limit and a busy room were not tested",
+     "the AI slide generator, PowerPoint and PDF import, and the Zoom, Teams and Google Slides integrations",
+     "self paced mode, team play and Q&A",
+     "the paid plans: we opened the upgrade dialog and pricing page to read the prices and did not buy",
+     "exports, which are paid features"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "ahaslides:cancellation_terms",

@@ -116,7 +116,10 @@
   "tested_on": "2026-11-22",
   "tested_by": "Our team; actor, account and scope are documented in the review.",
   "review_url": "https://officesoftwaremarketplace.com/expertise-ai-review.html",
-  "method": [],
+  "method": [
+   "Our AI assistant ran the test in the Expertise AI web app in the browser, in the EU data region, with the interface in English; nothing was paid",
+   "The agent was built from our own public site, so no private data went in; five screenshots were kept"
+  ],
   "claims": [],
   "exit_test": null,
   "facts": {
@@ -158,7 +161,39 @@
    }
   }
  },
- "task_evidence": null,
+ "task_evidence": {
+  "structured_checks": [],
+  "sessions": [
+   {
+    "source": "session",
+    "product_name": "Expertise AI",
+    "product_id": "expertise-ai",
+    "run_date": "22 November 2026",
+    "session_type": "hands_on",
+    "what": "Our AI assistant ran the test on 22 November 2026 in the Expertise AI web app on the free plan, with the interface in English. We built an agent from our own public site, asked it two questions, read the conversation counter and the training list, and opened the billing page. We paid nothing and did not put the agent on a website.",
+    "findings": [
+     "Sign-up: name, email, a data region and a password, with no card. The app opened straight on Create your agent, with our website already filled in.",
+     "Agent: scanning aibuildermarketplace.com found 8 pages in about 20 seconds, and building the agent took about a minute.",
+     "Answers: asked what Rewardful costs per month, a price that was not on those 8 pages, the agent said it was not sure instead of making one up. Asked whether our reviews show the date a price was checked, it answered correctly from our homepage.",
+     "Free plan: after our first conversation the banner said You have 9 conversations left. We did not see the $100 credit from the sign-up page anywhere in the app.",
+     "Training: Training Materials listed all 8 pages as Untrained, with 0 of 50 used, while the agent was already answering.",
+     "Prices on 22 November 2026, on the billing page in the app: Business $2,000 a month and Enterprise from $3,000 a month, both billed annually. Both paid plans go through Book a Demo; there was no checkout button."
+    ],
+    "not_tested": [
+     "the HubSpot connection and lead qualification, which sit on the Business plan and are sold through a demo",
+     "the agent live on a website with real visitors",
+     "Voice AI, playbooks and Visitor Intelligence",
+     "training with Train All Untrained, and answers about our deeper review pages"
+    ],
+    "report": null,
+    "disclosure": null,
+    "evidence_status": null,
+    "result": "reported",
+    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+    "in_catalog": true
+   }
+  ]
+ },
  "open_questions": [
   {
    "question_id": "expertise-ai:public_price",

@@ -5634,6 +5634,35 @@
   },
   {
    "source": "session",
+   "product_name": "Rewardful",
+   "product_id": "rewardful",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in the Rewardful web app during the 14 day Starter trial. We set up a campaign with commission rules without connecting Stripe, opened the affiliate signup link, read the plan limits and cancelled the subscription the same day, before the first invoice.",
+   "findings": [
+    "Sign-up: a card was required. The subscription page then showed Starter Monthly with Next invoice $49 on December 6, 2026, the day the 14 day trial ends.",
+    "Setup wizard: before any campaign it asks you to connect a payment processor, and Stripe and Paddle are the only two it offers.",
+    "First campaign: our first Create your first campaign click returned a generic system error. It worked once we picked a display currency in Company settings, which the app says cannot be changed later.",
+    "Campaign: we set 30% of each payment for 12 months, with commission pending for 30 days, without code. Rewardful set the cookie to 60 days by default.",
+    "Plan limits: private campaigns and private affiliate links were locked behind Upgrade to unlock on the Starter trial.",
+    "Affiliate signup link: the link shown on our new campaign page returned a page that said it doesn't seem to exist. Its address was built from our website field, with https- in the subdomain.",
+    "Cancelling: two clicks under Payments, Your Subscription. The status then read Cancels December 6, 2026."
+   ],
+   "not_tested": [
+    "tracking a real referral through to a payment, because Stripe was not connected",
+    "payouts to affiliates through PayPal, Wise or Managed Payouts",
+    "the affiliate portal from the inside, because the signup link returned an error page",
+    "Growth plan features: custom domain, branded portal and private campaigns"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Klap",
    "product_id": "klap",
    "run_date": "2026-10-29",
@@ -19212,6 +19241,34 @@
   },
   {
    "source": "session",
+   "product_name": "NameRobot",
+   "product_id": "namerobot",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in Namefruits, NameRobot's naming app, with the interface in English. We set up a naming project for a software price comparison website, took the free Thorough Mode and chose Keep trying at every payment prompt. We paid nothing.",
+   "findings": [
+    "Sign-up: only an email and a password, with no card. The app opened straight on a questionnaire with a progress counter.",
+    "Mode: after about ten questions it asked us to pick Quick Mode, with payment right at the start, or Thorough Mode, with payment only after a few questions. We took Thorough Mode.",
+    "Payment prompts: the first came at 7% of the questionnaire and a second at 10%, right where the first name suggestions would start. Neither screen showed a price.",
+    "Names: up to that point we got no name for our own project. The Unused Names list said There are no names in this list yet.",
+    "Keywords: the free part collected 35 keywords, all derived from the Software industry we picked. Our own description, comparing software prices, did not show up in the list; you can add keywords by hand.",
+    "Language: one label on the mode screen was still in German (Zahlung) in the English interface."
+   ],
+   "not_tested": [
+    "the paid name generation and the names it makes; namerobot.com listed $99 per project on 7 October 2026",
+    "the automatic domain and trademark checks on names, and the NameReport at the end",
+    "NameScore and NameReport bought on their own ($19 per report)",
+    "the name idea guarantee, which promises a new run for free"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Bold Upsell",
    "product_id": "bold-upsell",
    "run_date": "2026-11-17",
@@ -25986,6 +26043,35 @@
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Selixer",
+   "product_id": "selixer",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in our Shopify development store on the 14 day Catalyst trial. We installed Selixer, synced products and orders, compared the counts with our Shopify admin, read the AI credits and billing pages, and removed the app. We chose no plan, so nothing was charged.",
+   "findings": [
+    "Install: after the Shopify install, Selixer asked us to add the store to our Selixer account and pick a plan. Every plan offered a 14 day free trial with no card, and no Shopify charge screen appeared.",
+    "Prices on 22 November 2026 in the app, a month after the trial: Varta $49, Essence $149, Catalyst $299 and Aether $399. We took the Catalyst trial.",
+    "Products: the sync worked. Selixer listed 23 products, 32 SKUs and 778 units, the same 23 products as our Shopify admin.",
+    "Orders: the list said No orders found after a sync and after a second sync past the 5 minute cooldown, although our development store had two test orders worth $1,449.90 (no real money). Net sales, profit and orders on the dashboard stayed at 0, so we could not check the profit figures.",
+    "AI credits: the Catalyst trial showed 100 AI credits, while the listing names 2,000 for Catalyst. Top-ups run from $25 for 1,500 credits to $400 for 30,000.",
+    "Billing: the page showed the trial from 22 November to 6 December 2026, billed by Shopify, 1 of 4 seats in use, and Nothing is charged unless you choose a plan.",
+    "Ads: connecting Meta Ads or Google Ads needs a sign-in to an ad account. Our test store has none, so we skipped that step."
+   ],
+   "not_tested": [
+    "profit per order, product and campaign: orders did not sync and no ad account was connected",
+    "WhatsApp COD verification and email campaigns",
+    "AI Studio photos",
+    "whether real orders from a live store sync; ours is a development store"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true
   },
   {
@@ -41871,6 +41957,34 @@
   },
   {
    "source": "session",
+   "product_name": "Expertise AI",
+   "product_id": "expertise-ai",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in the Expertise AI web app on the free plan, with the interface in English. We built an agent from our own public site, asked it two questions, read the conversation counter and the training list, and opened the billing page. We paid nothing and did not put the agent on a website.",
+   "findings": [
+    "Sign-up: name, email, a data region and a password, with no card. The app opened straight on Create your agent, with our website already filled in.",
+    "Agent: scanning aibuildermarketplace.com found 8 pages in about 20 seconds, and building the agent took about a minute.",
+    "Answers: asked what Rewardful costs per month, a price that was not on those 8 pages, the agent said it was not sure instead of making one up. Asked whether our reviews show the date a price was checked, it answered correctly from our homepage.",
+    "Free plan: after our first conversation the banner said You have 9 conversations left. We did not see the $100 credit from the sign-up page anywhere in the app.",
+    "Training: Training Materials listed all 8 pages as Untrained, with 0 of 50 used, while the agent was already answering.",
+    "Prices on 22 November 2026, on the billing page in the app: Business $2,000 a month and Enterprise from $3,000 a month, both billed annually. Both paid plans go through Book a Demo; there was no checkout button."
+   ],
+   "not_tested": [
+    "the HubSpot connection and lead qualification, which sit on the Business plan and are sold through a demo",
+    "the agent live on a website with real visitors",
+    "Voice AI, playbooks and Visitor Intelligence",
+    "training with Train All Untrained, and answers about our deeper review pages"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Ngram",
    "product_id": "ngram",
    "run_date": "2026-09-30",
@@ -43408,6 +43522,35 @@
   },
   {
    "source": "session",
+   "product_name": "InVideo",
+   "product_id": "invideo",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 in the InVideo web app on the Free plan, with the interface in English. We gave the agent one prompt for a 30 second vertical video with stock footage, an English voiceover and captions, read the credit meter before and after, and stopped at the upgrade screen. We paid nothing.",
+   "findings": [
+    "Free plan: a new account opened on a Free plan with 50 credits, no iStock allowance and 10 GB of storage. The usage page said the allowance resets on 23 November; we did not check how often it resets after that.",
+    "Script: from one prompt the agent (Agent Two Lite) wrote a short script with three numbered tips, on screen text beats and a shot plan in about a minute.",
+    "Stock: it picked 12 vertical stock clips and a music bed. Premium iStock clips were not available on the Free plan, so it switched to free stock.",
+    "Voiceover: the English voiceover did not run. The agent reported a plan limit and showed an upgrade card, so no video was cut or exported.",
+    "Credits: that single attempt took the meter from 0 to 26.4 of 50 credits, although nothing was rendered. Check the usage page before you retry.",
+    "Prices on 22 November 2026 from a Netherlands connection, during a Black Friday sale: Starter €10 a seat a month billed yearly (€20 normally), Plus €30 (€60 normally), and Max €62.50 a seat a month on a two year deal."
+   ],
+   "not_tested": [
+    "exporting a video, and whether a Free plan export carries a watermark: our attempt never reached the export step",
+    "the paid plans and the AI models and avatars they unlock",
+    "the timeline editor and manual edits",
+    "team seats and guest seats",
+    "cancelling and downgrading"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "CallRail",
    "product_id": "callrail",
    "run_date": "2026-11-18",
@@ -44142,6 +44285,34 @@
     "not_offered": [],
     "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
    },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Pixel Union",
+   "product_id": "pixel-union",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 with Empire, Pixel Union's Shopify theme, added to our Shopify development store through Try theme. We ran Empire on our own catalogue in the theme editor, tried live search and the collection filters, and checked the counts against our admin. We bought nothing and published nothing.",
+   "findings": [
+    "Trial: Try theme added Empire to our store in about 20 seconds as a Trial theme. The theme library showed Buy and Edit theme, but no Publish.",
+    "Add-on: while Empire was being added, a pop-up advertised Theme Updater & Backups, an app add-on from the same developer.",
+    "Live search: in the editor Empire ran on our own catalogue at once. Typing snowboard listed our own snowboards with price and In stock, such as The Complete Snowboard at $699.95.",
+    "Filters: the collection page counted In stock (16) and Out of stock (2), and the Out of stock filter returned exactly 2 products. That matched our admin: 18 products in the online store, 2 of them out of stock.",
+    "Header: the search bar comes with an All categories picker, refined search by product type, live search and a sticky header.",
+    "Publishing: the theme menu says Buy theme to publish (Empire version 14.0.0). You can set the theme up for free, but going live costs $360 once."
+   ],
+   "not_tested": [
+    "a large catalogue: our store has 18 products in the online store",
+    "speed on a live store, because a trial theme cannot be published without buying it",
+    "support from Pixel Union and the optional support plan",
+    "Pixel Union's other themes"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
    "in_catalog": true
   },
   {

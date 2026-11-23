@@ -1096,7 +1096,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/design-com-review/
 
 ## Devs.ai (devs.ai)
-- **Verified pricing:** (re-verified 2026-10-11 and 2026-08-26, read in a live browser session on devs.ai/home/pricing with both billing toggles) Devs.ai does publish its pricing — on the marketing site at devs.ai…
+- **Verified pricing:** (re-verified 2026-11-23 from the plan data that devs.ai/home/pricing loads, both billing columns; earlier 2026-10-11 and 2026-08-26 in a live browser session with both toggles) Devs.ai does…
 - **Honest take:** The seat price is the smaller half of the bill.
 - **Best for:** teams that want to prototype and ship AI agents and apps across multiple models without engineering overhead, and that can absorb model usage metered on top of the per-seat fee
 - **Flags:** Per-seat pricing, Usage-metered, Annual commit, Free tier
@@ -1435,7 +1435,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/evey-events-review.html
 
 ## Evolve (evolveplatform.ai)
-- **Verified pricing:** (re-verified 2026-09-22 on evolveplatform.ai) No public price list -- there is no /pricing page and the call to action across the site is 'Book an intro'.
+- **Verified pricing:** (re-verified 2026-11-23 on evolveplatform.ai) No public price list: /pricing and /llms.txt still return 404, and the site's own FAQ answers "How much does Evolve cost, and can I see a demo?…
 - **Honest take:** It's built for large organizations: the site claims 100+ enterprises deployed globally and 2.9M+ learners trained, with Danone among the named references, and the sales-led, quote-only motion reflects that.
 - **Best for:** enterprises and scale-ups that need structured, measurable training rolled out across hundreds of employees: branded academies, AI-generated courses, job-skill simulations and assessment in one platform
 - **Flags:** Hidden pricing
@@ -2949,7 +2949,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/pipedrive-review.html
 
 ## Pippit (pippit.ai)
-- **Verified pricing:** (read 2026-09-19 on pippit.ai/pricing from a Netherlands exit; the page prices in the visitor's currency, so these are euro amounts) Every tier was repriced and every credit allowance cut s…
+- **Verified pricing:** (re-read 2026-11-23 on pippit.ai/pricing from our EU server, every figure below identical to the 2026-09-19 reading from a Netherlands exit; the page prices in the visitor's currency, so th…
 - **Honest take:** The meter is credits per attempt, not per usable result, and buyer reviews centre on exactly that.
 - **Best for:** solo founders and small teams that want a steady stream of product-marketing videos and posters generated from a product link, without filming anything
 - **Flags:** Usage-metered, Free tier
@@ -4490,7 +4490,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** No price is published any more, and the site has moved.
 - **Honest take:** The jump from Growth to Pro is steep (small businesses get priced out of MVT and complex targeting) and the UI is dense with options.
 - **Best for:** teams that want an experience-optimisation platform (A/B testing + heatmaps + personalisation) with friendlier Bayesian stats and transparent pricing
-- **Flags:** Hidden pricing
+- **Flags:** Hidden pricing, Add-ons extra
 - **Full review:** https://aibuildermarketplace.com/b2b/vwo-review/
 
 ## Vynaris (vynaris.com)

@@ -88,16 +88,589 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "foundation",
+     "name": "Foundation",
+     "model": "per_unit",
+     "annual_month": 13,
+     "monthly": 19,
+     "evidence": "Foundation $13 on annual billing or $19 billed monthly"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "annual_month": 25,
+     "monthly": 32,
+     "evidence": "Growth $25 or $32"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "per_unit",
+     "annual_month": 42,
+     "monthly": 49,
+     "evidence": "Pro $42 or $49"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_month": 59,
+     "monthly": 67,
+     "evidence": "Business $59 or $67"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "per_unit",
+     "annual_month": 79,
+     "monthly": 89,
+     "evidence": "Enterprise $79 or $89"
+    }
+   ],
+   "addons": [
+    {
+     "id": "marketing",
+     "label": "Marketing",
+     "per": "account",
+     "price_month": 49,
+     "from": true,
+     "billing": "unspecified",
+     "evidence": "Marketing from $49 a month"
+    },
+    {
+     "id": "engagement",
+     "label": "Engagement",
+     "per": "unit",
+     "price_month": 16,
+     "from": true,
+     "billing": "unspecified",
+     "evidence": "Engagement from $16 per user a month"
+    }
+   ],
+   "notes": [
+    "Foundation is capped at 100 open leads. Unlimited contacts and full API access on every tier."
+   ],
+   "not_computable": [],
+   "rules_verified_at": "2026-11-23"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "nutshell",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 13.0,
+      "billed": {
+       "amount": 156.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 13.0,
+       "growth": 25.0,
+       "pro": 42.0,
+       "business": 59.0,
+       "enterprise": 79.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 26.0,
+      "billed": {
+       "amount": 312.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 26.0,
+       "growth": 50.0,
+       "pro": 84.0,
+       "business": 118.0,
+       "enterprise": 158.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 468.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 39.0,
+       "growth": 75.0,
+       "pro": 126.0,
+       "business": 177.0,
+       "enterprise": 237.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 65.0,
+      "billed": {
+       "amount": 780.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 65.0,
+       "growth": 125.0,
+       "pro": 210.0,
+       "business": 295.0,
+       "enterprise": 395.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 130.0,
+      "billed": {
+       "amount": 1560.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 130.0,
+       "growth": 250.0,
+       "pro": 420.0,
+       "business": 590.0,
+       "enterprise": 790.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 195.0,
+      "billed": {
+       "amount": 2340.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 195.0,
+       "growth": 375.0,
+       "pro": 630.0,
+       "business": 885.0,
+       "enterprise": 1185.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 260.0,
+      "billed": {
+       "amount": 3120.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 260.0,
+       "growth": 500.0,
+       "pro": 840.0,
+       "business": 1180.0,
+       "enterprise": 1580.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 325.0,
+      "billed": {
+       "amount": 3900.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 325.0,
+       "growth": 625.0,
+       "pro": 1050.0,
+       "business": 1475.0,
+       "enterprise": 1975.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 650.0,
+      "billed": {
+       "amount": 7800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 650.0,
+       "growth": 1250.0,
+       "pro": 2100.0,
+       "business": 2950.0,
+       "enterprise": 3950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 1300.0,
+      "billed": {
+       "amount": 15600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 1300.0,
+       "growth": 2500.0,
+       "pro": 4200.0,
+       "business": 5900.0,
+       "enterprise": 7900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "Try free for 14 days",
+      "claim_source": "https://www.nutshell.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The account banner shows fourteen trial days remaining. No card was entered.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "Nutshell’s advertised fourteen days match its welcome banner; this says nothing about a particular paid CRM tier.",
+      "status": "confirmed",
+      "buying_consequence": "Trial access confirms the duration; checkout and later billing remain untested.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/nutshell-review.html"
+     },
+     {
+      "claim": "Try free for 14 days",
+      "claim_source": "https://www.nutshell.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "Nutshell Upgrade now was not opened and no matching cost rule exists in the snapshot, preventing a like-for-like checkout comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/nutshell-review.html"
+     },
+     {
+      "claim": "no credit card required",
+      "claim_source": "https://www.nutshell.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "No card was entered during the observed post-signup route. We handled signup; its individual screens were not counted.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "Manual people entry and selected-row CSV export were completed without entering card details; this finding is limited to that Nutshell trial route.",
+      "status": "confirmed",
+      "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/nutshell-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "nutshell",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 19.0,
+       "growth": 32.0,
+       "pro": 49.0,
+       "business": 67.0,
+       "enterprise": 89.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 38.0,
+      "billed": {
+       "amount": 38.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 38.0,
+       "growth": 64.0,
+       "pro": 98.0,
+       "business": 134.0,
+       "enterprise": 178.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 57.0,
+      "billed": {
+       "amount": 57.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 57.0,
+       "growth": 96.0,
+       "pro": 147.0,
+       "business": 201.0,
+       "enterprise": 267.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 95.0,
+      "billed": {
+       "amount": 95.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 95.0,
+       "growth": 160.0,
+       "pro": 245.0,
+       "business": 335.0,
+       "enterprise": 445.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 190.0,
+      "billed": {
+       "amount": 190.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 190.0,
+       "growth": 320.0,
+       "pro": 490.0,
+       "business": 670.0,
+       "enterprise": 890.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 285.0,
+      "billed": {
+       "amount": 285.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 285.0,
+       "growth": 480.0,
+       "pro": 735.0,
+       "business": 1005.0,
+       "enterprise": 1335.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 380.0,
+      "billed": {
+       "amount": 380.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 380.0,
+       "growth": 640.0,
+       "pro": 980.0,
+       "business": 1340.0,
+       "enterprise": 1780.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 475.0,
+      "billed": {
+       "amount": 475.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 475.0,
+       "growth": 800.0,
+       "pro": 1225.0,
+       "business": 1675.0,
+       "enterprise": 2225.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 950.0,
+      "billed": {
+       "amount": 950.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 950.0,
+       "growth": 1600.0,
+       "pro": 2450.0,
+       "business": 3350.0,
+       "enterprise": 4450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "foundation",
+      "cheapest_plan_name": "Foundation",
+      "total_month": 1900.0,
+      "billed": {
+       "amount": 1900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "foundation": 1900.0,
+       "growth": 3200.0,
+       "pro": 4900.0,
+       "business": 6700.0,
+       "enterprise": 8900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "Try free for 14 days",
+      "claim_source": "https://www.nutshell.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "The account banner shows fourteen trial days remaining. No card was entered.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "Nutshell’s advertised fourteen days match its welcome banner; this says nothing about a particular paid CRM tier.",
+      "status": "confirmed",
+      "buying_consequence": "Trial access confirms the duration; checkout and later billing remain untested.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/nutshell-review.html"
+     },
+     {
+      "claim": "Try free for 14 days",
+      "claim_source": "https://www.nutshell.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "Nutshell Upgrade now was not opened and no matching cost rule exists in the snapshot, preventing a like-for-like checkout comparison.",
+      "status": "not_testable",
+      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/nutshell-review.html"
+     },
+     {
+      "claim": "no credit card required",
+      "claim_source": "https://www.nutshell.com/pricing",
+      "claim_read_on": "2026-10-25",
+      "observed": "No card was entered during the observed post-signup route. We handled signup; its individual screens were not counted.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/nutshell-review.html#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not inspected",
+      "comparability": "Manual people entry and selected-row CSV export were completed without entering card details; this finding is limited to that Nutshell trial route.",
+      "status": "confirmed",
+      "buying_consequence": "The observed route proceeded without card entry; billing later remains untested.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/nutshell-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-10-30; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -450,12 +1023,6 @@
    "question_id": "nutshell:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "nutshell:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

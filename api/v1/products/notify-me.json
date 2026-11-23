@@ -138,15 +138,389 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "lite",
+     "name": "Lite",
+     "model": "free",
+     "evidence": "Lite free"
+    },
+    {
+     "id": "kickstart",
+     "name": "Kickstart",
+     "model": "per_unit",
+     "monthly": 9.9,
+     "annual_year": 79.21,
+     "evidence": "Kickstart $9.90 a month or $79.21 a year"
+    },
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "monthly": 19.9,
+     "annual_year": 159.23,
+     "evidence": "Starter $19.90 or $159.23 a year"
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "per_unit",
+     "monthly": 39.9,
+     "annual_year": 319.26,
+     "evidence": "Standard $39.90 or $319.26 a year"
+    }
+   ],
+   "notes": [
+    "Kickstart is restricted to Basic Shopify stores in their first year. Prices from the Shopify App Store listing; the in-app ladder on our development store differed (Standard $39.90, Rocket $69.90, Notify Me Plus $499.99)."
+   ],
+   "not_computable": [
+    {
+     "text": "Preorders above the plan limit are $0.20 each and $0.15 on Standard; SMS and WhatsApp are priced per country.",
+     "affects_cost": true
+    },
+    {
+     "text": "Kickstart is restricted to Basic Shopify stores in their first year",
+     "affects_cost": false
+    },
+    {
+     "text": "each paid tier on the listing carried a “78% Off Until BFCM” label",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-11-23"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "notify-me",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "kickstart": 6.6,
+       "starter": 13.27,
+       "standard": 26.61
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "kickstart": 13.2,
+       "starter": 26.54,
+       "standard": 53.21
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "kickstart": 19.8,
+       "starter": 39.81,
+       "standard": 79.82
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "kickstart": 33.0,
+       "starter": 66.35,
+       "standard": 133.03
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "kickstart": 66.01,
+       "starter": 132.69,
+       "standard": 266.05
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Preorders above the plan limit are $0.20 each and $0.15 on Standard; SMS and WhatsApp are priced per country.",
+     "Kickstart is restricted to Basic Shopify stores in their first year",
+     "each paid tier on the listing carried a “78% Off Until BFCM” label"
+    ],
+    "measured": [
+     {
+      "claim": "Notify me via:",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "In the unsaved theme preview a Notify me button took the place of Buy it now on the sold out product after the embed was switched on, about 3 minutes after the start and about 8 actions after the install; it opened a popup Notify me via: with Email and SMS and the button Notify Me When Available. After a made up address was sent the popup closed with no visible confirmation; the signup was not looked up in the dashboard and no alert was seen.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/notify-me-review.html#claim-vs-measured"
+      },
+      "plan": "Standard (Yearly) $319.26/yr chosen in the app dialog; not approved on Shopify",
+      "comparability": "The button and the form as seen in the unsaved preview; sending an alert was not part of the test.",
+      "status": "confirmed",
+      "buying_consequence": "A sold out product can get a signup button in minutes with no theme code, but whether the signup is kept and an alert is sent was not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/notify-me-review.html"
+     },
+     {
+      "claim": "Lite gratis, Kickstart $9.90, Starter $19.90, Standard $39.90",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan page of the development store showed Standard $39.90, Rocket $69.90 and Notify Me Plus $499.99 only; no Lite, Kickstart or Starter plan was visible, and the Standard limit read 1.500 notifications where the dossier says alerts.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/notify-me-review.html#claim-vs-measured"
+      },
+      "plan": "Standard (Yearly) $319.26/yr chosen in the app dialog; not approved on Shopify",
+      "comparability": "A plan list as shown on a development store against the dossier plan list; the reason for the difference was not found out, so the two cannot be set against each other.",
+      "status": "not_comparable",
+      "buying_consequence": "What a paying store can choose and pay is not clear from this test; the plan list of a live store may differ from that of a development store.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not comparable",
+      "review_url": "https://marketingandsalessoftware.com/notify-me-review.html"
+     },
+     {
+      "claim": "Selecting a plan will create a test charge at no cost",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "After Standard (Yearly) was chosen and Approve on Shopify was clicked, no Shopify approval screen appeared and the page stayed on the plan page; no test charge, trial start or billing sentence was seen.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/notify-me-review.html#claim-vs-measured"
+      },
+      "plan": "Standard (Yearly) $319.26/yr chosen in the app dialog; not approved on Shopify",
+      "comparability": "The text of the app about a test charge against a step that led to no approval screen.",
+      "status": "not_testable",
+      "buying_consequence": "Whether the test charge works as the app says is not known from this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/notify-me-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "notify-me",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "kickstart": 9.9,
+       "starter": 19.9,
+       "standard": 39.9
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "kickstart": 19.8,
+       "starter": 39.8,
+       "standard": 79.8
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "kickstart": 29.7,
+       "starter": 59.7,
+       "standard": 119.7
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "kickstart": 49.5,
+       "starter": 99.5,
+       "standard": 199.5
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "kickstart": 99.0,
+       "starter": 199.0,
+       "standard": 399.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Preorders above the plan limit are $0.20 each and $0.15 on Standard; SMS and WhatsApp are priced per country.",
+     "Kickstart is restricted to Basic Shopify stores in their first year",
+     "each paid tier on the listing carried a “78% Off Until BFCM” label"
+    ],
+    "measured": [
+     {
+      "claim": "Notify me via:",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "In the unsaved theme preview a Notify me button took the place of Buy it now on the sold out product after the embed was switched on, about 3 minutes after the start and about 8 actions after the install; it opened a popup Notify me via: with Email and SMS and the button Notify Me When Available. After a made up address was sent the popup closed with no visible confirmation; the signup was not looked up in the dashboard and no alert was seen.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/notify-me-review.html#claim-vs-measured"
+      },
+      "plan": "Standard (Yearly) $319.26/yr chosen in the app dialog; not approved on Shopify",
+      "comparability": "The button and the form as seen in the unsaved preview; sending an alert was not part of the test.",
+      "status": "confirmed",
+      "buying_consequence": "A sold out product can get a signup button in minutes with no theme code, but whether the signup is kept and an alert is sent was not tested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/notify-me-review.html"
+     },
+     {
+      "claim": "Lite gratis, Kickstart $9.90, Starter $19.90, Standard $39.90",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan page of the development store showed Standard $39.90, Rocket $69.90 and Notify Me Plus $499.99 only; no Lite, Kickstart or Starter plan was visible, and the Standard limit read 1.500 notifications where the dossier says alerts.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/notify-me-review.html#claim-vs-measured"
+      },
+      "plan": "Standard (Yearly) $319.26/yr chosen in the app dialog; not approved on Shopify",
+      "comparability": "A plan list as shown on a development store against the dossier plan list; the reason for the difference was not found out, so the two cannot be set against each other.",
+      "status": "not_comparable",
+      "buying_consequence": "What a paying store can choose and pay is not clear from this test; the plan list of a live store may differ from that of a development store.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not comparable",
+      "review_url": "https://marketingandsalessoftware.com/notify-me-review.html"
+     },
+     {
+      "claim": "Selecting a plan will create a test charge at no cost",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "After Standard (Yearly) was chosen and Approve on Shopify was clicked, no Shopify approval screen appeared and the page stayed on the plan page; no test charge, trial start or billing sentence was seen.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/notify-me-review.html#claim-vs-measured"
+      },
+      "plan": "Standard (Yearly) $319.26/yr chosen in the app dialog; not approved on Shopify",
+      "comparability": "The text of the app about a test charge against a step that led to no approval screen.",
+      "status": "not_testable",
+      "buying_consequence": "Whether the test charge works as the app says is not known from this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/notify-me-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -513,9 +887,15 @@
    "status": "open"
   },
   {
-   "question_id": "notify-me:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "notify-me:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Preorders above the plan limit are $0.20 each and $0.15 on Standard; SMS and WhatsApp are priced per country. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "notify-me:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: each paid tier on the listing carried a “78% Off Until BFCM” label. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

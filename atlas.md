@@ -2005,7 +2005,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/invideo-review.html
 
 ## involve.me (involve.me)
-- **Verified pricing:** (re-verified 20 November 2026 on the public pricing page, amounts unchanged since 19 September; the free plan's feature set was measured inside the product, because the plan cards still do …
+- **Verified pricing:** (re-verified 20 and 23 November 2026 on the public pricing page, amounts unchanged since 19 September; the free plan's feature set was measured inside the product, because the plan cards st…
 - **Honest take:** The tier pages sell live funnels, but the meter that empties first is contacts.
 - **Best for:** marketers building interactive lead-gen (quizzes, calculators, assessments and payment funnels with built-in email sequences) who want a free tier to validate the concept first
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -3899,7 +3899,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/sucuri-review.html
 
 ## Sunsama (sunsama.com)
-- **Verified pricing:** (re-read 19 November 2026 on sunsama.com/pricing and sunsama.com/llms.txt) Pro costs $22 a month per person billed monthly, or $17 a month billed yearly ($204 a year), with unlimited usage …
+- **Verified pricing:** (re-read 19 and 23 November 2026 on sunsama.com/pricing and sunsama.com/llms.txt) Pro costs $22 a month per person billed monthly, or $17 a month billed yearly ($204 a year), with unlimited…
 - **Honest take:** There is no free plan after the 14-day trial and no cheaper tier: Pro at $22 a month billed monthly, or $17 billed yearly, per person, is the only self-serve option.
 - **Best for:** people whose problem is deciding what to do today rather than tracking what exists: it pulls from your existing tools and forces a daily plan, which is the whole product
 - **Flags:** Annual commit

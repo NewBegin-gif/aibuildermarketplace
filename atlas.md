@@ -462,7 +462,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/bitscale-review.html
 
 ## Bitvavo (bitvavo.com)
-- **Verified pricing:** (re-verified 2026-11-22, read on their own fees page; every figure below matches the 8 October 2026 reading) No subscription — you pay per trade.
+- **Verified pricing:** (re-verified 2026-11-22 and 2026-11-24, read on their own fees page; every figure below matches the 8 October 2026 reading) No subscription — you pay per trade.
 - **Honest take:** The honest caveats are crypto-wide, not Bitvavo-specific: fees are only part of the cost (spread matters on small orders), and no exchange removes market risk.
 - **Best for:** EU-based traders and builders who want a MiCA-regulated, euro-native exchange with low tiered fees, deep EUR pairs and a solid API for automation
 - **Full review:** https://officesoftwaremarketplace.com/bitvavo-review.html
@@ -3885,7 +3885,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/storylane-review.html
 
 ## Streak (streak.com)
-- **Verified pricing:** (price re-verified 2026-11-21 against streak.com/pricing: Pro $49/$59, Pro+ $69/$89, Enterprise $129/$159 per user, 20/150/500 AI credits and the $100-$1,000 top-up ladder all unchanged) (p…
+- **Verified pricing:** (price re-verified 2026-11-21 and again 2026-11-24 against streak.com/pricing: Pro $49/$59, Pro+ $69/$89, Enterprise $129/$159 per user, 20/150/500 AI credits and the $100-$1,000 top-up lad…
 - **Honest take:** The pitch, CRM living inside Gmail, is also the ceiling: everything happens in the inbox, which power users love and growing teams outgrow (reporting, permissions, cross-team process).
 - **Best for:** solo founders and small Gmail-native teams whose pipeline lives in email threads and who want zero context-switching
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Free tier
@@ -4602,7 +4602,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/wholesale-gorilla-review/
 
 ## Wing Assistant (wingassistant.com)
-- **Verified pricing:** (re-verified 2026-11-21 against the homepage plan cards and wingassistant.com/llms.txt: $699 part-time and $999 full-time unchanged) (re-verified 2026-08-17 and again on 2026-09-28 against …
+- **Verified pricing:** (re-verified 2026-11-21 and 2026-11-24 against the homepage plan cards and wingassistant.com/llms.txt: $699 part-time and $999 full-time unchanged) (re-verified 2026-08-17 and again on 2026…
 - **Honest take:** You're renting a person, not automating a task: a good VA is real leverage, but only if you already have documented, delegatable work.
 - **Best for:** founders drowning in delegatable admin who have processes to hand off and want a managed VA without recruiting one themselves
 - **Full review:** https://officesoftwaremarketplace.com/wing-assistant-review.html

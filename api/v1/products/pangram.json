@@ -99,15 +99,429 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "individual",
+     "name": "Individual",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 20,
+     "annual_month": 15,
+     "annual_year": 180,
+     "evidence": "Individual $20/mo or $15/mo billed annually ($180 a year)"
+    },
+    {
+     "id": "team",
+     "name": "Team",
+     "model": "per_unit",
+     "monthly": 20,
+     "annual_month": 15,
+     "min_units": 2,
+     "evidence": "Team $20 per seat/mo or $15 annually, from 2 seats"
+    },
+    {
+     "id": "enterprise",
+     "name": "Educational Institution and Enterprise",
+     "model": "quote",
+     "evidence": "Educational Institution and Enterprise are both quote-only"
+    }
+   ],
+   "notes": [
+    "Plans are capped by words checked (300,000 a month on Individual and per Team seat), not only by seats.",
+    "Live pricing source: https://www.pangram.com/pricing (read 2026-09-30)."
+   ],
+   "not_computable": [
+    {
+     "text": "Professional ($65/mo or $45/mo annually, 1,500,000 words) is left out: the notes do not say how many users it covers.",
+     "affects_cost": true
+    },
+    {
+     "text": "Developer API usage is prepaid pay-as-you-go per 100 words and is not modelled.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-11-24"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "pangram",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "individual",
+      "cheapest_plan_name": "Individual",
+      "total_month": 15.0,
+      "billed": {
+       "amount": 180.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": 15.0,
+       "team": 30.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 360.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 30.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 45.0,
+      "billed": {
+       "amount": 540.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 45.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 900.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 75.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 1800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 150.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 225.0,
+      "billed": {
+       "amount": 2700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 225.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 3600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 375.0,
+      "billed": {
+       "amount": 4500.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 375.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 750.0,
+      "billed": {
+       "amount": 9000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 750.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 1500.0,
+      "billed": {
+       "amount": 18000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 1500.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "individual",
+      "to_plan": "team",
+      "from_plan_name": "Individual",
+      "to_plan_name": "Team"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Professional ($65/mo or $45/mo annually, 1,500,000 words) is left out: the notes do not say how many users it covers.",
+     "Developer API usage is prepaid pay-as-you-go per 100 words and is not modelled."
+    ]
+   },
+   "monthly": {
+    "product_id": "pangram",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "individual",
+      "cheapest_plan_name": "Individual",
+      "total_month": 20.0,
+      "billed": {
+       "amount": 20.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": 20.0,
+       "team": 40.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 40.0,
+      "billed": {
+       "amount": 40.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 40.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 60.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 60.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 100.0,
+      "billed": {
+       "amount": 100.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 100.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 200.0,
+      "billed": {
+       "amount": 200.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 200.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 400.0,
+      "billed": {
+       "amount": 400.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 400.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 500.0,
+      "billed": {
+       "amount": 500.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 1000.0,
+      "billed": {
+       "amount": 1000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 1000.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "team",
+      "cheapest_plan_name": "Team",
+      "total_month": 2000.0,
+      "billed": {
+       "amount": 2000.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "individual": "not_eligible",
+       "team": 2000.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "individual",
+      "to_plan": "team",
+      "from_plan_name": "Individual",
+      "to_plan_name": "Team"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Professional ($65/mo or $45/mo annually, 1,500,000 words) is left out: the notes do not say how many users it covers.",
+     "Developer API usage is prepaid pay-as-you-go per 100 words and is not modelled."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -167,9 +581,15 @@
    "status": "open"
   },
   {
-   "question_id": "pangram:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "pangram:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Professional ($65/mo or $45/mo annually, 1,500,000 words) is left out: the notes do not say how many users it covers. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "pangram:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Developer API usage is prepaid pay-as-you-go per 100 words and is not modelled. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

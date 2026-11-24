@@ -1620,7 +1620,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/freshchat-review.html
 
 ## Freshservice (freshservice.com)
-- **Verified pricing:** (price re-verified 2026-11-21 against freshworks.com/freshservice/pricing/: Starter $19/$29, Growth $49/$59, Pro $99/$119 per agent and Enterprise 'Custom' unchanged) (price re-verified 202…
+- **Verified pricing:** (price re-verified 2026-11-24 against freshworks.com/freshservice/pricing/: Starter $19/$29, Growth $49/$59, Pro $99/$119 per agent, Enterprise 'Custom', Freddy AI Copilot $29 and Day Passe…
 - **Honest take:** The ITSM features most IT teams buy for (change/problem management, deeper analytics) live at Pro, and so does Freddy AI Copilot, a $29-an-agent add-on.
 - **Best for:** IT teams that want proper ITSM (incidents, assets, changes, service catalog) running in weeks, without enterprise-suite implementation pain
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
@@ -2074,7 +2074,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/katana-mrp-review/
 
 ## Keap (keap.com)
-- **Verified pricing:** Starting at $320 a month billed monthly for the whole platform, with no feature-based tiers and no free plan (re-read 21 November 2026 from the plan data behind the calculator on keap.com/p…
+- **Verified pricing:** Starting at $320 a month billed monthly for the whole platform, with no feature-based tiers and no free plan (re-read 21 and 24 November 2026 from the plan data behind the calculator on kea…
 - **Honest take:** Cost is the big one (56% of reviewers flag it), the interface feels dated, and there's a real 2–4 week learning curve on the automation builder.
 - **Best for:** service-based small businesses, coaches and solopreneurs who want CRM, email, payments and automation in one tool, and will invest the time to learn it
 - **Flags:** Usage-metered, Annual commit
@@ -3945,8 +3945,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 
 ## SupportYourApp (supportyourapp.com)
 - **Verified pricing:** (vendor answer, 23 October 2026; pricing page re-read 6 November 2026 shows no amounts) SupportYourApp does not publish prices: its pricing page says to get custom pricing.
-- **Honest take:** No public prices; quote-based, 3-month minimum.
-- **Best for:** startups and scale-ups in SaaS, fintech and eCommerce that want an outsourced, human-led support team, with or without AI, and can commit to a contract of at least 3 months
+- **Honest take:** No public prices; quote-based, no lock-in term (vendor, 24 Nov 2026).
+- **Best for:** startups and scale-ups in SaaS, fintech and eCommerce that want an outsourced, human-led support team, with or without AI, and can start with a seat-based or per-resolution engagement (the vendor says there is no lock-in term)
 - **Flags:** Per-seat pricing, Usage-metered
 - **Full review:** https://zerotouchsupport.com/supportyourapp-review.html
 

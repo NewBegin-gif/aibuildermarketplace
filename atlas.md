@@ -3404,7 +3404,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/samsara-review.html
 
 ## SaneBox (sanebox.com)
-- **Verified pricing:** (re-read 21 November 2026 from the plan data that sanebox.com/pricing embeds for its client-side price cards) Three plans, billed yearly or month to month.
+- **Verified pricing:** (re-read 21 and 24 November 2026 from the plan data that sanebox.com/pricing embeds for its client-side price cards) Three plans, billed yearly or month to month.
 - **Honest take:** You pay monthly to filter mail that modern clients increasingly sort for free, and the headline rate is billed yearly: month to month the Snack plan is $9.49, not $5.42.
 - **Best for:** heavy-email professionals drowning in a cluttered inbox who want AI triage that works across any mail client
 - **Full review:** https://officesoftwaremarketplace.com/sanebox-review.html

@@ -237,7 +237,7 @@
   "method": [
    "Used an existing Free account without adding a card",
    "Trained one monitored robot with Table Studio on a public practice site",
-   "Checked all 11 extracted prices against the live page with curl",
+   "Checked all 11 extracted prices against the live page",
    "Read the task history and billing pages, and stopped before checkout"
   ],
   "claims": [
@@ -369,7 +369,7 @@
     "what": "We trained one monitored robot on Browse AI's Free plan on 13 November 2026, using its AI-assisted Table Studio on a public practice shop, books.toscrape.com, category Travel. The account is ours, and our AI assistant did the clicking. We joined an existing Free account, so we did not see sign-up. We did not test export, integrations, support, checkout or cancellation.",
     "findings": [
      "The start screen offered 'Extract structured data' or 'Monitor for changes'. We chose monitoring. Three training methods followed: Table Studio (AI training, labelled Beta), Robot Studio (point and click) and a Chrome extension. We used Table Studio and installed nothing. No card was requested.",
-     "Table Studio trained itself and returned a table called Books List after about 35 seconds (our approximate timing, not a benchmark): 11 rows with position, title, price, availability, rating, URL and cover image. We checked the result against the live page with curl. All 11 prices matched, and the category holds exactly 11 books.",
+     "Table Studio trained itself and returned a table called Books List after about 35 seconds (our approximate timing, not a benchmark): 11 rows with position, title, price, availability, rating, URL and cover image. We checked the result against the live page. All 11 prices matched, and the category holds exactly 11 books.",
      "Save Robot asked how often to check for changes: hourly, daily, weekly or monthly. We chose daily and switched email alerts on data changes off. The robot saved and fetched fresh data from the live page. The Monitor tab then read 'Every day, No changes'.",
      "Training the robot was free. The first run, 11 rows, cost 1.10 credits in the task history. That fits the pricing line of 1 credit per task with 10 list items included plus 0.10 per extra item. At one run a day this list would use about 33 credits a month (our own arithmetic), inside the free allowance.",
      "The billing page showed 60 monthly credits on Free, for 2 websites, with 58.90 available after the first run. Our dossier had said 50, so we corrected it to what the app shows.",

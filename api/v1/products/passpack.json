@@ -61,16 +61,491 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "teams",
+     "name": "Teams",
+     "model": "per_unit",
+     "annual_year": 20,
+     "monthly_status": "unknown",
+     "max_units": 20,
+     "evidence": "Teams is $20 per user per year, paid annually, for teams of up to 20 people"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_month": 4.5,
+     "monthly_status": "unknown",
+     "evidence": "Business is $4.50 per user per month, paid annually"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is a custom quote"
+    }
+   ],
+   "notes": [
+    "Business has a monthly option, but the notes give no monthly price for it.",
+    "Live pricing source: https://passpack.com/plans/ (read 2026-11-17)."
+   ],
+   "rules_verified_at": "2026-11-24"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "passpack",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 1.67,
+      "billed": {
+       "amount": 20.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "teams": 1.67,
+       "business": 4.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 3.33,
+      "billed": {
+       "amount": 40.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "teams": 3.33,
+       "business": 9.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 5.0,
+      "billed": {
+       "amount": 60.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "teams": 5.0,
+       "business": 13.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 8.33,
+      "billed": {
+       "amount": 100.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "teams": 8.33,
+       "business": 22.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 16.67,
+      "billed": {
+       "amount": 200.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "teams": 16.67,
+       "business": 45.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 25.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "teams": 25.0,
+       "business": 67.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 33.33,
+      "billed": {
+       "amount": 400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "teams": 33.33,
+       "business": 90.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 112.5,
+      "billed": {
+       "amount": 1350.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "teams": "not_eligible",
+       "business": 112.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 225.0,
+      "billed": {
+       "amount": 2700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "teams": "not_eligible",
+       "business": 225.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 450.0,
+      "billed": {
+       "amount": 5400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "teams": "not_eligible",
+       "business": 450.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 20,
+      "to_units": 25,
+      "from_plan": "teams",
+      "to_plan": "business",
+      "from_plan_name": "Teams",
+      "to_plan_name": "Business"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "Try FREE for 28 Days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The account shows a Business plan with status Trial and no card was requested. The trial end date was not visible (the renewal date field was empty), so the 28 days were not confirmed.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/passpack-review.html#claim-vs-measured"
+      },
+      "plan": "Business trial; subscription page viewed, billing portal not opened",
+      "comparability": "Pricing page claim versus the status shown in the app; no end date or day counter was seen.",
+      "status": "not_testable",
+      "buying_consequence": "Confirm the trial end date and what happens at its end before relying on 28 days.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/passpack-review.html"
+     },
+     {
+      "claim": "Passpack for iPhone is on the App Store",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The app shows a banner for the iPhone app. No Android app was offered inside the app; whether one exists elsewhere was not checked.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/passpack-review.html#claim-vs-measured"
+      },
+      "plan": "Business trial; subscription page viewed, billing portal not opened",
+      "comparability": "In app banner only; no store pages were checked.",
+      "status": "confirmed",
+      "buying_consequence": "Teams on Android phones should check app availability separately.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/passpack-review.html"
+     },
+     {
+      "claim": "Verleng mijn contract automatisch met het aantal gebruikte licenties.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The Abonnement page says the contract renews automatically with the number of used licences, currently 1. The Stripe billing portal was not opened and no price, tax, renewal date or total was seen.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/passpack-review.html#claim-vs-measured"
+      },
+      "plan": "Business trial; subscription page viewed, billing portal not opened",
+      "comparability": "Subscription page wording versus an unopened billing portal; the stored cost rule has no matching checkout basis.",
+      "status": "not_testable",
+      "buying_consequence": "Check price, tax and renewal terms in the billing portal before the trial ends.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/passpack-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "passpack",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "teams": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "teams": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "teams": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "teams": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "teams": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "teams": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "teams": "price_unknown_on_billing",
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "teams": "not_eligible",
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "teams": "not_eligible",
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "teams": "not_eligible",
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "Try FREE for 28 Days",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The account shows a Business plan with status Trial and no card was requested. The trial end date was not visible (the renewal date field was empty), so the 28 days were not confirmed.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/passpack-review.html#claim-vs-measured"
+      },
+      "plan": "Business trial; subscription page viewed, billing portal not opened",
+      "comparability": "Pricing page claim versus the status shown in the app; no end date or day counter was seen.",
+      "status": "not_testable",
+      "buying_consequence": "Confirm the trial end date and what happens at its end before relying on 28 days.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/passpack-review.html"
+     },
+     {
+      "claim": "Passpack for iPhone is on the App Store",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The app shows a banner for the iPhone app. No Android app was offered inside the app; whether one exists elsewhere was not checked.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/passpack-review.html#claim-vs-measured"
+      },
+      "plan": "Business trial; subscription page viewed, billing portal not opened",
+      "comparability": "In app banner only; no store pages were checked.",
+      "status": "confirmed",
+      "buying_consequence": "Teams on Android phones should check app availability separately.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/passpack-review.html"
+     },
+     {
+      "claim": "Verleng mijn contract automatisch met het aantal gebruikte licenties.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-13",
+      "observed": "The Abonnement page says the contract renews automatically with the number of used licences, currently 1. The Stripe billing portal was not opened and no price, tax, renewal date or total was seen.",
+      "observed_on": "2026-11-13",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/passpack-review.html#claim-vs-measured"
+      },
+      "plan": "Business trial; subscription page viewed, billing portal not opened",
+      "comparability": "Subscription page wording versus an unopened billing portal; the stored cost rule has no matching checkout basis.",
+      "status": "not_testable",
+      "buying_consequence": "Check price, tax and renewal terms in the billing portal before the trial ends.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://officesoftwaremarketplace.com/passpack-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-13; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -409,9 +884,9 @@
    "status": "open"
   },
   {
-   "question_id": "passpack:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "passpack:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
    "status": "open"
   }
  ],

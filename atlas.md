@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 697 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-23.
+All 699 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-24.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -365,7 +365,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The free and low tiers are generous, but Lite and Plus prices climb with your subscriber count, so budget for growth.
 - **Best for:** small businesses and creators who want reliable, simple email marketing with a usable free tier
 - **Flags:** Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/aweber-review/
+- **Full review:** https://marketingandsalessoftware.com/aweber-review.html
 
 ## B12 (b12.io)
 - **Verified pricing:** (read 2026-11-07 on b12.io/pricing) B12 sells an AI website, store and web-app builder in three do-it-yourself plans, plus a separate "experts do it for you" tab that we did not price.
@@ -475,10 +475,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/bizee-review.html
 
 ## Blinq (blinq.me)
-- **Verified pricing:** (corrected 2026-11-21, read on blinq.me/pricing and in two Blinq help-centre articles updated 20 November 2026) Free forever for individuals: two cards, unlimited sharing, unlimited lead ca…
+- **Verified pricing:** (corrected 2026-11-21 and again 2026-11-24, read on blinq.me/pricing, Blinq's Event Lead Capture page and two Blinq help-centre articles) Free forever for individuals: two cards, unlimited …
 - **Honest take:** A truth about all digital cards: the wow factor works precisely because adoption is still low; the durable value is the CRM sync (contacts flowing automatically into your pipeline).
 - **Best for:** teams and field-sales orgs that want consistent, branded digital cards with contacts syncing straight into the CRM, and events teams via the capture add-on
-- **Flags:** Usage-metered, Add-ons extra, Annual commit, Free tier
+- **Flags:** Add-ons extra, Annual commit, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/blinq-review.html
 
 ## Blocky (effectify.io)
@@ -1840,7 +1840,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Opaque pricing and an implementation fee mean the real cost only surfaces in a sales call, and it's built for scaling mid-size companies, so it's heavy and expensive for a small team.
 - **Best for:** growing mid-size companies (roughly 50-500 staff) that have outgrown spreadsheets and want a modern, culture-focused HRIS
 - **Flags:** Hidden pricing, Per-seat pricing, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/hibob-review/
+- **Full review:** https://officesoftwaremarketplace.com/hibob-review.html
 
 ## HighLevel (gohighlevel.com)
 - **Verified pricing:** (read 2026-11-07 on gohighlevel.com/pricing) HighLevel sells its agency CRM and marketing-automation platform in three published plans plus a custom Enterprise plan.
@@ -1954,7 +1954,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** This is enterprise omnichannel supply-chain software, and the opaque, quote-based pricing signals the target customer: retail brands with real scale, not small stores.
 - **Best for:** retail brands and omnichannel sellers at real scale needing warehouse management plus algorithm-driven merchandising and inventory optimization
 - **Flags:** Hidden pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/increff-review/
+- **Full review:** https://officesoftwaremarketplace.com/increff-review.html
 
 ## IndieMade (indiemade.com)
 - **Verified pricing:** (read 2026-11-09 on indiemade.com/plans-pricing) IndieMade lists two plans, Essential and Plus, and every plan starts with a 30-day free trial that needs no credit card.
@@ -3600,6 +3600,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/shippo-review.html
 
+## ShipProtect ShippingProtection (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-24 on apps.shopify.com/shipping-protection, USD) One paid plan: $9.99 every 30 days with all features, after a free trial (10 days in our test; the listing mentions 10 and 30 …
+- **Honest take:** Shopify shipping protection box for the cart: percentage or fixed fee that you keep; one plan at $9.99 every 30 days.
+- **Best for:** Shopify stores that want to add their own shipping protection fee at the cart and keep the premium
+- **Full review:** https://marketingandsalessoftware.com/shipprotect-shippingprotection-review.html
+
 ## Shoeboxed (shoeboxed.com)
 - **Verified pricing:** (price re-verified 2026-10-11 against the vendor's own pricing page; prices unchanged since 31 Aug 2026, allowances and overage rates changed) Four plans, each quoted both yearly and monthl…
 - **Honest take:** Its unique trick is the Magic Envelope, where you literally mail a stuffed envelope of paper receipts and humans digitize them.
@@ -4531,7 +4537,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The pricing page reads like a feature ladder and behaves like a counter.
 - **Best for:** retailers and brands with physical stockists who want a Google Maps locator on their Shopify storefront without setting up a Maps API key or paying Google directly: the app handles the key on every tier, including the free one
 - **Flags:** Usage-metered, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/way-review/
+- **Full review:** https://marketingandsalessoftware.com/way-review.html
 
 ## Weave (getweave.com)
 - **Verified pricing:** Weave's plans page (getweave.com/plans, read 13 October 2026) is now a configurator: the base plan starts at $199 a month, and two pre-built bundles cost $149 a month each — Coordinate (onl…
@@ -4579,7 +4585,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The meter is honest and only half of it is printed: every phone number, call minute, text, form, chat, appointment, email, event and transaction is charged against a monthly credit.
 - **Best for:** agencies and lead-gen businesses that want every lead (calls, forms, chats) attributed to its source and campaign without enterprise-suite prices
 - **Flags:** Usage-metered, Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/whatconverts-review/
+- **Full review:** https://marketingandsalessoftware.com/whatconverts-review.html
 
 ## WhisperTranscribe (whispertranscribe.com)
 - **Verified pricing:** (read 2026-10-14 in a live browser on whispertranscribe.com/pricing and the terms of use then dated 28 October 2025; the terms and privacy policy were re-read on 25 October 2026 in their ve…
@@ -4613,6 +4619,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The name says checkout, but the $49 Essential plan does not include checkout upsells.
 - **Best for:** shopify merchants who want checkout-stage upsells, banners, trust badges and gift messages alongside post-purchase and thank-you page offers from a single app, and whose order volume already makes $99 a month a rounding error
 - **Full review:** https://aibuildermarketplace.com/b2b/wiz-checkout-upsell-review/
+
+## Wiz Email App (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-24 on apps.shopify.com/emailwiz, USD) Free plan: up to 500 active contacts.
+- **Honest take:** Shopify email app where AI drafts abandoned cart, welcome and winback flows; free up to 500 contacts, Pro from $29.99 a month.
+- **Best for:** small Shopify stores that want AI-drafted welcome, abandoned cart and winback emails with a free start
+- **Flags:** Free tier
+- **Full review:** https://marketingandsalessoftware.com/wiz-email-app-review.html
 
 ## Wondershare PDFelement (pdf.wondershare.com)
 - **Verified pricing:** (read 2026-11-18 in a browser on pdf.wondershare.com/store/windows-individuals.html, USD, Windows, individuals, single-platform tab, under a Black Friday banner 'UP TO 84% OFF') All three p…

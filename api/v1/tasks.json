@@ -3263,6 +3263,58 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "ShipProtect ShippingProtection",
+   "product_id": "shipprotect-shippingprotection",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 on a Shopify development store, with the interface in English. We installed ShipProtect, approved its test charge (no card, not billed), set the protection box up in the theme editor and ticked it on a cart. We placed no order.",
+   "findings": [
+    "Install: the app asked to approve a subscription with a 10 day free trial and $9.99 every 30 days; on a development store this was a test charge that is not billed.",
+    "Default rule: 5% of the cart, minimum charge $5, steps of $2, maximum $201. On a $3,128.30 cart the box offered $157.00, and ticking it moved the subtotal to $3,285.30. The box was not ticked by default.",
+    "Terms link: the tooltip links to google.com until you set your own terms page.",
+    "Other cart drawer: the box did not show inside the cart drawer of another cart app in our store. The app's FAQ says it works only with Monster Cart Upsells as a drawer.",
+    "Removal: uninstalling left a 'Shipping Protection' product with 100 price variants in the catalogue, which we deleted by hand."
+   ],
+   "not_tested": [
+    "a real order through checkout with protection (the store is password protected and we placed no order)",
+    "the Button layout (Beta) and the checkout protection rule",
+    "a claim or refund after a lost parcel, which the app does not handle",
+    "the storefront outside the theme editor preview"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Wiz Email App",
+   "product_id": "wiz-email-app",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 21 November 2026 on a Shopify development store, with the interface in English. We installed Wiz, filled in the brand settings, let the AI draft email flows and opened the welcome email preview. We sent no email.",
+   "findings": [
+    "Install: the permission screen lists customer data, staff data and store data (customers, products, orders, discounts, analytics, online store).",
+    "Flows: about five minutes after install the AI had drafted five flows with 14 emails and a popup from our store branding: welcome 3, abandoned checkout 3, browse 2, post-purchase 3 and winback 3.",
+    "Preview: the flows start disabled, and the welcome email preview used our store name and products.",
+    "Plan: on a development store the app showed a free plan, with sending limited."
+   ],
+   "not_tested": [
+    "sending a real email and how it lands in inboxes",
+    "sender domain verification",
+    "paid plans and how the price grows with contacts"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "MailerLite",
    "product_id": "mailerlite",
    "run_date": "22 November 2026",

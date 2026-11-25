@@ -17,13 +17,13 @@
   "from_price_usd_month": 49.99,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-11-15 and again 2026-11-22 by plain fetch of gethealthie.com/healthie-pricing, tier prices unchanged; yearly billing saves 10%) The public ladder now starts at Essentials: $49.99 a month billed monthly or $45 billed yearly, Plus $129.99 or $115, and Group $149.99+ or $135+ per month, with Enterprise above that. On Plus the yearly price works out at about 11.5% off rather than 10%. The Core tier ($19.99, or $18 yearly, for up to 10 active clients) that the page showed from August to 28 September 2026, and that our 30 October 2026 trial still listed in the app, was not on the pricing page on 15 November 2026; whether it can still be chosen is not confirmed. Two costs sit outside the tier and matter for a practice: each added team member on Group is $50 per clinician per month, and the ClaimMD billing integration starts at $30 a month. The page offers a 14-day trial of the Plus plan with no credit card required, lists DoseSpot ePrescribing at $40 per clinician a month with no setup fee, card payments at 2.9% + $0.30, free outbound fax with $10 a month for a dedicated inbound line, and API access under Enterprise. It is not consistent on one add-on: the plan table puts ClaimMD at from $30 a month, while the integrations section describes it as from $25 a month plus a $50-$100 setup fee. Two add-ons the plan table marks separately on 22 November 2026: AI charting, Healthie's own tool that turns in-person, phone and Zoom sessions into chart notes and transcripts, is an add-on on Plus, Group and Enterprise with 'Additional fees apply' and no amount shown, and controlled-substance ePrescribing (EPCS) is an add-on 'subject to review'. The same page also says the plans 'don't require add-ons, credits, or fees', so ask for the AI charting price before you count on it.",
-  "verified_at": "2026-11-22",
+  "notes": "(re-verified 2026-11-15, 2026-11-22 and 2026-11-25 by plain fetch of gethealthie.com/healthie-pricing, tier prices unchanged; yearly billing saves 10%) The public ladder now starts at Essentials: $49.99 a month billed monthly or $45 billed yearly, Plus $129.99 or $115, and Group $149.99+ or $135+ per month, with Enterprise above that. On Plus the yearly price works out at about 11.5% off rather than 10%. The Core tier ($19.99, or $18 yearly, for up to 10 active clients) that the page showed from August to 28 September 2026, and that our 30 October 2026 trial still listed in the app, was not on the pricing page on 15 November 2026; whether it can still be chosen is not confirmed. Two costs sit outside the tier and matter for a practice: each added team member on Group is $50 per clinician per month, and the ClaimMD billing integration starts at $30 a month. The page offers a 14-day trial of the Plus plan with no credit card required, lists DoseSpot ePrescribing at $40 per clinician a month with no setup fee, card payments at 2.9% + $0.30, free outbound fax with $10 a month for a dedicated inbound line, and API access under Enterprise. On 22 November 2026 the page was not consistent on ClaimMD: the plan table said from $30 a month and the integrations section from $25 a month plus a $50-$100 setup fee. On 25 November 2026 every ClaimMD price on the page read “Starting at $30/mo” and no setup fee was mentioned. Two add-ons the plan table marks separately on 22 November 2026: AI charting, Healthie's own tool that turns in-person, phone and Zoom sessions into chart notes and transcripts, is an add-on on Plus, Group and Enterprise with 'Additional fees apply' and no amount shown, and controlled-substance ePrescribing (EPCS) is an add-on 'subject to review'. The same page also says the plans 'don't require add-ons, credits, or fees', so ask for the AI charting price before you count on it.",
+  "verified_at": "2026-11-25",
   "source_url": null,
   "schema_offer": {
    "price": 49.99,
    "currency": "USD",
-   "description": "Essentials, billed monthly; $45 is the yearly rate. Read on the vendor's own pricing page on 2026-11-22.",
+   "description": "Essentials, billed monthly; $45 is the yearly rate. Read on the vendor's own pricing page on 2026-11-25.",
    "page": "https://aibuildermarketplace.com/b2b/healthie-review/"
   },
   "source_quotes": null,
@@ -37,14 +37,14 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "The same page also says the plans 'don't require add-ons, credits, or fees', so ask for the AI charting price before you count on it.",
-   "verified_at": "2026-11-22",
+   "verified_at": "2026-11-25",
    "source_url": null
   },
   {
    "id": "addons_extra",
    "label": "Key features are paid add-ons",
-   "evidence": "It is not consistent on one add-on: the plan table puts ClaimMD at from $30 a month, while the integrations section describes it as from $25 a month plus a $50-$100 setup fee.",
-   "verified_at": "2026-11-22",
+   "evidence": "Two add-ons the plan table marks separately on 22 November 2026: AI charting, Healthie's own tool that turns in-person, phone and Zoom sessions into chart notes and transcripts, is an add-on on Plus, Group and Enterprise with 'Additional fees apply' and no amount shown, and controlled-substance ePrescribing (EPCS) is an add-on 'subject to review'.",
+   "verified_at": "2026-11-25",
    "source_url": null
   }
  ],
@@ -73,16 +73,484 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "practice",
+   "axis": "companies",
+   "plans": [
+    {
+     "id": "essentials",
+     "name": "Essentials",
+     "model": "per_unit",
+     "annual_month": 45,
+     "monthly": 49.99,
+     "evidence": "Essentials: $49.99 a month billed monthly or $45 billed yearly, Plus $129.99 or $115, and Group $149.99+ or $135+ per month"
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "per_unit",
+     "annual_month": 115,
+     "monthly": 129.99,
+     "evidence": "Essentials: $49.99 a month billed monthly or $45 billed yearly, Plus $129.99 or $115, and Group $149.99+ or $135+ per month"
+    },
+    {
+     "id": "group",
+     "name": "Group (one clinician, before added team members)",
+     "model": "per_unit",
+     "annual_month": 135,
+     "monthly": 149.99,
+     "evidence": "Essentials: $49.99 a month billed monthly or $45 billed yearly, Plus $129.99 or $115, and Group $149.99+ or $135+ per month"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "with Enterprise above that"
+    }
+   ],
+   "notes": [
+    "Group is shown as a 'from' price ($149.99+ or $135+), so its total is a floor.",
+    "Priced per practice here; the notes do not say how many clinicians Essentials and Plus allow."
+   ],
+   "not_computable": [
+    "Each added team member on Group is $50 per clinician per month; the billing term is not stated.",
+    "Add-ons: ClaimMD billing integration from $30 a month, DoseSpot ePrescribing $40 per clinician a month, card payments 2.9% + $0.30, a dedicated inbound fax line $10 a month, and AI charting at an unstated fee.",
+    "The Core tier seen until 28 September 2026 is no longer on the pricing page."
+   ],
+   "rules_verified_at": "2026-11-25"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "healthie",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "practice",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 45.0,
+      "billed": {
+       "amount": 540.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 45.0,
+       "plus": 115.0,
+       "group": 135.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 90.0,
+      "billed": {
+       "amount": 1080.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 90.0,
+       "plus": 230.0,
+       "group": 270.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 225.0,
+      "billed": {
+       "amount": 2700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 225.0,
+       "plus": 575.0,
+       "group": 675.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 450.0,
+      "billed": {
+       "amount": 5400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 450.0,
+       "plus": 1150.0,
+       "group": 1350.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 900.0,
+      "billed": {
+       "amount": 10800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 900.0,
+       "plus": 2300.0,
+       "group": 2700.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 2250.0,
+      "billed": {
+       "amount": 27000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 2250.0,
+       "plus": 5750.0,
+       "group": 6750.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 4500.0,
+      "billed": {
+       "amount": 54000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 4500.0,
+       "plus": 11500.0,
+       "group": 13500.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 6750.0,
+      "billed": {
+       "amount": 81000.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 6750.0,
+       "plus": 17250.0,
+       "group": 20250.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Each added team member on Group is $50 per clinician per month; the billing term is not stated.",
+     "Add-ons: ClaimMD billing integration from $30 a month, DoseSpot ePrescribing $40 per clinician a month, card payments 2.9% + $0.30, a dedicated inbound fax line $10 a month, and AI charting at an unstated fee.",
+     "The Core tier seen until 28 September 2026 is no longer on the pricing page."
+    ],
+    "measured": [
+     {
+      "claim": "Plus plan for 14 days",
+      "claim_source": "https://www.gethealthie.com/pricing",
+      "claim_read_on": "2026-10-29",
+      "observed": "The banner confirms fourteen trial days, but the exact Plus tier in the claim was not independently established in the account.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not independently established",
+      "comparability": "Compared on the provider trial for one clinician; which plan tier the trial runs on was not shown.",
+      "status": "not_testable",
+      "buying_consequence": "Trial duration is visible; Plus feature scope remains unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://aibuildermarketplace.com/b2b/healthie-review/"
+     },
+     {
+      "claim": "Plus plan for 14 days",
+      "claim_source": "https://www.gethealthie.com/pricing",
+      "claim_read_on": "2026-10-29",
+      "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not independently established",
+      "comparability": "Same trial for one clinician; the monthly plan prices came from the in-app plan page.",
+      "status": "not_testable",
+      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://aibuildermarketplace.com/b2b/healthie-review/"
+     },
+     {
+      "claim": "Your trial ends in 14 days.",
+      "claim_source": "https://secure.gethealthie.com/",
+      "claim_read_on": "2026-10-30",
+      "observed": "The account banner states fourteen trial days; the tested tier is not independently verified.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not independently established",
+      "comparability": "The 14-day countdown banner on the home screen on signup day.",
+      "status": "confirmed",
+      "buying_consequence": "Duration matches the public claim; the Plus-plan scope remains unknown.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/healthie-review/"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "healthie",
+    "currency": "USD",
+    "axis": "companies",
+    "unit": "practice",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 49.99,
+      "billed": {
+       "amount": 49.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 49.99,
+       "plus": 129.99,
+       "group": 149.99,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 99.98,
+      "billed": {
+       "amount": 99.98,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 99.98,
+       "plus": 259.98,
+       "group": 299.98,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 249.95,
+      "billed": {
+       "amount": 249.95,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 249.95,
+       "plus": 649.95,
+       "group": 749.95,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 499.9,
+      "billed": {
+       "amount": 499.9,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 499.9,
+       "plus": 1299.9,
+       "group": 1499.9,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 999.8,
+      "billed": {
+       "amount": 999.8,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 999.8,
+       "plus": 2599.8,
+       "group": 2999.8,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 2499.5,
+      "billed": {
+       "amount": 2499.5,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 2499.5,
+       "plus": 6499.5,
+       "group": 7499.5,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 4999.0,
+      "billed": {
+       "amount": 4999.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 4999.0,
+       "plus": 12999.0,
+       "group": 14999.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 150,
+      "cheapest_plan": "essentials",
+      "cheapest_plan_name": "Essentials",
+      "total_month": 7498.5,
+      "billed": {
+       "amount": 7498.5,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "essentials": 7498.5,
+       "plus": 19498.5,
+       "group": 22498.5,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Each added team member on Group is $50 per clinician per month; the billing term is not stated.",
+     "Add-ons: ClaimMD billing integration from $30 a month, DoseSpot ePrescribing $40 per clinician a month, card payments 2.9% + $0.30, a dedicated inbound fax line $10 a month, and AI charting at an unstated fee.",
+     "The Core tier seen until 28 September 2026 is no longer on the pricing page."
+    ],
+    "measured": [
+     {
+      "claim": "Plus plan for 14 days",
+      "claim_source": "https://www.gethealthie.com/pricing",
+      "claim_read_on": "2026-10-29",
+      "observed": "The banner confirms fourteen trial days, but the exact Plus tier in the claim was not independently established in the account.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not independently established",
+      "comparability": "Compared on the provider trial for one clinician; which plan tier the trial runs on was not shown.",
+      "status": "not_testable",
+      "buying_consequence": "Trial duration is visible; Plus feature scope remains unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://aibuildermarketplace.com/b2b/healthie-review/"
+     },
+     {
+      "claim": "Plus plan for 14 days",
+      "claim_source": "https://www.gethealthie.com/pricing",
+      "claim_read_on": "2026-10-29",
+      "observed": "No checkout opened. The plan overview or free editing route does not establish a tax-inclusive payable total.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not independently established",
+      "comparability": "Same trial for one clinician; the monthly plan prices came from the in-app plan page.",
+      "status": "not_testable",
+      "buying_consequence": "Final currency, tax, term, seats, fees and payment total remain unverified.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://aibuildermarketplace.com/b2b/healthie-review/"
+     },
+     {
+      "claim": "Your trial ends in 14 days.",
+      "claim_source": "https://secure.gethealthie.com/",
+      "claim_read_on": "2026-10-30",
+      "observed": "The account banner states fourteen trial days; the tested tier is not independently verified.",
+      "observed_on": "2026-10-30",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://aibuildermarketplace.com/b2b/healthie-review/#claim-vs-measured"
+      },
+      "plan": "14-day trial; tier not independently established",
+      "comparability": "The 14-day countdown banner on the home screen on signup day.",
+      "status": "confirmed",
+      "buying_consequence": "Duration matches the public claim; the Plus-plan scope remains unknown.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://aibuildermarketplace.com/b2b/healthie-review/"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-10-30; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -252,7 +720,7 @@
    "window_days": 14,
    "time_basis": "signup_date_midnight_Europe_Amsterdam",
    "status": "complete",
-   "observed_at": "2026-11-24T02:18:03.761372Z",
+   "observed_at": "2026-11-25T02:18:03.502525Z",
    "counts": {
     "transactional": 0,
     "onboarding_tips": 1,
@@ -417,7 +885,7 @@
    "marketing_emails_14d": {
     "value": "not_tested",
     "basis": "No complete unambiguous 14-day inbox observation available.",
-    "observed_on": "2026-11-24",
+    "observed_on": "2026-11-25",
     "evidence_url": null
    }
   }
@@ -560,9 +1028,21 @@
    "status": "open"
   },
   {
-   "question_id": "healthie:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "healthie:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Each added team member on Group is $50 per clinician per month; the billing term is not stated. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "healthie:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Add-ons: ClaimMD billing integration from $30 a month, DoseSpot ePrescribing $40 per clinician a month, card payments 2.9% + $0.30, a dedicated inbound fax line $10 a month, and AI charting at an unstated fee. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "healthie:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: The Core tier seen until 28 September 2026 is no longer on the pricing page. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

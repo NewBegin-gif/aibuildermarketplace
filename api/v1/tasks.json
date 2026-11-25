@@ -3263,6 +3263,60 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "KeepCart",
+   "product_id": "keepcart",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 21 November 2026 on a Shopify development store, with the interface in English. We installed KeepCart, stayed on the free plan and made a protected link for a 10% test code. We did not approve the paid plan and did not place an order.",
+   "findings": [
+    "Install: the permission screen lists customer data (sensitive data, device and activity data), staff data and store data (customers, orders, discounts, store analytics, Online Store).",
+    "Protected link: about two minutes after install, on the free plan, a protected link for our test code TESTLEAK10 (10%) showed as Active. The app created the discount itself. The link needs the theme extension switched on, and we did not switch it on.",
+    "Free plan: one coupon leak scan a month, no coupon blocker. The first scan was still running when we stopped, and the app said it could take 10 to 20 minutes.",
+    "Paid plan: a non Plus store was offered only Blocking Basic at $49 a month with a 30 day trial. The Shopify approval screen showed $49.00 due on 21 December and no note that it was a test charge, so we did not approve it.",
+    "Cancelling that screen gave the message 'The shop cannot accept the provided charge', and the app then offered 'Continue with free plan', which we took."
+   ],
+   "not_tested": [
+    "whether a leaked code is really refused when it is used outside the protected link",
+    "the coupon blocker for browser extensions, leak alerts and code removal, which belong to the paid plans",
+    "the scan result",
+    "the Plus only plans Starter, Growth, Pro and Max"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Section Store",
+   "product_id": "section-store",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 on a Shopify development store, with the interface in English. We installed Section Store, skipped the Plus trial, added a free FAQ section to the theme and placed it on the home page in the theme editor. We did not approve the Plus plan and bought no paid section.",
+   "findings": [
+    "Install: the permission screen asks for staff data (store owner name, email, phone and address) and to edit the Online Store theme.",
+    "Free sections: the library filtered to Free showed 51 sections. Premium sections are sold one by one, for example $9 for a countdown timer bar.",
+    "First result: about two minutes after install the free FAQ #1 section was on our home page in the theme editor. No code was needed, but we had to place the section by hand in the editor, and the sample questions are generic and need rewriting.",
+    "Plus: the plan screen showed Section Store Plus at $15 a month, shown against $20, with a 14 day trial. The Shopify approval screen showed $15.00 due on 6 December and no note that it was a test charge, so we did not approve it.",
+    "Listing against app: the listing says 100+ sections, and the app showed 151. The install screen asked for less access than the listing names."
+   ],
+   "not_tested": [
+    "the Plus features: cart drawer, bundles, AI Pages, upsells and A/B tests",
+    "buying a single premium section",
+    "the section on the live storefront, because the test store is password protected",
+    "the other 50 free sections"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "ShipProtect ShippingProtection",
    "product_id": "shipprotect-shippingprotection",
    "run_date": "22 November 2026",
@@ -30850,7 +30904,7 @@
    "not_tested": [
     "Connecting an email, chat or phone channel, and emailing a customer",
     "AI Agent, AI summary and Write with AI",
-    "What happens after the 15-day trial (a move to a free plan or a block)",
+    "What happens when the trial expires. The public Freshdesk FAQ, read 25 Nov 2026, says the account is suspended if you do not choose a paid plan after the 14-day Enterprise trial.",
     "Automations, SLA settings and reporting",
     "Changing the time zone, and whether SLA deadlines move with it"
    ],
@@ -38673,7 +38727,7 @@
      "status": "not_comparable",
      "buying_consequence": "Budget AI use on the published 1,000 credits a month; treat the higher first balance as unconfirmed until it survives a reset.",
      "buyer_direction": null,
-     "claim_changed_on": null
+     "claim_changed_on": "2026-11-25"
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
@@ -47686,9 +47740,9 @@
    "product_id": "leadpages",
    "run_date": "2026-11-19",
    "session_type": "hands_on",
-   "what": "We created the account and our AI assistant ran the test in our browser. On 19 November 2026 the session tested Leadpages in the 7-day Business trial that we started through Paddle. Piper built a draft landing page from one prompt in 61.4 seconds for 850 credits. The plans have changed: Business at EUR 49 replaces Pro, and the pricing page lists unlimited traffic only from Grow. Cancelling took 4 steps with a 50% offer whose exit is a text link.",
+   "what": "We created the account and our AI assistant ran the test in our browser. On 19 November 2026 the session tested Leadpages in the 7-day Business trial that we started through Paddle. Piper built a draft landing page from one prompt in 61.4 seconds for 850 credits. The plans have changed: our account showed Business at EUR 49 and did not show Pro, and the pricing page lists unlimited traffic only from Grow. Cancelling took 4 steps with a 50% offer whose exit is a text link.",
    "findings": [
-    "Text we checked: \"Plans starting at $49/mo to build and publish. Testing & Optimization features starting at just $99/mo\". What we saw: The billing page offers Business EUR 49, Grow EUR 115, Optimize EUR 229 and Scale EUR 399 a month; the dossier still lists Pro at $29 and Grow at $99, and there is no Pro plan any more.",
+    "Text we checked: \"Plans starting at $49/mo to build and publish. Testing & Optimization features starting at just $99/mo\". What we saw: The billing page offers Business EUR 49, Grow EUR 115, Optimize EUR 229 and Scale EUR 399 a month; the dossier still lists Pro at $29 and Grow at $99, and Pro was absent from our account's billing screen. The public pricing page lists Pro separately.",
     "Text we checked: \"How about 50% off your subscription for 3 months?\". What we saw: The cancel flow has 4 steps; the 50% offer has Take offer as the main button and the exit as a text link. After Confirm cancellation Billing showed Subscription canceled."
    ],
    "not_tested": [

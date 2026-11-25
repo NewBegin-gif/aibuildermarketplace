@@ -809,7 +809,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/circle-review.html
 
 ## CiteRoute (citeroute.com)
-- **Verified pricing:** (read 2026-11-18 on citeroute.com/pricing and the home page and in our own test that day; earlier: read 2026-10-13 in a live browser on those pages and the terms of service dated 10 Septemb…
+- **Verified pricing:** (re-read 2026-11-25 on citeroute.com/pricing with the same four plans, prices, limits and API rates; read 2026-11-18 on citeroute.com/pricing and the home page and in our own test that day;…
 - **Honest take:** The GEO score is CiteRoute's own model and its terms rule out any citation guarantee; real AI-crawler data starts at $79 a month for one site.
 - **Best for:** founders and marketers who want to see whether AI crawlers visit their site and how ready their pages look for AI answers, and agencies that want white-label GEO reports for a handful of client sites
 - **Flags:** Usage-metered
@@ -1495,7 +1495,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/fbtrack-review.html
 
 ## FeedbackGate (feedbackgate.com)
-- **Verified pricing:** (read 2026-10-14 in a live browser on feedbackgate.com/pricing, the home page, the about page and the terms of service dated 1 January 2025) Three monthly plans, each with a 14-day free tri…
+- **Verified pricing:** (re-read 2026-11-25 with plain HTTP and the page's own pricing feed (feedbackgate.com/api/v1/system/pricing), which returns $69, $149 and $399 for Starter, Growth and Agency; the static pag…
 - **Honest take:** Its rating gate routes happy customers to Google, which Google's policy on selectively soliciting reviews forbids; overage rates are unpublished.
 - **Best for:** small local businesses that want automated email and SMS review requests with alerts on negative feedback, and that will offer every customer the public review link
 - **Flags:** Usage-metered, Annual commit
@@ -3031,7 +3031,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/post-purchase-upsell-hero-review.html
 
 ## PostOnce (postonce.app)
-- **Verified pricing:** (read 2026-10-12 in a live browser on postonce.app and postonce.app/pricing, monthly and yearly views, and in the terms at postonce.app/terms) Two plans, priced in euros including VAT, with…
+- **Verified pricing:** (re-read 2026-11-25 on postonce.app/pricing.md, postonce.app/llms.txt, postonce.app/llms-full.txt and the terms: both plans, prices and limits unchanged; earlier, read 2026-10-12 in a live …
 - **Honest take:** No trial and no refunds: billing starts when you subscribe, and the EU withdrawal right lapses once you use the service.
 - **Best for:** creators, small businesses and small agencies in Europe that post the same content to Instagram, TikTok, YouTube, LinkedIn and other networks and want one flat price without per-channel fees
 - **Flags:** Annual commit
@@ -4356,7 +4356,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/updf-review.html
 
 ## Upsell & Cross Sell - AW (csell.io)
-- **Verified pricing:** (read 2026-10-11 on the Shopify App Store listing apps.shopify.com/cross-sell and on the developer's own pricing page csell.io/pricing, USD; the listing says all charges are billed in USD a…
+- **Verified pricing:** (re-read 2026-11-25 on csell.io/pricing and the Shopify listing, unchanged for the first four plans; read 2026-10-11 on the Shopify App Store listing apps.shopify.com/cross-sell and on the …
 - **Honest take:** Priced by recommendation clicks: 50 a month free, 2,500 on the $29.99 plan, and all 8 placements only from $49.99.
 - **Best for:** Shopify stores that want related-product, upsell and frequently-bought-together recommendations on product pages and cart, with hand-picked control, at a fixed monthly price for a known click volume
 - **Flags:** Free tier
@@ -4642,9 +4642,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/wiz-email-app-review.html
 
 ## Wondershare PDFelement (pdf.wondershare.com)
-- **Verified pricing:** (read 2026-11-18 in a browser on pdf.wondershare.com/store/windows-individuals.html, USD, Windows, individuals, single-platform tab, under a Black Friday banner 'UP TO 84% OFF') All three p…
+- **Verified pricing:** (re-read 2026-11-25 with the same sale prices; read 2026-11-18 in a browser on pdf.wondershare.com/store/windows-individuals.html, USD, Windows, individuals, single-platform tab, under a Bl…
 - **Honest take:** Black Friday sale prices; 50 AI uses and 3 eSign requests per paid plan.
 - **Best for:** individuals and small offices on Windows or Mac who want a full PDF editor with OCR, forms and conversion, and prefer a one-time licence over an Acrobat subscription
+- **Flags:** Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/wondershare-pdfelement-review.html
 
 ## Woodpecker (woodpecker.co)

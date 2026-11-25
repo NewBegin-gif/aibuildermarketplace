@@ -17,13 +17,13 @@
   "from_price_usd_month": 19.99,
   "plans": null,
   "plans_source": null,
-  "notes": "(read 2026-10-14 in a live browser on whispertranscribe.com/pricing and the terms of use then dated 28 October 2025; the terms and privacy policy were re-read on 25 October 2026 in their versions of 20 and 19 October 2026) Two products. Transcription plans, priced by minutes of uploaded audio a month, with unlimited users: Starter $19.99 a month billed annually ($240 a year) or $39.99 monthly for 320 minutes; Pro $29.99 annually ($360) or $59.99 monthly for 800 minutes; Grow $69.99 ($840) or $139.99 for 2,500 minutes; Scale $139.99 ($1,680) or $279.99 for 6,000 minutes. The annual toggle is labelled save 50%. Each plan includes one free Meeting Assistant seat, files up to 10 hours long (5 GB on Starter, 10 GB above), AI clips, podcast search, import from web links, exports to Word, PDF, TXT, SRT, VTT, CSV, XLSX, JSON and ELAN, and priority support on Grow and Scale. Pay-as-you-go minutes start at $8 an hour, bought in the app, and never expire. The Meeting Assistant, which captures calls without a bot joining, is $16 a seat a month billed annually ($192) or $20 monthly, with a 7-day trial. The terms of 20 October 2026 say every new user gets 60 free credits on signup, that a cancelled account stays active on the free tier, and that fees and unused credits are non-refundable apart from the EU/UK withdrawal right, billing errors, duplicate charges and service failure. Re-read on 25 October 2026 with a plain fetch: all transcription and Meeting Assistant prices unchanged. The Meeting Assistant toggle says save 20%, not the 50% of the transcription plans: $192 a year against $240 for twelve monthly payments. The plan table lists support as Standard (24h) on Starter and Pro and Priority on Grow and Scale, and extra team users on the transcription plans as free.",
-  "verified_at": "2026-10-25",
+  "notes": "(re-read 2026-11-25 on whispertranscribe.com/pricing with its FAQ and the terms of 20 October 2026: all transcription, pay-as-you-go and Meeting Assistant prices unchanged; read 2026-10-14 in a live browser on whispertranscribe.com/pricing and the terms of use then dated 28 October 2025; the terms and privacy policy were re-read on 25 October 2026 in their versions of 20 and 19 October 2026) Two products. Transcription plans, priced by minutes of uploaded audio a month, with unlimited users: Starter $19.99 a month billed annually ($240 a year) or $39.99 monthly for 320 minutes; Pro $29.99 annually ($360) or $59.99 monthly for 800 minutes; Grow $69.99 ($840) or $139.99 for 2,500 minutes; Scale $139.99 ($1,680) or $279.99 for 6,000 minutes. The annual toggle is labelled save 50%. Each plan includes one free Meeting Assistant seat, files up to 10 hours long (5 GB on Starter, 10 GB above), AI clips, podcast search, import from web links, exports to Word, PDF, TXT, SRT, VTT, CSV, XLSX, JSON and ELAN, and priority support on Grow and Scale. Pay-as-you-go minutes start at $8 an hour, bought in the app, and never expire. The Meeting Assistant, which captures calls without a bot joining, is $16 a seat a month billed annually ($192) or $20 monthly, with a 7-day trial. The terms of 20 October 2026 say every new user gets 60 free credits on signup, that a cancelled account stays active on the free tier, and that fees and unused credits are non-refundable apart from the EU/UK withdrawal right, billing errors, duplicate charges and service failure. Re-read on 25 October 2026 with a plain fetch: all transcription and Meeting Assistant prices unchanged. The Meeting Assistant toggle says save 20%, not the 50% of the transcription plans: $192 a year against $240 for twelve monthly payments. The plan table lists support as Standard (24h) on Starter and Pro and Priority on Grow and Scale, and extra team users on the transcription plans as free.",
+  "verified_at": "2026-11-25",
   "source_url": "https://www.whispertranscribe.com/pricing",
   "schema_offer": {
    "price": 19.99,
    "currency": "USD",
-   "description": "Starter, per month billed annually ($240 a year) for 320 transcription minutes a month; $39.99 billed monthly; Pro $29.99/$59.99 for 800 min, Grow $69.99/$139.99 for 2,500 min, Scale $139.99/$279.99 for 6,000 min; pay-as-you-go from $8 an hour; Meeting Assistant $16 a seat a month yearly or $20 monthly; unlimited users on transcription plans. Read on the vendor's own pricing page on 2026-10-25.",
+   "description": "Starter, per month billed annually ($240 a year) for 320 transcription minutes a month; $39.99 billed monthly; Pro $29.99/$59.99 for 800 min, Grow $69.99/$139.99 for 2,500 min, Scale $139.99/$279.99 for 6,000 min; pay-as-you-go from $8 an hour; Meeting Assistant $16 a seat a month yearly or $20 monthly; unlimited users on transcription plans. Read on the vendor's own pricing page on 2026-11-25.",
    "page": "https://aibuildermarketplace.com/b2b/whispertranscribe-review/"
   },
   "source_quotes": [
@@ -59,7 +59,7 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "The terms of 20 October 2026 say every new user gets 60 free credits on signup, that a cancelled account stays active on the free tier, and that fees and unused credits are non-refundable apart from the EU/UK withdrawal right, billing errors, duplicate charges and service failure.",
-   "verified_at": "2026-10-25",
+   "verified_at": "2026-11-25",
    "source_url": "https://www.whispertranscribe.com/pricing"
   }
  ],
@@ -88,16 +88,439 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "monthly": 39.99,
+     "annual_month": 19.99,
+     "evidence": "Starter $19.99 a month billed annually ($240 a year) or $39.99 monthly for 320 minutes"
+    },
+    {
+     "id": "pro",
+     "name": "Pro",
+     "model": "flat",
+     "monthly": 59.99,
+     "annual_month": 29.99,
+     "evidence": "Pro $29.99 annually ($360) or $59.99 monthly for 800 minutes"
+    },
+    {
+     "id": "grow",
+     "name": "Grow",
+     "model": "flat",
+     "monthly": 139.99,
+     "annual_month": 69.99,
+     "evidence": "Grow $69.99 ($840) or $139.99 for 2,500 minutes"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "flat",
+     "monthly": 279.99,
+     "annual_month": 139.99,
+     "evidence": "Scale $139.99 ($1,680) or $279.99 for 6,000 minutes"
+    }
+   ],
+   "notes": [
+    "Transcription plans are priced by minutes of uploaded audio a month 'with unlimited users', so team size does not change the price; the minute buckets (320, 800, 2,500, 6,000) are not counted by the engine.",
+    "Each plan includes one free Meeting Assistant seat."
+   ],
+   "not_computable": [
+    {
+     "text": "Extra Meeting Assistant seats at $16 a seat a month billed annually or $20 monthly are an add-on per person who wants live meeting capture.",
+     "affects_cost": true
+    },
+    {
+     "text": "Pay-as-you-go minutes from $8 an hour depend on usage.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-11-25"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "whispertranscribe",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.99,
+       "pro": 29.99,
+       "grow": 69.99,
+       "scale": 139.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.99,
+       "pro": 29.99,
+       "grow": 69.99,
+       "scale": 139.99
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.99,
+       "pro": 29.99,
+       "grow": 69.99,
+       "scale": 139.99
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.99,
+       "pro": 29.99,
+       "grow": 69.99,
+       "scale": 139.99
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.99,
+       "pro": 29.99,
+       "grow": 69.99,
+       "scale": 139.99
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.99,
+       "pro": 29.99,
+       "grow": 69.99,
+       "scale": 139.99
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.99,
+       "pro": 29.99,
+       "grow": 69.99,
+       "scale": 139.99
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.99,
+       "pro": 29.99,
+       "grow": 69.99,
+       "scale": 139.99
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.99,
+       "pro": 29.99,
+       "grow": 69.99,
+       "scale": 139.99
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.99,
+      "billed": {
+       "amount": 239.88,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.99,
+       "pro": 29.99,
+       "grow": 69.99,
+       "scale": 139.99
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Extra Meeting Assistant seats at $16 a seat a month billed annually or $20 monthly are an add-on per person who wants live meeting capture.",
+     "Pay-as-you-go minutes from $8 an hour depend on usage."
+    ]
+   },
+   "monthly": {
+    "product_id": "whispertranscribe",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.99,
+       "pro": 59.99,
+       "grow": 139.99,
+       "scale": 279.99
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.99,
+       "pro": 59.99,
+       "grow": 139.99,
+       "scale": 279.99
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.99,
+       "pro": 59.99,
+       "grow": 139.99,
+       "scale": 279.99
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.99,
+       "pro": 59.99,
+       "grow": 139.99,
+       "scale": 279.99
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.99,
+       "pro": 59.99,
+       "grow": 139.99,
+       "scale": 279.99
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.99,
+       "pro": 59.99,
+       "grow": 139.99,
+       "scale": 279.99
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.99,
+       "pro": 59.99,
+       "grow": 139.99,
+       "scale": 279.99
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.99,
+       "pro": 59.99,
+       "grow": 139.99,
+       "scale": 279.99
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.99,
+       "pro": 59.99,
+       "grow": 139.99,
+       "scale": 279.99
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.99,
+      "billed": {
+       "amount": 39.99,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.99,
+       "pro": 59.99,
+       "grow": 139.99,
+       "scale": 279.99
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Extra Meeting Assistant seats at $16 a seat a month billed annually or $20 monthly are an add-on per person who wants live meeting capture.",
+     "Pay-as-you-go minutes from $8 an hour depend on usage."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -109,12 +532,6 @@
  "task_evidence": null,
  "open_questions": [
   {
-   "question_id": "whispertranscribe:whispertranscribe-q1",
-   "key": "whispertranscribe-q1",
-   "question": "How many transcription minutes do the 60 free signup credits buy?",
-   "status": "open"
-  },
-  {
    "question_id": "whispertranscribe:whispertranscribe-q2",
    "key": "whispertranscribe-q2",
    "question": "Does WhisperTranscribe translate into 99 languages or 65+?",
@@ -124,6 +541,12 @@
    "question_id": "whispertranscribe:whispertranscribe-q3",
    "key": "whispertranscribe-q3",
    "question": "What changed in WhisperTranscribe over the last twelve months?",
+   "status": "open"
+  },
+  {
+   "question_id": "whispertranscribe:whispertranscribe-q4",
+   "key": "whispertranscribe-q4",
+   "question": "What is the largest file you can upload on each WhisperTranscribe plan?",
    "status": "open"
   },
   {
@@ -145,9 +568,15 @@
    "status": "open"
   },
   {
-   "question_id": "whispertranscribe:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "whispertranscribe:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Extra Meeting Assistant seats at $16 a seat a month billed annually or $20 monthly are an add-on per person who wants live meeting capture. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "whispertranscribe:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Pay-as-you-go minutes from $8 an hour depend on usage. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

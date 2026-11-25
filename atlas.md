@@ -741,7 +741,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/carbon6-review.html
 
 ## CarouselBot (carouselbot.app)
-- **Verified pricing:** (read 2026-11-18 in a browser on carouselbot.app/pricing, Monthly and Annual views; earlier: read 2026-10-17; the cards show a $ sign without naming the currency) Free is $0 forever: 3 caro…
+- **Verified pricing:** (re-read 2026-11-25 on carouselbot.app/pricing in a headless browser, Annual view with the FAQ: prices, limits and the 7-day money-back guarantee unchanged, and the Save 34% and Save 31% la…
 - **Honest take:** Free exports carry a watermark; Creator caps batches at 3 a month; refunds only within 7 days.
 - **Best for:** solo creators, consultants and small marketing teams who post LinkedIn and Instagram carousels every week and want to turn articles and ideas into branded slides without designing them by hand
 - **Flags:** Annual commit
@@ -3108,7 +3108,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/proton-drive-review.html
 
 ## PulseMonitor (pulsemonitor.io)
-- **Verified pricing:** (read 2026-10-14 in a live browser on pulsemonitor.io/pricing, the home page and the refund policy dated 14 October 2026) Two plans, no per-seat pricing.
+- **Verified pricing:** (re-read 2026-11-25 on pulsemonitor.io/pricing, the documentation and the terms and refund policy, both now dated 25 November 2026: plans, prices, limits and refund rules unchanged; read 20…
 - **Honest take:** Paid fees are non-refundable, and the terms do not say which company runs it; Slack, PagerDuty and status pages need Pro.
 - **Best for:** developers and small teams who want HTTP, API, SSL and keyword uptime checks plus a basic SEO audit in one cheap tool, with a free plan that covers 50 monitors
 - **Flags:** Free tier
@@ -3667,7 +3667,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/shortcut-chat-review.html
 
 ## ShortlistIQ (shortlistiq.com)
-- **Verified pricing:** (read 2026-10-16 in a browser on shortlistiq.com/pricing; the cards show a $ sign without naming the currency, and clicking Pay annually did not change the amounts) Three paid plans, each l…
+- **Verified pricing:** (re-read 2026-11-25 on shortlistiq.com/pricing, again with the Pay annually toggle, which still did not change the amounts; plans and limits unchanged; read 2026-10-16 in a browser on short…
 - **Honest take:** Free for 10 applicants; Basic covers 20 a month; no refunds on early cancellation.
 - **Best for:** small and mid-size teams and recruitment agencies that get more applicants than they can screen and want an AI to run the first-round interview and score each candidate
 - **Flags:** Usage-metered, Free tier
@@ -3971,7 +3971,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/surfer-surferseo-review.html
 
 ## SurFox AI (getsurfox.com)
-- **Verified pricing:** (re-verified 2026-10-16 on getsurfox.com/pricing and the terms of service, still dated 22 September 2026, after SurFox aligned the two pages; first read 2026-10-15 in a live browser with th…
+- **Verified pricing:** (re-read 2026-11-25 on getsurfox.com/pricing in a headless browser with the FAQ answers opened, and on the terms, still dated 22 September 2026: plans, limits, the $0.25 voice overage and t…
 - **Honest take:** You pay from signup but cannot text until carriers approve your A2P registration, and the money-back guarantee needs 80% of your messages used.
 - **Best for:** US staffing agencies, real estate investors and home-services firms with a steady flow of opted-in leads who want an AI to text them back within minutes, qualify them and put calls on the calendar
 - **Flags:** Usage-metered, Annual commit
@@ -4602,7 +4602,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/whatconverts-review.html
 
 ## WhisperTranscribe (whispertranscribe.com)
-- **Verified pricing:** (read 2026-10-14 in a live browser on whispertranscribe.com/pricing and the terms of use then dated 28 October 2025; the terms and privacy policy were re-read on 25 October 2026 in their ve…
+- **Verified pricing:** (re-read 2026-11-25 on whispertranscribe.com/pricing with its FAQ and the terms of 20 October 2026: all transcription, pay-as-you-go and Meeting Assistant prices unchanged; read 2026-10-14 …
 - **Honest take:** Starter's $2.80-an-hour claim works out to about $3.75; monthly billing doubles the price and fees are non-refundable.
 - **Best for:** podcasters, YouTubers, researchers and small teams who transcribe a predictable number of hours a month, want unlimited users without seat fees, and prefer a service that does not keep their files
 - **Flags:** Usage-metered, Free tier

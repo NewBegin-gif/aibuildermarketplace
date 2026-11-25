@@ -61,16 +61,540 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "EUR",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "standard",
+     "name": "Standard (Individual)",
+     "model": "flat",
+     "included_units": 1,
+     "annual_month": 6.5,
+     "monthly_status": "not_offered",
+     "evidence": "The paid Individual plans are Standard €6.50, Plus €19 and Premium €32 a month, all billed annually"
+    },
+    {
+     "id": "plus",
+     "name": "Plus (Individual)",
+     "model": "flat",
+     "included_units": 1,
+     "annual_month": 19,
+     "monthly_status": "not_offered",
+     "evidence": "The paid Individual plans are Standard €6.50, Plus €19 and Premium €32 a month, all billed annually"
+    },
+    {
+     "id": "premium",
+     "name": "Premium (Individual)",
+     "model": "flat",
+     "included_units": 1,
+     "annual_month": 32,
+     "monthly_status": "not_offered",
+     "evidence": "The paid Individual plans are Standard €6.50, Plus €19 and Premium €32 a month, all billed annually"
+    },
+    {
+     "id": "business-teams",
+     "name": "Teams",
+     "model": "per_unit",
+     "annual_month": 39,
+     "monthly_status": "not_offered",
+     "evidence": "The Business tab lists Plus €15 a month, Premium €25 a month and Teams €39 a month per user, all billed annually"
+    }
+   ],
+   "notes": [
+    "Individual prices re-read 25 November 2026; the Business-tab prices are from our 28 September 2026 reading.",
+    "Every paid plan is billed annually; there is no monthly-billed price.",
+    "The free Basic plan (up to 5 public projects, 500 Prezi AI credits) is per account and not computed for a team."
+   ],
+   "not_computable": [
+    {
+     "text": "Business-tab Plus (€15 a month) and Premium (€25 a month) are listed without a stated unit, so they are not computed per user.",
+     "affects_cost": false
+    },
+    {
+     "text": "EDU plans need a valid school email address and are not in our notes with prices.",
+     "affects_cost": false
+    }
+   ],
+   "rules_verified_at": "2026-11-25"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "prezi",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "standard",
+      "cheapest_plan_name": "Standard (Individual)",
+      "total_month": 6.5,
+      "billed": {
+       "amount": 78.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": 6.5,
+       "plus": 19.0,
+       "premium": 32.0,
+       "business-teams": 39.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business-teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 78.0,
+      "billed": {
+       "amount": 936.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "premium": "not_eligible",
+       "business-teams": 78.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business-teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 117.0,
+      "billed": {
+       "amount": 1404.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "premium": "not_eligible",
+       "business-teams": 117.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business-teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 195.0,
+      "billed": {
+       "amount": 2340.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "premium": "not_eligible",
+       "business-teams": 195.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business-teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 390.0,
+      "billed": {
+       "amount": 4680.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "premium": "not_eligible",
+       "business-teams": 390.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business-teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 585.0,
+      "billed": {
+       "amount": 7020.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "premium": "not_eligible",
+       "business-teams": 585.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business-teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 780.0,
+      "billed": {
+       "amount": 9360.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "premium": "not_eligible",
+       "business-teams": 780.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business-teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 975.0,
+      "billed": {
+       "amount": 11700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "premium": "not_eligible",
+       "business-teams": 975.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business-teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 1950.0,
+      "billed": {
+       "amount": 23400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "premium": "not_eligible",
+       "business-teams": 1950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business-teams",
+      "cheapest_plan_name": "Teams",
+      "total_month": 3900.0,
+      "billed": {
+       "amount": 46800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_eligible",
+       "plus": "not_eligible",
+       "premium": "not_eligible",
+       "business-teams": 3900.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "standard",
+      "to_plan": "business-teams",
+      "from_plan_name": "Standard (Individual)",
+      "to_plan_name": "Teams"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Business-tab Plus (€15 a month) and Premium (€25 a month) are listed without a stated unit, so they are not computed per user.",
+     "EDU plans need a valid school email address and are not in our notes with prices."
+    ],
+    "measured": [
+     {
+      "claim": "VALIDATION STATUS // AIBM-001",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "One two-slide generation added this label, altered requested title/case and invented a hardware-validation overview. Credits changed 500 to 350.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Correct third prompt only; earlier typing mistakes excluded; no export preservation inferred.",
+      "status": "confirmed",
+      "buying_consequence": "Inspect generated text against the prompt before sharing.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": "2026-11-10",
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/prezi-review.html"
+     },
+     {
+      "claim": "Openbaar",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "New presentation publicly shared by default; AI-analyse, Hergebruik toestaan and Downloads toestaan on.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Observed sharing defaults on this new presentation; no anonymous-viewer access test.",
+      "status": "confirmed",
+      "buying_consequence": "Review public visibility and reuse settings before sharing material.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": "2026-11-10",
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/prezi-review.html"
+     },
+     {
+      "claim": "Bewerkbare PPTX",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Owner download options PDF, editable PPTX and SCORM labelled Plus while viewer downloads toggle was enabled.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Owner entitlement versus sharing setting, without claiming successful viewer export.",
+      "status": "confirmed",
+      "buying_consequence": "Owner export was gated; viewer behavior remains untested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": "2026-11-10",
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/prezi-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "prezi",
+    "currency": "EUR",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "plus": "not_offered_on_billing",
+       "premium": "not_offered_on_billing",
+       "business-teams": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "plus": "not_offered_on_billing",
+       "premium": "not_offered_on_billing",
+       "business-teams": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "plus": "not_offered_on_billing",
+       "premium": "not_offered_on_billing",
+       "business-teams": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "plus": "not_offered_on_billing",
+       "premium": "not_offered_on_billing",
+       "business-teams": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "plus": "not_offered_on_billing",
+       "premium": "not_offered_on_billing",
+       "business-teams": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "plus": "not_offered_on_billing",
+       "premium": "not_offered_on_billing",
+       "business-teams": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "plus": "not_offered_on_billing",
+       "premium": "not_offered_on_billing",
+       "business-teams": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "plus": "not_offered_on_billing",
+       "premium": "not_offered_on_billing",
+       "business-teams": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "plus": "not_offered_on_billing",
+       "premium": "not_offered_on_billing",
+       "business-teams": "not_offered_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "standard": "not_offered_on_billing",
+       "plus": "not_offered_on_billing",
+       "premium": "not_offered_on_billing",
+       "business-teams": "not_offered_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Business-tab Plus (€15 a month) and Premium (€25 a month) are listed without a stated unit, so they are not computed per user.",
+     "EDU plans need a valid school email address and are not in our notes with prices."
+    ],
+    "measured": [
+     {
+      "claim": "VALIDATION STATUS // AIBM-001",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "One two-slide generation added this label, altered requested title/case and invented a hardware-validation overview. Credits changed 500 to 350.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Correct third prompt only; earlier typing mistakes excluded; no export preservation inferred.",
+      "status": "confirmed",
+      "buying_consequence": "Inspect generated text against the prompt before sharing.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": "2026-11-10",
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/prezi-review.html"
+     },
+     {
+      "claim": "Openbaar",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "New presentation publicly shared by default; AI-analyse, Hergebruik toestaan and Downloads toestaan on.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Observed sharing defaults on this new presentation; no anonymous-viewer access test.",
+      "status": "confirmed",
+      "buying_consequence": "Review public visibility and reuse settings before sharing material.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": "2026-11-10",
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/prezi-review.html"
+     },
+     {
+      "claim": "Bewerkbare PPTX",
+      "claim_source": "https://prezi.com/craft/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Owner download options PDF, editable PPTX and SCORM labelled Plus while viewer downloads toggle was enabled.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/prezi-review.html#claim-vs-measured"
+      },
+      "plan": "Free / Prezi AI 4.0",
+      "comparability": "Prezi: Owner entitlement versus sharing setting, without claiming successful viewer export.",
+      "status": "confirmed",
+      "buying_consequence": "Owner export was gated; viewer behavior remains untested.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": "2026-11-10",
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/prezi-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-06; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -867,12 +1391,6 @@
    "question_id": "prezi:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "prezi:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

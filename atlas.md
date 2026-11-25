@@ -1449,7 +1449,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/expandi-review.html
 
 ## ExpertEx (expertex.ai)
-- **Verified pricing:** (read 2026-08-22 in a live browser on expertex.ai/pricing -- plain fetches return an empty page, so this is the first reading we have of the real ladder) There are four credit tiers, monthl…
+- **Verified pricing:** Pricing read 25 November 2026 on expertex.ai/pricing.
 - **Honest take:** The plan cards and the calculator on the same page do not agree, and the gap is large enough to pick the wrong tier.
 - **Best for:** online stores that need a steady stream of product photos and short video ads and would otherwise pay a studio or a freelancer per shoot -- the e-commerce studio pushes results straight to the live store on Ultra and above
 - **Flags:** Per-seat pricing, Usage-metered, Free tier
@@ -1970,7 +1970,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/influencer-hero-review.html
 
 ## Insightful (insightful.io)
-- **Verified pricing:** (price re-verified 2026-09-09 against the vendor's own pricing page, re-read unchanged 2026-09-26) (2026) Per seat; the rates below are the annual ones.
+- **Verified pricing:** (price re-verified 2026-09-09 against the vendor's own pricing page, re-read unchanged 2026-09-26) On the September readings, the plan cards showed Workforce Analytics at $8, Workflow Optim…
 - **Honest take:** This is employee-monitoring software, so weigh the culture cost, not just the price.
 - **Best for:** COOs, CFOs and operations leaders who want a work intelligence platform rather than a time clock: workforce analytics plus AI process capture (where the hours go, and how the work actually flows) across in-office and remote teams
 - **Flags:** Per-seat pricing, Add-ons extra

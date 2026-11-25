@@ -75,16 +75,467 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "failed_evidence_check",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "pdf-editor",
+     "name": "PDF Editor",
+     "model": "per_unit",
+     "annual_year": 129.99,
+     "monthly_status": "unknown",
+     "evidence": "PDF Editor is $129.99 per user per year, or $10.99 per user per month"
+    },
+    {
+     "id": "pdf-editor-plus",
+     "name": "PDF Editor+",
+     "model": "per_unit",
+     "annual_year": 159.99,
+     "monthly_status": "unknown",
+     "evidence": "PDF Editor+ is $159.99 per user per year"
+    }
+   ],
+   "notes": [
+    "These figures are per user on an annual contract. Foxit also lists an annual plan paid in monthly instalments and a separate monthly plan. The monthly plan rate is unconfirmed."
+   ],
+   "not_computable": [
+    "Perpetual licence Foxit PDF Editor 14 is a one-time $209.99 per user, not a recurring cost.",
+    "Volume discounts of up to 30% apply to orders of 30 or more licences; the exact rate per order size is not published.",
+    "AI Assistant add-on and standalone eSign plans are billed separately."
+   ],
+   "rules_verified_at": "2026-10-31"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "foxit",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "pdf-editor",
+      "cheapest_plan_name": "PDF Editor",
+      "total_month": 10.83,
+      "billed": {
+       "amount": 129.99,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": 10.83,
+       "pdf-editor-plus": 13.33
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pdf-editor",
+      "cheapest_plan_name": "PDF Editor",
+      "total_month": 21.67,
+      "billed": {
+       "amount": 259.98,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": 21.67,
+       "pdf-editor-plus": 26.67
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "pdf-editor",
+      "cheapest_plan_name": "PDF Editor",
+      "total_month": 32.5,
+      "billed": {
+       "amount": 389.97,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": 32.5,
+       "pdf-editor-plus": 40.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "pdf-editor",
+      "cheapest_plan_name": "PDF Editor",
+      "total_month": 54.16,
+      "billed": {
+       "amount": 649.95,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": 54.16,
+       "pdf-editor-plus": 66.66
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "pdf-editor",
+      "cheapest_plan_name": "PDF Editor",
+      "total_month": 108.33,
+      "billed": {
+       "amount": 1299.9,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": 108.33,
+       "pdf-editor-plus": 133.33
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "pdf-editor",
+      "cheapest_plan_name": "PDF Editor",
+      "total_month": 162.49,
+      "billed": {
+       "amount": 1949.85,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": 162.49,
+       "pdf-editor-plus": 199.99
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "pdf-editor",
+      "cheapest_plan_name": "PDF Editor",
+      "total_month": 216.65,
+      "billed": {
+       "amount": 2599.8,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": 216.65,
+       "pdf-editor-plus": 266.65
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "pdf-editor",
+      "cheapest_plan_name": "PDF Editor",
+      "total_month": 270.81,
+      "billed": {
+       "amount": 3249.75,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": 270.81,
+       "pdf-editor-plus": 333.31
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "pdf-editor",
+      "cheapest_plan_name": "PDF Editor",
+      "total_month": 541.63,
+      "billed": {
+       "amount": 6499.5,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": 541.63,
+       "pdf-editor-plus": 666.63
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "pdf-editor",
+      "cheapest_plan_name": "PDF Editor",
+      "total_month": 1083.25,
+      "billed": {
+       "amount": 12999.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": 1083.25,
+       "pdf-editor-plus": 1333.25
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Perpetual licence Foxit PDF Editor 14 is a one-time $209.99 per user, not a recurring cost.",
+     "Volume discounts of up to 30% apply to orders of 30 or more licences; the exact rate per order size is not published.",
+     "AI Assistant add-on and standalone eSign plans are billed separately."
+    ],
+    "measured": [
+     {
+      "claim": "every plan starts with a 14-day free trial with no credit card required.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "In the web editor the trial offer behind Edit Text has a Free Trial button that opened the desktop downloads page for Foxit PDF Editor+. No trial could be started in the browser, so on the web route the free trial needs the desktop app.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/foxit-review.html#claim-vs-measured"
+      },
+      "plan": "Free account, no trial started; the plans were read on the pricing page and in the trial offer; no checkout was opened",
+      "comparability": "The pricing FAQ line against the Free Trial button inside the web editor.",
+      "status": "contradicted",
+      "buying_consequence": "If you only want the browser editor, you cannot start the free trial from it.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://officesoftwaremarketplace.com/foxit-review.html"
+     },
+     {
+      "claim": "Start your 14-day free trial of Foxit PDF Editor+ today!",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "This offer appeared on Edit Text instead of the editing tool; on the free account the text of our PDF could not be edited, while a note could be added.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/foxit-review.html#claim-vs-measured"
+      },
+      "plan": "Free account, no trial started; the plans were read on the pricing page and in the trial offer; no checkout was opened",
+      "comparability": "The offer window against the free account in the web editor.",
+      "status": "confirmed",
+      "buying_consequence": "Text editing needs the trial or a paid plan; comments work on the free account.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/foxit-review.html"
+     },
+     {
+      "claim": "with monthly billing available from $10.99",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The dossier says the two price columns are both twelve-month plans and no month-to-month option exists. On 19 November the pricing switch offered Annual plan, paid in full, Annual plan, billed monthly and Monthly plan, and the FAQ names monthly billing from $10.99.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/foxit-review.html#claim-vs-measured"
+      },
+      "plan": "Free account, no trial started; the plans were read on the pricing page and in the trial offer; no checkout was opened",
+      "comparability": "The dossier billing note against the pricing switch seen in this session.",
+      "status": "out_of_date",
+      "buying_consequence": "A monthly plan is now offered on the page; its terms were not checked in a checkout.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Out of date",
+      "review_url": "https://officesoftwaremarketplace.com/foxit-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "foxit",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": "price_unknown_on_billing",
+       "pdf-editor-plus": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": "price_unknown_on_billing",
+       "pdf-editor-plus": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": "price_unknown_on_billing",
+       "pdf-editor-plus": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": "price_unknown_on_billing",
+       "pdf-editor-plus": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": "price_unknown_on_billing",
+       "pdf-editor-plus": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": "price_unknown_on_billing",
+       "pdf-editor-plus": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": "price_unknown_on_billing",
+       "pdf-editor-plus": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": "price_unknown_on_billing",
+       "pdf-editor-plus": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": "price_unknown_on_billing",
+       "pdf-editor-plus": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "pdf-editor": "price_unknown_on_billing",
+       "pdf-editor-plus": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Perpetual licence Foxit PDF Editor 14 is a one-time $209.99 per user, not a recurring cost.",
+     "Volume discounts of up to 30% apply to orders of 30 or more licences; the exact rate per order size is not published.",
+     "AI Assistant add-on and standalone eSign plans are billed separately."
+    ],
+    "measured": [
+     {
+      "claim": "every plan starts with a 14-day free trial with no credit card required.",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "In the web editor the trial offer behind Edit Text has a Free Trial button that opened the desktop downloads page for Foxit PDF Editor+. No trial could be started in the browser, so on the web route the free trial needs the desktop app.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/foxit-review.html#claim-vs-measured"
+      },
+      "plan": "Free account, no trial started; the plans were read on the pricing page and in the trial offer; no checkout was opened",
+      "comparability": "The pricing FAQ line against the Free Trial button inside the web editor.",
+      "status": "contradicted",
+      "buying_consequence": "If you only want the browser editor, you cannot start the free trial from it.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://officesoftwaremarketplace.com/foxit-review.html"
+     },
+     {
+      "claim": "Start your 14-day free trial of Foxit PDF Editor+ today!",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "This offer appeared on Edit Text instead of the editing tool; on the free account the text of our PDF could not be edited, while a note could be added.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/foxit-review.html#claim-vs-measured"
+      },
+      "plan": "Free account, no trial started; the plans were read on the pricing page and in the trial offer; no checkout was opened",
+      "comparability": "The offer window against the free account in the web editor.",
+      "status": "confirmed",
+      "buying_consequence": "Text editing needs the trial or a paid plan; comments work on the free account.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/foxit-review.html"
+     },
+     {
+      "claim": "with monthly billing available from $10.99",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The dossier says the two price columns are both twelve-month plans and no month-to-month option exists. On 19 November the pricing switch offered Annual plan, paid in full, Annual plan, billed monthly and Monthly plan, and the FAQ names monthly billing from $10.99.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/foxit-review.html#claim-vs-measured"
+      },
+      "plan": "Free account, no trial started; the plans were read on the pricing page and in the trial offer; no checkout was opened",
+      "comparability": "The dossier billing note against the pricing switch seen in this session.",
+      "status": "out_of_date",
+      "buying_consequence": "A monthly plan is now offered on the page; its terms were not checked in a checkout.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Out of date",
+      "review_url": "https://officesoftwaremarketplace.com/foxit-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -487,9 +938,27 @@
    "status": "open"
   },
   {
-   "question_id": "foxit:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "foxit:monthly_billing",
+   "key": "monthly_billing",
+   "question": "Which plans can be bought month to month, and at what price?",
+   "status": "open"
+  },
+  {
+   "question_id": "foxit:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Perpetual licence Foxit PDF Editor 14 is a one-time $209.99 per user, not a recurring cost. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "foxit:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Volume discounts of up to 30% apply to orders of 30 or more licences; the exact rate per order size is not published. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "foxit:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: AI Assistant add-on and standalone eSign plans are billed separately. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

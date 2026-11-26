@@ -73,16 +73,351 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "audience": "personal",
+     "max_units": 1,
+     "evidence": "Free is $0.00 a month for 1 GB and one address."
+    },
+    {
+     "id": "mail-plus",
+     "name": "Mail Plus",
+     "model": "flat",
+     "audience": "personal",
+     "max_units": 1,
+     "annual_month": 3.99,
+     "annual_year": 47.88,
+     "monthly": 4.99,
+     "evidence": "Mail Plus is $3.99 a month, marked 20% off $4.99 and billed at $47.88 every twelve months"
+    },
+    {
+     "id": "unlimited",
+     "name": "Unlimited",
+     "model": "flat",
+     "audience": "personal",
+     "max_units": 1,
+     "annual_month": 9.99,
+     "annual_year": 119.88,
+     "monthly": 12.99,
+     "evidence": "Unlimited is $9.99 a month, 23% off $12.99, billed at $119.88 a year"
+    }
+   ],
+   "notes": [
+    "Standard yearly rates. On 21 and 24 November 2026 the page showed a first-year offer (Mail Plus $2.49 a month, $29.88 for the first 12 months; Unlimited $6.49, $77.88) that renews at the standard yearly price, with no end date shown.",
+    "Business per-user plans are not in these rules: their amounts are not in our current pricing notes."
+   ],
+   "not_computable": [
+    {
+     "text": "Proton business plans (per user) are not computable from our notes.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-11-26"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "proton",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Proton business plans (per user) are not computable from our notes."
+    ]
+   },
+   "monthly": {
+    "product_id": "proton",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "mail-plus": "not_eligible",
+       "unlimited": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Proton business plans (per user) are not computable from our notes."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -112,9 +447,9 @@
    "status": "open"
   },
   {
-   "question_id": "proton:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "proton:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Proton business plans (per user) are not computable from our notes. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

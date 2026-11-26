@@ -3263,6 +3263,59 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "Proposall",
+   "product_id": "proposall",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 on a Shopify development store, with the interface in English. We installed Proposall on its free plan, built a proposal for 12 snowboards at a custom price and sent it by email to a test address. Paid plans could not be chosen on a development store, so we tested none.",
+   "findings": [
+    "Install: right after install the free Launch Pad plan showed 0 of 5 proposals used this month, with no payment screen.",
+    "Proposal: we picked a customer, one product, a quantity of 12 and a custom price of $699 instead of $785.95. The total came to $8,388.00, which is 12 x $699, and it took about 2 minutes.",
+    "Free limits: e-signatures, expiry dates, a custom layout, a personal message when sending, view analytics, draft orders and proposal history all showed 'Upgrade required' on the free plan.",
+    "Sending: the send dialog said it would email a link to view and sign the proposal. The proposal went from draft to sent and the counter showed 1 of 5. Signing is a paid feature, so on the free plan the customer can only view.",
+    "Plans: Orbit at $14.99 a month ($149.90 a year) with a 14 day trial adds e-signatures; Mission Control at $39.99 a month ($399.90 a year) adds draft orders from proposals. Both showed 'Unavailable on dev stores' when we tried to select them."
+   ],
+   "not_tested": [
+    "e-signatures and expiry dates, because paid plans cannot be chosen on a development store",
+    "what the customer sees, because we sent the proposal to a reserved example.com address",
+    "draft orders from proposals, reminders and analytics"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Sledge",
+   "product_id": "sledge",
+   "run_date": "21 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 21 November 2026 on a Shopify development store, with the interface in English. We installed Sledge, turned on instant search and the product filter, and searched the theme preview. We did not approve the Pro plan and did not use a live store.",
+   "findings": [
+    "Install: the permission screen lists customer data (sensitive data, device and activity data), staff and contributor data, and store data (customers, products, orders, discounts, store analytics, Online Store).",
+    "First result: about two minutes after install, instant search for snowboard returned three matching products in the theme preview, with 12 clicks and no configuration beyond the on buttons.",
+    "Filters: the collection page gained Availability and Price filters, a search box and sorting. They came from the product data without any setup.",
+    "Free plan: the app says you are on the free plan (up to 50 products), that on a development store everything works, and that on a live store customers see none of the tools until you pick a paid plan.",
+    "Pro: the Shopify approval screen showed $29.99 every 30 days with a 14 day trial ending on 5 December and no note that it was a test charge, so we did not approve it. Cancelling gave the message 'The shop cannot accept the provided charge.'"
+   ],
+   "not_tested": [
+    "how search and filters behave on a live store with a paid plan",
+    "AI conversational search, personalized search and Growth Intelligence",
+    "bundles, upsells and the other offers",
+    "the Scale, Accelerate and Ultimate plans"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "KeepCart",
    "product_id": "keepcart",
    "run_date": "21 November 2026",
@@ -21676,7 +21729,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/nexis-cro-review.html#claim-vs-measured"
      },
      "plan": "Free plan only; the paid plans were not selectable on the development store",
      "comparability": "The 34-check wording of the listing against the screens we opened (Overview, one finding and the Product AEO Center); the checks were not counted.",
@@ -21693,7 +21746,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/nexis-cro-review.html#claim-vs-measured"
      },
      "plan": "Free plan only; the paid plans were not selectable on the development store",
      "comparability": "The wording on the Overview button text against one audit of a store with 20 products; larger stores were not tried.",
@@ -21710,7 +21763,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/nexis-cro-review.html#claim-vs-measured"
      },
      "plan": "Free plan only; the paid plans were not selectable on the development store",
      "comparability": "The score on the screen against the list of recommendations of one product; the scoring method was not checked and the store holds demo products only.",
@@ -21727,7 +21780,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/nexis-cro-review.html#claim-vs-measured"
      },
      "plan": "Free plan only; the paid plans were not selectable on the development store",
      "comparability": "The dossier wording on schema and llms.txt against the partial scores on the product row; the JSON-LD deploy and llms.txt features were not opened.",
@@ -21744,7 +21797,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/nexis-cro-review.html#claim-vs-measured"
      },
      "plan": "Free plan only; the paid plans were not selectable on the development store",
      "comparability": "The label in the Product AEO Center against the Pro plan card; the rewrite itself was not run.",
@@ -21761,7 +21814,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/nexis-cro-review.html#claim-vs-measured"
      },
      "plan": "Free plan only; the paid plans were not selectable on the development store",
      "comparability": "The Pro price of the listing against the greyed out plan card; no approval screen was reached.",
@@ -21778,7 +21831,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/nexis-cro-review.html#claim-vs-measured"
      },
      "plan": "Free plan only; the paid plans were not selectable on the development store",
      "comparability": "The Growth price of the listing against the greyed out plan card; no approval screen was reached.",
@@ -21795,7 +21848,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/nexis-cro-review.html#claim-vs-measured"
      },
      "plan": "Free plan only; the paid plans were not selectable on the development store",
      "comparability": "The Agency price of the listing against the greyed out plan card; no approval screen was reached.",
@@ -21812,7 +21865,7 @@
      "observed_on": "2026-11-17",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/nexis-cro-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/nexis-cro-review.html#claim-vs-measured"
      },
      "plan": "Free plan only; the paid plans were not selectable on the development store",
      "comparability": "The prices on the plan cards against a Shopify approval screen that never appeared; no tax, term or stored cost rule was compared.",
@@ -39097,7 +39150,8 @@
    "what": "We opened the registration page of Salesmsg on 18 November 2026 and our AI assistant noted what it showed. Before an account opened, the page required a credit card and a US mobile number, although the button read Start my free trial with the line Try 14 days free, then just $61 per month above it. Nothing was filled in, so no account or trial started and we could not use the product. We never enter a card in a test.",
    "findings": [
     "The button on the registration page read Start my free trial, but the page required a credit card and a US mobile number before an account opened. The 14-day trial is free and nothing is charged until it ends, but a card and a US mobile number come first. Salesmsg told us on 25 November 2026 that this is intentional: it sends on US carrier networks, and the checks keep spam and fraud signups out.",
-    "The line above the button said Try 14 days free, then just $61 per month. We did not record which plan or how many credits the $61 belongs to, and no checkout screen was reached, so the amount could not be set against the plan prices."
+    "The line above the button said Try 14 days free, then just $61 per month. We did not record which plan the $61 belongs to and no checkout screen was reached. On the pricing ladder we read on 23 November 2026, $61 a month is the 1,000-credit Pro tier; the entry tier is $33 a month for 500 credits. So $61 is not the cheapest way in, and we cannot say which tier the sign-up page had preselected.",
+    "The mail timeline further down lists two vendor emails from 21 and 24 November 2026. Salesmsg told us on 25 November 2026 that the 21 November email, 'Your Salesmsg account is almost ready', is a follow-up it sends to incomplete sign-ups. Read the timeline that way: it is not evidence that an account was opened, because none was."
    ],
    "not_tested": [
     "Everything after the registration page: the text message inbox, sending a message and the credit use per message.",
@@ -39149,7 +39203,7 @@
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
     "run_date": "2026-11-18",
-    "what": "We started the sign-up himself; the registration page asked for a credit card and a US mobile number before any account opened, so no account was created. On 18 November 2026 the session reached the registration page of Salesmessage and stopped there: before an account opened, the page required a credit card and a US mobile number. The button read Start my free trial, with the line Try 14 days free, then just $61 per month above it. Nothing was filled in, no account opened and the product itself was not tested. Account and start: we opened the registration page of Salesmessage (app.salesmessage.com/register) on the evening of 18 November 2026 and passed on what it showed; the interface was in English. The dossier name is Salesmessage and the review is on ZTS (zts/salesmessage-review.html). What the registration page required: before an account opened, the page required a credit card and a US mobile number. The button read Start my free trial, with the line Try 14 days free, then just $61 per month above it. Stop: nothing was filled in and nothing was started, so no account was opened and no trial began. The core function, the text message inbox and the credit use per message, was therefore not tested. Screenshots: none were made, because the screen showed our own details; there is no image to check or mask. Cancelling: not applicable, because no trial or plan was started. Not tested: everything after the registration page, which means the inbox, sending a message, the credit use per message, the trial itself, checkout, tax and the final price. Clean up: there is no account, no trial and no test data; nothing was sent or bought. No kit records were entered.",
+    "what": "We started the sign-up himself; the registration page asked for a credit card and a US mobile number before any account opened, so no account was created. On 18 November 2026 the session reached the registration page of Salesmsg and stopped there: before an account opened, the page required a credit card and a US mobile number. The button read Start my free trial, with the line Try 14 days free, then just $61 per month above it. Nothing was filled in, no account opened and the product itself was not tested. Account and start: we opened the registration page of Salesmsg (app.salesmessage.com/register) on the evening of 18 November 2026 and passed on what it showed; the interface was in English. The dossier name is Salesmessage and the review is on ZTS (zts/salesmessage-review.html). What the registration page required: before an account opened, the page required a credit card and a US mobile number. The button read Start my free trial, with the line Try 14 days free, then just $61 per month above it. Stop: nothing was filled in and nothing was started, so no account was opened and no trial began. The core function, the text message inbox and the credit use per message, was therefore not tested. Screenshots: none were made, because the screen showed our own details; there is no image to check or mask. Cancelling: not applicable, because no trial or plan was started. Not tested: everything after the registration page, which means the inbox, sending a message, the credit use per message, the trial itself, checkout, tax and the final price. Clean up: there is no account, no trial and no test data; nothing was sent or bought. No kit records were entered.",
     "first_import": null,
     "file_inspected": false,
     "reimport_tested": false,
@@ -42679,7 +42733,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/alohi-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/alohi-review.html#claim-vs-measured"
      },
      "plan": "Free plan with 10 pages; the plans were read on the pricing page and in Plan & Billing; the Premium checkout was seen and left",
      "comparability": "The pricing page line against the page counter in the inbox and in Send Fax.",
@@ -42696,7 +42750,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/alohi-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/alohi-review.html#claim-vs-measured"
      },
      "plan": "Free plan with 10 pages; the plans were read on the pricing page and in Plan & Billing; the Premium checkout was seen and left",
      "comparability": "The inbox message against the numbers page and the plan comparison.",
@@ -42713,7 +42767,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/alohi-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/alohi-review.html#claim-vs-measured"
      },
      "plan": "Free plan with 10 pages; the plans were read on the pricing page and in Plan & Billing; the Premium checkout was seen and left",
      "comparability": "Dollar figures in the dossier against euro figures seen from the Netherlands, with no exchange rate applied.",
@@ -42730,7 +42784,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/alohi-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/alohi-review.html#claim-vs-measured"
      },
      "plan": "Free plan with 10 pages; the plans were read on the pricing page and in Plan & Billing; the Premium checkout was seen and left",
      "comparability": "The pricing page against the number step of the checkout.",
@@ -42747,7 +42801,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/alohi-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/alohi-review.html#claim-vs-measured"
      },
      "plan": "Free plan with 10 pages; the plans were read on the pricing page and in Plan & Billing; the Premium checkout was seen and left",
      "comparability": "An FAQ answer against a session that bought nothing.",
@@ -42764,7 +42818,7 @@
      "observed_on": "2026-11-19",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/alohi-review/#claim-vs-measured"
+      "url": "https://officesoftwaremarketplace.com/alohi-review.html#claim-vs-measured"
      },
      "plan": "Free plan with 10 pages; the plans were read on the pricing page and in Plan & Billing; the Premium checkout was seen and left",
      "comparability": "The pricing page against the plan box of the checkout; the order total had not loaded, and no stored cost rule or tax line was compared.",
@@ -44746,7 +44800,7 @@
      "status": "contradicted",
      "buying_consequence": "The internal trial messages conflict. Do not rely on access lasting 30 days; actual expiry was not tested.",
      "buyer_direction": "neutral",
-     "claim_changed_on": null
+     "claim_changed_on": "2026-11-26"
     },
     {
      "claim": "Prices listed are net amounts",

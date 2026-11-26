@@ -489,20 +489,20 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/blocky-review/
 
 ## Bokun (bokun.io)
-- **Verified pricing:** (price re-verified 2026-09-20 on bokun.io/pricing, plan cards and the full comparison table) (2026) A free version (1 user) plus paid plans from $49/mo (Start, up to 5 users), $149 (Plus, u…
+- **Verified pricing:** (price re-verified 2026-11-26 on bokun.io/pricing, plan cards and the full comparison table: every plan name, amount, booking fee, user limit and allowance unchanged; first re-verified 2026…
 - **Honest take:** Bokun is a Tripadvisor/Viator company, and that's both the draw and the lock-in.
 - **Best for:** tour, activity and experience operators who want booking management plus wide OTA distribution (Viator, GetYourGuide and more) from one dashboard
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://officesoftwaremarketplace.com/bokun-review.html
 
 ## Bold Custom Pricing (boldcommerce.com)
-- **Verified pricing:** (read 2026-10-06 on the Shopify App Store listing at apps.shopify.com/customer-pricing, where the app is titled Custom Pricing: Wholesale B2B; prices in USD) Three plans, each with a 14-day…
+- **Verified pricing:** (re-read 2026-11-26 on apps.shopify.com/customer-pricing: every plan name and amount unchanged; first read 2026-10-06 on the Shopify App Store listing at apps.shopify.com/customer-pricing, …
 - **Honest take:** Priced by customer group: a second price list moves you from $29 to $69 a month, and POS and bulk CSV pricing need the $129 plan.
 - **Best for:** Shopify stores that want to sell wholesale, B2B or VIP prices from their existing storefront without Shopify Plus, with quantity breaks and one or a few customer groups
 - **Full review:** https://marketingandsalessoftware.com/bold-custom-pricing-review.html
 
 ## Bold Memberships (boldcommerce.com)
-- **Verified pricing:** (read 2026-10-05 on the Shopify App Store listing at apps.shopify.com/recurring-memberships, prices in USD) One plan, called Scale: free to install, then $0.13 per member per month.
+- **Verified pricing:** (re-read 2026-11-26 on apps.shopify.com/recurring-memberships: every plan name and amount unchanged; first read 2026-10-05 on the Shopify App Store listing at apps.shopify.com/recurring-mem…
 - **Honest take:** You pay $0.13 a month for every member beyond the first 10, so a large free loyalty tier can cost more than the paid tiers earn; the listing does not say whether free members count.
 - **Best for:** Shopify stores that want a paid or free membership with store credit, member pricing, free shipping, gated products and checkout, POS sign-ups and wallet cards in one app
 - **Flags:** Per-seat pricing, Free tier
@@ -589,10 +589,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/brandye-review.html
 
 ## Bread & Butter (breadbutter.io)
-- **Verified pricing:** (re-verified 2026-09-20 on breadbutter.io/pricing) Two published plans.
+- **Verified pricing:** (re-verified 2026-11-26 on breadbutter.io/pricing and the help article 'How do Credits work', support.breadbutter.io/article/201) Three published plans and a custom Enterprise tier.
 - **Honest take:** Two meters to watch: it prices per WEBSITE (multi-site setups multiply the $49) and the AI features run on compute-credit blocks that stack as usage grows.
 - **Best for:** marketing and revenue teams that want engaged visitors (people who filled a form or left an email) automatically enriched, scored and nurtured, on a usable freemium tier
-- **Flags:** Usage-metered, Add-ons extra, Free tier
+- **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/bread-butter-review/
 
 ## Breezy HR (breezy.hr)
@@ -987,7 +987,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/contractor-foreman-review.html
 
 ## Convert (convert.com)
-- **Verified pricing:** (re-verified 2026-09-20 on convert.com/pricing) 15-day standard free trial — through our link it's an exclusive 30-day full-access trial (verified 16 Jul 2026, no credit card).
+- **Verified pricing:** (re-verified 2026-11-26 on convert.com/pricing: every plan name, amount, tested-user allowance, limit and overuse rate unchanged; the Growth card now also lists an MCP Server, and Convert I…
 - **Honest take:** The meter is tested users, and it keeps running: blow past your monthly allowance and overuse blocks land at $399-699 unless you hard-cap them, and every extra custom domain is $1,000 a year.
 - **Best for:** CRO teams running serious A/B and multivariate testing who want a privacy-first, GDPR-friendly alternative to the big experimentation suites
 - **Flags:** Usage-metered
@@ -1415,7 +1415,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/essential-loyalty-review.html
 
 ## Essential Trust Badges (essential-apps.com)
-- **Verified pricing:** (read 2026-09-30 on apps.shopify.com/essential-icon-badge-banners, on essential-apps.com/trust-badges and in the vendor's help articles on views, cart placement and badges not showing) Four…
+- **Verified pricing:** (re-read 2026-11-26 on apps.shopify.com/essential-icon-badge-banners: every plan name and amount unchanged; first read 2026-09-30 on apps.shopify.com/essential-icon-badge-banners, on essent…
 - **Honest take:** The free plan is generous on views and tight on badges.
 - **Best for:** Shopify merchants who want payment icons, feature icons and guarantee or shipping badges under the add-to-cart button without code, starting free, and who will pay $9.99 once they need badges in the cart
 - **Flags:** Free tier
@@ -2026,7 +2026,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/iubenda-review/
 
 ## Jane (jane.app)
-- **Verified pricing:** (read 2026-10-01 on jane.app/pricing with the US locale; the same page shows CAD to Canadian visitors and much lower GBP prices to UK visitors) Three plans, billed monthly.
+- **Verified pricing:** (re-read 2026-11-26 on jane.app/pricing (US locale): every plan name and amount unchanged; first read 2026-10-01 on jane.app/pricing with the US locale; the same page shows CAD to Canadian …
 - **Honest take:** Practice at $79 covers one full-time practitioner, and every other person who takes bookings adds $35 a month, or $17.50 under 24 booked hours a week.
 - **Best for:** Allied health practices (physio, chiropractic, massage, counselling and similar) with a handful of practitioners who want online booking, charting, telehealth, reminders and payments in one system
 - **Flags:** Add-ons extra
@@ -2158,7 +2158,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/klap-review.html
 
 ## Koala Bundles (profitkoala.com)
-- **Verified pricing:** (read 2026-09-30 on apps.shopify.com/profitkoala-upsell-bundle and in the vendor's billing articles at koala-bundles.crisp.help) Priced on the revenue its offers bring in, not on features: …
+- **Verified pricing:** (re-read 2026-11-26 on apps.shopify.com/profitkoala-upsell-bundle: every plan name and amount unchanged; first read 2026-09-30 on apps.shopify.com/profitkoala-upsell-bundle and in the vendo…
 - **Honest take:** The meter counts the whole value of every bundle sold through a Koala offer, not the uplift, so Kickstart's $1,000 a month is roughly fourteen $70 bundles.
 - **Best for:** Shopify merchants who want quantity breaks, multi-product bundles, cart volume discounts, BOGO offers and one-click post-purchase upsells in one app
 - **Flags:** Usage-metered
@@ -3470,7 +3470,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/seedprod-review/
 
 ## Seel (seel.com)
-- **Verified pricing:** Three plans on seel.com/pricing, re-read 7 September and again 19 September 2026 (on that second reading the plan cards no longer print a monthly figure at all — all three say “Contact us” …
+- **Verified pricing:** Three plans on seel.com/pricing, re-read 7 September, 19 September and 26 November 2026.
 - **Honest take:** Seel's algorithm prices it, so if it lands too high for your niche and shoppers stop opting in, your only lever is switching the feature off entirely.
 - **Best for:** stores selling final-sale, high-consideration or hard-to-size products, where return anxiety is the thing killing the order: merchants report conversion lifting around 5% and shoppers taking the option roughly 24% of the time
 - **Flags:** Usage-metered, Free tier
@@ -3999,7 +3999,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/surveymonkey-review.html
 
 ## SurveySparrow (surveysparrow.com)
-- **Verified pricing:** (re-verified 20 September 2026 from a US exit in New York; the euro ladder was read 14 September 2026 from Europe) SurveySparrow bills quarterly or yearly — there is no monthly option — and…
+- **Verified pricing:** (re-read 26 November 2026 from a European server, so in euros; the dollar page was not re-read) On 26 November the yearly Starter and Business cards carry a SALE price: Starter €26 against …
 - **Honest take:** The conversational-survey UX is the draw, but response limits on lower tiers and the 'contact sales' wall on advanced features (API, higher volume) make budgeting fiddly, and there's no true monthly billing.
 - **Best for:** teams that want engaging, conversational surveys and NPS with a polished respondent experience
 - **Flags:** Free tier

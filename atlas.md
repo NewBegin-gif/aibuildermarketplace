@@ -53,8 +53,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/activecampaign-review.html
 
 ## AdCreative.ai (adcreative.ai)
-- **Verified pricing:** (re-verified 2026-08-15, read on their own homepage pricing table) Credit-metered, where one credit is one downloaded creative, and there is no free plan — only a 7-day trial with 10 credit…
-- **Honest take:** The meter counts downloads, not campaigns: iterate seriously on ad variations and a 10-credit starter evaporates in an afternoon, which is exactly what iteration-heavy ad work does.
+- **Verified pricing:** (re-verified 2026-11-26 on their own homepage pricing table and FAQ) Credit-metered: the FAQ says a credit is used when you download a generated ad creative, that plans include a set number…
+- **Honest take:** The meter counts downloads, not campaigns: iterate seriously on ad variations and a 20-credit Starter month evaporates in an afternoon, which is exactly what iteration-heavy ad work does.
 - **Best for:** performance marketers and stores that test many ad variations across sizes and platforms and want on-brand creative volume without a designer bottleneck
 - **Flags:** Usage-metered
 - **Full review:** https://marketingandsalessoftware.com/adcreative-ai-review.html
@@ -224,7 +224,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/aml-watcher-review.html
 
 ## Amplemarket (amplemarket.com)
-- **Verified pricing:** (re-verified 2026-09-14) The only published price is Startup at $600/mo on an annual term, covering 2 users, with additional users available to purchase; Growth and Elite are listed as Cust…
+- **Verified pricing:** (re-verified 2026-11-26 on amplemarket.com/pricing and its llms.txt, unchanged) The only published price is Startup at $600/mo on an annual term, covering 2 users, with additional users ava…
 - **Honest take:** Data accuracy and email deliverability are the most-cited complaints, clustering on European contacts, and under about 10 reps you pay for features you never touch.
 - **Best for:** mid-market sales teams (20+ reps) who'll actually adopt the full AI-prospecting, multichannel and deliverability stack in one vendor
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
@@ -388,7 +388,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/backupmaster-review.html
 
 ## Barcodes Talk (barcodestalk.com)
-- **Verified pricing:** (prices re-verified 2026-09-19 on barcodestalk.com/buy-barcodes) One-off purchase, no subscription and no renewal.
+- **Verified pricing:** (prices re-verified 2026-11-26 on barcodestalk.com/buy-barcodes) One-off purchase, no subscription and no renewal.
 - **Honest take:** Some large retailers and brand registries, notably certain Amazon Brand Registry and big-box requirements, ask for a GS1-issued prefix, and a third-party barcode may not satisfy that.
 - **Best for:** sellers and small brands listing on marketplaces or in independent retail who want authentic, one-time-cost UPC/EAN barcodes without an annual GS1 membership
 - **Full review:** https://officesoftwaremarketplace.com/barcodes-talk-review.html
@@ -1324,8 +1324,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/elitecart-review.html
 
 ## EmailListVerify (emaillistverify.com)
-- **Verified pricing:** (re-verified 2026-08-31 on emaillistverify.com/pricing, read from the page's own JSON-LD offer data) Pay-as-you-go credits that never expire: 1,000 for $5 ($0.005/check), 5,000 for $17 ($0.…
-- **Honest take:** The $5 entry pack is the most expensive way to buy: $0.005 per check versus $0.00196 at the 50k tier: a 2.5x spread that rewards guessing your volume upfront.
+- **Verified pricing:** (re-verified 2026-11-26 on emaillistverify.com/pricing and its /pricing.md, which states prices in EUR as of 2026-11-22) Pay-as-you-go credits that never expire: 1,000 for €5, 5,000 for €17…
+- **Honest take:** The €5 entry pack is the most expensive way to buy: €5.00 per 1,000 checks against €1.86 at 100,000 and €0.26 at ten million, a spread that rewards guessing your volume upfront.
 - **Best for:** teams cleaning real sending lists before campaigns: bulk verification at volume rates, with credits that never expire
 - **Flags:** Usage-metered
 - **Full review:** https://aibuildermarketplace.com/b2b/emaillistverify-review/
@@ -3091,7 +3091,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Shopify app for building custom quotes from your products; free for 5 proposals a month, e-signatures from $14.99 a month.
 - **Best for:** Shopify stores that send custom quotes on bulk orders and want to build them from their products in a couple of minutes
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/proposall-review/
+- **Full review:** https://marketingandsalessoftware.com/proposall-review.html
 
 ## ProtectMyOrder (protectmyorder.com)
 - **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05) The App Store route has closed.
@@ -4554,8 +4554,8 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/warn-review.html
 
 ## Wati (wati.io)
-- **Verified pricing:** (re-verified 2026-09-12, read on their own pricing page — which again served us euros, not dollars) Growth €59/mo, Pro €119/mo and Business €279/mo billed annually, or €69, €149 and €349 bi…
-- **Honest take:** Growth is capped at three users with no way to buy a fourth, and automation, AI credits, extra numbers and Meta's per-conversation fees all bill on top of the plan.
+- **Verified pricing:** (re-verified 2026-11-26 on wati.io/pricing, which served us euros, and on Wati's llms.txt) Growth €59/mo, Pro €119/mo and Business €279/mo billed annually, or €69, €149 and €349 billed mont…
+- **Honest take:** Growth is capped at three users with no way to buy a fourth, and extra automation triggers, AI credits, numbers and per-message template fees all bill on top of the plan.
 - **Best for:** businesses that want to run WhatsApp support and broadcasts at scale with a shared team inbox and automation
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
 - **Full review:** https://zerotouchsupport.com/wati-review.html

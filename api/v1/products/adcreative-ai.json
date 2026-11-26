@@ -9,18 +9,23 @@
  "summary": "AI ad-creative and banner generation for performance marketers.",
  "best_for": "performance marketers and stores that test many ad variations across sizes and platforms and want on-brand creative volume without a designer bottleneck",
  "skip_if": "you run a handful of static ads a month (a designer or Canva covers it), or your bottleneck is offer/targeting rather than creative volume",
- "honest_knock": "The meter counts downloads, not campaigns: iterate seriously on ad variations and a 10-credit starter evaporates in an afternoon, which is exactly what iteration-heavy ad work does. And the honest fundamental: AI creatives give you volume and speed, but the offer and the hook still decide performance: a mediocre offer with 500 AI banners is 500 mediocre banners. Size the credit tier to your real testing cadence.",
+ "honest_knock": "The meter counts downloads, not campaigns: iterate seriously on ad variations and a 20-credit Starter month evaporates in an afternoon, which is exactly what iteration-heavy ad work does. And the honest fundamental: AI creatives give you volume and speed, but the offer and the hook still decide performance: a mediocre offer with 500 AI banners is 500 mediocre banners. Size the credit tier to your real testing cadence.",
  "pricing": {
   "status": "public",
   "entry_price": "$39",
-  "entry_price_terms": "a month for 10 credits and 1 brand",
+  "entry_price_terms": "a month for 20 credits and 1 brand",
   "from_price_usd_month": 39.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(re-verified 2026-08-15, read on their own homepage pricing table) Credit-metered, where one credit is one downloaded creative, and there is no free plan — only a 7-day trial with 10 credits. Three families, each with several credit steps. Starter is 1 user throughout: $39 a month for 10 credits and 1 brand, $89 for 15 credits and 2 brands, $139 for 30 credits and $189 for 50. Professional is 10 users and 10 brands: $249 for 50 credits, $339 for 75 and $400 for 100. Ultimate is 20 users and 25 brands: $999 for 100 credits, $1,099 for 150 and $1,399 for 200. Credits expire at the end of each billing cycle and do not roll over.",
-  "verified_at": "2026-09-13",
+  "notes": "(re-verified 2026-11-26 on their own homepage pricing table and FAQ) Credit-metered: the FAQ says a credit is used when you download a generated ad creative, that plans include a set number of monthly credits which renew every month, and that generating is unlimited. No free plan; the 7-day trial includes 20 credits. Prices are unchanged, but since October 2026 every step carries more credits. Starter is 1 user: $39 a month for 20 credits and 1 brand, $89 for 50 credits and 2 brands, $139 for 85 and $189 for 120. Professional is 10 users and 10 brands: $249 for 300 credits, $339 for 450 and $400 for 600. Ultimate is 20 users and 25 brands: $999 for 300 credits, $1,099 for 450 and $1,399 for 600. Under a Black Friday banner, quarterly and yearly billing show $20, $125 and $500 a month at the entry steps. The table is not consistent with itself: the Professional card also says 'Brand Limit: 3', and the yearly Ultimate card says 'Brand Limit: 5' and 'Total Users: 25', so confirm brands and seats at checkout. Until at least 2 October 2026 the same prices bought 10, 15, 30 and 50 credits in Starter, 50, 75 and 100 in Professional and 100, 150 and 200 in Ultimate (archived copies of the homepage).",
+  "verified_at": "2026-11-26",
   "source_url": null,
-  "schema_offer": null,
+  "schema_offer": {
+   "price": 39.0,
+   "currency": "USD",
+   "description": "Starter, per month, billed month-to-month. From our pricing notes: “Starter is 1 user: $39 a month for 20 credits and 1 brand” Read on the vendor's own pricing page on 2026-11-26.",
+   "page": "https://marketingandsalessoftware.com/adcreative-ai-review.html"
+  },
   "source_quotes": null,
   "recent_change": null,
   "price_history": null
@@ -31,8 +36,8 @@
   {
    "id": "usage_metered",
    "label": "Usage-metered",
-   "evidence": "(re-verified 2026-08-15, read on their own homepage pricing table) Credit-metered, where one credit is one downloaded creative, and there is no free plan — only a 7-day trial with 10 credits.",
-   "verified_at": "2026-09-13",
+   "evidence": "(re-verified 2026-11-26 on their own homepage pricing table and FAQ) Credit-metered: the FAQ says a credit is used when you download a generated ad creative, that plans include a set number of monthly credits which renew every month, and that generating is unlimited.",
+   "verified_at": "2026-11-26",
    "source_url": null
   }
  ],
@@ -61,16 +66,399 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 39,
+     "annual_status": "unknown",
+     "evidence": "Starter is 1 user: $39 a month for 20 credits and 1 brand"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "included_units": 10,
+     "max_units": 10,
+     "monthly": 249,
+     "annual_status": "unknown",
+     "evidence": "Professional is 10 users and 10 brands: $249 for 300 credits"
+    },
+    {
+     "id": "ultimate",
+     "name": "Ultimate",
+     "model": "flat",
+     "included_units": 20,
+     "max_units": 20,
+     "monthly": 999,
+     "annual_status": "unknown",
+     "evidence": "Ultimate is 20 users and 25 brands: $999 for 300 credits"
+    }
+   ],
+   "notes": [
+    "Entry credit step of each family; more credits cost more within the same family ($89 to $189 in Starter, $339 and $400 in Professional, $1,099 and $1,399 in Ultimate).",
+    "Quarterly and yearly rates are only shown under a sale banner, so they are not used here."
+   ],
+   "not_computable": [
+    "Higher credit steps within a family, chosen by download volume rather than seats.",
+    "Quarterly and yearly billing, shown only as a discounted sale price.",
+    "The pricing table contradicts itself on brand limits and on Ultimate's user count in the yearly view."
+   ],
+   "rules_verified_at": "2026-11-26"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "adcreative-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "price_unknown_on_billing",
+       "professional": "price_unknown_on_billing",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "price_unknown_on_billing",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "price_unknown_on_billing",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "price_unknown_on_billing",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "price_unknown_on_billing",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "not_eligible",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "not_eligible",
+       "ultimate": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "not_eligible",
+       "ultimate": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "not_eligible",
+       "ultimate": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "not_eligible",
+       "ultimate": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Higher credit steps within a family, chosen by download volume rather than seats.",
+     "Quarterly and yearly billing, shown only as a discounted sale price.",
+     "The pricing table contradicts itself on brand limits and on Ultimate's user count in the yearly view."
+    ]
+   },
+   "monthly": {
+    "product_id": "adcreative-ai",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 39.0,
+      "billed": {
+       "amount": 39.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 39.0,
+       "professional": 249.0,
+       "ultimate": 999.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 249.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 249.0,
+       "ultimate": 999.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 249.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 249.0,
+       "ultimate": 999.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 249.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 249.0,
+       "ultimate": 999.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 249.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": 249.0,
+       "ultimate": 999.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "ultimate",
+      "cheapest_plan_name": "Ultimate",
+      "total_month": 999.0,
+      "billed": {
+       "amount": 999.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "not_eligible",
+       "ultimate": 999.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "ultimate",
+      "cheapest_plan_name": "Ultimate",
+      "total_month": 999.0,
+      "billed": {
+       "amount": 999.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "not_eligible",
+       "ultimate": 999.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "not_eligible",
+       "ultimate": "not_eligible"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "not_eligible",
+       "ultimate": "not_eligible"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "professional": "not_eligible",
+       "ultimate": "not_eligible"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "starter",
+      "to_plan": "professional",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Professional"
+     },
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "professional",
+      "to_plan": "ultimate",
+      "from_plan_name": "Professional",
+      "to_plan_name": "Ultimate"
+     },
+     {
+      "from_units": 20,
+      "to_units": 25,
+      "from_plan": "ultimate",
+      "to_plan": null,
+      "from_plan_name": "Ultimate",
+      "to_plan_name": null
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Higher credit steps within a family, chosen by download volume rather than seats.",
+     "Quarterly and yearly billing, shown only as a discounted sale price.",
+     "The pricing table contradicts itself on brand limits and on Ultimate's user count in the yearly view."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -108,9 +496,21 @@
    "status": "open"
   },
   {
-   "question_id": "adcreative-ai:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "adcreative-ai:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Higher credit steps within a family, chosen by download volume rather than seats. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "adcreative-ai:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Quarterly and yearly billing, shown only as a discounted sale price. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "adcreative-ai:pricing_gap_3",
+   "key": "pricing_gap_3",
+   "question": "Our price check could not put a number on this part of the cost: The pricing table contradicts itself on brand limits and on Ultimate's user count in the yearly view. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

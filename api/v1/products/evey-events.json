@@ -71,16 +71,411 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "lite",
+     "name": "Lite",
+     "model": "free",
+     "evidence": "Lite is free to install and takes $1.00 per ticket"
+    },
+    {
+     "id": "growth",
+     "name": "Growth",
+     "model": "per_unit",
+     "monthly": 19,
+     "annual_status": "unknown",
+     "evidence": "Growth is $19 a month and $0.75"
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "per_unit",
+     "monthly": 49,
+     "annual_status": "unknown",
+     "evidence": "Standard, the tier the store marks Popular, is $49 and $0.50"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "per_unit",
+     "monthly": 189,
+     "annual_status": "unknown",
+     "evidence": "Professional is $189 and $0.25"
+    }
+   ],
+   "usage": [
+    {
+     "id": "ticket_lite",
+     "label": "Per ticket processed (Lite)",
+     "unit": "ticket",
+     "price": 1.0,
+     "only_on": [
+      "lite"
+     ],
+     "evidence": "Lite is free to install and takes $1.00 per ticket"
+    },
+    {
+     "id": "ticket_growth",
+     "label": "Per ticket processed (Growth)",
+     "unit": "ticket",
+     "price": 0.75,
+     "only_on": [
+      "growth"
+     ],
+     "evidence": "Growth is $19 a month and $0.75"
+    },
+    {
+     "id": "ticket_standard",
+     "label": "Per ticket processed (Standard)",
+     "unit": "ticket",
+     "price": 0.5,
+     "only_on": [
+      "standard"
+     ],
+     "evidence": "Standard, the tier the store marks Popular, is $49 and $0.50"
+    },
+    {
+     "id": "ticket_professional",
+     "label": "Per ticket processed (Professional)",
+     "unit": "ticket",
+     "price": 0.25,
+     "only_on": [
+      "professional"
+     ],
+     "evidence": "Professional is $189 and $0.25"
+    }
+   ],
+   "notes": [
+    "Every tier charges a monthly fee and a fee per ticket processed; pick the tier by ticket volume.",
+    "Billed through the Shopify invoice; the paid tiers carry a 7-day free trial."
+   ],
+   "rules_verified_at": "2026-11-26"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "evey-events",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "growth": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "growth": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "growth": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "growth": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "professional": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "growth": "price_unknown_on_billing",
+       "standard": "price_unknown_on_billing",
+       "professional": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "Add payment method",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Shopify approval screen for the free Lite plan said This app bills you for usage charges, asked for a payment method with an Add payment method row and had a greyed out Approve button, and the sentence about a test charge was missing. The dossier calls Lite free to install.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/evey-events-review.html#claim-vs-measured"
+      },
+      "plan": "Lite approval screen, not approved, development store",
+      "comparability": "Dossier wording on a free Lite plan versus the approval screen that asked for a payment method.",
+      "status": "contradicted",
+      "buying_consequence": "Even the free plan needs a payment method before it can be approved, which a shop that wants to try it without a card should know.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://marketingandsalessoftware.com/evey-events-review.html"
+     },
+     {
+      "claim": "Recurring events",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "On the Change plan page Recurring events is struck through on Lite and listed on Growth, Standard and Professional. In the trial a recurring event could be created and one date saved; a weekly repeat was not made, so the booking problem on the free plan could not be tested.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/evey-events-review.html#claim-vs-measured"
+      },
+      "plan": "Lite approval screen, not approved, development store",
+      "comparability": "Dossier warning about recurring events on the free plan versus the plan card strike through in the app; booking in the webshop was not tried.",
+      "status": "confirmed",
+      "buying_consequence": "Recurring events are listed only on the paid plans, so a tour operator who needs weekly tours cannot rely on the free Lite plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/evey-events-review.html"
+     },
+     {
+      "claim": "Storefront product page scheduler is disabled",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The event settings warn that the storefront product page scheduler is disabled and has to be enabled for a recurring event with several dates and times; we left it disabled and did not open the storefront, so no booking was tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/evey-events-review.html#claim-vs-measured"
+      },
+      "plan": "Lite approval screen, not approved, development store",
+      "comparability": "Dossier claim on recurring bookings versus an admin warning and a storefront that was not opened.",
+      "status": "not_testable",
+      "buying_consequence": "Whether customers can pick a date and book a recurring event could not be seen from this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/evey-events-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "evey-events",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "growth": 19.0,
+       "standard": 49.0,
+       "professional": 189.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "growth": 38.0,
+       "standard": 98.0,
+       "professional": 378.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "growth": 57.0,
+       "standard": 147.0,
+       "professional": 567.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "growth": 95.0,
+       "standard": 245.0,
+       "professional": 945.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "lite",
+      "cheapest_plan_name": "Lite",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "lite": 0.0,
+       "growth": 190.0,
+       "standard": 490.0,
+       "professional": 1890.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "Add payment method",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Shopify approval screen for the free Lite plan said This app bills you for usage charges, asked for a payment method with an Add payment method row and had a greyed out Approve button, and the sentence about a test charge was missing. The dossier calls Lite free to install.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/evey-events-review.html#claim-vs-measured"
+      },
+      "plan": "Lite approval screen, not approved, development store",
+      "comparability": "Dossier wording on a free Lite plan versus the approval screen that asked for a payment method.",
+      "status": "contradicted",
+      "buying_consequence": "Even the free plan needs a payment method before it can be approved, which a shop that wants to try it without a card should know.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://marketingandsalessoftware.com/evey-events-review.html"
+     },
+     {
+      "claim": "Recurring events",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "On the Change plan page Recurring events is struck through on Lite and listed on Growth, Standard and Professional. In the trial a recurring event could be created and one date saved; a weekly repeat was not made, so the booking problem on the free plan could not be tested.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/evey-events-review.html#claim-vs-measured"
+      },
+      "plan": "Lite approval screen, not approved, development store",
+      "comparability": "Dossier warning about recurring events on the free plan versus the plan card strike through in the app; booking in the webshop was not tried.",
+      "status": "confirmed",
+      "buying_consequence": "Recurring events are listed only on the paid plans, so a tour operator who needs weekly tours cannot rely on the free Lite plan.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/evey-events-review.html"
+     },
+     {
+      "claim": "Storefront product page scheduler is disabled",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The event settings warn that the storefront product page scheduler is disabled and has to be enabled for a recurring event with several dates and times; we left it disabled and did not open the storefront, so no booking was tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/evey-events-review.html#claim-vs-measured"
+      },
+      "plan": "Lite approval screen, not approved, development store",
+      "comparability": "Dossier claim on recurring bookings versus an admin warning and a storefront that was not opened.",
+      "status": "not_testable",
+      "buying_consequence": "Whether customers can pick a date and book a recurring event could not be seen from this test.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/evey-events-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -509,12 +904,6 @@
    "question_id": "evey-events:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "evey-events:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

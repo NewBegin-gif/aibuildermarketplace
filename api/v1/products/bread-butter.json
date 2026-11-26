@@ -15,24 +15,20 @@
   "entry_price": "$49",
   "entry_price_terms": "a month per website (5,000 lead profiles)",
   "from_price_usd_month": 49.0,
-  "plans": [
-   {
-    "name": "Free",
-    "price": "$0",
-    "includes": "unlimited website traffic, 200 stored lead profiles, 30 days attribution retention, unlimited team members"
-   },
-   {
-    "name": "AI Enabled Pro",
-    "price": "$49 a month per website",
-    "includes": "5,000 lead profiles, 10-year retention, 3,000 credits a month, three peripheral sub-domains"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-09-20 on breadbutter.io/pricing) Two published plans. Free at $0: unlimited website traffic, 200 stored lead profiles, 30 days of attribution retention, your existing web forms, lead capture and content gating, social logins with your own branding, server-side journey tracking, CSV, Google Sheets and Mailchimp export, Slack alerts, unlimited team members, one-day email response. AI Enabled Pro at $49 a month per website: 5,000 lead profiles, 10-year retention, 3,000 credits a month, three peripheral sub-domains, one-hour email response, plus attribution reporting, journey and event tracking, custom views, real-time email validation, Focused Score AI, deep profile enrichment, Nurture AI messages, the Focused Index, and CRM, Zapier and webhook sync. One add-on: Scale Credits at $89 a month per 10,000 credits, stackable. Profiles beyond 5,000 cost 2 credits each; Intelligence Brief syncs cost 5 credits each; the Intelligence Stream needs an enterprise licence. Pro comes with a 30-day trial, no credit card. The pricing page publishes no annual rate and no enterprise price.",
-  "verified_at": "2026-09-20",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-11-26 on breadbutter.io/pricing and the help article 'How do Credits work', support.breadbutter.io/article/201) Three published plans and a custom Enterprise tier. Free at $0: unlimited website traffic, one domain, 200 stored lead profiles, 30 days of attribution retention, no credits, your existing web forms, lead capture and content gates, social logins with your own branding, visitor journey tracking, list export to CSV, Google Sheets and Mailchimp, a Slack post when a lead converts, unlimited team members, one-day email response. AI Enabled Pro at $49 a month per website: one domain plus 3 subdomains, 5,000 lead profiles, 5 years of attribution retention, 3,000 credits a month, one-hour email response, plus attribution reporting, journey and event tracking, custom views, real-time email verification, Focused Score, profile enrichment, Nurture AI messages, the Focused Index and Ratio, the Intelligence Brief in Slack and in Salesforce, HubSpot or Pipedrive, and Zapier and webhooks. AI assistant Pro Plus at $199 a month per website: one domain plus 9 subdomains, 10,000 lead profiles, lifetime retention, 10,000 credits a month, plus AI assistant reports in Claude or ChatGPT, Lookalikes, Lead Gen Autopilot and an MCP server. Enterprise is priced around your websites and volume ('Let's talk', for larger teams and agencies) and adds several websites under one account, a data warehouse, the Intelligence Stream and onboarding with their team. Extra credits: 10,000 for $89 a month on Pro and Pro Plus; the help article adds that pricing can vary by plan and by partner and that the current price is shown in the app. What credits pay for, per that article: 2 credits a month for each stored profile beyond the plan allowance, 3 credits per Intelligence Brief generated, on average 25 to 250 credits per profile researched, a quarter of a credit per AI assistant question plus 1 credit per 100 rows (Pro Plus), and 100 credits per lookalike plus its research. Unused credits do not carry over, and Free cannot add credits. Two points on the same day disagree: the help article gives Free 500 stored profiles where the pricing table says 200, and it calls the Intelligence Stream part of an Enterprise license while the pricing table lists it in the Zapier and webhook rows of Pro and Pro Plus. Pro has a 30-day trial and no credit card is asked. The pricing page publishes no annual rate.",
+  "verified_at": "2026-11-26",
   "source_url": null,
   "schema_offer": null,
   "source_quotes": [
+   {
+    "field": "price",
+    "plan": "Pro Plus",
+    "quote": "Pro Plus Ask about your buyers from the AI assistant you already use. $ 199 /mth, per website",
+    "source_url": "https://breadbutter.io/pricing/",
+    "read_on": "2026-11-20"
+   },
    {
     "field": "price",
     "plan": "Pro",
@@ -57,20 +53,13 @@
   "price_history": null
  },
  "free_plan": true,
- "free_plan_evidence": "Free at $0: unlimited website traffic, 200 stored lead profiles, 30 days of attribution retention, your existing web forms, lead capture and content gating, social logins with your own branding, server-side journey tracking, CSV, Google Sheets and Mailchimp export, Slack alerts, unlimited team members, one-day email response.",
+ "free_plan_evidence": "Free at $0: unlimited website traffic, one domain, 200 stored lead profiles, 30 days of attribution retention, no credits, your existing web forms, lead capture and content gates, social logins with your own branding, visitor journey tracking, list export to CSV, Google Sheets and Mailchimp, a Slack post when a lead converts, unlimited team members, one-day email response.",
  "cost_traps": [
   {
    "id": "usage_metered",
    "label": "Usage-metered",
-   "evidence": "AI Enabled Pro at $49 a month per website: 5,000 lead profiles, 10-year retention, 3,000 credits a month, three peripheral sub-domains, one-hour email response, plus attribution reporting, journey and event tracking, custom views, real-time email validation, Focused Score AI, deep profile enrichment, Nurture AI messages, the Focused Index, and CRM, Zapier and webhook sync.",
-   "verified_at": "2026-09-20",
-   "source_url": null
-  },
-  {
-   "id": "addons_extra",
-   "label": "Key features are paid add-ons",
-   "evidence": "One add-on: Scale Credits at $89 a month per 10,000 credits, stackable.",
-   "verified_at": "2026-09-20",
+   "evidence": "(re-verified 2026-11-26 on breadbutter.io/pricing and the help article 'How do Credits work', support.breadbutter.io/article/201) Three published plans and a custom Enterprise tier.",
+   "verified_at": "2026-11-26",
    "source_url": null
   }
  ],
@@ -99,15 +88,429 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free at $0: unlimited website traffic, one domain, 200 stored lead profiles"
+    },
+    {
+     "id": "pro",
+     "name": "AI Enabled Pro",
+     "model": "flat",
+     "price_month": 49,
+     "billing": "unspecified",
+     "evidence": "AI Enabled Pro at $49 a month per website"
+    },
+    {
+     "id": "pro-plus",
+     "name": "AI assistant Pro Plus",
+     "model": "flat",
+     "price_month": 199,
+     "billing": "unspecified",
+     "evidence": "AI assistant Pro Plus at $199 a month per website"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is priced around your websites and volume"
+    }
+   ],
+   "notes": [
+    "Team members are unlimited on every plan; the price is per website, so the estimate is for one website. Multiply by the number of root domains you track.",
+    "The pricing page publishes no annual rate."
+   ],
+   "not_computable": [
+    {
+     "text": "Extra credit blocks (10,000 for $89 a month) depend on how many leads are researched, at an average of 25 to 250 credits per profile.",
+     "affects_cost": true
+    }
+   ],
+   "rules_verified_at": "2026-11-26"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "bread-butter",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Extra credit blocks (10,000 for $89 a month) depend on how many leads are researched, at an average of 25 to 250 credits per profile."
+    ]
+   },
+   "monthly": {
+    "product_id": "bread-butter",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "pro": 49.0,
+       "pro-plus": 199.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Extra credit blocks (10,000 for $89 a month) depend on how many leads are researched, at an average of 25 to 250 credits per profile."
+    ]
+   }
+  }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -137,9 +540,9 @@
    "status": "open"
   },
   {
-   "question_id": "bread-butter:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "bread-butter:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Extra credit blocks (10,000 for $89 a month) depend on how many leads are researched, at an average of 25 to 250 credits per profile. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

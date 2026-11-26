@@ -17,8 +17,8 @@
   "from_price_usd_month": 19.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(read 2026-10-17 in a browser on outsends.com/pricing, monthly view; the cards show a $ sign without naming the currency, and the page says prices exclude VAT) Four fixed plans, each with unlimited campaigns, sequences and templates and no daily sending caps. Starter is $19 a month for 20,000 emails a month and 10,000 active contacts, 1 seat, 15 AI credits a day and 3 warm-up accounts. Pro is $49 for 100,000 emails and 50,000 contacts, 1 seat, 50 AI credits a day and 10 warm-up accounts. Growth is $99 for 200,000 emails and 100,000 contacts, 1 seat, 100 credits and 20 warm-up accounts. Team / Agency is $199 for 350,000 emails, 200,000 contacts, 10 team seats, 200 credits and 50 warm-up accounts. Starter keeps logs for 30 days, the others for 60. Above that, Custom starts at $300 a month for 300K to 2M+ emails at $1.00 per 1,000 emails. Annual billing is advertised as two months free, saving up to $398 a year; we did not get the annual totals to display, so check them at checkout. Monthly plans start with a 14-day free trial. When we tested on 18 November 2026, a new account started on a Free plan inside the app that the pricing page does not show. It let us import contacts and save a template, but creating a follow-up sequence was blocked: 'Sequence limit reached. You have 0 sequences. Upgrade your plan to create more.' The Free plan also requires an unsubscribe footer. The terms say paid fees are non-refundable unless the law requires otherwise, and a cancellation takes effect at the end of the billing period.",
-  "verified_at": "2026-10-17",
+  "notes": "(re-verified 2026-11-26 on outsends.com/pricing, /pricing.md and /llms.txt: monthly prices and limits unchanged; the yearly totals are now readable) (read 2026-10-17 in a browser on outsends.com/pricing, monthly view; the cards show a $ sign without naming the currency, and the page says prices exclude VAT) Four fixed plans, each with unlimited campaigns, sequences and templates and no daily sending caps. Starter is $19 a month for 20,000 emails a month and 10,000 active contacts, 1 seat, 15 AI credits a day and 3 warm-up accounts. Pro is $49 for 100,000 emails and 50,000 contacts, 1 seat, 50 AI credits a day and 10 warm-up accounts. Growth is $99 for 200,000 emails and 100,000 contacts, 1 seat, 100 credits and 20 warm-up accounts. Team / Agency is $199 for 350,000 emails, 200,000 contacts, 10 team seats, 200 credits and 50 warm-up accounts. Starter keeps logs for 30 days, the others for 60. Above that, Custom starts at $300 a month for 300K to 2M+ emails at $1.00 per 1,000 emails. Annual billing is advertised as two months free, saving up to $398 a year; on 26 November 2026 the pricing page in markdown listed the yearly totals as $190 for Starter ($15.83 a month), $490 for Pro ($40.83), $990 for Growth ($82.50) and $1,990 for Team / Agency ($165.83). Monthly plans start with a 14-day free trial. When we tested on 18 November 2026, a new account started on a Free plan inside the app that the pricing page does not show. It let us import contacts and save a template, but creating a follow-up sequence was blocked: 'Sequence limit reached. You have 0 sequences. Upgrade your plan to create more.' The Free plan also requires an unsubscribe footer. The terms say paid fees are non-refundable unless the law requires otherwise, and a cancellation takes effect at the end of the billing period.",
+  "verified_at": "2026-11-26",
   "source_url": "https://outsends.com/pricing",
   "schema_offer": {
    "price": 19.0,
@@ -67,13 +67,13 @@
   "price_history": {
    "status": "stable",
    "tracked_since": "2026-10-25",
-   "last_read": "2026-11-25",
-   "read_days": 7,
+   "last_read": "2026-11-26",
+   "read_days": 8,
    "stable": {
     "since": "2026-10-25",
-    "until": "2026-11-25",
-    "reads": 7,
-    "days": 31
+    "until": "2026-11-26",
+    "reads": 8,
+    "days": 32
    },
    "changes": [],
    "method": "Stable = every amount on the vendor's pricing page identical across >= 3 of our reads over >= 30 days. A change is listed only after we confirmed the new price on the page, with a verbatim quote. Differences in raw readings are never published on their own."
@@ -86,14 +86,14 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "Starter is $19 a month for 20,000 emails a month and 10,000 active contacts, 1 seat, 15 AI credits a day and 3 warm-up accounts.",
-   "verified_at": "2026-10-17",
+   "verified_at": "2026-11-26",
    "source_url": "https://outsends.com/pricing"
   },
   {
    "id": "annual_lock",
    "label": "Annual commitment",
-   "evidence": "Annual billing is advertised as two months free, saving up to $398 a year; we did not get the annual totals to display, so check them at checkout.",
-   "verified_at": "2026-10-17",
+   "evidence": "Annual billing is advertised as two months free, saving up to $398 a year; on 26 November 2026 the pricing page in markdown listed the yearly totals as $190 for Starter ($15.83 a month), $490 for Pro ($40.83), $990 for Growth ($82.50) and $1,990 for Team / Agency ($165.83).",
+   "verified_at": "2026-11-26",
    "source_url": "https://outsends.com/pricing"
   }
  ],
@@ -122,412 +122,15 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "available",
+  "status": "stale",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": {
-   "currency": "USD",
-   "unit": "seat",
-   "axis": "users",
-   "plans": [
-    {
-     "id": "starter",
-     "name": "Starter",
-     "model": "flat",
-     "included_units": 1,
-     "max_units": 1,
-     "monthly": 19,
-     "annual_status": "unknown",
-     "evidence": "Starter is $19 a month for 20,000 emails a month and 10,000 active contacts, 1 seat"
-    },
-    {
-     "id": "pro",
-     "name": "Pro",
-     "model": "flat",
-     "included_units": 1,
-     "max_units": 1,
-     "monthly": 49,
-     "annual_status": "unknown",
-     "evidence": "Pro is $49 for 100,000 emails and 50,000 contacts, 1 seat"
-    },
-    {
-     "id": "growth",
-     "name": "Growth",
-     "model": "flat",
-     "included_units": 1,
-     "max_units": 1,
-     "monthly": 99,
-     "annual_status": "unknown",
-     "evidence": "Growth is $99 for 200,000 emails and 100,000 contacts, 1 seat"
-    },
-    {
-     "id": "team-agency",
-     "name": "Team / Agency",
-     "model": "flat",
-     "included_units": 10,
-     "max_units": 10,
-     "monthly": 199,
-     "annual_status": "unknown",
-     "evidence": "Team / Agency is $199 for 350,000 emails, 200,000 contacts, 10 team seats"
-    }
-   ],
-   "notes": [
-    "Prices exclude VAT. Each plan also caps emails and active contacts a month; pick the plan on volume as well as seats.",
-    "Annual billing is advertised as two months free, but the annual totals were not shown in our reading."
-   ],
-   "not_computable": [
-    {
-     "text": "Custom starts at $300 a month for 300K to 2M+ emails at $1.00 per 1,000 emails; seats on Custom are not stated.",
-     "affects_cost": true
-    }
-   ],
-   "rules_verified_at": "2026-10-18"
-  },
-  "growth": {
-   "annual": {
-    "product_id": "outsends",
-    "currency": "USD",
-    "axis": "users",
-    "unit": "seat",
-    "billing": "annual",
-    "rows": [
-     {
-      "units": 1,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "price_unknown_on_billing",
-       "pro": "price_unknown_on_billing",
-       "growth": "price_unknown_on_billing",
-       "team-agency": "price_unknown_on_billing"
-      }
-     },
-     {
-      "units": 2,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "price_unknown_on_billing"
-      }
-     },
-     {
-      "units": 3,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "price_unknown_on_billing"
-      }
-     },
-     {
-      "units": 5,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "price_unknown_on_billing"
-      }
-     },
-     {
-      "units": 10,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "price_unknown_on_billing"
-      }
-     },
-     {
-      "units": 15,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "not_eligible"
-      }
-     },
-     {
-      "units": 20,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "not_eligible"
-      }
-     },
-     {
-      "units": 25,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "not_eligible"
-      }
-     },
-     {
-      "units": 50,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "not_eligible"
-      }
-     },
-     {
-      "units": 100,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "not_eligible"
-      }
-     }
-    ],
-    "switch_points": [],
-    "conflicts": [],
-    "unknowns": [
-     "Custom starts at $300 a month for 300K to 2M+ emails at $1.00 per 1,000 emails; seats on Custom are not stated."
-    ]
-   },
-   "monthly": {
-    "product_id": "outsends",
-    "currency": "USD",
-    "axis": "users",
-    "unit": "seat",
-    "billing": "monthly",
-    "rows": [
-     {
-      "units": 1,
-      "cheapest_plan": "starter",
-      "cheapest_plan_name": "Starter",
-      "total_month": 19.0,
-      "billed": {
-       "amount": 19.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "starter": 19.0,
-       "pro": 49.0,
-       "growth": 99.0,
-       "team-agency": 199.0
-      }
-     },
-     {
-      "units": 2,
-      "cheapest_plan": "team-agency",
-      "cheapest_plan_name": "Team / Agency",
-      "total_month": 199.0,
-      "billed": {
-       "amount": 199.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": 199.0
-      }
-     },
-     {
-      "units": 3,
-      "cheapest_plan": "team-agency",
-      "cheapest_plan_name": "Team / Agency",
-      "total_month": 199.0,
-      "billed": {
-       "amount": 199.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": 199.0
-      }
-     },
-     {
-      "units": 5,
-      "cheapest_plan": "team-agency",
-      "cheapest_plan_name": "Team / Agency",
-      "total_month": 199.0,
-      "billed": {
-       "amount": 199.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": 199.0
-      }
-     },
-     {
-      "units": 10,
-      "cheapest_plan": "team-agency",
-      "cheapest_plan_name": "Team / Agency",
-      "total_month": 199.0,
-      "billed": {
-       "amount": 199.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": 199.0
-      }
-     },
-     {
-      "units": 15,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "not_eligible"
-      }
-     },
-     {
-      "units": 20,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "not_eligible"
-      }
-     },
-     {
-      "units": 25,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "not_eligible"
-      }
-     },
-     {
-      "units": 50,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "not_eligible"
-      }
-     },
-     {
-      "units": 100,
-      "cheapest_plan": null,
-      "cheapest_plan_name": null,
-      "total_month": null,
-      "billed": null,
-      "ranges": [],
-      "per_plan": {
-       "starter": "not_eligible",
-       "pro": "not_eligible",
-       "growth": "not_eligible",
-       "team-agency": "not_eligible"
-      }
-     }
-    ],
-    "switch_points": [
-     {
-      "from_units": 1,
-      "to_units": 2,
-      "from_plan": "starter",
-      "to_plan": "team-agency",
-      "from_plan_name": "Starter",
-      "to_plan_name": "Team / Agency"
-     },
-     {
-      "from_units": 10,
-      "to_units": 15,
-      "from_plan": "team-agency",
-      "to_plan": null,
-      "from_plan_name": "Team / Agency",
-      "to_plan_name": null
-     }
-    ],
-    "conflicts": [],
-    "unknowns": [
-     "Custom starts at $300 a month for 300K to 2M+ emails at $1.00 per 1,000 emails; seats on Custom are not stated."
-    ]
-   }
-  }
+  "rules": null,
+  "growth": null
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
+  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -538,6 +141,12 @@
  "status_page": null,
  "task_evidence": null,
  "open_questions": [
+  {
+   "question_id": "outsends:outsends-q1",
+   "key": "outsends-q1",
+   "question": "What happens when you pass the monthly email or active contact quota?",
+   "status": "open"
+  },
   {
    "question_id": "outsends:cancellation_terms",
    "key": "cancellation_terms",
@@ -557,9 +166,9 @@
    "status": "open"
   },
   {
-   "question_id": "outsends:pricing_gap_1",
-   "key": "pricing_gap_1",
-   "question": "Our price check could not put a number on this part of the cost: Custom starts at $300 a month for 300K to 2M+ emails at $1.00 per 1,000 emails; seats on Custom are not stated. Can you publish the price or the rule?",
+   "question_id": "outsends:minimum_seats",
+   "key": "minimum_seats",
+   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

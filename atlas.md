@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 701 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-25.
+All 703 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-26.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -179,7 +179,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** You pay the subscription plus wholesale product cost, and the low Starter product cap nudges serious stores up to Pro quickly.
 - **Best for:** dropshippers who want automated product sourcing, fulfillment and inventory sync with access to faster-shipping suppliers and one-click store integration
 - **Flags:** Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/alidrop-review/
+- **Full review:** https://marketingandsalessoftware.com/alidrop-review.html
 
 ## All in One SEO (aioseo.com)
 - **Verified pricing:** (read 2026-11-14 on aioseo.com/pricing) All in One SEO sells four yearly plans.
@@ -193,14 +193,14 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The entry is $299 a month paid monthly, agency-grade automation priced accordingly, and every tier meters on FOUR axes at once (sites, seats, keywords, pages).
 - **Best for:** consultants and agencies managing SEO across a portfolio of client sites who want bulk on-page changes, optimization rules and keyword tracking from one dashboard
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/alli-ai-review/
+- **Full review:** https://marketingandsalessoftware.com/alli-ai-review.html
 
 ## Alohi (alohi.com)
 - **Verified pricing:** (read 2026-09-10 and re-read unchanged 2026-09-27 and 2026-11-19 on fax.plus/pricing and sign.plus/pricing) Priced per product, in USD, with a currency switcher offering EUR, CHF and GBP.
 - **Honest take:** The honest catch is that Alohi is a suite of separate products: Fax.Plus, Sign.Plus, Scan.Plus: each with its own subscription.
 - **Best for:** businesses that need secure online faxing, e-signatures or scanning: especially regulated ones needing HIPAA-compliant fax on the Enterprise tier
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra, Annual commit, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/alohi-review/
+- **Full review:** https://officesoftwaremarketplace.com/alohi-review.html
 
 ## AltText.ai (alttext.ai)
 - **Verified pricing:** (re-verified 10 Oct 2026; figures unchanged since 26 Aug 2026) Credit-metered — one credit = one image.
@@ -2088,7 +2088,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/kedra-ai-index-review.html
 
 ## Kedra Checkout Rules & Upsells (kedra.io)
-- **Verified pricing:** (Shopify App Store listing, read 15 Oct 2026 and read again 16 Nov 2026, prices in USD) Four plans, billed through your Shopify invoice.
+- **Verified pricing:** (re-verified 2026-11-26 on the Shopify listing: prices, the 5 day trial and the $1 a month offer for the first 3 months unchanged; the 30% yearly saving checks out at about 30% on all three…
 - **Honest take:** Free runs one rule; rules skip draft orders.
 - **Best for:** Shopify merchants who want to hide, rename or reorder payment and shipping methods, validate the checkout and add post-purchase upsells with rules instead of a developer, for a few dollars a month
 - **Flags:** Free tier
@@ -2610,7 +2610,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** It has no track record at all.
 - **Best for:** Shopify merchants who already care about being cited in ChatGPT, Gemini and Perplexity, and who want the audit, the schema deployment, the llms.txt file and the citation tracking in one app instead of stitching them together
 - **Flags:** Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/nexis-cro-review/
+- **Full review:** https://marketingandsalessoftware.com/nexis-cro-review.html
 
 ## Nextify.ai (nextify.ai)
 - **Verified pricing:** (read 7 September 2026 on nextify.ai/pricing, signed in and signed out, in both billing modes; re-read 17 October and again 21 November 2026 signed out, where the annual figures, the $29, $…
@@ -2752,7 +2752,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/outgrow-review.html
 
 ## OutSends (outsends.com)
-- **Verified pricing:** (read 2026-10-17 in a browser on outsends.com/pricing, monthly view; the cards show a $ sign without naming the currency, and the page says prices exclude VAT) Four fixed plans, each with u…
+- **Verified pricing:** (re-verified 2026-11-26 on outsends.com/pricing, /pricing.md and /llms.txt: monthly prices and limits unchanged; the yearly totals are now readable) (read 2026-10-17 in a browser on outsend…
 - **Honest take:** Non-refundable; one seat below the $199 Team plan; trial only on monthly plans.
 - **Best for:** founders, freelancers and small agencies who run cold email from Gmail and want flat monthly plans by email volume, with warm-up and follow-up sequences included
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -2818,7 +2818,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Every headline price is a 'starting from' that dead-ends at 'book a demo'.
 - **Best for:** finance-led mid-market and enterprises already running legal entities in several countries. They want to consolidate fragmented multi-country payroll and cross-border payments into one platform
 - **Flags:** Per-seat pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/papaya-global-review/
+- **Full review:** https://officesoftwaremarketplace.com/papaya-global-review.html
 
 ## Parallel AI (parallellabs.app)
 - **Verified pricing:** (re-verified 2026-11-03 on parallellabs.app/pricing; the page we read on 11 September 2026 sold credits, and that model is gone) Parallel AI now sells flat plans with usage limits instead o…
@@ -3085,6 +3085,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** operations-driven teams that run recurring, checklist-based processes and want them tracked and auditable
 - **Flags:** Hidden pricing, Per-seat pricing
 - **Full review:** https://officesoftwaremarketplace.com/process-street-review.html
+
+## Proposall (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-26 on apps.shopify.com/propose, USD) Launch Pad: free, 5 proposals a month in our test.
+- **Honest take:** Shopify app for building custom quotes from your products; free for 5 proposals a month, e-signatures from $14.99 a month.
+- **Best for:** Shopify stores that send custom quotes on bulk orders and want to build them from their products in a couple of minutes
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/proposall-review/
 
 ## ProtectMyOrder (protectmyorder.com)
 - **Verified pricing:** (re-read 2026-09-18 and again on 2026-10-05) The App Store route has closed.
@@ -3755,6 +3762,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** companies hiring a few people in countries where they have no entity, especially in Southeast Asia, that want a low published EOR starting price and a dedicated account manager
 - **Full review:** https://officesoftwaremarketplace.com/slasify-review.html
 
+## Sledge (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-26 on apps.shopify.com/sledge, USD) Development store: free, 50 products indexed, no AI search.
+- **Honest take:** Shopify app for AI search, product filters and offers; free on development stores, Pro is $29.99 a month.
+- **Best for:** Shopify stores whose shoppers struggle to find products and that want search, filters and offers in one app
+- **Flags:** Free tier
+- **Full review:** https://marketingandsalessoftware.com/sledge-review.html
+
 ## Smartli (smartli.ai)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/smartli-ai-product-description and in our own test that day; earlier: re-verified 2026-09-11 and re-read 2026-09-27 on smartli.ai/pricing; Monthly and Y…
 - **Honest take:** Smartli bundles nine AI tools (copy, SEO, images, logos) into one suite, and that breadth is also the honest catch: each individual tool is competent rather than the best at its job.
@@ -4269,7 +4283,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/trainual-review/
 
 ## Tresorit (tresorit.com)
-- **Verified pricing:** (re-verified 2026-11-22 on tresorit.com/pricing/business with both billing toggles: the business prices below are unchanged, €36, €24 and €30 monthly and €28.80, €19.20 and €24 yearly, and …
+- **Verified pricing:** (re-verified 2026-11-26 on tresorit.com/pricing/business: the euro yearly rates are unchanged at €28.80, €19.20 and €24; the euro monthly toggle did not load in that reading, so the €36, €2…
 - **Honest take:** You pay the Swiss-E2EE premium (noticeably above mainstream clouds and above Proton Drive per GB) and the encryption trade-offs are inherent.
 - **Best for:** businesses and professionals with confidentiality obligations (legal, health, finance) that need end-to-end-encrypted storage, granular sharing controls and compliance features
 - **Flags:** Per-seat pricing, Add-ons extra
@@ -4391,7 +4405,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/upwork-review.html
 
 ## UserHelp.co (userhelp.co)
-- **Verified pricing:** (read 2026-11-18 on userhelp.co/pricing and in our own test that day; earlier: read 2026-10-17 in a browser; the card shows a $ sign without naming the currency) Two plans, and the page say…
+- **Verified pricing:** (re-verified 2026-11-26 on userhelp.co/pricing: Basic free and Pro $59 one-time, features unchanged) (read 2026-11-18 on userhelp.co/pricing and in our own test that day; earlier: read 2026…
 - **Honest take:** Free for one project with a watermark; Pro is $59 once, with no stated refund rule.
 - **Best for:** freelancers, small agencies and site owners who want a feedback button on their websites that collects annotated screenshots and bug reports, and who prefer one payment to a subscription
 - **Flags:** Add-ons extra, Free tier
@@ -4446,7 +4460,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/vida-ai-review.html
 
 ## VideoScribe (videoscribe.co)
-- **Verified pricing:** (read 2026-10-18 in a browser on videoscribe.co/pricing in the monthly and annual view, from a Netherlands connection, prices shown in euros; the cards do not say whether tax is included) T…
+- **Verified pricing:** (re-verified 2026-11-26 on videoscribe.co/pricing, annual view plus the monthly prices in the page's structured data, in euros: unchanged; the page adds that 5 or more licences on Core or M…
 - **Honest take:** Non-refundable; Lite watermarks premium images, 5 downloads a month.
 - **Best for:** trainers and L&D, HR and marketing teams that want hand-drawn whiteboard explainer videos without hiring an animator
 - **Flags:** Usage-metered

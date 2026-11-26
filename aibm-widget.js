@@ -34,7 +34,7 @@
   function track(tool) {
     try {
       ensureGtag();
-      window.gtag("event", "affiliate_click", {
+      window.gtag("event", "widget_review_click", {
         partner: partnerOf(tool.link),
         source: "widget",
         embed_host: location.hostname,
@@ -84,7 +84,7 @@
       '<div class="aibm-w-cat">' + esc(tool.category) + '</div></div>' +
       '</div>' +
       '<p class="aibm-w-desc">' + esc(tool.desc) + '</p>' +
-      '<a class="aibm-w-cta" href="' + esc(tool.link) + '" target="_blank" rel="sponsored noopener nofollow">Visit ' + esc(tool.name) + ' &rarr;</a>' +
+      '<a class="aibm-w-cta" href="' + esc(tool.link) + '" target="_blank" rel="noopener">Read our ' + esc(tool.name) + ' review &rarr;</a>' +
       '<a class="aibm-w-foot" href="' + SITE + '/b2b/?tool=' + encodeURIComponent(tool.name) + '" target="_blank" rel="noopener">Compare &amp; reviews via AIBuilder Marketplace</a>' +
       '</div>';
     var cta = el.querySelector(".aibm-w-cta");

@@ -603,7 +603,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/breezy-hr-review/
 
 ## Brevo (brevo.com)
-- **Verified pricing:** Brevo serves a different price list depending on where you open the page, and the two are not each other's conversion: Starter and Standard differ by more than the exchange rate ($9 and $18…
+- **Verified pricing:** (re-verified 26 November 2026 on brevo.com/pricing and /pricing.md: USD $9, $18 and $499 a month, or $97, $194 and $5,389 a year, and the EUR ladder unchanged; Brevo's own llms.txt still sa…
 - **Honest take:** Charging by sends looks cheaper for a big list you email rarely, but the send tiers cap stored contacts too.
 - **Best for:** businesses with large contact lists who email selectively and want to pay by send volume, not list size
 - **Flags:** Per-seat pricing, Add-ons extra, Free tier
@@ -775,7 +775,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/chatwith-review.html
 
 ## Checkr (checkr.com)
-- **Verified pricing:** (re-verified 2026-08-17 and again 2026-09-30) Pay-as-you-go per report, no subscription: Basic $29.99, Essential $59.99 and Complete $94.99 per report, with Enterprise quote-only.
+- **Verified pricing:** (re-verified 2026-08-17, 2026-09-30 and 2026-11-26 on checkr.com/pricing; every figure unchanged) Pay-as-you-go per report, no subscription: Basic $29.99, Essential $59.99 and Complete $94.…
 - **Honest take:** The headline per-check price is rarely what you actually pay: passthrough fees vary wildly by county and search type, so budget for the effective cost, not the advertised one.
 - **Best for:** companies hiring hourly or gig workers at volume that need fast, API-driven, compliant background checks
 - **Flags:** Add-ons extra
@@ -1429,7 +1429,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/essential-upsell-cross-sell-review.html
 
 ## Evey Events (evey.io)
-- **Verified pricing:** (re-verified 1 October 2026 on apps.shopify.com/event-tickets; every rate unchanged since 1 September 2026) Four tiers, and every one of them charges twice: a monthly fee and a fee per tick…
+- **Verified pricing:** (re-verified 26 November 2026 on apps.shopify.com/event-tickets; every rate unchanged since 1 September 2026) Four tiers, and every one of them charges twice: a monthly fee and a fee per ti…
 - **Honest take:** Nobody gets caught by the monthly fee here; they get caught by the per-ticket one.
 - **Best for:** Shopify stores that sell tickets alongside products and want attendees, orders and customer data in one place instead of reconciling a separate ticketing platform against the shop
 - **Full review:** https://marketingandsalessoftware.com/evey-events-review.html
@@ -2915,7 +2915,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/petty-cash-manager-review.html
 
 ## PhotoGenerator (photogenerator.ai)
-- **Verified pricing:** (read 3 October 2026 in a live browser on photogenerator.ai/pricing, with every billing mode and every credit option clicked) Credit-based, in US dollars, with no free tier among the publis…
+- **Verified pricing:** (re-verified 26 November 2026 from the plan data served on photogenerator.ai/pricing: every Starter, Pro and Max price and credit quota unchanged; the Pay Once pack prices load only in the …
 - **Honest take:** The credit is not a picture, and that is the thing to understand before buying.
 - **Best for:** people who want several image and video models behind one balance and one interface: switching between Nano Banana, GPT Image 2, Seedance, Kling, Veo and Wan without holding four subscriptions
 - **Flags:** Usage-metered

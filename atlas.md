@@ -419,7 +419,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Shopify order tracking app with a branded tracking page and status emails; free for 300 tracked orders a month, Pro is $9 a month.
 - **Best for:** Shopify stores that ship fewer than 300 orders a month and want a branded tracking page and carrier detection for free
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/besttrack-review/
+- **Full review:** https://marketingandsalessoftware.com/besttrack-review.html
 
 ## BeSure Checkout Rules (checkoutrules.com)
 - **Verified pricing:** (read 2026-11-15 on checkoutrules.com/pricing and the Shopify App Store listing, US dollars, billed through Shopify every 30 days) BeSure Checkout Rules has a Free plan that lets you test r…
@@ -631,7 +631,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/brizy-review/
 
 ## Browse.ai (browse.ai)
-- **Verified pricing:** (price re-verified 2026-09-21 in a live browser on www.browse.ai/pricing, with browse.ai/llms.txt read alongside it) Credit-metered, prices in USD.
+- **Verified pricing:** (price re-verified 2026-11-27 on www.browse.ai/pricing with a plain fetch, with browse.ai/llms.txt, last updated 2026-11-17, read alongside it; first re-verified 2026-09-21) Credit-metered,…
 - **Honest take:** Two honest realities of no-code scraping. Credits burn faster than expected: row counts, screenshots and 'premium' sites all multiply the meter, so monitor a big site daily and do the math first.
 - **Best for:** ops, research and growth teams that want to monitor competitors, prices or listings and pipe structured web data into sheets without writing scrapers
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -1124,7 +1124,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/dify-review.html
 
 ## Diginius (diginius.com)
-- **Verified pricing:** (re-verified 2026-09-22 on diginius.com/pricing/, business pricing) Essential $75 USD a month, Pro $250, Core $500 and marked Most Popular, Business by contact with sales.
+- **Verified pricing:** (re-verified 2026-11-27 on diginius.com/pricing/, business pricing; first re-verified 2026-09-22) Essential $75 USD a month, Pro $250, Core $500 and marked Most Popular, Business by contact…
 - **Honest take:** It bundles PPC, SEO, lead intelligence and reporting, but a dedicated SEO suite or PPC optimizer goes deeper, so it is consolidation for a lean team, not expert-grade tooling.
 - **Best for:** lean teams and agencies that want PPC, SEO and lead intelligence consolidated in one affordable dashboard instead of five subscriptions
 - **Flags:** Usage-metered
@@ -1599,7 +1599,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/forwardly-review.html
 
 ## Foxit (foxit.com)
-- **Verified pricing:** (re-verified 2026-09-22 on the Foxit PDF Editor pricing page; every figure identical to the 1 Sep 2026 reading) PDF Editor is $129.99 per user per year, or $10.99 per user per month, with a…
+- **Verified pricing:** (re-verified 2026-11-27 on the Foxit PDF Editor pricing page and foxit.com/esign-pdf/pricing/: the Editor, Editor+, perpetual, AI Assistant, eSign and volume figures are unchanged; first re…
 - **Honest take:** Buy the $129.99 Editor and then need signatures, and Editor plus standalone eSign Essentials is $249.99 a year against $159.99 for the Editor+ that bundles it.
 - **Best for:** individuals and businesses that want full PDF editing, OCR and organizing at a fraction of Acrobat's subscription: especially multi-seat deployments
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra
@@ -2347,7 +2347,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Shopify app for photo and video reviews with review request emails and widgets; free up to 500 orders, Convert is $49.99 a month.
 - **Best for:** Shopify stores that want to collect photo reviews after fulfilment and show them in on brand widgets
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/loox-review/
+- **Full review:** https://marketingandsalessoftware.com/loox-review.html
 
 ## Lovable (lovable.dev)
 - **Verified pricing:** (read 2026-09-26 on lovable.dev/pricing from a European exit, so shown in euros including VAT, and in Lovable's plans-and-credits documentation) Free: 5 build credits a day, capped at 30 a …
@@ -3178,10 +3178,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/quartile-review.html
 
 ## QuickBooks UK (quickbooks.intuit.com)
-- **Verified pricing:** Read in a live browser on their own UK pricing page, 28 Aug 2026, in pounds.
+- **Verified pricing:** Read in a live browser on their own UK pricing page, 27 Nov 2026, in pounds, with the Monthly toggle selected: Sole Trader Plus £10, Simple Start £18, Essentials £40 for three users, Plus £…
 - **Honest take:** The 90% offer is the number to be careful with, because it is the one you will see everywhere and it is not what you will pay.
 - **Best for:** UK sole traders and small businesses that need Making Tax Digital submissions handled and would rather their accountant worked in the same system they do: the accountant access on every tier is the practical reason most people land here
-- **Flags:** Add-ons extra
+- **Flags:** Renewal jump, Add-ons extra, Annual commit
 - **Full review:** https://officesoftwaremarketplace.com/quickbooks-uk-review.html
 
 ## QuickSigner (quicksigner.com)
@@ -3831,7 +3831,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/social-snowball-review.html
 
 ## SocialBee (socialbee.io)
-- **Verified pricing:** (re-verified 2026-09-22 on socialbee.com/pricing/; every named-plan amount unchanged to the cent.
+- **Verified pricing:** (re-verified 2026-11-27 on socialbee.com/pricing/; first re-verified 2026-09-22.
 - **Honest take:** You are billed per social profile, not per person, and a profile is one brand account on one network.
 - **Best for:** solo marketers and small agencies who post to several networks on a schedule and want evergreen recycling rather than a queue that empties
 - **Flags:** Add-ons extra
@@ -4780,9 +4780,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/zeffy-review.html
 
 ## ZenBusiness (zenbusiness.com)
-- **Verified pricing:** (re-verified 2026-09-22 on zenbusiness.com/pricing-products/, where /pricing/ now redirects; every one of the sixteen published amounts unchanged since 25 Jul 2026) Formation itself is $0 p…
+- **Verified pricing:** (re-verified 2026-11-27 on zenbusiness.com/pricing-products/: fourteen of the sixteen amounts unchanged since 25 Jul 2026; the business website changed and the banking line is gone, see bel…
 - **Honest take:** The $0 is real for the filing service and it is also the whole commercial idea: what you sign up for at zero has an annual carry that is not shown next to it.
 - **Best for:** first-time founders who want the paperwork handled and are willing to pay a yearly fee to keep it handled: the a-la-carte pricing means you can start at the state fee plus a registered agent and add only what you actually need
+- **Flags:** Renewal jump
 - **Full review:** https://officesoftwaremarketplace.com/zenbusiness-review.html
 
 ## Zendesk (zendesk.com)

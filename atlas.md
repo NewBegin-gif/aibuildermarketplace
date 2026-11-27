@@ -4728,7 +4728,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (price re-verified 2026-09-25 and re-read 2026-11-27, every amount the same) A permanent free plan at $0 per user, with no user cap named on the plan card; Team $10 per user a month for 2 t…
 - **Honest take:** It's powerful and scales to complex, cross-team portfolios, but that power brings a learning curve and a per-seat cost that climbs: small teams often find it heavier than they need next to a simpler board tool.
 - **Best for:** mid-to-large teams running complex, cross-functional projects that need robust reporting, workflows and resource management
-- **Flags:** Per-seat pricing, Add-ons extra, Free tier
+- **Flags:** Per-seat pricing, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/wrike-review/
 
 ## Xero (xero.com)

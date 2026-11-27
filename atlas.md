@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 703 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-26.
+All 703 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-27.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -559,7 +559,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Two things about this price list. It is per location, so the arithmetic for a second salon is not a volume discount, it is double, and the add-ons are per location too, which compounds it.
 - **Best for:** salons, spas and clinics with staff to schedule and a front desk to run: the per-location pricing works out fine for one busy site
 - **Flags:** Add-ons extra
-- **Full review:** https://aibuildermarketplace.com/b2b/boulevard-review/
+- **Full review:** https://officesoftwaremarketplace.com/boulevard-review.html
 
 ## Bouncer (usebouncer.com)
 - **Verified pricing:** Email verification credits, pay-as-you-go and never expiring (re-verified 2026-10-13): $8 per 1,000 credits is the minimum purchase.
@@ -1328,7 +1328,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The €5 entry pack is the most expensive way to buy: €5.00 per 1,000 checks against €1.86 at 100,000 and €0.26 at ten million, a spread that rewards guessing your volume upfront.
 - **Best for:** teams cleaning real sending lists before campaigns: bulk verification at volume rates, with credits that never expire
 - **Flags:** Usage-metered
-- **Full review:** https://aibuildermarketplace.com/b2b/emaillistverify-review/
+- **Full review:** https://marketingandsalessoftware.com/emaillistverify-review.html
 
 ## EmailOctopus (emailoctopus.com)
 - **Verified pricing:** (read 2026-11-18 on emailoctopus.com/pricing and its Markdown version, US dollars; earlier: read 2026-11-17) Starter: free, 2,500 subscribers, 10,000 emails a month, branded emails, reports…
@@ -2078,7 +2078,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Cost is the big one (56% of reviewers flag it), the interface feels dated, and there's a real 2–4 week learning curve on the automation builder.
 - **Best for:** service-based small businesses, coaches and solopreneurs who want CRM, email, payments and automation in one tool, and will invest the time to learn it
 - **Flags:** Usage-metered, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/keap-review/
+- **Full review:** https://marketingandsalessoftware.com/keap-review.html
 
 ## Kedra AI Index (kedra.io)
 - **Verified pricing:** (read 2026-11-11 on the Shopify App Store listing, US dollars) Kedra has a Free plan and three paid plans.
@@ -3441,7 +3441,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Data accuracy is the recurring complaint: independent tests put email deliverability around 74% (20–30% bounce) versus ZoomInfo's ~2–3%, so real cost per usable contact climbs.
 - **Best for:** teams that want a huge real-time contact database and AI list-building for less than ZoomInfo, and can tolerate cleaning the data
 - **Flags:** Hidden pricing, Usage-metered, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/seamless-ai-review/
+- **Full review:** https://marketingandsalessoftware.com/seamless-ai-review.html
 
 ## Section Library (sectionlibrary.com)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/mason and in our own test that day; earlier: re-read 2026-09-17, 2026-10-05 and 2026-11-12 on apps.shopify.com/section-library; listed in October as “Se…
@@ -4429,7 +4429,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The pitch is unusually bold: an AI that learns your business the way a great employee would, finds the constraint keeping you stuck, and helps you solve it.
 - **Best for:** hands-on entrepreneurs and small-business owners buried in operational detail who want AI that learns their specific business and helps surface what's actually holding it back: explicitly not enterprise software
 - **Flags:** Per-seat pricing, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/vea-review/
+- **Full review:** https://officesoftwaremarketplace.com/vea-review.html
 
 ## Velora (joinvelora.com)
 - **Verified pricing:** (read 25 September 2026 on joinvelora.com, which has no pricing page, and on the pricing pages of the products it is built on) Quote-only.

@@ -1,0 +1,19 @@
+check_id,check
+T01,Published at a public URL without logging in to the builder
+T02,"Next 14 days: Mon-Fri 07:00 and 18:30, Sat 09:00, no Sunday, 8 spots each"
+T03,"Booking with name and email lowers spots left by one, also after reload"
+T04,Confirmation shows a unique manage link
+T05,A full class cannot be booked: 10 simultaneous requests on an empty 8-spot class
+T06,Same email cannot book the same class twice (also in capitals)
+T07,"Manage link moves a booking: old class +1, new class -1"
+T08,Manage link cancels a booking and frees the spot
+T09,"Manage link contains a long random token, not a sequence number"
+T10,Admin page refuses access without or with a wrong password (UI and API)
+T11,"Admin password not present in page source, JavaScript or URLs"
+T12,"Admin page lists all bookings per class, consistent with T03-T08"
+T13,"Admin can cancel a booking; spot freed, status visible"
+T14,"CSV export with exactly: class date, class time, name, email, status"
+T15,"Empty name, name of only spaces and invalid email are refused (server side)"
+T16,Bookings still there after reload and after republishing
+T17,"Schedule, booking and manage link usable at 390 px without sideways scrolling"
+T18,Code can be exported (GitHub or zip) and data downloaded

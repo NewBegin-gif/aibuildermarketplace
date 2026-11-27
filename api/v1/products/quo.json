@@ -78,16 +78,545 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "max_units": 10,
+     "annual_month": 15,
+     "annual_year": 180,
+     "monthly": 19,
+     "evidence": "Starter $15/user/mo annual (billed $180/yr) or $19 monthly"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "per_unit",
+     "annual_month": 23,
+     "annual_year": 276,
+     "monthly": 33,
+     "evidence": "Business $23 annual ($276/yr) or $33 monthly"
+    },
+    {
+     "id": "scale",
+     "name": "Scale",
+     "model": "per_unit",
+     "annual_month": 35,
+     "annual_year": 420,
+     "monthly": 47,
+     "evidence": "Scale $35 annual ($420/yr) or $47 monthly"
+    }
+   ],
+   "notes": [
+    "The compare-plans table caps Starter at up to 10 paid users; Business and Scale are unlimited.",
+    "Extras are billed on top: a Campaign Registry fee of $19.50 once plus $1.50-$3 a month for US carrier messaging, $5 a month per additional phone number, and international calling per minute."
+   ],
+   "not_computable": [
+    "International calling is billed per minute",
+    "Sona AI credit bundles above the 1,000 a month included are priced separately"
+   ],
+   "rules_verified_at": "2026-11-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "quo",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 15.0,
+      "billed": {
+       "amount": 180.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 15.0,
+       "business": 23.0,
+       "scale": 35.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 30.0,
+      "billed": {
+       "amount": 360.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 30.0,
+       "business": 46.0,
+       "scale": 70.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 45.0,
+      "billed": {
+       "amount": 540.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 45.0,
+       "business": 69.0,
+       "scale": 105.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 900.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 75.0,
+       "business": 115.0,
+       "scale": 175.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 1800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 150.0,
+       "business": 230.0,
+       "scale": 350.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 345.0,
+      "billed": {
+       "amount": 4140.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "business": 345.0,
+       "scale": 525.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 460.0,
+      "billed": {
+       "amount": 5520.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "business": 460.0,
+       "scale": 700.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 575.0,
+      "billed": {
+       "amount": 6900.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "business": 575.0,
+       "scale": 875.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1150.0,
+      "billed": {
+       "amount": 13800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "business": 1150.0,
+       "scale": 1750.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 2300.0,
+      "billed": {
+       "amount": 27600.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "business": 2300.0,
+       "scale": 3500.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "starter",
+      "to_plan": "business",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Business"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "International calling is billed per minute",
+     "Sona AI credit bundles above the 1,000 a month included are priced separately"
+    ],
+    "measured": [
+     {
+      "claim": "Credit usage is unlimited during your 7-day trial period",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Billing shows Credits remaining 1,000 / 1,000 with overages disabled at $1 per call; the dossier says every plan includes 1,000 automation credits a month.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+      },
+      "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+      "comparability": "The billing page against the dossier credit text; no real call used credits.",
+      "status": "confirmed",
+      "buying_consequence": "The trial does not show how fast credits run out.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://zerotouchsupport.com/quo-review.html"
+     },
+     {
+      "claim": "Your subscription was canceled. Your Business Annual plan expires on Nov 26",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "One reason dialog and Cancel subscription ended the trial, without an offer or password; the trial stays active until Nov 26.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+      },
+      "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+      "comparability": "The cancellation in the session; the dossier names no cancel route.",
+      "status": "confirmed",
+      "buying_consequence": "You can cancel on day one and still use the full trial.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://zerotouchsupport.com/quo-review.html"
+     },
+     {
+      "claim": "Billed on Nov 26, 2026",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Next payment shows $276.00 USD for one Business Plan at $276.00 a year, which matches the dossier price of $276 a year for Business billed annually.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+      },
+      "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+      "comparability": "The billing page against the dossier price list.",
+      "status": "confirmed",
+      "buying_consequence": "Without cancelling, the first charge is a full year.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://zerotouchsupport.com/quo-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "quo",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19.0,
+      "billed": {
+       "amount": 19.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19.0,
+       "business": 33.0,
+       "scale": 47.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 38.0,
+      "billed": {
+       "amount": 38.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 38.0,
+       "business": 66.0,
+       "scale": 94.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 57.0,
+      "billed": {
+       "amount": 57.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 57.0,
+       "business": 99.0,
+       "scale": 141.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 95.0,
+      "billed": {
+       "amount": 95.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 95.0,
+       "business": 165.0,
+       "scale": 235.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 190.0,
+      "billed": {
+       "amount": 190.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 190.0,
+       "business": 330.0,
+       "scale": 470.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 495.0,
+      "billed": {
+       "amount": 495.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "business": 495.0,
+       "scale": 705.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 660.0,
+      "billed": {
+       "amount": 660.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "business": 660.0,
+       "scale": 940.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 825.0,
+      "billed": {
+       "amount": 825.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "business": 825.0,
+       "scale": 1175.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 1650.0,
+      "billed": {
+       "amount": 1650.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "business": 1650.0,
+       "scale": 2350.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Business",
+      "total_month": 3300.0,
+      "billed": {
+       "amount": 3300.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": "not_eligible",
+       "business": 3300.0,
+       "scale": 4700.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 10,
+      "to_units": 15,
+      "from_plan": "starter",
+      "to_plan": "business",
+      "from_plan_name": "Starter",
+      "to_plan_name": "Business"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "International calling is billed per minute",
+     "Sona AI credit bundles above the 1,000 a month included are priced separately"
+    ],
+    "measured": [
+     {
+      "claim": "Credit usage is unlimited during your 7-day trial period",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Billing shows Credits remaining 1,000 / 1,000 with overages disabled at $1 per call; the dossier says every plan includes 1,000 automation credits a month.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+      },
+      "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+      "comparability": "The billing page against the dossier credit text; no real call used credits.",
+      "status": "confirmed",
+      "buying_consequence": "The trial does not show how fast credits run out.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://zerotouchsupport.com/quo-review.html"
+     },
+     {
+      "claim": "Your subscription was canceled. Your Business Annual plan expires on Nov 26",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "One reason dialog and Cancel subscription ended the trial, without an offer or password; the trial stays active until Nov 26.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+      },
+      "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+      "comparability": "The cancellation in the session; the dossier names no cancel route.",
+      "status": "confirmed",
+      "buying_consequence": "You can cancel on day one and still use the full trial.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://zerotouchsupport.com/quo-review.html"
+     },
+     {
+      "claim": "Billed on Nov 26, 2026",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "Next payment shows $276.00 USD for one Business Plan at $276.00 a year, which matches the dossier price of $276 a year for Business billed annually.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://zerotouchsupport.com/quo-review.html#claim-vs-measured"
+      },
+      "plan": "Quo Business Annual, 7-day trial, $276.00 a year after the trial",
+      "comparability": "The billing page against the dossier price list.",
+      "status": "confirmed",
+      "buying_consequence": "Without cancelling, the first charge is a full year.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://zerotouchsupport.com/quo-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -503,9 +1032,15 @@
    "status": "open"
   },
   {
-   "question_id": "quo:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "quo:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: International calling is billed per minute. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "quo:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Sona AI credit bundles above the 1,000 a month included are priced separately. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -3263,6 +3263,64 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "BestTrack",
+   "product_id": "besttrack",
+   "run_date": "22 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 22 November 2026 on a Shopify development store, with the interface in English. We installed BestTrack on the free plan, fulfilled a test order with UPS's public sample tracking number and looked at the dashboard, billing page, notification settings, dropshipping mode and CSV export. We turned no emails on, upgraded nothing and removed the app afterwards.",
+   "findings": [
+    "Install: the permission screen lists customer data, staff data and store data such as orders. The app then opened straight on its dashboard, with no plan screen, no charge and no card. The dashboard said 300 free tracked orders every month, renewing monthly and not a one time trial.",
+    "Tracking: after we fulfilled the test order, it showed up in BestTrack within about 10 seconds with UPS detected. Within about a minute the status was Delivered, with the carrier's full history.",
+    "Warning gap: that history ran from a pickup on 12 June 2025 to a delivery on 5 December 2025, for an order placed on 16 November 2026. The app showed it as Delivered and gave no warning.",
+    "Emails: every customer status email, such as In transit and Delivery failed, was switched off by default. Mail sends from noreply@support.besttrack.app until you verify your own domain, and free email addresses cannot be verified.",
+    "Dropshipping mode: it starts paused and bundles region blocking, custom checkpoints and checkpoint emails. We did not switch it on.",
+    "Quota: our one new fulfilment counted as 1 of 300 and the estimated charge was $0.00.",
+    "Export: a CSV with 19 columns came down at once, including pickup, fulfilment and delivery dates."
+   ],
+   "not_tested": [
+    "the customer facing tracking page, because the test store is password protected",
+    "sent status emails and the Klaviyo connection",
+    "dropshipping mode switched on with a real shipment from China",
+    "the Pro plan and what happens above 300 orders",
+    "product recommendations and reorder links on the tracking page"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "Loox",
+   "product_id": "loox",
+   "run_date": "19 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 19 November 2026 on a Shopify development store, with the interface in English. We installed Loox on the free Beginner plan, placed the review widget in the product template and set the review request timing. We did not approve the Convert trial, sent no emails and imported no reviews.",
+   "findings": [
+    "Install: the permission screen lists customer data (sensitive data, device and activity data), staff data and store data such as customers, products, orders, discounts, marketing and the Online Store. The app opened on the free Beginner plan with no payment screen.",
+    "Setup: Loox activated its core script and added a Reviews Widget block to the default product template. The first review request was set to 14 days after fulfilment, with a 15% code for photo or video reviews by default.",
+    "Upsells: two pop ups pushed the Convert plan, one with a 14 day trial and one with 80% off for two months. We kept Beginner both times.",
+    "Convert trial: the Shopify approval screen showed $49.99 due on 3 December after a 14 day trial and needed a payment method. It carried no note that it was a test charge, so we did not approve it.",
+    "Plan limits: the plan screen said review requests sent 0 of 2,000 for Beginner, while the listing says up to 500 orders. Those are two different limits.",
+    "Result: our test store is password protected, and Loox only sends review requests for stores without a password. We saw no review and the widget showed nothing in the preview."
+   ],
+   "not_tested": [
+    "a real review request email and a received photo review",
+    "CSV import of existing reviews",
+    "video reviews and the paid plans",
+    "the AI features on Convert"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Proposall",
    "product_id": "proposall",
    "run_date": "22 November 2026",
@@ -35502,7 +35560,7 @@
      "observed_on": "2026-11-12",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/emaillistverify-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/emaillistverify-review.html#claim-vs-measured"
      },
      "plan": "100 free credits; PAYG pricing inspected",
      "comparability": "EmailListVerify: Same stated credit volume, different currency and explicit VAT exclusion; no direct numerical price-rise conclusion.",
@@ -35519,7 +35577,7 @@
      "observed_on": "2026-11-12",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/emaillistverify-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/emaillistverify-review.html#claim-vs-measured"
      },
      "plan": "100 free credits; PAYG pricing inspected",
      "comparability": "EmailListVerify: Observed PAYG page default; no purchase or automatic charge actually made.",
@@ -35536,7 +35594,7 @@
      "observed_on": "2026-11-12",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/emaillistverify-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/emaillistverify-review.html#claim-vs-measured"
      },
      "plan": "100 free credits; PAYG pricing inspected",
      "comparability": "EmailListVerify: Two synthetic addresses only; do not infer a 3-credit charge for every address.",
@@ -35553,7 +35611,7 @@
      "observed_on": "2026-11-12",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/emaillistverify-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/emaillistverify-review.html#claim-vs-measured"
      },
      "plan": "100 free credits; PAYG pricing inspected",
      "comparability": "EmailListVerify: Pricing/checkout comparison: Pricing page only, €98 for 50,000 excluding VAT; no final checkout. Historical dossier $98 is not a like-for-like tax-inclusive EUR price. No verified matching cost rule.",
@@ -50359,7 +50417,7 @@
      "observed_on": "2026-10-31",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/seamless-ai-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/seamless-ai-review.html#claim-vs-measured"
      },
      "plan": "Free credits; plan name not recorded",
      "comparability": "Seamless starting-credit wording is compared with the fifty-credit balance before and after unrevealed company searches.",
@@ -50376,7 +50434,7 @@
      "observed_on": "2026-10-31",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/seamless-ai-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/seamless-ai-review.html#claim-vs-measured"
      },
      "plan": "Free credits; plan name not recorded",
      "comparability": "Seamless.ai card-free wording is checked against its recorded post-registration session without payment entry, while full signup screen counting remains unknown.",
@@ -50393,7 +50451,7 @@
      "observed_on": "2026-10-31",
      "evidence": {
       "label": "Our test observations",
-      "url": "https://aibuildermarketplace.com/b2b/seamless-ai-review/#claim-vs-measured"
+      "url": "https://marketingandsalessoftware.com/seamless-ai-review.html#claim-vs-measured"
      },
      "plan": "Free credits; plan name not recorded",
      "comparability": "Seamless.ai paid-price comparison is unavailable because neither prices nor checkout were opened and no matching cost-rule basis was observed; the quoted access offer is context only.",

@@ -343,6 +343,27 @@
      "The individual plans (Starter $7, Premium $20, Ultra $45, Professional $149 a month; $5.83, $16.67, $37.50 and $124.17 on yearly billing) state no seat count, so they are not computed per user.",
      "Ultimate is shown as $3.000 per seat a month with unlimited seats included; the page does not reconcile the two, so it is not computed.",
      "Credit top-ups on demand are not priced in our notes."
+    ],
+    "measured": [
+     {
+      "claim": "Ultra $45/month, trial $2 for 3 days",
+      "claim_source": "https://www.app.expertex.ai/subscription-plans/individuals",
+      "claim_read_on": "2026-11-27",
+      "observed": "After the $2 trial the subscription page said: 'Your Ultra plan automatically renews at $75/month on Dec 1, 2026.'",
+      "observed_on": "2026-11-27",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/expertex-review.html#claim-vs-measured"
+      },
+      "plan": "Ultra Trial",
+      "comparability": "Same plan, same account, same day.",
+      "status": "contradicted",
+      "buying_consequence": "Check the renewal price on the subscription page right after starting the trial; we saw $75, not $45.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://officesoftwaremarketplace.com/expertex-review.html"
+     }
     ]
    },
    "monthly": {
@@ -539,15 +560,35 @@
      "The individual plans (Starter $7, Premium $20, Ultra $45, Professional $149 a month; $5.83, $16.67, $37.50 and $124.17 on yearly billing) state no seat count, so they are not computed per user.",
      "Ultimate is shown as $3.000 per seat a month with unlimited seats included; the page does not reconcile the two, so it is not computed.",
      "Credit top-ups on demand are not priced in our notes."
+    ],
+    "measured": [
+     {
+      "claim": "Ultra $45/month, trial $2 for 3 days",
+      "claim_source": "https://www.app.expertex.ai/subscription-plans/individuals",
+      "claim_read_on": "2026-11-27",
+      "observed": "After the $2 trial the subscription page said: 'Your Ultra plan automatically renews at $75/month on Dec 1, 2026.'",
+      "observed_on": "2026-11-27",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/expertex-review.html#claim-vs-measured"
+      },
+      "plan": "Ultra Trial",
+      "comparability": "Same plan, same account, same day.",
+      "status": "contradicted",
+      "buying_consequence": "Check the renewal price on the subscription page right after starting the trial; we saw $75, not $45.",
+      "buyer_direction": null,
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://officesoftwaremarketplace.com/expertex-review.html"
+     }
     ]
    }
   }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
-  "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
+  "Data export tested on 2026-11-27; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -555,6 +596,112 @@
   "refund": "being_verified"
  },
  "status_page": null,
+ "measured": {
+  "support": null,
+  "onboarding": null,
+  "inbox": null,
+  "invites": null,
+  "entry_exit": {
+   "signup": {
+    "screens": "not_tested",
+    "card_required": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   },
+   "cancel": {
+    "screens": "not_tested",
+    "call_required": "not_tested",
+    "observed_on": null,
+    "evidence_url": null
+   }
+  },
+  "tested_on": "2026-11-27",
+  "tested_by": "Our team; actor, account and scope are documented in the review.",
+  "review_url": "https://officesoftwaremarketplace.com/expertex-review.html",
+  "method": [],
+  "claims": [
+   {
+    "claim": "Ultra $45/month, trial $2 for 3 days",
+    "claim_source": "https://www.app.expertex.ai/subscription-plans/individuals",
+    "claim_read_on": "2026-11-27",
+    "observed": "After the $2 trial the subscription page said: 'Your Ultra plan automatically renews at $75/month on Dec 1, 2026.'",
+    "observed_on": "2026-11-27",
+    "evidence": {
+     "label": "Our test observations",
+     "url": "https://officesoftwaremarketplace.com/expertex-review.html#claim-vs-measured"
+    },
+    "plan": "Ultra Trial",
+    "comparability": "Same plan, same account, same day.",
+    "status": "contradicted",
+    "buying_consequence": "Check the renewal price on the subscription page right after starting the trial; we saw $75, not $45.",
+    "buyer_direction": null,
+    "claim_changed_on": null
+   }
+  ],
+  "exit_test": {
+   "run_date": "2026-11-27",
+   "what": "An ExpertEx test on 27 November 2026 on the $2 three day Ultra trial. We gave Product Shots one plain picture of a blue mug with AIBM TEST printed on it and asked for a wooden kitchen table in soft morning light. Three shots came back in about a minute for 30 of the 2,000 trial credits, and in all three the print was spelled right and readable.",
+   "first_import": null,
+   "file_inspected": false,
+   "reimport_tested": false,
+   "awkward": "The plans page shows Ultra at $45 a month, but the subscription page said the trial renews at $75 a month. The new shots only appeared after a reload. Cancelling is in Settings, but it ends the trial and wipes the remaining credits at once, so test first and cancel last.",
+   "friction": {
+    "export_route": "Not tested.",
+    "format": "No file was exported.",
+    "reimport": "Not tested.",
+    "cancellation": "Settings, Subscription, Cancel subscription, one confirmation; access and credits end immediately."
+   },
+   "not_tested": [
+    "Video, reels and voice",
+    "Higher quality settings",
+    "Brand DNA and avatars",
+    "The paid monthly plan after the trial"
+   ],
+   "available_fields": [],
+   "not_offered": [],
+   "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+   "evidence_url": "https://officesoftwaremarketplace.com/expertex-review.html#exit-test"
+  },
+  "facts": {
+   "trial_requires_card": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-27",
+    "evidence_url": "https://officesoftwaremarketplace.com/expertex-review.html#hands-on"
+   },
+   "trial_duration_confirmed": {
+    "value": false,
+    "basis": "After the $2 trial the subscription page said: 'Your Ultra plan automatically renews at $75/month on Dec 1, 2026.'",
+    "observed_on": "2026-11-27",
+    "evidence_url": "https://officesoftwaremarketplace.com/expertex-review.html#claim-vs-measured"
+   },
+   "export_file_inspected": {
+    "value": false,
+    "basis": "An ExpertEx test on 27 November 2026 on the $2 three day Ultra trial. We gave Product Shots one plain picture of a blue mug with AIBM TEST printed on it and asked for a wooden kitchen table in soft morning light. Three shots came back in about a minute for 30 of the 2,000 trial credits, and in all three the print was spelled right and readable. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-27",
+    "evidence_url": "https://officesoftwaremarketplace.com/expertex-review.html#exit-test"
+   },
+   "export_reimport_tested": {
+    "value": false,
+    "basis": "An ExpertEx test on 27 November 2026 on the $2 three day Ultra trial. We gave Product Shots one plain picture of a blue mug with AIBM TEST printed on it and asked for a wooden kitchen table in soft morning light. Three shots came back in about a minute for 30 of the 2,000 trial credits, and in all three the print was spelled right and readable. A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product.",
+    "observed_on": "2026-11-27",
+    "evidence_url": "https://officesoftwaremarketplace.com/expertex-review.html#exit-test"
+   },
+   "export_direct_download": {
+    "value": "not_tested",
+    "basis": "No explicit observation in the public evidence.",
+    "observed_on": "2026-11-27",
+    "evidence_url": "https://officesoftwaremarketplace.com/expertex-review.html#hands-on"
+   },
+   "marketing_emails_14d": {
+    "value": "not_tested",
+    "basis": "No complete unambiguous 14-day inbox observation available.",
+    "observed_on": "2026-11-27",
+    "evidence_url": null
+   }
+  }
+ },
  "task_evidence": null,
  "open_questions": [
   {

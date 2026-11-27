@@ -15,36 +15,15 @@
   "entry_price": "$29",
   "entry_price_terms": "per month billed annually ($39 monthly), up to 50,000 views/mo",
   "from_price_usd_month": 29.0,
-  "plans": [
-   {
-    "name": "Starter",
-    "price": "$0 forever",
-    "includes": "5,000 views in total; 1 seat"
-   },
-   {
-    "name": "Growth",
-    "price": "$39 a month billed monthly or $29 billed annually",
-    "includes": "up to 50,000 views a month; 3 seats"
-   },
-   {
-    "name": "Premium",
-    "price": "$69 or $49",
-    "includes": "up to 150,000 views a month; unlimited seats"
-   },
-   {
-    "name": "Elite",
-    "price": "$129 or $99",
-    "includes": "up to 500,000 views a month; unlimited seats"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(re-verified 2026-09-24 against hellobar.com/pricing; amounts unchanged since 3 Sep 2026) Hello Bar publishes exact prices, so the ranges we carried before were wrong: they were the monthly and the annual rate side by side. Paid tiers meter monthly popup VIEWS. Growth is $39 a month billed monthly or $29 billed annually, up to 50,000 views a month; Premium $69 or $49, up to 150,000; Elite $129 or $99, up to 500,000, with unlimited seats. The annual feature table states the same quotas as 600,000, 1.8 million and 6 million views a year. Starter is $0 forever with 5,000 views in total rather than per month. The view limit applies per website, and only a custom agency or enterprise plan can move it to a per-account basis. A view is one display per page load per visitor. When a site reaches its monthly limit its campaigns pause until the next billing cycle; the page describes no overage charge, and an upgrade takes effect immediately. Seats: 1 on Starter, 3 on Growth, unlimited on Premium and Elite. Monthly plans stay active to the end of the period after cancelling, annual plans to the end of the term, and a cancelled account drops to Starter with campaigns and subscriber data kept. No credit card is needed to start, and first-time customers on an annual plan get a 30-day money-back guarantee.",
-  "verified_at": "2026-09-24",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(re-verified 2026-11-27 against hellobar.com/pricing; amounts unchanged since 3 Sep 2026) Hello Bar publishes exact prices, so the ranges we carried before were wrong: they were the monthly and the annual rate side by side. Paid tiers meter monthly popup VIEWS. Growth is $39 a month billed monthly or $29 billed annually, up to 50,000 views a month; Premium $69 or $49, up to 150,000; Elite $129 or $99, up to 500,000, with unlimited seats. The annual feature table states the same quotas as 600,000, 1.8 million and 6 million views a year. Starter is $0 forever with 5,000 views in total rather than per month. The view limit applies per website, and only a custom agency or enterprise plan can move it to a per-account basis. A view is one display per page load per visitor. When a site reaches its monthly limit its campaigns pause until the next billing cycle; the page describes no overage charge, and an upgrade takes effect immediately. Seats: 1 on Starter, 3 on Growth, unlimited on Premium and Elite. Monthly plans stay active to the end of the period after cancelling, annual plans to the end of the term, and a cancelled account drops to Starter with campaigns and subscriber data kept. No credit card is needed to start, and first-time customers on an annual plan get a 30-day money-back guarantee. The billing toggle now advertises 'Save up to 24%'. On the page's own amounts annual billing saves 25.6% on Growth ($29 against $39), 29.0% on Premium ($49 against $69) and 23.3% on Elite ($99 against $129), so two of the three tiers save more than the banner says (our sums, 27 November 2026). Upgrades take effect immediately and the price difference is prorated for the rest of the billing cycle; downgrades start at the next billing cycle.",
+  "verified_at": "2026-11-27",
   "source_url": null,
   "schema_offer": {
    "price": 39.0,
    "currency": "USD",
-   "description": "Growth, per month, billed month-to-month. From our pricing notes: “Growth is $39 a month billed monthly or $29 billed annually, up to 50,000 views a month” Read on the vendor's own pricing page on 2026-11-03.",
+   "description": "Growth, per month, billed month-to-month. From our pricing notes: “Growth is $39 a month billed monthly or $29 billed annually, up to 50,000 views a month” Read on the vendor's own pricing page on 2026-11-27.",
    "page": "https://marketingandsalessoftware.com/hello-bar-review.html"
   },
   "source_quotes": null,
@@ -71,7 +50,14 @@
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "The meter is views, not results: every visitor who sees a popup counts against your quota, so a traffic spike eats the allowance regardless of how many emails you actually captured, and at the limit the campaigns pause until the next billing cycle: a busy site outgrows the entry tier fast.",
-   "verified_at": "2026-09-24",
+   "verified_at": "2026-11-27",
+   "source_url": null
+  },
+  {
+   "id": "annual_lock",
+   "label": "Annual commitment",
+   "evidence": "On the page's own amounts annual billing saves 25.6% on Growth ($29 against $39), 29.0% on Premium ($49 against $69) and 23.3% on Elite ($99 against $129), so two of the three tiers save more than the banner says (our sums, 27 November 2026).",
+   "verified_at": "2026-11-27",
    "source_url": null
   }
  ],
@@ -143,12 +129,13 @@
    "notes": [
     "Seats: 1 on Starter, 3 on Growth, unlimited on Premium and Elite.",
     "The real meter is monthly popup views per website (Growth 50,000, Premium 150,000, Elite 500,000; Starter 5,000 in total). Pick the tier by views first; seats only decide between Starter, Growth and the rest.",
-    "When a site reaches its limit its campaigns pause until the next billing cycle; the page describes no overage charge."
+    "When a site reaches its limit its campaigns pause until the next billing cycle; the page describes no overage charge.",
+    "The billing toggle advertises 'Save up to 24%'; on the page's own amounts annual billing saves 25.6% on Growth, 29.0% on Premium and 23.3% on Elite (our sums, read 27 November 2026)."
    ],
    "not_computable": [
     "View-based limits per website and custom agency or enterprise plans are not computed."
    ],
-   "rules_verified_at": "2026-11-03"
+   "rules_verified_at": "2026-11-27"
   },
   "growth": {
    "annual": {
@@ -674,6 +661,7 @@
   }
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-06; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],

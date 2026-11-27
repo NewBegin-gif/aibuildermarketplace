@@ -1647,7 +1647,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/froonze-review.html
 
 ## FullEnrich (fullenrich.com)
-- **Verified pricing:** (price re-verified 2026-09-23 against the vendor's own pricing page and its machine-readable pricing file fullenrich.com/pricing.md, which declares USD) Credit-based, and credits are spent …
+- **Verified pricing:** (price re-verified 2026-11-27 against the vendor's machine-readable pricing file fullenrich.com/pricing.md, which declares USD and says it mirrors fullenrich.com/pricing; previously re-veri…
 - **Honest take:** The pay-on-success model is refreshingly honest, but note the 10x: phone numbers eat credits ten times faster than emails, so a calling-heavy motion consumes budget quickly: model your email/phone mix.
 - **Best for:** outbound teams that need maximum find-rates on emails and especially mobile numbers, and prefer paying only for verified hits
 - **Flags:** Usage-metered
@@ -1710,7 +1710,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 ## Getscreen (getscreen.me)
 - **Verified pricing:** (price re-verified 2026-09-23) Business rates on getscreen.me/en/pricing/plans/ are quoted on annual payment, which the page marks 16% off.
 - **Honest take:** AnyDesk tends to feel faster and lower-latency, and TeamViewer carries the heavier security/compliance certifications (HIPAA, SOC 2).
-- **Best for:** IT and support people who want browser-based remote access without installing software on the other person's machine: at a fair price or a one-time fee
+- **Best for:** IT and support people who want to connect from a browser and can ask the other person to run a small file: at a fair price or a one-time fee
 - **Flags:** Free tier
 - **Full review:** https://officesoftwaremarketplace.com/getscreen-review.html
 
@@ -1756,10 +1756,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/grapevine-review.html
 
 ## Gravity Forms (gravityforms.com)
-- **Verified pricing:** (price re-verified 2026-09-23 against the vendor's own pricing page) Annual WordPress licences, unchanged since 1 Sep 2026: Basic $59/yr (1 site, standard support), Pro $159/yr (3 sites, st…
+- **Verified pricing:** (price re-verified 2026-11-27 against the vendor's own pricing page; previously re-verified 2026-09-23) Annual WordPress licences, unchanged since 1 Sep 2026: Basic $59/yr (1 site, standard…
 - **Honest take:** Two honest notes. It's a WordPress-only plugin (no WordPress, no Gravity Forms) and its real power often lives in paid add-ons and third-party extensions, so a advanced setup can cost more than the base license suggests.
 - **Best for:** WordPress site owners and developers who want powerful, self-hosted forms with conditional logic, payments and deep integrations they fully control
-- **Flags:** Add-ons extra
+- **Flags:** Renewal jump, Add-ons extra
 - **Full review:** https://officesoftwaremarketplace.com/gravity-forms-review.html
 
 ## Guesty (guesty.com)
@@ -1816,10 +1816,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/heard-review.html
 
 ## Hello Bar (hellobar.com)
-- **Verified pricing:** (re-verified 2026-09-24 against hellobar.com/pricing; amounts unchanged since 3 Sep 2026) Hello Bar publishes exact prices, so the ranges we carried before were wrong: they were the monthly…
+- **Verified pricing:** (re-verified 2026-11-27 against hellobar.com/pricing; amounts unchanged since 3 Sep 2026) Hello Bar publishes exact prices, so the ranges we carried before were wrong: they were the monthly…
 - **Honest take:** The meter is views, not results: every visitor who sees a popup counts against your quota.
 - **Best for:** content sites, blogs and stores that already have traffic and a worthwhile offer, and want sticky bars, popups and slide-ins with A/B testing to convert more of that traffic into subscribers
-- **Flags:** Usage-metered, Free tier
+- **Flags:** Usage-metered, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/hello-bar-review.html
 
 ## Helm (pactai.app)
@@ -1924,7 +1924,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/icontact-review/
 
 ## IDrive (idrive.com)
-- **Verified pricing:** (2026, re-verified 24 Sep 2026) Free 10 GB Basic tier.
+- **Verified pricing:** (2026, re-verified 27 Nov 2026) Free 10 GB Basic tier.
 - **Honest take:** The first-year price is a teaser and the renewal is the price.
 - **Best for:** individuals and small businesses that want cheap multi-device cloud backup with versioning, snapshots and physical seed/restore shipping
 - **Flags:** Add-ons extra, Annual commit
@@ -1984,7 +1984,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/insightful-review.html
 
 ## Instapage (instapage.com)
-- **Verified pricing:** (re-verified 24 Sep 2026; amounts unchanged since 4 Sep) Instapage does publish plan prices; they are not on the URL we had recorded.
+- **Verified pricing:** (re-verified 27 Nov 2026; amounts unchanged since 4 Sep) Instapage does publish plan prices; they are not on the URL we had recorded.
 - **Honest take:** It's premium-priced and only justified by serious ad spend: Create is $79 a month billed annually for 15,000 unique monthly visitors, and the price per thousand barely improves as you climb.
 - **Best for:** marketing teams running significant paid ad campaigns who need post-click optimisation: AdMap ad-to-page personalisation, A/B testing and heatmaps
 - **Flags:** Annual commit

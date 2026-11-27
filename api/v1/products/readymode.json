@@ -61,16 +61,373 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "license",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "starter",
+     "name": "Starter",
+     "model": "per_unit",
+     "monthly": 239,
+     "annual_month": 199,
+     "evidence": "Starter $239 billed monthly or $199 billed annually, for 1+ licenses"
+    },
+    {
+     "id": "iq",
+     "name": "iQ",
+     "model": "per_unit",
+     "monthly": 299,
+     "annual_month": 249,
+     "evidence": "iQ $299 billed monthly or $249 billed annually"
+    }
+   ],
+   "notes": [
+    "Priced per agent license; the page calls iQ ideal for 5+ licenses but both plans have a one-license minimum. One complimentary Admin license comes with every plan and is not an agent license."
+   ],
+   "not_computable": [
+    "Inbound calls at $0.02/min and Voicemail Drop (extra per drop, only for those who qualify) are not included; outbound minutes are free subject to a fair-use policy."
+   ],
+   "rules_verified_at": "2026-11-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "readymode",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "license",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 199.0,
+      "billed": {
+       "amount": 2388.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 199.0,
+       "iq": 249.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 398.0,
+      "billed": {
+       "amount": 4776.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 398.0,
+       "iq": 498.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 597.0,
+      "billed": {
+       "amount": 7164.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 597.0,
+       "iq": 747.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 995.0,
+      "billed": {
+       "amount": 11940.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 995.0,
+       "iq": 1245.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1990.0,
+      "billed": {
+       "amount": 23880.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1990.0,
+       "iq": 2490.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 2985.0,
+      "billed": {
+       "amount": 35820.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 2985.0,
+       "iq": 3735.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 3980.0,
+      "billed": {
+       "amount": 47760.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 3980.0,
+       "iq": 4980.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 4975.0,
+      "billed": {
+       "amount": 59700.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 4975.0,
+       "iq": 6225.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 9950.0,
+      "billed": {
+       "amount": 119400.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 9950.0,
+       "iq": 12450.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 19900.0,
+      "billed": {
+       "amount": 238800.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 19900.0,
+       "iq": 24900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Inbound calls at $0.02/min and Voicemail Drop (extra per drop, only for those who qualify) are not included; outbound minutes are free subject to a fair-use policy."
+    ]
+   },
+   "monthly": {
+    "product_id": "readymode",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "license",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 239.0,
+      "billed": {
+       "amount": 239.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 239.0,
+       "iq": 299.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 478.0,
+      "billed": {
+       "amount": 478.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 478.0,
+       "iq": 598.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 717.0,
+      "billed": {
+       "amount": 717.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 717.0,
+       "iq": 897.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 1195.0,
+      "billed": {
+       "amount": 1195.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 1195.0,
+       "iq": 1495.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 2390.0,
+      "billed": {
+       "amount": 2390.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 2390.0,
+       "iq": 2990.0
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 3585.0,
+      "billed": {
+       "amount": 3585.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 3585.0,
+       "iq": 4485.0
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 4780.0,
+      "billed": {
+       "amount": 4780.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 4780.0,
+       "iq": 5980.0
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 5975.0,
+      "billed": {
+       "amount": 5975.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 5975.0,
+       "iq": 7475.0
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 11950.0,
+      "billed": {
+       "amount": 11950.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 11950.0,
+       "iq": 14950.0
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "starter",
+      "cheapest_plan_name": "Starter",
+      "total_month": 23900.0,
+      "billed": {
+       "amount": 23900.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "starter": 23900.0,
+       "iq": 29900.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Inbound calls at $0.02/min and Voicemail Drop (extra per drop, only for those who qualify) are not included; outbound minutes are free subject to a fair-use policy."
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -100,9 +457,9 @@
    "status": "open"
   },
   {
-   "question_id": "readymode:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "readymode:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Inbound calls at $0.02/min and Voicemail Drop (extra per drop, only for those who qualify) are not included; outbound minutes are free subject to a fair-use policy. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

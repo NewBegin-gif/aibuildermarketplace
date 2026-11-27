@@ -90,15 +90,247 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "1-store",
+     "name": "1 Store",
+     "model": "per_unit",
+     "max_units": 1,
+     "monthly": 59,
+     "annual_status": "unknown",
+     "evidence": "1 Store $59/mo"
+    },
+    {
+     "id": "2-stores",
+     "name": "2 Stores",
+     "model": "per_unit",
+     "min_units": 2,
+     "max_units": 2,
+     "monthly": 49,
+     "annual_status": "unknown",
+     "evidence": "2 Stores $49/store/mo"
+    },
+    {
+     "id": "3-plus-stores",
+     "name": "3+ Stores",
+     "model": "per_unit",
+     "min_units": 3,
+     "monthly": 39,
+     "annual_status": "unknown",
+     "evidence": "3+ Stores $39/store/mo"
+    }
+   ],
+   "notes": [
+    "Per-store pricing with cancel anytime: 'Cancel anytime, per-store pricing'. The tiers differ in support and features: automation tools and API access only at 3+ stores.",
+    "No free trial or money-back guarantee is published: 'The page still publishes no free trial and no money-back guarantee'."
+   ],
+   "not_computable": [
+    "Custom plan by email"
+   ],
+   "rules_verified_at": "2026-11-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "pythago",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "1-store": "price_unknown_on_billing",
+       "2-stores": "price_unknown_on_billing",
+       "3-plus-stores": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "1-store": "not_eligible",
+       "2-stores": "price_unknown_on_billing",
+       "3-plus-stores": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "1-store": "not_eligible",
+       "2-stores": "not_eligible",
+       "3-plus-stores": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "1-store": "not_eligible",
+       "2-stores": "not_eligible",
+       "3-plus-stores": "price_unknown_on_billing"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "1-store": "not_eligible",
+       "2-stores": "not_eligible",
+       "3-plus-stores": "price_unknown_on_billing"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Custom plan by email"
+    ]
+   },
+   "monthly": {
+    "product_id": "pythago",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "1-store",
+      "cheapest_plan_name": "1 Store",
+      "total_month": 59.0,
+      "billed": {
+       "amount": 59.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "1-store": 59.0,
+       "2-stores": 98.0,
+       "3-plus-stores": 117.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "2-stores",
+      "cheapest_plan_name": "2 Stores",
+      "total_month": 98.0,
+      "billed": {
+       "amount": 98.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "1-store": "not_eligible",
+       "2-stores": 98.0,
+       "3-plus-stores": 117.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "3-plus-stores",
+      "cheapest_plan_name": "3+ Stores",
+      "total_month": 117.0,
+      "billed": {
+       "amount": 117.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "1-store": "not_eligible",
+       "2-stores": "not_eligible",
+       "3-plus-stores": 117.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "3-plus-stores",
+      "cheapest_plan_name": "3+ Stores",
+      "total_month": 195.0,
+      "billed": {
+       "amount": 195.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "1-store": "not_eligible",
+       "2-stores": "not_eligible",
+       "3-plus-stores": 195.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "3-plus-stores",
+      "cheapest_plan_name": "3+ Stores",
+      "total_month": 390.0,
+      "billed": {
+       "amount": 390.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "1-store": "not_eligible",
+       "2-stores": "not_eligible",
+       "3-plus-stores": 390.0
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "1-store",
+      "to_plan": "2-stores",
+      "from_plan_name": "1 Store",
+      "to_plan_name": "2 Stores"
+     },
+     {
+      "from_units": 2,
+      "to_units": 3,
+      "from_plan": "2-stores",
+      "to_plan": "3-plus-stores",
+      "from_plan_name": "2 Stores",
+      "to_plan_name": "3+ Stores"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Custom plan by email"
+    ]
+   }
+  }
  },
  "unknowns": [
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product.",
   "Not tested hands-on by us: what the product does comes from the vendor's pages and our reading of them."
  ],
  "verification": {
@@ -128,9 +360,9 @@
    "status": "open"
   },
   {
-   "question_id": "pythago:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "pythago:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Custom plan by email. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

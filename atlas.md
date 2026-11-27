@@ -2592,7 +2592,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/namerobot-review/
 
 ## Navan (navan.com)
-- **Verified pricing:** (read 24 September 2026 on navan.com/pricing) Navan Business is free for companies of up to 300 employees, with no limit on trips, and Navan Expense is free for the first 5 monthly expensin…
+- **Verified pricing:** (read 24 September 2026 and re-read 27 November 2026 on navan.com/pricing, unchanged) Navan Business is free for companies of up to 300 employees, with no limit on trips, and Navan Expense …
 - **Honest take:** 'Free' is real but has a mechanism: Navan earns commission on bookings made through its inventory.
 - **Best for:** companies of up to 300 employees that want self-serve travel booking with built-in policy control, free on Navan Business, and optionally unified expense management on top
 - **Flags:** Per-seat pricing, Usage-metered
@@ -2797,7 +2797,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Workflow automation tool where only external app actions count as tasks; free for 100 tasks a month, Standard is $19 a month.
 - **Best for:** small teams that run many automations and want to pay per external task instead of per step, with free internal steps
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/pabbly-connect-review/
+- **Full review:** https://officesoftwaremarketplace.com/pabbly-connect-review.html
 
 ## Pagecloud (pagecloud.com)
 - **Verified pricing:** (read 2026-10-11 on pagecloud.com/pricing, USD, with the monthly and annual toggle and the FAQ opened) Three plans, each with Pagecloud AI, hosting, SSL, your own domain, inquiry forms with…
@@ -3560,9 +3560,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/sendhq-review/
 
 ## Sentaro (sentaro.com)
-- **Verified pricing:** (read 24 September 2026 on sentaro.com/en/pricing) Priced per protected account, in USD.
+- **Verified pricing:** (read 27 November 2026 on sentaro.com/en/pricing) Priced per user, in USD: 'Prices in USD, per user.' Pro is $6 per user per month after the first, and the first account stays free.
 - **Honest take:** The honest procurement move: run their trial alongside your current filtering, count real catches and false positives for two weeks, and price per mailbox against the incumbents with that data in hand.
 - **Best for:** SMBs on Google Workspace/M365 that want an extra AI layer against phishing and BEC without infrastructure changes
+- **Flags:** Per-seat pricing
 - **Full review:** https://officesoftwaremarketplace.com/sentaro-review.html
 
 ## SEO Space (seospace.co)
@@ -4234,7 +4235,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/tnc-review.html
 
 ## Todoist (todoist.com)
-- **Verified pricing:** (re-verified 25 September 2026 on todoist.com/pricing, currency set to USD, both billing toggles) Free Beginner plan: 5 personal projects, 3 filter views, 5 MB uploads, one week of activity…
+- **Verified pricing:** (re-verified 27 November 2026 on todoist.com/pricing, prices in USD, both billing cycles; every amount the same as on 25 September 2026) Free Beginner plan: 5 personal projects, 3 filter vi…
 - **Honest take:** The free plan's 5-project cap, and reminders that fire only at the moment a task comes due, push most serious users to Pro quickly, but Pro is cheap.
 - **Best for:** individuals and small teams who want a fast, elegant task manager that gets out of the way
 - **Flags:** Per-seat pricing, Free tier

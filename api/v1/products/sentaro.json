@@ -15,21 +15,10 @@
   "entry_price": "$6",
   "entry_price_terms": "a month per protected account (first account free)",
   "from_price_usd_month": 6.0,
-  "plans": [
-   {
-    "name": "Pro",
-    "price": "$6 per protected account per month after the first account, or $68 per account per year",
-    "includes": "Cross-vector response, admin console, audit trail and reporting, cancel anytime"
-   },
-   {
-    "name": "Sovereign",
-    "price": "custom annual pricing",
-    "includes": "Dedicated EU tenancy, custom DPA, audit support, SIEM export, API access, named security engineer"
-   }
-  ],
-  "plans_source": "summarised from pricing.notes; every plan name and amount appears verbatim in those notes",
-  "notes": "(read 24 September 2026 on sentaro.com/en/pricing) Priced per protected account, in USD. Pro is $6 per protected account per month after the first account, or $68 per account per year, about $5.67 a month and roughly 5.6% below monthly. The first account stays free. A Free single-user tier (one account, private or company-attached, no card, no expiry) is listed but marked 'coming soon'. Sovereign is custom annual pricing: dedicated EU tenancy, custom DPA and audit support, SIEM export and API access, and a named security engineer. A protected account is one mailbox Sentaro watches; shared aliases and distribution lists do not count. The page states that every feature is in every plan, and Pro lists cross-vector response (block, quarantine, forced re-auth, session revocation), the admin console, audit trail and reporting, and cancel anytime. Monthly plans stop at the end of the period; purchases through Paddle carry a full refund within 14 days, renewals included. History: no price was published until August 2026. On 5 September the site showed Professional at $6 monthly or $5.50 annual, with the same numerals offered in euros, and SSO/SCIM, API access and compliance support on a quote-only Enterprise tier; that layout is gone.",
-  "verified_at": "2026-09-24",
+  "plans": null,
+  "plans_source": null,
+  "notes": "(read 27 November 2026 on sentaro.com/en/pricing) Priced per user, in USD: 'Prices in USD, per user.' Pro is $6 per user per month after the first, and the first account stays free. The page no longer shows an annual price; on 24 September 2026 it offered $68 per account per year. A Free single-user tier (one account, private or company-attached, no card, no expiry) is listed but marked 'coming soon'. Sovereign is custom annual pricing: dedicated EU tenancy, custom DPA and audit support, SIEM export and API access, and a named security engineer. A user is one mailbox Sentaro watches; shared aliases and distribution lists do not count. Pro lists cross-vector chain response (block and quarantine, with forced re-auth and session revocation marked 'coming soon'), the admin console, audit trail and reporting, and cancel anytime. The Identity and Behavioral vectors are marked 'coming soon' and, per the page, will be included in every plan at no added cost. Monthly plans stop at the end of the period; Sovereign agreements follow the refund policy, and purchases through Paddle carry a full refund within 14 days, renewals included. History: no price was published until August 2026. On 5 September the site showed Professional at $6 monthly or $5.50 annual, with the same numerals offered in euros, and SSO/SCIM, API access and compliance support on a quote-only Enterprise tier. On 24 September Pro was $6 a month or $68 a year per protected account, the page said every feature was in every plan, and it gave Q4 2026 for the Identity and Behavioral vectors; on 27 November the annual price and the Q4 date were gone and forced re-auth and session revocation were marked 'coming soon'.",
+  "verified_at": "2026-11-27",
   "source_url": null,
   "schema_offer": null,
   "source_quotes": null,
@@ -38,7 +27,15 @@
  },
  "free_plan": false,
  "free_plan_evidence": null,
- "cost_traps": [],
+ "cost_traps": [
+  {
+   "id": "per_seat",
+   "label": "Per-seat pricing",
+   "evidence": "(read 27 November 2026 on sentaro.com/en/pricing) Priced per user, in USD: 'Prices in USD, per user.' Pro is $6 per user per month after the first, and the first account stays free.",
+   "verified_at": "2026-11-27",
+   "source_url": null
+  }
+ ],
  "compare_with": {
   "name": "IRONSCALES or Abnormal",
   "why": "the established API-based email-security players: compare detected-in-YOUR-inbox counts from parallel trials, not brochure accuracy"
@@ -70,6 +67,7 @@
   "growth": null
  },
  "unknowns": [
+  "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Contract terms (cancellation, data export, data location, minimum seats) are not researched as separate fields; pricing.notes mentions them only where the vendor's pricing page does.",
   "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
   "No computable price rules yet: cost at a given team size cannot be calculated for this product.",

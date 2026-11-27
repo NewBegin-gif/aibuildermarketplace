@@ -3333,7 +3333,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** Re-read on restream.io/pricing on 26 September 2026, with both the Creator/Business tabs and the Monthly/Annually toggle operated.
 - **Honest take:** The channel caps are the business model -- each tier buys a few more destinations.
 - **Best for:** creators, podcasters and marketing teams who broadcast one show to many platforms at once, without extra encoding hardware
-- **Flags:** Add-ons extra, Free tier
+- **Flags:** Add-ons extra, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/restream-review.html
 
 ## Retouch4me (retouch4.me)
@@ -3636,7 +3636,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/shipdock-review.html
 
 ## Shippo (goshippo.com)
-- **Verified pricing:** Read on their own pricing page, re-verified 25 September 2026.
+- **Verified pricing:** Read on their own pricing page, re-verified 25 September 2026 and re-read on 27 November 2026, every amount the same.
 - **Honest take:** The free tier stops at 30 labels a month at 5¢ a label on your own carrier accounts, and Pro bills $0.08 for every label past 10,000 shipments.
 - **Best for:** e-commerce sellers shipping across multiple carriers who want rate comparison, label printing and tracking in one place with genuine rate discounts
 - **Flags:** Usage-metered, Annual commit, Free tier
@@ -4516,7 +4516,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/visibility-mesh-review.html
 
 ## Vista Social (vistasocial.com)
-- **Verified pricing:** (price re-verified 2026-09-25 against the vendor's own pricing page; every list price rose after the 23 Sep 2026 reading) (2026) Professional $99/mo ($950/yr, shown as $80/mo on yearly bill…
+- **Verified pricing:** (price re-verified 2026-11-27 against the vendor's own pricing page; the list prices are the same as on 25 Sep 2026, but the user counts on Advanced and Scale are lower than we printed then…
 - **Honest take:** Platform APIs change constantly, so verify the networks and features your clients need inside the trial, and white-labeling sits on the Scale tier above Professional.
 - **Best for:** agencies and multi-brand teams that want scheduling, listening, reviews and reporting across many profiles at a notably lower price than legacy suites
 - **Flags:** Usage-metered, Add-ons extra, Annual commit
@@ -4725,10 +4725,10 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/wplp-review.html
 
 ## Wrike (wrike.com)
-- **Verified pricing:** (price re-verified 2026-09-25) A permanent free plan at $0 per user, with no user cap named on the plan card; Team $10 per user a month for 2 to 15 users; Business $25 per user a month for …
+- **Verified pricing:** (price re-verified 2026-09-25 and re-read 2026-11-27, every amount the same) A permanent free plan at $0 per user, with no user cap named on the plan card; Team $10 per user a month for 2 t…
 - **Honest take:** It's powerful and scales to complex, cross-team portfolios, but that power brings a learning curve and a per-seat cost that climbs: small teams often find it heavier than they need next to a simpler board tool.
 - **Best for:** mid-to-large teams running complex, cross-functional projects that need robust reporting, workflows and resource management
-- **Flags:** Per-seat pricing, Free tier
+- **Flags:** Per-seat pricing, Add-ons extra, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/wrike-review/
 
 ## Xero (xero.com)

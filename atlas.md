@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 705 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-27.
+All 706 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-27.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -2791,6 +2791,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Local-first prospecting desktop app; early access, from $19.99 a month.
 - **Best for:** owner-operators and small teams who want a local-first desktop tool for finding prospects, tracking outreach and moving them through a pipeline, and who accept an early product
 - **Full review:** https://marketingandsalessoftware.com/p2cos-review.html
+
+## Pabbly Connect (pabbly.com)
+- **Verified pricing:** (read 2026-11-26 in the Pabbly Connect upgrade dialog, USD) Free: 100 tasks a month, no card asked.
+- **Honest take:** Workflow automation tool where only external app actions count as tasks; free for 100 tasks a month, Standard is $19 a month.
+- **Best for:** small teams that run many automations and want to pay per external task instead of per step, with free internal steps
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/pabbly-connect-review/
 
 ## Pagecloud (pagecloud.com)
 - **Verified pricing:** (read 2026-10-11 on pagecloud.com/pricing, USD, with the monthly and annual toggle and the FAQ opened) Three plans, each with Pagecloud AI, hosting, SSL, your own domain, inquiry forms with…

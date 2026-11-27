@@ -3263,6 +3263,183 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "Pabbly Connect",
+   "product_id": "pabbly-connect",
+   "run_date": "26 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 26 November 2026 on an existing Pabbly account, with the interface in English. We opened Pabbly Connect, built a webhook to text formatter workflow, added an API step, ran it live twice, read the task counter and opened the upgrade dialog and the Standard monthly checkout. We paid nothing.",
+   "findings": [
+    "Start: Pabbly Connect opened from the Pabbly apps page with one click, no card and no extra form. The dashboard showed 100 tasks allowed and 0 used.",
+    "Free steps: the Free Task tooltip said Pabbly does not charge tasks for triggers and internal application steps. Run 1 with trigger and formatter used 0 tasks and counted 2 free ones.",
+    "Task count: after run 2 with an API step on our own robots.txt, the dashboard showed 1 task used, 99 left and 4 free tasks used.",
+    "Speed: the first result appeared after 3.3 minutes and the first live run after 3.7 minutes.",
+    "Email: the email step could not be used without our own SMTP server details; the only built in choice, SMTP (Pabbly), asked for them too.",
+    "Upsell: the first click on Create Workflow opened a full page lifetime offer with a countdown, and the upgrade dialog opened on the 3 year plan.",
+    "Plans: Standard $19 a month for 10,000 tasks, Unlimited $79; the Standard monthly checkout showed Pay $19 with card or PayPal and no VAT line."
+   ],
+   "not_tested": [
+    "paying, the 30 day refund and cancelling",
+    "exporting or re-importing workflows",
+    "a support reply",
+    "team members and roles",
+    "email steps with our own SMTP server"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Start for free and get 100 tasks - no credit card required.",
+     "claim_source": "https://www.pabbly.com/connect/",
+     "claim_read_on": "2026-11-26",
+     "observed": "The dashboard showed Tasks Allotted 100, Tasks Consumed 0, Tasks Remaining 100 on the free plan, and opening Pabbly Connect asked for no card; a card or PayPal was only asked in the upgrade checkout.",
+     "observed_on": "2026-11-26",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pabbly-connect-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan, existing Pabbly account",
+     "comparability": "The 100 tasks and the missing card request were both seen on this account; the claim was read on the supplier page and the dashboard in the app.",
+     "status": "confirmed",
+     "buying_consequence": "The free plan starts with 100 tasks and needs no card to open Pabbly Connect.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Pabbly Connect does not charge tasks for triggers and internal application steps. You're saving 50% on task usage by using Pabbly Connect.",
+     "claim_source": "In-app tooltip on the Free Task badge, trigger setup, 2026-11-26T08:47:20+01:00",
+     "claim_read_on": "2026-11-26",
+     "observed": "Run 1 (trigger plus Text Formatter) showed Success, 2 Steps Workflow, 2 Free Tasks and 0 Tasks Consumed; the dashboard showed Consumed 0, Remaining 100, Free Tasks Consumed 2.",
+     "observed_on": "2026-11-26",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pabbly-connect-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan",
+     "comparability": "The first sentence was tested by a live run of a trigger and one internal step; the 50% saving was not measured.",
+     "status": "confirmed",
+     "buying_consequence": "A trigger and an internal formatter step did not use any of the 100 free tasks.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Any action performed in your workflow is considered a task. Triggers are not included in the task count, and internal applications of Pabbly Connect, such as filters, routers, and formatters, are also not considered tasks.",
+     "claim_source": "Task History page, 2026-11-26T08:50:00+01:00",
+     "claim_read_on": "2026-11-26",
+     "observed": "Run 2 added an API (Pabbly) step to the trigger and the formatter: 3 Steps Workflow, 1 Tasks Consumed, 4 Free Task Consumed in total; the dashboard then showed Consumed 1, Remaining 99. Filters and routers were not built.",
+     "observed_on": "2026-11-26",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pabbly-connect-review.html#claim-vs-measured"
+     },
+     "plan": "Free plan",
+     "comparability": "The trigger and the Text Formatter were seen to be free and the API step cost 1 task; filters and routers were not tested.",
+     "status": "confirmed",
+     "buying_consequence": "An API request step cost 1 of the 100 free tasks, while the trigger and Text Formatter steps were free.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Includes all premium automation features with unlimited workflow tasks every month, subject to our Fair Usage Policy.",
+     "claim_source": "In-app Upgrade dialog, Unlimited plan tooltip, 2026-11-26T08:52:00+01:00",
+     "claim_read_on": "2026-11-26",
+     "observed": "The Unlimited plan was not bought, so its task counting could not be observed. The Upgrade dialog shows Unlimited at $79/mo monthly, $69/mo yearly and $59/mo on 3 Yearly.",
+     "observed_on": "2026-11-26",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pabbly-connect-review.html#claim-vs-measured"
+     },
+     "plan": "Unlimited plan, not bought",
+     "comparability": "The tooltip was read; the plan was not bought, so nothing was counted against the claim.",
+     "status": "not_testable",
+     "buying_consequence": "The unlimited task claim stands on the supplier text only, which also says it is subject to the Fair Usage Policy.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "your workflows consume zero tasks",
+     "claim_source": "Not located: the literal phrase was not shown anywhere in the app screens opened in this session",
+     "claim_read_on": "2026-11-26",
+     "observed": "The literal phrase 'your workflows consume zero tasks' was not shown anywhere in the app screens we opened; the Unlimited plan itself was not bought, so its task counting could not be observed.",
+     "observed_on": "2026-11-26",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pabbly-connect-review.html#claim-vs-measured"
+     },
+     "plan": "Unlimited plan, not bought",
+     "comparability": "The phrase was searched for in the app screens that were opened; the Unlimited plan itself was not bought, so its task counting could not be observed.",
+     "status": "not_testable",
+     "buying_consequence": "No source for this phrase was found in the app, so it should not be relied on.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Standard Monthly: $19/mo, 10,000 tasks (Upgrade dialog, Monthly tab)",
+     "claim_source": "In-app Upgrade dialog, Monthly tab, 2026-11-26T08:52:00+01:00",
+     "claim_read_on": "2026-11-26",
+     "observed": "The Secure Checkout dialog for the Standard Monthly Plan, Get 10,000 Tasks Every Month, showed \"Pay $19\" in USD, with no VAT line, card or PayPal, and a reCAPTCHA. Nothing was entered.",
+     "observed_on": "2026-11-26",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pabbly-connect-review.html#claim-vs-measured"
+     },
+     "plan": "Standard Monthly Plan",
+     "comparability": "The plan page and the checkout dialog show the same $19; no cost rule was compared and no tax line was shown before the payment step, so the total including tax was not measured.",
+     "status": "confirmed",
+     "buying_consequence": "The monthly Standard plan is $19 in the checkout dialog, the same as in the Upgrade dialog; the Upgrade dialog preselects 3 Yearly - SAVE 25%.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "30-Days Refund Guarantee",
+     "claim_source": "Footer of the Secure Checkout dialog, 2026-11-26T08:52:30+01:00",
+     "claim_read_on": "2026-11-26",
+     "observed": "The footer text was seen in the checkout dialog; no payment was made, so no refund was requested.",
+     "observed_on": "2026-11-26",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/pabbly-connect-review.html#claim-vs-measured"
+     },
+     "plan": "Standard Monthly Plan",
+     "comparability": "The footer was read only; nothing was bought, so the refund was not tested.",
+     "status": "not_testable",
+     "buying_consequence": "The checkout footer states a 30-day refund guarantee; it was not tested.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-26",
+    "what": "On the Free plan of an existing account, one workflow was built with a Catch Webhook trigger, a Text Formatter step (uppercase) and an API (Pabbly) step. It was run live twice and the task counter was read before and after: the trigger and the formatter were free, the API step cost 1 of the 100 free tasks. The email step could not be built without external SMTP credentials. The Standard Monthly checkout showed Pay $19 and was closed before any card data.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "Create Workflow opened a full-screen \"WAIT! Unlock Your Lifetime Deal\" popup with a countdown before the menu could be used; closed it. A top banner throughout read \"[LIMITED TIME OFFER] - $194 per year $349 for Lifetime Access\" with a countdown. The Upgrade dialog preselected \"3 Yearly - SAVE 25%\". The only built-in sender is SMTP (Pabbly), which needs SMTP server credentials; there is no Email by Pabbly app.",
+    "friction": {
+     "export_route": "Export or re-import of workflows was not done.",
+     "format": "No file was exported, so no file format was seen.",
+     "reimport": "Re-import of workflows was not done.",
+     "cancellation": "Free plan, no subscription to cancel. Route seen: avatar menu, My Account / My Subscription. My Subscription opened a new tab on payments.pabbly.com that landed on the affiliate portal for this account; it was closed unread."
+    },
+    "not_tested": [
+     "Email action: needs SMTP credentials (SMTP (Pabbly)) or an external connection such as Gmail; not allowed in this test.",
+     "Unlimited plan task counting and the phrase 'your workflows consume zero tasks': requires the paid plan.",
+     "Fresh signup screens and time.",
+     "Cancellation or account deletion route (free plan; subscription link led to the affiliate portal).",
+     "API & Webhooks / Platform API Keys pages.",
+     "Export or re-import of workflows."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "BestTrack",
    "product_id": "besttrack",
    "run_date": "22 November 2026",

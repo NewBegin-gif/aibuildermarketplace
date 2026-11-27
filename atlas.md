@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 703 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-27.
+All 705 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-27.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -413,6 +413,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** newsletter operators who want growth tools, automation, SEO control and ad/referral monetisation, and to keep 100% of subscription revenue
 - **Flags:** Free tier
 - **Full review:** https://marketingandsalessoftware.com/beehiiv-review.html
+
+## BestTrack (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-27 on apps.shopify.com/besttrack, USD) Free: 300 tracked orders a month, branded order tracking page, email notifications and custom templates, dropshipping mode.
+- **Honest take:** Shopify order tracking app with a branded tracking page and status emails; free for 300 tracked orders a month, Pro is $9 a month.
+- **Best for:** Shopify stores that ship fewer than 300 orders a month and want a branded tracking page and carrier detection for free
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/besttrack-review/
 
 ## BeSure Checkout Rules (checkoutrules.com)
 - **Verified pricing:** (read 2026-11-15 on checkoutrules.com/pricing and the Shopify App Store listing, US dollars, billed through Shopify every 30 days) BeSure Checkout Rules has a Free plan that lets you test r…
@@ -2334,6 +2341,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** CRM with AI; card needed for the trial.
 - **Best for:** small service businesses and agencies that want customers, jobs, invoices, reviews and marketing in one CRM and would like to connect their own AI tool
 - **Full review:** https://marketingandsalessoftware.com/localtry-review.html
+
+## Loox (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-27 on apps.shopify.com/loox, USD) Beginner: free, up to 500 orders.
+- **Honest take:** Shopify app for photo and video reviews with review request emails and widgets; free up to 500 orders, Convert is $49.99 a month.
+- **Best for:** Shopify stores that want to collect photo reviews after fulfilment and show them in on brand widgets
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/loox-review/
 
 ## Lovable (lovable.dev)
 - **Verified pricing:** (read 2026-09-26 on lovable.dev/pricing from a European exit, so shown in euros including VAT, and in Lovable's plans-and-credits documentation) Free: 5 build credits a day, capped at 30 a …

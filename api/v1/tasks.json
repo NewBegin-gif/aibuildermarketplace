@@ -41388,25 +41388,48 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Drive Plus, 3.99 EUR a month for 200 GB on annual billing",
+     "claim_source": "Proton Drive dossier (pricing page)",
+     "claim_read_on": "2026-11-27",
+     "observed": "The checkout showed Drive Plus 200 GB at 3.99 EUR/month, 47.88 EUR for 12 months including 21% tax (8.31 EUR), 4.99 EUR on monthly billing, auto renewing every 12 months.",
+     "observed_on": "2026-11-27",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/proton-drive-review.html#claim-vs-measured"
+     },
+     "plan": "Drive Plus 200 GB, 12 months",
+     "comparability": "Same plan, term and currency; billing country Netherlands.",
+     "status": "confirmed",
+     "buying_consequence": "You pay 47.88 EUR up front for the year, tax included for a Dutch billing address.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
-    "run_date": "2026-10-23",
-    "what": "On 23 October 2026, in the same free account as our earlier test, we uploaded a folder with four files whose SHA-256 hashes we had recorded beforehand (three 89-byte text files and a 2,259-byte image), selected all four and downloaded them, then compared the files. We did not upload the downloaded set again.",
+    "run_date": "2026-11-27",
+    "what": "Retest on 27 November 2026 in the same free account: we uploaded four files whose SHA-256 hashes we recorded in October (two text files, one with spaces and an accented letter in its name, and random 1 MB and 8 MB files), downloaded all four as one ZIP and compared them. All four were byte for byte identical with the same names. A public link on one file was switched on and off again. Earlier session (23 Oct 2026): On 23 October 2026, in the same free account as our earlier test, we uploaded a folder with four files whose SHA-256 hashes we had recorded beforehand (three 89-byte text files and a 2,259-byte image), selected all four and downloaded them, then compared the files. We did not upload the downloaded set again.",
     "first_import": null,
     "file_inspected": true,
     "reimport_tested": false,
-    "awkward": "The file dates inside the ZIP are the upload time, not the original modification dates.",
+    "awkward": "The storage meter showed the old total for about 30 seconds after the upload. The upgrade page and the checkout put a 9.99 EUR a month AI add-on box above the plan choice. Earlier: The file dates inside the ZIP are the upload time, not the original modification dates.",
     "friction": {
-     "export_route": "Select the files, then Download; several files automatically come as one ZIP, within seconds for us.",
+     "export_route": "Select the files, then Download; several files come as one ZIP within seconds.",
      "format": "The original files inside a ZIP.",
      "reimport": "Not tested: we did not upload the extracted set again.",
-     "cancellation": "Not tested."
+     "cancellation": "Not applicable: free plan, nothing to cancel."
     },
     "not_tested": [
      "Uploading the extracted set again",
-     "Version history and share links in the download",
-     "Large files and folders with subfolders"
+     "A view of the public link without a Proton account in this session (the 9 Oct 2026 test did open it without an account)",
+     "Desktop and mobile apps",
+     "Version history",
+     "Cancelling a paid plan"
     ],
     "came_along": [
+     "All 4 files, byte identical, with the same names, including a name with spaces and an accented letter (27 Nov 2026)",
      "All 4 files, with the same names and identical SHA-256 hashes as before the upload"
     ],
     "lost": [],
@@ -42226,6 +42249,95 @@
    "evidence_status": null,
    "result": "reported",
    "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
+   "product_name": "QuickBooks UK",
+   "product_id": "quickbooks-uk",
+   "run_date": "27 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 27 November 2026 on a new QuickBooks Online UK account started through the 30-day free trial, with the interface in English (UK). We went through the setup, created and emailed one invoice to a fictitious customer, looked at Manage users and the billing page, and opened the checkout and the cancellation screen. We did not pay, did not connect a bank and did not cancel.",
+   "findings": [
+    "Setup: from the welcome screen to the dashboard took 21 screens in about 5 minutes. A 1-to-1 expert setup call, the bank feed, card payments and the receipts app were all optional, and no card, VAT number or Companies House number was asked.",
+    "Invoice: invoice 1001 for a fictitious customer, 2 x £250 = £500.00 on Net 30 terms, went out by email 6.4 minutes after the first setup screen. The PDF was not attached to the email by default.",
+    "Plan: the free trial put the account on Simple Start. Subscriptions and billing showed 'TRIAL Ends on 26/12/2026' and 'Subscribe for GBP 18/mo + VAT'.",
+    "Users: Manage users on the Simple Start trial listed one billable admin and only an Upgrade button, with no way to add a second user. An Accounting Firms tab was there; we did not open it.",
+    "Checkout: Simple Start at £18 a month, free until 27/12/2026, plus VAT, with annual billing unticked. The VAT amount was not shown before card details, so we stopped there.",
+    "Cancelling: Cancel your trial opens one screen with Don't cancel and Cancel plan and no retention offer; the screen says the data stays viewable for one year. We did not confirm."
+   ],
+   "not_tested": [
+    "the bank feed and Making Tax Digital submissions for VAT or income tax, which need a real bank and HMRC connection",
+    "Sole Trader Plus, Essentials, Plus and Advanced, because the trial assigned Simple Start",
+    "inviting an accountant, export and re-import, and support response times",
+    "the cancellation itself, which we viewed but did not confirm"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "claim_checks": [
+    {
+     "claim": "Free trial for 30 days",
+     "claim_source": "https://quickbooks.intuit.com/uk/pricing/",
+     "claim_read_on": "2026-11-27",
+     "observed": "Billing showed 'TRIAL Ends on 26/12/2026' and the checkout 'Free until 27/12/2026' for an account set up on 27 Nov 2026; no card was asked to start.",
+     "observed_on": "2026-11-27",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/quickbooks-uk-review.html#claim-vs-measured"
+     },
+     "plan": "Simple Start trial",
+     "comparability": "Same trial route as the pricing page toggle; the two end dates on billing and checkout differ by one day.",
+     "status": "confirmed",
+     "buying_consequence": "The trial runs about 30 days and starts without a card.",
+     "buyer_direction": null,
+     "claim_changed_on": null
+    },
+    {
+     "claim": "Simple Start GBP 16 a month plus VAT (dossier, pricing page read 11 Oct 2026)",
+     "claim_source": "https://quickbooks.intuit.com/uk/pricing/",
+     "claim_read_on": "2026-10-11",
+     "observed": "The in-app checkout for Simple Start showed GBP 18/mo + VAT, Save with annual billing unticked, VAT amount not shown before card details.",
+     "observed_on": "2026-11-27",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://officesoftwaremarketplace.com/quickbooks-uk-review.html#claim-vs-measured"
+     },
+     "plan": "Simple Start, monthly",
+     "comparability": "Same plan and term; the October price may have been a promotional price, so this needs a fresh read of the pricing page.",
+     "status": "contradicted",
+     "buying_consequence": "After the trial, Simple Start costs GBP 18 a month plus VAT in the app checkout.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
+    }
+   ],
+   "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
+   "exit_test": {
+    "run_date": "2026-11-27",
+    "what": "A fresh QuickBooks Online UK trial was set up as a sole trader: 21 setup screens in about 5 minutes, with no card, VAT number or bank connection asked. One invoice (GBP 500) to a fictitious customer was created and emailed 6.4 minutes after the first setup screen. The trial put the account on Simple Start; the checkout showed GBP 18/mo + VAT and was closed before any card data.",
+    "first_import": null,
+    "file_inspected": false,
+    "reimport_tested": false,
+    "awkward": "The trial lands on Simple Start, where Manage users shows only an Upgrade button. The invoice email does not attach the PDF by default. The VAT amount is not shown before card details.",
+    "friction": {
+     "export_route": "Export data is listed under Tools; not run.",
+     "format": "No file was exported.",
+     "reimport": "Re-import was not done.",
+     "cancellation": "Subscriptions and billing > Cancel your trial opens one screen: 'We'll cancel your QuickBooks Simple Start trial immediately.' Data stays viewable for one year. Two buttons: Don't cancel and Cancel plan. No retention offer. Not confirmed."
+    },
+    "not_tested": [
+     "Bank feed and Making Tax Digital VAT or income tax submission: needs a real bank and HMRC connection.",
+     "Sole Trader Plus and other plans: the trial assigned Simple Start.",
+     "Inviting an accountant via the Accounting Firms tab.",
+     "Export and re-import.",
+     "Support response time."
+    ],
+    "available_fields": [],
+    "not_offered": [],
+    "note": "A check of this export route with synthetic records, on the account and date stated. Re-importing the export was not tested. The exported file was not opened, so what it contains is unverified. Friction is described, not scored; this is not a verdict on the product."
+   },
    "in_catalog": true
   },
   {
@@ -52095,12 +52207,29 @@
      "buying_consequence": "The real monthly amount depends on the orders; the approval screen allows up to $2,000 per 30 days, far above the listed tiers.",
      "buyer_direction": "neutral",
      "claim_changed_on": null
+    },
+    {
+     "claim": "14-day free trial",
+     "claim_source": "Shopify App Store listing, read 17 Nov 2026",
+     "claim_read_on": "2026-11-17",
+     "observed": "On reinstall (27 Nov 2026) the approval screen said 'You have a 4-day free trial ending on 1 Dec.', the same end date as the first install on 17 Nov.",
+     "observed_on": "2026-11-27",
+     "evidence": {
+      "label": "Our test observations",
+      "url": "https://marketingandsalessoftware.com/upsell-com-review.html#claim-vs-measured"
+     },
+     "plan": "Usage approval screen, approved as a not billed test charge, development store",
+     "comparability": "The trial length on the listing against the approval screen of a second install on the same store.",
+     "status": "contradicted",
+     "buying_consequence": "The 14-day trial runs from the first install; removing and reinstalling the app does not restart it.",
+     "buyer_direction": "unfavourable",
+     "claim_changed_on": null
     }
    ],
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
-    "run_date": "2026-11-17",
-    "what": "The app was installed on our Shopify development store, which we set up, and our AI assistant ran the test in our browser. On 17 November 2026 the session installed Upsell.com (ReConvert Post Purchase Upsell on the listing) on a Shopify development store. Straight after the install, before the app opened, Shopify showed an approval screen for usage charges up to $2.000,00 per 30 days that said there would be no charge for this test but also had an Add payment method row, so it was not approved and no upsell was set up. The app was uninstalled; nothing was paid. Install: the listing was read at about 22:57 and the app was installed at about 22:57 in our own tab; the dialog asked for View customer data, View staff and contributor data and View and edit store data. After installing the screen said Installing Upsell.com... with a button Take me to the app, and then at about 22:58 the Shopify screen Approve subscription came up. The app itself did not open. Core action NOT DONE: the app did not open, because the subscription had to be approved first and the approval screen had an Add payment method row. No upsell was set up and no editor, preview, A/B test or setting was seen. Checkout: the screen Approve subscription showed the line You will not be billed for this test charge, Upsell.com ex ReConvert, This app bills you for usage charges, plan Upsell.com, an app spending limit of at most $2.000,00 USD per 30 days that can be updated after approval, a 14-day free trial ending on 1 Dec, You will be billed for this app when you begin to use it, and a row Add payment method. Our rule is to approve nothing on a screen with an Add payment method row, so nothing was approved and no card was entered. The screen showed no $0 plan and no plan list with amounts. Difference with the listing: the listing names a Free plan up to 50 orders and Growth plans from $9.99, while Shopify asked to approve usage charges up to $2.000,00 per 30 days. Cancelling: nothing was approved. The app was uninstalled in Settings, Apps, Uninstall with the reason Testing multiple apps. Clean up: the app is gone from Installed; no theme change and no order. Our own tab was closed. No kit records were entered.",
+    "run_date": "2026-11-27",
+    "what": "Retest on 27 November 2026: the approval screen no longer asked for a payment method, so the test charge was approved and the app opened. A product page upsell flow (10% maximum discount, Product upsell widget) was live about 3 minutes later, but the widget did not show in the theme editor preview and the storefront is password protected, so no shopper view or upsell sale was seen. After setup the app asked to show partner ads on the thank you page in return for a discount; we declined. The reinstall gave a 4-day trial, not the 14 days on the listing. The app was uninstalled. Earlier session (17 Nov 2026): The app was installed on our Shopify development store, which we set up, and our AI assistant ran the test in our browser. On 17 November 2026 the session installed Upsell.com (ReConvert Post Purchase Upsell on the listing) on a Shopify development store. Straight after the install, before the app opened, Shopify showed an approval screen for usage charges up to $2.000,00 per 30 days that said there would be no charge for this test but also had an Add payment method row, so it was not approved and no upsell was set up. The app was uninstalled; nothing was paid. Install: the listing was read at about 22:57 and the app was installed at about 22:57 in our own tab; the dialog asked for View customer data, View staff and contributor data and View and edit store data. After installing the screen said Installing Upsell.com... with a button Take me to the app, and then at about 22:58 the Shopify screen Approve subscription came up. The app itself did not open. Core action NOT DONE: the app did not open, because the subscription had to be approved first and the approval screen had an Add payment method row. No upsell was set up and no editor, preview, A/B test or setting was seen. Checkout: the screen Approve subscription showed the line You will not be billed for this test charge, Upsell.com ex ReConvert, This app bills you for usage charges, plan Upsell.com, an app spending limit of at most $2.000,00 USD per 30 days that can be updated after approval, a 14-day free trial ending on 1 Dec, You will be billed for this app when you begin to use it, and a row Add payment method. Our rule is to approve nothing on a screen with an Add payment method row, so nothing was approved and no card was entered. The screen showed no $0 plan and no plan list with amounts. Difference with the listing: the listing names a Free plan up to 50 orders and Growth plans from $9.99, while Shopify asked to approve usage charges up to $2.000,00 per 30 days. Cancelling: nothing was approved. The app was uninstalled in Settings, Apps, Uninstall with the reason Testing multiple apps. Clean up: the app is gone from Installed; no theme change and no order. Our own tab was closed. No kit records were entered.",
     "first_import": null,
     "file_inspected": false,
     "reimport_tested": false,
@@ -52112,6 +52241,9 @@
      "cancellation": "No cancellation or downgrade performed."
     },
     "not_tested": [
+     "Shopper view of the product page widget (store password; editor preview showed no widget).",
+     "Any upsell revenue or A/B test result (development store, no real orders).",
+     "Post purchase, thank you page and checkout upsells.",
      "Not tested: setting up an upsell offer in the editor and seeing it in a preview. The app asks for a payment method before it does anything.",
      "The editor, A/B tests and the settings of the app, which never opened.",
      "The Free plan up to 50 orders the listing names, which no screen offered.",
@@ -55771,7 +55903,7 @@
    "claim_checks_note": "A vendor claim (quoted, with source and read date) set against what we observed in this session on the plan stated. status is confirmed, contradicted, not_comparable, not_testable or out_of_date; it is not a score of the product.",
    "exit_test": {
     "run_date": "2026-11-17",
-    "what": "The app was installed on our Shopify development store, which we set up, and our AI assistant ran the test in our browser. On 17 November 2026 the session installed StoreLock on a Shopify development store. The app opened on a plan choice with Premium and Enterprise and nothing else; the Shopify approval screen for Premium said there would be no charge for this test but also showed an Add payment method row, so it was not approved and the copy protection was not tested. The app was uninstalled; nothing was paid. Install: the install started at about 22:32; the dialog asked for View staff and contributor data and View store data. After Install the app opened at about 22:33 on Choose your StoreLock plan. Core action NOT DONE: the app shows only the plan choice at first opening; settings and the app embed only open after a plan. No copy protection, right click block or clone monitoring was switched on, and no time to a first result was measured. Plans in the app: StoreLock Premium $19/mo plus usage-based image monitoring (Full storefront protection, IP & country blocking, Copy protection for text and images, Domain squatter detection, Alert emails, Image monitoring pay per scan) and StoreLock Enterprise $399/mo, Fully Managed, all-inclusive with no usage charges; both 3-day free trial, Cancel anytime. Checkout: Premium opened the Shopify screen Approve subscription with the line You will not be billed for this test charge, a 3-day free trial ending on 20 Nov, $19,00 USD every 30 days, a spending limit of at most $20,00 USD per 30 days and a row Add payment method. Our rule is to approve nothing on a screen with an Add payment method row, so nothing was approved and no card was entered; Cancel was clicked. Differences with the dossier: the app card says IP & country blocking (the dossier says IP blocking was removed) and the approval screen shows a spending limit of $20 per 30 days (the dossier says the default cap was removed). Cancelling: no plan was started. The uninstall dialog warns that data managed by the app will be deleted and needs a reason. Clean up: the app was uninstalled in Settings, Apps and is gone from Installed. Other apps were not touched. Our own tab was closed. No kit records were entered.",
+    "what": "Retest on 27 November 2026: the Shopify approval screen no longer showed an Add payment method row, so the Premium test charge was approved without a card. Copy protection and the warning popup were switched on and the app embed was enabled, but the storefront effect could not be checked behind the development store password. Image Monitoring offers 25 free scans in the trial; a job on one image defaulted to Monthly with the first run a month later, so no scan result was produced. Detections was empty. The app was uninstalled. Earlier session (17 Nov 2026): The app was installed on our Shopify development store, which we set up, and our AI assistant ran the test in our browser. On 17 November 2026 the session installed StoreLock on a Shopify development store. The app opened on a plan choice with Premium and Enterprise and nothing else; the Shopify approval screen for Premium said there would be no charge for this test but also showed an Add payment method row, so it was not approved and the copy protection was not tested. The app was uninstalled; nothing was paid. Install: the install started at about 22:32; the dialog asked for View staff and contributor data and View store data. After Install the app opened at about 22:33 on Choose your StoreLock plan. Core action NOT DONE: the app shows only the plan choice at first opening; settings and the app embed only open after a plan. No copy protection, right click block or clone monitoring was switched on, and no time to a first result was measured. Plans in the app: StoreLock Premium $19/mo plus usage-based image monitoring (Full storefront protection, IP & country blocking, Copy protection for text and images, Domain squatter detection, Alert emails, Image monitoring pay per scan) and StoreLock Enterprise $399/mo, Fully Managed, all-inclusive with no usage charges; both 3-day free trial, Cancel anytime. Checkout: Premium opened the Shopify screen Approve subscription with the line You will not be billed for this test charge, a 3-day free trial ending on 20 Nov, $19,00 USD every 30 days, a spending limit of at most $20,00 USD per 30 days and a row Add payment method. Our rule is to approve nothing on a screen with an Add payment method row, so nothing was approved and no card was entered; Cancel was clicked. Differences with the dossier: the app card says IP & country blocking (the dossier says IP blocking was removed) and the approval screen shows a spending limit of $20 per 30 days (the dossier says the default cap was removed). Cancelling: no plan was started. The uninstall dialog warns that data managed by the app will be deleted and needs a reason. Clean up: the app was uninstalled in Settings, Apps and is gone from Installed. Other apps were not touched. Our own tab was closed. No kit records were entered.",
     "first_import": null,
     "file_inspected": false,
     "reimport_tested": false,
@@ -55783,7 +55915,9 @@
      "cancellation": "No cancellation or downgrade performed."
     },
     "not_tested": [
-     "Not tested: switching on copy protection (blocking right click and copying) and the app embed, and seeing it in a theme preview. The app asks for a payment method before it does anything.",
+     "Storefront effect of copy protection and right click block (store password, editor preview intercepts right click).",
+     "A first image scan result (default frequency Monthly; Run Once not used).",
+     "Clone detection and takedown filing (needs a real clone).",
      "Clone and image monitoring, domain squatter detection and alert e-mails.",
      "Takedowns, on purpose.",
      "IP and country blocking.",

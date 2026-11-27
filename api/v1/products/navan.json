@@ -17,8 +17,8 @@
   "from_price_usd_month": 15.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(read 24 September 2026 on navan.com/pricing) Navan Business is free for companies of up to 300 employees, with no limit on trips, and Navan Expense is free for the first 5 monthly expensing users and then $15 per user per month. Above 300 employees the plan is Navan Enterprise, priced by quote. An expensing user is anyone who submits a transaction in the month, so the expense bill follows who actually files, not headcount. The travel side is free because it is funded by travel-supplier commissions, which makes the question not what it costs but what it steers; note that corporate negotiated rates sit in the Enterprise column of the plan table, not the Business one. Our July and August 2026 readings found no amount on this URL and put the free expense threshold at 15 users; the page now says 5, and this text follows the page.",
-  "verified_at": "2026-09-24",
+  "notes": "(read 24 September 2026 and re-read 27 November 2026 on navan.com/pricing, unchanged) Navan Business is free for companies of up to 300 employees, with no limit on trips, and Navan Expense is free for the first 5 monthly expensing users and then $15 per user per month. Above 300 employees the plan is Navan Enterprise, priced by quote. An expensing user is anyone who submits a transaction in the month, so the expense bill follows who actually files, not headcount. The travel side is free because it is funded by travel-supplier commissions, which makes the question not what it costs but what it steers; note that corporate negotiated rates sit in the Enterprise column of the plan table, not the Business one. Our July and August 2026 readings found no amount on this URL and put the free expense threshold at 15 users; the page now says 5, and this text follows the page.",
+  "verified_at": "2026-11-27",
   "source_url": null,
   "schema_offer": null,
   "source_quotes": null,
@@ -31,15 +31,15 @@
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
-   "evidence": "(read 24 September 2026 on navan.com/pricing) Navan Business is free for companies of up to 300 employees, with no limit on trips, and Navan Expense is free for the first 5 monthly expensing users and then $15 per user per month.",
-   "verified_at": "2026-09-24",
+   "evidence": "(read 24 September 2026 and re-read 27 November 2026 on navan.com/pricing, unchanged) Navan Business is free for companies of up to 300 employees, with no limit on trips, and Navan Expense is free for the first 5 monthly expensing users and then $15 per user per month.",
+   "verified_at": "2026-11-27",
    "source_url": null
   },
   {
    "id": "usage_metered",
    "label": "Usage-metered",
    "evidence": "'Free' is real but has a mechanism: Navan earns commission on bookings made through its inventory, so the platform's incentive is that your travel flows through Navan, and pricing on specific routes/hotels deserves an occasional spot-check against direct booking.",
-   "verified_at": "2026-09-24",
+   "verified_at": "2026-11-27",
    "source_url": null
   }
  ],
@@ -68,16 +68,468 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "expensing user",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "business",
+     "name": "Navan Business",
+     "model": "flat",
+     "max_units": 300,
+     "billing": "unspecified",
+     "monthly": 0,
+     "included_units": 5,
+     "extra_unit": {
+      "monthly": 15
+     },
+     "evidence": "Navan Business is free for companies of up to 300 employees, with no limit on trips, and Navan Expense is free for the first 5 monthly expensing users and then $15 per user per month"
+    },
+    {
+     "id": "enterprise",
+     "name": "Navan Enterprise",
+     "model": "quote",
+     "evidence": "Above 300 employees the plan is Navan Enterprise, priced by quote"
+    }
+   ],
+   "notes": [
+    "Units are monthly expensing users (anyone who submits a transaction in the month), not headcount: 'An expensing user is anyone who submits a transaction in the month'.",
+    "Navan Business (travel) is free for companies of up to 300 employees; the cap is on employees, so a company above 300 needs Enterprise whatever its expensing-user count."
+   ],
+   "not_computable": [
+    "Corporate negotiated rates sit in the Enterprise column of the plan table, not the Business one",
+    "Travel bookings themselves (fares and hotel rates) are paid per trip and not part of this rule"
+   ],
+   "rules_verified_at": "2026-11-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "navan",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "expensing user",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": null,
+      "cheapest_plan_name": null,
+      "total_month": null,
+      "billed": null,
+      "ranges": [],
+      "per_plan": {
+       "business": "price_unknown_on_billing",
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Corporate negotiated rates sit in the Enterprise column of the plan table, not the Business one",
+     "Travel bookings themselves (fares and hotel rates) are paid per trip and not part of this rule"
+    ],
+    "measured": [
+     {
+      "claim": "Navan Business, For companies up to 300 employees, Free",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The public pricing page and the account Pricing page both say travel costs nothing for companies with 300 or fewer employees, as the dossier says.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+      },
+      "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+      "comparability": "The pricing pages against the dossier plan text.",
+      "status": "confirmed",
+      "buying_consequence": "Travel booking is free for companies of up to 300 employees.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/navan-review.html"
+     },
+     {
+      "claim": "Free for the first 5 users",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The public page lists expense features as free for the first 5 users, the same threshold as the dossier; the expense module was not visible in this account.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+      },
+      "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+      "comparability": "The public pricing page against the dossier; the expense module itself was not tested.",
+      "status": "confirmed",
+      "buying_consequence": "Expenses are free for 5 users; more cost extra.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/navan-review.html"
+     },
+     {
+      "claim": "€654 and up is out of policy",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The search marked fares from €654 as out of policy and flagged Club Plus at €450 because the cabin cap is Economy; a filter shows only in-policy fares.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+      },
+      "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+      "comparability": "One search on a fresh account with the default policy.",
+      "status": "confirmed",
+      "buying_consequence": "Travellers see the policy limits while they search.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/navan-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "navan",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "expensing user",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Navan Business",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 0.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Navan Business",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 0.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Navan Business",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 0.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Navan Business",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 0.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Navan Business",
+      "total_month": 75.0,
+      "billed": {
+       "amount": 75.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 75.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Navan Business",
+      "total_month": 150.0,
+      "billed": {
+       "amount": 150.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 150.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Navan Business",
+      "total_month": 225.0,
+      "billed": {
+       "amount": 225.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 225.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Navan Business",
+      "total_month": 300.0,
+      "billed": {
+       "amount": 300.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 300.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Navan Business",
+      "total_month": 675.0,
+      "billed": {
+       "amount": 675.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 675.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "business",
+      "cheapest_plan_name": "Navan Business",
+      "total_month": 1425.0,
+      "billed": {
+       "amount": 1425.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "business": 1425.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [
+     "Corporate negotiated rates sit in the Enterprise column of the plan table, not the Business one",
+     "Travel bookings themselves (fares and hotel rates) are paid per trip and not part of this rule"
+    ],
+    "measured": [
+     {
+      "claim": "Navan Business, For companies up to 300 employees, Free",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The public pricing page and the account Pricing page both say travel costs nothing for companies with 300 or fewer employees, as the dossier says.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+      },
+      "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+      "comparability": "The pricing pages against the dossier plan text.",
+      "status": "confirmed",
+      "buying_consequence": "Travel booking is free for companies of up to 300 employees.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/navan-review.html"
+     },
+     {
+      "claim": "Free for the first 5 users",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The public page lists expense features as free for the first 5 users, the same threshold as the dossier; the expense module was not visible in this account.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+      },
+      "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+      "comparability": "The public pricing page against the dossier; the expense module itself was not tested.",
+      "status": "confirmed",
+      "buying_consequence": "Expenses are free for 5 users; more cost extra.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/navan-review.html"
+     },
+     {
+      "claim": "€654 and up is out of policy",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-19",
+      "observed": "The search marked fares from €654 as out of policy and flagged Club Plus at €450 because the cabin cap is Economy; a filter shows only in-policy fares.",
+      "observed_on": "2026-11-19",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://officesoftwaremarketplace.com/navan-review.html#claim-vs-measured"
+      },
+      "plan": "Navan Business, free for companies of up to 300 employees, monthly term",
+      "comparability": "One search on a fresh account with the default policy.",
+      "status": "confirmed",
+      "buying_consequence": "Travellers see the policy limits while they search.",
+      "buyer_direction": "favourable",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://officesoftwaremarketplace.com/navan-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-19; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -679,9 +1131,15 @@
    "status": "open"
   },
   {
-   "question_id": "navan:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "navan:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Corporate negotiated rates sit in the Enterprise column of the plan table, not the Business one. Can you publish the price or the rule?",
+   "status": "open"
+  },
+  {
+   "question_id": "navan:pricing_gap_2",
+   "key": "pricing_gap_2",
+   "question": "Our price check could not put a number on this part of the cost: Travel bookings themselves (fares and hotel rates) are paid per trip and not part of this rule. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

@@ -79,15 +79,366 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "failed_evidence_check",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "store",
+   "axis": "stores",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "evidence": "Free costs nothing"
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "per_unit",
+     "monthly": 10,
+     "annual_year": 100,
+     "evidence": "Standard is $10 a month or $100 a year (17% off)"
+    },
+    {
+     "id": "plus",
+     "name": "Plus",
+     "model": "per_unit",
+     "monthly": 37,
+     "annual_year": 370,
+     "evidence": "Plus is $37 or $370 a year"
+    },
+    {
+     "id": "max",
+     "name": "Max",
+     "model": "per_unit",
+     "monthly": 99,
+     "annual_year": 990,
+     "evidence": "names the top plan Max at $99 a month or $990 a year"
+    }
+   ],
+   "notes": "Shopify app, billed in USD every 30 days per store that installs it, with a 7-day free trial on each paid tier. Banner impressions are unlimited on every tier, so the tiers gate features (multi-region compliance, accessibility, IAB TCF), not traffic.",
+   "not_computable": [],
+   "rules_verified_at": "2026-11-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "consentmo",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 8.33,
+       "plus": 30.83,
+       "max": 82.5
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 16.67,
+       "plus": 61.67,
+       "max": 165.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 25.0,
+       "plus": 92.5,
+       "max": 247.5
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 41.67,
+       "plus": 154.17,
+       "max": 412.5
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 83.33,
+       "plus": 308.33,
+       "max": 825.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "Max $99",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan screen names the top plan Max at $99 a month list price ($74.25 with the promotion) with Consent monitoring, Proof of consent and IAB TCF 2.4. The dossier names the top plan Enterprise at $64 a month.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+      },
+      "plan": "Standard approval screen, not approved, development store",
+      "comparability": "Dossier top plan name and price versus the plan cards and the comparison table.",
+      "status": "contradicted",
+      "buying_consequence": "The top plan costs $99 a month at list price on the plan screen against $64 in the dossier, and it has another name.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://marketingandsalessoftware.com/consentmo-review.html"
+     },
+     {
+      "claim": "Integrations (Google Consent v2, Meta + more)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Standard card lists Integrations (Google Consent v2, Meta + more) and the dashboard says Google Consent Mode v2 not configured. Standard could not be started because the approval screen asked for a payment method, so the integrations were not tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+      },
+      "plan": "Standard approval screen, not approved, development store",
+      "comparability": "Dossier wording for the Standard plan versus a plan card and a dashboard warning; the plan was not started.",
+      "status": "not_testable",
+      "buying_consequence": "The consent signals that the dossier names for Standard could not be checked on this development store.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/consentmo-review.html"
+     },
+     {
+      "claim": "custom pricing for brands and agencies managing multiple Shopify stores",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan screen shows only the text about custom pricing for brands and agencies managing multiple stores and a chat button; no price for a second store was shown.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+      },
+      "plan": "Standard approval screen, not approved, development store",
+      "comparability": "Dossier remark that no multi-store rate is published versus the box on the plan screen.",
+      "status": "confirmed",
+      "buying_consequence": "No rate for a second store can be read from the plan screen; asking costs a chat that we did not start.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/consentmo-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "consentmo",
+    "currency": "USD",
+    "axis": "stores",
+    "unit": "store",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 10.0,
+       "plus": 37.0,
+       "max": 99.0
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 20.0,
+       "plus": 74.0,
+       "max": 198.0
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 30.0,
+       "plus": 111.0,
+       "max": 297.0
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 50.0,
+       "plus": 185.0,
+       "max": 495.0
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 100.0,
+       "plus": 370.0,
+       "max": 990.0
+      }
+     }
+    ],
+    "switch_points": [],
+    "conflicts": [],
+    "unknowns": [],
+    "measured": [
+     {
+      "claim": "Max $99",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan screen names the top plan Max at $99 a month list price ($74.25 with the promotion) with Consent monitoring, Proof of consent and IAB TCF 2.4. The dossier names the top plan Enterprise at $64 a month.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+      },
+      "plan": "Standard approval screen, not approved, development store",
+      "comparability": "Dossier top plan name and price versus the plan cards and the comparison table.",
+      "status": "contradicted",
+      "buying_consequence": "The top plan costs $99 a month at list price on the plan screen against $64 in the dossier, and it has another name.",
+      "buyer_direction": "unfavourable",
+      "claim_changed_on": null,
+      "status_label": "Contradicted",
+      "review_url": "https://marketingandsalessoftware.com/consentmo-review.html"
+     },
+     {
+      "claim": "Integrations (Google Consent v2, Meta + more)",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The Standard card lists Integrations (Google Consent v2, Meta + more) and the dashboard says Google Consent Mode v2 not configured. Standard could not be started because the approval screen asked for a payment method, so the integrations were not tried.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+      },
+      "plan": "Standard approval screen, not approved, development store",
+      "comparability": "Dossier wording for the Standard plan versus a plan card and a dashboard warning; the plan was not started.",
+      "status": "not_testable",
+      "buying_consequence": "The consent signals that the dossier names for Standard could not be checked on this development store.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Not testable",
+      "review_url": "https://marketingandsalessoftware.com/consentmo-review.html"
+     },
+     {
+      "claim": "custom pricing for brands and agencies managing multiple Shopify stores",
+      "claim_source": "our test notes",
+      "claim_read_on": "2026-11-17",
+      "observed": "The plan screen shows only the text about custom pricing for brands and agencies managing multiple stores and a chat button; no price for a second store was shown.",
+      "observed_on": "2026-11-17",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/consentmo-review.html#claim-vs-measured"
+      },
+      "plan": "Standard approval screen, not approved, development store",
+      "comparability": "Dossier remark that no multi-store rate is published versus the box on the plan screen.",
+      "status": "confirmed",
+      "buying_consequence": "No rate for a second store can be read from the plan screen; asking costs a chat that we did not start.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/consentmo-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Data export tested on 2026-11-17; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -705,12 +1056,6 @@
    "question_id": "consentmo:data_location",
    "key": "data_location",
    "question": "Where is customer data stored, and can a customer choose the region?",
-   "status": "open"
-  },
-  {
-   "question_id": "consentmo:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
    "status": "open"
   }
  ],

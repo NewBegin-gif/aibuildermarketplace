@@ -279,7 +279,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/aspire-review.html
 
 ## Assembly (assembly.com)
-- **Verified pricing:** (re-verified 28 September 2026 in a rendered browser, both billing tabs and the full comparison table) Assembly, the client-portal platform at assembly.com, publishes five tiers.
+- **Verified pricing:** (re-verified 28 September 2026 and again 27 November 2026 in a rendered browser, both billing tabs and the full comparison table; every amount unchanged) Assembly, the client-portal platfor…
 - **Honest take:** Two meters run at once. Active contacts bite first: Starter stops at 50, and the step to 500 costs $70 more a month on yearly billing ($90 monthly).
 - **Best for:** agencies and professional services firms who want one branded place for clients to message, sign, pay and share files instead of four tools and an email thread
 - **Flags:** Usage-metered, Free tier
@@ -3371,7 +3371,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/rippling-review.html
 
 ## Riverside (riverside.com)
-- **Verified pricing:** (read 2026-09-26 on riverside.com/pricing; riverside.fm now redirects to riverside.com.
+- **Verified pricing:** (read 2026-09-26 and re-read 2026-11-27, amounts unchanged, on riverside.com/pricing; riverside.fm now redirects to riverside.com.
 - **Honest take:** The meter is not recording time, it is separate-track download time, and separate tracks are the entire reason to use this rather than a video call.
 - **Best for:** podcasters and interviewers who need broadcast-quality audio and video from guests on bad connections: local recording at each end is the thing that solves it
 - **Flags:** Usage-metered, Annual commit
@@ -3683,7 +3683,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/shorby-review.html
 
 ## Shore (shore.com)
-- **Verified pricing:** (2026-09-26, read on shore.com/en/pricing and its 'All features compared' page, in euros, excluding VAT, for businesses only) Five packages on two product lines, each with a yearly-billing …
+- **Verified pricing:** (2026-09-26, list prices re-read unchanged 2026-11-27, read on shore.com/en/pricing and its 'All features compared' page, in euros, excluding VAT, for businesses only) Five packages on two …
 - **Honest take:** It's built for local appointment businesses in the German-speaking market, and the package split shows it: booking and the till are sold as separate lines, and only All-in-One carries both.
 - **Best for:** salons, barbers, spas, wellness studios, physical therapists, craftspeople and local retailers that want bookings via Google and Instagram, no-show-reducing reminders, marketing and (optionally) POS in one fixed-price system
 - **Full review:** https://officesoftwaremarketplace.com/shore-review.html
@@ -3941,7 +3941,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/streak-review.html
 
 ## Success.co (success.co)
-- **Verified pricing:** (read 2026-08-21 in Success.co's structured data on success.co/pricing, re-read 2026-09-08 and 2026-09-26) There is a Free Forever plan at $0 with the V/TO, Accountability Chart and Organiz…
+- **Verified pricing:** (read 2026-08-21 in Success.co's structured data on success.co/pricing, re-read 2026-09-08, 2026-09-26 and 2026-11-27) There is a Free Forever plan at $0 with the V/TO, Accountability Chart…
 - **Honest take:** The ladder rewards size rather than commitment: each band's rate applies only to the seats inside it.
 - **Best for:** leadership teams that already run on goals and want one place to set objectives, track KPIs and scorecards, and keep strategy execution on cadence
 - **Flags:** Per-seat pricing, Add-ons extra, Annual commit, Free tier
@@ -4338,7 +4338,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/turbotic-review.html
 
 ## Typewise (typewise.app)
-- **Verified pricing:** (re-read 2026-09-23 and again, unchanged, 2026-09-27 on typewise.app/pricing) A base plan plus a per-resolution rate.
+- **Verified pricing:** (re-read 2026-09-23 and again, unchanged, 2026-09-27 and 2026-11-27 on typewise.app/pricing) A base plan plus a per-resolution rate.
 - **Honest take:** The bill has two parts and both are published: a base fee from $99 and a resolution rate from $2 (pay as you go) down to $1 with volume packages.
 - **Best for:** customer-service teams with real ticket volume that want AI agents to resolve requests end to end and act inside the systems they already run (CRM, ERP, billing
 - **Flags:** Per-seat pricing, Usage-metered, Add-ons extra

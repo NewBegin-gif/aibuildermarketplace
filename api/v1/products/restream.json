@@ -68,16 +68,602 @@
   "note": "A rebuild is not a new measurement: pricing.verified_at is the date that matters."
  },
  "cost": {
-  "status": "not_yet",
+  "status": "available",
   "engine": "https://aibuildermarketplace.com/agents/#cost",
-  "rules": null,
-  "growth": null
+  "rules": {
+   "currency": "USD",
+   "unit": "seat",
+   "axis": "users",
+   "plans": [
+    {
+     "id": "free",
+     "name": "Free",
+     "model": "free",
+     "max_units": 1,
+     "evidence": "Free: 2 channels with Restream branding, 1 seat"
+    },
+    {
+     "id": "standard",
+     "name": "Standard",
+     "model": "flat",
+     "max_units": 1,
+     "monthly": 19,
+     "annual_year": 190,
+     "evidence": "Standard $19 a month, billed as $190 a year (3 channels, 1 seat)"
+    },
+    {
+     "id": "professional",
+     "name": "Professional",
+     "model": "flat",
+     "included_units": 2,
+     "monthly": 49,
+     "annual_year": 470,
+     "extra_unit": {
+      "price_month": 25,
+      "billing": "unspecified"
+     },
+     "evidence": "Professional $49 a month, billed as $470 a year (5 channels, Full HD 1080p in Studio, 2 seats)"
+    },
+    {
+     "id": "business",
+     "name": "Business",
+     "model": "flat",
+     "included_units": 2,
+     "monthly": 239,
+     "annual_year": 2390,
+     "extra_unit": {
+      "price_month": 25,
+      "billing": "unspecified"
+     },
+     "evidence": "Business $239 a month, billed as $2,390 a year (8 channels, website player to 1,000 viewers, 2 seats)"
+    },
+    {
+     "id": "enterprise",
+     "name": "Enterprise",
+     "model": "quote",
+     "evidence": "Enterprise is quoted"
+    }
+   ],
+   "extra_evidence": "extra team seats $25 a seat on Professional and Business only",
+   "notes": [
+    "Annual amounts ($190, $470, $2,390) are the 26 September 2026 reading; the 27 November plain read confirmed the monthly prices only."
+   ],
+   "not_computable": [
+    "Clips (+$19/+$29/+$59) and Webinars (+$99/+$99/+$299) add-ons and extra workspaces ($49 or $239) are not included."
+   ],
+   "rules_verified_at": "2026-11-27"
+  },
+  "growth": {
+   "annual": {
+    "product_id": "restream",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "annual",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 15.83,
+       "professional": 39.17,
+       "business": 199.17,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 39.17,
+      "billed": {
+       "amount": 470.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 39.17,
+       "business": 199.17,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 64.17,
+      "billed": {
+       "amount": 770.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 64.17,
+       "business": 224.17,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 114.17,
+      "billed": {
+       "amount": 1370.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 114.17,
+       "business": 274.17,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 239.17,
+      "billed": {
+       "amount": 2870.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 239.17,
+       "business": 399.17,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 364.17,
+      "billed": {
+       "amount": 4370.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 364.17,
+       "business": 524.17,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 489.17,
+      "billed": {
+       "amount": 5870.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 489.17,
+       "business": 649.17,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 614.17,
+      "billed": {
+       "amount": 7370.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 614.17,
+       "business": 774.17,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 1239.17,
+      "billed": {
+       "amount": 14870.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 1239.17,
+       "business": 1399.17,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 2489.17,
+      "billed": {
+       "amount": 29870.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 2489.17,
+       "business": 2649.17,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "professional",
+      "from_plan_name": "Free",
+      "to_plan_name": "Professional"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Clips (+$19/+$29/+$59) and Webinars (+$99/+$99/+$299) add-ons and extra workspaces ($49 or $239) are not included."
+    ],
+    "measured": [
+     {
+      "claim": "$19.99/mo",
+      "claim_source": "https://app.restream.io/",
+      "claim_read_on": "2026-11-06",
+      "observed": "All three add-ons were checked by default; checkout Due today $96.98 with those defaults.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/restream-review.html#claim-vs-measured"
+      },
+      "plan": "Free",
+      "comparability": "Restream: Base plan compared with default bundled checkout; the displayed total is recorded without reverse-calculating its arithmetic.",
+      "status": "confirmed",
+      "buying_consequence": "Review each selected add-on before subscribing.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/restream-review.html"
+     },
+     {
+      "claim": "Due today $96.98",
+      "claim_source": "https://app.restream.io/",
+      "claim_read_on": "2026-11-06",
+      "observed": "No payment submitted; no VAT line visible before payment data.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/restream-review.html#claim-vs-measured"
+      },
+      "plan": "Free",
+      "comparability": "Restream: Immediate displayed checkout only, not an invoice or proof of an actual charge.",
+      "status": "confirmed",
+      "buying_consequence": "Tax treatment is unknown at the inspected point.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/restream-review.html"
+     },
+     {
+      "claim": "UPLOADS 1/3",
+      "claim_source": "https://app.restream.io/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Own small video occupied one of three upload slots; AVAILABLE STORAGE: 66%; expiry shown as 29 days.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/restream-review.html#claim-vs-measured"
+      },
+      "plan": "Free",
+      "comparability": "Restream: One successful media upload; no general byte-cap calculation or durability test.",
+      "status": "confirmed",
+      "buying_consequence": "The inspected allowance counted the file slot despite its small size.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/restream-review.html"
+     }
+    ]
+   },
+   "monthly": {
+    "product_id": "restream",
+    "currency": "USD",
+    "axis": "users",
+    "unit": "seat",
+    "billing": "monthly",
+    "rows": [
+     {
+      "units": 1,
+      "cheapest_plan": "free",
+      "cheapest_plan_name": "Free",
+      "total_month": 0.0,
+      "billed": {
+       "amount": 0.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": 0.0,
+       "standard": 19.0,
+       "professional": 49.0,
+       "business": 239.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 49.0,
+      "billed": {
+       "amount": 49.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 49.0,
+       "business": 239.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 3,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 74.0,
+      "billed": {
+       "amount": 74.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 74.0,
+       "business": 264.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 5,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 124.0,
+      "billed": {
+       "amount": 124.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 124.0,
+       "business": 314.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 10,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 249.0,
+      "billed": {
+       "amount": 249.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 249.0,
+       "business": 439.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 15,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 374.0,
+      "billed": {
+       "amount": 374.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 374.0,
+       "business": 564.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 20,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 499.0,
+      "billed": {
+       "amount": 499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 499.0,
+       "business": 689.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 25,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 624.0,
+      "billed": {
+       "amount": 624.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 624.0,
+       "business": 814.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 50,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 1249.0,
+      "billed": {
+       "amount": 1249.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 1249.0,
+       "business": 1439.0,
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 100,
+      "cheapest_plan": "professional",
+      "cheapest_plan_name": "Professional",
+      "total_month": 2499.0,
+      "billed": {
+       "amount": 2499.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "free": "not_eligible",
+       "standard": "not_eligible",
+       "professional": 2499.0,
+       "business": 2689.0,
+       "enterprise": "quote"
+      }
+     }
+    ],
+    "switch_points": [
+     {
+      "from_units": 1,
+      "to_units": 2,
+      "from_plan": "free",
+      "to_plan": "professional",
+      "from_plan_name": "Free",
+      "to_plan_name": "Professional"
+     }
+    ],
+    "conflicts": [],
+    "unknowns": [
+     "Clips (+$19/+$29/+$59) and Webinars (+$99/+$99/+$299) add-ons and extra workspaces ($49 or $239) are not included."
+    ],
+    "measured": [
+     {
+      "claim": "$19.99/mo",
+      "claim_source": "https://app.restream.io/",
+      "claim_read_on": "2026-11-06",
+      "observed": "All three add-ons were checked by default; checkout Due today $96.98 with those defaults.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/restream-review.html#claim-vs-measured"
+      },
+      "plan": "Free",
+      "comparability": "Restream: Base plan compared with default bundled checkout; the displayed total is recorded without reverse-calculating its arithmetic.",
+      "status": "confirmed",
+      "buying_consequence": "Review each selected add-on before subscribing.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/restream-review.html"
+     },
+     {
+      "claim": "Due today $96.98",
+      "claim_source": "https://app.restream.io/",
+      "claim_read_on": "2026-11-06",
+      "observed": "No payment submitted; no VAT line visible before payment data.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/restream-review.html#claim-vs-measured"
+      },
+      "plan": "Free",
+      "comparability": "Restream: Immediate displayed checkout only, not an invoice or proof of an actual charge.",
+      "status": "confirmed",
+      "buying_consequence": "Tax treatment is unknown at the inspected point.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/restream-review.html"
+     },
+     {
+      "claim": "UPLOADS 1/3",
+      "claim_source": "https://app.restream.io/",
+      "claim_read_on": "2026-11-06",
+      "observed": "Own small video occupied one of three upload slots; AVAILABLE STORAGE: 66%; expiry shown as 29 days.",
+      "observed_on": "2026-11-06",
+      "evidence": {
+       "label": "Our test observations",
+       "url": "https://marketingandsalessoftware.com/restream-review.html#claim-vs-measured"
+      },
+      "plan": "Free",
+      "comparability": "Restream: One successful media upload; no general byte-cap calculation or durability test.",
+      "status": "confirmed",
+      "buying_consequence": "The inspected allowance counted the file slot despite its small size.",
+      "buyer_direction": "neutral",
+      "claim_changed_on": null,
+      "status_label": "Confirmed",
+      "review_url": "https://marketingandsalessoftware.com/restream-review.html"
+     }
+    ]
+   }
+  }
  },
  "unknowns": [
   "Plan-by-plan prices are not structured in this record yet; pricing.notes has the full text.",
   "Data export tested on 2026-11-06; contract terms not researched. Scope and untested export routes are listed in measured.exit_test.",
-  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none.",
-  "No computable price rules yet: cost at a given team size cannot be calculated for this product."
+  "Being verified: free trial and refund terms are not yet matched to a verbatim line on the vendor's own pages. Not matched does not mean there is none."
  ],
  "verification": {
   "price": "read",
@@ -503,9 +1089,9 @@
    "status": "open"
   },
   {
-   "question_id": "restream:minimum_seats",
-   "key": "minimum_seats",
-   "question": "Is there a minimum number of seats or users on any plan?",
+   "question_id": "restream:pricing_gap_1",
+   "key": "pricing_gap_1",
+   "question": "Our price check could not put a number on this part of the cost: Clips (+$19/+$29/+$59) and Webinars (+$99/+$99/+$299) add-ons and extra workspaces ($49 or $239) are not included. Can you publish the price or the rule?",
    "status": "open"
   }
  ],

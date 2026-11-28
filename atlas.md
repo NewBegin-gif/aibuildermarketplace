@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 706 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-28.
+All 708 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-28.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -347,7 +347,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/autowrite-review.html
 
 ## Auware (auware.com)
-- **Verified pricing:** (re-verified 28 September 2026 on auware.com/pricing and the Shopify App Store listing) One plan: Pro at $199 a month per store, where a store is one myshopify.com domain, so each store nee…
+- **Verified pricing:** (re-verified 28 September 2026 and again, unchanged, 28 November 2026 on auware.com/pricing and the Shopify App Store listing) One plan: Pro at $199 a month per store, where a store is one …
 - **Honest take:** It's deliberately narrow: Shopify-only and built around segmented paid traffic.
 - **Best for:** Shopify stores running segmented paid campaigns (different personas, interests, offers) who are currently sending all that traffic to one generic page
 - **Flags:** Add-ons extra
@@ -650,6 +650,12 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** Wholesale or private-sale Shopify stores that want to hide prices and Add to cart from everyone except tagged or logged-in buyers
 - **Flags:** Free tier
 - **Full review:** https://marketingandsalessoftware.com/bss-b2b-lock-review.html
+
+## BSS B2B Request a Quote (apps.shopify.com)
+- **Verified pricing:** (read 2026-11-28 on the Shopify App Store listing, USD; limits read 2026-11-24 on the BSS plan details page) Growth: $19/mo, or $194.40/yr (save 15%), up to 5 quote logics, 5 custom form fi…
+- **Honest take:** Shopify quote app that hides prices behind an Add to quote button and turns quotes into draft orders; from $19 a month.
+- **Best for:** Shopify stores that sell to business buyers and want to hide prices, collect quote requests and turn accepted quotes into draft orders
+- **Full review:** https://aibuildermarketplace.com/b2b/bss-b2b-request-a-quote-review/
 
 ## BSS B2B Solution (apps.shopify.com)
 - **Verified pricing:** (read 2026-11-21 on apps.shopify.com/b2b-solution-custom-pricing) Free plan: basic B2B price, basic B2B registration management, 1 custom pricing rule and 1 registration form on live stores…
@@ -1891,7 +1897,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/hostpapa-review.html
 
 ## Housecall Pro (housecallpro.com)
-- **Verified pricing:** (re-verified 2026-09-29) Basic $59/month billed annually ($79 month-to-month, advertised as 'save $20/mo') for ONE user, with no GPS tracking and no QuickBooks Online sync; Essentials $149/…
+- **Verified pricing:** (re-verified 2026-09-29 and 2026-11-28; plan prices and user counts unchanged) Basic $59/month billed annually ($79 month-to-month, advertised as 'save $20/mo') for ONE user, with no GPS tr…
 - **Honest take:** The Basic tier is a trap for real field teams: it omits GPS tracking and QuickBooks sync, so most businesses need Essentials or up.
 - **Best for:** home-service businesses (HVAC, plumbing, cleaning) that want scheduling, dispatch, invoicing and payments in one app
 - **Full review:** https://officesoftwaremarketplace.com/housecall-pro-review.html
@@ -2226,7 +2232,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/landbot-review.html
 
 ## Landingi (landingi.com)
-- **Verified pricing:** (re-verified 2026-08-17 and again on 2026-09-28; the English page quotes USD while the same page served from a Dutch address quotes euros at the same numerals, so check your own currency) F…
+- **Verified pricing:** (re-verified 2026-08-17, 2026-09-28 and 2026-11-28; the English page quotes USD while the same page served from a Dutch address quotes euros at the same numerals, so check your own currency…
 - **Honest take:** You trade away the high-end optimisation: no AI traffic routing like Unbounce's Smart Traffic, no real-time collaboration, and thinner technical control (script containers).
 - **Best for:** budget-conscious teams, international businesses and anyone needing bulk or programmatic page generation across 29 languages
 - **Flags:** Usage-metered, Renewal jump, Annual commit
@@ -2545,7 +2551,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://aibuildermarketplace.com/b2b/movavi-review/
 
 ## MRPeasy (mrpeasy.com)
-- **Verified pricing:** (re-verified 2026-08-24 and again on 2026-09-28 on their own pricing page) Four tiers, per user per month: Starter $49, Professional $69, Enterprise $99 and Unlimited $149.
+- **Verified pricing:** (re-verified 2026-08-24, 2026-09-28 and again, unchanged, 2026-11-28 on their own pricing page) Four tiers, per user per month: Starter $49, Professional $69, Enterprise $99 and Unlimited $…
 - **Honest take:** Paying ~$50 per user just so a shop-floor worker can clock in and out feels steep when they'll touch a fraction of the features.
 - **Best for:** small manufacturers, wholesalers and distributors who want dependable production planning and inventory control without a heavy ERP or a dedicated IT team
 - **Flags:** Per-seat pricing
@@ -3342,6 +3348,13 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Best for:** high-volume portrait, school and wedding photographers who already live in Photoshop and want repetitive retouching (skin, stray hairs, dust, teeth) automated: owning the plugins outright or renting the whole suite on credits
 - **Flags:** Usage-metered, Free tier
 - **Full review:** https://aibuildermarketplace.com/b2b/retouch4me-review/
+
+## Reviewers.com (reviewers.com)
+- **Verified pricing:** (read 2026-11-28 on reviewers.com/pricing and the home page, USD) First campaign: $0, up to 10 video reviews, no plan, no commitment.
+- **Honest take:** Shopify app that gets video reviews from real buyers; the first campaign of up to 10 videos is free, then $150 a month.
+- **Best for:** Shopify brands that want video reviews from US shoppers and are ready to give the product away
+- **Flags:** Free tier
+- **Full review:** https://aibuildermarketplace.com/b2b/reviewers-com-review/
 
 ## Rewardful (rewardful.com)
 - **Verified pricing:** (read 2026-11-17 on rewardful.com/pricing, US dollars, taxes extra) Starter $49 a month or $490 a year (up to $7,500 a month in affiliate revenue, 1 campaign, 2 team members); Growth $99 a …
@@ -4413,7 +4426,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://marketingandsalessoftware.com/upsellplus-review.html
 
 ## UptimeRobot (uptimerobot.com)
-- **Verified pricing:** (read 2026-08-26 on uptimerobot.com/pricing over a US connection; re-read 2026-09-29 from a Dutch connection, where the page and its machine-readable pricing.md serve euro amounts identical…
+- **Verified pricing:** (read 2026-08-26 on uptimerobot.com/pricing over a US connection; re-read 2026-09-29 and 2026-11-28 from a European connection, where the page and its machine-readable pricing.md serve euro…
 - **Honest take:** The famous free tier is real, but the paid ladder has quiet extras: extra login seats cost $15-19 per month EACH beyond the included ones, and SMS or voice-call alerts are pay-per-credit on every plan.
 - **Best for:** solo builders and small teams monitoring sites, ports and APIs at 60-second resolution with status pages, and honestly, the free 50-monitor tier covers most hobby stacks
 - **Flags:** Usage-metered, Free tier

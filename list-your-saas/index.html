@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="max-image-preview:large">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-19QLKCM7GB"></script>
-<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}/*cmv2*/gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});gtag('consent','default',{analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']});gtag('js',new Date());gtag('config','G-19QLKCM7GB');</script>
+<script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}/*cmv2*/gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'granted'});gtag('consent','default',{analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']});gtag('js',new Date());gtag('config','G-19QLKCM7GB');/*vind-1128 ga4-poort*/var s=document.createElement('script');s.src='/ga4-gate.js';s.defer=true;document.head.appendChild(s);</script>
 <title>List your SaaS on AIBuilder Marketplace: plans for vendors</title>
 <meta name="description" content="Founding partner: a full product page with your logo, screenshots and demo, our independent pricing check beside it, a hands-on paid review and a sponsored…">
 <link rel="canonical" href="https://aibuildermarketplace.com/list-your-saas/">
@@ -128,6 +128,11 @@
   function start(){try{
     var p=new URLSearchParams(location.search);
     var naam=p.get('name'), slug=p.get('tool'), url=p.get('url'), cat=p.get('cat');
+    /*vind-1128: bron van de vendor meten (review/research/partners/nav/footer/mcp/zuster)*/
+    var src=(p.get('src')||'').toLowerCase().replace(/[^a-z0-9_-]/g,'').slice(0,24);
+    if(!src&&document.referrer){try{var rh=new URL(document.referrer);src=rh.hostname.indexOf('aibuildermarketplace.com')>-1?'site':'ext';}catch(e){}}
+    window.__vfBron=src||'direct'; window.__vfClaim=(slug||'').toLowerCase().replace(/[^a-z0-9-]/g,'').slice(0,80);
+    if(window.gtag) gtag('event','vendor_landing',{src:window.__vfBron, claim:window.__vfClaim?'yes':'no', tool:window.__vfClaim});
     if(!naam&&!slug)return;
     var f=document.getElementById('lform'); if(!f)return;
     var gevuld=[];
@@ -309,7 +314,8 @@
       body: JSON.stringify({website:f.website.value, name:f.name.value, tagline:f.tagline.value, category:f.category.value,
         desc:f.desc.value, price_from:f.price_from.value, url:f.url.value, logo_url:f.logo_url.value, shot_urls:shots, email:f.email.value,
         coupon_code:(f.coupon_code.value||'').toUpperCase().trim(), coupon_deal:f.coupon_deal.value,
-        plan:p, addons:addons, paid_review:(p==='partner' && pr) ? pr.value : ''})})
+        plan:p, addons:addons, paid_review:(p==='partner' && pr) ? pr.value : '',
+        bron:window.__vfBron||'', claim_slug:window.__vfClaim||''})})
     .then(function(r){return r.json();})
     .then(function(d){
       if(d.ok){
@@ -320,7 +326,7 @@
         document.getElementById('thanks-upgrade').hidden = (p !== 'basic' || !lastId);
         if(p === 'partner' || addons.length) toonBetaling(p === 'partner', addons.length > 0);
         document.getElementById('listing-thanks-title').focus();
-        if(window.gtag) gtag('event','listing_submit',{plan:p, audit:addons.length ? 'yes' : 'no', transport_type:'beacon'});
+        if(window.gtag) gtag('event','listing_submit',{plan:p, audit:addons.length ? 'yes' : 'no', src:window.__vfBron||'', transport_type:'beacon'});
       } else {
         m.textContent = d.error || 'Something went wrong.';
       }

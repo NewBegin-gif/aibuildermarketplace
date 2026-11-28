@@ -3263,6 +3263,35 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "BSS B2B Request a Quote",
+   "product_id": "bss-b2b-request-a-quote",
+   "run_date": "24 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 24 November 2026 on a Shopify development store, with the interface in English. We installed the app, hid prices behind an Add to quote button, started the Growth trial without paying, built a quote for 10 units with a PO number and turned it into a Shopify draft order. We paid nothing.",
+   "findings": [
+    "Install: the permission screen asked to view customer and staff data and to edit customers, products, orders, discounts and the Online Store.",
+    "Setup: a four step onboarding picked who asks for quotes, a Hide price + quote template and the storefront app embed in the theme editor, which has to be switched on and saved by hand.",
+    "Buyer side: with the template on, the product page showed Login to view prices and an Add to quote button instead of Add to cart, and the quote form asked for quantity, name, email and company details.",
+    "Plan: without a plan the Quotes screen said the feature was unavailable. Starting the Growth trial showed a Shopify test charge of $19 every 30 days after a 14 day trial, with no card asked and the note that we would not be billed.",
+    "Seller side: we created a quote for 10 units at our own unit price with a freight fee, saved it as In review and converted it to a draft order with our PO number. Shopify showed draft order #D11 about 8 minutes after install.",
+    "Margin: the margin box stayed empty until a product cost is added in Shopify.",
+    "Uninstall: the dialog asked for a reason, said app data is deleted and said a request to delete customer data goes to the developer within 48 hours."
+   ],
+   "not_tested": [
+    "a quote sent by a real buyer from the live store, because the development store is password protected",
+    "quote emails, the proposal email and the PDF",
+    "counter offers, auto approval and Quick Order pages",
+    "Shopify B2B companies, which sit in the Enterprise plan"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "Pabbly Connect",
    "product_id": "pabbly-connect",
    "run_date": "26 November 2026",

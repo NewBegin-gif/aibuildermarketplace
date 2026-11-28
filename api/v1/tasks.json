@@ -3263,6 +3263,33 @@
  "sessions": [
   {
    "source": "session",
+   "product_name": "Reviewers.com",
+   "product_id": "reviewers-com",
+   "run_date": "19 November 2026",
+   "session_type": "hands_on",
+   "what": "Our AI assistant ran the test on 19 November 2026 on a Shopify development store, with the interface in English. We installed the app, switched on its theme embed and went through the seven step wizard for the free campaign up to the last screen. We did not submit the campaign, so no reviewer ordered or filmed anything, and we paid nothing.",
+   "findings": [
+    "Install: no payment screen appeared. The permission screen asked to view customer and staff data and to edit customers, products, orders, discounts and the Online Store. The wizard was ready about 2 minutes after install.",
+    "Setup: campaigns stay locked until the Reviewers core script is switched on in the theme editor and saved. After that the app showed the embed as active.",
+    "Wizard: step 1 picks the product and the number of items to give away, 10 by default, and lists only products with at least 15 units in stock. Step 2 sets age range and gender, and the reviewer location is fixed to the US. Later steps set the request timing and optional screening questions and a brief of up to 750 characters.",
+    "Last screen: the summary showed 10 items, women 18 to 65 in the US, a review request 7 days after fulfillment, and the billing line Free. We did not press Submit for approval.",
+    "How reviewers get the product: they order it from your store with a free discount code that includes shipping, and you process the order like any other. You pay for the product and the shipping yourself.",
+    "Plans: the app listing shows a free first campaign of up to 10 videos and 1 campaign a month at $150. Inside the app of our development store the plan screen said no plans were available."
+   ],
+   "not_tested": [
+    "submitting a campaign, real reviewer orders and received videos",
+    "exporting videos to other review widgets",
+    "the paid plan, billing and cancelling"
+   ],
+   "report": null,
+   "disclosure": null,
+   "evidence_status": null,
+   "result": "reported",
+   "note": "Findings as written up after the session; no pass/fail per task was scored.",
+   "in_catalog": true
+  },
+  {
+   "source": "session",
    "product_name": "BSS B2B Request a Quote",
    "product_id": "bss-b2b-request-a-quote",
    "run_date": "24 November 2026",
@@ -47891,7 +47918,7 @@
    "session_type": "hands_on",
    "what": "Tested by our team on 5 and 16 November 2026 on one account: we created the account and our AI assistant ran the test in our browser. On 5 November we used the free Personal plan up to the upload screen. By 16 November the same account showed Pro, provided by the vendor, so we did not buy it and saw no checkout. On Pro we sent one request to our own test address, signed it ourselves and downloaded the signed PDF and the certificate. Nothing went to a third party. On 19 November 2026 we rechecked the signatures in the signed PDF and the pricing page.",
    "findings": [
-    "Sending to signed took 37 seconds on Pro (sent 21:13:28 UTC, signed 21:14:04 UTC, completed 21:14:05 UTC), and about 1.5 minutes from upload. With 'I am also signing' switched on, Send went straight to the sign page. The signature type was Draw, Upload image or Text; we chose Text.",
+    "Sending to signed took 36 seconds on Pro (sent 21:13:28 UTC, signed 21:14:04 UTC, completed 21:14:05 UTC, 37 seconds after sending), and about 1.5 minutes from upload. With 'I am also signing' switched on, Send went straight to the sign page. The signature type was Draw, Upload image or Text; we chose Text.",
     "The field editor offers Signature, Text, Checkbox, Date, Initials, Paragraph, File and Stamp (the last ones after 'More...'). The signer was assigned automatically; Mandatory was on and Fixed was off.",
     "The download is the signed PDF (attachment_AIBM_002_signed.pdf, 315 KB, 2 pages: the original plus an extra page) and a separate Certificate of Completion. The certificate lists the request ID, sender email, sent and completed times in UTC, 'sent via web', and per signer the email, sign date, IP address and user agent.",
     "The signed PDF carries two PAdES signatures (SubFilter ETSI.CAdES.detached): a seal from QuickSigner itself and the signer's own signature. Both carry the signing time 21:14:04 UTC inside the file, but neither holds a separate trusted timestamp from a timestamp authority. The certificate is issued to Innovoris Labs Srl by DigitalSign CA G1 and chains to DigitalSign Global Root RSA CA. The pricing page lists AATL document sealing, but the app and the certificate do not mention AATL, and we did not open the file in Adobe Acrobat to see whether it validates there, so we make no claim about it (rechecked 19 November 2026).",

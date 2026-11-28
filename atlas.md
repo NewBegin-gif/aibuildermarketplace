@@ -1,6 +1,6 @@
 # The Honest Software Atlas — full dataset
 
-All 706 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-27.
+All 706 B2B tools with **verified pricing** (read from the vendor's own pricing page), an honest one-line verdict and a link to the full founder-written review. Snapshot: 2026-11-28.
 
 Machine-readable: [aibm-atlas.json](https://aibuildermarketplace.com/data/aibm-atlas.json) · [aibm-tools.csv](https://aibuildermarketplace.com/data/aibm-tools.csv) · [aibm-flags.csv](https://aibuildermarketplace.com/data/aibm-flags.csv) · [answers.json](https://aibuildermarketplace.com/data/answers.json)
 
@@ -1038,7 +1038,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-09-22 and 2026-11-20 on crowdstrike.com/en-us/pricing/falcon-go/; all six amounts unchanged since 1 Aug 2026 and the page states 'All prices listed are in US Dollars' with…
 - **Honest take:** Two numbers decide whether this is for you, and neither is the headline. The first is the 100-device ceiling on Falcon Go: it is not a soft limit you grow through, it is the point where you change product.
 - **Best for:** small and mid-size companies that want a serious endpoint agent without running a security team: Falcon Go is priced for businesses under 100 devices
-- **Full review:** https://aibuildermarketplace.com/b2b/crowdstrike-review/
+- **Full review:** https://officesoftwaremarketplace.com/crowdstrike-review.html
 
 ## Database Mart (databasemart.com)
 - **Verified pricing:** (read 2026-11-25 on databasemart.com/pricing and its Black Friday page) Windows VPS, which includes the Microsoft licence, runs from $8.99 to $63.99 at regular monthly rates.
@@ -1232,7 +1232,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The jump from free to paid is steep at $99 a month and buys capacity rather than capability: search, recommendations and post-purchase are already in the free tier.
 - **Best for:** Shopify stores with large or fast-changing catalogues where product order is a merchandising decision (seasonal ranges, frequent stock-outs, wide margin spreads) and nobody who wants to re-order collections by hand every week
 - **Flags:** Add-ons extra, Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/dynasort-review/
+- **Full review:** https://marketingandsalessoftware.com/dynasort-review.html
 
 ## Easy Advanced Translations (northwest.dev)
 - **Verified pricing:** (read 2026-11-17 on apps.shopify.com/advanced-translation and in our own test session on 17 November 2026) Four monthly tiers billed in USD: Free, Starter at $4.99, Basic at $19.99 and Pro …
@@ -1266,7 +1266,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** You are buying domains and history, not features, and no longer seats, since every tier now lists unlimited users.
 - **Best for:** anyone who sends email from their own domain and has not yet got DMARC to enforcement: the reporting is the part that makes that safe rather than guesswork
 - **Flags:** Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/easydmarc-review/
+- **Full review:** https://officesoftwaremarketplace.com/easydmarc-review.html
 
 ## EazyChat (eazychat.io)
 - **Verified pricing:** (read 2026-11-04 on eazychat.io/pricing.html, US dollars) EazyChat charges per user per month, and every plan includes AI, unlimited human chats and a 15-day free trial, with no long-term c…
@@ -2486,7 +2486,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** No readable price: the pricing page loads in the browser only, and the FAQ names the tiers but no figure.
 - **Best for:** marketing teams with real media spend across channels who want an always-on AI analyst: every ad and post tied to its own spend and results
 - **Flags:** Hidden pricing
-- **Full review:** https://aibuildermarketplace.com/b2b/mktg-ai-review/
+- **Full review:** https://marketingandsalessoftware.com/mktg-ai-review.html
 
 ## Modelize (modelize.studio)
 - **Verified pricing:** (re-read 2026-09-17, 2026-10-04 and 2026-11-12 on apps.shopify.com/modelize; listed in October as “Modelize: AI Product Photos” and on 12 November as “Modelize: AI Image Generator”) Free pl…
@@ -3375,7 +3375,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** The meter is not recording time, it is separate-track download time, and separate tracks are the entire reason to use this rather than a video call.
 - **Best for:** podcasters and interviewers who need broadcast-quality audio and video from guests on bad connections: local recording at each end is the thing that solves it
 - **Flags:** Usage-metered, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/riverside-review/
+- **Full review:** https://marketingandsalessoftware.com/riverside-review.html
 
 ## RocketReach (rocketreach.co)
 - **Verified pricing:** (read 2026-09-01 on rocketreach.co/pricing, re-read 2026-11-04 in a real browser with every amount unchanged) A free account exists: signing up takes no credit card and gives 5 lookups.
@@ -4144,7 +4144,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Tellent's modular shape is useful (you can buy just the ATS, or just the HRIS) but nothing is priced in public.
 - **Best for:** European scale-ups hiring continuously that want a collaborative ATS they can extend with HRIS and performance modules, and can put a sales call in the buying process
 - **Flags:** Hidden pricing, Usage-metered, Add-ons extra, Annual commit
-- **Full review:** https://aibuildermarketplace.com/b2b/tellent-review/
+- **Full review:** https://officesoftwaremarketplace.com/tellent-review.html
 
 ## Tenable (tenable.com)
 - **Verified pricing:** (read 2026-08-30 and re-read unchanged on 2026-10-04 on tenable.com/buy and the Nessus Essentials page) Nessus Essentials is free — a 30-day licence for 5 IPs, non-commercial only, with plu…

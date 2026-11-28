@@ -655,7 +655,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (read 2026-11-28 on the Shopify App Store listing, USD; limits read 2026-11-24 on the BSS plan details page) Growth: $19/mo, or $194.40/yr (save 15%), up to 5 quote logics, 5 custom form fi…
 - **Honest take:** Shopify quote app that hides prices behind an Add to quote button and turns quotes into draft orders; from $19 a month.
 - **Best for:** Shopify stores that sell to business buyers and want to hide prices, collect quote requests and turn accepted quotes into draft orders
-- **Full review:** https://aibuildermarketplace.com/b2b/bss-b2b-request-a-quote-review/
+- **Full review:** https://marketingandsalessoftware.com/bss-b2b-request-a-quote-review.html
 
 ## BSS B2B Solution (apps.shopify.com)
 - **Verified pricing:** (read 2026-11-21 on apps.shopify.com/b2b-solution-custom-pricing) Free plan: basic B2B price, basic B2B registration management, 1 custom pricing rule and 1 registration form on live stores…
@@ -1906,7 +1906,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Verified pricing:** (re-verified 2026-10-09 in a live browser on their own marketing and CRM pricing pages, USD view; first read 2026-08-18, no amount changed in between) Free is $0 for up to 2 users and 1,000…
 - **Honest take:** Three numbers on this pricing page are not what they look like, and they compound. The first is the $7. It is the number in large black type on the Starter card, and the $20 beside it in small grey type is the list price.
 - **Best for:** teams that want marketing, sales, service and content on one contact database and will actually use more than one hub: that shared database is the real product, and it is what makes the price defensible when you use the breadth
-- **Flags:** Per-seat pricing, Usage-metered, Renewal jump, Add-ons extra, Free tier
+- **Flags:** Per-seat pricing, Usage-metered, Renewal jump, Add-ons extra, Annual commit, Free tier
 - **Full review:** https://marketingandsalessoftware.com/hubspot-review.html
 
 ## Hubstaff (hubstaff.com)
@@ -2074,7 +2074,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/jubilee-review.html
 
 ## Kartra (kartra.com)
-- **Verified pricing:** (re-verified 2026-09-05 and again 2026-09-30 on their own pricing page) Four tiers, monthly against yearly: Essentials $59 / $52, Starter $119 / $99, Growth $229 / $189 and Professional $54…
+- **Verified pricing:** (re-verified 2026-09-05, 2026-09-30 and 2026-11-28 on their own pricing page) Four tiers, monthly against yearly: Essentials $59 / $52, Starter $119 / $99, Growth $229 / $189 and Profession…
 - **Honest take:** If your core need is polished course delivery, Kajabi's creator features are stronger; Kartra wins on breadth, not course depth.
 - **Best for:** creators and coaches who want funnels, email, checkout, memberships and scheduling under one roof instead of five subscriptions
 - **Full review:** https://marketingandsalessoftware.com/kartra-review.html
@@ -2454,7 +2454,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://officesoftwaremarketplace.com/melio-review.html
 
 ## Mera Work (mera.work)
-- **Verified pricing:** (read 2026-09-30 on mera.work/pricing, INR and USD tabs, and on mera.work/signup) One plan, priced per user, with every feature included: the page states there are no feature restrictions a…
+- **Verified pricing:** (read 2026-09-30 and re-read 2026-11-28 on mera.work/pricing and mera.work/signup) One plan, priced per user, with every feature included: the page says there are no tiers and no add-ons fo…
 - **Honest take:** Mera Work keeps your records for 90 days: unless your order form says otherwise, older data may be deleted automatically, which rules it out for an annual review or a payroll audit.
 - **Best for:** small and mid-sized teams, especially remote or hybrid ones doing computer-based work such as support, BPO, IT services or back office, that want time tracking
 - **Flags:** Per-seat pricing
@@ -2765,7 +2765,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Full review:** https://zerotouchsupport.com/orateur-review.html
 
 ## Outgrow (outgrow.co)
-- **Verified pricing:** (re-verified 2026-09-06 and again 2026-09-30 on the vendor's own pricing page) Freelancer Limited $22/month or $14 annually for 5 content pieces, 5 content types and 250 leads a month; Free…
+- **Verified pricing:** (re-verified 2026-09-06, 2026-09-30 and 2026-11-28 on the vendor's own pricing page) Freelancer Limited $22/month or $14 annually for 5 content pieces, 5 content types and 250 leads a month…
 - **Honest take:** Two meters at once: content types and pieces gate the lower tiers, and monthly LEAD limits gate the upside.
 - **Best for:** marketers who want quizzes, calculators and assessments that earn the lead by giving genuine value: with logic, integrations and templates handled
 - **Flags:** Annual commit
@@ -3354,7 +3354,7 @@ No invented benchmarks, no fabricated hands-on claims: every figure traces to a 
 - **Honest take:** Shopify app that gets video reviews from real buyers; the first campaign of up to 10 videos is free, then $150 a month.
 - **Best for:** Shopify brands that want video reviews from US shoppers and are ready to give the product away
 - **Flags:** Free tier
-- **Full review:** https://aibuildermarketplace.com/b2b/reviewers-com-review/
+- **Full review:** https://marketingandsalessoftware.com/reviewers-com-review.html
 
 ## Rewardful (rewardful.com)
 - **Verified pricing:** (read 2026-11-17 on rewardful.com/pricing, US dollars, taxes extra) Starter $49 a month or $490 a year (up to $7,500 a month in affiliate revenue, 1 campaign, 2 team members); Growth $99 a …

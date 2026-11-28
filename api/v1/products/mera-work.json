@@ -17,13 +17,13 @@
   "from_price_usd_month": 4.0,
   "plans": null,
   "plans_source": null,
-  "notes": "(read 2026-09-30 on mera.work/pricing, INR and USD tabs, and on mera.work/signup) One plan, priced per user, with every feature included: the page states there are no feature restrictions and no add-ons. In US dollars it is $4 per user a month billed monthly or $3 per user a month billed annually, which the page describes as saving $12 per user a year. In rupees the same plan is ₹325 per user a month billed monthly or ₹250 billed annually, saving ₹900 per user a year. Enterprise is a custom quote for 1,000 or more users. The sign-up page offers a 14-day free trial of the Pro plan with no credit card and says the subscription starts only if you choose to continue. The feature table lists data retention of up to three months, and the privacy policy puts that into practice: unless your order form says otherwise, customer data is kept on a rolling 90-day basis and older data may be deleted automatically. A 50% inaugural discount for July that appeared in earlier readings is no longer shown.",
-  "verified_at": "2026-09-30",
+  "notes": "(read 2026-09-30 and re-read 2026-11-28 on mera.work/pricing and mera.work/signup) One plan, priced per user, with every feature included: the page says there are no tiers and no add-ons for core features, and that taxes depend on your location and appear on the invoice. In US dollars it is $4 per user a month billed monthly or $3 per user a month billed yearly, which the page states as $36 per user a year. In rupees the same plan is ₹325 a month or ₹250 billed yearly (₹3,000 a year), and on 28 November 2026 the page also showed Australian dollars, A$6 or A$4.5 (A$54 a year); the currency follows your IP address. The minimum is two users, an admin and a team member. Enterprise is a custom quote for private cloud or on-premise hosting, volume and multi-year pricing; on 30 September 2026 the page tied it to 1,000 or more users, and on 28 November 2026 it named no user threshold. The 14-day free trial needs no card, and the sign-up page says the subscription starts only if you choose to continue. The feature table lists data retention of up to three months, and the privacy policy puts that into practice: unless your order form says otherwise, customer data is kept on a rolling 90-day basis and older data may be deleted automatically. The product was renamed from Mera Monitor in 2026; a 50% inaugural discount for July that appeared in earlier readings is no longer shown.",
+  "verified_at": "2026-11-28",
   "source_url": "https://mera.work/pricing/",
   "schema_offer": {
    "price": 3.0,
    "currency": "USD",
-   "description": "Annual, per user a month billed annually; $4 billed monthly; one plan with every feature, no add-ons; Enterprise is a custom quote for 1,000+ users; 14-day free trial without a card. Read on the vendor's own pricing page on 2026-09-30.",
+   "description": "Annual, per user a month billed yearly ($36 a year); $4 billed monthly; minimum 2 users; one plan, no add-ons for core features; Enterprise is a custom quote (private cloud or on-premise); 14-day free trial without a card. Read on the vendor's own pricing page on 2026-11-28.",
    "page": "https://officesoftwaremarketplace.com/mera-work-review.html"
   },
   "source_quotes": null,
@@ -36,8 +36,8 @@
   {
    "id": "per_seat",
    "label": "Per-seat pricing",
-   "evidence": "In US dollars it is $4 per user a month billed monthly or $3 per user a month billed annually, which the page describes as saving $12 per user a year.",
-   "verified_at": "2026-09-30",
+   "evidence": "In US dollars it is $4 per user a month billed monthly or $3 per user a month billed yearly, which the page states as $36 per user a year.",
+   "verified_at": "2026-11-28",
    "source_url": "https://mera.work/pricing/"
   }
  ],
@@ -75,25 +75,27 @@
    "plans": [
     {
      "id": "pro",
-     "name": "Pro",
+     "name": "Per-user plan",
      "model": "per_unit",
      "monthly": 4,
      "annual_month": 3,
-     "evidence": "$4 per user a month billed monthly or $3 per user a month billed annually"
+     "min_units": 2,
+     "evidence": "In US dollars it is $4 per user a month billed monthly or $3 per user a month billed yearly"
     },
     {
      "id": "enterprise",
      "name": "Enterprise",
      "model": "quote",
-     "eligible_from": 1000,
-     "evidence": "Enterprise is a custom quote for 1,000 or more users"
+     "evidence": "Enterprise is a custom quote for private cloud or on-premise hosting, volume and multi-year pricing"
     }
    ],
    "notes": [
-    "One plan with every feature included; the page states there are no feature restrictions and no add-ons.",
-    "Rupee pricing exists separately (₹325 or ₹250 per user a month); these rules use the US-dollar tab."
+    "The minimum is two users, an admin and a team member.",
+    "One plan with every feature included; the page says there are no tiers and no add-ons for core features.",
+    "Rupee (₹325 or ₹250) and Australian-dollar (A$6 or A$4.5) prices exist; the currency follows your IP address. These rules use US dollars.",
+    "Taxes depend on your location and appear on the invoice; they are not in the totals."
    ],
-   "rules_verified_at": "2026-10-11"
+   "rules_verified_at": "2026-11-28"
   },
   "growth": {
    "annual": {
@@ -106,22 +108,7 @@
      {
       "units": 1,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 3.0,
-      "billed": {
-       "amount": 36.0,
-       "every": "year"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 3.0,
-       "enterprise": "not_eligible"
-      }
-     },
-     {
-      "units": 2,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 6.0,
       "billed": {
        "amount": 72.0,
@@ -130,13 +117,28 @@
       "ranges": [],
       "per_plan": {
        "pro": 6.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Per-user plan",
+      "total_month": 6.0,
+      "billed": {
+       "amount": 72.0,
+       "every": "year"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 6.0,
+       "enterprise": "quote"
       }
      },
      {
       "units": 3,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 9.0,
       "billed": {
        "amount": 108.0,
@@ -145,13 +147,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 9.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 5,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 15.0,
       "billed": {
        "amount": 180.0,
@@ -160,13 +162,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 15.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 10,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 30.0,
       "billed": {
        "amount": 360.0,
@@ -175,13 +177,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 30.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 15,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 45.0,
       "billed": {
        "amount": 540.0,
@@ -190,13 +192,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 45.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 20,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 60.0,
       "billed": {
        "amount": 720.0,
@@ -205,13 +207,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 60.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 25,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 75.0,
       "billed": {
        "amount": 900.0,
@@ -220,13 +222,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 75.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 50,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 150.0,
       "billed": {
        "amount": 1800.0,
@@ -235,13 +237,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 150.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 100,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 300.0,
       "billed": {
        "amount": 3600.0,
@@ -250,7 +252,7 @@
       "ranges": [],
       "per_plan": {
        "pro": 300.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      }
     ],
@@ -327,22 +329,7 @@
      {
       "units": 1,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
-      "total_month": 4.0,
-      "billed": {
-       "amount": 4.0,
-       "every": "month"
-      },
-      "ranges": [],
-      "per_plan": {
-       "pro": 4.0,
-       "enterprise": "not_eligible"
-      }
-     },
-     {
-      "units": 2,
-      "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 8.0,
       "billed": {
        "amount": 8.0,
@@ -351,13 +338,28 @@
       "ranges": [],
       "per_plan": {
        "pro": 8.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
+      }
+     },
+     {
+      "units": 2,
+      "cheapest_plan": "pro",
+      "cheapest_plan_name": "Per-user plan",
+      "total_month": 8.0,
+      "billed": {
+       "amount": 8.0,
+       "every": "month"
+      },
+      "ranges": [],
+      "per_plan": {
+       "pro": 8.0,
+       "enterprise": "quote"
       }
      },
      {
       "units": 3,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 12.0,
       "billed": {
        "amount": 12.0,
@@ -366,13 +368,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 12.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 5,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 20.0,
       "billed": {
        "amount": 20.0,
@@ -381,13 +383,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 20.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 10,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 40.0,
       "billed": {
        "amount": 40.0,
@@ -396,13 +398,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 40.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 15,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 60.0,
       "billed": {
        "amount": 60.0,
@@ -411,13 +413,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 60.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 20,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 80.0,
       "billed": {
        "amount": 80.0,
@@ -426,13 +428,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 80.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 25,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 100.0,
       "billed": {
        "amount": 100.0,
@@ -441,13 +443,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 100.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 50,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 200.0,
       "billed": {
        "amount": 200.0,
@@ -456,13 +458,13 @@
       "ranges": [],
       "per_plan": {
        "pro": 200.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      },
      {
       "units": 100,
       "cheapest_plan": "pro",
-      "cheapest_plan_name": "Pro",
+      "cheapest_plan_name": "Per-user plan",
       "total_month": 400.0,
       "billed": {
        "amount": 400.0,
@@ -471,7 +473,7 @@
       "ranges": [],
       "per_plan": {
        "pro": 400.0,
-       "enterprise": "not_eligible"
+       "enterprise": "quote"
       }
      }
     ],
